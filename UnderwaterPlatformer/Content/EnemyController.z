@@ -17,7 +17,7 @@ class EnemyController : ZilchComponent
     var JumpTime:Real = 3;
     
     [Property]
-    var Speed:Integer;
+    var Speed:Integer = 3;
     
     function Initialize(init : CogInitializer)
     {
@@ -48,7 +48,10 @@ class EnemyController : ZilchComponent
     
     function OnLogicUpdate(event : UpdateEvent)
     {
-        
+        var rand = new Random();
+            
+        var num = rand.DieRoll(3);
+            
         if(this.JumpTime > 0)
         {
             this.Jump = false;
@@ -57,7 +60,7 @@ class EnemyController : ZilchComponent
         else
         {
             this.Jump = true;
-            this.JumpTime += 3;
+            this.JumpTime += num;
         }
             
         
