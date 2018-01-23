@@ -1,6 +1,6 @@
 //Jacob Burke
 
-//Enemy Controller... Thas what it does!
+//Enemy Controller
 
 class EnemyController : ZilchComponent
 {
