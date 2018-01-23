@@ -29,6 +29,7 @@ class SwordBoomerangMove : ZilchComponent
         if(event.OtherObject.Name == ("Player") && this.Moving == false)
         {
             this.Owner.Destroy();
+            SwordBoomerang.MarkerPlaced = false;
         }
             
         
