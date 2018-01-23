@@ -1,3 +1,7 @@
+//Jacob Burke
+
+//This script creates the Sword Boomerang(it isnt the actual item) and the target
+
 class SwordBoomerang : ZilchComponent
 {
     [Static]
