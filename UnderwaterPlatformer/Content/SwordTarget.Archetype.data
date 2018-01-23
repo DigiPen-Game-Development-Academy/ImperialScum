@@ -6,11 +6,15 @@ Cog =
 	},
 	Named = 
 	{
-		string Name = "Sprite",
+		string Name = "SwordTarget",
+	},
+	Archetyped = 
+	{
+		string Name = "5aae70f453bbc46c:SwordTarget",
 	},
 	Transform = 
 	{
-		Vec3 Translation = [1.94436133, 4.88170052, 0],
+		Vec3 Translation = [0.628075838, 5.19183922, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -20,7 +24,7 @@ Cog =
 		bool VisibilityCulling = true,
 		bool VisibilityEvents = true,
 		bool CastShadows = false,
-		Vec4 Color = [0.440000057, 1, 0, 1],
+		Vec4 Color = [0.440000057, 1, 0, 0],
 		BlendMode BlendMode = Alpha,
 		SpriteGeometryMode GeometryMode = ZPlane,
 		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
@@ -31,5 +35,18 @@ Cog =
 		bool AnimationActive = true,
 		float AnimationSpeed = 1,
 		uint StartFrame = 0,
+	},
+	BoxCollider = 
+	{
+		bool Ghost = true,
+		bool SendsMessages = true,
+		bool Seamless = true,
+		string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+		string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+		Vec3 Offset = [0, 0, 0],
+		Vec3 Size = [0.5, 0.5, 0.5],
+	},
+	TargetDestroyer = 
+	{
 	},
 },

@@ -1,5 +1,9 @@
 class SwordBoomerang : ZilchComponent
 {
+    [Static]
+    var MarkerPlaced:Boolean = false;
+    
+    
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
@@ -9,8 +13,15 @@ class SwordBoomerang : ZilchComponent
     function OnLeftMouseDown(event : ViewportMouseEvent)
     {
         
+        if(SwordBoomerang.MarkerPlaced == false)
+        {
+        var position = this.LevelSettings.CameraViewport.ScreenToWorldZPlane(event.Position, 0);
+        
+        this.Space.CreateAtPosition(Archetype.SwordTarget, position);
         this.Space.CreateAtPosition(Archetype.SwordBoomerang, this.Owner.Transform.Translation);
         
+        SwordBoomerang.MarkerPlaced = true;
+        }
         
         
     }
