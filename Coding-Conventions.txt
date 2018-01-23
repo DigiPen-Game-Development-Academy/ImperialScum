@@ -1,0 +1,9 @@
+- Keep lines of code within the screen
+
+- Comment for each function; short description. // or /* */
+
+- Write original author and purpose above the code
+
+- Don't name variables letters
+
+- Max 5000 Lines per file
