@@ -11,8 +11,13 @@ class EnemyController : ZilchComponent
     
     var TimerTillNotFollow:Real = 3;
     
+    var Jump:Boolean = false;
+    
     [Property]
-    var Speed:Integer;
+    var JumpTime:Real = 3;
+    
+    [Property]
+    var Speed:Integer = 3;
     
     function Initialize(init : CogInitializer)
     {
@@ -43,6 +48,24 @@ class EnemyController : ZilchComponent
     
     function OnLogicUpdate(event : UpdateEvent)
     {
+        var rand = new Random();
+            
+        var num = rand.DieRoll(3);
+            
+        if(this.JumpTime > 0)
+        {
+            this.Jump = false;
+            this.JumpTime -= event.Dt;
+        }
+        else
+        {
+            this.Jump = true;
+            this.JumpTime += num;
+        }
+            
+        
+        
+        
         if(this.Active == true) this.Following = 2;
         else this.Following -= event.Dt;
         
@@ -57,13 +80,21 @@ class EnemyController : ZilchComponent
             velocity.X = -this.Speed;
             this.Owner.RigidBody.Velocity= velocity;
         }
-        else
+        else if(target.Transform.WorldTranslation.X > this.Owner.Transform.WorldTranslation.X)
         {
             var velocity = this.Owner.RigidBody.Velocity;
             velocity.X = this.Speed;
             this.Owner.RigidBody.Velocity= velocity;
         }
-    
+        
+        
+        if(this.Jump == true)
+        {
+            var velocity = this.Owner.RigidBody.Velocity;
+            velocity.Y = this.Speed + 5;
+            this.Owner.RigidBody.Velocity= velocity;
+            
+        }
     
     }
 
