@@ -104,7 +104,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-0.375105798, 2.05081606, 50],
+			Vec3 Translation = [7.4512949, 4.35338831, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -116,7 +116,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 16.3323727,
+			float Size = 11.0803423,
 		},
 		EditorCameraController = 
 		{
@@ -124,7 +124,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-0.375105798, 2.05081606, 0],
+			Vec3 LookTarget = [7.4512949, 4.35338831, 0],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -626,8 +626,8 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [6.19008732, 4.26455307, 2.38261766e-09],
-			Vec3 Scale = [8.93572426, 8.93572426, 8.93572426],
+			Vec3 Translation = [1.48032284, -0.370847702, 2.38261766e-09],
+			Vec3 Scale = [12.0367413, 12.0367413, 12.0367413],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Sprite = 
@@ -672,6 +672,7 @@ Level =
 		},
 		EnemyController = 
 		{
+			float JumpTime = 3,
 			int Speed = 5,
 		},
 		Hierarchy = 
@@ -688,8 +689,8 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [-0.00337404013, -0.00410789251, -2.77555756e-17],
-					Vec3 Scale = [0.111910351, 0.111910351, 0.111910351],
+					Vec3 Translation = [-0.00250482559, -0.00304958224, -1.38777878e-17],
+					Vec3 Scale = [0.0830789655, 0.0830789655, 0.0830789655],
 					Quat Rotation = [0, 0, 0, 1],
 				},
 				Sprite = 
@@ -784,7 +785,7 @@ Level =
 		Transform = 
 		{
 			Vec3 Translation = [3.47160244, 7.53825426, 0],
-			Vec3 Scale = [1.14092469, 1, 1],
+			Vec3 Scale = [1.09191358, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Sprite = 
