@@ -104,7 +104,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [4.44178867, 2.48990345, 50],
+			Vec3 Translation = [-0.375105798, 2.05081606, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -116,7 +116,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 32.8893318,
+			float Size = 16.3323727,
 		},
 		EditorCameraController = 
 		{
@@ -124,7 +124,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [4.44178867, 2.48990345, 0],
+			Vec3 LookTarget = [-0.375105798, 2.05081606, 0],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -626,8 +626,8 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [14.2530642, 6.01636505, 2.38261766e-09],
-			Vec3 Scale = [14.9405603, 14.9405603, 14.9405603],
+			Vec3 Translation = [6.19008732, 4.26455307, 2.38261766e-09],
+			Vec3 Scale = [8.93572426, 8.93572426, 8.93572426],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Sprite = 
@@ -653,7 +653,7 @@ Level =
 			bool Static = false,
 			bool Asleep = false,
 			bool Kinematic = false,
-			bool RotationLocked = false,
+			bool RotationLocked = true,
 			bool Mode2D = true,
 			bool AllowSleep = true,
 			bool Inherit2DMode = true,
@@ -672,6 +672,7 @@ Level =
 		},
 		EnemyController = 
 		{
+			int Speed = 5,
 		},
 		Hierarchy = 
 		{
@@ -687,8 +688,8 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [-0.0117332935, -0.00610011816, -1.38777878e-17],
-					Vec3 Scale = [0.0669318959, 0.0669318959, 0.0669318959],
+					Vec3 Translation = [-0.00337404013, -0.00410789251, -2.77555756e-17],
+					Vec3 Scale = [0.111910351, 0.111910351, 0.111910351],
 					Quat Rotation = [0, 0, 0, 1],
 				},
 				Sprite = 

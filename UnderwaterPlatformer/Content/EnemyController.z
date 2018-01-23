@@ -1,3 +1,7 @@
+//Jacob Burke
+
+//Enemy Controller
+
 class EnemyController : ZilchComponent
 {
     
@@ -7,56 +11,58 @@ class EnemyController : ZilchComponent
     
     var TimerTillNotFollow:Real = 3;
     
+    [Property]
+    var Speed:Integer;
+    
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
-        Zero.Connect(this.Owner, Events.CollisionPersisted, this.OnCollisionPersisted);
+        Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
+        Zero.Connect(this.Owner, Events.CollisionEnded, this.OnCollisionEnded);
        
     }
 
-    function OnCollisionPersisted(event : CollisionEvent)
+    function OnCollisionStarted(event : CollisionEvent)
     {
         if(event.OtherObject.PlayerController != null)
         {
         this.Active = true;
         }
-        else
-        {
-        this.LosingPlayer = true;
-        this.TimerTillNotFollow = 2;
-        }
     }
-
+    
+    function OnCollisionEnded(event : CollisionEvent)
+    {
+        if(event.OtherObject.PlayerController != null)
+        {
+        this.Active = false;
+        }
+        
+    }
+    
+    var Following : Real = 0;
+    
     function OnLogicUpdate(event : UpdateEvent)
     {
-        if(this.LosingPlayer == true)
-        this.TimerTillNotFollow -= event.Dt;
+        if(this.Active == true) this.Following = 2;
+        else this.Following -= event.Dt;
         
-        if(this.TimerTillNotFollow <= 0)
+        if (this.Following <= 0) return;
+        
+        var target = this.Space.FindObjectByName("Player");
+        if(target == null) return;
+        
+        if(target.Transform.WorldTranslation.X < this.Owner.Transform.WorldTranslation.X)
         {
-            this.Active = false;
-            this.TimerTillNotFollow = 2;
-            
-            
-            
+            var velocity = this.Owner.RigidBody.Velocity;
+            velocity.X = -this.Speed;
+            this.Owner.RigidBody.Velocity= velocity;
         }
-        
-        if(this.Active == true)
+        else
         {
-         var target = this.Space.FindObjectByName("Player");
-        
-        this.Owner.RigidBody.Velocity = Math.Normalize(target.Transform.Translation
-        - this.Owner.Transform.Translation) * 2; 
+            var velocity = this.Owner.RigidBody.Velocity;
+            velocity.X = this.Speed;
+            this.Owner.RigidBody.Velocity= velocity;
         }
-        
-        if(this.Active == false)
-        {
-            var target = this.Space.FindObjectByName("Player");
-         this.Owner.RigidBody.Velocity = Math.Normalize(target.Transform.Translation -
-         this.Owner.Transform.Translation) * 0;
-     }
-        
-
     
     
     }
