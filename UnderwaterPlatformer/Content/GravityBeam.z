@@ -1,18 +1,22 @@
-class TargetDestroyer : ZilchComponent
+class GravityBeam : ZilchComponent
 {
+    
+    
+    var CurrentGravity:Real;
+    
     function Initialize(init : CogInitializer)
     {
+        this.CurrentGravity == this.Owner.SweptController.Gravity;
+        
+        Console.WriteLine(this.CurrentGravity);
+        
         //Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
         Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
     }
 
     function OnCollisionStarted(event : CollisionEvent)
     {
-        if(event.OtherObject.SwordBoomerangMove != null)
-        {
-        this.Owner.Destroy();
-        }
-        
+
         
         
     }

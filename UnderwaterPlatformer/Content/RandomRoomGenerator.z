@@ -1,7 +1,3 @@
-//Jacob Burke
-
-//Randomly generates a new room after the player gets to the end
-
 class RandomRoomGenerator : ZilchComponent
 {
     

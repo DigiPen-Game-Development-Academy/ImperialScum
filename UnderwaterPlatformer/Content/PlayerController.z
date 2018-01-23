@@ -1,7 +1,3 @@
-//Jacob Burke
-
-//This is the player controller, takes input from the keys and makes the player move
-
 class PlayerController : ZilchComponent
 {
     
