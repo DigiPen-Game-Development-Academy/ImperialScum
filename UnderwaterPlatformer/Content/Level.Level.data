@@ -104,7 +104,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [17.89991, 0.801807165, 50],
+			Vec3 Translation = [0.313970596, 2.60422516, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -116,7 +116,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 22.0463924,
+			float Size = 13.3718348,
 		},
 		EditorCameraController = 
 		{
@@ -124,7 +124,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [17.89991, 0.801807165, 0],
+			Vec3 LookTarget = [0.313970596, 2.60422516, 7.06034831e-09],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -262,7 +262,7 @@ Level =
 			Enum Right = Right,
 			string IdleAnimation = "5aae8200c73cd894:Player_Stand",
 			string WalkingAnimation = "5aae84db11ec8399:Player_Walk()",
-			string JumpAnimation = "",
+			string JumpAnimation = "5aae7209b1b4f54a:PlayerJump()",
 			string JumpSound = "",
 			Vec4 SpriteColor = [1, 1, 1, 1],
 			Vec4 RegularColor = [1, 1, 1, 1],
@@ -1317,24 +1317,6 @@ Level =
 		},
 		Climb = 
 		{
-		},
-	},
-	ArchetypeInstance = 
-	{
-		string Name = "5aae4c3cb5c567f8:SwordBoomerang",
-		LinkId = 
-		{
-			uint Id = 26,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [1.60258102, 4.13787699, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Named = 
-		{
-			string Name = "Sprite",
 		},
 	},
 },
