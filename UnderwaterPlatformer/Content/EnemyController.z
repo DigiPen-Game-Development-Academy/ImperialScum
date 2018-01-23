@@ -1,0 +1,64 @@
+class EnemyController : ZilchComponent
+{
+    
+    var Active:Boolean = false;
+    
+    var LosingPlayer:Boolean = false;
+    
+    var TimerTillNotFollow:Real = 3;
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        Zero.Connect(this.Owner, Events.CollisionPersisted, this.OnCollisionPersisted);
+       
+    }
+
+    function OnCollisionPersisted(event : CollisionEvent)
+    {
+        if(event.OtherObject.PlayerController != null)
+        {
+        this.Active = true;
+        }
+        else
+        {
+        this.LosingPlayer = true;
+        this.TimerTillNotFollow = 2;
+        }
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        if(this.LosingPlayer == true)
+        this.TimerTillNotFollow -= event.Dt;
+        
+        if(this.TimerTillNotFollow <= 0)
+        {
+            this.Active = false;
+            this.TimerTillNotFollow = 2;
+            
+            
+            
+        }
+        
+        if(this.Active == true)
+        {
+         var target = this.Space.FindObjectByName("Player");
+        
+        this.Owner.RigidBody.Velocity = Math.Normalize(target.Transform.Translation
+        - this.Owner.Transform.Translation) * 2; 
+        }
+        
+        if(this.Active == false)
+        {
+            var target = this.Space.FindObjectByName("Player");
+         this.Owner.RigidBody.Velocity = Math.Normalize(target.Transform.Translation -
+         this.Owner.Transform.Translation) * 0;
+     }
+        
+
+    
+    
+    }
+
+}

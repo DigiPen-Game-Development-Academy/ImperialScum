@@ -1,0 +1,42 @@
+class RandomRoomGenerator : ZilchComponent
+{
+    
+    var RandomDieRoll:Real;
+    
+    var LevelToLoad:Level;
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        Zero.Connect(this.Owner, Events.CollisionPersisted, this.OnCollisionPersisted);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        var rand = new Random();
+            
+        this.RandomDieRoll = rand.DieRoll(2);
+        
+        
+    }
+
+    function OnCollisionPersisted(event : CollisionEvent)
+    {
+        if(event.OtherObject.PlayerController != null)
+        {
+        if(this.RandomDieRoll == 1)
+        this.LevelToLoad = Level.Level;
+                
+        if(this.RandomDieRoll == 2)
+        this.LevelToLoad = Level.Level;
+        
+        
+        
+        this.Space.LoadLevel(this.LevelToLoad);
+        }
+        
+        
+    }
+
+
+}

@@ -1,0 +1,39 @@
+class FollowCamera : ZilchComponent
+{
+    [Property]
+    var Speed:Real = 5;
+
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        var target = this.Space.FindObjectByName("Player");
+        
+        var player = target.Transform.Translation;
+        
+        //this.Owner.RigidBody.Velocity = (target.Transform.Translation - this.Owner.Transform.Translation)
+        //* this.Speed; 
+        
+        
+        
+        if(this.Owner.Transform.Translation == player)
+        {
+            return;
+        }
+        else
+        {
+        this.Owner.RigidBody.Velocity = Math.Normalize(target.Transform.Translation -
+         this.Owner.Transform.Translation)
+       * this.Speed; 
+        }
+
+        
+        
+        
+        
+        
+    }
+}

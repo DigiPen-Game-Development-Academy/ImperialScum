@@ -1,0 +1,127 @@
+class PlayerController : ZilchComponent
+{
+    
+    [Property]
+    var Left:Keys = Keys.Left;
+
+    [Property]
+    var Right:Keys = Keys.Right;
+    
+    [Property]
+    var  IdleAnimation:SpriteSource;
+    
+    [Property]
+    
+    var WalkingAnimation:SpriteSource;
+    
+    [Property]
+    var JumpAnimation:SpriteSource;
+    
+    [Property]
+    var JumpSound:SoundCue;
+    
+    
+    
+    [Property]
+    
+    var SpriteColor:Real4 = Real4(1,1,1,1);
+    
+    [Property]
+    var RegularColor:Real4 = Real4(1,1,1,1);
+    
+    
+    [Property]
+    var Lose:Integer = 1;
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        
+        Zero.Connect(this.Owner, Events.SweptCollision, this.OnSweptCollision);
+        
+    }
+
+
+    function OnSweptCollision(event : SweptControllerEvent)
+    {
+        
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        
+        
+        
+            
+            
+            
+        
+        
+        
+        
+        var movement:Real3 = Real3(0,0,0);
+        
+        
+        if(Zero.Keyboard.KeyIsDown(Keys.A))
+        {
+            movement.X -= 1;
+            this.Owner.Sprite.FlipX = true;
+        }
+        
+        if(Zero.Keyboard.KeyIsDown(Keys.D))
+        {
+            movement.X += 1;
+            this.Owner.Sprite.FlipX = false;
+        }
+        
+        
+        if(Zero.Keyboard.KeyIsPressed(Keys.W))
+        {
+        
+        if(this.Owner.SweptController.Grounded)
+            {
+                //this.Owner.SoundEmitter.PlayCue(this.JumpSound);
+            }
+            this.Owner.SweptController.Jump();
+            
+            
+            
+        }
+        
+        if(Zero.Keyboard.KeyIsReleased(Keys.Space))
+        {
+            
+            if(this.Owner.SweptController.Jumping)
+            {
+                this.Owner.SweptController.JumpCancel();
+                
+            }
+            
+            
+        }
+        
+        
+        
+        
+        if(!this.Owner.SweptController.Grounded)
+        {
+            this.Owner.Sprite.SpriteSource = this.JumpAnimation;
+        }
+        else if(movement == Real3(0,0,0))
+        {
+            this.Owner.Sprite.SpriteSource = this.IdleAnimation;
+        }
+        else if(this.Owner.Sprite.SpriteSource !=this.WalkingAnimation)
+        {
+            this.Owner.Sprite.SpriteSource = this.WalkingAnimation;
+        }
+        this.Owner.SweptController.Update(movement, event.Dt);
+        
+        
+        
+        
+        
+        
+        
+    }
+}
