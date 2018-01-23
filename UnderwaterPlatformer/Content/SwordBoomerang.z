@@ -9,7 +9,7 @@ class SwordBoomerang : ZilchComponent
     function OnLeftMouseDown(event : ViewportMouseEvent)
     {
         
-        
+        this.Space.CreateAtPosition(Archetype.SwordBoomerang, this.Owner.Transform.Translation);
         
         
         
