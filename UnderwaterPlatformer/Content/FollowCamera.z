@@ -1,3 +1,7 @@
+//Jacob Burke
+
+//This makes the camera follow the player
+
 class FollowCamera : ZilchComponent
 {
     [Property]

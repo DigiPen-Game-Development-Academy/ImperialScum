@@ -1,8 +1,0 @@
-TextContent = 
-{
-	ZilchScriptBuilder = 
-	{
-		string Name = "GravityBeam",
-		uint64 ResourceId = 5aaeb6f438dc3adf,
-	},
-},

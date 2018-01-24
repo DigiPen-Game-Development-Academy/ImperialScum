@@ -1,3 +1,7 @@
+//Jacob Burke
+
+//This moves the player to a random room after they leave the current level
+
 class RandomRoomGenerator : ZilchComponent
 {
     

@@ -1,3 +1,8 @@
+//Jacob Burke
+
+//This is not the Sword Boomerang Itself, but the creator of it and the creator of 
+//the target
+
 class SwordBoomerang : ZilchComponent
 {
     [Static]

@@ -1,3 +1,8 @@
+//Jacob Burke
+
+//The player Controller manages the player: 
+//Taking input from the keyboard and changing sprite art etc
+
 class PlayerController : ZilchComponent
 {
     

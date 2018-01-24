@@ -1,3 +1,8 @@
+//Jacob Burke
+
+//This destroys the target after it is hit with the boomerang (the invisible target your
+//mouse puts down when it clicks.
+
 class TargetDestroyer : ZilchComponent
 {
     function Initialize(init : CogInitializer)
