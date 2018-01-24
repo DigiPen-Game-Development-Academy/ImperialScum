@@ -8,6 +8,10 @@ class SwordBoomerang : ZilchComponent
     [Static]
     var MarkerPlaced:Boolean = false;
     
+    [Property]
+    var Animation:SpriteSource;
+    
+    
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
@@ -20,17 +24,20 @@ class SwordBoomerang : ZilchComponent
         if(SwordBoomerang.MarkerPlaced == false)
         {
         var position = this.LevelSettings.CameraViewport.ScreenToWorldZPlane(event.Position, 0);
-        
         this.Space.CreateAtPosition(Archetype.SwordTarget, position);
         this.Space.CreateAtPosition(Archetype.SwordBoomerang, this.Owner.Transform.Translation);
         
         SwordBoomerang.MarkerPlaced = true;
         }
         
-        
     }
 
     function OnLogicUpdate(event : UpdateEvent)
     {
+
+        
+        
+        
+        
     }
 }

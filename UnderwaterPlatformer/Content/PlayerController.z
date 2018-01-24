@@ -116,7 +116,7 @@ class PlayerController : ZilchComponent
         {
             this.Owner.Sprite.SpriteSource = this.IdleAnimation;
         }
-        else if(this.Owner.Sprite.SpriteSource !=this.WalkingAnimation)
+        else if(this.Owner.Sprite.SpriteSource != this.WalkingAnimation)
         {
             this.Owner.Sprite.SpriteSource = this.WalkingAnimation;
         }
