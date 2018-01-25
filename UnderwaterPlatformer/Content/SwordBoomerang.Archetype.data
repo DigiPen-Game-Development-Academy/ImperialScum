@@ -14,8 +14,8 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-11.7365341, -0.425524354, 0],
-		Vec3 Scale = [2.77638102, 2.77638102, 2.77638102],
+		Vec3 Translation = [-7.38581467, 1.78023052, 0],
+		Vec3 Scale = [4.80000019, 4.80000019, 4.80000019],
 		Quat Rotation = [0, 0, 0, 1],
 	},
 	Sprite = 
@@ -28,7 +28,7 @@ Cog =
 		BlendMode BlendMode = Alpha,
 		SpriteGeometryMode GeometryMode = ZPlane,
 		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-		string SpriteSource = "5aae0c97bd629b49:SwordBoom_DoubleBlade()",
+		string SpriteSource = "5aa39760bdb2cd3c:Weap_SwordBoomerang_Wimpy",
 		bool RenderMask = false,
 		bool FlipX = false,
 		bool FlipY = false,
@@ -76,5 +76,9 @@ Cog =
 		string SerializedGroupName = "4e740859314e5515:DefaultGroup",
 		Vec3 Offset = [0, 0, 0],
 		float Radius = 0.300000012,
+	},
+	Spin = 
+	{
+		float RotationSpeed = 3000,
 	},
 },
