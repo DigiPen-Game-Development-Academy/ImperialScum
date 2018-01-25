@@ -8,9 +8,6 @@ class SwordBoomerang : ZilchComponent
     [Static]
     var MarkerPlaced:Boolean = false;
     
-    [Property]
-    var Animation:SpriteSource;
-    
     
     function Initialize(init : CogInitializer)
     {
@@ -28,6 +25,7 @@ class SwordBoomerang : ZilchComponent
         this.Space.CreateAtPosition(Archetype.SwordBoomerang, this.Owner.Transform.Translation);
         
         SwordBoomerang.MarkerPlaced = true;
+        
         }
         
     }
