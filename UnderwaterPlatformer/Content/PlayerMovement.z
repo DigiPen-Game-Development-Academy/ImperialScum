@@ -23,22 +23,23 @@ class PlayerMovement : ZilchComponent
     {
         var direction = Real3.Zero;
         
-        if(Zero.Keyboard.KeyIsPressed(this.KeyUp))
+        if(Zero.Keyboard.KeyIsDown(this.KeyUp))
         {
             direction += Real3.YAxis;
         }
         
-        if(Zero.Keyboard.KeyIsPressed(this.KeyLeft))
-        {
-            direction += Real3.XAxis;
-        }
-        
-        if(Zero.Keyboard.KeyIsPressed(this.KeyRight))
+        if(Zero.Keyboard.KeyIsDown(this.KeyLeft))
         {
             direction -= Real3.XAxis;
         }
         
-        this.Owner.RigidBody.Velocity = Math.Lerp(this.Owner.RigidBody.Velocity, direction, this.Speed * event.Dt); 
+        if(Zero.Keyboard.KeyIsDown(this.KeyRight))
+        {
+            direction += Real3.XAxis;
+        }
+        
+        this.Owner.RigidBody.Velocity = 
+        Math.Lerp(this.Owner.RigidBody.Velocity, direction, this.Speed * event.Dt); 
         
         
         
