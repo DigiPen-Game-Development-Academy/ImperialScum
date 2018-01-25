@@ -249,7 +249,7 @@ Level =
 			bool Static = false,
 			bool Asleep = false,
 			bool Kinematic = false,
-			bool RotationLocked = false,
+			bool RotationLocked = true,
 			bool Mode2D = true,
 			bool AllowSleep = true,
 			bool Inherit2DMode = true,
@@ -262,12 +262,41 @@ Level =
 		SwordBoomerang = 
 		{
 		},
-		PlayerMovement = 
+		SweptController = 
 		{
-			int Speed = 30,
-			Enum KeyUp = W,
-			Enum KeyLeft = A,
-			Enum KeyRight = D,
+			Vec3 WorldUp = [0, 1, 0],
+			bool LockZAxis = false,
+			bool ForwardEvents = false,
+			float Gravity = 10,
+			float JumpSpeed = 10,
+			float JumpCancelFactor = 0.5,
+			float MaxMoveSpeed = 10,
+			float MaxFallSpeed = 50,
+			float GroundAcceleration = 50,
+			float AirAcceleration = 50,
+			float GroundDeceleration = 50,
+			float AirDeceleration = 10,
+			float MaxGroundSlope = 45,
+			float MaxCeilingSlope = 45,
+			float GroundSnapDistance = 0.100000001,
+			Vec3 ControllerVelocity = [0, 0, 0],
+			bool Grounded = true,
+			bool Jumping = false,
+			float GroundTraction = 1,
+			float AirTraction = 1,
+		},
+		PlayerController = 
+		{
+			Enum Left = Left,
+			Enum Right = Right,
+			string IdleAnimation = "5aae8200c73cd894:Player_Stand",
+			string WalkingAnimation = "5aae84db11ec8399:Player_Walk()",
+			string JumpAnimation = "5aae7209b1b4f54a:PlayerJump()",
+			string ThrowAnimation = "5aae0f76638954da:PlayerThrow()",
+			string JumpSound = "",
+			Vec4 SpriteColor = [1, 1, 1, 1],
+			Vec4 RegularColor = [1, 1, 1, 1],
+			int Lose = 1,
 		},
 		Hierarchy = 
 		{
