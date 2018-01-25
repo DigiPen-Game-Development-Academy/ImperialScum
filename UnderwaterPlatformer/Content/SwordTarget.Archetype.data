@@ -14,8 +14,8 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0.628075838, 5.19183922, 0],
-		Vec3 Scale = [1, 1, 1],
+		Vec3 Translation = [-9.0495491, 0.380488157, 0],
+		Vec3 Scale = [1.06711411, 1.06711411, 1.06711411],
 		Quat Rotation = [0, 0, 0, 1],
 	},
 	Sprite = 
@@ -36,7 +36,10 @@ Cog =
 		float AnimationSpeed = 1,
 		uint StartFrame = 0,
 	},
-	BoxCollider = 
+	TargetDestroyer = 
+	{
+	},
+	SphereCollider = 
 	{
 		bool Ghost = true,
 		bool SendsMessages = true,
@@ -44,9 +47,6 @@ Cog =
 		string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
 		string SerializedGroupName = "4e740859314e5515:DefaultGroup",
 		Vec3 Offset = [0, 0, 0],
-		Vec3 Size = [0.5, 0.5, 0.5],
-	},
-	TargetDestroyer = 
-	{
+		float Radius = 0.5,
 	},
 },

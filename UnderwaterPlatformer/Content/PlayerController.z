@@ -93,7 +93,7 @@ class PlayerController : ZilchComponent
             
         }
         
-        if(Zero.Keyboard.KeyIsReleased(Keys.Space))
+        if(Zero.Keyboard.KeyIsReleased(Keys.W))
         {
             
             if(this.Owner.SweptController.Jumping)

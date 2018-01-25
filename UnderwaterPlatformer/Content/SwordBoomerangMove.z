@@ -10,6 +10,7 @@ class SwordBoomerangMove : ZilchComponent
     
     var ReturnSpeed:Integer = 20;
     
+    [Static]
     var Moving:Boolean = true;
     
     function Initialize(init : CogInitializer)
@@ -22,14 +23,20 @@ class SwordBoomerangMove : ZilchComponent
     {
         if(event.OtherObject.TargetDestroyer != null)
         {
-            this.Moving = false;
+            SwordBoomerangMove.Moving = false;
             
         }
         
-        if(event.OtherObject.Name == ("Player") && this.Moving == false)
+        if(event.OtherObject.Name == ("Player") && SwordBoomerangMove.Moving == false)
         {
             this.Owner.Destroy();
             SwordBoomerang.MarkerPlaced = false;
+            SwordBoomerangMove.Moving = true;
+        }
+        if(event.OtherObject.Ground != null)
+        {
+            SwordBoomerangMove.Moving = false;
+            Console.WriteLine("OK");
         }
             
         
@@ -44,7 +51,7 @@ class SwordBoomerangMove : ZilchComponent
         if(player == null)
         return;
         
-        if(this.Moving == false)
+        if(SwordBoomerangMove.Moving == false)
         {
             
              this.Owner.RigidBody.Velocity = Math.Normalize(player.Transform.Translation - this.Owner.Transform.Translation)
@@ -55,7 +62,7 @@ class SwordBoomerangMove : ZilchComponent
         if(target == null)
         return;
         
-        if(this.Moving == true)
+        if(SwordBoomerangMove.Moving == true)
         {
         this.Owner.RigidBody.Velocity = Math.Normalize(target.Transform.Translation -
         this.Owner.Transform.Translation)

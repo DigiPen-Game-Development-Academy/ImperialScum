@@ -104,7 +104,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-10.6782808, -0.197271049, 50],
+			Vec3 Translation = [-7.11813021, 0.308879942, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -116,7 +116,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 4.9192071,
+			float Size = 8.96338844,
 		},
 		EditorCameraController = 
 		{
@@ -124,7 +124,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-10.6782808, -0.197271049, 7.06034831e-09],
+			Vec3 LookTarget = [-7.11813021, 0.308879942, 7.06034831e-09],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -281,7 +281,7 @@ Level =
 			float GroundAcceleration = 50,
 			float AirAcceleration = 30,
 			float GroundDeceleration = 50,
-			float AirDeceleration = 30,
+			float AirDeceleration = 5,
 			float MaxGroundSlope = 45,
 			float MaxCeilingSlope = 45,
 			float GroundSnapDistance = 1,
@@ -373,6 +373,9 @@ Level =
 			string PaletteName = "",
 			float UnitsPerTile = 1,
 			float MeshThickness = 1.20000005,
+		},
+		Ground = 
+		{
 		},
 	},
 	Cog = 
