@@ -1,0 +1,46 @@
+//Jacob Burke
+
+class PlayerMovement : ZilchComponent
+{
+    [Property]
+    var Speed:Integer = 15;
+    
+    [Property]
+    var KeyUp:Keys;
+    
+    [Property]
+    var KeyLeft:Keys;
+    
+    [Property]
+    var KeyRight:Keys;
+    
+    function Initialize(init : CogInitializer)
+    {
+        //Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        var direction = Real3.Zero;
+        
+        if(Zero.Keyboard.KeyIsPressed(this.KeyUp))
+        {
+            direction += Real3.YAxis;
+        }
+        
+        if(Zero.Keyboard.KeyIsPressed(this.KeyLeft))
+        {
+            direction += Real3.XAxis;
+        }
+        
+        if(Zero.Keyboard.KeyIsPressed(this.KeyRight))
+        {
+            direction -= Real3.XAxis;
+        }
+        
+        this.Owner.RigidBody.Velocity = Math.Lerp(this.Owner.RigidBody.Velocity, direction, this.Speed); 
+        
+        
+        
+    }
+}

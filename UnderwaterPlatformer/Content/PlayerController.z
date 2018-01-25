@@ -23,6 +23,11 @@ class PlayerController : ZilchComponent
     var JumpAnimation:SpriteSource;
     
     [Property]
+    var ThrowAnimation:SpriteSource;
+    var ThrowTime:Real = 0.2;
+    
+    
+    [Property]
     var JumpSound:SoundCue;
     
     
@@ -44,6 +49,16 @@ class PlayerController : ZilchComponent
         
         Zero.Connect(this.Owner, Events.SweptCollision, this.OnSweptCollision);
         
+        Zero.Connect(this.Space, Events.LeftMouseDown, this.OnLeftMouseDown);
+        
+    }
+
+
+    function OnLeftMouseDown(event : ViewportMouseEvent)
+    {
+        
+        this.Owner.Sprite.SpriteSource = this.ThrowAnimation;
+        
     }
 
 
@@ -56,13 +71,7 @@ class PlayerController : ZilchComponent
     {
         
         
-        
-            
-            
-            
-        
-        
-        
+
         
         var movement:Real3 = Real3(0,0,0);
         
@@ -105,8 +114,20 @@ class PlayerController : ZilchComponent
             
         }
         
+        this.Owner.SweptController.Update(movement, event.Dt);
         
+        if(this.Owner.Sprite.SpriteSource == this.ThrowAnimation)
+        {
+            this.ThrowTime -= event.Dt;
+            
+            if(this.ThrowTime >= 0)
+            {
+                return;
+            }
+            else
+            this.ThrowTime += 0.2;
         
+        }
         
         if(!this.Owner.SweptController.Grounded)
         {
@@ -120,13 +141,9 @@ class PlayerController : ZilchComponent
         {
             this.Owner.Sprite.SpriteSource = this.WalkingAnimation;
         }
-        this.Owner.SweptController.Update(movement, event.Dt);
         
         
         
-        
-        
-        
-        
+
     }
 }
