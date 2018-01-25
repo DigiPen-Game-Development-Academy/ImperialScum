@@ -104,7 +104,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-3.25430989, 1.37352479, 50],
+			Vec3 Translation = [-11.126421, 0.173880965, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -116,7 +116,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 8.96338463,
+			float Size = 3.6442399,
 		},
 		EditorCameraController = 
 		{
@@ -124,7 +124,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-3.25430989, 1.37352479, 7.06034831e-09],
+			Vec3 LookTarget = [-11.126421, 0.173880965, 7.06034831e-09],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -234,16 +234,6 @@ Level =
 			float AnimationSpeed = 1,
 			uint StartFrame = 0,
 		},
-		BoxCollider = 
-		{
-			bool Ghost = false,
-			bool SendsMessages = true,
-			bool Seamless = true,
-			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
-			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
-			Vec3 Offset = [0, 0, 0],
-			Vec3 Size = [0.0900000036, 0.200000003, 0.5],
-		},
 		RigidBody = 
 		{
 			bool Static = false,
@@ -262,6 +252,32 @@ Level =
 		SwordBoomerang = 
 		{
 		},
+		PlayerController = 
+		{
+			Enum Left = Left,
+			Enum Right = Right,
+			string IdleAnimation = "5aae8200c73cd894:Player_Stand",
+			string WalkingAnimation = "5aae84db11ec8399:Player_Walk()",
+			string JumpAnimation = "5aae7209b1b4f54a:PlayerJump()",
+			string ThrowAnimation = "5aae0f76638954da:PlayerThrow()",
+			string JumpSound = "",
+			Vec4 SpriteColor = [1, 1, 1, 1],
+			Vec4 RegularColor = [1, 1, 1, 1],
+			int Lose = 1,
+		},
+		CapsuleCollider = 
+		{
+			bool Ghost = false,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			float Radius = 0.100000001,
+			float Height = 0.200000003,
+			AxisDirection Direction = Y,
+			CapsuleScalingMode ScalingMode = PreserveScale,
+		},
 		SweptController = 
 		{
 			Vec3 WorldUp = [0, 1, 0],
@@ -275,7 +291,7 @@ Level =
 			float GroundAcceleration = 50,
 			float AirAcceleration = 50,
 			float GroundDeceleration = 50,
-			float AirDeceleration = 10,
+			float AirDeceleration = 5,
 			float MaxGroundSlope = 45,
 			float MaxCeilingSlope = 45,
 			float GroundSnapDistance = 0.100000001,
@@ -284,19 +300,6 @@ Level =
 			bool Jumping = false,
 			float GroundTraction = 1,
 			float AirTraction = 1,
-		},
-		PlayerController = 
-		{
-			Enum Left = Left,
-			Enum Right = Right,
-			string IdleAnimation = "5aae8200c73cd894:Player_Stand",
-			string WalkingAnimation = "5aae84db11ec8399:Player_Walk()",
-			string JumpAnimation = "5aae7209b1b4f54a:PlayerJump()",
-			string ThrowAnimation = "5aae0f76638954da:PlayerThrow()",
-			string JumpSound = "",
-			Vec4 SpriteColor = [1, 1, 1, 1],
-			Vec4 RegularColor = [1, 1, 1, 1],
-			int Lose = 1,
 		},
 		Hierarchy = 
 		{
