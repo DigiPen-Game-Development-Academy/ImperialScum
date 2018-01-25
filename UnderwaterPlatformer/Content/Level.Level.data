@@ -104,7 +104,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-8.69886398, 2.88489342, 50],
+			Vec3 Translation = [-6.65397882, 2.70339179, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -116,7 +116,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 12.0992975,
+			float Size = 14.7781086,
 		},
 		EditorCameraController = 
 		{
@@ -124,7 +124,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-8.69886398, 2.88489342, 7.06034831e-09],
+			Vec3 LookTarget = [-6.65397882, 2.70339179, 7.06034831e-09],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -256,47 +256,18 @@ Level =
 			Vec3 Velocity = [0, 0, 0],
 			Vec3 AngularVelocity = [0, 0, 0],
 		},
-		PlayerController = 
-		{
-			Enum Left = Left,
-			Enum Right = Right,
-			string IdleAnimation = "5aae8200c73cd894:Player_Stand",
-			string WalkingAnimation = "5aae84db11ec8399:Player_Walk()",
-			string JumpAnimation = "5aae7209b1b4f54a:PlayerJump()",
-			string ThrowAnimation = "5aae0f76638954da:PlayerThrow()",
-			string JumpSound = "",
-			Vec4 SpriteColor = [1, 1, 1, 1],
-			Vec4 RegularColor = [1, 1, 1, 1],
-			int Lose = 1,
-		},
-		SweptController = 
-		{
-			Vec3 WorldUp = [0, 1, 0],
-			bool LockZAxis = false,
-			bool ForwardEvents = false,
-			float Gravity = 20,
-			float JumpSpeed = 15,
-			float JumpCancelFactor = 0.5,
-			float MaxMoveSpeed = 10,
-			float MaxFallSpeed = 10,
-			float GroundAcceleration = 50,
-			float AirAcceleration = 30,
-			float GroundDeceleration = 50,
-			float AirDeceleration = 5,
-			float MaxGroundSlope = 45,
-			float MaxCeilingSlope = 45,
-			float GroundSnapDistance = 1,
-			Vec3 ControllerVelocity = [0, 0, 0],
-			bool Grounded = true,
-			bool Jumping = false,
-			float GroundTraction = 1,
-			float AirTraction = 1,
-		},
 		GravityBeam = 
 		{
 		},
 		SwordBoomerang = 
 		{
+		},
+		PlayerMovement = 
+		{
+			int Speed = 30,
+			Enum KeyUp = W,
+			Enum KeyLeft = A,
+			Enum KeyRight = D,
 		},
 		Hierarchy = 
 		{

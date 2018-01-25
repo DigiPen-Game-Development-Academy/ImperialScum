@@ -16,7 +16,7 @@ class PlayerMovement : ZilchComponent
     
     function Initialize(init : CogInitializer)
     {
-        //Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
     }
 
     function OnLogicUpdate(event : UpdateEvent)
@@ -38,7 +38,7 @@ class PlayerMovement : ZilchComponent
             direction -= Real3.XAxis;
         }
         
-        this.Owner.RigidBody.Velocity = Math.Lerp(this.Owner.RigidBody.Velocity, direction, this.Speed); 
+        this.Owner.RigidBody.Velocity = Math.Lerp(this.Owner.RigidBody.Velocity, direction, this.Speed * event.Dt); 
         
         
         
