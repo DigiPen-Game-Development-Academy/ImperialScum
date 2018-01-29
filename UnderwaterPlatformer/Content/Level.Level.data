@@ -104,7 +104,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-13.2819824, 0.500592053, 50],
+			Vec3 Translation = [14.8917217, 7.15365267, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -116,7 +116,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 6.64027548,
+			float Size = 24.365139,
 		},
 		EditorCameraController = 
 		{
@@ -124,7 +124,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-13.2819824, 0.500592053, 7.06034831e-09],
+			Vec3 LookTarget = [14.8917217, 7.15365267, 1.23857228e-06],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -213,7 +213,7 @@ Level =
 		Transform = 
 		{
 			Vec3 Translation = [-11.4674006, -0.0376155674, 0],
-			Vec3 Scale = [4.80613804, 4.80613804, 4.80613804],
+			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Sprite = 
@@ -273,8 +273,8 @@ Level =
 			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
 			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
 			Vec3 Offset = [0, 0, 0],
-			float Radius = 0.100000001,
-			float Height = 0.200000003,
+			float Radius = 0.5,
+			float Height = 0.5,
 			AxisDirection Direction = Y,
 			CapsuleScalingMode ScalingMode = PreserveScale,
 		},
@@ -1024,7 +1024,7 @@ Level =
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string SpriteSource = "5275aa4d802dd6dc:Square",
+					string SpriteSource = "5ac47bed8af33f3c:Enemy_GearCrab()",
 					bool RenderMask = false,
 					bool FlipX = false,
 					bool FlipY = false,
@@ -1134,7 +1134,7 @@ Level =
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string SpriteSource = "5275aa4d802dd6dc:Square",
+					string SpriteSource = "5ac47bed8af33f3c:Enemy_GearCrab()",
 					bool RenderMask = false,
 					bool FlipX = false,
 					bool FlipY = false,
@@ -1244,7 +1244,7 @@ Level =
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string SpriteSource = "5275aa4d802dd6dc:Square",
+					string SpriteSource = "5ac47bed8af33f3c:Enemy_GearCrab()",
 					bool RenderMask = false,
 					bool FlipX = false,
 					bool FlipY = false,
@@ -1413,7 +1413,7 @@ Level =
 		Transform = 
 		{
 			Vec3 Translation = [-3.22396088, 3.94761467, 7.06034831e-09],
-			Vec3 Scale = [4.80000019, 4.80000019, 4.80000019],
+			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Sprite = 

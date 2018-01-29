@@ -2,16 +2,16 @@ ImageContent =
 {
 	SpriteSourceBuilder = 
 	{
-		string Name = "Enemy_GearShark",
-		uint64 ResourceId = 5aa3e5c57d114182,
+		string Name = "Enemy_GearCrab",
+		uint64 ResourceId = 5ac47b9bbefb3bdc,
 		uint64 AtlasId = 5274cf95e4a661fd,
-		uint FrameSizeX = 288,
-		uint FrameSizeY = 32,
+		uint FrameSizeX = 0,
+		uint FrameSizeY = 0,
 		uint FrameCount = 1,
 		float FrameDelay = 0.0833333358,
-		float OriginX = 144,
-		float OriginY = 16,
-		float PixelsPerUnit = 16,
+		float OriginX = 64,
+		float OriginY = 12,
+		float PixelsPerUnit = 64,
 		bool Smoothing = true,
 		bool Looping = true,
 		Vec4 Slices = [0, 0, 0, 0],
