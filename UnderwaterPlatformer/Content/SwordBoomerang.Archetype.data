@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-7.39318657, 2.76329947, 0],
+		Vec3 Translation = [-2.37600613, 1.26824057, 0],
 		Vec3 Scale = [4.80000019, 4.80000019, 4.80000019],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -80,6 +80,9 @@ Cog =
 	Spin = 
 	{
 		float RotationSpeed = 3000,
+	},
+	DestroySword = 
+	{
 	},
 	Hierarchy = 
 	{

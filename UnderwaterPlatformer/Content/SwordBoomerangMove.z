@@ -22,7 +22,6 @@ class SwordBoomerangMove : ZilchComponent
 
     function OnCollisionPersisted(event : CollisionEvent)
     {
-        
     }
 
     function OnCollisionStarted(event : CollisionEvent)
@@ -42,9 +41,9 @@ class SwordBoomerangMove : ZilchComponent
         if(event.OtherObject.Ground != null)
         {
             SwordBoomerangMove.Moving = false;
-            Console.WriteLine("OK");
         }
-            
+        
+        
         
     }
 
