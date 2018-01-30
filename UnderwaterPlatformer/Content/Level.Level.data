@@ -162,7 +162,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [11.9213839, 6.83081961, 50],
+			Vec3 Translation = [6.03757763, 2.29204369, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -174,7 +174,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 3.64424944,
+			float Size = 16.3323898,
 		},
 		EditorCameraController = 
 		{
@@ -182,7 +182,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [11.9213839, 6.83081961, 5.99708283e-09],
+			Vec3 LookTarget = [6.03757763, 2.29204369, 5.99708283e-09],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -303,9 +303,6 @@ Level =
 			bool Inherit2DMode = true,
 			Vec3 Velocity = [0, 0, 0],
 			Vec3 AngularVelocity = [0, 0, 0],
-		},
-		GravityBeam = 
-		{
 		},
 		SwordBoomerang = 
 		{
