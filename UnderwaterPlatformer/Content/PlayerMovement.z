@@ -3,7 +3,10 @@
 class PlayerMovement : ZilchComponent
 {
     [Property]
-    var Speed:Integer = 15;
+    var Speed:Integer = 30;
+    
+    [Property]
+    var JumpSpeed:Integer = 100;
     
     [Property]
     var KeyUp:Keys;
@@ -39,7 +42,7 @@ class PlayerMovement : ZilchComponent
         }
         
         this.Owner.RigidBody.Velocity = 
-        Math.Lerp(this.Owner.RigidBody.Velocity, direction, this.Speed * event.Dt); 
+        Math.Lerp(this.Owner.RigidBody.Velocity, direction * this.Speed , event.Dt); 
         
         
         
