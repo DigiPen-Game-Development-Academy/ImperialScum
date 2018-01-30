@@ -104,7 +104,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-1.98686361, 3.81152368, 50],
+			Vec3 Translation = [-8.04431629, 1.95838928, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -116,7 +116,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 8.96339703,
+			float Size = 8.11041832,
 		},
 		EditorCameraController = 
 		{
@@ -124,7 +124,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-1.98686361, 3.81152368, 5.99708283e-09],
+			Vec3 LookTarget = [-8.04431629, 1.95838928, 5.99708283e-09],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -274,7 +274,7 @@ Level =
 		},
 		PlayerMovement = 
 		{
-			int Speed = 32,
+			int Speed = 40,
 			int JumpSpeed = 20,
 			Enum KeyUp = W,
 			Enum KeyLeft = A,
@@ -282,12 +282,12 @@ Level =
 		},
 		PlayerController = 
 		{
-			Enum Left = Left,
-			Enum Right = Right,
-			string IdleAnimation = "",
-			string WalkingAnimation = "",
+			Enum Left = A,
+			Enum Right = D,
+			string IdleAnimation = "5aae8200c73cd894:Player_Stand",
+			string WalkingAnimation = "5aae84db11ec8399:Player_Walk()",
 			string JumpAnimation = "",
-			string ThrowAnimation = "",
+			string ThrowAnimation = "5aa3962a86139988:PlayerThrow()",
 			string JumpSound = "",
 			Vec4 SpriteColor = [1, 1, 1, 1],
 			Vec4 RegularColor = [1, 1, 1, 1],

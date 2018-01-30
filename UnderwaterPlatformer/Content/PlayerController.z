@@ -1,7 +1,6 @@
 //Jacob Burke
 
-//The player Controller manages the player: 
-//Taking input from the keyboard and changing sprite art etc
+//This just changes the spritesource, the player movement deals with the actual moving
 
 class PlayerController : ZilchComponent
 {
@@ -47,8 +46,6 @@ class PlayerController : ZilchComponent
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
         
-        Zero.Connect(this.Owner, Events.SweptCollision, this.OnSweptCollision);
-        
         Zero.Connect(this.Space, Events.LeftMouseDown, this.OnLeftMouseDown);
         
     }
@@ -62,20 +59,9 @@ class PlayerController : ZilchComponent
     }
 
 
-    function OnSweptCollision(event : SweptControllerEvent)
-    {
-        
-    }
-
     function OnLogicUpdate(event : UpdateEvent)
     {
-        
-        
-        
-        
-        
-    
-        
+
         
         if(this.Owner.Sprite.SpriteSource == this.ThrowAnimation)
         {
@@ -90,21 +76,34 @@ class PlayerController : ZilchComponent
         
         }
         
-        /*if(!this.Owner.SweptController.Grounded)
-        {
-            this.Owner.Sprite.SpriteSource = this.JumpAnimation;
-        }
-        else if(movement == Real3(0,0,0))
+        if(Zero.Keyboard.KeyIsUp(Keys.A) && Zero.Keyboard.KeyIsUp(Keys.D)
+        && this.Owner.GroundChecker.Grounded == true)
         {
             this.Owner.Sprite.SpriteSource = this.IdleAnimation;
         }
-        else if(this.Owner.Sprite.SpriteSource != this.WalkingAnimation)
+        else if(this.Owner.GroundChecker.Grounded == true && this.Owner.Sprite.SpriteSource != this.WalkingAnimation)
         {
             this.Owner.Sprite.SpriteSource = this.WalkingAnimation;
         }
-        */
+        else if(this.Owner.GroundChecker.Grounded == false)
+        {
+            this.Owner.Sprite.SpriteSource = this.JumpAnimation;
+        }
+       
+        if(Zero.Keyboard.KeyIsDown(this.Right))
+        {
+            this.Owner.Sprite.FlipX = false;
+        }
         
+        if(Zero.Keyboard.KeyIsDown(this.Left))
+        {
+            this.Owner.Sprite.FlipX = true;
+        }
         
+        if(this.Owner.GroundChecker.Grounded == false)
+        {
+            this.Owner.Sprite.SpriteSource = this.JumpAnimation;
+        }
         
 
     }
