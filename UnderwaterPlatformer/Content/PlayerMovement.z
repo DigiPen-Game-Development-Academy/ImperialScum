@@ -1,12 +1,13 @@
 //Jacob Burke
 
+//Moves the player
 class PlayerMovement : ZilchComponent
 {
     [Property]
     var Speed:Integer = 30;
     
     [Property]
-    var JumpSpeed:Integer = 100;
+    var JumpSpeed:Integer = 20;
     
     [Property]
     var KeyUp:Keys;
@@ -26,9 +27,12 @@ class PlayerMovement : ZilchComponent
     {
         var direction = Real3.Zero;
         
-        if(Zero.Keyboard.KeyIsDown(this.KeyUp))
+        var velocity = direction * this.Speed;
+        
+        if(Zero.Keyboard.KeyIsPressed(this.KeyUp))
         {
-            direction += Real3.YAxis;
+            this.Owner.RigidBody.Velocity =
+            Real3(this.Owner.RigidBody.Velocity.X, Math.Max(this.JumpSpeed, velocity.Y + this.JumpSpeed), 0);
         }
         
         if(Zero.Keyboard.KeyIsDown(this.KeyLeft))
