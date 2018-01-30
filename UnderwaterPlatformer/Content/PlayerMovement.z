@@ -43,8 +43,6 @@ class PlayerMovement : ZilchComponent
         
         this.Owner.RigidBody.Velocity = 
         Math.Lerp(this.Owner.RigidBody.Velocity, direction * this.Speed , event.Dt); 
-        
-        
-        
+    
     }
 }

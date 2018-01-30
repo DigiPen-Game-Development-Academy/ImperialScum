@@ -71,50 +71,11 @@ class PlayerController : ZilchComponent
     {
         
         
-
-        
-        var movement:Real3 = Real3(0,0,0);
         
         
-        if(Zero.Keyboard.KeyIsDown(Keys.A))
-        {
-            movement.X -= 1;
-            this.Owner.Sprite.FlipX = true;
-        }
         
-        if(Zero.Keyboard.KeyIsDown(Keys.D))
-        {
-            movement.X += 1;
-            this.Owner.Sprite.FlipX = false;
-        }
+    
         
-        
-        if(Zero.Keyboard.KeyIsPressed(Keys.W))
-        {
-        
-        if(this.Owner.SweptController.Grounded)
-            {
-                //this.Owner.SoundEmitter.PlayCue(this.JumpSound);
-            }
-            this.Owner.SweptController.Jump();
-            
-            
-            
-        }
-        
-        if(Zero.Keyboard.KeyIsReleased(Keys.W))
-        {
-            
-            if(this.Owner.SweptController.Jumping)
-            {
-                this.Owner.SweptController.JumpCancel();
-                
-            }
-            
-            
-        }
-        
-        this.Owner.SweptController.Update(movement, event.Dt);
         
         if(this.Owner.Sprite.SpriteSource == this.ThrowAnimation)
         {
@@ -129,7 +90,7 @@ class PlayerController : ZilchComponent
         
         }
         
-        if(!this.Owner.SweptController.Grounded)
+        /*if(!this.Owner.SweptController.Grounded)
         {
             this.Owner.Sprite.SpriteSource = this.JumpAnimation;
         }
@@ -141,6 +102,7 @@ class PlayerController : ZilchComponent
         {
             this.Owner.Sprite.SpriteSource = this.WalkingAnimation;
         }
+        */
         
         
         
