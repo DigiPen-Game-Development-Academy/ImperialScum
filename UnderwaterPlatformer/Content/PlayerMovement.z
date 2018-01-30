@@ -29,7 +29,7 @@ class PlayerMovement : ZilchComponent
         
         var velocity = direction * this.Speed;
         
-        if(Zero.Keyboard.KeyIsPressed(this.KeyUp))
+        if(Zero.Keyboard.KeyIsPressed(this.KeyUp) && this.Owner.GroundChecker.Grounded == true)
         {
             this.Owner.RigidBody.Velocity =
             Real3(this.Owner.RigidBody.Velocity.X, Math.Max(this.JumpSpeed, velocity.Y + this.JumpSpeed), 0);
@@ -50,3 +50,34 @@ class PlayerMovement : ZilchComponent
     
     }
 }
+//THIS IS JEFFERY'S SCRIPT////////////////////////////////////////////////////////////
+class GroundChecker : ZilchComponent
+{
+  [Dependency] var Contact : Contact;
+  
+  [Property] var GroundAngle : Real = 61;
+  
+  var AllGrounds : Array[Cog] = new Array[Cog]();
+  var Grounded : Boolean { get { return this.AllGrounds.Count > 0; } }
+  
+  function Initialize(init : CogInitializer)
+  {
+    Zero.Connect(this.Owner, Events.AnyCollision, this.OnAnyCollision);
+  }
+  function OnAnyCollision(event : AnyCollisionEvent)
+  {
+    var localUp = Math.Transform(Real3.YAxis, this.Owner.Transform.WorldRotation);
+    if (!event.Ended && Math.AngleBetween(-event.ContactNormal, localUp) < Math.ToRadians(this.GroundAngle))
+    {
+      if (this.AllGrounds.FindFirstIndex(event.OtherObject) < 0)
+      {
+        this.AllGrounds.Add(event.OtherObject);
+      }
+    }
+    else
+    {
+      this.AllGrounds.RemoveAll(event.OtherObject);
+    }
+  }
+}
+//THIS IS JEFFERY'S SCRIPT////////////////////////////////////////////////////////////
