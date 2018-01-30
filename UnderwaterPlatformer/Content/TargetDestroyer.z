@@ -13,7 +13,7 @@ class TargetDestroyer : ZilchComponent
 
     function OnCollisionStarted(event : CollisionEvent)
     {
-        if(event.OtherObject.SwordBoomerangMove != null)
+        if(event.OtherObject.SwordBoomerangMove != null || DestroySword.DestroyTarget == true)
         {
         this.Owner.Destroy();
         }

@@ -32,10 +32,5 @@ class SwordBoomerang : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-
-        
-        
-        
-        
     }
 }
