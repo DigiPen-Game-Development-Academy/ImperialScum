@@ -41,10 +41,16 @@ class Door : ZilchComponent
     {
         if(event.OtherObject.PlayerController != null)
         {
+            var posistion = this.Owner.Transform.Translation;
+            
             if(KeyPickUp.IsPickedUp == true)
             {
                 KeyPickUp.IsPickedUp = false;
-                this.Owner.Destroy();
+                
+                var seq = Action.Sequence(this.Owner.Actions);
+                
+                Action.Property
+                (seq, @this.Owner.Transform.Translation, posistion + Real3(0,3,0), 6, Ease.QuadInOut);
             }
         }
     }
