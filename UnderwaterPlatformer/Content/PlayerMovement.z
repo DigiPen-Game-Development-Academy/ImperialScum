@@ -18,9 +18,32 @@ class PlayerMovement : ZilchComponent
     [Property]
     var KeyRight:Keys;
     
+    [Property]
+    var KeyDown:Keys;
+    
+    var Swimming:Boolean = false;
+    
+    
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        Zero.Connect(this.Owner, Events.CollisionPersisted, this.OnCollisionPersisted);
+        Zero.Connect(this.Owner, Events.CollisionEnded, this.OnCollisionEnded);
+    }
+
+    function OnCollisionEnded(event : CollisionEvent)
+    {
+        if(event.OtherObject.Region != null)
+        this.Swimming = false;
+        
+    }
+
+    function OnCollisionPersisted(event : CollisionEvent)
+    {
+        if(event.OtherObject.Region != null)
+        this.Swimming = true;
+        
+        
     }
 
     function OnLogicUpdate(event : UpdateEvent)
@@ -29,7 +52,8 @@ class PlayerMovement : ZilchComponent
         
         var velocity = direction * this.Speed;
         
-        if(Zero.Keyboard.KeyIsPressed(this.KeyUp) && this.Owner.GroundChecker.Grounded == true)
+        if(Zero.Keyboard.KeyIsPressed(this.KeyUp) && this.Owner.GroundChecker.Grounded == true
+        && this.Swimming == false)
         {
             this.Owner.RigidBody.Velocity =
             Real3(this.Owner.RigidBody.Velocity.X, Math.Max(this.JumpSpeed, velocity.Y + this.JumpSpeed), 0);
@@ -43,6 +67,16 @@ class PlayerMovement : ZilchComponent
         if(Zero.Keyboard.KeyIsDown(this.KeyRight))
         {
             direction += Real3.XAxis;
+        }
+        
+        if(Zero.Keyboard.KeyIsDown(this.KeyUp) && this.Swimming == true)
+        {
+            direction += Real3.YAxis;
+        }
+        
+        if(Zero.Keyboard.KeyIsDown(this.KeyDown) && this.Swimming == true)
+        {
+            direction -= Real3.YAxis;
         }
         
         this.Owner.RigidBody.Velocity = 
