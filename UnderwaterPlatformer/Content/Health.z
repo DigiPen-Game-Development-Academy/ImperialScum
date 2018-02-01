@@ -53,6 +53,19 @@ class Health : ZilchComponent
             
 
         }
+        if(event.OtherObject.JaggedRock != null && this.CurrentHealth > 0)
+        {
+            
+            this.CurrentHealth -= 2;
+            
+            var update = HealthEvent();
+            update.CurrentHealth = this.CurrentHealth;
+            update.MaxHealth = this.MaxHealth;
+            
+            this.GameSession.DispatchEvent(Events.UpdateHealth, update);
+            
+
+        }
         
         
         
