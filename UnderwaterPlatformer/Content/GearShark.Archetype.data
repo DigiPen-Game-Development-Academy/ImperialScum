@@ -6,15 +6,15 @@ Cog =
 	},
 	Named = 
 	{
-		string Name = "SwordBoomerang",
+		string Name = "GearShark",
 	},
 	Archetyped = 
 	{
-		string Name = "5aae4c3cb5c567f8:SwordBoomerang",
+		string Name = "5add57b20981d06d:GearShark",
 	},
 	Transform = 
 	{
-		Vec3 Translation = [4.24862051, 1.88563502, 0],
+		Vec3 Translation = [-0.862876415, 3.99444532, 7.06034831e-09],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -24,16 +24,16 @@ Cog =
 		bool VisibilityCulling = true,
 		bool VisibilityEvents = true,
 		bool CastShadows = false,
-		Vec4 Color = [1, 1, 1, 0.999899983],
+		Vec4 Color = [1, 1, 1, 1],
 		BlendMode BlendMode = Alpha,
 		SpriteGeometryMode GeometryMode = ZPlane,
 		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-		string SpriteSource = "5aa39760bdb2cd3c:Weap_SwordBoomerang_Wimpy",
+		string SpriteSource = "5aa3e5e08498dd78:Enemy_GearShark()",
 		bool RenderMask = false,
-		bool FlipX = false,
+		bool FlipX = true,
 		bool FlipY = false,
 		bool AnimationActive = true,
-		float AnimationSpeed = 0.699999988,
+		float AnimationSpeed = 1,
 		uint StartFrame = 0,
 	},
 	RigidBody = 
@@ -41,15 +41,12 @@ Cog =
 		bool Static = false,
 		bool Asleep = false,
 		bool Kinematic = false,
-		bool RotationLocked = false,
+		bool RotationLocked = true,
 		bool Mode2D = true,
 		bool AllowSleep = true,
 		bool Inherit2DMode = true,
 		Vec3 Velocity = [0, 0, 0],
 		Vec3 AngularVelocity = [0, 0, 0],
-	},
-	SwordBoomerangMove = 
-	{
 	},
 	IgnoreSpaceEffects = 
 	{
@@ -64,25 +61,22 @@ Cog =
 		bool Torque = true,
 		bool PointGravity = true,
 		bool PointForce = true,
-		bool Buoyancy = true,
+		bool Buoyancy = false,
 		bool Custom = true,
 	},
-	SphereCollider = 
+	BoxCollider = 
 	{
 		bool Ghost = true,
 		bool SendsMessages = true,
 		bool Seamless = true,
 		string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
 		string SerializedGroupName = "4e740859314e5515:DefaultGroup",
-		Vec3 Offset = [0, 0, 0],
-		float Radius = 0.100000001,
+		Vec3 Offset = [0, -0.100000001, 0],
+		Vec3 Size = [1.25, 0.600000024, 0.5],
 	},
-	Spin = 
+	Follow = 
 	{
-		float RotationSpeed = 3000,
-	},
-	DestroySword = 
-	{
+		float Speed = 3,
 	},
 	Hierarchy = 
 	{
@@ -98,7 +92,7 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [-0.670448422, 0.65506041, 1.47090573e-09],
+				Vec3 Translation = [0.197036892, 0.104464114, -1.11022302e-16],
 				Vec3 Scale = [0.0360335112, 0.0360335112, 0.0360335112],
 				Quat Rotation = [0, 0, 0, 1],
 			},
@@ -121,17 +115,17 @@ Cog =
 				float VelocityScale = 1,
 				float LengthScale = 1,
 				float MaxParticleSize = 100,
-				Vec3 SystemSize = [10, 10, 4],
+				Vec3 SystemSize = [4, 4, 4],
 			},
 			SphericalParticleEmitter = 
 			{
 				bool Active = true,
 				uint EmitCount = 0,
-				float EmitRate = 30,
+				float EmitRate = 10,
 				float EmitVariance = 5,
 				float Size = 0.100000001,
 				float SizeVariance = 0.200000003,
-				float Lifetime = 0.200000003,
+				float Lifetime = 5,
 				float LifetimeVariance = 0.200000003,
 				float Spin = 0,
 				float SpinVariance = 10,
@@ -139,7 +133,7 @@ Cog =
 				float Fill = 1,
 				float EmitterVelocityPercent = 0,
 				Vec3 StartVelocity = [0, 0, 0],
-				Vec3 RandomVelocity = [6, 6, 6],
+				Vec3 RandomVelocity = [3, 3, 3],
 				Vec3 TangentVelocity = [0, 0, 0],
 				Vec3 EmitterSize = [0, 0, 0],
 				bool FastMovingEmitter = false,
@@ -160,6 +154,9 @@ Cog =
 				Vec4 Color2 = [1, 1, 1, 1],
 				Vec4 Color3 = [1, 1, 1, 0.5],
 				Vec4 Color4 = [1, 1, 1, 0],
+			},
+			FlipSpriteChild = 
+			{
 			},
 		},
 		Cog = 
@@ -174,7 +171,7 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [0.708188891, -0.677915215, 1.47090573e-09],
+				Vec3 Translation = [0.0926702321, 0.0768720433, -1.11022302e-16],
 				Vec3 Scale = [0.0360335112, 0.0360335112, 0.0360335112],
 				Quat Rotation = [0, 0, 0, 1],
 			},
@@ -197,17 +194,17 @@ Cog =
 				float VelocityScale = 1,
 				float LengthScale = 1,
 				float MaxParticleSize = 100,
-				Vec3 SystemSize = [10, 10, 4],
+				Vec3 SystemSize = [4, 4, 4],
 			},
 			SphericalParticleEmitter = 
 			{
 				bool Active = true,
 				uint EmitCount = 0,
-				float EmitRate = 30,
+				float EmitRate = 10,
 				float EmitVariance = 5,
 				float Size = 0.100000001,
 				float SizeVariance = 0.200000003,
-				float Lifetime = 0.200000003,
+				float Lifetime = 5,
 				float LifetimeVariance = 0.200000003,
 				float Spin = 0,
 				float SpinVariance = 10,
@@ -215,7 +212,7 @@ Cog =
 				float Fill = 1,
 				float EmitterVelocityPercent = 0,
 				Vec3 StartVelocity = [0, 0, 0],
-				Vec3 RandomVelocity = [6, 6, 6],
+				Vec3 RandomVelocity = [3, 3, 3],
 				Vec3 TangentVelocity = [0, 0, 0],
 				Vec3 EmitterSize = [0, 0, 0],
 				bool FastMovingEmitter = false,
@@ -236,6 +233,9 @@ Cog =
 				Vec4 Color2 = [1, 1, 1, 1],
 				Vec4 Color3 = [1, 1, 1, 0.5],
 				Vec4 Color4 = [1, 1, 1, 0],
+			},
+			FlipSpriteChild = 
+			{
 			},
 		},
 	},
