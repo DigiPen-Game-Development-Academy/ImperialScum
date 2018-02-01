@@ -39,7 +39,7 @@ class DisplayHealth : ZilchComponent
         var newSize = this.InitSize * (curHealth/maxHealth);
         this.Owner.Transform.Scale = Real3(newSize, 1, 1);
         
-        if(event.CurrentHealth <= 15)
+        if(event.CurrentHealth <= 5)
         {
             this.LowHealth = true;
             Console.WriteLine("LOWHEALTH");
@@ -50,11 +50,11 @@ class DisplayHealth : ZilchComponent
             this.Owner.Sprite.Color = this.RegularColor;
         }
         
-        if(event.CurrentHealth <= 5)
+        if(event.CurrentHealth <= 2)
         {
             this.UltraLow = 0.7;
         }
-        else if(event.CurrentHealth <= 10)
+        else if(event.CurrentHealth <= 3)
         {
             this.UltraLow = 0.5;
         }

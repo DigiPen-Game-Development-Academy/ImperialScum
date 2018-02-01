@@ -23,12 +23,23 @@ class PlayerMovement : ZilchComponent
     
     var Swimming:Boolean = false;
     
+    var DoubleJump:Boolean = true;
+    
+   
     
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
         Zero.Connect(this.Owner, Events.CollisionPersisted, this.OnCollisionPersisted);
         Zero.Connect(this.Owner, Events.CollisionEnded, this.OnCollisionEnded);
+        Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
+    }
+
+    function OnCollisionStarted(event : CollisionEvent)
+    {
+        
+        if(event.OtherObject.Name == ("DefaultTile"))
+        this.DoubleJump = true;
     }
 
     function OnCollisionEnded(event : CollisionEvent)
@@ -58,7 +69,16 @@ class PlayerMovement : ZilchComponent
             this.Owner.RigidBody.Velocity =
             Real3(this.Owner.RigidBody.Velocity.X, Math.Max(this.JumpSpeed, velocity.Y + this.JumpSpeed), 0);
         }
-        
+        else if(Zero.Keyboard.KeyIsPressed(this.KeyUp) && this.DoubleJump == true
+        && this.Owner.GroundChecker.Grounded == false)
+        {
+            this.Owner.RigidBody.Velocity =
+            Real3(this.Owner.RigidBody.Velocity.X, 
+            Math.Max(this.JumpSpeed, velocity.Y + this.JumpSpeed/2), 0);
+            this.DoubleJump = false;
+            
+        }
+                
         if(Zero.Keyboard.KeyIsDown(this.KeyLeft))
         {
             direction -= Real3.XAxis;
