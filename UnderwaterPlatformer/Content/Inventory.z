@@ -3,6 +3,15 @@ class Inventory : ZilchComponent
     [Property]
     var InventoryKey:Keys;
     
+    var Timer:Real = 1;
+    
+    var Active:Boolean = false;
+    
+    var IsPlaced:Boolean = false;
+    
+    [Static]
+    var Destroy:Boolean = false;
+    
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
@@ -10,9 +19,17 @@ class Inventory : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-        if(Zero.Keyboard.KeyIsPressed(this.InventoryKey))
+        if(Zero.Keyboard.KeyIsPressed(this.InventoryKey) && this.IsPlaced == false)
         {
-            
+            Inventory.Destroy = false;
+            var position = Real3(0,0,0);
+            this.Space.CreateAtPosition(Archetype.Inventory, position);
+            this.IsPlaced = true;
+        }
+        if(Zero.Keyboard.KeyIsPressed(this.InventoryKey) && this.IsPlaced == true)
+        {
+            Inventory.Destroy = true;
+            this.IsPlaced = false;
         }
         
         
