@@ -15,7 +15,7 @@ Level =
 			bool Active = true,
 			bool WakeUpOnChange = false,
 			bool LocalSpaceDirection = true,
-			float Strength = 10,
+			float Strength = 20,
 			Vec3 Direction = [0, -1, 0],
 		},
 		DragEffect = 
@@ -50,7 +50,7 @@ Level =
 			},
 			CogPath Camera = 
 			{
-				string Path = "",
+				string Path = ":/Camera",
 				bool ErrorOnResolveToNull = false,
 				bool ErrorOnPathCantCompute = false,
 				bool ErrorOnDirectLinkFail = false,
@@ -58,7 +58,7 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 4294967293,
+				uint ResolvedCog = 2,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
@@ -69,7 +69,7 @@ Level =
 		},
 		ForwardRenderer = 
 		{
-			Vec4 ClearColor = [0.155000001, 0.155000001, 0.155000001, 1],
+			Vec4 ClearColor = [0, 0.429999828, 1, 1],
 			bool DrawNonVisible = false,
 			bool DrawDebugObjects = true,
 			bool DrawEditorIcons = true,
@@ -81,7 +81,7 @@ Level =
 			bool Active = true,
 			bool HalfCellOffset = false,
 			float CellSize = 1,
-			GridAxis Axis = YAxis,
+			GridAxis Axis = ZAxis,
 			int Lines = 100,
 			bool DrawAxisOrigins = true,
 			bool AlwaysDrawInEditor = true,
@@ -96,13 +96,10 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 2,
+			uint Id = 3,
 		},
 		Named = 
 		{
-<<<<<<< HEAD
-			string Name = "EditorCamera",
-=======
 			string Name = "RedFloat",
 		},
 		Transform = 
@@ -158,47 +155,34 @@ Level =
 		LinkId = 
 		{
 			uint Id = 4,
->>>>>>> 5f6fe339582b68177e7b1455ac4abafba9da9b6c
 		},
-		Archetyped = 
+		Named = 
 		{
-			string Name = "4de020863e840530:EditorCamera",
+			string Name = "EditorCamera",
 		},
 		Transform = 
 		{
-<<<<<<< HEAD
-			Vec3 Translation = [0, 0, 50],
-=======
-			Vec3 Translation = [4.30409861, 2.04133606, 50],
->>>>>>> 5f6fe339582b68177e7b1455ac4abafba9da9b6c
+			Vec3 Translation = [-5.28703976, 9.27072906, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
 		Camera = 
 		{
-			ProjectionMode ProjectionMode = Perspective,
+			ProjectionMode ProjectionMode = Orthographic,
 			Facing Facing = NegativeZ,
-			CameraTransparentSort TransparentSort = InheritFromSpace,
+			CameraTransparentSort TransparentSort = ZDepth,
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-<<<<<<< HEAD
-			float Size = 20,
-=======
-			float Size = 11.0803585,
->>>>>>> 5f6fe339582b68177e7b1455ac4abafba9da9b6c
+			float Size = 6.72057629,
 		},
 		EditorCameraController = 
 		{
-			ControlMode ControlMode = Orbit,
+			ControlMode ControlMode = ZPlane,
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-<<<<<<< HEAD
-			Vec3 LookTarget = [0, 0, 0],
-=======
-			Vec3 LookTarget = [4.30409861, 2.04133606, 1.5683705e-08],
->>>>>>> 5f6fe339582b68177e7b1455ac4abafba9da9b6c
+			Vec3 LookTarget = [-5.28703976, 9.27072906, 1.5683705e-08],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -210,8 +194,6 @@ Level =
 			bool Wireframe = false,
 		},
 	},
-<<<<<<< HEAD
-=======
 	Cog = 
 	{
 		LinkId = 
@@ -286,6 +268,10 @@ Level =
 		{
 			string Name = "Player",
 		},
+		Archetyped = 
+		{
+			string Name = "5adef0b2576f5b3a:Player",
+		},
 		Transform = 
 		{
 			Vec3 Translation = [-7.98516607, 0.0105414391, 0],
@@ -347,8 +333,8 @@ Level =
 		},
 		PlayerMovement = 
 		{
-			int Speed = 40,
-			int JumpSpeed = 20,
+			int Speed = 30,
+			int JumpSpeed = 15,
 			Enum KeyUp = W,
 			Enum KeyLeft = A,
 			Enum KeyRight = D,
@@ -1500,7 +1486,7 @@ Level =
 				SpriteParticleSystem = 
 				{
 					bool Visible = true,
-					bool VisibilityCulling = true,
+					bool VisibilityCulling = false,
 					bool VisibilityEvents = true,
 					bool CastShadows = false,
 					SystemChildMode ChildMode = Independent,
@@ -1590,5 +1576,4 @@ Level =
 			string Name = "Key",
 		},
 	},
->>>>>>> 5f6fe339582b68177e7b1455ac4abafba9da9b6c
 },

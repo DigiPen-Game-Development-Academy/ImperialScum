@@ -104,7 +104,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-2.05386972, 4.0457592, 50],
+			Vec3 Translation = [-2.05982614, 2.26283002, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -116,7 +116,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 26.9971886,
+			float Size = 18.0967636,
 		},
 		EditorCameraController = 
 		{
@@ -124,7 +124,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-2.05386972, 4.0457592, 0],
+			Vec3 LookTarget = [-2.05982614, 2.26283002, 0],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -253,8 +253,8 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-0.0185747147, -0.00246715546, 0],
-			Vec3 Scale = [25.880558, 13.4862261, 16.0323143],
+			Vec3 Translation = [-5.48177242, 7.95038605, 0],
+			Vec3 Scale = [2.09833097, 2.09833097, 2.09833097],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Sprite = 
@@ -263,7 +263,7 @@ Level =
 			bool VisibilityCulling = true,
 			bool VisibilityEvents = true,
 			bool CastShadows = false,
-			Vec4 Color = [0, 0.548099935, 0.944999993, 1],
+			Vec4 Color = [0.430000007, 0.430000007, 0.430000007, 1],
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
@@ -274,6 +274,45 @@ Level =
 			bool AnimationActive = true,
 			float AnimationSpeed = 1,
 			uint StartFrame = 0,
+		},
+		Inventory = 
+		{
+			Enum InventoryKey = Tab,
+			Enum CloseKey = Q,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 7,
+		},
+		Named = 
+		{
+			string Name = "SpriteText",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-6.33195162, 8.47669029, 0],
+			Vec3 Scale = [1.92972171, 1.92972171, 1.92972171],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		SpriteText = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string FontName = "4e7bac697bec55c5:Verdana",
+			uint FontSize = 30,
+			string Text = "Tab",
+			TextAlign Align = Left,
+			float PixelsPerUnit = 64,
+			bool Smoothing = true,
 		},
 	},
 },
