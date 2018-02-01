@@ -50,7 +50,7 @@ class Door : ZilchComponent
                 var seq = Action.Sequence(this.Owner.Actions);
                 
                 Action.Property
-                (seq, @this.Owner.Transform.Translation, posistion + Real3(0,3,0), 6, Ease.QuadInOut);
+                (seq, @this.Owner.Transform.Translation, posistion + Real3(0,3,0), 4, Ease.QuadInOut);
             }
         }
     }
