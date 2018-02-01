@@ -1,0 +1,85 @@
+class DisplayHealth : ZilchComponent
+{
+    
+    var InitSize:Real;
+
+    var LowHealth:Boolean = false;
+    
+    var RegularColor:Real4;
+    
+    [Property]
+    var RedColor:Real4;
+    
+    var Timer:Real = 0.5;
+    
+    var UltraLow:Real= 0;
+    
+    function Initialize(init : CogInitializer)
+    {
+        this.RegularColor = this.Owner.Sprite.Color;
+        
+        this.InitSize = this.Owner.Transform.Scale.X;
+        
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        
+        Zero.Connect(this.GameSession, Events.UpdateHealth, this.OnUpdateHealth);
+        
+        
+        
+        
+    }
+
+    function OnUpdateHealth(event : HealthEvent)
+    {
+        
+        var curHealth:Real = event.CurrentHealth;
+        var maxHealth:Real = event.MaxHealth;
+        
+        
+        var newSize = this.InitSize * (curHealth/maxHealth);
+        this.Owner.Transform.Scale = Real3(newSize, 1, 1);
+        
+        if(event.CurrentHealth <= 15)
+        {
+            this.LowHealth = true;
+            Console.WriteLine("LOWHEALTH");
+        }
+        else
+        {
+            this.LowHealth = false;
+            this.Owner.Sprite.Color = this.RegularColor;
+        }
+        
+        if(event.CurrentHealth <= 5)
+        {
+            this.UltraLow = 0.7;
+        }
+        else if(event.CurrentHealth <= 10)
+        {
+            this.UltraLow = 0.5;
+        }
+        else
+        {
+            this.UltraLow = 0;
+        }
+        
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        
+        if(this.LowHealth == true)
+        {
+            this.Timer -= event.Dt;
+        
+        if(this.Timer <= 0)
+        {
+            this.Owner.Sprite.Color = this.RegularColor;
+            this.Timer += 1 - this.UltraLow;
+        }
+        else
+        this.Owner.Sprite.Color = this.RedColor;
+        }
+        
+    }
+}
