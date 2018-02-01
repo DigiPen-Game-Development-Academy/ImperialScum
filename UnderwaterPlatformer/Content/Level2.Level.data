@@ -291,12 +291,12 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "PLayer",
+			string Name = "Player",
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-17.1369133, -7.10170507, -0.00100000005],
-			Vec3 Scale = [4.80000019, 4.80000019, 1],
+			Vec3 Translation = [-17.6770859, -5.80529928, -0.00100000005],
+			Vec3 Scale = [2.64239955, 2.2075789, 0.783931732],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Sprite = 
@@ -390,7 +390,7 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "Sprite",
+			string Name = "Backround",
 		},
 		Transform = 
 		{
