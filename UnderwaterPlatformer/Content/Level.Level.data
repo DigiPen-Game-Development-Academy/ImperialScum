@@ -162,7 +162,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [4.30409861, 2.04133606, 50],
+			Vec3 Translation = [-5.28703976, 9.27072906, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -174,7 +174,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 11.0803585,
+			float Size = 6.72057629,
 		},
 		EditorCameraController = 
 		{
@@ -182,7 +182,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [4.30409861, 2.04133606, 1.5683705e-08],
+			Vec3 LookTarget = [-5.28703976, 9.27072906, 1.5683705e-08],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -268,6 +268,10 @@ Level =
 		{
 			string Name = "Player",
 		},
+		Archetyped = 
+		{
+			string Name = "5adef0b2576f5b3a:Player",
+		},
 		Transform = 
 		{
 			Vec3 Translation = [-7.98516607, 0.0105414391, 0],
@@ -329,8 +333,8 @@ Level =
 		},
 		PlayerMovement = 
 		{
-			int Speed = 40,
-			int JumpSpeed = 20,
+			int Speed = 30,
+			int JumpSpeed = 15,
 			Enum KeyUp = W,
 			Enum KeyLeft = A,
 			Enum KeyRight = D,
@@ -1482,7 +1486,7 @@ Level =
 				SpriteParticleSystem = 
 				{
 					bool Visible = true,
-					bool VisibilityCulling = true,
+					bool VisibilityCulling = false,
 					bool VisibilityEvents = true,
 					bool CastShadows = false,
 					SystemChildMode ChildMode = Independent,
