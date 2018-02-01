@@ -70,7 +70,7 @@ class PlayerMovement : ZilchComponent
             Real3(this.Owner.RigidBody.Velocity.X, Math.Max(this.JumpSpeed, velocity.Y + this.JumpSpeed), 0);
         }
         else if(Zero.Keyboard.KeyIsPressed(this.KeyUp) && this.DoubleJump == true
-        && this.Owner.GroundChecker.Grounded == false)
+        && this.Owner.GroundChecker.Grounded == false && this.Swimming == false)
         {
             this.Owner.RigidBody.Velocity =
             Real3(this.Owner.RigidBody.Velocity.X, 
