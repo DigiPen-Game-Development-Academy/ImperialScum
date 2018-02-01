@@ -1,0 +1,22 @@
+class JaggedRock : ZilchComponent
+{
+    [Property]
+    
+    var WhattoHit : Archetype = "Player";
+    var Hit : Boolean = false;
+        this.OtherObject.Name "Player";
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        if(OtherObject
+        if(this.Owner.Hit == true)
+        {
+            
+        }
+    }
+}
