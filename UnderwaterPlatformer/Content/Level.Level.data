@@ -162,7 +162,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-6.43090391, 0.0262476206, 50],
+			Vec3 Translation = [-16.5869198, 1.42450929, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -174,7 +174,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 12.099309,
+			float Size = 7.33862019,
 		},
 		EditorCameraController = 
 		{
@@ -182,7 +182,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-6.43090391, 0.0262476206, 1.5683705e-08],
+			Vec3 LookTarget = [-16.5869198, 1.42450929, 1.5683705e-08],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -507,7 +507,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-13.4742098, 0.500829935, 2.38261744e-09],
+			Vec3 Translation = [-13.4742098, 3.36236095, 2.38261744e-09],
 			Vec3 Scale = [1, 4.70800209, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -1452,7 +1452,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-6.54874849, 8.47899437, 0],
+			Vec3 Translation = [-17.2677803, 0.410337448, 0],
 			Vec3 Scale = [1.76224411, 2.74128628, 40],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -1488,12 +1488,13 @@ Level =
 		{
 			bool WakeUpOnEffectChange = false,
 		},
-		WindEffect = 
+		ThrustEffect = 
 		{
 			bool Active = true,
 			bool WakeUpOnChange = true,
-			float WindSpeed = 750,
-			Vec3 WindDirection = [0, 1, 0],
+			bool LocalSpaceDirection = false,
+			float ForceStrength = 100,
+			Vec3 ForceDirection = [0, 1, 0],
 		},
 		Hierarchy = 
 		{
@@ -1580,7 +1581,7 @@ Level =
 					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
 					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
 					Vec3 Offset = [0, 2, 0],
-					Vec3 Size = [2, 2.5, 0.5],
+					Vec3 Size = [2.5, 3.5, 0.5],
 				},
 				Volcano = 
 				{
