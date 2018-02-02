@@ -1,0 +1,17 @@
+class DisplayHunger : ZilchComponent
+{
+    var InitSize:Real;
+    
+    function Initialize(init : CogInitializer)
+    {
+        this.InitSize = this.Owner.Transform.Scale.X;
+        
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        var newSize = this.InitSize * (Hunger.Hunger/360);
+        this.Owner.Transform.Scale = Real3(newSize,1, 1);
+    }
+}

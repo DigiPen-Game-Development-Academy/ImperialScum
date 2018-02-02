@@ -26,6 +26,10 @@ class Health : ZilchComponent
     
     [Property]
     var LevelToLoad:Level;
+
+    
+    [Property]
+    var Timer:Real = 5;
     
     
     function Initialize(init : CogInitializer)
@@ -63,8 +67,6 @@ class Health : ZilchComponent
             update.MaxHealth = this.MaxHealth;
             
             this.GameSession.DispatchEvent(Events.UpdateHealth, update);
-            
-
         }
         
         
@@ -89,6 +91,22 @@ class Health : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
+        if(this.Timer > 0 && Hunger.Hunger < 0.1)
+        {
+        this.Timer -= event.Dt;
+        }
+        else if(this.Timer == 0)
+        {
+            this.CurrentHealth -= 1;
+            
+            var update = HealthEvent();
+            update.CurrentHealth = this.CurrentHealth;
+            update.MaxHealth = this.MaxHealth;
+            
+            this.GameSession.DispatchEvent(Events.UpdateHealth, update);
+            
+            this.Timer += 5;
+        }
         
     }
 }

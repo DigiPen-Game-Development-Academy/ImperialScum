@@ -73,8 +73,8 @@ Cog =
 	},
 	PlayerMovement = 
 	{
-		int Speed = 40,
-		int JumpSpeed = 20,
+		int Speed = 30,
+		int JumpSpeed = 15,
 		Enum KeyUp = W,
 		Enum KeyLeft = A,
 		Enum KeyRight = D,
@@ -102,7 +102,7 @@ Cog =
 	},
 	Health = 
 	{
-		int MaxHealth = 10,
+		int MaxHealth = 20,
 		string LevelToLoad = "5ababbd26a98e51e:LoseLevel",
 	},
 	Hierarchy = 
