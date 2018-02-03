@@ -5,7 +5,7 @@
 class Hunger : ZilchComponent
 {
     [Static]
-    var Hunger:Real = 360;
+    var Hunger:Real = 10;
     
     function Initialize(init : CogInitializer)
     {
