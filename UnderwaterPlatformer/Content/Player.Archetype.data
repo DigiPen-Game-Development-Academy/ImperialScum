@@ -104,6 +104,10 @@ Cog =
 	{
 		int MaxHealth = 20,
 		string LevelToLoad = "5ababbd26a98e51e:LoseLevel",
+		float Timer = 0,
+	},
+	Hunger = 
+	{
 	},
 	Hierarchy = 
 	{
@@ -119,7 +123,7 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [-0.0891919136, 0.0732082799, 1.46902734e-09],
+				Vec3 Translation = [0.119902611, 0.26029247, 1.46902734e-09],
 				Vec3 Scale = [0.0359874927, 0.0359874927, 0.0359874927],
 				Quat Rotation = [0, 0, 0, 1],
 			},
@@ -148,8 +152,8 @@ Cog =
 			{
 				bool Active = true,
 				uint EmitCount = 0,
-				float EmitRate = 5,
-				float EmitVariance = 5,
+				float EmitRate = 3,
+				float EmitVariance = 1,
 				float Size = 0.100000001,
 				float SizeVariance = 0.200000003,
 				float Lifetime = 5,
@@ -159,7 +163,7 @@ Cog =
 				bool RandomSpin = true,
 				float Fill = 1,
 				float EmitterVelocityPercent = 0,
-				Vec3 StartVelocity = [0, 7, 0],
+				Vec3 StartVelocity = [0, 20, 0],
 				Vec3 RandomVelocity = [3, 3, 3],
 				Vec3 TangentVelocity = [0, 0, 0],
 				Vec3 EmitterSize = [0, 0, 0],
@@ -181,6 +185,9 @@ Cog =
 				Vec4 Color2 = [1, 1, 1, 1],
 				Vec4 Color3 = [1, 1, 1, 0.5],
 				Vec4 Color4 = [1, 1, 1, 0],
+			},
+			FlipSpriteChild = 
+			{
 			},
 		},
 	},

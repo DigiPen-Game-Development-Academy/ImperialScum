@@ -1,0 +1,83 @@
+//Jacob Burke
+
+class EnemyShoot : ZilchComponent
+{
+    [Property] var Bullet : Archetype = null;
+    var TimeBetweenShots : Real;
+    var TimeTillNextShot:Real = 0;
+    
+    function Initialize(init : CogInitializer)
+    { 
+        
+        
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+    
+    function OnLogicUpdate(event : UpdateEvent)
+    {   
+        var rand = new Random();
+            
+        var randomPowerUp = rand.DieRoll(4);
+        
+        this.TimeBetweenShots = randomPowerUp;
+        
+        this.TimeTillNextShot -= event.Dt;
+        if (this.TimeTillNextShot <= 0)
+        {
+            this.TimeTillNextShot = this.TimeBetweenShots;
+            this.Shoot();
+            
+        }
+    }
+    
+    function Shoot()
+    {
+        if (this.Bullet == null) return;
+        
+        var player = this.Space.FindObjectByName("Player");
+        if (player == null) return;
+        
+        var bullet = this.Space.CreateAtPosition(this.Bullet, this.Owner.Transform.WorldTranslation);
+        if(bullet.BulletLogic == null) return;
+        bullet.BulletLogic.Target = player;
+        
+    }
+    
+}
+class BulletLogic : ZilchComponent
+{
+    var Target : Cog = null;
+    var VelocitySet : Boolean = false;
+    var Velocity : Real3;
+    [Property] var Speed : Real = 1;
+    
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        if(this.VelocitySet)
+        {
+            this.Owner.Transform.Translation +=
+                this.Velocity * event.Dt;
+        }
+        else if (this.Target != null)
+        {
+            this.VelocitySet = true;
+            this.Velocity = this.Target.Transform.Translation -
+                this.Owner.Transform.Translation;
+            this.Velocity = Math.Normalize(this.Velocity);
+            this.Velocity *= this.Speed;
+        }
+        
+        
+        
+        
+    }
+}
+
+    
+    
