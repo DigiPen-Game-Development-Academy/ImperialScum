@@ -1,0 +1,20 @@
+//Jacob Burke
+
+//This is in charge of the hunger
+
+class Hunger : ZilchComponent
+{
+    [Static]
+    var Hunger:Real = 360;
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        if(Hunger.Hunger > 0)
+        Hunger.Hunger -= event.Dt;
+    }
+}

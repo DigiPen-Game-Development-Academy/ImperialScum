@@ -78,6 +78,10 @@ Cog =
 	{
 		float Speed = 3,
 	},
+	EnemyHealth = 
+	{
+		int Health = 30,
+	},
 	Hierarchy = 
 	{
 		Cog = 
