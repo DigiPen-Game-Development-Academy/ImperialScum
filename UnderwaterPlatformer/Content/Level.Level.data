@@ -104,7 +104,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [16.2499485, 13.6674194, 0],
+			Vec3 Translation = [16.3068962, 13.5535288, 0],
 			Vec3 Scale = [23.7275677, 8.8599968, 40],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -162,7 +162,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-2.99385619, 1.65383911, 50],
+			Vec3 Translation = [14.9720612, 10.1914864, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -174,7 +174,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 39.0489655,
+			float Size = 15.8761339,
 		},
 		EditorCameraController = 
 		{
@@ -182,7 +182,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-2.99385619, 1.65383911, 0],
+			Vec3 LookTarget = [14.9720612, 10.1914864, 7.85315422e-07],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -331,7 +331,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-13.4742098, 4.41225433, 2.38261744e-09],
+			Vec3 Translation = [-13.4742126, 4.41225433, 2.38261744e-09],
 			Vec3 Scale = [1, 4.70800209, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -407,6 +407,9 @@ Level =
 			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
 			Vec3 Offset = [0, 0, 0],
 			Vec3 Size = [0.5, 0.5, 0.5],
+		},
+		Hierarchy = 
+		{
 		},
 	},
 	Cog = 
@@ -1844,6 +1847,46 @@ Level =
 		EnemyShoot = 
 		{
 			string Bullet = "5abffaed2bf2cc56:Bullet",
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 38,
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [16.7145653, 7.81974602, 7.85315422e-07],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5275aa4d802dd6dc:Square",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		EnemySpawner = 
+		{
+			float Waittime = 10,
+			string WhatToSpawn = "5add57b20981d06d:GearShark",
 		},
 	},
 },
