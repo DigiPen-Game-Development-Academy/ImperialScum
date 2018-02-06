@@ -20,7 +20,7 @@ class Food : ZilchComponent
 class Eat : ZilchComponent
 {
     [Property]
-    var FullAmount:Integer = 25;
+    var FullAmount:Integer = 10;
     
     function Initialize(init : CogInitializer)
     {
@@ -31,12 +31,13 @@ class Eat : ZilchComponent
 
     function OnLeftMouseDown(event : ViewportMouseEvent)
     {
-       if(event.HitObject == this.Owner && Hunger.Hunger <= (Hunger.MaxHunger - this.FullAmount) )
+       if(event.HitObject == this.Owner && Hunger.Hunger <= (Hunger.MaxHunger - this.FullAmount)
+        && AdvInventory.PlayerInventory["Meat"] >= 1)
        {
            
            Hunger.Hunger += this.FullAmount;
            AdvInventory.PlayerInventory["Meat"] -= 1;
-           
+           Console.WriteLine("`AdvInventory.Get("Meat")`");
        }
         
     }
