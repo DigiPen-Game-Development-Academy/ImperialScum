@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-9.40384007, 4.27560043, 0],
+		Vec3 Translation = [5.19408989, 7.42135525, 0],
 		Vec3 Scale = [23.4114151, 13.265542, 13.265542],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -53,7 +53,7 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [0.12969391, -0.229221523, 0],
+				Vec3 Translation = [-0.261758298, 0.157750636, 0],
 				Vec3 Scale = [0.0851298124, 0.150239572, 0.150239572],
 				Quat Rotation = [0, 0, 0, 1],
 			},
@@ -88,7 +88,7 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [-0.125324026, 0.0698632821, 0],
+				Vec3 Translation = [0.124246106, -0.141334161, 0],
 				Vec3 Scale = [0.0851298124, 0.150239572, 0.150239572],
 				Quat Rotation = [0, 0, 0, 1],
 			},
@@ -123,7 +123,7 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [0.00102577428, -0.229221523, 0],
+				Vec3 Translation = [-0.130771831, 0.157750636, 0],
 				Vec3 Scale = [0.0851298124, 0.150239572, 0.150239572],
 				Quat Rotation = [0, 0, 0, 1],
 			},
@@ -158,7 +158,7 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [0.257202864, 0.0698632821, 0],
+				Vec3 Translation = [-0.00442204066, -0.141334161, 0],
 				Vec3 Scale = [0.0851298124, 0.150239572, 0.150239572],
 				Quat Rotation = [0, 0, 0, 1],
 			},
@@ -193,7 +193,7 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [-0.256310493, 0.0698632821, 0],
+				Vec3 Translation = [0.251755059, 0.157750636, 0],
 				Vec3 Scale = [0.0851298124, 0.150239572, 0.150239572],
 				Quat Rotation = [0, 0, 0, 1],
 			},
@@ -228,7 +228,7 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [0.00102577428, 0.0698632821, 0],
+				Vec3 Translation = [-0.00442204066, 0.157750636, 0],
 				Vec3 Scale = [0.0851298124, 0.150239572, 0.150239572],
 				Quat Rotation = [0, 0, 0, 1],
 			},
@@ -263,7 +263,7 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [0.12969391, 0.0698632821, 0],
+				Vec3 Translation = [0.124246106, 0.157750636, 0],
 				Vec3 Scale = [0.0851298124, 0.150239572, 0.150239572],
 				Quat Rotation = [0, 0, 0, 1],
 			},
@@ -298,7 +298,7 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [-0.256310493, -0.229221523, 0],
+				Vec3 Translation = [-0.261758298, -0.141334161, 0],
 				Vec3 Scale = [0.0851298124, 0.150239572, 0.150239572],
 				Quat Rotation = [0, 0, 0, 1],
 			},
@@ -333,7 +333,7 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [-0.125324026, -0.229221523, 0],
+				Vec3 Translation = [-0.130771831, -0.141334161, 0],
 				Vec3 Scale = [0.0851298124, 0.150239572, 0.150239572],
 				Quat Rotation = [0, 0, 0, 1],
 			},
@@ -368,7 +368,7 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [0.257202864, -0.229221523, 0],
+				Vec3 Translation = [0.251755059, -0.141334161, 0],
 				Vec3 Scale = [0.0851298124, 0.150239572, 0.150239572],
 				Quat Rotation = [0, 0, 0, 1],
 			},
@@ -403,41 +403,7 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [0.130172089, 0.351147473, 0],
-				Vec3 Scale = [0.0877539068, 0.154870659, 0.154870659],
-				Quat Rotation = [0, 0, 0, 1],
-			},
-			SpriteText = 
-			{
-				bool Visible = true,
-				bool VisibilityCulling = true,
-				bool VisibilityEvents = true,
-				bool CastShadows = false,
-				Vec4 Color = [1, 1, 1, 1],
-				BlendMode BlendMode = Alpha,
-				SpriteGeometryMode GeometryMode = ZPlane,
-				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-				string FontName = "4e7bac697bec55c5:Verdana",
-				uint FontSize = 30,
-				string Text = "Scrap:",
-				TextAlign Align = Left,
-				float PixelsPerUnit = 64,
-				bool Smoothing = true,
-			},
-		},
-		Cog = 
-		{
-			LinkId = 
-			{
-				uint Id = 13,
-			},
-			Named = 
-			{
-				string Name = "SpriteText",
-			},
-			Transform = 
-			{
-				Vec3 Translation = [-0.167149246, 0.351147473, 0],
+				Vec3 Translation = [-0.268527389, 0.071359098, 0],
 				Vec3 Scale = [0.0877539068, 0.154870659, 0.154870659],
 				Quat Rotation = [0, 0, 0, 1],
 			},
@@ -454,7 +420,7 @@ Cog =
 				string FontName = "4e7bac697bec55c5:Verdana",
 				uint FontSize = 30,
 				string Text = "0",
-				TextAlign Align = Left,
+				TextAlign Align = Center,
 				float PixelsPerUnit = 64,
 				bool Smoothing = true,
 			},
@@ -466,7 +432,7 @@ Cog =
 		{
 			LinkId = 
 			{
-				uint Id = 14,
+				uint Id = 13,
 			},
 			Named = 
 			{
@@ -474,41 +440,7 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [-0.297404319, 0.351147473, 0],
-				Vec3 Scale = [0.0877539068, 0.154870659, 0.154870659],
-				Quat Rotation = [0, 0, 0, 1],
-			},
-			SpriteText = 
-			{
-				bool Visible = true,
-				bool VisibilityCulling = true,
-				bool VisibilityEvents = true,
-				bool CastShadows = false,
-				Vec4 Color = [1, 1, 1, 1],
-				BlendMode BlendMode = Alpha,
-				SpriteGeometryMode GeometryMode = ZPlane,
-				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-				string FontName = "4e7bac697bec55c5:Verdana",
-				uint FontSize = 30,
-				string Text = "Food:",
-				TextAlign Align = Left,
-				float PixelsPerUnit = 64,
-				bool Smoothing = true,
-			},
-		},
-		Cog = 
-		{
-			LinkId = 
-			{
-				uint Id = 15,
-			},
-			Named = 
-			{
-				string Name = "SpriteText",
-			},
-			Transform = 
-			{
-				Vec3 Translation = [0.271753699, 0.351147473, 0],
+				Vec3 Translation = [-0.146732718, 0.0581662059, 0],
 				Vec3 Scale = [0.0877539068, 0.154870659, 0.154870659],
 				Quat Rotation = [0, 0, 0, 1],
 			},
@@ -531,6 +463,41 @@ Cog =
 			},
 			Scrap = 
 			{
+			},
+		},
+		Cog = 
+		{
+			LinkId = 
+			{
+				uint Id = 14,
+			},
+			Named = 
+			{
+				string Name = "Sprite",
+			},
+			Transform = 
+			{
+				Vec3 Translation = [-0.261266172, 0.157136545, 0],
+				Vec3 Scale = [0.113328859, 0.200006068, 0.200006068],
+				Quat Rotation = [0, 0, 0, 1],
+			},
+			Sprite = 
+			{
+				bool Visible = true,
+				bool VisibilityCulling = true,
+				bool VisibilityEvents = true,
+				bool CastShadows = false,
+				Vec4 Color = [1, 1, 1, 1],
+				BlendMode BlendMode = Alpha,
+				SpriteGeometryMode GeometryMode = ZPlane,
+				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+				string SpriteSource = "5ab028358b0533b0:New Piskel_1",
+				bool RenderMask = false,
+				bool FlipX = false,
+				bool FlipY = false,
+				bool AnimationActive = true,
+				float AnimationSpeed = 1,
+				uint StartFrame = 0,
 			},
 		},
 	},
