@@ -1,0 +1,35 @@
+class EnemySpawner : ZilchComponent
+{
+    
+    [Property]
+    var Waittime : Real = 10;
+    
+    var Timer : Real;
+    
+    [Property]
+     var WhatToSpawn : Archetype;
+    
+    function Initialize(init : CogInitializer)
+    {
+        this.Timer = this.Waittime;
+        
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+  
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+    
+        this.Timer -= event.Dt; 
+       
+        if (this.Timer <= 0)
+        {
+            var spawnPosition = this.Owner.Transform.Translation;
+
+            this.Space.CreateAtPosition(this.WhatToSpawn, spawnPosition);
+            
+            this.Timer += this.Waittime;
+
+        }
+    }
+}
