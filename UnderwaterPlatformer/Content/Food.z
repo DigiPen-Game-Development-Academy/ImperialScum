@@ -29,10 +29,10 @@ class Eat : ZilchComponent
 
     function OnLeftMouseDown(event : ViewportMouseEvent)
     {
-       if(event.HitObject == this.Owner)
+       if(event.HitObject == this.Owner && Food.Food <= 180 )
        {
            Hunger.Hunger += 50;
-           
+           Console.WriteLine("OK");
        }
         
     }

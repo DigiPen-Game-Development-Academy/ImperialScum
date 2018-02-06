@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [5.19408989, 7.42135525, 0],
+		Vec3 Translation = [1.81647599, 0.179044247, 0],
 		Vec3 Scale = [23.4114151, 13.265542, 13.265542],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -498,6 +498,24 @@ Cog =
 				bool AnimationActive = true,
 				float AnimationSpeed = 1,
 				uint StartFrame = 0,
+			},
+			BoxCollider = 
+			{
+				bool Ghost = false,
+				bool SendsMessages = true,
+				bool Seamless = true,
+				string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+				string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+				Vec3 Offset = [0, 0, 0],
+				Vec3 Size = [0.5, 0.5, 0.5],
+			},
+			Reactive = 
+			{
+				bool Active = true,
+				bool CaptureMouse = true,
+			},
+			Eat = 
+			{
 			},
 		},
 	},

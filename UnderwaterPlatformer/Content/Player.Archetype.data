@@ -103,7 +103,7 @@ Cog =
 	Health = 
 	{
 		int MaxHealth = 20,
-		string LevelToLoad = "5ababbd26a98e51e:LoseLevel",
+		string LevelToLoad = "5ad7c17057b6e586:BaseLevel",
 		float Timer = 0,
 	},
 	Hunger = 
