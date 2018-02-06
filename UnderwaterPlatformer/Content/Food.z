@@ -10,6 +10,34 @@ class Food : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-        this.Owner.SpriteText.Text = "`Food.Food`";
+        if(AdvInventory.Get("Meat") > 0)
+        {
+            this.Owner.SpriteText.Text = "`AdvInventory.Get("Meat")`";
+        }
+    }
+}
+
+class Eat : ZilchComponent
+{
+    
+    function Initialize(init : CogInitializer)
+    {
+        //Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        Zero.Connect(this.Owner, Events.LeftMouseDown, this.OnLeftMouseDown);
+        
+    }
+
+    function OnLeftMouseDown(event : ViewportMouseEvent)
+    {
+       if(event.HitObject == this.Owner)
+       {
+           
+       }
+        
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+
     }
 }
