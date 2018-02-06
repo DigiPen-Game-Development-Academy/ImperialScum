@@ -81,10 +81,6 @@ class PlayerMovement : ZilchComponent
             
         }
         
-        if(AdvInventory.Get("Rock") > 0)
-        {
-            this.JumpSpeed = 10;
-        }
                 
         if(Zero.Keyboard.KeyIsDown(this.KeyLeft))
         {
