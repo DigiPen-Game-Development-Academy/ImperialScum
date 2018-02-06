@@ -116,7 +116,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 24.4280396,
+			float Size = 29.8364697,
 		},
 		EditorCameraController = 
 		{
@@ -1231,7 +1231,7 @@ Level =
 				},
 				EnemyHealth = 
 				{
-					int Health = 2,
+					int Health = 10,
 				},
 			},
 		},
