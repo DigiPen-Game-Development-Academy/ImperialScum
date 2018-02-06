@@ -104,7 +104,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-3.15335464, -1.37432373, 50],
+			Vec3 Translation = [7.20216131, -16.2096176, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -116,7 +116,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 33.2871704,
+			float Size = 27.2532349,
 		},
 		EditorCameraController = 
 		{
@@ -124,7 +124,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-3.15335464, -1.37432373, 0],
+			Vec3 LookTarget = [7.20216131, -16.2096176, 0],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -777,29 +777,11 @@ Level =
 			bool Smoothing = true,
 		},
 	},
-	ArchetypeInstance = 
-	{
-		string Name = "5aacbaaed93f30e7:HitSound",
-		LinkId = 
-		{
-			uint Id = 21,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [6.26713276, -18.0962219, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Named = 
-		{
-			string Name = "HitSound",
-		},
-	},
 	Cog = 
 	{
 		LinkId = 
 		{
-			uint Id = 22,
+			uint Id = 21,
 		},
 		Named = 
 		{
@@ -848,7 +830,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 23,
+					uint Id = 22,
 				},
 				Named = 
 				{
@@ -896,7 +878,7 @@ Level =
 		string Name = "5aacbc6f6e4e1dd4:BackgroundMusicPlayer",
 		LinkId = 
 		{
-			uint Id = 24,
+			uint Id = 23,
 		},
 		Transform = 
 		{
@@ -909,12 +891,19 @@ Level =
 			string Name = "MusicPlayer",
 		},
 	},
-	ArchetypeInstance = 
+	Cog = 
 	{
-		string Name = "5aaf497a454f6071:EnemyCrabTutorial",
 		LinkId = 
 		{
-			uint Id = 25,
+			uint Id = 24,
+		},
+		Named = 
+		{
+			string Name = "EnemyCrab",
+		},
+		Archetyped = 
+		{
+			string Name = "5aaf497a454f6071:EnemyCrabTutorial",
 		},
 		Transform = 
 		{
@@ -922,16 +911,131 @@ Level =
 			Vec3 Scale = [12.0367413, 12.0367413, 12.0367413],
 			Quat Rotation = [0, 0, 0, 1],
 		},
-		Named = 
+		Sprite = 
 		{
-			string Name = "EnemyCrab",
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 0, 0, 0],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5274db4c2e7c11f9:Circle",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		RigidBody = 
+		{
+			bool Static = true,
+			bool Asleep = false,
+			bool Kinematic = false,
+			bool RotationLocked = true,
+			bool Mode2D = true,
+			bool AllowSleep = true,
+			bool Inherit2DMode = true,
+			Vec3 Velocity = [0, 0, 0],
+			Vec3 AngularVelocity = [0, 0, 0],
+		},
+		SphereCollider = 
+		{
+			bool Ghost = true,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			float Radius = 0.5,
+		},
+		EnemyController = 
+		{
+			float JumpTime = 3,
+			int Speed = 5,
+		},
+		EnemyHealth = 
+		{
+			int Health = 5,
+		},
+		Hierarchy = 
+		{
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 25,
+				},
+				Named = 
+				{
+					string Name = "GearCrabSprite",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-0.00102194957, 0.0017535463, 1.0529738e-08],
+					Vec3 Scale = [0.0830789655, 0.0830789655, 0.0830789655],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5addaf93cdf0de30:Enemy_GearCrab()",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				BoxCollider = 
+				{
+					bool Ghost = false,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 0.5],
+				},
+				EnemyHealth = 
+				{
+					int Health = 2,
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "5aacbaaed93f30e7:HitSound",
+				LinkId = 
+				{
+					uint Id = 26,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0.00198577531, -0.00541290641, -1.9794541e-10],
+					Vec3 Scale = [0.106912345, 0.106912345, 0.106912345],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "HitSound",
+				},
+			},
 		},
 	},
 	Cog = 
 	{
 		LinkId = 
 		{
-			uint Id = 26,
+			uint Id = 27,
 		},
 		Named = 
 		{
@@ -979,7 +1083,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 27,
+			uint Id = 28,
 		},
 		Named = 
 		{
@@ -1032,7 +1136,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 28,
+					uint Id = 29,
 				},
 				Named = 
 				{

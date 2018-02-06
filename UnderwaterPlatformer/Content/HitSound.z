@@ -1,3 +1,7 @@
+/* 
+Jessica Alberg,
+Hit sound effect,
+*/
 class HitSound : ZilchComponent
 {
     [Property]
@@ -5,16 +9,25 @@ class HitSound : ZilchComponent
     
     function Initialize(init : CogInitializer)
     {
-        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+       //d Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
+    }
+
+    function OnCollisionStarted(event : CollisionEvent)
+    {
+        if(event.OtherObject.SwordBoomerangMove != null)
+        {
+            this.Owner.SoundEmitter.PlayCue(this.HitSoundThing);
+        }
     }
     
     function OnLogicUpdate(event : UpdateEvent)
     {
         
-        if(Zero.Keyboard.KeyIsPressed(Keys.S))
+        /*if(Zero.Keyboard.KeyIsPressed(Keys.S))
         {
             this.Owner.SoundEmitter.PlayCue(this.HitSoundThing);
             Console.WriteLine("Works");
-        }
+        }*/
     }
 }
