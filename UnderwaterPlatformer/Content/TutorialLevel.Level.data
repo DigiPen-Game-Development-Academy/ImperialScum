@@ -104,7 +104,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [6.7190156, -3.47636747, 50],
+			Vec3 Translation = [-3.15335464, -1.37432373, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -116,7 +116,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 60.6530991,
+			float Size = 33.2871704,
 		},
 		EditorCameraController = 
 		{
@@ -124,7 +124,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [6.7190156, -3.47636747, 0],
+			Vec3 LookTarget = [-3.15335464, -1.37432373, 0],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -201,7 +201,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-10.5417099, 4.84023762, 40],
+			Vec3 Translation = [-0.0276269913, -26.8753166, 40],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -261,7 +261,7 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "SpriteText",
+			string Name = "Welcome",
 		},
 		Transform = 
 		{
@@ -295,7 +295,7 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "SpriteText",
+			string Name = "They",
 		},
 		Transform = 
 		{
@@ -329,7 +329,7 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "SpriteText",
+			string Name = "Walk",
 		},
 		Transform = 
 		{
@@ -363,7 +363,7 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "SpriteText",
+			string Name = "Try",
 		},
 		Transform = 
 		{
@@ -397,7 +397,7 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "Sprite",
+			string Name = "Teleporter",
 		},
 		Transform = 
 		{
@@ -445,7 +445,7 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "SpriteText",
+			string Name = "Left",
 		},
 		Transform = 
 		{
@@ -479,7 +479,7 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "SpriteText",
+			string Name = "But",
 		},
 		Transform = 
 		{
@@ -513,7 +513,7 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "SpriteText",
+			string Name = "You",
 		},
 		Transform = 
 		{
@@ -547,7 +547,7 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "SpriteText",
+			string Name = "Use",
 		},
 		Transform = 
 		{
@@ -581,7 +581,7 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "SpriteText",
+			string Name = "Good",
 		},
 		Transform = 
 		{
@@ -615,7 +615,7 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "SpriteText",
+			string Name = "Walk",
 		},
 		Transform = 
 		{
@@ -649,7 +649,7 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "SpriteText",
+			string Name = "This",
 		},
 		Transform = 
 		{
@@ -683,7 +683,75 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "SpriteText",
+			string Name = "This",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-10.4895716, 1.17033207, 0],
+			Vec3 Scale = [1.077811, 1.077811, 1.077811],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		SpriteText = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string FontName = "4e7bac697bec55c5:Verdana",
+			uint FontSize = 30,
+			string Text = "Open your inventory and click on food to consume it",
+			TextAlign Align = Left,
+			float PixelsPerUnit = 64,
+			bool Smoothing = true,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 19,
+		},
+		Named = 
+		{
+			string Name = "This",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-9.75374699, 2.22150421, 0],
+			Vec3 Scale = [1.75376344, 1.75376344, 1.75376344],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		SpriteText = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string FontName = "4e7bac697bec55c5:Verdana",
+			uint FontSize = 30,
+			string Text = "You will need food to survive",
+			TextAlign Align = Left,
+			float PixelsPerUnit = 64,
+			bool Smoothing = true,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 20,
+		},
+		Named = 
+		{
+			string Name = "Keys",
 		},
 		Transform = 
 		{
@@ -714,7 +782,7 @@ Level =
 		string Name = "5aacbaaed93f30e7:HitSound",
 		LinkId = 
 		{
-			uint Id = 19,
+			uint Id = 21,
 		},
 		Transform = 
 		{
@@ -731,7 +799,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 20,
+			uint Id = 22,
 		},
 		Named = 
 		{
@@ -780,7 +848,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 21,
+					uint Id = 23,
 				},
 				Named = 
 				{
@@ -828,7 +896,7 @@ Level =
 		string Name = "5aacbc6f6e4e1dd4:BackgroundMusicPlayer",
 		LinkId = 
 		{
-			uint Id = 22,
+			uint Id = 24,
 		},
 		Transform = 
 		{
@@ -846,7 +914,7 @@ Level =
 		string Name = "5aaf497a454f6071:EnemyCrabTutorial",
 		LinkId = 
 		{
-			uint Id = 23,
+			uint Id = 25,
 		},
 		Transform = 
 		{
@@ -863,11 +931,11 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 24,
+			uint Id = 26,
 		},
 		Named = 
 		{
-			string Name = "Sprite",
+			string Name = "Resource",
 		},
 		Transform = 
 		{
@@ -911,7 +979,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 25,
+			uint Id = 27,
 		},
 		Named = 
 		{
@@ -964,7 +1032,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 26,
+					uint Id = 28,
 				},
 				Named = 
 				{
