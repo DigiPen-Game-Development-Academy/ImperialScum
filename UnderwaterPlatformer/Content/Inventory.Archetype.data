@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-1.33109653, 2.59514666, 0],
+		Vec3 Translation = [-9.40384007, 4.27560043, 0],
 		Vec3 Scale = [23.4114151, 13.265542, 13.265542],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -458,6 +458,9 @@ Cog =
 				float PixelsPerUnit = 64,
 				bool Smoothing = true,
 			},
+			Food = 
+			{
+			},
 		},
 		Cog = 
 		{
@@ -525,6 +528,9 @@ Cog =
 				TextAlign Align = Left,
 				float PixelsPerUnit = 64,
 				bool Smoothing = true,
+			},
+			Scrap = 
+			{
 			},
 		},
 	},

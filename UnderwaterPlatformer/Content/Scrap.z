@@ -1,11 +1,7 @@
-//Jacob Burke
-
-//This is in charge of the hunger
-
-class Hunger : ZilchComponent
+class Scrap : ZilchComponent
 {
     [Static]
-    var Hunger:Real = 120;
+    var Scrap:Integer = 10;
     
     function Initialize(init : CogInitializer)
     {
@@ -14,7 +10,6 @@ class Hunger : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-        if(Hunger.Hunger > 0)
-        Hunger.Hunger -= event.Dt;
+        this.Owner.SpriteText.Text = "`Scrap.Scrap`";
     }
 }

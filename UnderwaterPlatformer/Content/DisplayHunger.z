@@ -11,7 +11,7 @@ class DisplayHunger : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-        var newSize = this.InitSize * (Hunger.Hunger/360);
+        var newSize = this.InitSize * (Hunger.Hunger/120);
         this.Owner.Transform.Scale = Real3(newSize,1, 1);
     }
 }

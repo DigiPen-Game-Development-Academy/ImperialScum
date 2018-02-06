@@ -71,6 +71,7 @@ class Health : ZilchComponent
         
         
         
+        
         if(this.CurrentHealth <= 0)
         {
                 if(this.LevelSettings.HUDTag != null)
@@ -91,14 +92,13 @@ class Health : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-        if(this.Timer > 0 && Hunger.Hunger < 0.1)
+        if(this.Timer > 0 && Hunger.Hunger <= 1)
         {
         this.Timer -= event.Dt;
         }
-        else if(this.Timer == 0)
+        else if(this.Timer <= 0)
         {
             this.CurrentHealth -= 1;
-            
             var update = HealthEvent();
             update.CurrentHealth = this.CurrentHealth;
             update.MaxHealth = this.MaxHealth;
