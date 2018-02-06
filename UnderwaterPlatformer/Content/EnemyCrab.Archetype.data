@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [4.21396542, 5.31213093, 2.38261766e-09],
+		Vec3 Translation = [-1.47193527, 11.7531395, 2.38261766e-09],
 		Vec3 Scale = [12.0367413, 12.0367413, 12.0367413],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -62,6 +62,10 @@ Cog =
 	{
 		float JumpTime = 3,
 		int Speed = 5,
+	},
+	EnemyHealth = 
+	{
+		int Health = 5,
 	},
 	Hierarchy = 
 	{

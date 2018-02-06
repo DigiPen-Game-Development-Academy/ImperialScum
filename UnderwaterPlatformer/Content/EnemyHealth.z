@@ -1,9 +1,9 @@
 class EnemyHealth : ZilchComponent
 {
     [Property] 
-    var Health:Integer = 2;
+    var Health:Integer = 5;
     [Static]
-    var Damage:Integer = 20;
+    var Damage:Integer = 1;
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
