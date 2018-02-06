@@ -37,7 +37,7 @@ class PlayerMovement : ZilchComponent
 
     function OnCollisionStarted(event : CollisionEvent)
     {
-        if(event.OtherObject.Name == ("DefaultTile"))
+        if(event.OtherObject.Name == ("DefaultTile") && this.Owner.GroundChecker.Grounded == true)
         {
         this.DoubleJump = true;
         }
