@@ -10,6 +10,48 @@ class Food : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 456eca2cfce4f8406e587e3a56e6bd281f86a63c
+        if(AdvInventory.Get("Meat") > 0)
+        {
+            this.Owner.SpriteText.Text = "`AdvInventory.Get("Meat")`";
+        }
+    }
+}
+
+class Eat : ZilchComponent
+{
+    
+    function Initialize(init : CogInitializer)
+    {
+        //Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        Zero.Connect(this.Owner, Events.LeftMouseDown, this.OnLeftMouseDown);
+        
+    }
+
+    function OnLeftMouseDown(event : ViewportMouseEvent)
+    {
+       if(event.HitObject == this.Owner)
+       {
+<<<<<<< HEAD
+=======
+           Hunger.Hunger += 50;
+>>>>>>> 456eca2cfce4f8406e587e3a56e6bd281f86a63c
+           
+       }
+        
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+
+<<<<<<< HEAD
+=======
+=======
         this.Owner.SpriteText.Text = "`Food.Food`";
+>>>>>>> 293206fa275150f445f69621538e0a024f70b7ac
+>>>>>>> 456eca2cfce4f8406e587e3a56e6bd281f86a63c
     }
 }
