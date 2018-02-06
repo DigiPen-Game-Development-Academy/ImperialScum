@@ -7,8 +7,12 @@ class Hunger : ZilchComponent
     [Static]
     var Hunger:Real = 120;
     
+    [Static]
+    var MaxHunger:Real;
+    
     function Initialize(init : CogInitializer)
     {
+        Hunger.MaxHunger = Hunger.Hunger;
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
     }
 
