@@ -1,0 +1,20 @@
+class HitSound : ZilchComponent
+{
+    [Property]
+    var HitSoundThing : SoundCue;
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+    
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        
+        if(Zero.Keyboard.KeyIsPressed(Keys.S))
+        {
+            this.Owner.SoundEmitter.PlayCue(this.HitSoundThing);
+            Console.WriteLine("Works");
+        }
+    }
+}

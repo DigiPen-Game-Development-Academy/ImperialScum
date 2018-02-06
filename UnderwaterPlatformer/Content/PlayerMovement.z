@@ -80,7 +80,10 @@ class PlayerMovement : ZilchComponent
             this.DoubleJump = false;
             
         }
+<<<<<<< HEAD
         
+=======
+>>>>>>> 293206fa275150f445f69621538e0a024f70b7ac
                 
         if(Zero.Keyboard.KeyIsDown(this.KeyLeft))
         {
