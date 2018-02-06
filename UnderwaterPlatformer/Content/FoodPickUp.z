@@ -12,7 +12,7 @@ class FoodPickUp : ZilchComponent
         if(event.OtherObject.PlayerController != null)
         {
             this.Owner.Destroy();
-            Food.Food += 1;
+            AdvInventory.PlayerInventory["Meat"] += 1;
         }
         
         
