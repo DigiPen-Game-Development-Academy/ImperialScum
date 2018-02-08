@@ -4,11 +4,13 @@ class TreasureChest : ZilchComponent
     
     var Active:Boolean = false;
     
+    var Spawn:Archetype;
+    
     function Initialize(init : CogInitializer)
     {
         var rand = new Random();
         
-        this.RandomDieRoll = rand.DieRoll(100);
+        this.RandomDieRoll = rand.DieRoll(10);
         
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
         Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
@@ -24,12 +26,42 @@ class TreasureChest : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
+        var random = new Random();
+        
         if(this.Active == true)
         {
-            /*for(this.RandomDieRoll >= 0)
+            while(this.RandomDieRoll >= 0)
             {
-                this.Space.CreateAtPosition(Archetype.Gear, this.Owner.Transform.Translation);
-            }*/
+                var randomVelocityNegative = random.DieRoll(10) * -1;
+                var randomVelocityPositive = random.DieRoll(10);
+                var randomChoose = random.DieRoll(2);
+                var randomLoot = random.DieRoll(2);
+                
+                if(randomLoot == 1)
+                this.Spawn = Archetype.Food;
+                
+                if(randomLoot == 2)
+                this.Spawn = Archetype.Gear;
+                
+                var treasure = this.Space.CreateAtPosition(this.Spawn,
+                this.Owner.Transform.Translation);
+                
+                if(randomChoose == 1)
+                {
+                treasure.RigidBody.Velocity = Real3(randomVelocityNegative,randomVelocityPositive, 0);
+                }
+                
+                if(randomChoose == 2)
+                {
+                treasure.RigidBody.Velocity = Real3(randomVelocityPositive,randomVelocityPositive, 0);
+                }
+                
+                this.RandomDieRoll -= 1;
+            }
+            if(this.RandomDieRoll <= 0)
+            {
+                this.Owner.Destroy();
+            }
         }
     }
 }

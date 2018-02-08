@@ -1,8 +1,0 @@
-TextContent = 
-{
-	ZilchScriptBuilder = 
-	{
-		string Name = "FoodPickUp",
-		uint64 ResourceId = 5abfe5d412bd23f3,
-	},
-},
