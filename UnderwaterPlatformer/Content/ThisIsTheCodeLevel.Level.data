@@ -104,7 +104,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-18.989151, 7.87103415, 50],
+			Vec3 Translation = [-12.5748558, 10.1699038, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -116,7 +116,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 49.0650864,
+			float Size = 4.02751398,
 		},
 		EditorCameraController = 
 		{
@@ -124,7 +124,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-18.989151, 7.87103415, 0],
+			Vec3 LookTarget = [-12.5748558, 10.1699038, 0],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -1678,12 +1678,19 @@ Level =
 			string Name = "Chest",
 		},
 	},
-	ArchetypeInstance = 
+	Cog = 
 	{
-		string Name = "5ab57c97f2406d40:Chest",
 		LinkId = 
 		{
 			uint Id = 77,
+		},
+		Named = 
+		{
+			string Name = "Chest",
+		},
+		Archetyped = 
+		{
+			string Name = "5ab57c97f2406d40:Chest",
 		},
 		Transform = 
 		{
@@ -1691,9 +1698,39 @@ Level =
 			Vec3 Scale = [1.27878726, 1.27878726, 1.27878726],
 			Quat Rotation = [0, 0, 0, 1],
 		},
-		Named = 
+		Sprite = 
 		{
-			string Name = "Chest",
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5ab57ed75f81b230:Pickup_Chest",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		BoxCollider = 
+		{
+			bool Ghost = true,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [0.5, 0.5, 0.5],
+		},
+		TreasureChest = 
+		{
+		},
+		Hierarchy = 
+		{
 		},
 	},
 	ArchetypeInstance = 
