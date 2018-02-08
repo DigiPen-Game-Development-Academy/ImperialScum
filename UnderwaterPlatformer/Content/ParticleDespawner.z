@@ -1,5 +1,7 @@
 class ParticleDespawner : ZilchComponent
-{ 
+
+//Athour Elena Schefer
+{
     [Property]
       
     var Lifetime : Real = 20.0;
