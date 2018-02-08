@@ -19,12 +19,12 @@ class Resources : ZilchComponent
     function OnCollisionStarted(event : CollisionEvent)
     {
         if(event.OtherObject.Name == ("DefaultTile"))
-        this.Owner.BoxCollider.Ghost = false;
+        this.Owner.SphereCollider.Ghost = false;
         
         
         if(event.OtherObject.Name == ("Player") && this.Timer <= 0.1)
         {
-            this.Owner.BoxCollider.Ghost = true;
+            this.Owner.SphereCollider.Ghost = true;
         }
         
         if(event.OtherObject.PlayerController != null && this.Timer <= 0.1)
