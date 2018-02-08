@@ -1,9 +1,9 @@
 SoundCue = 
 {
 	SoundPlayMode PlayMode = Looping,
-	float Volume = 1,
+	float Volume = 0.5,
 	float VolumeVariation = 0,
-	float VolumeDB = 0,
+	float VolumeDB = -6.02060032,
 	bool UseVolumeDB = false,
 	float VolumeDBVariation = 0,
 	float Pitch = 0,
@@ -18,8 +18,8 @@ SoundCue =
 	Array Sounds = 
 	[
 		{
-			string SoundName = "5aaca8a0262dad48:Main Theme V2",
-			string GeneratedSoundName = "55017c595ef88bf0:DefaultGeneratedSound",
+			string SoundName = "5aa9d99d92bf145f:World Theme Fast",
+			string GeneratedSoundName = "",
 			WhichSoundType WhichToUse = FromFile,
 			float Weight = 1,
 			float LoopEndTime = 0,
