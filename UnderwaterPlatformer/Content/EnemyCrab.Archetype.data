@@ -63,10 +63,6 @@ Cog =
 		float JumpTime = 3,
 		int Speed = 5,
 	},
-	EnemyHealth = 
-	{
-		int Health = 5,
-	},
 	Hierarchy = 
 	{
 		Cog = 
@@ -116,6 +112,8 @@ Cog =
 			EnemyHealth = 
 			{
 				int Health = 4,
+				Vec4 DamageColor = [1, 0, 0, 1],
+				Vec4 RegularColor = [1, 1, 1, 1],
 			},
 			HitSound = 
 			{

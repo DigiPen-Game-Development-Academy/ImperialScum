@@ -4,6 +4,12 @@ class EnemyHealth : ZilchComponent
     var Health:Integer = 5;
     [Static]
     var Damage:Integer = 1;
+    [Property]
+    var DamageColor:Real4;
+    [Property]
+    var RegularColor:Real4;
+    
+    var Timer:Real = 5;
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
@@ -15,6 +21,7 @@ class EnemyHealth : ZilchComponent
         if(event.OtherObject.SwordBoomerangMove != null)
         {
             this.Health -= EnemyHealth.Damage;
+            this.Owner.Sprite.Color = this.DamageColor;
         }
     }
 
@@ -23,6 +30,11 @@ class EnemyHealth : ZilchComponent
         if(this.Health <= 0)
         {
             this.Owner.Destroy();
+        }
+        
+        if(this.Owner.Sprite.Color == this.DamageColor)
+        {
+            
         }
     }
 }

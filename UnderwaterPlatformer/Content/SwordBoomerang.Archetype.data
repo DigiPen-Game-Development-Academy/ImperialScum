@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [4.24862051, 1.88563502, 0],
+		Vec3 Translation = [-0.167715415, 6.59879971, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -161,6 +161,9 @@ Cog =
 				Vec4 Color3 = [1, 1, 1, 0.5],
 				Vec4 Color4 = [1, 1, 1, 0],
 			},
+			NoParticlesInBaseLevel = 
+			{
+			},
 		},
 		Cog = 
 		{
@@ -236,6 +239,9 @@ Cog =
 				Vec4 Color2 = [1, 1, 1, 1],
 				Vec4 Color3 = [1, 1, 1, 0.5],
 				Vec4 Color4 = [1, 1, 1, 0],
+			},
+			NoParticlesInBaseLevel = 
+			{
 			},
 		},
 	},
