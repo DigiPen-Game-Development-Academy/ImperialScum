@@ -9,7 +9,7 @@ class EnemyHealth : ZilchComponent
     [Property]
     var RegularColor:Real4;
     
-    var Timer:Real = 5;
+    var Timer:Real = 0.2;
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
@@ -34,7 +34,12 @@ class EnemyHealth : ZilchComponent
         
         if(this.Owner.Sprite.Color == this.DamageColor)
         {
-            
+            this.Timer -= event.Dt;
+        }
+        if(this.Timer <= 0)
+        {
+            this.Timer += 0.2;
+            this.Owner.Sprite.Color = this.RegularColor;
         }
     }
 }
