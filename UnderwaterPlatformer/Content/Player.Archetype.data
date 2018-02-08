@@ -71,6 +71,13 @@ Cog =
 	KeyPickUp = 
 	{
 	},
+	Contact = 
+	{
+	},
+	GroundChecker = 
+	{
+		float GroundAngle = 61,
+	},
 	PlayerMovement = 
 	{
 		int Speed = 30,
@@ -92,13 +99,6 @@ Cog =
 		Vec4 SpriteColor = [1, 1, 1, 1],
 		Vec4 RegularColor = [1, 1, 1, 1],
 		int Lose = 1,
-	},
-	Contact = 
-	{
-	},
-	GroundChecker = 
-	{
-		float GroundAngle = 61,
 	},
 	Health = 
 	{
