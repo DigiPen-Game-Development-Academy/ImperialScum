@@ -162,7 +162,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-4.2268486, 1.89616811, 50],
+			Vec3 Translation = [0.46626541, -1.11885953, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -174,7 +174,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 20.1897087,
+			float Size = 13.5335646,
 		},
 		EditorCameraController = 
 		{
@@ -182,7 +182,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-4.2268486, 1.89616811, 0],
+			Vec3 LookTarget = [0.46626541, -1.11885953, 0],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -1869,52 +1869,22 @@ Level =
 			string Name = "MusicPlayer",
 		},
 	},
-	Cog = 
+	ArchetypeInstance = 
 	{
+		string Name = "5ab57c97f2406d40:Chest",
 		LinkId = 
 		{
 			uint Id = 36,
 		},
-		Named = 
-		{
-			string Name = "Sprite",
-		},
 		Transform = 
 		{
-			Vec3 Translation = [-4.50522089, 0.469867706, 0],
-			Vec3 Scale = [1, 1, 1],
+			Vec3 Translation = [-1.1474632, -0.14487195, 0],
+			Vec3 Scale = [1.81189466, 1.81189466, 1.81189466],
 			Quat Rotation = [0, 0, 0, 1],
 		},
-		Sprite = 
+		Named = 
 		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5275aa4d802dd6dc:Square",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
-		BoxCollider = 
-		{
-			bool Ghost = true,
-			bool SendsMessages = true,
-			bool Seamless = true,
-			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
-			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
-			Vec3 Offset = [0, 0, 0],
-			Vec3 Size = [0.5, 0.5, 0.5],
-		},
-		TreasureChest = 
-		{
+			string Name = "Chest",
 		},
 	},
 },
