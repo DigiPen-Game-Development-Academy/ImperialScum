@@ -2,8 +2,8 @@ ImageContent =
 {
 	SpriteSourceBuilder = 
 	{
-		string Name = "WaterSurf",
-		uint64 ResourceId = 5ad2a5b446250210,
+		string Name = "WaterSurf_Tileable",
+		uint64 ResourceId = 5ad2bc99155b54d5,
 		uint64 AtlasId = 5274cf95e4a661fd,
 		uint FrameSizeX = 16,
 		uint FrameSizeY = 16,
