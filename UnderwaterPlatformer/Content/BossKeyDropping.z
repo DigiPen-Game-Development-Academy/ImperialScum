@@ -1,0 +1,19 @@
+class BossKeyDropping : ZilchComponent
+{
+    [Property]
+    var Key : Archetype;
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        var spawnPosition = this.Owner.Transform.Translation;
+        if(this.Owner.EnemyHealth.Health <= 0)
+        {
+            this.Space.CreateAtPosition(this.Key, spawnPosition);
+            Console.WriteLine(spawnPosition);
+        }
+    }
+}
