@@ -6,16 +6,16 @@ Cog =
 	},
 	Named = 
 	{
-		string Name = "Gear",
+		string Name = "Food",
 	},
 	Archetyped = 
 	{
-		string Name = "5ab3fb4d720d2a14:Gear",
+		string Name = "5ab5483e9cb7465f:Food",
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-6.61996746, 7.44844055, 0],
-		Vec3 Scale = [0.912825584, 0.912825584, 0.912825584],
+		Vec3 Translation = [7.47614193, 14.4937515, 1.5683705e-08],
+		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
 	Sprite = 
@@ -24,7 +24,7 @@ Cog =
 		bool VisibilityCulling = true,
 		bool VisibilityEvents = true,
 		bool CastShadows = false,
-		Vec4 Color = [0.290000021, 0.290000021, 0.290000021, 1],
+		Vec4 Color = [0.324999988, 0.201499999, 0.201499999, 1],
 		BlendMode BlendMode = Alpha,
 		SpriteGeometryMode GeometryMode = ZPlane,
 		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",

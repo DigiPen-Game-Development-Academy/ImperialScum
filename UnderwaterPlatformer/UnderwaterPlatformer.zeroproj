@@ -9,7 +9,11 @@ Cog =
 		uint ProjectEngineRevision = 16386,
 		bool AutoTakeProjectScreenshot = true,
 <<<<<<< HEAD
+<<<<<<< HEAD
 		uint64 Guid = 5a9d3cabaabb60cc,
+=======
+		uint64 Guid = 5ab5408d10694008,
+>>>>>>> 76e2491e779094de6c001b9ee0854c5251a1e8c5
 =======
 		uint64 Guid = 5ad2a63372291309,
 >>>>>>> 8d9f608a9fc9b067a32f9859de851e3f6fccce2f
