@@ -2,15 +2,15 @@ ImageContent =
 {
 	SpriteSourceBuilder = 
 	{
-		string Name = "Pickup_GoldGear()",
-		uint64 ResourceId = 5ab54c094784f645,
+		string Name = "Inventory",
+		uint64 ResourceId = 5ad2e72217bbe4eb,
 		uint64 AtlasId = 5274cf95e4a661fd,
-		uint FrameSizeX = 16,
-		uint FrameSizeY = 16,
-		uint FrameCount = 2,
-		float FrameDelay = 0.166666672,
-		float OriginX = 8,
-		float OriginY = 8,
+		uint FrameSizeX = 256,
+		uint FrameSizeY = 128,
+		uint FrameCount = 1,
+		float FrameDelay = 0.0833333358,
+		float OriginX = 128,
+		float OriginY = 64,
 		float PixelsPerUnit = 16,
 		bool Smoothing = false,
 		bool Looping = true,
