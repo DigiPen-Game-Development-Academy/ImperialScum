@@ -23,6 +23,7 @@ class SwordBoomerang : ZilchComponent
         var position = this.LevelSettings.CameraViewport.ScreenToWorldZPlane(event.Position, 0);
         this.Space.CreateAtPosition(Archetype.SwordTarget, position);
         this.Space.CreateAtPosition(Archetype.SwordBoomerang, this.Owner.Transform.Translation);
+        this.Space.CreateAtPosition(Archetype.Blur, this.Owner.Transform.Translation);
         
         SwordBoomerang.MarkerPlaced = true;
         
