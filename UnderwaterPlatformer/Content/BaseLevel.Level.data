@@ -104,7 +104,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-5.54560328, -19.7548027, 38],
+			Vec3 Translation = [36.8494606, 0.305288315, 38],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -116,7 +116,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 18.2684231,
+			float Size = 44.9329567,
 		},
 		EditorCameraController = 
 		{
@@ -124,7 +124,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-5.54560328, -19.7548027, -12],
+			Vec3 LookTarget = [36.8494606, 0.305288315, -12.000001],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -279,6 +279,11 @@ Level =
 		Named = 
 		{
 			string Name = "Tiles_Background",
+		},
+		EditorFlags = 
+		{
+			bool Locked = false,
+			bool Hidden = true,
 		},
 		Transform = 
 		{
