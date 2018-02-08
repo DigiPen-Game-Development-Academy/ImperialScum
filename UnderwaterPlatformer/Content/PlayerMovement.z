@@ -37,6 +37,7 @@ class PlayerMovement : ZilchComponent
 
     function OnCollisionStarted(event : CollisionEvent)
     {
+        
         if(event.OtherObject.Name == ("DefaultTile") && this.Owner.GroundChecker.Grounded == true)
         {
         this.DoubleJump = true;
@@ -73,7 +74,7 @@ class PlayerMovement : ZilchComponent
         else if(Zero.Keyboard.KeyIsPressed(this.KeyUp) && this.DoubleJump == true
          && this.Swimming == false)
         {
-            Console.WriteLine("DoubleJump");
+            
             this.Owner.RigidBody.Velocity =
             Real3(this.Owner.RigidBody.Velocity.X, 
             Math.Max(this.JumpSpeed, velocity.Y + this.JumpSpeed/2), 0);
@@ -122,7 +123,9 @@ class GroundChecker : ZilchComponent
   }
   function OnAnyCollision(event : AnyCollisionEvent)
   {
+      
     var localUp = Math.Transform(Real3.YAxis, this.Owner.Transform.WorldRotation);
+    
     if (!event.Ended && Math.AngleBetween(-event.ContactNormal, localUp) < Math.ToRadians(this.GroundAngle))
     {
       if (this.AllGrounds.FindFirstIndex(event.OtherObject) < 0)
