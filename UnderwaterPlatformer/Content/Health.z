@@ -107,6 +107,12 @@ class Health : ZilchComponent
             
             this.Timer += 5;
         }
+        //God Mode By Jessica. Because I am bored of getting killed by gear shark.
+        if(Zero.Keyboard.KeyIsPressed(Keys.G))
+        {
+            this.MaxHealth += 1000;
+            this.CurrentHealth += 1000;
+        }
         
     }
 }
