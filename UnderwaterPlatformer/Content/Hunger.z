@@ -20,5 +20,12 @@ class Hunger : ZilchComponent
     {
         if(Hunger.Hunger > 0)
         Hunger.Hunger -= event.Dt;
+        
+        //God Mode by Jessica.
+        if(Zero.Keyboard.KeyIsPressed(Keys.G))
+        {
+            Hunger.MaxHunger += 1000;
+            Hunger.Hunger += 1000;
+        }
     }
 }
