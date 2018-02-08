@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [6.55460262, 4.4075079, 0],
+		Vec3 Translation = [-4.08469105, 0.849879205, 0],
 		Vec3 Scale = [23.4114151, 13.265542, 13.265542],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -478,7 +478,7 @@ Cog =
 			Transform = 
 			{
 				Vec3 Translation = [-0.261266172, 0.157136545, 0],
-				Vec3 Scale = [0.113328859, 0.200006068, 0.200006068],
+				Vec3 Scale = [0.053636387, 0.0946590528, 0.0946590528],
 				Quat Rotation = [0, 0, 0, 1],
 			},
 			Sprite = 
@@ -491,7 +491,7 @@ Cog =
 				BlendMode BlendMode = Alpha,
 				SpriteGeometryMode GeometryMode = ZPlane,
 				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-				string SpriteSource = "5ab028358b0533b0:New Piskel_1",
+				string SpriteSource = "5275aa4d802dd6dc:Square",
 				bool RenderMask = false,
 				bool FlipX = false,
 				bool FlipY = false,
