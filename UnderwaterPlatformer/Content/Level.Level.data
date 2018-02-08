@@ -162,7 +162,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-1.29653811, 4.96358538, 50],
+			Vec3 Translation = [7.80741549, 11.0331039, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -174,7 +174,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 47.6946068,
+			float Size = 21.4305687,
 		},
 		EditorCameraController = 
 		{
@@ -182,7 +182,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-1.29653811, 4.96358538, 0],
+			Vec3 LookTarget = [7.80741549, 11.0331039, 0],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -1651,12 +1651,16 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "Sprite",
+			string Name = "Gear",
+		},
+		Archetyped = 
+		{
+			string Name = "5ab3fb4d720d2a14:Gear",
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-6.70714188, 7.37994862, 1.5683705e-08],
-			Vec3 Scale = [1, 1, 1],
+			Vec3 Translation = [-6.61996746, 7.55429745, 0],
+			Vec3 Scale = [0.912825584, 0.912825584, 0.912825584],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Sprite = 
@@ -1679,7 +1683,7 @@ Level =
 		},
 		BoxCollider = 
 		{
-			bool Ghost = true,
+			bool Ghost = false,
 			bool SendsMessages = true,
 			bool Seamless = true,
 			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
@@ -1690,6 +1694,18 @@ Level =
 		Resources = 
 		{
 		},
+		RigidBody = 
+		{
+			bool Static = false,
+			bool Asleep = false,
+			bool Kinematic = false,
+			bool RotationLocked = false,
+			bool Mode2D = true,
+			bool AllowSleep = true,
+			bool Inherit2DMode = true,
+			Vec3 Velocity = [0, 0, 0],
+			Vec3 AngularVelocity = [0, 0, 0],
+		},
 	},
 	Cog = 
 	{
@@ -1699,7 +1715,7 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "Sprite",
+			string Name = "Food",
 		},
 		Transform = 
 		{
@@ -1786,6 +1802,24 @@ Level =
 		EnemyShoot = 
 		{
 			string Bullet = "5abffaed2bf2cc56:Bullet",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5aacbc6f6e4e1dd4:BackgroundMusicPlayer",
+		LinkId = 
+		{
+			uint Id = 36,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [23.9289017, 20.7303047, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "MusicPlayer",
 		},
 	},
 },

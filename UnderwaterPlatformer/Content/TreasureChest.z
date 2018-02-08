@@ -1,14 +1,35 @@
 class TreasureChest : ZilchComponent
 {
+    var RandomDieRoll:Real;
+    
+    var Active:Boolean = false;
+    
     function Initialize(init : CogInitializer)
     {
+        var rand = new Random();
+        
+        this.RandomDieRoll = rand.DieRoll(100);
+        
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
+    }
+
+    function OnCollisionStarted(event : CollisionEvent)
+    {
+        if(event.OtherObject.PlayerController != null)
+        {
+           this.Active = true;
+        }
     }
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-         var rand = new Random();
-            
-        
+        if(this.Active == true)
+        {
+            /*for(this.RandomDieRoll >= 0)
+            {
+                this.Space.CreateAtPosition(Archetype.Gear, this.Owner.Transform.Translation);
+            }*/
+        }
     }
 }
