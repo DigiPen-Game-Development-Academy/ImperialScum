@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-6.61171627, 7.69597864, 0],
+		Vec3 Translation = [-6.56587315, 14.2146263, 0],
 		Vec3 Scale = [5.51033354, 5.51033354, 5.51033354],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -53,7 +53,7 @@ Cog =
 	},
 	SphereCollider = 
 	{
-		bool Ghost = false,
+		bool Ghost = true,
 		bool SendsMessages = true,
 		bool Seamless = true,
 		string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
