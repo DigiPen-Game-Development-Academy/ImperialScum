@@ -19,7 +19,7 @@ class RandomRoomGenerator : ZilchComponent
     {
         var rand = new Random();
             
-        this.RandomDieRoll = rand.DieRoll(2);
+        this.RandomDieRoll = rand.DieRoll(3);
         
         
     }
@@ -33,6 +33,9 @@ class RandomRoomGenerator : ZilchComponent
                 
         if(this.RandomDieRoll == 2)
         this.LevelToLoad = Level.ThisIsTheCodeLevel;
+        
+        if(this.RandomDieRoll == 3)
+        this.LevelToLoad = Level.UncommonSandDune1;
         
         
         
