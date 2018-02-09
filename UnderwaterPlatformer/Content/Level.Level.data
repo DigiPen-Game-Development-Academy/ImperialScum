@@ -162,7 +162,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [6.20500278, 1.08154273, 50],
+			Vec3 Translation = [20.4082317, 3.7225976, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -174,7 +174,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 4.07624006,
+			float Size = 16.5299568,
 		},
 		EditorCameraController = 
 		{
@@ -182,7 +182,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [6.20500278, 1.08154273, 0],
+			Vec3 LookTarget = [20.4082317, 3.7225976, 0],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -1423,28 +1423,10 @@ Level =
 	},
 	ArchetypeInstance = 
 	{
-		string Name = "5ab3fb4d720d2a14:Gear",
-		LinkId = 
-		{
-			uint Id = 29,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-6.61171627, 7.69597864, 0],
-			Vec3 Scale = [5.51033354, 5.51033354, 5.51033354],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Named = 
-		{
-			string Name = "Gear",
-		},
-	},
-	ArchetypeInstance = 
-	{
 		string Name = "5ab5483e9cb7465f:Food",
 		LinkId = 
 		{
-			uint Id = 30,
+			uint Id = 29,
 		},
 		Transform = 
 		{
@@ -1461,7 +1443,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 31,
+			uint Id = 30,
 		},
 		Named = 
 		{
@@ -1511,7 +1493,7 @@ Level =
 		string Name = "5aacbc6f6e4e1dd4:BackgroundMusicPlayer",
 		LinkId = 
 		{
-			uint Id = 32,
+			uint Id = 31,
 		},
 		Transform = 
 		{
@@ -1529,7 +1511,7 @@ Level =
 		string Name = "5ab57c97f2406d40:Chest",
 		LinkId = 
 		{
-			uint Id = 33,
+			uint Id = 32,
 		},
 		Transform = 
 		{
@@ -1547,7 +1529,7 @@ Level =
 		string Name = "5ab57c97f2406d40:Chest",
 		LinkId = 
 		{
-			uint Id = 34,
+			uint Id = 33,
 		},
 		Transform = 
 		{
@@ -1564,7 +1546,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 35,
+			uint Id = 34,
 		},
 		Named = 
 		{
@@ -1628,6 +1610,24 @@ Level =
 			float RotationSpeed = 3000,
 		},
 	},
+	ArchetypeInstance = 
+	{
+		string Name = "5ab50f42fd8f5bb4:GearSpike",
+		LinkId = 
+		{
+			uint Id = 35,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [4.50505638, -0.530647516, 0],
+			Vec3 Scale = [0.466570437, 0.466570437, 0.466570437],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "GearSpike",
+		},
+	},
 	Cog = 
 	{
 		LinkId = 
@@ -1640,7 +1640,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [4.50505638, -0.530647516, 0],
+			Vec3 Translation = [5.50551224, -0.530647516, 0],
 			Vec3 Scale = [0.466570437, 0.466570437, 0.466570437],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -1730,7 +1730,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [5.50551224, -0.530647516, 0],
+			Vec3 Translation = [6.49850273, -0.530647516, 0],
 			Vec3 Scale = [0.466570437, 0.466570437, 0.466570437],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -1820,9 +1820,9 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [6.49850273, -0.530647516, 0],
+			Vec3 Translation = [6.54918194, 0.503494561, 0],
 			Vec3 Scale = [0.466570437, 0.466570437, 0.466570437],
-			Quat Rotation = [0, 0, 0, 1],
+			Quat Rotation = [0, 0, 0.707106829, 0.707106829],
 		},
 		Sprite = 
 		{
@@ -1898,94 +1898,22 @@ Level =
 			},
 		},
 	},
-	Cog = 
+	ArchetypeInstance = 
 	{
+		string Name = "5ab3fb4d720d2a14:Gear",
 		LinkId = 
 		{
 			uint Id = 42,
 		},
-		Named = 
-		{
-			string Name = "Sprite",
-		},
 		Transform = 
 		{
-			Vec3 Translation = [6.54918194, 0.503494561, 0],
-			Vec3 Scale = [0.466570437, 0.466570437, 0.466570437],
-			Quat Rotation = [0, 0, 0.707106829, 0.707106829],
+			Vec3 Translation = [-6.54289532, 7.50349569, 0],
+			Vec3 Scale = [1, 1, 5],
+			Quat Rotation = [0, 0, 0, 1],
 		},
-		Sprite = 
+		Named = 
 		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5ab51afc470c2f12:GearSpike()",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
-		JaggedRock = 
-		{
-		},
-		BoxCollider = 
-		{
-			bool Ghost = false,
-			bool SendsMessages = true,
-			bool Seamless = true,
-			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
-			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
-			Vec3 Offset = [0, 0, 0],
-			Vec3 Size = [1, 1, 0.5],
-		},
-		Bounce = 
-		{
-			Vec3 BounceLevel = [0, 10, -10],
-		},
-		Hierarchy = 
-		{
-			Cog = 
-			{
-				LinkId = 
-				{
-					uint Id = 43,
-				},
-				Named = 
-				{
-					string Name = "DamageGear()",
-				},
-				Transform = 
-				{
-					Vec3 Translation = [-0.0172672272, 0.0343782902, 0],
-					Vec3 Scale = [2.3913455, 2.3913455, 2.3913455],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Sprite = 
-				{
-					bool Visible = true,
-					bool VisibilityCulling = true,
-					bool VisibilityEvents = true,
-					bool CastShadows = false,
-					Vec4 Color = [1, 1, 1, 1],
-					BlendMode BlendMode = Alpha,
-					SpriteGeometryMode GeometryMode = ZPlane,
-					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string SpriteSource = "5ab51bf26b8888b8:DamageGear()",
-					bool RenderMask = false,
-					bool FlipX = false,
-					bool FlipY = false,
-					bool AnimationActive = true,
-					float AnimationSpeed = 1,
-					uint StartFrame = 0,
-				},
-			},
+			string Name = "Gear",
 		},
 	},
 },

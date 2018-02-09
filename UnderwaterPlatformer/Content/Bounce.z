@@ -17,7 +17,7 @@ class Bounce : ZilchComponent
         
         
         
-            if (event.OtherObject.RigidBody != null)
+            if (event.OtherObject.PlayerController != null)
             {
                 if(event.OtherObject.Transform.Translation.X < this.Owner.Transform.Translation.X)
                 this.BounceLevel.X = -25;
