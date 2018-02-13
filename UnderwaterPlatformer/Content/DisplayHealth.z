@@ -21,25 +21,15 @@ class DisplayHealth : ZilchComponent
         this.InitSize = this.Owner.Transform.Scale.X;
         
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
-        
-        Zero.Connect(this.GameSession, Events.UpdateHealth, this.OnUpdateHealth);
-        
-        
-        
-        
+
     }
 
-    function OnUpdateHealth(event : HealthEvent)
+    function OnLogicUpdate(event : UpdateEvent)
     {
-        
-        var curHealth:Real = event.CurrentHealth;
-        var maxHealth:Real = event.MaxHealth;
-        
-        
-        var newSize = this.InitSize * (curHealth/maxHealth);
+        var newSize = this.InitSize * (Health.CurrentHealth/20.0);
         this.Owner.Transform.Scale = Real3(newSize, 1, 1);
         
-        if(event.CurrentHealth <= 5)
+        if(Health.CurrentHealth <= 5)
         {
             this.LowHealth = true;
             Console.WriteLine("LOWHEALTH");
@@ -50,11 +40,11 @@ class DisplayHealth : ZilchComponent
             this.Owner.Sprite.Color = this.RegularColor;
         }
         
-        if(event.CurrentHealth <= 2)
+        if(Health.CurrentHealth <= 2)
         {
             this.UltraLow = 0.7;
         }
-        else if(event.CurrentHealth <= 3)
+        else if(Health.CurrentHealth <= 3)
         {
             this.UltraLow = 0.5;
         }
@@ -62,11 +52,6 @@ class DisplayHealth : ZilchComponent
         {
             this.UltraLow = 0;
         }
-        
-    }
-
-    function OnLogicUpdate(event : UpdateEvent)
-    {
         
         if(this.LowHealth == true)
         {
