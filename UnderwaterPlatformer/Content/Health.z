@@ -1,78 +1,39 @@
-class HealthEvent : ZilchEvent
-{
-    
-    sends UpdateHealth:HealthEvent;
-    
-    [Property]
-    var MaxHealth:Integer;
-    
-    
-    var CurrentHealth:Integer;
-    
-    
-    
-}
-
-
-
 class Health : ZilchComponent
 {
     
-    [Property]
-    var MaxHealth:Integer = 5;
-    
-    
-    var CurrentHealth:Integer;
+    [Static]
+    var CurrentHealth:Integer = 20;
     
     [Property]
     var LevelToLoad:Level;
-
     
     [Property]
     var Timer:Real = 5;
     
-    
     function Initialize(init : CogInitializer)
     {
-        
-        this.CurrentHealth = this.MaxHealth;
-        
-        
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
         Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
     }
 
     function OnCollisionStarted(event : CollisionEvent)
     {
-        if(event.OtherObject.EnemyHealth != null && this.CurrentHealth > 0)
+        if(event.OtherObject.EnemyHealth != null && Health.CurrentHealth > 0)
         {
             
-            this.CurrentHealth -= 1;
-            
-            var update = HealthEvent();
-            update.CurrentHealth = this.CurrentHealth;
-            update.MaxHealth = this.MaxHealth;
-            
-            this.GameSession.DispatchEvent(Events.UpdateHealth, update);
-            
+            Health.CurrentHealth -= 1;
 
         }
-        if(event.OtherObject.JaggedRock != null && this.CurrentHealth > 0)
+        if(event.OtherObject.JaggedRock != null && Health.CurrentHealth > 0)
         {
             
-            this.CurrentHealth -= 2;
-            
-            var update = HealthEvent();
-            update.CurrentHealth = this.CurrentHealth;
-            update.MaxHealth = this.MaxHealth;
-            
-            this.GameSession.DispatchEvent(Events.UpdateHealth, update);
+            Health.CurrentHealth -= 2;
         }
         
         
         
         
-        if(this.CurrentHealth <= 0)
+        if(Health.CurrentHealth <= 0)
         {
                 if(this.LevelSettings.HUDTag != null)
                 {
@@ -98,20 +59,14 @@ class Health : ZilchComponent
         }
         else if(this.Timer <= 0)
         {
-            this.CurrentHealth -= 1;
-            var update = HealthEvent();
-            update.CurrentHealth = this.CurrentHealth;
-            update.MaxHealth = this.MaxHealth;
-            
-            this.GameSession.DispatchEvent(Events.UpdateHealth, update);
+            Health.CurrentHealth -= 1;
             
             this.Timer += 5;
         }
         //God Mode By Jessica. Because I am bored of getting killed by gear shark.
         if(Zero.Keyboard.KeyIsPressed(Keys.G))
         {
-            this.MaxHealth += 1000;
-            this.CurrentHealth += 1000;
+            Health.CurrentHealth += 1000;
         }
         
     }
