@@ -33,6 +33,11 @@ class PlayerMovement : ZilchComponent
         Zero.Connect(this.Owner, Events.CollisionPersisted, this.OnCollisionPersisted);
         Zero.Connect(this.Owner, Events.CollisionEnded, this.OnCollisionEnded);
         Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
+        Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
+
+        var startPosition = this.Space.LevelSettings.LevelVars.PlayerPosition;
+
+        this.Owner.Transform.Translation = startPosition;
     }
 
     function OnCollisionStarted(event : CollisionEvent)
@@ -42,7 +47,16 @@ class PlayerMovement : ZilchComponent
         {
         this.DoubleJump = true;
         }
+        
+         if(event.OtherObject.Checkpoints != null)
+        {
+        var checkpointPosition = event.OtherObject.Transform.Translation;
+
+        checkpointPosition.Y = this.Owner.Transform.Translation.Y;
+
+        this.Space.LevelSettings.LevelVars.PlayerPosition = checkpointPosition;
     }
+        }
 
     function OnCollisionEnded(event : CollisionEvent)
     {
