@@ -10,6 +10,10 @@ class Hunger : ZilchComponent
     [Static]
     var MaxHunger:Real;
     
+    [Property]
+    var Timer:Real = 5;
+
+    
     function Initialize(init : CogInitializer)
     {
         Hunger.MaxHunger = Hunger.Hunger;
@@ -20,6 +24,24 @@ class Hunger : ZilchComponent
     {
         if(Hunger.Hunger > 0)
         Hunger.Hunger -= event.Dt;
+        
+        //Health Regen by Jessica
+        if(this.Timer > 0)
+        {
+            
+        this.Timer -= event.Dt;
+        
+        }
+        
+        else if(this.Timer <= 0)
+        {
+            if (Hunger.Hunger >= 80 && Health.CurrentHealth <= 10)
+            {
+                Health.CurrentHealth += 1;
+            }
+            
+            this.Timer += 5;
+        }
         
         //God Mode by Jessica.
         if(Zero.Keyboard.KeyIsPressed(Keys.G))

@@ -1,4 +1,5 @@
-//Jacob Burke
+//Jacob Burke, 
+//Edited by Jessica (Added god mode and bullet damage... bullet damage is currently a WIP).
 
 class EnemyShoot : ZilchComponent
 {
@@ -9,11 +10,9 @@ class EnemyShoot : ZilchComponent
     
     
     var TimeTillNextShot:Real = 0;
-    
+        
     function Initialize(init : CogInitializer)
     { 
-        
-        
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
     }
     
