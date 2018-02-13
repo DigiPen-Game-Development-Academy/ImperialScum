@@ -63,6 +63,7 @@ class BulletLogic : ZilchComponent
         
         
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
         var player = this.Space.FindObjectByName("Player");
 
         if(player == null)
@@ -83,6 +84,12 @@ class BulletLogic : ZilchComponent
         {
            this.Owner.Transform.Rotation.Y == -180;
         }
+    }
+
+    function OnCollisionStarted(event : CollisionEvent)
+    {
+        if(event.OtherObject.PlayerController != null || event.OtherObject.Name == ("DefaultTile") )
+        this.Owner.Destroy();
     }
 
     function OnLogicUpdate(event : UpdateEvent)

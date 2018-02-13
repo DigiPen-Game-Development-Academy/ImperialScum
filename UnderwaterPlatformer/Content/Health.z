@@ -28,7 +28,7 @@ class Health : ZilchComponent
         //so that the boss does more damage:
         else if(event.OtherObject.BulletLogic != null && Health.CurrentHealth > 0)
         {
-            Health.CurrentHealth -= 5;
+            Health.CurrentHealth -= 2;
         }
         
         if(event.OtherObject.JaggedRock != null && Health.CurrentHealth > 0)
