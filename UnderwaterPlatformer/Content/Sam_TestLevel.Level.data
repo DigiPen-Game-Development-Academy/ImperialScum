@@ -116,7 +116,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 12.5523052,
+			float Size = 27.9356689,
 		},
 		EditorCameraController = 
 		{
@@ -453,14 +453,32 @@ Level =
 	},
 	ArchetypeInstance = 
 	{
-		string Name = "5adef0b2576f5b3a:Player",
+		string Name = "5ab57c97f2406d40:Chest",
 		LinkId = 
 		{
 			uint Id = 9,
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0.00422419002, -2.71851683, 0],
+			Vec3 Translation = [4, -3.5, 0],
+			Vec3 Scale = [1.27878726, 1.27878726, 1.27878726],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Chest",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5adef0b2576f5b3a:Player",
+		LinkId = 
+		{
+			uint Id = 10,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-0.221735016, -2.91982317, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
