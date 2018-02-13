@@ -14,8 +14,8 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-7.88778687, 12.3783131, 0],
-		Vec3 Scale = [0.439082116, 0.439082116, 0.439082116],
+		Vec3 Translation = [-15.2044067, 0.140590072, 0],
+		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
 	Sprite = 
@@ -24,11 +24,11 @@ Cog =
 		bool VisibilityCulling = true,
 		bool VisibilityEvents = true,
 		bool CastShadows = false,
-		Vec4 Color = [1, 0, 0, 1],
+		Vec4 Color = [1, 1, 1, 1],
 		BlendMode BlendMode = Alpha,
 		SpriteGeometryMode GeometryMode = ZPlane,
 		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-		string SpriteSource = "5274db4c2e7c11f9:Circle",
+		string SpriteSource = "5a4aeea9a5794775:Enemy_BallistaBolt",
 		bool RenderMask = false,
 		bool FlipX = false,
 		bool FlipY = false,
@@ -48,16 +48,6 @@ Cog =
 		Vec3 Velocity = [0, 0, 0],
 		Vec3 AngularVelocity = [0, 0, 0],
 	},
-	BoxCollider = 
-	{
-		bool Ghost = true,
-		bool SendsMessages = true,
-		bool Seamless = true,
-		string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
-		string SerializedGroupName = "4e740859314e5515:DefaultGroup",
-		Vec3 Offset = [0, 0, 0],
-		Vec3 Size = [0.5, 0.5, 0.5],
-	},
 	BulletLogic = 
 	{
 		float Speed = 15,
@@ -67,7 +57,7 @@ Cog =
 		bool Drag = true,
 		bool Flow = true,
 		bool Force = true,
-		bool Gravity = true,
+		bool Gravity = false,
 		bool Thrust = true,
 		bool Vortex = true,
 		bool Wind = true,
@@ -77,5 +67,15 @@ Cog =
 		bool PointForce = true,
 		bool Buoyancy = true,
 		bool Custom = true,
+	},
+	BoxCollider = 
+	{
+		bool Ghost = true,
+		bool SendsMessages = true,
+		bool Seamless = true,
+		string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+		string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+		Vec3 Offset = [0, 0, 0],
+		Vec3 Size = [1.25, 0.200000003, 0.5],
 	},
 },

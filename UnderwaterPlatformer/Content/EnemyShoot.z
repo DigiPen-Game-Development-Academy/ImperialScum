@@ -55,6 +55,20 @@ class BulletLogic : ZilchComponent
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        var player = this.Space.FindObjectByName("Player");
+        
+        var velocity = this.Owner.RigidBody.Velocity;
+            velocity.Y = 5;
+            this.Owner.RigidBody.Velocity= velocity;
+        
+        if(this.Owner.Transform.Translation.X <= player.Transform.Translation.X)
+        {
+            this.Owner.Sprite.FlipX = false;
+        }
+        else if(this.Owner.Transform.Translation.X >= player.Transform.Translation.X)
+        {
+            this.Owner.Sprite.FlipX = true;
+        }
     }
 
     function OnLogicUpdate(event : UpdateEvent)
@@ -72,9 +86,6 @@ class BulletLogic : ZilchComponent
             this.Velocity = Math.Normalize(this.Velocity);
             this.Velocity *= this.Speed;
         }
-        
-        
-        
         
     }
 }
