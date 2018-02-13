@@ -1,13 +1,16 @@
 class BackgroundMusic : ZilchComponent
 {
+    var Destroy : Real = 2;
+    
       [Property]
         var BackgroundGameMusic : SoundCue;
         
-          var BackgroundMenuMusicSpace : Space;
+        var BackgroundMenuMusicSpace : Space;
   
     function Initialize(init : CogInitializer)
     {
           Zero.Connect(this.Space, Events.LevelStarted, this.OnLevelStarted);
+          Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
     }
 
     function OnLevelStarted(event : GameEvent)
@@ -20,5 +23,9 @@ class BackgroundMusic : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
+        if (BossMusic.BossMusicStart == true)
+        {
+            this.Owner.Destroy();
+        }
     }
 }

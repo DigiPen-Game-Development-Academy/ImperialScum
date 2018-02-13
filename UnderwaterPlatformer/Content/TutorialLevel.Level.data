@@ -501,8 +501,9 @@ Level =
 			Vec3 Offset = [0, 0, 0],
 			Vec3 Size = [0.5, 0.5, 0.5],
 		},
-		RandomRoomGenerator = 
+		GoToBase = 
 		{
+			string LevelToLoad = "5a562e1b466512cb:LevelHUB",
 		},
 	},
 	Cog = 

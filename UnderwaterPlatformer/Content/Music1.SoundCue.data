@@ -1,9 +1,9 @@
 SoundCue = 
 {
 	SoundPlayMode PlayMode = Looping,
-	float Volume = 0.5,
+	float Volume = 0.25,
 	float VolumeVariation = 0,
-	float VolumeDB = -6.02060032,
+	float VolumeDB = -12.0412006,
 	bool UseVolumeDB = false,
 	float VolumeDBVariation = 0,
 	float Pitch = 0,
