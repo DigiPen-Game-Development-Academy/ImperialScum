@@ -1,0 +1,13 @@
+class GoToLevel : ZilchComponent
+{
+    [Property] var LevelToLoad : Level;
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Owner, Events.MouseDown, this.OnMouseDown);
+    }
+
+    function OnMouseDown(event : ViewportMouseEvent)
+    {
+        this.Space.LoadLevel(this.LevelToLoad);
+    }
+}

@@ -1,7 +1,7 @@
 class GoToBase : ZilchComponent
 {
     
-    var LevelToLoad : Level = Level.BaseLevel;
+    [Property] var LevelToLoad : Level = Level.BaseLevel;
     
     function Initialize(init : CogInitializer)
     {

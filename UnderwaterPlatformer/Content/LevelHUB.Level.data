@@ -69,7 +69,7 @@ Level =
 		},
 		ForwardRenderer = 
 		{
-			Vec4 ClearColor = [0.128250003, 0.833197355, 0.855000019, 1],
+			Vec4 ClearColor = [0.124799997, 0.128352076, 0.480000019, 1],
 			bool DrawNonVisible = false,
 			bool DrawDebugObjects = true,
 			bool DrawEditorIcons = true,
@@ -104,7 +104,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [1.46692002, -9.3580513, 50],
+			Vec3 Translation = [0, 0, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -116,7 +116,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 90.4838028,
+			float Size = 24.4280567,
 		},
 		EditorCameraController = 
 		{
@@ -124,7 +124,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [1.46692002, -9.3580513, 0],
+			Vec3 LookTarget = [0, 0, 0],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -140,59 +140,6 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 4,
-		},
-		Named = 
-		{
-			string Name = "TileMap",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [0, 0, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		MultiSprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-		},
-		TileMap = 
-		{
-			string SourceName = "5aacaab874768610:TutorialLevel_TileMap00",
-			string PaletteName = "5adef23c7b8ac912:GroundTiles",
-			float UnitsPerTile = 1,
-			float MeshThickness = 1.20000005,
-		},
-	},
-	ArchetypeInstance = 
-	{
-		string Name = "5adef0b2576f5b3a:Player",
-		LinkId = 
-		{
-			uint Id = 5,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-0.216768563, -28.2012157, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Named = 
-		{
-			string Name = "Player",
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
 			uint Id = 2,
 		},
 		Named = 
@@ -201,7 +148,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-0.0276269913, -26.8753166, 40],
+			Vec3 Translation = [0, 0, 40],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -213,44 +160,110 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 200,
-			float Size = 12,
+			float Size = 20,
 		},
 		SoundListener = 
 		{
 			bool Active = true,
 			float Volume = 1,
 		},
-		FollowCamera = 
+	},
+	Cog = 
+	{
+		LinkId = 
 		{
-			float Speed = 200,
+			uint Id = 4,
 		},
-		RigidBody = 
+		Named = 
 		{
-			bool Static = false,
-			bool Asleep = false,
-			bool Kinematic = false,
-			bool RotationLocked = false,
-			bool Mode2D = true,
-			bool AllowSleep = true,
-			bool Inherit2DMode = true,
-			Vec3 Velocity = [0, 0, 0],
-			Vec3 AngularVelocity = [0, 0, 0],
+			string Name = "Sprite",
 		},
-		IgnoreSpaceEffects = 
+		Transform = 
 		{
-			bool Drag = true,
-			bool Flow = true,
-			bool Force = true,
-			bool Gravity = true,
-			bool Thrust = true,
-			bool Vortex = true,
-			bool Wind = true,
-			bool Invalid = false,
-			bool Torque = true,
-			bool PointGravity = true,
-			bool PointForce = true,
-			bool Buoyancy = true,
-			bool Custom = true,
+			Vec3 Translation = [-7.51291561, 6.46575356, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5275aa4d802dd6dc:Square",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		GoToLevel = 
+		{
+			string LevelToLoad = "5a5618f4f348dab3:MainMenu",
+		},
+		Area = 
+		{
+			Vec2 Size = [1, 1],
+			Location Origin = Center,
+		},
+		Reactive = 
+		{
+			bool Active = true,
+			bool CaptureMouse = false,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 5,
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-7.51291561, 3.48753834, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5275aa4d802dd6dc:Square",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		GoToLevel = 
+		{
+			string LevelToLoad = "5aa63a32cd351b24:JessicaLevel",
+		},
+		Area = 
+		{
+			Vec2 Size = [1, 1],
+			Location Origin = Center,
+		},
+		Reactive = 
+		{
+			bool Active = true,
+			bool CaptureMouse = false,
 		},
 	},
 	Cog = 
@@ -261,15 +274,15 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "Welcome",
+			string Name = "Sprite",
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-5.21353483, -24.0434341, 0],
-			Vec3 Scale = [1.75376344, 1.75376344, 1.75376344],
+			Vec3 Translation = [-7.51291561, 0.442397118, 0],
+			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
-		SpriteText = 
+		Sprite = 
 		{
 			bool Visible = true,
 			bool VisibilityCulling = true,
@@ -279,12 +292,27 @@ Level =
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string FontName = "4e7bac697bec55c5:Verdana",
-			uint FontSize = 30,
-			string Text = "Welcome to the tutorial!",
-			TextAlign Align = Left,
-			float PixelsPerUnit = 64,
-			bool Smoothing = true,
+			string SpriteSource = "5275aa4d802dd6dc:Square",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		GoToLevel = 
+		{
+			string LevelToLoad = "5adef2e36c6297fa:Sam_TestLevel",
+		},
+		Area = 
+		{
+			Vec2 Size = [1, 1],
+			Location Origin = Center,
+		},
+		Reactive = 
+		{
+			bool Active = true,
+			bool CaptureMouse = false,
 		},
 	},
 	Cog = 
@@ -295,15 +323,15 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "They",
+			string Name = "Sprite",
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-27.6224518, -14.021822, 0],
-			Vec3 Scale = [0.886617303, 0.886617303, 0.886617303],
+			Vec3 Translation = [7.54547596, 0.442397118, 0],
+			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
-		SpriteText = 
+		Sprite = 
 		{
 			bool Visible = true,
 			bool VisibilityCulling = true,
@@ -313,12 +341,27 @@ Level =
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string FontName = "4e7bac697bec55c5:Verdana",
-			uint FontSize = 30,
-			string Text = "They will go in your inventory which you can open using the Tab key",
-			TextAlign Align = Left,
-			float PixelsPerUnit = 64,
-			bool Smoothing = true,
+			string SpriteSource = "5275aa4d802dd6dc:Square",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		GoToLevel = 
+		{
+			string LevelToLoad = "5ab50dd989734206:UncommonSandDune1",
+		},
+		Area = 
+		{
+			Vec2 Size = [1, 1],
+			Location Origin = Center,
+		},
+		Reactive = 
+		{
+			bool Active = true,
+			bool CaptureMouse = false,
 		},
 	},
 	Cog = 
@@ -329,15 +372,15 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "They",
+			string Name = "Sprite",
 		},
 		Transform = 
 		{
-			Vec3 Translation = [7.54538918, -12.2298298, 0],
-			Vec3 Scale = [1.14254379, 1.14254379, 1.14254379],
+			Vec3 Translation = [2.49254704, 0.442397118, 0],
+			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
-		SpriteText = 
+		Sprite = 
 		{
 			bool Visible = true,
 			bool VisibilityCulling = true,
@@ -347,12 +390,27 @@ Level =
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string FontName = "4e7bac697bec55c5:Verdana",
-			uint FontSize = 30,
-			string Text = "|",
-			TextAlign Align = Left,
-			float PixelsPerUnit = 64,
-			bool Smoothing = true,
+			string SpriteSource = "5275aa4d802dd6dc:Square",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		GoToLevel = 
+		{
+			string LevelToLoad = "5aacabcb5a25325f:TutorialLevel",
+		},
+		Area = 
+		{
+			Vec2 Size = [1, 1],
+			Location Origin = Center,
+		},
+		Reactive = 
+		{
+			bool Active = true,
+			bool CaptureMouse = false,
 		},
 	},
 	Cog = 
@@ -363,15 +421,15 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "They",
+			string Name = "Sprite",
 		},
 		Transform = 
 		{
-			Vec3 Translation = [7.47082663, -12.0053139, 0],
-			Vec3 Scale = [1.14254379, 1.14254379, 1.14254379],
+			Vec3 Translation = [-2.49345207, 0.442397118, 0],
+			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
-		SpriteText = 
+		Sprite = 
 		{
 			bool Visible = true,
 			bool VisibilityCulling = true,
@@ -381,12 +439,27 @@ Level =
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string FontName = "4e7bac697bec55c5:Verdana",
-			uint FontSize = 30,
-			string Text = "^",
-			TextAlign Align = Left,
-			float PixelsPerUnit = 64,
-			bool Smoothing = true,
+			string SpriteSource = "5275aa4d802dd6dc:Square",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		GoToLevel = 
+		{
+			string LevelToLoad = "5a287faae1a8d5ac:SandLevel_Template",
+		},
+		Area = 
+		{
+			Vec2 Size = [1, 1],
+			Location Origin = Center,
+		},
+		Reactive = 
+		{
+			bool Active = true,
+			bool CaptureMouse = false,
 		},
 	},
 	Cog = 
@@ -397,15 +470,15 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "Walk",
+			string Name = "Sprite",
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-33.0473595, -13.2298975, 0],
-			Vec3 Scale = [0.958687365, 0.958687365, 0.958687365],
+			Vec3 Translation = [7.51201153, 3.48753834, 0],
+			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
-		SpriteText = 
+		Sprite = 
 		{
 			bool Visible = true,
 			bool VisibilityCulling = true,
@@ -415,12 +488,27 @@ Level =
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string FontName = "4e7bac697bec55c5:Verdana",
-			uint FontSize = 30,
-			string Text = "Walk over resources to collect them",
-			TextAlign Align = Left,
-			float PixelsPerUnit = 64,
-			bool Smoothing = true,
+			string SpriteSource = "5275aa4d802dd6dc:Square",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		GoToLevel = 
+		{
+			string LevelToLoad = "5a0b6fe48d569fac:Level2",
+		},
+		Area = 
+		{
+			Vec2 Size = [1, 1],
+			Location Origin = Center,
+		},
+		Reactive = 
+		{
+			bool Active = true,
+			bool CaptureMouse = false,
 		},
 	},
 	Cog = 
@@ -431,15 +519,15 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "Try",
+			string Name = "Sprite",
 		},
 		Transform = 
 		{
-			Vec3 Translation = [2.40147161, -12.7968426, 0],
-			Vec3 Scale = [1.03403664, 1.03403664, 1.03403664],
+			Vec3 Translation = [2.49254799, 3.48753834, 0],
+			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
-		SpriteText = 
+		Sprite = 
 		{
 			bool Visible = true,
 			bool VisibilityCulling = true,
@@ -449,12 +537,27 @@ Level =
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string FontName = "4e7bac697bec55c5:Verdana",
-			uint FontSize = 30,
-			string Text = "Try it now on that enemy crab!",
-			TextAlign Align = Left,
-			float PixelsPerUnit = 64,
-			bool Smoothing = true,
+			string SpriteSource = "5275aa4d802dd6dc:Square",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		GoToLevel = 
+		{
+			string LevelToLoad = "554cea0f94af672f:Level",
+		},
+		Area = 
+		{
+			Vec2 Size = [1, 1],
+			Location Origin = Center,
+		},
+		Reactive = 
+		{
+			bool Active = true,
+			bool CaptureMouse = false,
 		},
 	},
 	Cog = 
@@ -465,12 +568,12 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "Teleporter",
+			string Name = "Sprite",
 		},
 		Transform = 
 		{
-			Vec3 Translation = [11.3791676, 12.6507406, 2.38261744e-09],
-			Vec3 Scale = [2.74287844, 4.70800209, 1],
+			Vec3 Translation = [-2.45998859, 3.48753834, 0],
+			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Sprite = 
@@ -479,7 +582,7 @@ Level =
 			bool VisibilityCulling = true,
 			bool VisibilityEvents = true,
 			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 0],
+			Vec4 Color = [1, 1, 1, 1],
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
@@ -491,19 +594,19 @@ Level =
 			float AnimationSpeed = 1,
 			uint StartFrame = 0,
 		},
-		BoxCollider = 
+		GoToLevel = 
 		{
-			bool Ghost = true,
-			bool SendsMessages = true,
-			bool Seamless = true,
-			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
-			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
-			Vec3 Offset = [0, 0, 0],
-			Vec3 Size = [0.5, 0.5, 0.5],
+			string LevelToLoad = "5aa9e637480b6533:JessicaLevel2",
 		},
-		GoToBase = 
+		Area = 
 		{
-			string LevelToLoad = "5a562e1b466512cb:LevelHUB",
+			Vec2 Size = [1, 1],
+			Location Origin = Center,
+		},
+		Reactive = 
+		{
+			bool Active = true,
+			bool CaptureMouse = false,
 		},
 	},
 	Cog = 
@@ -514,80 +617,12 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "Left",
+			string Name = "Sprite",
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-8.08458042, -12.8173618, 0],
-			Vec3 Scale = [1.09902906, 1.09902906, 1.09902906],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		SpriteText = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string FontName = "4e7bac697bec55c5:Verdana",
-			uint FontSize = 30,
-			string Text = "Left Click to throw boomerang",
-			TextAlign Align = Left,
-			float PixelsPerUnit = 64,
-			bool Smoothing = true,
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 14,
-		},
-		Named = 
-		{
-			string Name = "Left",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [0.450949669, -16.974575, 0],
-			Vec3 Scale = [1.75376344, 1.75376344, 1.75376344],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		SpriteText = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string FontName = "4e7bac697bec55c5:Verdana",
-			uint FontSize = 30,
-			string Text = "Don't fall!",
-			TextAlign Align = Left,
-			float PixelsPerUnit = 64,
-			bool Smoothing = true,
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 15,
-		},
-		Named = 
-		{
-			string Name = "EndDoor",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [9.34149551, 12.4512167, 2.38261744e-09],
-			Vec3 Scale = [1, 3.09318829, 1],
+			Vec3 Translation = [7.54547501, 6.46575356, 0],
+			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Sprite = 
@@ -596,7 +631,7 @@ Level =
 			bool VisibilityCulling = true,
 			bool VisibilityEvents = true,
 			bool CastShadows = false,
-			Vec4 Color = [0.10710001, 0.565726042, 0.595000029, 0],
+			Vec4 Color = [1, 1, 1, 1],
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
@@ -608,82 +643,133 @@ Level =
 			float AnimationSpeed = 1,
 			uint StartFrame = 0,
 		},
-		BoxCollider = 
+		GoToLevel = 
 		{
-			bool Ghost = true,
-			bool SendsMessages = true,
-			bool Seamless = true,
-			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
-			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
-			Vec3 Offset = [0, 0, 0],
-			Vec3 Size = [0.5, 0.5, 0.5],
+			string LevelToLoad = "5a9f4ac2078c0a02:ElenaDunesLevel",
 		},
-		Door = 
+		Area = 
 		{
+			Vec2 Size = [1, 1],
+			Location Origin = Center,
 		},
-		Hierarchy = 
+		Reactive = 
 		{
-			Cog = 
-			{
-				LinkId = 
-				{
-					uint Id = 16,
-				},
-				Named = 
-				{
-					string Name = "EndDoor",
-				},
-				Transform = 
-				{
-					Vec3 Translation = [0.167444229, 0, 0],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Sprite = 
-				{
-					bool Visible = true,
-					bool VisibilityCulling = true,
-					bool VisibilityEvents = true,
-					bool CastShadows = false,
-					Vec4 Color = [0.10710001, 0.565726042, 0.595000029, 1],
-					BlendMode BlendMode = Alpha,
-					SpriteGeometryMode GeometryMode = ZPlane,
-					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string SpriteSource = "5275aa4d802dd6dc:Square",
-					bool RenderMask = false,
-					bool FlipX = false,
-					bool FlipY = false,
-					bool AnimationActive = true,
-					float AnimationSpeed = 1,
-					uint StartFrame = 0,
-				},
-				BoxCollider = 
-				{
-					bool Ghost = false,
-					bool SendsMessages = true,
-					bool Seamless = true,
-					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
-					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
-					Vec3 Offset = [0, 0, 0],
-					Vec3 Size = [0.5, 0.5, 0.5],
-				},
-			},
+			bool Active = true,
+			bool CaptureMouse = false,
 		},
 	},
 	Cog = 
 	{
 		LinkId = 
 		{
-			uint Id = 17,
+			uint Id = 14,
 		},
 		Named = 
 		{
-			string Name = "But",
+			string Name = "Sprite",
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-28.680542, -25.5387573, 0],
-			Vec3 Scale = [1.31722593, 1.31722593, 1.31722593],
+			Vec3 Translation = [2.49254894, 6.46575356, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5275aa4d802dd6dc:Square",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		GoToLevel = 
+		{
+			string LevelToLoad = "5a0186ced09f18fc:EasyLevel",
+		},
+		Area = 
+		{
+			Vec2 Size = [1, 1],
+			Location Origin = Center,
+		},
+		Reactive = 
+		{
+			bool Active = true,
+			bool CaptureMouse = false,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 15,
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-2.56037855, 6.46575356, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5275aa4d802dd6dc:Square",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		GoToLevel = 
+		{
+			string LevelToLoad = "5ad7c17057b6e586:BaseLevel",
+		},
+		Area = 
+		{
+			Vec2 Size = [1, 1],
+			Location Origin = Center,
+		},
+		Reactive = 
+		{
+			bool Active = true,
+			bool CaptureMouse = false,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 16,
+		},
+		Named = 
+		{
+			string Name = "SpriteText",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-9.03503323, 7.62958431, 0],
+			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		SpriteText = 
@@ -698,7 +784,41 @@ Level =
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
 			string FontName = "4e7bac697bec55c5:Verdana",
 			uint FontSize = 30,
-			string Text = "But remember that douple jump takes a bit to recharge",
+			string Text = "Main Menu",
+			TextAlign Align = Left,
+			float PixelsPerUnit = 64,
+			bool Smoothing = true,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 17,
+		},
+		Named = 
+		{
+			string Name = "SpriteText",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-3.78132772, 4.58444357, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		SpriteText = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string FontName = "4e7bac697bec55c5:Verdana",
+			uint FontSize = 30,
+			string Text = "JessicaLevel2",
 			TextAlign Align = Left,
 			float PixelsPerUnit = 64,
 			bool Smoothing = true,
@@ -712,12 +832,12 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "You",
+			string Name = "SpriteText",
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-27.8735275, -24.0579414, 0],
-			Vec3 Scale = [1.75376344, 1.75376344, 1.75376344],
+			Vec3 Translation = [6.8599329, 4.58444357, 0],
+			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		SpriteText = 
@@ -732,7 +852,7 @@ Level =
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
 			string FontName = "4e7bac697bec55c5:Verdana",
 			uint FontSize = 30,
-			string Text = "You can press W twice to double jump",
+			string Text = "Level2",
 			TextAlign Align = Left,
 			float PixelsPerUnit = 64,
 			bool Smoothing = true,
@@ -746,12 +866,12 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "You",
+			string Name = "SpriteText",
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-36.6961441, -27.2385101, 0],
-			Vec3 Scale = [0.929194748, 0.929194748, 0.929194748],
+			Vec3 Translation = [1.94086194, 4.58444357, 0],
+			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		SpriteText = 
@@ -766,7 +886,7 @@ Level =
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
 			string FontName = "4e7bac697bec55c5:Verdana",
 			uint FontSize = 30,
-			string Text = "Touch the gear to bounce off of it",
+			string Text = "Level",
 			TextAlign Align = Left,
 			float PixelsPerUnit = 64,
 			bool Smoothing = true,
@@ -780,12 +900,12 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "Use",
+			string Name = "SpriteText",
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-7.65355158, -26.0162144, 0],
-			Vec3 Scale = [1.75376344, 1.75376344, 1.75376344],
+			Vec3 Translation = [-8.76732826, 4.65136909, 0],
+			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		SpriteText = 
@@ -800,7 +920,7 @@ Level =
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
 			string FontName = "4e7bac697bec55c5:Verdana",
 			uint FontSize = 30,
-			string Text = "Use A and D to move and W to jump",
+			string Text = "JessicaLevel",
 			TextAlign Align = Left,
 			float PixelsPerUnit = 64,
 			bool Smoothing = true,
@@ -814,12 +934,12 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "Good",
+			string Name = "SpriteText",
 		},
 		Transform = 
 		{
-			Vec3 Translation = [10.2417488, 13.8931866, 0],
-			Vec3 Scale = [1.75376344, 1.75376344, 1.75376344],
+			Vec3 Translation = [-8.76732826, 1.67315412, 0],
+			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		SpriteText = 
@@ -834,7 +954,7 @@ Level =
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
 			string FontName = "4e7bac697bec55c5:Verdana",
 			uint FontSize = 30,
-			string Text = "Good Luck out there",
+			string Text = "Sam_TestLevel",
 			TextAlign Align = Left,
 			float PixelsPerUnit = 64,
 			bool Smoothing = true,
@@ -848,12 +968,12 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "Walk",
+			string Name = "SpriteText",
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-5.88430882, 12.3562279, 0],
-			Vec3 Scale = [1.3058846, 1.3058846, 1.3058846],
+			Vec3 Translation = [4.55097866, 1.67315412, 0],
+			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		SpriteText = 
@@ -868,7 +988,7 @@ Level =
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
 			string FontName = "4e7bac697bec55c5:Verdana",
 			uint FontSize = 30,
-			string Text = "Walk up to it with a key to finish the level!",
+			string Text = "UncommonSandDunes",
 			TextAlign Align = Left,
 			float PixelsPerUnit = 64,
 			bool Smoothing = true,
@@ -882,12 +1002,12 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "This",
+			string Name = "SpriteText",
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-3.75375748, 14.0288515, 0],
-			Vec3 Scale = [1.75376344, 1.75376344, 1.75376344],
+			Vec3 Translation = [0.702726364, 1.67315412, 0],
+			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		SpriteText = 
@@ -902,7 +1022,7 @@ Level =
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
 			string FontName = "4e7bac697bec55c5:Verdana",
 			uint FontSize = 30,
-			string Text = "This is the end door ->",
+			string Text = "TutorialLevel",
 			TextAlign Align = Left,
 			float PixelsPerUnit = 64,
 			bool Smoothing = true,
@@ -916,12 +1036,12 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "This",
+			string Name = "SpriteText",
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-38.1930618, -1.96692896, 0],
-			Vec3 Scale = [1.077811, 1.077811, 1.077811],
+			Vec3 Translation = [-4.24981117, 1.67315412, 0],
+			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		SpriteText = 
@@ -936,7 +1056,7 @@ Level =
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
 			string FontName = "4e7bac697bec55c5:Verdana",
 			uint FontSize = 30,
-			string Text = "Open your inventory and click on food to consume it",
+			string Text = "SandLevelTemplate",
 			TextAlign Align = Left,
 			float PixelsPerUnit = 64,
 			bool Smoothing = true,
@@ -950,12 +1070,12 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "This",
+			string Name = "SpriteText",
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-21.1042118, -2.07530403, 0],
-			Vec3 Scale = [1.077811, 1.077811, 1.077811],
+			Vec3 Translation = [5.48794937, 7.62958431, 0],
+			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		SpriteText = 
@@ -970,7 +1090,7 @@ Level =
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
 			string FontName = "4e7bac697bec55c5:Verdana",
 			uint FontSize = 30,
-			string Text = "And the green one is your health",
+			string Text = "ElenaDunesLevel",
 			TextAlign Align = Left,
 			float PixelsPerUnit = 64,
 			bool Smoothing = true,
@@ -984,12 +1104,12 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "This",
+			string Name = "SpriteText",
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-22.8611259, -1.42026484, 0],
-			Vec3 Scale = [1.077811, 1.077811, 1.077811],
+			Vec3 Translation = [1.47237682, 7.62958431, 0],
+			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		SpriteText = 
@@ -1004,7 +1124,7 @@ Level =
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
 			string FontName = "4e7bac697bec55c5:Verdana",
 			uint FontSize = 30,
-			string Text = "The yellow bar in the top left is your food level",
+			string Text = "EasyLevel",
 			TextAlign Align = Left,
 			float PixelsPerUnit = 64,
 			bool Smoothing = true,
@@ -1018,12 +1138,12 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "This",
+			string Name = "SpriteText",
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-36.5917473, -1.15333784, 0],
-			Vec3 Scale = [1.18321526, 1.18321526, 1.18321526],
+			Vec3 Translation = [-3.11206579, 7.62958431, 0],
+			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		SpriteText = 
@@ -1038,283 +1158,10 @@ Level =
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
 			string FontName = "4e7bac697bec55c5:Verdana",
 			uint FontSize = 30,
-			string Text = "You will need to eat food to survive",
+			string Text = "Base",
 			TextAlign Align = Left,
 			float PixelsPerUnit = 64,
 			bool Smoothing = true,
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 28,
-		},
-		Named = 
-		{
-			string Name = "Keys",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-26.4593239, 9.77598572, 0],
-			Vec3 Scale = [0.85800904, 0.85800904, 0.85800904],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		SpriteText = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string FontName = "4e7bac697bec55c5:Verdana",
-			uint FontSize = 30,
-			string Text = "Keys are needed to unlock the doors at the end of the level",
-			TextAlign Align = Left,
-			float PixelsPerUnit = 64,
-			bool Smoothing = true,
-		},
-	},
-	ArchetypeInstance = 
-	{
-		string Name = "5aacbc6f6e4e1dd4:BackgroundMusicPlayer",
-		LinkId = 
-		{
-			uint Id = 29,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [9.62467289, -17.9474411, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Named = 
-		{
-			string Name = "MusicPlayer",
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 30,
-		},
-		Named = 
-		{
-			string Name = "Key",
-		},
-		Archetyped = 
-		{
-			string Name = "5add71002d270676:Key",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-17.6821365, 8.48552895, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5ab914a92019defc:Pickup_Key",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
-		BoxCollider = 
-		{
-			bool Ghost = true,
-			bool SendsMessages = true,
-			bool Seamless = true,
-			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
-			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
-			Vec3 Offset = [0, 0, 0],
-			Vec3 Size = [0.400000006, 0.5, 0.5],
-		},
-		Key = 
-		{
-		},
-		Hierarchy = 
-		{
-			Cog = 
-			{
-				LinkId = 
-				{
-					uint Id = 31,
-				},
-				Named = 
-				{
-					string Name = "KeySparkles",
-				},
-				Transform = 
-				{
-					Vec3 Translation = [0.00211113691, -0.0172903538, 1],
-					Vec3 Scale = [1, 1, 11],
-					Quat Rotation = [0, 0, -0.702683628, 0.711502433],
-				},
-				SpriteParticleSystem = 
-				{
-					bool Visible = true,
-					bool VisibilityCulling = true,
-					bool VisibilityEvents = true,
-					bool CastShadows = false,
-					SystemChildMode ChildMode = Independent,
-					SystemSpace SystemSpace = WorldSpace,
-					uint DrawOrder = 0,
-					Vec4 Tint = [1, 0.899999857, 0, 1],
-					float WarmUpTime = 0,
-					ParticleGeometry GeometryMode = Billboarded,
-					ParticleRenderMode RenderMode = Additive,
-					ParticleSortMode SortMode = Youngest,
-					ParticleAnimation ParticleAnimation = Single,
-					string Texture = "5add733cf6bb7f8c:Particle_Sparkle()",
-					float VelocityScale = 1,
-					float LengthScale = 1,
-					float MaxParticleSize = 100,
-					Vec3 SystemSize = [1, 1, 1],
-				},
-				SphericalParticleEmitter = 
-				{
-					bool Active = true,
-					uint EmitCount = 0,
-					float EmitRate = 2,
-					float EmitVariance = 10,
-					float Size = 0.300000012,
-					float SizeVariance = 0.200000003,
-					float Lifetime = 0.400000006,
-					float LifetimeVariance = 0,
-					float Spin = 0,
-					float SpinVariance = 10,
-					bool RandomSpin = true,
-					float Fill = 1,
-					float EmitterVelocityPercent = 0,
-					Vec3 StartVelocity = [0, 0, 0],
-					Vec3 RandomVelocity = [0, 0, 0],
-					Vec3 TangentVelocity = [0, 0, 0],
-					Vec3 EmitterSize = [0.300000012, 0.300000012, 0.300000012],
-					bool FastMovingEmitter = false,
-				},
-				LinearParticleAnimator = 
-				{
-					Vec3 Force = [0, 0, 0],
-					Vec3 RandomForce = [0, 0, 0],
-					float Torque = 0,
-					float Growth = 0,
-					float Dampening = 0,
-					Vec3 Twist = [0, 0, 0],
-				},
-				ParticleColorAnimator = 
-				{
-					Vec4 Color0 = [0.889999986, 1, 0, 0.5],
-					Vec4 Color1 = [1, 0.720000029, 0, 1],
-					Vec4 Color2 = [1, 0.990000129, 0, 1],
-					Vec4 Color3 = [1, 0.600000143, 0, 0.5],
-					Vec4 Color4 = [1, 0.960000157, 0, 0],
-				},
-			},
-		},
-	},
-	ArchetypeInstance = 
-	{
-		string Name = "5ab3fb4d720d2a14:Gear",
-		LinkId = 
-		{
-			uint Id = 32,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-29.4884071, -14.5229187, 0],
-			Vec3 Scale = [1, 1, 5],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Named = 
-		{
-			string Name = "Gear",
-		},
-	},
-	ArchetypeInstance = 
-	{
-		string Name = "5ab50f42fd8f5bb4:GearSpike",
-		LinkId = 
-		{
-			uint Id = 33,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-37.5474396, -27.5715389, 0],
-			Vec3 Scale = [0.466570437, 0.466570437, 0.466570437],
-			Quat Rotation = [0, 0, -0.711378336, 0.702809334],
-		},
-		Named = 
-		{
-			string Name = "GearSpike",
-		},
-	},
-	ArchetypeInstance = 
-	{
-		string Name = "5addae58d1201ae5:EnemyCrab",
-		LinkId = 
-		{
-			uint Id = 34,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [6.96278143, -14.2694101, 0],
-			Vec3 Scale = [12.0367413, 12.0367413, 12.0367413],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Named = 
-		{
-			string Name = "EnemyCrab",
-		},
-	},
-	ArchetypeInstance = 
-	{
-		string Name = "5ab3fb4d720d2a14:Gear",
-		LinkId = 
-		{
-			uint Id = 35,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-4.41569948, -8.4632988, 0],
-			Vec3 Scale = [1, 1, 5],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Named = 
-		{
-			string Name = "Gear",
-		},
-	},
-	ArchetypeInstance = 
-	{
-		string Name = "5ab3fb4d720d2a14:Gear",
-		LinkId = 
-		{
-			uint Id = 36,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [7.45710516, -2.50203991, 0],
-			Vec3 Scale = [1, 1, 5],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Named = 
-		{
-			string Name = "Gear",
 		},
 	},
 },
