@@ -104,7 +104,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-2.53708458, -2.99080014, 42],
+			Vec3 Translation = [0.249400914, -3.69581437, 42],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -116,7 +116,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 11.3577967,
+			float Size = 12.5523052,
 		},
 		EditorCameraController = 
 		{
@@ -124,7 +124,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-2.53708458, -2.99080014, -8],
+			Vec3 LookTarget = [0.249400914, -3.69581437, -8],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -235,29 +235,11 @@ Level =
 			float MeshThickness = 1.20000005,
 		},
 	},
-	ArchetypeInstance = 
-	{
-		string Name = "5adef0b2576f5b3a:Player",
-		LinkId = 
-		{
-			uint Id = 5,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-3.78980947, -1.3905741, 0],
-			Vec3 Scale = [4.80613804, 4.80613804, 4.80613804],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Named = 
-		{
-			string Name = "Player",
-		},
-	},
 	Cog = 
 	{
 		LinkId = 
 		{
-			uint Id = 6,
+			uint Id = 5,
 		},
 		Named = 
 		{
@@ -311,7 +293,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 7,
+			uint Id = 6,
 		},
 		Named = 
 		{
@@ -365,7 +347,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 8,
+			uint Id = 7,
 		},
 		Named = 
 		{
@@ -419,7 +401,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 9,
+			uint Id = 8,
 		},
 		Named = 
 		{
@@ -467,6 +449,24 @@ Level =
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
 			},
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5adef0b2576f5b3a:Player",
+		LinkId = 
+		{
+			uint Id = 9,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0.00422419002, -2.71851683, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Player",
 		},
 	},
 },
