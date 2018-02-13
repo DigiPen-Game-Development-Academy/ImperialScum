@@ -104,7 +104,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-16.1176052, 6.18850279, 42],
+			Vec3 Translation = [20.3162918, 31.4299297, 42],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -116,7 +116,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 74.081955,
+			float Size = 57.3967285,
 		},
 		EditorCameraController = 
 		{
@@ -124,7 +124,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-16.1176052, 6.18850279, -7.99999809],
+			Vec3 LookTarget = [20.3162918, 31.4299297, -8.00000095],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -141,6 +141,64 @@ Level =
 		LinkId = 
 		{
 			uint Id = 4,
+		},
+		Named = 
+		{
+			string Name = "RedFloat",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-38.4469795, 26.4749699, 0],
+			Vec3 Scale = [21, 25, 40],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [0.247500002, 0.313500047, 0.659999967, 0.5],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5275aa4d802dd6dc:Square",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		BoxCollider = 
+		{
+			bool Ghost = true,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [0.5, 0.5, 0.5],
+		},
+		Region = 
+		{
+			bool WakeUpOnEffectChange = false,
+		},
+		BuoyancyEffect = 
+		{
+			bool Active = true,
+			bool WakeUpOnChange = true,
+			float Density = 5,
+			Vec3 Gravity = [0, -6, 0],
+			uint Detail = 5,
+			bool DebugDraw = false,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 5,
 		},
 		Named = 
 		{
@@ -179,7 +237,7 @@ Level =
 		string Name = "5ab57c97f2406d40:Chest",
 		LinkId = 
 		{
-			uint Id = 5,
+			uint Id = 6,
 		},
 		Transform = 
 		{
@@ -261,7 +319,7 @@ Level =
 		string Name = "5ab57c97f2406d40:Chest",
 		LinkId = 
 		{
-			uint Id = 6,
+			uint Id = 7,
 		},
 		Transform = 
 		{
@@ -279,7 +337,7 @@ Level =
 		string Name = "5ab57c97f2406d40:Chest",
 		LinkId = 
 		{
-			uint Id = 7,
+			uint Id = 8,
 		},
 		Transform = 
 		{
@@ -297,7 +355,7 @@ Level =
 		string Name = "5ab57c97f2406d40:Chest",
 		LinkId = 
 		{
-			uint Id = 8,
+			uint Id = 9,
 		},
 		Transform = 
 		{
@@ -315,7 +373,7 @@ Level =
 		string Name = "5add71002d270676:Key",
 		LinkId = 
 		{
-			uint Id = 9,
+			uint Id = 10,
 		},
 		Transform = 
 		{
@@ -333,7 +391,7 @@ Level =
 		string Name = "5add57b20981d06d:GearShark",
 		LinkId = 
 		{
-			uint Id = 10,
+			uint Id = 11,
 		},
 		Transform = 
 		{
@@ -351,11 +409,11 @@ Level =
 		string Name = "5addae58d1201ae5:EnemyCrab",
 		LinkId = 
 		{
-			uint Id = 11,
+			uint Id = 12,
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-32.1514549, 31.2420616, 0],
+			Vec3 Translation = [-32.7453804, 31.143074, 0],
 			Vec3 Scale = [12.0367413, 12.0367413, 12.0367413],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -369,7 +427,7 @@ Level =
 		string Name = "5adef0b2576f5b3a:Player",
 		LinkId = 
 		{
-			uint Id = 12,
+			uint Id = 13,
 		},
 		Transform = 
 		{
@@ -387,7 +445,7 @@ Level =
 		string Name = "5addae58d1201ae5:EnemyCrab",
 		LinkId = 
 		{
-			uint Id = 13,
+			uint Id = 14,
 		},
 		Transform = 
 		{
@@ -405,7 +463,7 @@ Level =
 		string Name = "5addae58d1201ae5:EnemyCrab",
 		LinkId = 
 		{
-			uint Id = 14,
+			uint Id = 15,
 		},
 		Transform = 
 		{
@@ -423,7 +481,7 @@ Level =
 		string Name = "5addae58d1201ae5:EnemyCrab",
 		LinkId = 
 		{
-			uint Id = 15,
+			uint Id = 16,
 		},
 		Transform = 
 		{
@@ -441,7 +499,7 @@ Level =
 		string Name = "5addae58d1201ae5:EnemyCrab",
 		LinkId = 
 		{
-			uint Id = 16,
+			uint Id = 17,
 		},
 		Transform = 
 		{
@@ -459,7 +517,7 @@ Level =
 		string Name = "5add57b20981d06d:GearShark",
 		LinkId = 
 		{
-			uint Id = 17,
+			uint Id = 18,
 		},
 		Transform = 
 		{
@@ -477,7 +535,7 @@ Level =
 		string Name = "5add71002d270676:Key",
 		LinkId = 
 		{
-			uint Id = 18,
+			uint Id = 19,
 		},
 		Transform = 
 		{
@@ -495,29 +553,11 @@ Level =
 		string Name = "5ab57c97f2406d40:Chest",
 		LinkId = 
 		{
-			uint Id = 19,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [35.8865166, 25.8623142, 0],
-			Vec3 Scale = [1.27878726, 1.27878726, 1.27878726],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Named = 
-		{
-			string Name = "Chest",
-		},
-	},
-	ArchetypeInstance = 
-	{
-		string Name = "5ab57c97f2406d40:Chest",
-		LinkId = 
-		{
 			uint Id = 20,
 		},
 		Transform = 
 		{
-			Vec3 Translation = [20.3801823, 7.76543093, 0],
+			Vec3 Translation = [35.8865166, 25.8623142, 0],
 			Vec3 Scale = [1.27878726, 1.27878726, 1.27878726],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -546,10 +586,136 @@ Level =
 	},
 	ArchetypeInstance = 
 	{
-		string Name = "5ab50f42fd8f5bb4:GearSpike",
+		string Name = "5ab57c97f2406d40:Chest",
 		LinkId = 
 		{
 			uint Id = 22,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-48.311161, 33.6784744, 0],
+			Vec3 Scale = [1.27878726, 1.27878726, 1.27878726],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Chest",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5ab57c97f2406d40:Chest",
+		LinkId = 
+		{
+			uint Id = 23,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-48.4498253, 26.6065273, 0],
+			Vec3 Scale = [1.27878726, 1.27878726, 1.27878726],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Chest",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5ab57c97f2406d40:Chest",
+		LinkId = 
+		{
+			uint Id = 24,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-28.8425064, 23.6113491, 0],
+			Vec3 Scale = [1.27878726, 1.27878726, 1.27878726],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Chest",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5ab57c97f2406d40:Chest",
+		LinkId = 
+		{
+			uint Id = 25,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-46.9963531, 14.5344257, 0],
+			Vec3 Scale = [1.27878726, 1.27878726, 1.27878726],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Chest",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5ab57c97f2406d40:Chest",
+		LinkId = 
+		{
+			uint Id = 26,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-45.7806931, 14.5344257, 0],
+			Vec3 Scale = [1.27878726, 1.27878726, 1.27878726],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Chest",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5ab57c97f2406d40:Chest",
+		LinkId = 
+		{
+			uint Id = 27,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-44.5245132, 14.5749483, 0],
+			Vec3 Scale = [1.27878726, 1.27878726, 1.27878726],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Chest",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5ab57c97f2406d40:Chest",
+		LinkId = 
+		{
+			uint Id = 28,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-48.2930565, 14.5749464, 0],
+			Vec3 Scale = [1.27878726, 1.27878726, 1.27878726],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Chest",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5ab50f42fd8f5bb4:GearSpike",
+		LinkId = 
+		{
+			uint Id = 29,
 		},
 		Transform = 
 		{
@@ -567,13 +733,13 @@ Level =
 		string Name = "5ab50f42fd8f5bb4:GearSpike",
 		LinkId = 
 		{
-			uint Id = 23,
+			uint Id = 30,
 		},
 		Transform = 
 		{
 			Vec3 Translation = [-36.5036011, 12.5323505, 0],
 			Vec3 Scale = [0.466570437, 0.466570437, 0.466570437],
-			Quat Rotation = [0, 0, 0, 1],
+			Quat Rotation = [-0, 0, 1, -4.37113883e-08],
 		},
 		Named = 
 		{
@@ -583,415 +749,289 @@ Level =
 	ArchetypeInstance = 
 	{
 		string Name = "5ab50f42fd8f5bb4:GearSpike",
-		LinkId = 
-		{
-			uint Id = 24,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-36.5430107, 8.39423084, 0],
-			Vec3 Scale = [0.466570437, 0.466570437, 0.466570437],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Named = 
-		{
-			string Name = "GearSpike",
-		},
-	},
-	ArchetypeInstance = 
-	{
-		string Name = "5ab50f42fd8f5bb4:GearSpike",
-		LinkId = 
-		{
-			uint Id = 25,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-26.6134815, 13.9952259, 0],
-			Vec3 Scale = [0.466570437, 0.466570437, 0.466570437],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Named = 
-		{
-			string Name = "GearSpike",
-		},
-	},
-	ArchetypeInstance = 
-	{
-		string Name = "5ab50f42fd8f5bb4:GearSpike",
-		LinkId = 
-		{
-			uint Id = 26,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [32.5637245, -6.41616726, -8],
-			Vec3 Scale = [0.466570437, 0.466570437, 0.466570437],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Named = 
-		{
-			string Name = "GearSpike",
-		},
-	},
-	ArchetypeInstance = 
-	{
-		string Name = "5ab50f42fd8f5bb4:GearSpike",
-		LinkId = 
-		{
-			uint Id = 27,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [24.6523323, 40.577507, -8],
-			Vec3 Scale = [0.466570437, 0.466570437, 0.466570437],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Named = 
-		{
-			string Name = "GearSpike",
-		},
-	},
-	ArchetypeInstance = 
-	{
-		string Name = "5ab50f42fd8f5bb4:GearSpike",
-		LinkId = 
-		{
-			uint Id = 28,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [27.5335827, 45.6085892, 0],
-			Vec3 Scale = [0.466570437, 0.466570437, 0.466570437],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Named = 
-		{
-			string Name = "GearSpike",
-		},
-	},
-	ArchetypeInstance = 
-	{
-		string Name = "5add57b20981d06d:GearShark",
-		LinkId = 
-		{
-			uint Id = 29,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-28.8286743, 9.72307491, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Named = 
-		{
-			string Name = "GearShark",
-		},
-	},
-	ArchetypeInstance = 
-	{
-		string Name = "5ab57c97f2406d40:Chest",
-		LinkId = 
-		{
-			uint Id = 30,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-38.623909, -32.4907875, 0],
-			Vec3 Scale = [1.27878726, 1.27878726, 1.27878726],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Named = 
-		{
-			string Name = "Chest",
-		},
-	},
-	ArchetypeInstance = 
-	{
-		string Name = "5ab57c97f2406d40:Chest",
 		LinkId = 
 		{
 			uint Id = 31,
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-38.6822662, -30.9683819, 0],
-			Vec3 Scale = [1.27878726, 1.27878726, 1.27878726],
-			Quat Rotation = [0, 0, 0, 1],
+			Vec3 Translation = [-27.5949211, 12.5323505, 0],
+			Vec3 Scale = [0.466570437, 0.466570437, 0.466570437],
+			Quat Rotation = [-0, 0, 1, -4.37113883e-08],
 		},
 		Named = 
 		{
-			string Name = "Chest",
+			string Name = "GearSpike",
 		},
 	},
 	ArchetypeInstance = 
 	{
-		string Name = "5ab57c97f2406d40:Chest",
+		string Name = "5ab50f42fd8f5bb4:GearSpike",
 		LinkId = 
 		{
 			uint Id = 32,
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-39.9335098, -35.0796013, 0],
-			Vec3 Scale = [1.27878726, 1.27878726, 1.27878726],
-			Quat Rotation = [0, 0, 0, 1],
+			Vec3 Translation = [8.80892944, 7.45542765, 0],
+			Vec3 Scale = [0.466570437, 0.466570437, 0.466570437],
+			Quat Rotation = [-0, 0, 1, -4.37113883e-08],
 		},
 		Named = 
 		{
-			string Name = "Chest",
+			string Name = "GearSpike",
 		},
 	},
 	ArchetypeInstance = 
 	{
-		string Name = "5ab57c97f2406d40:Chest",
+		string Name = "5ab50f42fd8f5bb4:GearSpike",
 		LinkId = 
 		{
 			uint Id = 33,
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-39.9930878, -33.5304489, 0],
-			Vec3 Scale = [1.27878726, 1.27878726, 1.27878726],
-			Quat Rotation = [0, 0, 0, 1],
+			Vec3 Translation = [22.3089275, 5.75350332, 0],
+			Vec3 Scale = [0.466570437, 0.466570437, 0.466570437],
+			Quat Rotation = [-0, 0, 1, -4.37113883e-08],
 		},
 		Named = 
 		{
-			string Name = "Chest",
+			string Name = "GearSpike",
 		},
 	},
 	ArchetypeInstance = 
 	{
-		string Name = "5ab57c97f2406d40:Chest",
+		string Name = "5ab50f42fd8f5bb4:GearSpike",
 		LinkId = 
 		{
 			uint Id = 34,
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-39.9930878, -32.1600418, 0],
-			Vec3 Scale = [1.27878726, 1.27878726, 1.27878726],
-			Quat Rotation = [0, 0, 0, 1],
+			Vec3 Translation = [41.4339294, 7.65735054, 0],
+			Vec3 Scale = [0.466570437, 0.466570437, 0.466570437],
+			Quat Rotation = [-0, 0, 1, -4.37113883e-08],
 		},
 		Named = 
 		{
-			string Name = "Chest",
+			string Name = "GearSpike",
 		},
 	},
 	ArchetypeInstance = 
 	{
-		string Name = "5ab57c97f2406d40:Chest",
+		string Name = "5ab50f42fd8f5bb4:GearSpike",
 		LinkId = 
 		{
 			uint Id = 35,
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-39.9930878, -30.8492165, 0],
-			Vec3 Scale = [1.27878726, 1.27878726, 1.27878726],
-			Quat Rotation = [0, 0, 0, 1],
+			Vec3 Translation = [41.7368164, 18.6910038, 0],
+			Vec3 Scale = [0.466570437, 0.466570437, 0.466570437],
+			Quat Rotation = [-0, 0, 1, -4.37113883e-08],
 		},
 		Named = 
 		{
-			string Name = "Chest",
+			string Name = "GearSpike",
 		},
 	},
 	ArchetypeInstance = 
 	{
-		string Name = "5ab57c97f2406d40:Chest",
+		string Name = "5ab50f42fd8f5bb4:GearSpike",
 		LinkId = 
 		{
 			uint Id = 36,
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-39.9930878, -29.5979786, 0],
-			Vec3 Scale = [1.27878726, 1.27878726, 1.27878726],
-			Quat Rotation = [0, 0, 0, 1],
+			Vec3 Translation = [21.1550827, 14.6092758, 0],
+			Vec3 Scale = [0.466570437, 0.466570437, 0.466570437],
+			Quat Rotation = [-0, 0, 1, -4.37113883e-08],
 		},
 		Named = 
 		{
-			string Name = "Chest",
+			string Name = "GearSpike",
 		},
 	},
 	ArchetypeInstance = 
 	{
-		string Name = "5ab57c97f2406d40:Chest",
+		string Name = "5ab50f42fd8f5bb4:GearSpike",
 		LinkId = 
 		{
 			uint Id = 37,
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-41.1847458, -31.2662983, 0],
-			Vec3 Scale = [1.27878726, 1.27878726, 1.27878726],
-			Quat Rotation = [0, 0, 0, 1],
+			Vec3 Translation = [18.3858509, 21.6477356, 0],
+			Vec3 Scale = [0.466570437, 0.466570437, 0.466570437],
+			Quat Rotation = [-0, 0, 1, -4.37113883e-08],
 		},
 		Named = 
 		{
-			string Name = "Chest",
+			string Name = "GearSpike",
 		},
 	},
 	ArchetypeInstance = 
 	{
-		string Name = "5ab57c97f2406d40:Chest",
+		string Name = "5ab50f42fd8f5bb4:GearSpike",
 		LinkId = 
 		{
 			uint Id = 38,
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-41.2443314, -32.51754, 0],
-			Vec3 Scale = [1.27878726, 1.27878726, 1.27878726],
-			Quat Rotation = [0, 0, 0, 1],
+			Vec3 Translation = [28.1935425, 24.6477356, 0],
+			Vec3 Scale = [0.466570437, 0.466570437, 0.466570437],
+			Quat Rotation = [-0, 0, 1, -4.37113883e-08],
 		},
 		Named = 
 		{
-			string Name = "Chest",
+			string Name = "GearSpike",
 		},
 	},
 	ArchetypeInstance = 
 	{
-		string Name = "5ab57c97f2406d40:Chest",
+		string Name = "5ab50f42fd8f5bb4:GearSpike",
 		LinkId = 
 		{
 			uint Id = 39,
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-41.1847458, -33.8879471, 0],
-			Vec3 Scale = [1.27878726, 1.27878726, 1.27878726],
-			Quat Rotation = [0, 0, 0, 1],
+			Vec3 Translation = [-22.6950493, 6.49412441, 0],
+			Vec3 Scale = [0.466570437, 0.466570437, 0.466570437],
+			Quat Rotation = [-0, 0, 1, -4.37113883e-08],
 		},
 		Named = 
 		{
-			string Name = "Chest",
+			string Name = "GearSpike",
 		},
 	},
 	ArchetypeInstance = 
 	{
-		string Name = "5ab57c97f2406d40:Chest",
+		string Name = "5ab50f42fd8f5bb4:GearSpike",
 		LinkId = 
 		{
 			uint Id = 40,
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-41.2443314, -35.1987686, 0],
-			Vec3 Scale = [1.27878726, 1.27878726, 1.27878726],
-			Quat Rotation = [0, 0, 0, 1],
+			Vec3 Translation = [-44.4722557, -4.39447784, 0],
+			Vec3 Scale = [0.466570437, 0.466570437, 0.466570437],
+			Quat Rotation = [-0, 0, 1, -4.37113883e-08],
 		},
 		Named = 
 		{
-			string Name = "Chest",
+			string Name = "GearSpike",
 		},
 	},
 	ArchetypeInstance = 
 	{
-		string Name = "5ab57c97f2406d40:Chest",
+		string Name = "5ab50f42fd8f5bb4:GearSpike",
 		LinkId = 
 		{
 			uint Id = 41,
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-42.495575, -34.3646088, 0],
-			Vec3 Scale = [1.27878726, 1.27878726, 1.27878726],
-			Quat Rotation = [0, 0, 0, 1],
+			Vec3 Translation = [-43.3833923, -4.44397163, 0],
+			Vec3 Scale = [0.466570437, 0.466570437, 0.466570437],
+			Quat Rotation = [-0, 0, 1, -4.37113883e-08],
 		},
 		Named = 
 		{
-			string Name = "Chest",
+			string Name = "GearSpike",
 		},
 	},
 	ArchetypeInstance = 
 	{
-		string Name = "5ab57c97f2406d40:Chest",
+		string Name = "5ab50f42fd8f5bb4:GearSpike",
 		LinkId = 
 		{
 			uint Id = 42,
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-42.495575, -34.3646088, 0],
-			Vec3 Scale = [1.27878726, 1.27878726, 1.27878726],
-			Quat Rotation = [0, 0, 0, 1],
+			Vec3 Translation = [-21.3072586, -30.4576588, 0],
+			Vec3 Scale = [0.466570437, 0.466570437, 0.466570437],
+			Quat Rotation = [-0, 0, 1, -4.37113883e-08],
 		},
 		Named = 
 		{
-			string Name = "Chest",
+			string Name = "GearSpike",
 		},
 	},
 	ArchetypeInstance = 
 	{
-		string Name = "5ab57c97f2406d40:Chest",
+		string Name = "5ab50f42fd8f5bb4:GearSpike",
 		LinkId = 
 		{
 			uint Id = 43,
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-42.3764114, -32.9942055, 0],
-			Vec3 Scale = [1.27878726, 1.27878726, 1.27878726],
-			Quat Rotation = [0, 0, 0, 1],
+			Vec3 Translation = [-13.0448456, -22.5825481, 0],
+			Vec3 Scale = [0.466570437, 0.466570437, 0.466570437],
+			Quat Rotation = [-0, 0, 1, -4.37113883e-08],
 		},
 		Named = 
 		{
-			string Name = "Chest",
+			string Name = "GearSpike",
 		},
 	},
 	ArchetypeInstance = 
 	{
-		string Name = "5ab57c97f2406d40:Chest",
+		string Name = "5ab50f42fd8f5bb4:GearSpike",
 		LinkId = 
 		{
 			uint Id = 44,
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-41.2443352, -29.7171459, 0],
-			Vec3 Scale = [1.27878726, 1.27878726, 1.27878726],
-			Quat Rotation = [0, 0, 0, 1],
+			Vec3 Translation = [11.4841919, -29.3603058, 0],
+			Vec3 Scale = [0.466570437, 0.466570437, 0.466570437],
+			Quat Rotation = [-0, 0, 1, -4.37113883e-08],
 		},
 		Named = 
 		{
-			string Name = "Chest",
+			string Name = "GearSpike",
 		},
 	},
 	ArchetypeInstance = 
 	{
-		string Name = "5ab57c97f2406d40:Chest",
+		string Name = "5ab50f42fd8f5bb4:GearSpike",
 		LinkId = 
 		{
 			uint Id = 45,
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-38.5752525, -33.9280777, 0],
-			Vec3 Scale = [1.27878726, 1.27878726, 1.27878726],
-			Quat Rotation = [0, 0, 0, 1],
+			Vec3 Translation = [18.0683022, -29.4894047, 0],
+			Vec3 Scale = [0.466570437, 0.466570437, 0.466570437],
+			Quat Rotation = [-0, 0, 1, -4.37113883e-08],
 		},
 		Named = 
 		{
-			string Name = "Chest",
+			string Name = "GearSpike",
 		},
 	},
 	ArchetypeInstance = 
 	{
-		string Name = "5ab57c97f2406d40:Chest",
+		string Name = "5ab50f42fd8f5bb4:GearSpike",
 		LinkId = 
 		{
 			uint Id = 46,
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-38.5545769, -35.390892, 0],
-			Vec3 Scale = [1.27878726, 1.27878726, 1.27878726],
-			Quat Rotation = [0, 0, 0, 1],
+			Vec3 Translation = [24.6524086, -29.4248562, 0],
+			Vec3 Scale = [0.466570437, 0.466570437, 0.466570437],
+			Quat Rotation = [-0, 0, 1, -4.37113883e-08],
 		},
 		Named = 
 		{
-			string Name = "Chest",
+			string Name = "GearSpike",
 		},
 	},
 	ArchetypeInstance = 
@@ -1003,9 +1043,9 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [4.52169609, -26.5852547, 0],
+			Vec3 Translation = [34.076725, -29.4248562, 0],
 			Vec3 Scale = [0.466570437, 0.466570437, 0.466570437],
-			Quat Rotation = [0, 0, 0, 1],
+			Quat Rotation = [-0, 0, 1, -4.37113883e-08],
 		},
 		Named = 
 		{
@@ -1021,9 +1061,9 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [39.5128708, -26.1396828, 0],
+			Vec3 Translation = [-42.3440285, -4.39447784, 0],
 			Vec3 Scale = [0.466570437, 0.466570437, 0.466570437],
-			Quat Rotation = [0, 0, 0, 1],
+			Quat Rotation = [-0, 0, 1, -4.37113883e-08],
 		},
 		Named = 
 		{
@@ -1032,20 +1072,20 @@ Level =
 	},
 	ArchetypeInstance = 
 	{
-		string Name = "5addae58d1201ae5:EnemyCrab",
+		string Name = "5ab50f42fd8f5bb4:GearSpike",
 		LinkId = 
 		{
 			uint Id = 49,
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-4.49355984, -28.0000191, 0],
-			Vec3 Scale = [12.0367413, 12.0367413, 12.0367413],
-			Quat Rotation = [0, 0, 0, 1],
+			Vec3 Translation = [-40.4403915, 21.5687523, 0],
+			Vec3 Scale = [0.466570437, 0.466570437, 0.466570437],
+			Quat Rotation = [-0, 0, 1, -4.37113883e-08],
 		},
 		Named = 
 		{
-			string Name = "EnemyCrab",
+			string Name = "GearSpike",
 		},
 	},
 	ArchetypeInstance = 
@@ -1057,9 +1097,9 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-3.50530314, -33.381855, -8],
+			Vec3 Translation = [-36.6313248, 16.5035038, 0],
 			Vec3 Scale = [0.466570437, 0.466570437, 0.466570437],
-			Quat Rotation = [0, 0, 0, 1],
+			Quat Rotation = [-0, 0, 1, -4.37113883e-08],
 		},
 		Named = 
 		{
@@ -1075,9 +1115,9 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [41.5010109, -36.3454437, 0],
+			Vec3 Translation = [-28.7295418, 21.4066639, 0],
 			Vec3 Scale = [0.466570437, 0.466570437, 0.466570437],
-			Quat Rotation = [0, 0, 0, 1],
+			Quat Rotation = [-0, 0, 1, -4.37113883e-08],
 		},
 		Named = 
 		{
@@ -1093,7 +1133,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [40.3081245, -36.3454437, 0],
+			Vec3 Translation = [-36.5430107, 8.46197701, 0],
 			Vec3 Scale = [0.466570437, 0.466570437, 0.466570437],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -1111,7 +1151,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [13.4020309, -36.4779892, 0],
+			Vec3 Translation = [-20.8040295, 13.4113417, 0],
 			Vec3 Scale = [0.466570437, 0.466570437, 0.466570437],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -1129,6 +1169,1449 @@ Level =
 		},
 		Transform = 
 		{
+			Vec3 Translation = [1.220644, 26.4281693, 0],
+			Vec3 Scale = [0.466570437, 0.466570437, 0.466570437],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "GearSpike",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5ab50f42fd8f5bb4:GearSpike",
+		LinkId = 
+		{
+			uint Id = 55,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-11.7961855, 21.4293137, 0],
+			Vec3 Scale = [0.466570437, 0.466570437, 0.466570437],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "GearSpike",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5ab50f42fd8f5bb4:GearSpike",
+		LinkId = 
+		{
+			uint Id = 56,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [1.05124474, 15.3009405, 0],
+			Vec3 Scale = [0.466570437, 0.466570437, 0.466570437],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "GearSpike",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5ab50f42fd8f5bb4:GearSpike",
+		LinkId = 
+		{
+			uint Id = 57,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [28.105484, 21.5825005, 0],
+			Vec3 Scale = [0.466570437, 0.466570437, 0.466570437],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "GearSpike",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5ab50f42fd8f5bb4:GearSpike",
+		LinkId = 
+		{
+			uint Id = 58,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [33.3297501, 24.2568283, 0],
+			Vec3 Scale = [0.466570437, 0.466570437, 0.466570437],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "GearSpike",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5ab50f42fd8f5bb4:GearSpike",
+		LinkId = 
+		{
+			uint Id = 59,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [34.387043, 31.4712944, 0],
+			Vec3 Scale = [0.466570437, 0.466570437, 0.466570437],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "GearSpike",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5ab50f42fd8f5bb4:GearSpike",
+		LinkId = 
+		{
+			uint Id = 60,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [15.2935867, 24.5056038, 0],
+			Vec3 Scale = [0.466570437, 0.466570437, 0.466570437],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "GearSpike",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5ab50f42fd8f5bb4:GearSpike",
+		LinkId = 
+		{
+			uint Id = 61,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [29.224968, 11.1961575, 0],
+			Vec3 Scale = [0.466570437, 0.466570437, 0.466570437],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "GearSpike",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5ab50f42fd8f5bb4:GearSpike",
+		LinkId = 
+		{
+			uint Id = 62,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [33.2053604, 3.35975552, 0],
+			Vec3 Scale = [0.466570437, 0.466570437, 0.466570437],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "GearSpike",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5ab50f42fd8f5bb4:GearSpike",
+		LinkId = 
+		{
+			uint Id = 63,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [13.3033867, -5.6583271, 0],
+			Vec3 Scale = [0.466570437, 0.466570437, 0.466570437],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "GearSpike",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5ab50f42fd8f5bb4:GearSpike",
+		LinkId = 
+		{
+			uint Id = 64,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [19.3983688, -0.807220459, 0],
+			Vec3 Scale = [0.466570437, 0.466570437, 0.466570437],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "GearSpike",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5ab50f42fd8f5bb4:GearSpike",
+		LinkId = 
+		{
+			uint Id = 65,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-4.85561943, 11.3876419, 0],
+			Vec3 Scale = [0.466570437, 0.466570437, 0.466570437],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "GearSpike",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5ab50f42fd8f5bb4:GearSpike",
+		LinkId = 
+		{
+			uint Id = 66,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-10.4671421, 5.48077631, 0],
+			Vec3 Scale = [0.466570437, 0.466570437, 0.466570437],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "GearSpike",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5ab50f42fd8f5bb4:GearSpike",
+		LinkId = 
+		{
+			uint Id = 67,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-12.6375771, 31.57551, 0],
+			Vec3 Scale = [0.466570437, 0.466570437, 0.466570437],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "GearSpike",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5ab50f42fd8f5bb4:GearSpike",
+		LinkId = 
+		{
+			uint Id = 68,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-2.59036636, 2.47324562, 0],
+			Vec3 Scale = [0.466570437, 0.466570437, 0.466570437],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "GearSpike",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5ab50f42fd8f5bb4:GearSpike",
+		LinkId = 
+		{
+			uint Id = 69,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-42.581234, -2.47611904, 0],
+			Vec3 Scale = [0.466570437, 0.466570437, 0.466570437],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "GearSpike",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5ab50f42fd8f5bb4:GearSpike",
+		LinkId = 
+		{
+			uint Id = 70,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-19.53685, -28.4898071, 0],
+			Vec3 Scale = [0.466570437, 0.466570437, 0.466570437],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "GearSpike",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5ab50f42fd8f5bb4:GearSpike",
+		LinkId = 
+		{
+			uint Id = 71,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-43.0265274, 14.5807962, 0],
+			Vec3 Scale = [0.466570437, 0.466570437, 0.466570437],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "GearSpike",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5ab50f42fd8f5bb4:GearSpike",
+		LinkId = 
+		{
+			uint Id = 72,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-44.8082962, 33.3388901, 0],
+			Vec3 Scale = [0.466570437, 0.466570437, 0.466570437],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "GearSpike",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5ab50f42fd8f5bb4:GearSpike",
+		LinkId = 
+		{
+			uint Id = 73,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-44.8082962, 33.3388901, 0],
+			Vec3 Scale = [0.466570437, 0.466570437, 0.466570437],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "GearSpike",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5ab50f42fd8f5bb4:GearSpike",
+		LinkId = 
+		{
+			uint Id = 74,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-27.4360294, 33.4873695, 0],
+			Vec3 Scale = [0.466570437, 0.466570437, 0.466570437],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "GearSpike",
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 75,
+		},
+		Named = 
+		{
+			string Name = "GearSpike",
+		},
+		Archetyped = 
+		{
+			string Name = "5ab50f42fd8f5bb4:GearSpike",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-26.5144939, 15.2325668, 0],
+			Vec3 Scale = [0.466570437, 0.466570437, 0.466570437],
+			Quat Rotation = [0, 0, -0.707106829, 0.707106829],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5ab51afc470c2f12:GearSpike()",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		JaggedRock = 
+		{
+		},
+		BoxCollider = 
+		{
+			bool Ghost = false,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [1, 1, 0.5],
+		},
+		Bounce = 
+		{
+			Vec3 BounceLevel = [0, 10, -10],
+		},
+		Hierarchy = 
+		{
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 76,
+				},
+				Named = 
+				{
+					string Name = "DamageGear()",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-0.0172672272, 0.0343782902, 0],
+					Vec3 Scale = [2.3913455, 2.3913455, 2.3913455],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5ab51bf26b8888b8:DamageGear()",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 77,
+				},
+				Named = 
+				{
+					string Name = "DamageGear()",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-31.4168568, -0.708181262, 0],
+					Vec3 Scale = [2.3913455, 2.3913455, 2.3913455],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5ab51bf26b8888b8:DamageGear()",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+			},
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5ab50f42fd8f5bb4:GearSpike",
+		LinkId = 
+		{
+			uint Id = 78,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-34.2355042, -1.49628544, 0],
+			Vec3 Scale = [0.466570437, 0.466570437, 0.466570437],
+			Quat Rotation = [0, 0, -0.707106829, 0.707106829],
+		},
+		Named = 
+		{
+			string Name = "GearSpike",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5ab50f42fd8f5bb4:GearSpike",
+		LinkId = 
+		{
+			uint Id = 79,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-26.7619648, 29.9321842, 0],
+			Vec3 Scale = [0.466570437, 0.466570437, 0.466570437],
+			Quat Rotation = [0, 0, -0.707106829, 0.707106829],
+		},
+		Named = 
+		{
+			string Name = "GearSpike",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5ab50f42fd8f5bb4:GearSpike",
+		LinkId = 
+		{
+			uint Id = 80,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-11.7158966, 30.5261078, 0],
+			Vec3 Scale = [0.466570437, 0.466570437, 0.466570437],
+			Quat Rotation = [0, 0, -0.707106829, 0.707106829],
+		},
+		Named = 
+		{
+			string Name = "GearSpike",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5ab50f42fd8f5bb4:GearSpike",
+		LinkId = 
+		{
+			uint Id = 81,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-41.6100578, -3.42653847, 0],
+			Vec3 Scale = [0.466570437, 0.466570437, 0.466570437],
+			Quat Rotation = [0, 0, -0.707106829, 0.707106829],
+		},
+		Named = 
+		{
+			string Name = "GearSpike",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5ab50f42fd8f5bb4:GearSpike",
+		LinkId = 
+		{
+			uint Id = 82,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-48.5763931, 16.3049793, 0],
+			Vec3 Scale = [0.466570437, 0.466570437, 0.466570437],
+			Quat Rotation = [0, 0, -0.707106829, 0.707106829],
+		},
+		Named = 
+		{
+			string Name = "GearSpike",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5ab50f42fd8f5bb4:GearSpike",
+		LinkId = 
+		{
+			uint Id = 83,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [32.5637245, -6.41616726, -8],
+			Vec3 Scale = [0.466570437, 0.466570437, 0.466570437],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "GearSpike",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5ab50f42fd8f5bb4:GearSpike",
+		LinkId = 
+		{
+			uint Id = 84,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [24.6523323, 40.577507, -8],
+			Vec3 Scale = [0.466570437, 0.466570437, 0.466570437],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "GearSpike",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5ab50f42fd8f5bb4:GearSpike",
+		LinkId = 
+		{
+			uint Id = 85,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [27.5335827, 45.6085892, 0],
+			Vec3 Scale = [0.466570437, 0.466570437, 0.466570437],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "GearSpike",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5add57b20981d06d:GearShark",
+		LinkId = 
+		{
+			uint Id = 86,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-28.8286743, 9.72307491, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "GearShark",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5ab57c97f2406d40:Chest",
+		LinkId = 
+		{
+			uint Id = 87,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-38.623909, -32.4907875, 0],
+			Vec3 Scale = [1.27878726, 1.27878726, 1.27878726],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Chest",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5ab57c97f2406d40:Chest",
+		LinkId = 
+		{
+			uint Id = 88,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-38.6822662, -30.9683819, 0],
+			Vec3 Scale = [1.27878726, 1.27878726, 1.27878726],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Chest",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5ab57c97f2406d40:Chest",
+		LinkId = 
+		{
+			uint Id = 89,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-39.9335098, -35.0796013, 0],
+			Vec3 Scale = [1.27878726, 1.27878726, 1.27878726],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Chest",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5ab57c97f2406d40:Chest",
+		LinkId = 
+		{
+			uint Id = 90,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-39.9930878, -33.5304489, 0],
+			Vec3 Scale = [1.27878726, 1.27878726, 1.27878726],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Chest",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5ab57c97f2406d40:Chest",
+		LinkId = 
+		{
+			uint Id = 91,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-39.9930878, -32.1600418, 0],
+			Vec3 Scale = [1.27878726, 1.27878726, 1.27878726],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Chest",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5ab57c97f2406d40:Chest",
+		LinkId = 
+		{
+			uint Id = 92,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-39.9930878, -30.8492165, 0],
+			Vec3 Scale = [1.27878726, 1.27878726, 1.27878726],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Chest",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5ab57c97f2406d40:Chest",
+		LinkId = 
+		{
+			uint Id = 93,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-39.9930878, -29.5979786, 0],
+			Vec3 Scale = [1.27878726, 1.27878726, 1.27878726],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Chest",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5ab57c97f2406d40:Chest",
+		LinkId = 
+		{
+			uint Id = 94,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-41.1847458, -31.2662983, 0],
+			Vec3 Scale = [1.27878726, 1.27878726, 1.27878726],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Chest",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5ab57c97f2406d40:Chest",
+		LinkId = 
+		{
+			uint Id = 95,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-41.2443314, -32.51754, 0],
+			Vec3 Scale = [1.27878726, 1.27878726, 1.27878726],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Chest",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5ab57c97f2406d40:Chest",
+		LinkId = 
+		{
+			uint Id = 96,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-40.4051781, -22.3831749, 0],
+			Vec3 Scale = [1.27878726, 1.27878726, 1.27878726],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Chest",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5ab57c97f2406d40:Chest",
+		LinkId = 
+		{
+			uint Id = 97,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-26.7205582, -31.2910881, 0],
+			Vec3 Scale = [1.27878726, 1.27878726, 1.27878726],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Chest",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5ab57c97f2406d40:Chest",
+		LinkId = 
+		{
+			uint Id = 98,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-26.7205582, -31.2910881, 0],
+			Vec3 Scale = [1.27878726, 1.27878726, 1.27878726],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Chest",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5ab57c97f2406d40:Chest",
+		LinkId = 
+		{
+			uint Id = 99,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-10.7121315, -20.382122, 0],
+			Vec3 Scale = [1.27878726, 1.27878726, 1.27878726],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Chest",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5ab57c97f2406d40:Chest",
+		LinkId = 
+		{
+			uint Id = 100,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-41.1847458, -33.8879471, 0],
+			Vec3 Scale = [1.27878726, 1.27878726, 1.27878726],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Chest",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5ab57c97f2406d40:Chest",
+		LinkId = 
+		{
+			uint Id = 101,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-44.131176, -35.2478333, 0],
+			Vec3 Scale = [1.27878726, 1.27878726, 1.27878726],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Chest",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5ab57c97f2406d40:Chest",
+		LinkId = 
+		{
+			uint Id = 102,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-44.0178528, -33.6612968, 0],
+			Vec3 Scale = [1.27878726, 1.27878726, 1.27878726],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Chest",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5ab57c97f2406d40:Chest",
+		LinkId = 
+		{
+			uint Id = 103,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-45.491066, -35.0211868, 0],
+			Vec3 Scale = [1.27878726, 1.27878726, 1.27878726],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Chest",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5ab57c97f2406d40:Chest",
+		LinkId = 
+		{
+			uint Id = 104,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-46.9642792, -35.1345139, 0],
+			Vec3 Scale = [1.27878726, 1.27878726, 1.27878726],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Chest",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5ab57c97f2406d40:Chest",
+		LinkId = 
+		{
+			uint Id = 105,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-45.604393, -34.2279205, 0],
+			Vec3 Scale = [1.27878726, 1.27878726, 1.27878726],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Chest",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5ab57c97f2406d40:Chest",
+		LinkId = 
+		{
+			uint Id = 106,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-47.3042526, -33.6613007, 0],
+			Vec3 Scale = [1.27878726, 1.27878726, 1.27878726],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Chest",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5ab57c97f2406d40:Chest",
+		LinkId = 
+		{
+			uint Id = 107,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-46.0576897, -32.9813538, 0],
+			Vec3 Scale = [1.27878726, 1.27878726, 1.27878726],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Chest",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5ab57c97f2406d40:Chest",
+		LinkId = 
+		{
+			uint Id = 108,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-48.4374924, -32.7547035, 0],
+			Vec3 Scale = [1.27878726, 1.27878726, 1.27878726],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Chest",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5ab57c97f2406d40:Chest",
+		LinkId = 
+		{
+			uint Id = 109,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-48.324173, -34.567894, 0],
+			Vec3 Scale = [1.27878726, 1.27878726, 1.27878726],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Chest",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5ab57c97f2406d40:Chest",
+		LinkId = 
+		{
+			uint Id = 110,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-44.1311722, -32.6413841, 0],
+			Vec3 Scale = [1.27878726, 1.27878726, 1.27878726],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Chest",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5ab57c97f2406d40:Chest",
+		LinkId = 
+		{
+			uint Id = 111,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-42.884613, -35.5878067, 0],
+			Vec3 Scale = [1.27878726, 1.27878726, 1.27878726],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Chest",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5ab57c97f2406d40:Chest",
+		LinkId = 
+		{
+			uint Id = 112,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-41.2443314, -35.1987686, 0],
+			Vec3 Scale = [1.27878726, 1.27878726, 1.27878726],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Chest",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5ab57c97f2406d40:Chest",
+		LinkId = 
+		{
+			uint Id = 113,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-42.495575, -34.3646088, 0],
+			Vec3 Scale = [1.27878726, 1.27878726, 1.27878726],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Chest",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5ab57c97f2406d40:Chest",
+		LinkId = 
+		{
+			uint Id = 114,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-42.495575, -34.3646088, 0],
+			Vec3 Scale = [1.27878726, 1.27878726, 1.27878726],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Chest",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5ab57c97f2406d40:Chest",
+		LinkId = 
+		{
+			uint Id = 115,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-42.3764114, -32.9942055, 0],
+			Vec3 Scale = [1.27878726, 1.27878726, 1.27878726],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Chest",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5ab57c97f2406d40:Chest",
+		LinkId = 
+		{
+			uint Id = 116,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-41.2443352, -29.7171459, 0],
+			Vec3 Scale = [1.27878726, 1.27878726, 1.27878726],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Chest",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5ab57c97f2406d40:Chest",
+		LinkId = 
+		{
+			uint Id = 117,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-38.5752525, -33.9280777, 0],
+			Vec3 Scale = [1.27878726, 1.27878726, 1.27878726],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Chest",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5ab57c97f2406d40:Chest",
+		LinkId = 
+		{
+			uint Id = 118,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-38.5545769, -35.390892, 0],
+			Vec3 Scale = [1.27878726, 1.27878726, 1.27878726],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Chest",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5ab50f42fd8f5bb4:GearSpike",
+		LinkId = 
+		{
+			uint Id = 119,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [4.52169609, -26.5852547, 0],
+			Vec3 Scale = [0.466570437, 0.466570437, 0.466570437],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "GearSpike",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5ab50f42fd8f5bb4:GearSpike",
+		LinkId = 
+		{
+			uint Id = 120,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [39.5128708, -26.1396828, 0],
+			Vec3 Scale = [0.466570437, 0.466570437, 0.466570437],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "GearSpike",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5addae58d1201ae5:EnemyCrab",
+		LinkId = 
+		{
+			uint Id = 121,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-4.49355984, -29.2198868, 0],
+			Vec3 Scale = [12.0367413, 12.0367413, 12.0367413],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "EnemyCrab",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5ab50f42fd8f5bb4:GearSpike",
+		LinkId = 
+		{
+			uint Id = 122,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-3.50530314, -34.6017227, -8],
+			Vec3 Scale = [0.466570437, 0.466570437, 0.466570437],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "GearSpike",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5ab50f42fd8f5bb4:GearSpike",
+		LinkId = 
+		{
+			uint Id = 123,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [41.5010109, -36.3454437, 0],
+			Vec3 Scale = [0.466570437, 0.466570437, 0.466570437],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "GearSpike",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5ab50f42fd8f5bb4:GearSpike",
+		LinkId = 
+		{
+			uint Id = 124,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [40.3081245, -36.3454437, 0],
+			Vec3 Scale = [0.466570437, 0.466570437, 0.466570437],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "GearSpike",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5ab50f42fd8f5bb4:GearSpike",
+		LinkId = 
+		{
+			uint Id = 125,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [13.5956821, -36.3488884, 0],
+			Vec3 Scale = [0.466570437, 0.466570437, 0.466570437],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "GearSpike",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5ab50f42fd8f5bb4:GearSpike",
+		LinkId = 
+		{
+			uint Id = 126,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [18.1141891, -36.4779892, 0],
+			Vec3 Scale = [0.466570437, 0.466570437, 0.466570437],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "GearSpike",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5ab50f42fd8f5bb4:GearSpike",
+		LinkId = 
+		{
+			uint Id = 127,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [22.8908958, -36.5425377, 0],
+			Vec3 Scale = [0.466570437, 0.466570437, 0.466570437],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "GearSpike",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5ab50f42fd8f5bb4:GearSpike",
+		LinkId = 
+		{
+			uint Id = 128,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [27.5385017, -36.5425377, 0],
+			Vec3 Scale = [0.466570437, 0.466570437, 0.466570437],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "GearSpike",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5ab50f42fd8f5bb4:GearSpike",
+		LinkId = 
+		{
+			uint Id = 129,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [34.251709, -36.3488846, 0],
+			Vec3 Scale = [0.466570437, 0.466570437, 0.466570437],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "GearSpike",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5ab50f42fd8f5bb4:GearSpike",
+		LinkId = 
+		{
+			uint Id = 130,
+		},
+		Transform = 
+		{
 			Vec3 Translation = [2.75838757, -27.4460659, 0],
 			Vec3 Scale = [0.466570437, 0.466570437, 0.466570437],
 			Quat Rotation = [0, 0, 0, 1],
@@ -1143,11 +2626,11 @@ Level =
 		string Name = "5ab57c97f2406d40:Chest",
 		LinkId = 
 		{
-			uint Id = 55,
+			uint Id = 131,
 		},
 		Transform = 
 		{
-			Vec3 Translation = [30.5865402, -26.2488079, 0],
+			Vec3 Translation = [30.7801895, -27.2816105, 0],
 			Vec3 Scale = [1.27878726, 1.27878726, 1.27878726],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -1161,7 +2644,7 @@ Level =
 		string Name = "5ab57c97f2406d40:Chest",
 		LinkId = 
 		{
-			uint Id = 56,
+			uint Id = 132,
 		},
 		Transform = 
 		{
@@ -1179,7 +2662,7 @@ Level =
 		string Name = "5ab57c97f2406d40:Chest",
 		LinkId = 
 		{
-			uint Id = 57,
+			uint Id = 133,
 		},
 		Transform = 
 		{
@@ -1197,11 +2680,11 @@ Level =
 		string Name = "5ab57c97f2406d40:Chest",
 		LinkId = 
 		{
-			uint Id = 58,
+			uint Id = 134,
 		},
 		Transform = 
 		{
-			Vec3 Translation = [38.2404442, -26.1700363, 0],
+			Vec3 Translation = [38.3049927, -27.4610367, 0],
 			Vec3 Scale = [1.27878726, 1.27878726, 1.27878726],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -1215,7 +2698,43 @@ Level =
 		string Name = "5ab57c97f2406d40:Chest",
 		LinkId = 
 		{
-			uint Id = 59,
+			uint Id = 135,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [21.0055676, -36.4980469, 0],
+			Vec3 Scale = [1.27878726, 1.27878726, 1.27878726],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Chest",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5ab57c97f2406d40:Chest",
+		LinkId = 
+		{
+			uint Id = 136,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [21.0055676, -36.4980469, 0],
+			Vec3 Scale = [1.27878726, 1.27878726, 1.27878726],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Chest",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5ab57c97f2406d40:Chest",
+		LinkId = 
+		{
+			uint Id = 137,
 		},
 		Transform = 
 		{
@@ -1233,7 +2752,7 @@ Level =
 		string Name = "5ab57c97f2406d40:Chest",
 		LinkId = 
 		{
-			uint Id = 60,
+			uint Id = 138,
 		},
 		Transform = 
 		{
@@ -1251,7 +2770,7 @@ Level =
 		string Name = "5ab57c97f2406d40:Chest",
 		LinkId = 
 		{
-			uint Id = 61,
+			uint Id = 139,
 		},
 		Transform = 
 		{
@@ -1269,7 +2788,7 @@ Level =
 		string Name = "5ab57c97f2406d40:Chest",
 		LinkId = 
 		{
-			uint Id = 62,
+			uint Id = 140,
 		},
 		Transform = 
 		{
@@ -1287,7 +2806,7 @@ Level =
 		string Name = "5ab57c97f2406d40:Chest",
 		LinkId = 
 		{
-			uint Id = 63,
+			uint Id = 141,
 		},
 		Transform = 
 		{
@@ -1304,7 +2823,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 64,
+			uint Id = 142,
 		},
 		Named = 
 		{
@@ -1312,7 +2831,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-44.5372696, -33.7963371, 0],
+			Vec3 Translation = [-48.7302628, -34.0229836, 0],
 			Vec3 Scale = [1, 4, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -1352,7 +2871,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 65,
+			uint Id = 143,
 		},
 		Named = 
 		{
@@ -1400,7 +2919,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 66,
+			uint Id = 144,
 		},
 		Named = 
 		{
@@ -1448,103 +2967,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 67,
-		},
-		Named = 
-		{
-			string Name = "Sprite",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [3.49036002, -0.221549988, -8],
-			Vec3 Scale = [1, 4, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [0.0325500369, 0.553070962, 0.930000007, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5275aa4d802dd6dc:Square",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
-		BoxCollider = 
-		{
-			bool Ghost = false,
-			bool SendsMessages = true,
-			bool Seamless = true,
-			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
-			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
-			Vec3 Offset = [0, 0, 0],
-			Vec3 Size = [0.5, 0.5, 0.5],
-		},
-		Door = 
-		{
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 68,
-		},
-		Named = 
-		{
-			string Name = "Sprite",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [3.49036002, -0.418769836, 0],
-			Vec3 Scale = [1, 4, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [0.0325500369, 0.553070962, 0.930000007, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5275aa4d802dd6dc:Square",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
-		BoxCollider = 
-		{
-			bool Ghost = false,
-			bool SendsMessages = true,
-			bool Seamless = true,
-			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
-			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
-			Vec3 Offset = [0, 0, 0],
-			Vec3 Size = [0.5, 0.5, 0.5],
-		},
-		Door = 
-		{
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 69,
+			uint Id = 145,
 		},
 		Named = 
 		{
@@ -1552,7 +2975,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [49.4424706, 13.7152843, -8],
+			Vec3 Translation = [3.49036002, -0.221549988, 0],
 			Vec3 Scale = [1, 4, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -1588,11 +3011,29 @@ Level =
 		{
 		},
 	},
+	ArchetypeInstance = 
+	{
+		string Name = "5af8a804be686e11:Door",
+		LinkId = 
+		{
+			uint Id = 146,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [49.512516, 13.7152843, 0],
+			Vec3 Scale = [1, 4, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Door",
+		},
+	},
 	Cog = 
 	{
 		LinkId = 
 		{
-			uint Id = 70,
+			uint Id = 147,
 		},
 		Named = 
 		{
@@ -1627,7 +3068,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 71,
+			uint Id = 148,
 		},
 		Named = 
 		{
@@ -1662,7 +3103,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 72,
+			uint Id = 149,
 		},
 		Named = 
 		{
@@ -1697,7 +3138,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 73,
+			uint Id = 150,
 		},
 		Named = 
 		{
@@ -1732,7 +3173,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 74,
+			uint Id = 151,
 		},
 		Named = 
 		{
@@ -1767,7 +3208,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 75,
+			uint Id = 152,
 		},
 		Named = 
 		{
@@ -1802,7 +3243,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 76,
+			uint Id = 153,
 		},
 		Named = 
 		{
@@ -1810,7 +3251,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [50.2589455, 13.2396545, 0],
+			Vec3 Translation = [50.7122459, 13.6929483, 0],
 			Vec3 Scale = [1, 4, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -1850,7 +3291,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 77,
+			uint Id = 154,
 		},
 		Named = 
 		{
@@ -1858,7 +3299,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-7.05043888, -36.0315781, 0],
+			Vec3 Translation = [-43.7336464, -15.9037399, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -1882,7 +3323,7 @@ Level =
 		},
 		EnemySpawner = 
 		{
-			float Waittime = 10,
+			float Waittime = 7,
 			string WhatToSpawn = "5addae58d1201ae5:EnemyCrab",
 		},
 		Bounce = 
@@ -1905,7 +3346,7 @@ Level =
 		string Name = "5add57b20981d06d:GearShark",
 		LinkId = 
 		{
-			uint Id = 78,
+			uint Id = 155,
 		},
 		Transform = 
 		{
@@ -1922,7 +3363,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 79,
+			uint Id = 156,
 		},
 		Named = 
 		{
@@ -1968,8 +3409,915 @@ Level =
 		},
 		EnemySpawner = 
 		{
-			float Waittime = 15,
+			float Waittime = 7,
 			string WhatToSpawn = "5addae58d1201ae5:EnemyCrab",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5ab57c97f2406d40:Chest",
+		LinkId = 
+		{
+			uint Id = 157,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-48.3692245, 8.48976326, 0],
+			Vec3 Scale = [1.27878726, 1.27878726, 1.27878726],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Chest",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5ab57c97f2406d40:Chest",
+		LinkId = 
+		{
+			uint Id = 158,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-47.1159096, 8.48976326, 0],
+			Vec3 Scale = [1.27878726, 1.27878726, 1.27878726],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Chest",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5ab57c97f2406d40:Chest",
+		LinkId = 
+		{
+			uint Id = 159,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-45.8625984, 8.48976326, 0],
+			Vec3 Scale = [1.27878726, 1.27878726, 1.27878726],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Chest",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5ab57c97f2406d40:Chest",
+		LinkId = 
+		{
+			uint Id = 160,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-44.6770325, 8.55750942, 0],
+			Vec3 Scale = [1.27878726, 1.27878726, 1.27878726],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Chest",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5ab57c97f2406d40:Chest",
+		LinkId = 
+		{
+			uint Id = 161,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-25.0775452, -1.29172611, 0],
+			Vec3 Scale = [1.27878726, 1.27878726, 1.27878726],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Chest",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5ab57c97f2406d40:Chest",
+		LinkId = 
+		{
+			uint Id = 162,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-22.6523571, 13.754344, 0],
+			Vec3 Scale = [1.27878726, 1.27878726, 1.27878726],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Chest",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5ab57c97f2406d40:Chest",
+		LinkId = 
+		{
+			uint Id = 163,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-19.0393219, 31.5720577, 0],
+			Vec3 Scale = [1.27878726, 1.27878726, 1.27878726],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Chest",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5ab57c97f2406d40:Chest",
+		LinkId = 
+		{
+			uint Id = 164,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-5.05353069, 30.5626965, 0],
+			Vec3 Scale = [1.27878726, 1.27878726, 1.27878726],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Chest",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5ab57c97f2406d40:Chest",
+		LinkId = 
+		{
+			uint Id = 165,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-5.1316061, 18.5552292, 0],
+			Vec3 Scale = [1.27878726, 1.27878726, 1.27878726],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Chest",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5ab57c97f2406d40:Chest",
+		LinkId = 
+		{
+			uint Id = 166,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [20.7109375, 16.7093315, 0],
+			Vec3 Scale = [1.27878726, 1.27878726, 1.27878726],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Chest",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5ab57c97f2406d40:Chest",
+		LinkId = 
+		{
+			uint Id = 167,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [43.1491318, 14.4428473, 0],
+			Vec3 Scale = [1.27878726, 1.27878726, 1.27878726],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Chest",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5ab57c97f2406d40:Chest",
+		LinkId = 
+		{
+			uint Id = 168,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [42.8091507, 2.88378048, 0],
+			Vec3 Scale = [1.27878726, 1.27878726, 1.27878726],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Chest",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5ab57c97f2406d40:Chest",
+		LinkId = 
+		{
+			uint Id = 169,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [18.7173691, 23.7975731, 0],
+			Vec3 Scale = [1.27878726, 1.27878726, 1.27878726],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Chest",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5ab57c97f2406d40:Chest",
+		LinkId = 
+		{
+			uint Id = 170,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [32.2293243, 31.771843, 0],
+			Vec3 Scale = [1.27878726, 1.27878726, 1.27878726],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Chest",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5ab57c97f2406d40:Chest",
+		LinkId = 
+		{
+			uint Id = 171,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [26.4497948, 27.2388763, 0],
+			Vec3 Scale = [1.27878726, 1.27878726, 1.27878726],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Chest",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5ab57c97f2406d40:Chest",
+		LinkId = 
+		{
+			uint Id = 172,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [13.3041868, 30.1853027, 0],
+			Vec3 Scale = [1.27878726, 1.27878726, 1.27878726],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Chest",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5ab57c97f2406d40:Chest",
+		LinkId = 
+		{
+			uint Id = 173,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [20.1036377, 36.5314598, 0],
+			Vec3 Scale = [1.27878726, 1.27878726, 1.27878726],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Chest",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5ab57c97f2406d40:Chest",
+		LinkId = 
+		{
+			uint Id = 174,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-15.4757757, 0.292070627, 0],
+			Vec3 Scale = [1.27878726, 1.27878726, 1.27878726],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Chest",
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 175,
+		},
+		Named = 
+		{
+			string Name = "BK_DistanceDune",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-18.3912868, -3.16476583, -8],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		MultiSprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+		},
+		TileMap = 
+		{
+			string SourceName = "5a9f54e9c00d4d2c:ElenaDunesLevel_TileMap04",
+			string PaletteName = "5adec5206634cee9:Backgrounds",
+			float UnitsPerTile = 1,
+			float MeshThickness = 1.20000005,
+		},
+		ParallaxBK = 
+		{
+			float RealitiveSpeed = -0.300000012,
+			CogPath PlayerObject = 
+			{
+				string Path = ":/Camera",
+				bool ErrorOnResolveToNull = false,
+				bool ErrorOnPathCantCompute = false,
+				bool ErrorOnDirectLinkFail = false,
+				bool UpdateCogOnPathChange = true,
+				bool UpdatePathOnCogChange = true,
+				bool UpdateCogOnInitialize = true,
+				bool ResolvedNullErrorOccurred = false,
+				uint ResolvedCog = 2,
+				CogPathPreference PathPreference0 = CogRelative,
+				CogPathPreference PathPreference1 = SpaceRelative,
+				CogPathPreference PathPreference2 = Absolute,
+			},
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 176,
+		},
+		Named = 
+		{
+			string Name = "BK_DistanceDune",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [1.63857079, -3.64625454, -8],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		MultiSprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+		},
+		TileMap = 
+		{
+			string SourceName = "5a9f54e9c00d4d2c:ElenaDunesLevel_TileMap04",
+			string PaletteName = "5adec5206634cee9:Backgrounds",
+			float UnitsPerTile = 1,
+			float MeshThickness = 1.20000005,
+		},
+		ParallaxBK = 
+		{
+			float RealitiveSpeed = -0.300000012,
+			CogPath PlayerObject = 
+			{
+				string Path = ":/Camera",
+				bool ErrorOnResolveToNull = false,
+				bool ErrorOnPathCantCompute = false,
+				bool ErrorOnDirectLinkFail = false,
+				bool UpdateCogOnPathChange = true,
+				bool UpdatePathOnCogChange = true,
+				bool UpdateCogOnInitialize = true,
+				bool ResolvedNullErrorOccurred = false,
+				uint ResolvedCog = 2,
+				CogPathPreference PathPreference0 = CogRelative,
+				CogPathPreference PathPreference1 = SpaceRelative,
+				CogPathPreference PathPreference2 = Absolute,
+			},
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 177,
+		},
+		Named = 
+		{
+			string Name = "BK_DistanceDune",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-12.9986343, -29.9354477, -8],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		MultiSprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+		},
+		TileMap = 
+		{
+			string SourceName = "5a9f54e9c00d4d2c:ElenaDunesLevel_TileMap04",
+			string PaletteName = "5adec5206634cee9:Backgrounds",
+			float UnitsPerTile = 1,
+			float MeshThickness = 1.20000005,
+		},
+		ParallaxBK = 
+		{
+			float RealitiveSpeed = -0.300000012,
+			CogPath PlayerObject = 
+			{
+				string Path = ":/Camera",
+				bool ErrorOnResolveToNull = false,
+				bool ErrorOnPathCantCompute = false,
+				bool ErrorOnDirectLinkFail = false,
+				bool UpdateCogOnPathChange = true,
+				bool UpdatePathOnCogChange = true,
+				bool UpdateCogOnInitialize = true,
+				bool ResolvedNullErrorOccurred = false,
+				uint ResolvedCog = 2,
+				CogPathPreference PathPreference0 = CogRelative,
+				CogPathPreference PathPreference1 = SpaceRelative,
+				CogPathPreference PathPreference2 = Absolute,
+			},
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 178,
+		},
+		Named = 
+		{
+			string Name = "BK_DistanceDune",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [27.4462738, -30.3206348, -8],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		MultiSprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+		},
+		TileMap = 
+		{
+			string SourceName = "5a9f54e9c00d4d2c:ElenaDunesLevel_TileMap04",
+			string PaletteName = "5adec5206634cee9:Backgrounds",
+			float UnitsPerTile = 1,
+			float MeshThickness = 1.20000005,
+		},
+		ParallaxBK = 
+		{
+			float RealitiveSpeed = -0.300000012,
+			CogPath PlayerObject = 
+			{
+				string Path = ":/Camera",
+				bool ErrorOnResolveToNull = false,
+				bool ErrorOnPathCantCompute = false,
+				bool ErrorOnDirectLinkFail = false,
+				bool UpdateCogOnPathChange = true,
+				bool UpdatePathOnCogChange = true,
+				bool UpdateCogOnInitialize = true,
+				bool ResolvedNullErrorOccurred = false,
+				uint ResolvedCog = 2,
+				CogPathPreference PathPreference0 = CogRelative,
+				CogPathPreference PathPreference1 = SpaceRelative,
+				CogPathPreference PathPreference2 = Absolute,
+			},
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 179,
+		},
+		Named = 
+		{
+			string Name = "BK_DistanceDune",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [21.7647285, -30.3206348, -8],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		MultiSprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+		},
+		TileMap = 
+		{
+			string SourceName = "5a9f54e9c00d4d2c:ElenaDunesLevel_TileMap04",
+			string PaletteName = "5adec5206634cee9:Backgrounds",
+			float UnitsPerTile = 1,
+			float MeshThickness = 1.20000005,
+		},
+		ParallaxBK = 
+		{
+			float RealitiveSpeed = -0.300000012,
+			CogPath PlayerObject = 
+			{
+				string Path = ":/Camera",
+				bool ErrorOnResolveToNull = false,
+				bool ErrorOnPathCantCompute = false,
+				bool ErrorOnDirectLinkFail = false,
+				bool UpdateCogOnPathChange = true,
+				bool UpdatePathOnCogChange = true,
+				bool UpdateCogOnInitialize = true,
+				bool ResolvedNullErrorOccurred = false,
+				uint ResolvedCog = 2,
+				CogPathPreference PathPreference0 = CogRelative,
+				CogPathPreference PathPreference1 = SpaceRelative,
+				CogPathPreference PathPreference2 = Absolute,
+			},
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 180,
+		},
+		Named = 
+		{
+			string Name = "BK_Dunes",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-18.3912868, -3.16476583, -7],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		MultiSprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+		},
+		TileMap = 
+		{
+			string SourceName = "5af8a43e202f8e96:ElenaDunesLevel_TileMap05",
+			string PaletteName = "5adec5206634cee9:Backgrounds",
+			float UnitsPerTile = 1,
+			float MeshThickness = 1.20000005,
+		},
+		ParallaxBK = 
+		{
+			float RealitiveSpeed = -0.100000001,
+			CogPath PlayerObject = 
+			{
+				string Path = ":/Camera",
+				bool ErrorOnResolveToNull = false,
+				bool ErrorOnPathCantCompute = false,
+				bool ErrorOnDirectLinkFail = false,
+				bool UpdateCogOnPathChange = true,
+				bool UpdatePathOnCogChange = true,
+				bool UpdateCogOnInitialize = true,
+				bool ResolvedNullErrorOccurred = false,
+				uint ResolvedCog = 2,
+				CogPathPreference PathPreference0 = CogRelative,
+				CogPathPreference PathPreference1 = SpaceRelative,
+				CogPathPreference PathPreference2 = Absolute,
+			},
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 181,
+		},
+		Named = 
+		{
+			string Name = "BK_Dunes",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-7.70227623, -30.1280384, -7],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		MultiSprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+		},
+		TileMap = 
+		{
+			string SourceName = "5af8a43e202f8e96:ElenaDunesLevel_TileMap05",
+			string PaletteName = "5adec5206634cee9:Backgrounds",
+			float UnitsPerTile = 1,
+			float MeshThickness = 1.20000005,
+		},
+		ParallaxBK = 
+		{
+			float RealitiveSpeed = -0.100000001,
+			CogPath PlayerObject = 
+			{
+				string Path = ":/Camera",
+				bool ErrorOnResolveToNull = false,
+				bool ErrorOnPathCantCompute = false,
+				bool ErrorOnDirectLinkFail = false,
+				bool UpdateCogOnPathChange = true,
+				bool UpdatePathOnCogChange = true,
+				bool UpdateCogOnInitialize = true,
+				bool ResolvedNullErrorOccurred = false,
+				uint ResolvedCog = 2,
+				CogPathPreference PathPreference0 = CogRelative,
+				CogPathPreference PathPreference1 = SpaceRelative,
+				CogPathPreference PathPreference2 = Absolute,
+			},
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 182,
+		},
+		Named = 
+		{
+			string Name = "BK_Dunes",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [7.70530701, -30.2243385, -7],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		MultiSprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+		},
+		TileMap = 
+		{
+			string SourceName = "5af8a7d7d1cc0e31:ElenaDunesLevel_TileMap06",
+			string PaletteName = "5adec5206634cee9:Backgrounds",
+			float UnitsPerTile = 1,
+			float MeshThickness = 1.20000005,
+		},
+		ParallaxBK = 
+		{
+			float RealitiveSpeed = -0.100000001,
+			CogPath PlayerObject = 
+			{
+				string Path = ":/Camera",
+				bool ErrorOnResolveToNull = false,
+				bool ErrorOnPathCantCompute = false,
+				bool ErrorOnDirectLinkFail = false,
+				bool UpdateCogOnPathChange = true,
+				bool UpdatePathOnCogChange = true,
+				bool UpdateCogOnInitialize = true,
+				bool ResolvedNullErrorOccurred = false,
+				uint ResolvedCog = 2,
+				CogPathPreference PathPreference0 = CogRelative,
+				CogPathPreference PathPreference1 = SpaceRelative,
+				CogPathPreference PathPreference2 = Absolute,
+			},
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 183,
+		},
+		Named = 
+		{
+			string Name = "BK_DistanceDune",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-18.3912868, -3.16476583, -8],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		MultiSprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+		},
+		TileMap = 
+		{
+			string SourceName = "5a9f54e9c00d4d2c:ElenaDunesLevel_TileMap04",
+			string PaletteName = "5adec5206634cee9:Backgrounds",
+			float UnitsPerTile = 1,
+			float MeshThickness = 1.20000005,
+		},
+		ParallaxBK = 
+		{
+			float RealitiveSpeed = -0.300000012,
+			CogPath PlayerObject = 
+			{
+				string Path = ":/Camera",
+				bool ErrorOnResolveToNull = false,
+				bool ErrorOnPathCantCompute = false,
+				bool ErrorOnDirectLinkFail = false,
+				bool UpdateCogOnPathChange = true,
+				bool UpdatePathOnCogChange = true,
+				bool UpdateCogOnInitialize = true,
+				bool ResolvedNullErrorOccurred = false,
+				uint ResolvedCog = 2,
+				CogPathPreference PathPreference0 = CogRelative,
+				CogPathPreference PathPreference1 = SpaceRelative,
+				CogPathPreference PathPreference2 = Absolute,
+			},
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 184,
+		},
+		Named = 
+		{
+			string Name = "TileMap",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0, 0, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		MultiSprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+		},
+		TileMap = 
+		{
+			string SourceName = "5af8b559bab45176:ElenaDunesLevel_TileMap03",
+			string PaletteName = "5adef23c7b8ac912:GroundTiles",
+			float UnitsPerTile = 1,
+			float MeshThickness = 1.20000005,
+		},
+		Ground = 
+		{
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 185,
+		},
+		Named = 
+		{
+			string Name = "BK_Dunes",
+		},
+		EditorFlags = 
+		{
+			bool Locked = false,
+			bool Hidden = true,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-18.3912868, -3.16476583, -7],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		MultiSprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+		},
+		TileMap = 
+		{
+			string SourceName = "5af8a43e202f8e96:ElenaDunesLevel_TileMap05",
+			string PaletteName = "5adec5206634cee9:Backgrounds",
+			float UnitsPerTile = 1,
+			float MeshThickness = 1.20000005,
+		},
+		ParallaxBK = 
+		{
+			float RealitiveSpeed = -0.100000001,
+			CogPath PlayerObject = 
+			{
+				string Path = ":/Camera",
+				bool ErrorOnResolveToNull = false,
+				bool ErrorOnPathCantCompute = false,
+				bool ErrorOnDirectLinkFail = false,
+				bool UpdateCogOnPathChange = true,
+				bool UpdatePathOnCogChange = true,
+				bool UpdateCogOnInitialize = true,
+				bool ResolvedNullErrorOccurred = false,
+				uint ResolvedCog = 2,
+				CogPathPreference PathPreference0 = CogRelative,
+				CogPathPreference PathPreference1 = SpaceRelative,
+				CogPathPreference PathPreference2 = Absolute,
+			},
 		},
 	},
 },
