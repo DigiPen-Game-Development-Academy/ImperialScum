@@ -53,7 +53,7 @@ class PlayerController : ZilchComponent
 
     function OnLeftMouseDown(event : ViewportMouseEvent)
     {
-        
+        if(InventoryExists.Exists == false)
         this.Owner.Sprite.SpriteSource = this.ThrowAnimation;
         
     }

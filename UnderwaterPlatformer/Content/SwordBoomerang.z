@@ -18,8 +18,9 @@ class SwordBoomerang : ZilchComponent
     function OnLeftMouseDown(event : ViewportMouseEvent)
     {
         
-        if(SwordBoomerang.MarkerPlaced == false)
+        if(SwordBoomerang.MarkerPlaced == false && InventoryExists.Exists == false)
         {
+            
         var position = this.LevelSettings.CameraViewport.ScreenToWorldZPlane(event.Position, 0);
         this.Space.CreateAtPosition(Archetype.SwordTarget, position);
         this.Space.CreateAtPosition(Archetype.SwordBoomerang, this.Owner.Transform.Translation);

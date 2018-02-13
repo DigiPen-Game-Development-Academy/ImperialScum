@@ -39,6 +39,9 @@ Cog =
 	InventoryDestroy = 
 	{
 	},
+	InventoryExists = 
+	{
+	},
 	Hierarchy = 
 	{
 		Cog = 

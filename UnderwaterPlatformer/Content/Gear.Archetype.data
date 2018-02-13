@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-11.4925156, 12.6107988, 0],
+		Vec3 Translation = [0, 0, 0],
 		Vec3 Scale = [1, 1, 5],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -76,7 +76,7 @@ Cog =
 			Transform = 
 			{
 				Vec3 Translation = [0.00284266472, -0.00138103962, 0.181477219],
-				Vec3 Scale = [0.181477219, 0.181477219, 1.99624944],
+				Vec3 Scale = [0.5, 0.5, 9.99999975e-05],
 				Quat Rotation = [0, 0, -0.702683747, 0.711502373],
 			},
 			SpriteParticleSystem = 
@@ -97,7 +97,7 @@ Cog =
 				string Texture = "5add733cf6bb7f8c:Particle_Sparkle()",
 				float VelocityScale = 1,
 				float LengthScale = 1,
-				float MaxParticleSize = 100,
+				float MaxParticleSize = 20,
 				Vec3 SystemSize = [1, 1, 1],
 			},
 			SphericalParticleEmitter = 
@@ -118,7 +118,7 @@ Cog =
 				Vec3 StartVelocity = [0, 0, 0],
 				Vec3 RandomVelocity = [0, 0, 0],
 				Vec3 TangentVelocity = [0, 0, 0],
-				Vec3 EmitterSize = [0.300000012, 0.300000012, 0.300000012],
+				Vec3 EmitterSize = [0.600000024, 0.600000024, 0.600000024],
 				bool FastMovingEmitter = false,
 			},
 			LinearParticleAnimator = 
