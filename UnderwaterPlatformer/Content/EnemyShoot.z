@@ -4,7 +4,11 @@
 class EnemyShoot : ZilchComponent
 {
     [Property] var Bullet : Archetype = null;
+    
+    [Property]
     var TimeBetweenShots : Real;
+    
+    
     var TimeTillNextShot:Real = 0;
         
     function Initialize(init : CogInitializer)
@@ -14,12 +18,6 @@ class EnemyShoot : ZilchComponent
     
     function OnLogicUpdate(event : UpdateEvent)
     {   
-        var rand = new Random();
-            
-        var randomPowerUp = rand.DieRoll(4);
-        
-        this.TimeBetweenShots = randomPowerUp;
-        
         this.TimeTillNextShot -= event.Dt;
         if (this.TimeTillNextShot <= 0)
         {
@@ -27,15 +25,25 @@ class EnemyShoot : ZilchComponent
             this.Shoot();
             
         }
+        
+        if(this.TimeTillNextShot < 0.3)
+        {
+        this.Owner.Sprite.AnimationSpeed = 1;
+        }
+        else
+        {
+            this.Owner.Sprite.AnimationSpeed = 0;
+            this.Owner.Sprite.CurrentFrame = 6;
+        }
     }
     
     function Shoot()
     {
+        
         if (this.Bullet == null) return;
         
         var player = this.Space.FindObjectByName("Player");
         if (player == null) return;
-        
         var bullet = this.Space.CreateAtPosition(this.Bullet, this.Owner.Transform.WorldTranslation);
         if(bullet.BulletLogic == null) return;
         bullet.BulletLogic.Target = player;
@@ -52,20 +60,28 @@ class BulletLogic : ZilchComponent
     
     function Initialize(init : CogInitializer)
     {
+        
+        
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
         var player = this.Space.FindObjectByName("Player");
+
+        if(player == null)
+        return;
+        
+        
+        this.Owner.Orientation.LookAtPointWithUp(player.Transform.WorldTranslation, Real3(0,0,1));
+        
         
         var velocity = this.Owner.RigidBody.Velocity;
             velocity.Y = 5;
             this.Owner.RigidBody.Velocity= velocity;
-        
         if(this.Owner.Transform.Translation.X <= player.Transform.Translation.X)
         {
-            this.Owner.Sprite.FlipX = false;
+            this.Owner.Transform.Rotation.Y == 180;
         }
         else if(this.Owner.Transform.Translation.X >= player.Transform.Translation.X)
         {
-            this.Owner.Sprite.FlipX = true;
+           this.Owner.Transform.Rotation.Y == -180;
         }
     }
 

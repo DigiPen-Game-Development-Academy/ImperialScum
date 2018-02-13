@@ -18,12 +18,6 @@ class BallistaSnail : ZilchComponent
     function OnCollisionStarted(event : CollisionEvent)
     {
         
-        if(event.OtherObject.Name == ("DefaultTile"))
-        {
-            this.Direction = !this.Direction;
-        }
-        return;
-        
     }
 
     function OnLogicUpdate(event : UpdateEvent)

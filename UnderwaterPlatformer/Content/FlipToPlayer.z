@@ -1,0 +1,28 @@
+class FlipToPlayer : ZilchComponent
+{
+    
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        var player = this.Space.FindObjectByName("Player");
+        
+        if(player == null)
+        return;
+        
+        this.Owner.Orientation.LookAtPointWithUp(player.Transform.WorldTranslation, Real3(0,0,1));
+        
+        if(this.Owner.Transform.WorldTranslation.X <= player.Transform.WorldTranslation.X)
+        {
+            this.Owner.Sprite.FlipY = false;
+        }
+        else if(this.Owner.Transform.WorldTranslation.X >= player.Transform.WorldTranslation.X)
+        {
+           this.Owner.Sprite.FlipY = true;
+        }
+    }
+}
