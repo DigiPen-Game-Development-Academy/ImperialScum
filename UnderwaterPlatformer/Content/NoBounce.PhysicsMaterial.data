@@ -4,5 +4,5 @@ PhysicsMaterial =
 	float StaticFriction = 0.5,
 	float DynamicFriction = 0.5,
 	float Density = 1,
-	bool HighPriority = false,
+	bool HighPriority = true,
 },
