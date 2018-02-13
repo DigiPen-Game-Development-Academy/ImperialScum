@@ -1,15 +1,14 @@
-//Jacob Burke
+//Jacob Burke, 
+//Edited by Jessica (Added god mode and bullet damage... bullet damage is currently a WIP).
 
 class EnemyShoot : ZilchComponent
 {
     [Property] var Bullet : Archetype = null;
     var TimeBetweenShots : Real;
     var TimeTillNextShot:Real = 0;
-    
+        
     function Initialize(init : CogInitializer)
     { 
-        
-        
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
     }
     
@@ -40,7 +39,6 @@ class EnemyShoot : ZilchComponent
         var bullet = this.Space.CreateAtPosition(this.Bullet, this.Owner.Transform.WorldTranslation);
         if(bullet.BulletLogic == null) return;
         bullet.BulletLogic.Target = player;
-        
     }
     
 }
