@@ -1,8 +1,5 @@
-class SnailTurn : ZilchComponent
+class EnemyJump : ZilchComponent
 {
-    [Property]
-    var Direction:Boolean;
-    
     function Initialize(init : CogInitializer)
     {
         //Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
@@ -11,10 +8,11 @@ class SnailTurn : ZilchComponent
 
     function OnCollisionPersisted(event : CollisionEvent)
     {
-        if(event.OtherObject.Name == ("DefaultTile") || event.OtherObject.EnemyController != null)
+        Console.WriteLine("k");
+        if(event.OtherObject.Name == ("DefaultTile"))
         {
-            this.Owner.Parent.BallistaSnail.Direction = this.Direction;
-        
+        this.Owner.Parent.EnemyController.Jump = true;
+        Console.WriteLine("HIT");
         }
     }
 
