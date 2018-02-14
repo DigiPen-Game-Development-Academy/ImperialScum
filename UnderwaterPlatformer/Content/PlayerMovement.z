@@ -35,9 +35,10 @@ class PlayerMovement : ZilchComponent
         Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
         Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
 
-        var startPosition = this.Space.LevelSettings.LevelVars.PlayerPosition;
+        //Elena, something went wrong with this code so I commented it out
+        //var startPosition = this.Space.LevelSettings.LevelVars.PlayerPosition;
 
-        this.Owner.Transform.Translation = startPosition;
+        //this.Owner.Transform.Translation = startPosition;
     }
 
     function OnCollisionStarted(event : CollisionEvent)
