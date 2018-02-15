@@ -32,10 +32,10 @@ class Resources : ZilchComponent
             this.Owner.Destroy();
             
             if(this.Owner.Name == "Gear")
-            Scrap.Scrap += 1;
+            AdvInventory.PlayerInventory["Gears"] += 1;
             
             if(this.Owner.Name == "Food")
-            AdvInventory.PlayerInventory["Meat"] += 1;
+            AdvInventory.PlayerInventory["Food"] += 1;
         }
         
         

@@ -10,9 +10,9 @@ class Food : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-        if(AdvInventory.Get("Meat") > 0)
+        if(AdvInventory.Get("Food") > 0)
         {
-            this.Owner.SpriteText.Text = "`AdvInventory.Get("Meat")`";
+            this.Owner.SpriteText.Text = "`AdvInventory.Get("Food")`";
         }
     }
 }
@@ -32,12 +32,12 @@ class Eat : ZilchComponent
     function OnLeftMouseDown(event : ViewportMouseEvent)
     {
        if(event.HitObject == this.Owner && Hunger.Hunger <= (120 - this.FullAmount)
-        && AdvInventory.PlayerInventory["Meat"] >= 1)
+        && AdvInventory.PlayerInventory["Food"] >= 1)
        {
            
            Hunger.Hunger += this.FullAmount;
-           AdvInventory.PlayerInventory["Meat"] -= 1;
-           Console.WriteLine("`AdvInventory.Get("Meat")`");
+           AdvInventory.PlayerInventory["Food"] -= 1;
+           Console.WriteLine("`AdvInventory.Get("Food")`");
        }
         
     }

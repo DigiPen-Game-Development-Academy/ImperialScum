@@ -10,7 +10,8 @@ class BossKeyDropping : ZilchComponent
     function OnLogicUpdate(event : UpdateEvent)
     {
         var spawnPosition : Real3 = this.Owner.Transform.Translation;
-        spawnPosition -= Real3(-11, 48.53, 0);
+        spawnPosition -= Real3(0, 7, 0);
+        //Console.WriteLine(spawnPosition);
         
         if(this.Owner.EnemyHealth.Health <= 0)
         {
