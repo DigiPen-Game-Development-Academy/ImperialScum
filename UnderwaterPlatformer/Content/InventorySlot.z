@@ -16,6 +16,7 @@ class InventorySlot : ZilchComponent
          if (item.Value <= 0) continue;
          if(index == this.ItemIndex)
          {
+             this.Owner.Sprite.Visible = true;
             var source = SpriteSource.Find("Inv_`item.Key`");
             
             if (this.Owner.Sprite.SpriteSource != source)
@@ -23,9 +24,13 @@ class InventorySlot : ZilchComponent
             
             
             this.Owner.FindChildByName("ItemCount").SpriteText.Text = "`item.Value`";
+            
+            return;
          }
          ++index;
         }
+        this.Owner.Sprite.Visible = false;
+        this.Owner.FindChildByName("ItemCount").SpriteText.Text = (" ");
         
     }
 }
