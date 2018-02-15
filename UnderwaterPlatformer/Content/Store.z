@@ -1,0 +1,22 @@
+//Jacob Burke
+
+//This is the script that makes the store pop up
+class Store : ZilchComponent
+{
+    [Property]
+    var StoreArch:Archetype;
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        if(Zero.Keyboard.KeyIsPressed(Keys.E) && InventoryExists.Exists == false)
+        {
+            var position = Real3(0,0,0);
+            this.Space.CreateAtPosition(this.StoreArch, position);
+        }
+    }
+}
