@@ -14,9 +14,9 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-44.4683228, 8.74862099, 0],
+		Vec3 Translation = [0.284007192, 3.53576207, 7.06034831e-09],
 		Vec3 Scale = [1, 1, 1],
-		Quat Rotation = [0, 0, 0, 1],
+		Quat Rotation = [0, 0.173648179, 0, 0.98480773],
 	},
 	Sprite = 
 	{
@@ -83,6 +83,9 @@ Cog =
 	Follow = 
 	{
 		float Speed = 3,
+	},
+	GearSharkTilt = 
+	{
 	},
 	Hierarchy = 
 	{
