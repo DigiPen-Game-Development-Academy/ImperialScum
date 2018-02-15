@@ -13,6 +13,13 @@ class Health : ZilchComponent
     [Property]
     var Timer:Real = 5;
     
+    [Property]
+    var DamageColor:Real4;
+    [Property]
+    var RegularColor:Real4;
+    
+    var Timer2:Real = 0.2;
+    
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
@@ -28,6 +35,7 @@ class Health : ZilchComponent
         {
             
             Health.CurrentHealth -= 1;
+            this.Owner.Sprite.Color = this.DamageColor;
 
         }
         
@@ -64,6 +72,16 @@ class Health : ZilchComponent
             Health.CurrentHealth -= 1;
             
             this.Timer += 5;
+        }
+        
+        if(this.Owner.Sprite.Color == this.DamageColor)
+        {
+            this.Timer2 -= event.Dt;
+        }
+        if(this.Timer2 <= 0)
+        {
+            this.Timer2 += 0.2;
+            this.Owner.Sprite.Color = this.RegularColor;
         }
         //God Mode By Jessica. Because I am bored of getting killed by gear shark.
         if(Zero.Keyboard.KeyIsPressed(Keys.G))
