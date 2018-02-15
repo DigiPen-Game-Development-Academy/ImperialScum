@@ -2,7 +2,7 @@ TextContent =
 {
 	ZilchScriptBuilder = 
 	{
-		string Name = "Checkpoints",
+		string Name = "Checkpoint",
 		uint64 ResourceId = 5af8a62793240803,
 	},
 },

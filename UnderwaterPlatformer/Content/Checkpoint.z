@@ -1,0 +1,21 @@
+class Checkpoint : ZilchComponent
+{
+    [Static]
+    var RespawnPosition : Real3 = Real3();
+
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+       var player = this.Space.FindObjectByName("Player");
+       if( player == null) return;
+            
+        if(Health.CurrentHealth <= 0)
+        {
+            player.Transform.Translation = Checkpoint.RespawnPosition;
+            Health.CurrentHealth = Health.MaxHealth;
+        }
+    }
+}

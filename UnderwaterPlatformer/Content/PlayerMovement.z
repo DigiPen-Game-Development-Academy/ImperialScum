@@ -35,10 +35,7 @@ class PlayerMovement : ZilchComponent
         Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
         Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
 
-        //Elena, something went wrong with this code so I commented it out
-        //var startPosition = this.Space.LevelSettings.LevelVars.PlayerPosition;
-
-        //this.Owner.Transform.Translation = startPosition;
+        Checkpoint.RespawnPosition = this.Owner.Transform.Translation;
     }
 
     function OnCollisionStarted(event : CollisionEvent)
@@ -49,13 +46,13 @@ class PlayerMovement : ZilchComponent
         this.DoubleJump = true;
         }
         
-         if(event.OtherObject.Checkpoints != null)
+         if(event.OtherObject.Checkpoint != null)
         {
         var checkpointPosition = event.OtherObject.Transform.Translation;
 
         checkpointPosition.Y = this.Owner.Transform.Translation.Y;
 
-        this.Space.LevelSettings.LevelVars.PlayerPosition = checkpointPosition;
+        Checkpoint.RespawnPosition = checkpointPosition;
     }
         }
 

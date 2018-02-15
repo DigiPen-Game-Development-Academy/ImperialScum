@@ -2,7 +2,10 @@ class Health : ZilchComponent
 {
     
     [Static]
-    var CurrentHealth:Integer = 20;
+    var CurrentHealth:Integer;
+    
+    [Static]
+    var MaxHealth:Integer = 20;
     
     [Property]
     var LevelToLoad:Level;
@@ -14,7 +17,10 @@ class Health : ZilchComponent
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
         Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
+        
+        Health.CurrentHealth = Health.MaxHealth;
     }
+    
 
     function OnCollisionStarted(event : CollisionEvent)
     {
@@ -42,18 +48,7 @@ class Health : ZilchComponent
         
         if(Health.CurrentHealth <= 0)
         {
-                if(this.LevelSettings.HUDTag != null)
-                {
-                    
-                    this.LevelSettings.HUDTag.OriginalSpace.LoadLevel(this.LevelToLoad);
-                    
-                }
-                else
-                {
-                
-                this.Space.LoadLevel(this.LevelToLoad);
-                
-                }
+ 
         }
         
     }
