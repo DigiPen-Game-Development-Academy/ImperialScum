@@ -2,7 +2,7 @@ ImageContent =
 {
 	SpriteSourceBuilder = 
 	{
-		string Name = "Pickup_GoldGear()",
+		string Name = "Inv_Gears",
 		uint64 ResourceId = 5ab54c094784f645,
 		uint64 AtlasId = 5274cf95e4a661fd,
 		uint FrameSizeX = 16,
