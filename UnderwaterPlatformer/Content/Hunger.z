@@ -57,5 +57,10 @@ class Hunger : ZilchComponent
         {
             Health.CurrentHealth += 1000;
         }
+        
+        if(Hunger.Hunger <= 500 && this.GodMode == true)
+        {
+            Hunger.Hunger += 1000;
+        }
     }
 }
