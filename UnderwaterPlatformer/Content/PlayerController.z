@@ -22,6 +22,12 @@ class PlayerController : ZilchComponent
     var JumpAnimation:SpriteSource;
     
     [Property]
+    var FallAnimation:SpriteSource;
+    
+    [Property]
+    var MidAnimation:SpriteSource;
+    
+    [Property]
     var ThrowAnimation:SpriteSource;
     var ThrowTime:Real = 0.2;
     
@@ -100,10 +106,16 @@ class PlayerController : ZilchComponent
             this.Owner.Sprite.FlipX = true;
         }
         
-        if(this.Owner.GroundChecker.Grounded == false)
+        if(this.Owner.RigidBody.Velocity.Y >= 0 && Zero.Keyboard.KeyIsPressed(Keys.W))
         {
             this.Owner.Sprite.SpriteSource = this.JumpAnimation;
         }
+        if(this.Owner.RigidBody.Velocity.Y <= -1)
+        this.Owner.Sprite.SpriteSource = this.FallAnimation;
+        
+        if(this.Owner.RigidBody.Velocity.Y < 1 && this.Owner.GroundChecker.Grounded == false
+        && this.Owner.RigidBody.Velocity.Y > -1 )
+        this.Owner.Sprite.SpriteSource = this.MidAnimation;
         
 
     }
