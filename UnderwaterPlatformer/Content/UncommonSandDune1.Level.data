@@ -104,7 +104,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-5.74976873, 0.818137586, 50],
+			Vec3 Translation = [-17.0465298, 1.66398454, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -116,7 +116,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 4.50493956,
+			float Size = 2,
 		},
 		EditorCameraController = 
 		{
@@ -124,7 +124,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-5.74976873, 0.818137586, 0],
+			Vec3 LookTarget = [-17.0465298, 1.66398454, 0],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -2760,7 +2760,7 @@ Level =
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5ab54c094784f645:Pickup_GoldGear()",
+			string SpriteSource = "5ab54c094784f645:Inv_Gears",
 			bool RenderMask = false,
 			bool FlipX = false,
 			bool FlipY = false,
