@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-0.167715415, 6.59879971, 0],
+		Vec3 Translation = [-27.1976967, -1.40986061, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -50,6 +50,9 @@ Cog =
 	},
 	SwordBoomerangMove = 
 	{
+		int Speed = 30,
+		int ReturnSpeed = 30,
+		int StartHangTime = 30,
 	},
 	IgnoreSpaceEffects = 
 	{
@@ -75,7 +78,7 @@ Cog =
 		string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
 		string SerializedGroupName = "4e740859314e5515:DefaultGroup",
 		Vec3 Offset = [0, 0, 0],
-		float Radius = 0.100000001,
+		float Radius = 0.600000024,
 	},
 	Spin = 
 	{
