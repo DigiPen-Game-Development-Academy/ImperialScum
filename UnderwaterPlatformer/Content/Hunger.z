@@ -12,6 +12,8 @@ class Hunger : ZilchComponent
     
     [Property]
     var Timer:Real = 5;
+    
+    var GodMode : Boolean = false;
 
     
     function Initialize(init : CogInitializer)
@@ -47,6 +49,17 @@ class Hunger : ZilchComponent
         if(Zero.Keyboard.KeyIsPressed(Keys.G))
         {
             Hunger.MaxHunger += 1000;
+            Hunger.Hunger += 1000;
+            this.GodMode = true;
+        }
+        
+        if(Health.CurrentHealth <= 500 && this.GodMode == true)
+        {
+            Health.CurrentHealth += 1000;
+        }
+        
+        if(Hunger.Hunger <= 500 && this.GodMode == true)
+        {
             Hunger.Hunger += 1000;
         }
     }
