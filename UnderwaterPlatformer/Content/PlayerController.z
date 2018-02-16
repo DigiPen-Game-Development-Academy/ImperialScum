@@ -35,16 +35,6 @@ class PlayerController : ZilchComponent
     [Property]
     var JumpSound:SoundCue;
     
-    
-    
-    [Property]
-    
-    var SpriteColor:Real4 = Real4(1,1,1,1);
-    
-    [Property]
-    var RegularColor:Real4 = Real4(1,1,1,1);
-    
-    
     [Property]
     var Lose:Integer = 1;
     

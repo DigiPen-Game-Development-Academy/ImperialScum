@@ -104,7 +104,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-26.6519394, -5.18984604, 34],
+			Vec3 Translation = [-25.1707172, -5.18984604, 34],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -116,7 +116,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 12.2457027,
+			float Size = 8.20854759,
 		},
 		EditorCameraController = 
 		{
@@ -124,7 +124,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-26.6519394, -5.18984604, -16],
+			Vec3 LookTarget = [-25.1707172, -5.18984604, -16],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -394,10 +394,10 @@ Level =
 			string IdleAnimation = "5aae8200c73cd894:Player_Stand",
 			string WalkingAnimation = "5aae84db11ec8399:Player_Walk()",
 			string JumpAnimation = "",
+			string FallAnimation = "",
+			string MidAnimation = "",
 			string ThrowAnimation = "5aa3962a86139988:PlayerThrow()",
 			string JumpSound = "",
-			Vec4 SpriteColor = [1, 1, 1, 1],
-			Vec4 RegularColor = [1, 1, 1, 1],
 			int Lose = 1,
 		},
 		Contact = 
@@ -411,6 +411,8 @@ Level =
 		{
 			string LevelToLoad = "5ababbd26a98e51e:LoseLevel",
 			float Timer = 0,
+			Vec4 DamageColor = [0, 0, 0, 0],
+			Vec4 RegularColor = [0, 0, 0, 0],
 		},
 		Hunger = 
 		{
@@ -1192,7 +1194,7 @@ Level =
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a4c2a22c8ba2789:Tree",
+			string SpriteSource = "5a4ff722a7c4c1dc:Tree_1",
 			bool RenderMask = false,
 			bool FlipX = false,
 			bool FlipY = false,
@@ -1227,7 +1229,7 @@ Level =
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a4c2a22c8ba2789:Tree",
+			string SpriteSource = "5a4ff722a7c4c1dc:Tree_1",
 			bool RenderMask = false,
 			bool FlipX = false,
 			bool FlipY = false,
@@ -1262,7 +1264,7 @@ Level =
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a4c2a22c8ba2789:Tree",
+			string SpriteSource = "5a4ff722a7c4c1dc:Tree_1",
 			bool RenderMask = false,
 			bool FlipX = false,
 			bool FlipY = false,
@@ -1297,7 +1299,7 @@ Level =
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a4c2a22c8ba2789:Tree",
+			string SpriteSource = "5a4ff722a7c4c1dc:Tree_1",
 			bool RenderMask = false,
 			bool FlipX = false,
 			bool FlipY = false,
