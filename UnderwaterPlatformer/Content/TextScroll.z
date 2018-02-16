@@ -1,0 +1,16 @@
+class TextScroll : ZilchComponent
+{
+    function Initialize(init : CogInitializer)
+    {
+        //Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        var posistion = this.Owner.Transform.Translation;
+            var seq = Action.Sequence(this.Owner.Actions);
+                
+                Action.Property
+                (seq, @this.Owner.Transform.Translation, posistion + Real3(0,30,0), 40, Ease.QuadInOut);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+    }
+}

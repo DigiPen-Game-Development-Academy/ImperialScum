@@ -104,7 +104,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, 0, 90],
+			Vec3 Translation = [-2.55201125, -1.4073844, 90],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -116,7 +116,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 30.1194572,
+			float Size = 20.1896839,
 		},
 		EditorCameraController = 
 		{
@@ -124,7 +124,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [0, 0, 40],
+			Vec3 LookTarget = [-2.55201125, -1.4073844, 40],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -254,7 +254,7 @@ Level =
 		},
 		GoToLevel = 
 		{
-			string LevelToLoad = "5a562e1b466512cb:LevelHUB",
+			string LevelToLoad = "5a50a41928123ab7:JessicaLevel3",
 		},
 	},
 	Cog = 
