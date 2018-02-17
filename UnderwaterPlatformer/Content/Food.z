@@ -37,13 +37,40 @@ class Eat : ZilchComponent
            
            Hunger.Hunger += this.FullAmount;
            AdvInventory.PlayerInventory["Food"] -= 1;
-           Console.WriteLine("`AdvInventory.Get("Food")`");
        }
         
     }
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-        this.Owner.SpriteText.Text = "`Food.Food`";
+    }
+}
+
+class HealthPotion : ZilchComponent
+{
+    [Property]
+    var FullAmount:Integer = 4;
+    
+    function Initialize(init : CogInitializer)
+    {
+        //Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        Zero.Connect(this.Owner, Events.LeftMouseDown, this.OnLeftMouseDown);
+        
+    }
+
+    function OnLeftMouseDown(event : ViewportMouseEvent)
+    {
+       if(event.HitObject == this.Owner && Health.CurrentHealth <= (Health.MaxHealth - this.FullAmount)
+        && AdvInventory.PlayerInventory["HealthPotion"] >= 1)
+       {
+           
+           Health.CurrentHealth += this.FullAmount;
+           AdvInventory.PlayerInventory["HealthPotion"] -= 1;
+       }
+        
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
     }
 }

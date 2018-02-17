@@ -104,7 +104,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-25.1707172, -5.18984604, 34],
+			Vec3 Translation = [-12.1354456, -6.39110947, 34],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -116,7 +116,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 8.20854759,
+			float Size = 54.8814354,
 		},
 		EditorCameraController = 
 		{
@@ -124,7 +124,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-25.1707172, -5.18984604, -16],
+			Vec3 LookTarget = [-12.1354456, -6.39110947, -16],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -305,19 +305,12 @@ Level =
 			float MeshThickness = 1.20000005,
 		},
 	},
-	Cog = 
+	ArchetypeInstance = 
 	{
+		string Name = "5adef0b2576f5b3a:Player",
 		LinkId = 
 		{
 			uint Id = 7,
-		},
-		Named = 
-		{
-			string Name = "Player",
-		},
-		Archetyped = 
-		{
-			string Name = "5adef0b2576f5b3a:Player",
 		},
 		Transform = 
 		{
@@ -325,101 +318,9 @@ Level =
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
-		Sprite = 
+		Named = 
 		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5aae8200c73cd894:Player_Stand",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
-		RigidBody = 
-		{
-			bool Static = false,
-			bool Asleep = false,
-			bool Kinematic = false,
-			bool RotationLocked = true,
-			bool Mode2D = true,
-			bool AllowSleep = true,
-			bool Inherit2DMode = true,
-			Vec3 Velocity = [0, 0, 0],
-			Vec3 AngularVelocity = [0, 0, 0],
-		},
-		SwordBoomerang = 
-		{
-		},
-		CapsuleCollider = 
-		{
-			bool Ghost = false,
-			bool SendsMessages = true,
-			bool Seamless = true,
-			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
-			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
-			Vec3 Offset = [0, 0, 0],
-			float Radius = 0.300000012,
-			float Height = 1,
-			AxisDirection Direction = Y,
-			CapsuleScalingMode ScalingMode = PreserveScale,
-		},
-		HUDmaker = 
-		{
-			string HUDlevel = "5aa392b7bedc697f:HUD",
-		},
-		KeyPickUp = 
-		{
-		},
-		PlayerMovement = 
-		{
-			int Speed = 40,
-			int JumpSpeed = 15,
-			Enum KeyUp = W,
-			Enum KeyLeft = A,
-			Enum KeyRight = D,
-			Enum KeyDown = S,
-		},
-		PlayerController = 
-		{
-			Enum Left = A,
-			Enum Right = D,
-			string IdleAnimation = "5aae8200c73cd894:Player_Stand",
-			string WalkingAnimation = "5aae84db11ec8399:Player_Walk()",
-			string JumpAnimation = "",
-			string FallAnimation = "",
-			string MidAnimation = "",
-			string ThrowAnimation = "5aa3962a86139988:PlayerThrow()",
-			string JumpSound = "",
-			int Lose = 1,
-		},
-		Contact = 
-		{
-		},
-		GroundChecker = 
-		{
-			float GroundAngle = 61,
-		},
-		Health = 
-		{
-			string LevelToLoad = "5ababbd26a98e51e:LoseLevel",
-			float Timer = 0,
-			Vec4 DamageColor = [0, 0, 0, 0],
-			Vec4 RegularColor = [0, 0, 0, 0],
-		},
-		Hunger = 
-		{
-			float Timer = 5,
-		},
-		Hierarchy = 
-		{
+			string Name = "Player",
 		},
 	},
 	Cog = 

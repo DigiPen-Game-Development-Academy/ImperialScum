@@ -2,7 +2,7 @@ ImageContent =
 {
 	SpriteSourceBuilder = 
 	{
-		string Name = "Inv_HealthPot",
+		string Name = "Inv_HealthPotion",
 		uint64 ResourceId = 5ad2e49d5ddbdf21,
 		uint64 AtlasId = 5274cf95e4a661fd,
 		uint FrameSizeX = 24,

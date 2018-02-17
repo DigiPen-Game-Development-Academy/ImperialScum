@@ -32,7 +32,6 @@ class DisplayHealth : ZilchComponent
         if(Health.CurrentHealth <= 5)
         {
             this.LowHealth = true;
-            Console.WriteLine("LOWHEALTH");
         }
         else
         {
