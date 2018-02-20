@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0.000305652618, -0.0288834572, 0],
+		Vec3 Translation = [-2.48307371, -3.93835402, -16],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -40,6 +40,9 @@ Cog =
 	{
 	},
 	InventoryExists = 
+	{
+	},
+	StoreRemover = 
 	{
 	},
 	Hierarchy = 

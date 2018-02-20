@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-13.7918816, 0.601966202, 0],
+		Vec3 Translation = [2.01977062, -2.03171086, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -189,6 +189,9 @@ Cog =
 				Vec4 Color4 = [1, 1, 1, 0],
 			},
 			FlipSpriteChild = 
+			{
+			},
+			NoParticlesInBaseLevel = 
 			{
 			},
 		},

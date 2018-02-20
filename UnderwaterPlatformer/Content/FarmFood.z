@@ -1,0 +1,23 @@
+class FarmFood : ZilchComponent
+{
+    var Timer:Real = 60;
+    
+    [Static]
+    var SpawnFruit:Boolean = false;
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        this.Timer -= event.Dt;
+        
+        if(this.Timer <= 0)
+        {
+            FarmFood.SpawnFruit = true;
+            this.Timer = 60;
+        }
+    }
+}

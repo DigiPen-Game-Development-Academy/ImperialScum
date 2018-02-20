@@ -1,22 +1,26 @@
-//Jacob Burke
-
-//This is the script that makes the store pop up
 class Store : ZilchComponent
 {
-    [Property]
-    var StoreArch:Archetype;
+    [Static]
+    var InStore:Boolean = false;
     
     function Initialize(init : CogInitializer)
     {
-        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        //Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        Zero.Connect(this.Space, Events.CollisionStarted, this.OnCollisionStarted);
+        Zero.Connect(this.Space, Events.CollisionEnded, this.OnCollisionEnded);
+        
     }
 
-    function OnLogicUpdate(event : UpdateEvent)
+    function OnCollisionEnded(event : CollisionEvent)
     {
-        if(Zero.Keyboard.KeyIsPressed(Keys.E) && InventoryExists.Exists == false)
-        {
-            var position = Real3(0,0,0);
-            this.Space.CreateAtPosition(this.StoreArch, position);
-        }
+        if(event.OtherObject.PlayerController != null)
+        Store.InStore = false;
     }
+
+    function OnCollisionStarted(event : CollisionEvent)
+    {
+        if(event.OtherObject.PlayerController != null)
+        Store.InStore = true;
+    }
+
 }
