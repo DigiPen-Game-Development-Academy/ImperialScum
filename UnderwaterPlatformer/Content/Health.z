@@ -58,7 +58,7 @@ class Health : ZilchComponent
         
         
 
-        
+        //DROP ITEMS ON DEATH - Jessica Alberg
         if(Health.CurrentHealth <= 0 && this.DidOnce == false)
         {
             this.DidOnce = true;
