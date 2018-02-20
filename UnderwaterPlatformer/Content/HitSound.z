@@ -4,6 +4,8 @@ Hit sound effect,
 */
 class HitSound : ZilchComponent
 {
+    var Timer : Real = 0.25;
+    var KeyWasPressed : Boolean;
     [Property]
     var HitSoundThing : SoundCue;
     
@@ -24,10 +26,36 @@ class HitSound : ZilchComponent
     function OnLogicUpdate(event : UpdateEvent)
     {
         
-        /*if(Zero.Keyboard.KeyIsPressed(Keys.S))
+        if(Zero.Keyboard.KeyIsPressed(Keys.S))
         {
             this.Owner.SoundEmitter.PlayCue(this.HitSoundThing);
             Console.WriteLine("Works");
-        }*/
+        }
+        
+        //Mute Music by pressing M
+        if (Zero.Keyboard.KeyIsPressed(Keys.M) && this.KeyWasPressed == false)
+        {
+            Console.WriteLine("Sound Muted 2");
+            this.KeyWasPressed = true;
+            
+           this.Owner.SoundEmitter.Volume = 0;
+        }
+        
+        //Makes it so music doesn't mute and then Unmute again immedietly?
+        if(this.Timer >= 0 && this.KeyWasPressed == true)
+            {
+                this.Timer -= event.Dt;
+            }
+        
+        //Make it so if you press M again it unmutes it.
+        if(Zero.Keyboard.KeyIsPressed(Keys.M) && this.Timer <= 0)
+            {
+                this.KeyWasPressed = false;
+                Console.WriteLine("Sound Unmuted 2");
+                
+                this.Owner.SoundEmitter.Volume = 1;
+                this.Timer += 0.25;
+                
+            }
     }
 }
