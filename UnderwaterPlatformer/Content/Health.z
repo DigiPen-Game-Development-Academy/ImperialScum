@@ -20,6 +20,11 @@ class Health : ZilchComponent
     
     var Timer2:Real = 0.2;
     
+    var Gear : Archetype = Archetype.Gear;
+    var Food : Archetype = Archetype.Food;
+    var HealthPotion : Archetype = Archetype.HealthPotion;
+    var DidOnce : Boolean = false;
+    
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
@@ -52,11 +57,22 @@ class Health : ZilchComponent
         }
         
         
+
         
-        
-        if(Health.CurrentHealth <= 0)
+        if(Health.CurrentHealth <= 0 && this.DidOnce == false)
         {
- 
+            this.DidOnce = true;
+            var position = this.Owner.Transform.Translation;
+            position += Real3(0,2,0);
+            AdvInventory.PlayerInventory["Gears"] -= 3;
+            AdvInventory.PlayerInventory["Food"] -= 1;
+            AdvInventory.PlayerInventory["HealthPotion"] -= 1;
+            
+            this.Space.CreateAtPosition(this.Gear, position);
+            this.Space.CreateAtPosition(this.Gear, position);
+            this.Space.CreateAtPosition(this.Gear, position);
+            this.Space.CreateAtPosition(this.Food, position);
+            this.Space.CreateAtPosition(this.HealthPotion, position);
         }
         
     }
