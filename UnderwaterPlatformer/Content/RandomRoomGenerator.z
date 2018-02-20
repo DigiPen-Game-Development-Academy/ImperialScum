@@ -20,28 +20,32 @@ class RandomRoomGenerator : ZilchComponent
         var rand = new Random();
             
         this.RandomDieRoll = rand.DieRoll(3);
-        
-        
     }
 
     function OnCollisionPersisted(event : CollisionEvent)
     {
-        if(event.OtherObject.PlayerController != null)
-        {
-        if(this.RandomDieRoll == 1)
-        this.LevelToLoad = Level.Level;
+        //Set this level to be finished
+        BeenToLevel.FinishedLevel.Add(this.Space.CurrentLevel);
+        
+        //Send the player to a new level
+            
+            if(event.OtherObject.PlayerController != null)
+            {
+            //Level
+            if(this.RandomDieRoll == 1){
                 
-        if(this.RandomDieRoll == 2)
-        this.LevelToLoad = Level.ThisIsTheCodeLevel;
-        
-        if(this.RandomDieRoll == 3)
-        this.LevelToLoad = Level.UncommonSandDune1;
-        
-        
-        
-        this.Space.LoadLevel(this.LevelToLoad);
+                    this.LevelToLoad = Level.Level;}
+            //SandLevel_Labyrinth
+            if(this.RandomDieRoll == 2){
+                    this.LevelToLoad = Level.SandLevel_Labyrinth;}
+            //UncommonSandDune1
+            if(this.RandomDieRoll == 3){
+                    this.LevelToLoad = Level.UncommonSandDune1;}
+            
+            
+            
+            this.Space.LoadLevel(this.LevelToLoad);
         }
-        
         
     }
 
