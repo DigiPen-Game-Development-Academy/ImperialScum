@@ -3,6 +3,6 @@ TextContent =
 	ZilchScriptBuilder = 
 	{
 		string Name = "Store",
-		uint64 ResourceId = 5a4c35ca10b55967,
+		uint64 ResourceId = 5a45aa5675973e86,
 	},
 },

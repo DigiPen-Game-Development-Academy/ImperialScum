@@ -3,49 +3,43 @@ class Inventory : ZilchComponent
     [Property]
     var InventoryKey:Keys;
     
-    var Timer:Real = 0.5;
-    
-    var Active:Boolean = false;
-    
-    var IsPlaced:Boolean = false;
+    [Property]
+    var StoreKey:Keys = Keys.E;
     
     [Static]
-    var Destroy:Boolean = false;
+    var Exists : Boolean = false;
     
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
     }
-
     function OnLogicUpdate(event : UpdateEvent)
     {
-        if(Zero.Keyboard.KeyIsPressed(this.InventoryKey) && this.IsPlaced == false
-        && this.Timer > 0.4)
+        if (Zero.Keyboard.KeyIsPressed(this.InventoryKey))
         {
-            InventoryExists.Exists = true;
-            Inventory.Destroy = false;
-            var position = Real3(0,0,0);
-            this.Space.CreateAtPosition(Archetype.Inventory, position);
-            this.Active = true;
+            if (Inventory.Exists)
+            {
+                Inventory.Exists = false;
+            }
+            else
+            {
+                Inventory.Exists = true;
+                var position = Real3(0,0,0);
+                this.Space.CreateAtPosition(Archetype.Inventory, position);
+            }
         }
-        if(Zero.Keyboard.KeyIsPressed(this.InventoryKey) && this.IsPlaced == true)
+        if (Zero.Keyboard.KeyIsPressed(this.StoreKey))
         {
-            Inventory.Destroy = true;
-            this.IsPlaced = false;
-            InventoryExists.Exists = false;
+            if (Inventory.Exists)
+            {
+                Inventory.Exists = false;
+            }
+            else
+            {
+                Inventory.Exists = true;
+                var position = Real3(0,0,0);
+                this.Space.CreateAtPosition(Archetype.Shop, position);
+            }
         }
-        if(this.Active == true)
-        {
-            this.Timer -= event.Dt;
-        }
-        
-        if(this.Timer <= 0)
-        {
-            this.IsPlaced = true;
-            this.Timer += 0.5;
-            this.Active = false;
-        }
-        
-        
     }
 }
