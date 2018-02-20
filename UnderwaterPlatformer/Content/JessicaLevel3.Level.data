@@ -134,7 +134,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 32.9744186,
+			float Size = 40.2750397,
 		},
 		EditorCameraController = 
 		{
@@ -222,7 +222,7 @@ Level =
 		},
 		CutscenePlayer = 
 		{
-			float FPS = 1,
+			float FPS = 2,
 			string CutscenePrefix = "sprite_",
 			int FrameCount = 40,
 			int CurrentFrame = 0,

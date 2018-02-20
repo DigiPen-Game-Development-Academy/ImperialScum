@@ -1,11 +1,16 @@
 class BackgroundMusic : ZilchComponent
 {
+    //Author = Jessica.
+    //Purpose = To play background music.
+    
     var Destroy : Real = 2;
     
-      [Property]
-        var BackgroundGameMusic : SoundCue;
-        
-        var BackgroundMenuMusicSpace : Space;
+    var Timer : Real = 0.25;
+    var KeyWasPressed : Boolean;
+    
+    [Property]
+     var BackgroundGameMusic : SoundCue;
+     var BackgroundMenuMusicSpace : Space;
   
     function Initialize(init : CogInitializer)
     {
@@ -15,17 +20,45 @@ class BackgroundMusic : ZilchComponent
 
     function OnLevelStarted(event : GameEvent)
     {
-    
-              this.Owner.SoundEmitter.PlayCue(this.BackgroundGameMusic);
-              Console.WriteLine("Works... Except it doesn't play the music... So it doesn't really work");
-    
+        this.Owner.SoundEmitter.PlayCue(this.BackgroundGameMusic);
     }
 
     function OnLogicUpdate(event : UpdateEvent)
     {
+        //Makes so that you can start the boss music without the background music playing over it.
         if (BossMusic.BossMusicStart == true)
         {
-            this.Owner.Destroy();
+            this.Owner.SoundEmitter.Stop();
         }
+        
+        //Mute Music by pressing M
+        if (Zero.Keyboard.KeyIsPressed(Keys.M) && this.KeyWasPressed == false)
+        {
+            Console.WriteLine("Sound Muted");
+            this.KeyWasPressed = true;
+            
+           this.Owner.SoundEmitter.Volume = 0;
+        }
+        
+        //Makes it so music doesn't mute and then Unmute again immedietly?
+        if(this.Timer >= 0 && this.KeyWasPressed == true)
+            {
+                this.Timer -= event.Dt;
+            }
+        
+        //Make it so if you press M again it unmutes it.
+        if(Zero.Keyboard.KeyIsPressed(Keys.M) && this.Timer <= 0)
+            {
+                this.KeyWasPressed = false;
+                Console.WriteLine("Sound Unmuted");
+                
+                this.Owner.SoundEmitter.Volume = 1;
+                this.Timer += 0.25;
+                
+            }
     }
 }
+
+
+
+

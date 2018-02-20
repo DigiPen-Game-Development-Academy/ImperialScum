@@ -22,7 +22,7 @@ class CutscenePlayer : ZilchComponent
         
         if(this.CurrentFrame >= this.FrameCount)
         {
-            this.Owner.Destroy();
+            //this.Owner.Destroy();
             return;
         }
         
