@@ -15,7 +15,7 @@ Level =
 			bool Active = true,
 			bool WakeUpOnChange = false,
 			bool LocalSpaceDirection = true,
-			float Strength = 10,
+			float Strength = 20,
 			Vec3 Direction = [0, -1, 0],
 		},
 		DragEffect = 
@@ -104,7 +104,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [17.052681, 15.2491083, 40],
+			Vec3 Translation = [10.2173901, 7.87005043, 40],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -116,7 +116,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 43.8966255,
+			float Size = 100,
 		},
 		EditorCameraController = 
 		{
@@ -124,7 +124,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [17.052681, 15.2491083, -10],
+			Vec3 LookTarget = [10.2173901, 7.87005043, -10],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -238,7 +238,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-28.2605381, -6.43486786, 0],
+			Vec3 Translation = [-17.0009251, 26.9370041, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -658,47 +658,11 @@ Level =
 			string Name = "GearSpike",
 		},
 	},
-	ArchetypeInstance = 
-	{
-		string Name = "5a534770b5c2bde9:Gearahna",
-		LinkId = 
-		{
-			uint Id = 20,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-13.1263132, 24.773756, 0],
-			Vec3 Scale = [0.235841542, 0.235841542, 0.235841542],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Named = 
-		{
-			string Name = "Gearahna",
-		},
-	},
-	ArchetypeInstance = 
-	{
-		string Name = "5a534770b5c2bde9:Gearahna",
-		LinkId = 
-		{
-			uint Id = 21,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-14.5723715, 25.9220963, 0],
-			Vec3 Scale = [0.235841542, 0.235841542, 0.235841542],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Named = 
-		{
-			string Name = "Gearahna",
-		},
-	},
 	Cog = 
 	{
 		LinkId = 
 		{
-			uint Id = 22,
+			uint Id = 20,
 		},
 		Named = 
 		{
@@ -752,7 +716,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 23,
+			uint Id = 21,
 		},
 		Named = 
 		{
@@ -806,7 +770,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 24,
+			uint Id = 22,
 		},
 		Named = 
 		{
@@ -860,7 +824,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 25,
+			uint Id = 23,
 		},
 		Named = 
 		{
@@ -912,118 +876,10 @@ Level =
 	},
 	ArchetypeInstance = 
 	{
-		string Name = "5a534770b5c2bde9:Gearahna",
-		LinkId = 
-		{
-			uint Id = 26,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-13.3389692, 27.6233387, 0],
-			Vec3 Scale = [0.235841542, 0.235841542, 0.235841542],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Named = 
-		{
-			string Name = "Gearahna",
-		},
-	},
-	ArchetypeInstance = 
-	{
-		string Name = "5a534770b5c2bde9:Gearahna",
-		LinkId = 
-		{
-			uint Id = 27,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-11.8929129, 26.0071583, 0],
-			Vec3 Scale = [0.235841542, 0.235841542, 0.235841542],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Named = 
-		{
-			string Name = "Gearahna",
-		},
-	},
-	ArchetypeInstance = 
-	{
-		string Name = "5a534770b5c2bde9:Gearahna",
-		LinkId = 
-		{
-			uint Id = 28,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-14.3597155, 27.1129665, 0],
-			Vec3 Scale = [0.235841542, 0.235841542, 0.235841542],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Named = 
-		{
-			string Name = "Gearahna",
-		},
-	},
-	ArchetypeInstance = 
-	{
-		string Name = "5a534770b5c2bde9:Gearahna",
-		LinkId = 
-		{
-			uint Id = 29,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-14.3171854, 25.1990662, 0],
-			Vec3 Scale = [0.235841542, 0.235841542, 0.235841542],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Named = 
-		{
-			string Name = "Gearahna",
-		},
-	},
-	ArchetypeInstance = 
-	{
-		string Name = "5a534770b5c2bde9:Gearahna",
-		LinkId = 
-		{
-			uint Id = 30,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-12.275691, 25.1990662, 0],
-			Vec3 Scale = [0.235841542, 0.235841542, 0.235841542],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Named = 
-		{
-			string Name = "Gearahna",
-		},
-	},
-	ArchetypeInstance = 
-	{
-		string Name = "5a534770b5c2bde9:Gearahna",
-		LinkId = 
-		{
-			uint Id = 31,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-12.5308781, 27.1554966, 0],
-			Vec3 Scale = [0.235841542, 0.235841542, 0.235841542],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Named = 
-		{
-			string Name = "Gearahna",
-		},
-	},
-	ArchetypeInstance = 
-	{
 		string Name = "5ab57c97f2406d40:Chest",
 		LinkId = 
 		{
-			uint Id = 32,
+			uint Id = 24,
 		},
 		Transform = 
 		{
@@ -1041,7 +897,7 @@ Level =
 		string Name = "5ab50f42fd8f5bb4:GearSpike",
 		LinkId = 
 		{
-			uint Id = 33,
+			uint Id = 25,
 		},
 		Transform = 
 		{
@@ -1059,7 +915,7 @@ Level =
 		string Name = "5ab50f42fd8f5bb4:GearSpike",
 		LinkId = 
 		{
-			uint Id = 34,
+			uint Id = 26,
 		},
 		Transform = 
 		{
@@ -1077,7 +933,7 @@ Level =
 		string Name = "5ab50f42fd8f5bb4:GearSpike",
 		LinkId = 
 		{
-			uint Id = 35,
+			uint Id = 27,
 		},
 		Transform = 
 		{
@@ -1095,7 +951,7 @@ Level =
 		string Name = "5ab50f42fd8f5bb4:GearSpike",
 		LinkId = 
 		{
-			uint Id = 36,
+			uint Id = 28,
 		},
 		Transform = 
 		{
@@ -1113,7 +969,7 @@ Level =
 		string Name = "5ab50f42fd8f5bb4:GearSpike",
 		LinkId = 
 		{
-			uint Id = 37,
+			uint Id = 29,
 		},
 		Transform = 
 		{
@@ -1131,7 +987,7 @@ Level =
 		string Name = "5ab50f42fd8f5bb4:GearSpike",
 		LinkId = 
 		{
-			uint Id = 38,
+			uint Id = 30,
 		},
 		Transform = 
 		{
@@ -1149,7 +1005,7 @@ Level =
 		string Name = "5ab50f42fd8f5bb4:GearSpike",
 		LinkId = 
 		{
-			uint Id = 39,
+			uint Id = 31,
 		},
 		Transform = 
 		{
@@ -1167,7 +1023,7 @@ Level =
 		string Name = "5ab50f42fd8f5bb4:GearSpike",
 		LinkId = 
 		{
-			uint Id = 40,
+			uint Id = 32,
 		},
 		Transform = 
 		{
@@ -1185,7 +1041,7 @@ Level =
 		string Name = "5ab50f42fd8f5bb4:GearSpike",
 		LinkId = 
 		{
-			uint Id = 41,
+			uint Id = 33,
 		},
 		Transform = 
 		{
@@ -1203,7 +1059,7 @@ Level =
 		string Name = "5ab50f42fd8f5bb4:GearSpike",
 		LinkId = 
 		{
-			uint Id = 42,
+			uint Id = 34,
 		},
 		Transform = 
 		{
@@ -1221,7 +1077,7 @@ Level =
 		string Name = "5ab50f42fd8f5bb4:GearSpike",
 		LinkId = 
 		{
-			uint Id = 43,
+			uint Id = 35,
 		},
 		Transform = 
 		{
@@ -1239,7 +1095,7 @@ Level =
 		string Name = "5ab50f42fd8f5bb4:GearSpike",
 		LinkId = 
 		{
-			uint Id = 44,
+			uint Id = 36,
 		},
 		Transform = 
 		{
@@ -1257,7 +1113,7 @@ Level =
 		string Name = "5ab50f42fd8f5bb4:GearSpike",
 		LinkId = 
 		{
-			uint Id = 45,
+			uint Id = 37,
 		},
 		Transform = 
 		{
@@ -1275,7 +1131,7 @@ Level =
 		string Name = "5ab50f42fd8f5bb4:GearSpike",
 		LinkId = 
 		{
-			uint Id = 46,
+			uint Id = 38,
 		},
 		Transform = 
 		{
@@ -1293,7 +1149,7 @@ Level =
 		string Name = "5ab50f42fd8f5bb4:GearSpike",
 		LinkId = 
 		{
-			uint Id = 47,
+			uint Id = 39,
 		},
 		Transform = 
 		{
@@ -1311,7 +1167,7 @@ Level =
 		string Name = "5ab50f42fd8f5bb4:GearSpike",
 		LinkId = 
 		{
-			uint Id = 48,
+			uint Id = 40,
 		},
 		Transform = 
 		{
@@ -1329,7 +1185,7 @@ Level =
 		string Name = "5ab50f42fd8f5bb4:GearSpike",
 		LinkId = 
 		{
-			uint Id = 49,
+			uint Id = 41,
 		},
 		Transform = 
 		{
@@ -1347,7 +1203,7 @@ Level =
 		string Name = "5ab50f42fd8f5bb4:GearSpike",
 		LinkId = 
 		{
-			uint Id = 50,
+			uint Id = 42,
 		},
 		Transform = 
 		{
@@ -1365,7 +1221,7 @@ Level =
 		string Name = "5ab50f42fd8f5bb4:GearSpike",
 		LinkId = 
 		{
-			uint Id = 51,
+			uint Id = 43,
 		},
 		Transform = 
 		{
@@ -1383,7 +1239,7 @@ Level =
 		string Name = "5ab50f42fd8f5bb4:GearSpike",
 		LinkId = 
 		{
-			uint Id = 52,
+			uint Id = 44,
 		},
 		Transform = 
 		{
@@ -1401,7 +1257,7 @@ Level =
 		string Name = "5ab50f42fd8f5bb4:GearSpike",
 		LinkId = 
 		{
-			uint Id = 53,
+			uint Id = 45,
 		},
 		Transform = 
 		{
@@ -1419,7 +1275,7 @@ Level =
 		string Name = "5ab50f42fd8f5bb4:GearSpike",
 		LinkId = 
 		{
-			uint Id = 54,
+			uint Id = 46,
 		},
 		Transform = 
 		{
@@ -1437,7 +1293,7 @@ Level =
 		string Name = "5ab50f42fd8f5bb4:GearSpike",
 		LinkId = 
 		{
-			uint Id = 55,
+			uint Id = 47,
 		},
 		Transform = 
 		{
@@ -1455,7 +1311,7 @@ Level =
 		string Name = "5ab50f42fd8f5bb4:GearSpike",
 		LinkId = 
 		{
-			uint Id = 56,
+			uint Id = 48,
 		},
 		Transform = 
 		{
@@ -1473,7 +1329,7 @@ Level =
 		string Name = "5add71002d270676:Key",
 		LinkId = 
 		{
-			uint Id = 57,
+			uint Id = 49,
 		},
 		Transform = 
 		{
@@ -1491,7 +1347,7 @@ Level =
 		string Name = "5add57b20981d06d:GearShark",
 		LinkId = 
 		{
-			uint Id = 58,
+			uint Id = 50,
 		},
 		Transform = 
 		{
@@ -1509,7 +1365,7 @@ Level =
 		string Name = "5ab57c97f2406d40:Chest",
 		LinkId = 
 		{
-			uint Id = 59,
+			uint Id = 51,
 		},
 		Transform = 
 		{
@@ -1527,7 +1383,7 @@ Level =
 		string Name = "5ab57c97f2406d40:Chest",
 		LinkId = 
 		{
-			uint Id = 60,
+			uint Id = 52,
 		},
 		Transform = 
 		{
@@ -1545,7 +1401,7 @@ Level =
 		string Name = "5af8a804be686e11:Door",
 		LinkId = 
 		{
-			uint Id = 61,
+			uint Id = 53,
 		},
 		Transform = 
 		{
@@ -1562,7 +1418,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 62,
+			uint Id = 54,
 		},
 		Named = 
 		{
@@ -1636,7 +1492,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 63,
+					uint Id = 55,
 				},
 				Named = 
 				{
@@ -1684,7 +1540,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 64,
+					uint Id = 56,
 				},
 				Named = 
 				{
@@ -1735,7 +1591,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 65,
+					uint Id = 57,
 				},
 				Named = 
 				{
@@ -1783,7 +1639,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 66,
+					uint Id = 58,
 				},
 				Named = 
 				{
@@ -1865,7 +1721,7 @@ Level =
 		string Name = "5ab57c97f2406d40:Chest",
 		LinkId = 
 		{
-			uint Id = 67,
+			uint Id = 59,
 		},
 		Transform = 
 		{
@@ -1883,7 +1739,7 @@ Level =
 		string Name = "5ab50f42fd8f5bb4:GearSpike",
 		LinkId = 
 		{
-			uint Id = 68,
+			uint Id = 60,
 		},
 		Transform = 
 		{
@@ -1901,7 +1757,7 @@ Level =
 		string Name = "5ab50f42fd8f5bb4:GearSpike",
 		LinkId = 
 		{
-			uint Id = 69,
+			uint Id = 61,
 		},
 		Transform = 
 		{
@@ -1919,7 +1775,7 @@ Level =
 		string Name = "5ab50f42fd8f5bb4:GearSpike",
 		LinkId = 
 		{
-			uint Id = 70,
+			uint Id = 62,
 		},
 		Transform = 
 		{
@@ -1937,7 +1793,7 @@ Level =
 		string Name = "5ab50f42fd8f5bb4:GearSpike",
 		LinkId = 
 		{
-			uint Id = 71,
+			uint Id = 63,
 		},
 		Transform = 
 		{
@@ -1955,7 +1811,7 @@ Level =
 		string Name = "5ab50f42fd8f5bb4:GearSpike",
 		LinkId = 
 		{
-			uint Id = 72,
+			uint Id = 64,
 		},
 		Transform = 
 		{
@@ -1973,7 +1829,7 @@ Level =
 		string Name = "5ab50f42fd8f5bb4:GearSpike",
 		LinkId = 
 		{
-			uint Id = 73,
+			uint Id = 65,
 		},
 		Transform = 
 		{
@@ -1991,7 +1847,7 @@ Level =
 		string Name = "5ab50f42fd8f5bb4:GearSpike",
 		LinkId = 
 		{
-			uint Id = 74,
+			uint Id = 66,
 		},
 		Transform = 
 		{
@@ -2009,7 +1865,7 @@ Level =
 		string Name = "5ab50f42fd8f5bb4:GearSpike",
 		LinkId = 
 		{
-			uint Id = 75,
+			uint Id = 67,
 		},
 		Transform = 
 		{
@@ -2027,11 +1883,11 @@ Level =
 		string Name = "5a4ab8280d2d96bb:BallistaSnail",
 		LinkId = 
 		{
-			uint Id = 76,
+			uint Id = 68,
 		},
 		Transform = 
 		{
-			Vec3 Translation = [31.7899303, -8.44278336, 0],
+			Vec3 Translation = [31.1787777, -3.99483585, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -2045,7 +1901,7 @@ Level =
 		string Name = "5ab57c97f2406d40:Chest",
 		LinkId = 
 		{
-			uint Id = 77,
+			uint Id = 69,
 		},
 		Transform = 
 		{
@@ -2062,7 +1918,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 78,
+			uint Id = 70,
 		},
 		Named = 
 		{
@@ -2136,7 +1992,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 79,
+					uint Id = 71,
 				},
 				Named = 
 				{
@@ -2184,7 +2040,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 80,
+					uint Id = 72,
 				},
 				Named = 
 				{
@@ -2235,7 +2091,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 81,
+					uint Id = 73,
 				},
 				Named = 
 				{
@@ -2283,7 +2139,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 82,
+					uint Id = 74,
 				},
 				Named = 
 				{
@@ -2365,7 +2221,7 @@ Level =
 		string Name = "5ab57c97f2406d40:Chest",
 		LinkId = 
 		{
-			uint Id = 83,
+			uint Id = 75,
 		},
 		Transform = 
 		{
@@ -2383,7 +2239,7 @@ Level =
 		string Name = "5ab57c97f2406d40:Chest",
 		LinkId = 
 		{
-			uint Id = 84,
+			uint Id = 76,
 		},
 		Transform = 
 		{
@@ -2401,7 +2257,7 @@ Level =
 		string Name = "5ab5483e9cb7465f:Food",
 		LinkId = 
 		{
-			uint Id = 85,
+			uint Id = 77,
 		},
 		Transform = 
 		{
@@ -2419,7 +2275,7 @@ Level =
 		string Name = "5addae58d1201ae5:EnemyCrab",
 		LinkId = 
 		{
-			uint Id = 86,
+			uint Id = 78,
 		},
 		Transform = 
 		{
@@ -2437,7 +2293,7 @@ Level =
 		string Name = "5ab57c97f2406d40:Chest",
 		LinkId = 
 		{
-			uint Id = 87,
+			uint Id = 79,
 		},
 		Transform = 
 		{
@@ -2455,7 +2311,7 @@ Level =
 		string Name = "5addae58d1201ae5:EnemyCrab",
 		LinkId = 
 		{
-			uint Id = 88,
+			uint Id = 80,
 		},
 		Transform = 
 		{
@@ -2473,7 +2329,7 @@ Level =
 		string Name = "5ab57c97f2406d40:Chest",
 		LinkId = 
 		{
-			uint Id = 89,
+			uint Id = 81,
 		},
 		Transform = 
 		{
@@ -2491,7 +2347,7 @@ Level =
 		string Name = "5a4ab8280d2d96bb:BallistaSnail",
 		LinkId = 
 		{
-			uint Id = 90,
+			uint Id = 82,
 		},
 		Transform = 
 		{
@@ -2509,7 +2365,7 @@ Level =
 		string Name = "5ab3fb4d720d2a14:Gear",
 		LinkId = 
 		{
-			uint Id = 91,
+			uint Id = 83,
 		},
 		Transform = 
 		{
@@ -2520,6 +2376,24 @@ Level =
 		Named = 
 		{
 			string Name = "Gear",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a458950b6a780c8:Gearhana",
+		LinkId = 
+		{
+			uint Id = 84,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-13.4239941, 26.9914036, 0],
+			Vec3 Scale = [4.24013519, 4.24013519, 4.24013519],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Gearhana",
 		},
 	},
 },
