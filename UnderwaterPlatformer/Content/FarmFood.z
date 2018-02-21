@@ -1,6 +1,7 @@
 class FarmFood : ZilchComponent
 {
-    var Timer:Real = 60;
+    [Static]
+    var Timer:Real = 5;
     
     [Static]
     var SpawnFruit:Boolean = false;
@@ -12,12 +13,38 @@ class FarmFood : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-        this.Timer -= event.Dt;
+        FarmFood.Timer -= event.Dt;
         
-        if(this.Timer <= 0)
+        if(FarmFood.Timer <= 0)
         {
             FarmFood.SpawnFruit = true;
-            this.Timer = 60;
+            FarmFood.Timer = 60;
         }
+    }
+}
+class SpawnFruit : ZilchComponent
+{
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+       
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        if(FarmFood.SpawnFruit == true)
+        {
+        var rand = new Random();
+        var randomDieRoll = rand.DieRoll(60);
+        var randomPos = rand.DieRoll(9);
+        
+        this.Space.CreateAtPosition(Archetype.Food, Real3(this.Owner.Transform.Translation.X + randomPos
+        ,this.Owner.Transform.Translation.Y, 0));
+        
+        FarmFood.Timer = randomDieRoll;
+        FarmFood.SpawnFruit = false;
+        
+        }
+        
     }
 }
