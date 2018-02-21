@@ -1,5 +1,8 @@
 class TextScroll : ZilchComponent
 {
+    [Property] var Blocks : Integer;
+    [Property] var Speed : Integer = 30;
+    
     function Initialize(init : CogInitializer)
     {
         //Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
@@ -7,7 +10,7 @@ class TextScroll : ZilchComponent
             var seq = Action.Sequence(this.Owner.Actions);
                 
                 Action.Property
-                (seq, @this.Owner.Transform.Translation, posistion + Real3(0,30,0), 40, Ease.QuadInOut);
+                (seq, @this.Owner.Transform.Translation, posistion + Real3(0,this.Blocks,0), this.Speed, Ease.QuadInOut);
     }
 
     function OnLogicUpdate(event : UpdateEvent)
