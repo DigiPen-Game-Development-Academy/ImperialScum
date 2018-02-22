@@ -1,22 +1,38 @@
 class EnemyJump : ZilchComponent
 {
+    //sam made a timer. surprising.
+    var Timer : Integer = 16;
+    
     function Initialize(init : CogInitializer)
     {
-        //Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
-        Zero.Connect(this.Owner, Events.CollisionPersisted, this.OnCollisionPersisted);
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
     }
 
-    function OnCollisionPersisted(event : CollisionEvent)
+    function OnCollisionStarted(event : CollisionEvent)
     {
-        //Console.WriteLine("k");
-        if(event.OtherObject.Name == ("DefaultTile"))
+        if (this.Owner.Parent.EnemyController.Jump == false)
         {
-        this.Owner.Parent.EnemyController.Jump = true;
-        Console.WriteLine("HIT");
+            //Console.WriteLine("k");
+            if(event.OtherObject.Name == ("DefaultTile"))
+            {
+            this.Owner.Parent.EnemyController.Jump = true;
+            }
         }
     }
 
     function OnLogicUpdate(event : UpdateEvent)
     {
+        //SAMMIO'S TIMER
+        if (this.Owner.Parent.EnemyController.Jump == true)
+        {
+            this.Timer -= 16;
+            
+            if (this.Timer == 0)
+            {
+                this.Owner.Parent.EnemyController.Jump = false;
+                this.Timer = 2;
+            }
+        }
     }
 }
