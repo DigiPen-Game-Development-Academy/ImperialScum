@@ -301,7 +301,7 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "SpriteText",
+			string Name = "Welcome",
 		},
 		Transform = 
 		{
