@@ -15,7 +15,7 @@ Level =
 			bool Active = true,
 			bool WakeUpOnChange = false,
 			bool LocalSpaceDirection = true,
-			float Strength = 25,
+			float Strength = 10,
 			Vec3 Direction = [0, -1, 0],
 		},
 		DragEffect = 
@@ -104,13 +104,13 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, 0, 22.4664669],
+			Vec3 Translation = [0.249400914, -3.69581437, 42],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
 		Camera = 
 		{
-			ProjectionMode ProjectionMode = Perspective,
+			ProjectionMode ProjectionMode = Orthographic,
 			Facing Facing = NegativeZ,
 			CameraTransparentSort TransparentSort = ZDepth,
 			float FieldOfView = 45,
@@ -121,10 +121,10 @@ Level =
 		EditorCameraController = 
 		{
 			ControlMode ControlMode = ZPlane,
-			float LookDistance = 22.4664669,
+			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [0, 0, 0],
+			Vec3 LookTarget = [0.249400914, -3.69581437, -8],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -478,7 +478,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-0.967832565, -2.61551976, 0],
+			Vec3 Translation = [-0.221735016, -2.91982317, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},

@@ -3,6 +3,6 @@ TextContent =
 	ZilchScriptBuilder = 
 	{
 		string Name = "DropRecources",
-		uint64 ResourceId = 5a4532af76cd39ed,
+		uint64 ResourceId = 5a6ea8533f9a8344,
 	},
 },
