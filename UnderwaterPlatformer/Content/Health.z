@@ -50,15 +50,17 @@ class Health : ZilchComponent
         
         
         //so that the boss does more damage:
-        else if(event.OtherObject.BulletLogic != null && Health.CurrentHealth > 0)
+        else if(event.OtherObject.BulletLogic != null && Health.CurrentHealth > 0 && this.Invincibility != true)
         {
             Health.CurrentHealth -= 2;
+            this.Invincibility = true;
         }
         
-        if(event.OtherObject.JaggedRock != null && Health.CurrentHealth > 0)
+        if(event.OtherObject.JaggedRock != null && Health.CurrentHealth > 0 && this.Invincibility != true)
         {
             
             Health.CurrentHealth -= 2;
+            this.Invincibility = true;
         }
     }
     
