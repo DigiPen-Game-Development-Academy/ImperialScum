@@ -122,7 +122,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [4.55903196, -2.12916183, 50],
+			Vec3 Translation = [8.43286228, -2.12916183, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -134,7 +134,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 40.2750473,
+			float Size = 49.6585655,
 		},
 		EditorCameraController = 
 		{
@@ -142,7 +142,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [4.55903196, -2.12916183, 4.54126408e-08],
+			Vec3 LookTarget = [8.43286228, -2.12916183, 4.54126408e-08],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -199,7 +199,7 @@ Level =
 		Transform = 
 		{
 			Vec3 Translation = [0, 0, 0],
-			Vec3 Scale = [1.91231978, 1.91231978, 1.91231978],
+			Vec3 Scale = [1.99996722, 1.99996722, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Sprite = 
@@ -222,7 +222,7 @@ Level =
 		},
 		CutscenePlayer = 
 		{
-			float FPS = 2,
+			float FPS = 8,
 			string CutscenePrefix = "sprite_",
 			int FrameCount = 40,
 			int CurrentFrame = 0,
@@ -301,7 +301,7 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "SpriteText",
+			string Name = "Welcome",
 		},
 		Transform = 
 		{
