@@ -22,8 +22,6 @@ class EnemyController : ZilchComponent
     [Property]
     var JumpSpeed:Integer = 3;
     
-    var Timer:Integer = 35;
-    
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
@@ -44,6 +42,8 @@ class EnemyController : ZilchComponent
     function OnLogicUpdate(event : UpdateEvent)
     {
         
+        
+        
         if(this.Active == true) this.Following = 2;
         else this.Following -= event.Dt;
         
@@ -55,40 +55,22 @@ class EnemyController : ZilchComponent
         if(target.Transform.WorldTranslation.X < this.Owner.Transform.WorldTranslation.X)
         {
             var velocity = this.Owner.RigidBody.Velocity;
-            
-            if (this.Timer == 1){
-                velocity.X = -this.Speed;}
-                
+            velocity.X = -this.Speed;
             this.Owner.RigidBody.Velocity= velocity;
         }
         else if(target.Transform.WorldTranslation.X > this.Owner.Transform.WorldTranslation.X)
         {
             var velocity = this.Owner.RigidBody.Velocity;
-            
-            if (this.Timer == 1){
-                velocity.X = this.Speed;}
-                
+            velocity.X = this.Speed;
             this.Owner.RigidBody.Velocity= velocity;
         }
         
         
-        //AMAZING TIMER MADE BY SAYM
-        
-        this.Timer -= 1;
-        
-        if (this.Timer <= 0)
-        {
-            this.Timer = 35;
-        }
-        
-        //Jaycob's Maycobs
         if(this.Jump == true && this.Active == true)
         {
-            Console.WriteLine("HI");
-            Console.WriteLine(this.Owner.RigidBody.Velocity);
-            this.Owner.RigidBody.ApplyLinearVelocity(Real3(0,this.JumpSpeed,0));
-            this.Jump = false;
-            Console.WriteLine(this.Owner.RigidBody.Velocity);
+            var velocity = this.Owner.RigidBody.Velocity;
+            velocity.Y = this.JumpSpeed;
+            this.Owner.RigidBody.Velocity= velocity;
             this.JumpTime -= event.Dt;
         }
         
@@ -97,5 +79,8 @@ class EnemyController : ZilchComponent
             this.Jump = false;
             this.JumpTime += 1;
         }
+    
+    
     }
+
 }
