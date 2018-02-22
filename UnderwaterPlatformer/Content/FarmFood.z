@@ -1,10 +1,13 @@
+//Jacob Burke
+
+//This is the code that makes the fruit spawn at the trees in the base
 class FarmFood : ZilchComponent
 {
     [Static]
     var Timer:Real = 5;
     
     [Static]
-    var SpawnFruit:Boolean = false;
+    var HowMany:Integer = 0;
     
     function Initialize(init : CogInitializer)
     {
@@ -14,11 +17,13 @@ class FarmFood : ZilchComponent
     function OnLogicUpdate(event : UpdateEvent)
     {
         FarmFood.Timer -= event.Dt;
-        
+        Console.WriteLine(FarmFood.Timer);
         if(FarmFood.Timer <= 0)
         {
-            FarmFood.SpawnFruit = true;
-            FarmFood.Timer = 60;
+            var rand = new Random();
+            var randomDieRoll = rand.DieRoll(40);
+            FarmFood.HowMany += 1;
+            FarmFood.Timer += (randomDieRoll + 20);
         }
     }
 }
@@ -32,18 +37,14 @@ class SpawnFruit : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-        if(FarmFood.SpawnFruit == true)
+
+        if(FarmFood.HowMany > 0)
         {
         var rand = new Random();
-        var randomDieRoll = rand.DieRoll(60);
         var randomPos = rand.DieRoll(9);
-        
         this.Space.CreateAtPosition(Archetype.Food, Real3(this.Owner.Transform.Translation.X + randomPos
         ,this.Owner.Transform.Translation.Y, 0));
-        
-        FarmFood.Timer = randomDieRoll;
-        FarmFood.SpawnFruit = false;
-        
+        FarmFood.HowMany -= 1;
         }
         
     }

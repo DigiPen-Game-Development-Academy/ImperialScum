@@ -28,14 +28,18 @@ class RandomRoomGenerator : ZilchComponent
         BeenToLevel.FinishedLevel.Add(this.Space.CurrentLevel);
         
 
-        //Send the player to a new level
+        //Send the player to a new leveld
             
             if(event.OtherObject.PlayerController != null)
             {
             //Level
-            if(this.RandomDieRoll == 1 && BeenToLevel.FinishedLevel != null)
+            if(this.RandomDieRoll == 1)
             {
-                this.LevelToLoad = Level.Level;
+                if(BeenToLevel.FinishedLevel.FindFirstIndex(Level.BaseLevel) >= 0)
+                {
+                    
+                }
+                this.LevelToLoad = Level.BaseLevel;
             }
             //SandLevel_Labyrinth
             if(this.RandomDieRoll == 2)
