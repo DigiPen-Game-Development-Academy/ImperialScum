@@ -3,6 +3,4 @@
 
 class BeenToLevel : ZilchComponent
 {
-    [Static]
-    var FinishedLevel : Array[Level] = new Array[Level]();
 }

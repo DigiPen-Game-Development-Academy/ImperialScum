@@ -4,60 +4,66 @@
 
 class RandomRoomGenerator : ZilchComponent
 {
+    var Level : Level = null;
     
-    var RandomDieRoll:Real;
-    
-    var LevelToLoad:Level;
+     [Static]
+     var FinishedLevel : Array[Level] = new Array[Level]();
+     
+     [Static]
+     var AllLevels : Array[Level] = new Array[Level]()
+     {
+        Level.Level,
+        Level.UncommonSandDune1,
+        Level.BaseLevel,
+     };
     
     function Initialize(init : CogInitializer)
     {
-        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
-        Zero.Connect(this.Owner, Events.CollisionPersisted, this.OnCollisionPersisted);
+        //Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
     }
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-        var rand = new Random();
-            
-        this.RandomDieRoll = rand.DieRoll(3);
     }
 
-    function OnCollisionPersisted(event : CollisionEvent)
+    function OnCollisionStarted(event : CollisionEvent)
     {
-        //Set this level to be finished
-        BeenToLevel.FinishedLevel.Add(this.Space.CurrentLevel);
+        if(event.OtherObject.PlayerController != null)
+        {
+        RandomRoomGenerator.FinishedLevel.Add(this.Space.CurrentLevel);
         
-
-        //Send the player to a new leveld
-            
-            if(event.OtherObject.PlayerController != null)
+        var remainingLevels = RandomRoomGenerator.AllLevels;
+        
+        do
+        {
+            var count = remainingLevels.Count;
+            if(count == 0)
             {
-            //Level
-            if(this.RandomDieRoll == 1)
-            {
-                if(BeenToLevel.FinishedLevel.FindFirstIndex(Level.BaseLevel) >= 0)
-                {
-                    
-                }
-                this.LevelToLoad = Level.BaseLevel;
-            }
-            //SandLevel_Labyrinth
-            if(this.RandomDieRoll == 2)
-            {
-                this.LevelToLoad = Level.SandLevel_Labyrinth;
-            }
-            //UncommonSandDune1
-            if(this.RandomDieRoll == 3)
-            {
-                this.LevelToLoad = Level.UncommonSandDune1;
+                
+                return;
             }
             
+            var rand = new Random();
             
+            var index = rand.DieRoll(count) - 1;
             
-            this.Space.LoadLevel(this.LevelToLoad);
+            this.Level = remainingLevels[index];
+            
+            remainingLevels.RemoveAt(index);
+            
+        } while (RandomRoomGenerator.FinishedLevel.FindFirstIndex(this.Level) >= 0)
+            
+            this.Space.LoadLevel(this.Level);
+            
         }
-        
+            
+            
     }
+            
+            
+        
+    
 
 
 }

@@ -84,9 +84,11 @@ class EnemyController : ZilchComponent
         //Jaycob's Maycobs
         if(this.Jump == true && this.Active == true)
         {
-            var velocity = this.Owner.RigidBody.Velocity;
-            velocity.Y = this.JumpSpeed;
-            this.Owner.RigidBody.Velocity= velocity;
+            Console.WriteLine("HI");
+            Console.WriteLine(this.Owner.RigidBody.Velocity);
+            this.Owner.RigidBody.ApplyLinearVelocity(Real3(0,this.JumpSpeed,0));
+            this.Jump = false;
+            Console.WriteLine(this.Owner.RigidBody.Velocity);
             this.JumpTime -= event.Dt;
         }
         
@@ -95,8 +97,5 @@ class EnemyController : ZilchComponent
             this.Jump = false;
             this.JumpTime += 1;
         }
-    
-    
     }
-
 }
