@@ -1,4 +1,4 @@
-class DropRecources : ZilchComponent
+class PlayerDropRecources : ZilchComponent
 //Elena Schefer
 //Purpose: Makes player drop items upon death
 {
