@@ -17,7 +17,6 @@ class FarmFood : ZilchComponent
     function OnLogicUpdate(event : UpdateEvent)
     {
         FarmFood.Timer -= event.Dt;
-        Console.WriteLine(FarmFood.Timer);
         if(FarmFood.Timer <= 0)
         {
             var rand = new Random();
