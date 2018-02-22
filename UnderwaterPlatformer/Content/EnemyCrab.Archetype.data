@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-18.3619518, 0.789077699, 0],
+		Vec3 Translation = [-31.1880074, 13.7102098, 0],
 		Vec3 Scale = [0.998837471, 0.998837471, 0.998837471],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -216,6 +216,9 @@ Cog =
 				float Radius = 1,
 			},
 			EnemyVision = 
+			{
+			},
+			NullObject = 
 			{
 			},
 		},
