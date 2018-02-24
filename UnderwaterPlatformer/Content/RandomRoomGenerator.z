@@ -13,7 +13,7 @@ class RandomRoomGenerator : ZilchComponent
     var AllLevels : Array[Level] = new Array[Level]()
     {
       Level.Level,
-      Level.UncommonSandDune1,
+      Level.JacobsTerribleLevel,
       Level.BaseLevel,
     };
     function Initialize(init : CogInitializer)

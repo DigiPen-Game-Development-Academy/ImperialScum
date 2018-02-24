@@ -8,9 +8,13 @@ Cog =
 	{
 		string Name = "HealthPotion",
 	},
+	Archetyped = 
+	{
+		string Name = "5a4ec56bd3c09946:HealthPotion",
+	},
 	Transform = 
 	{
-		Vec3 Translation = [-14.3469267, -0.594434857, 0],
+		Vec3 Translation = [-4.51070499, 0.524367929, -0.000999450684],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -53,7 +57,7 @@ Cog =
 		bool SendsMessages = true,
 		bool Seamless = true,
 		string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
-		string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+		string SerializedGroupName = "5a5911dc2040a4ae:Resources",
 		Vec3 Offset = [0, 0, 0],
 		float Radius = 0.300000012,
 	},

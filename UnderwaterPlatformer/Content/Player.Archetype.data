@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [2.01977062, -2.03171086, 0],
+		Vec3 Translation = [-13.7918816, 0.601966202, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -57,7 +57,7 @@ Cog =
 		bool SendsMessages = true,
 		bool Seamless = true,
 		string MaterialName = "5a2d0ebaa085f792:NoBounce",
-		string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+		string SerializedGroupName = "5a5911403324850f:Player",
 		Vec3 Offset = [0, 0, 0],
 		float Radius = 0.300000012,
 		float Height = 1,
@@ -80,8 +80,8 @@ Cog =
 	},
 	PlayerMovement = 
 	{
-		int Speed = 30,
-		int JumpSpeed = 15,
+		float Speed = 30,
+		float JumpSpeed = 15,
 		Enum KeyUp = W,
 		Enum KeyLeft = A,
 		Enum KeyRight = D,

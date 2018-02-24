@@ -5,7 +5,7 @@ class Resources : ZilchComponent
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
-        Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
+        Zero.Connect(this.Owner, Events.CollisionPersisted, this.OnCollisionPersisted);
     }
     
     function OnLogicUpdate(event : UpdateEvent)
@@ -16,7 +16,7 @@ class Resources : ZilchComponent
         }
     }
 
-    function OnCollisionStarted(event : CollisionEvent)
+    function OnCollisionPersisted(event : CollisionEvent)
     {
         if(event.OtherObject.Name == ("DefaultTile"))
         this.Owner.SphereCollider.Ghost = false;
