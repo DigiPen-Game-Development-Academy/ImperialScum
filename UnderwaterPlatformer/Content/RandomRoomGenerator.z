@@ -4,56 +4,44 @@
 
 class RandomRoomGenerator : ZilchComponent
 {
+    var Level : Level = null;
     
-    var RandomDieRoll:Real;
-    
-    var LevelToLoad:Level;
-    
+    [Static]
+    var FinishedLevel : Array[Level] = new Array[Level]();
+
+    [Static]
+    var AllLevels : Array[Level] = new Array[Level]()
+    {
+      Level.Level,
+      Level.UncommonSandDune1,
+      Level.BaseLevel,
+    };
     function Initialize(init : CogInitializer)
     {
-        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
-        Zero.Connect(this.Owner, Events.CollisionPersisted, this.OnCollisionPersisted);
+        Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
     }
-
-    function OnLogicUpdate(event : UpdateEvent)
+    function OnCollisionStarted(event : CollisionEvent)
     {
-        var rand = new Random();
+        if(event.OtherObject.PlayerController != null)
+        {
+            RandomRoomGenerator.FinishedLevel.Add(this.Space.CurrentLevel);
             
-        this.RandomDieRoll = rand.DieRoll(3);
-    }
-
-    function OnCollisionPersisted(event : CollisionEvent)
-    {
-        //Set this level to be finished
-        BeenToLevel.FinishedLevel.Add(this.Space.CurrentLevel);
-        
-
-        //Send the player to a new level
-            
-            if(event.OtherObject.PlayerController != null)
+            var remainingLevels = RandomRoomGenerator.AllLevels;
+            do
             {
-            //Level
-            if(this.RandomDieRoll == 1 && BeenToLevel.FinishedLevel != null)
-            {
-                this.LevelToLoad = Level.Level;
-            }
-            //SandLevel_Labyrinth
-            if(this.RandomDieRoll == 2)
-            {
-                this.LevelToLoad = Level.SandLevel_Labyrinth;
-            }
-            //UncommonSandDune1
-            if(this.RandomDieRoll == 3)
-            {
-                this.LevelToLoad = Level.UncommonSandDune1;
-            }
+                var count = remainingLevels.Count;
+                if(count == 0)
+                {
+                    return;
+                }
+                var rand = new Random();
+                var index = rand.DieRoll(count) - 1;
+                this.Level = remainingLevels[index];
+                remainingLevels.RemoveAt(index);
+                
+            } while (RandomRoomGenerator.FinishedLevel.FindFirstIndex(this.Level) >= 0)
             
-            
-            
-            this.Space.LoadLevel(this.LevelToLoad);
+            this.Space.LoadLevel(this.Level);
         }
-        
     }
-
-
 }

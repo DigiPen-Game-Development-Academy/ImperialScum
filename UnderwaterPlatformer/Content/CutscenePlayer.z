@@ -9,6 +9,7 @@ class CutscenePlayer : ZilchComponent
     
     [Property] var FrameCount : Integer = 40;
     [Property] var CurrentFrame : Integer = 0;
+    [Property] var Archetype : Archetype;
     
     var TimesPlayed : Integer = 1;
     
@@ -26,6 +27,7 @@ class CutscenePlayer : ZilchComponent
         {
             //this.CurrentFrame = 38;
             return;
+            
         }
         
         if(this.CurrentFrame >= this.FrameCount)
@@ -34,6 +36,7 @@ class CutscenePlayer : ZilchComponent
             this.CurrentFrame = 0;
             this.Timer = 0;
             this.TimesPlayed += 1;
+            Console.WriteLine(this.TimesPlayed);
         }
         
         var number = "`this.CurrentFrame`";
