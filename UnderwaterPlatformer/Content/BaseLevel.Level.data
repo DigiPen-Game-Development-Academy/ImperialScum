@@ -104,7 +104,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-25.2930489, -3.76941323, 34],
+			Vec3 Translation = [-27.2637329, -5.99622869, 34],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -116,7 +116,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 7.4273715,
+			float Size = 4.02751017,
 		},
 		EditorCameraController = 
 		{
@@ -124,7 +124,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-25.2930489, -3.76941323, -16],
+			Vec3 LookTarget = [-27.2637329, -5.99622869, -16],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -387,8 +387,8 @@ Level =
 		},
 		PlayerMovement = 
 		{
-			int Speed = 30,
-			int JumpSpeed = 15,
+			float Speed = 30,
+			float JumpSpeed = 15,
 			Enum KeyUp = W,
 			Enum KeyLeft = A,
 			Enum KeyRight = D,

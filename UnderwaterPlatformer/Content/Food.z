@@ -32,11 +32,19 @@ class Eat : ZilchComponent
     function OnLeftMouseDown(event : ViewportMouseEvent)
     {
        if(event.HitObject == this.Owner && Hunger.Hunger <= (120 - this.FullAmount)
-        && AdvInventory.PlayerInventory["Food"] >= 1)
+        && AdvInventory.PlayerInventory["Food"] >= 1 && this.Owner.Name == ("Food"))
        {
            
            Hunger.Hunger += this.FullAmount;
            AdvInventory.PlayerInventory["Food"] -= 1;
+       }
+       
+       if(event.HitObject == this.Owner && Hunger.Hunger <= (120 - this.FullAmount/2)
+        && AdvInventory.PlayerInventory["Fruit"] >= 1 && this.Owner.Name == ("Fruit"))
+       {
+           
+           Hunger.Hunger += this.FullAmount/2;
+           AdvInventory.PlayerInventory["Fruit"] -= 1;
        }
         
     }

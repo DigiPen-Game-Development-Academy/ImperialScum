@@ -25,7 +25,8 @@ class AdvInventory : ZilchComponent
   {
     { "Food", 10 },
     { "Gears", 20},
-    { "HealthPotion",1}
+    { "HealthPotion",1},
+    { "Fruit",1}
   };
   
   [Static] function Get(name : String) : Integer

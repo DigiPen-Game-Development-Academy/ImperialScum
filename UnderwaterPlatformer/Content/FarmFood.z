@@ -38,7 +38,7 @@ class SpawnFruit : ZilchComponent
         var randomDieRoll = rand.DieRoll(60);
         var randomPos = rand.DieRoll(9);
         
-        this.Space.CreateAtPosition(Archetype.Food, Real3(this.Owner.Transform.Translation.X + randomPos
+        this.Space.CreateAtPosition(Archetype.Fruit, Real3(this.Owner.Transform.Translation.X + randomPos
         ,this.Owner.Transform.Translation.Y, 0));
         
         FarmFood.Timer = randomDieRoll;

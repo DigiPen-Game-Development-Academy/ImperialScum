@@ -39,6 +39,9 @@ class Resources : ZilchComponent
             
             if(this.Owner.Name == "HealthPotion")
             AdvInventory.PlayerInventory["HealthPotion"] += 1;
+            
+            if(this.Owner.Name == "Fruit")
+            AdvInventory.PlayerInventory["Fruit"] += 1;
         }
         
         
