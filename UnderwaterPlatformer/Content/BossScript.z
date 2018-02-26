@@ -1,0 +1,152 @@
+//Jacob Burke
+
+//Controls the boss
+
+class BossScript : ZilchComponent
+{
+    var Timer:Real = 2;
+    
+    [Property]
+    var Fish:Archetype;
+    
+    [Property]
+    var Stop:RigidBodyDynamicState;
+    
+    [Property]
+    var Start:RigidBodyDynamicState;
+    
+    var AbilityEnd:Boolean = false;
+    
+    var DoubleCollide:Boolean = false;
+    
+    [Property]
+    var Speed:Integer = 10;
+    
+    function Initialize(init : CogInitializer)
+    {
+        this.ChooseEvent();
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
+        Zero.Connect(this.Owner, Events.CollisionEnded, this.OnCollisionEnded);
+    }
+
+    function OnCollisionEnded(event : CollisionEvent)
+    {
+        if(event.OtherObject.Name != ("DefaultTile"))
+        {
+        this.DoubleCollide = false;
+        }
+    }
+
+    function OnCollisionStarted(event : CollisionEvent)
+    {
+        Console.WriteLine(this.DoubleCollide);
+        if(event.OtherObject.Name == ("DefaultTile") && this.DoubleCollide == false)
+        {
+        this.SwitchDirection();
+        this.DoubleCollide = true;
+        }
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        
+        if(this.AbilityEnd == true)
+        {
+            this.Timer -= event.Dt;
+        }
+        
+        if(this.Timer <= 0)
+        {
+            this.AbilityEnd = false;
+            this.Timer = 5;
+            this.ChooseEvent();
+        }
+        
+    }
+    
+    function ChooseEvent()
+    {
+        var rand = new Random();
+        var randomDie = rand.DieRoll(3);
+        
+        if(randomDie == 1)
+        this.Lazer();
+        
+        if(randomDie == 2)
+        this.Charge();
+        
+        if(randomDie == 3)
+        this.SendFish();
+        
+    }
+    
+    function Lazer()
+    {
+        Console.WriteLine("Lazer");
+        this.AbilityEnd = true;
+    }
+    
+    function Charge()
+    {
+        if(this.Owner.Sprite.FlipX == false)
+        {
+        this.Owner.RigidBody.DynamicState = this.Start;
+        this.Owner.RigidBody.Velocity += Real3(this.Speed,0,0);
+        
+        this.AbilityEnd = true;
+        }
+        
+        if(this.Owner.Sprite.FlipX == true)
+        {
+        this.Owner.RigidBody.DynamicState = this.Start;
+        this.Owner.RigidBody.Velocity -= Real3(this.Speed,0,0);
+        
+        this.AbilityEnd = true;
+        }
+    }
+    
+    function SendFish()
+    {
+        Console.WriteLine("SendFish");
+        var rand = new Random();
+        var randomDie = rand.DieRoll(5) + 5;
+        var randomPos = rand.DieRoll(7) - 4;
+        
+        while(randomDie > 0)
+        {
+        var pos = this.Owner.Transform.Translation.X + randomPos;
+        this.Space.CreateAtPosition(this.Fish, Real3(this.Owner.Transform.WorldTranslation.Y, pos, 0));
+        randomDie -= 1;
+        }
+        
+        this.AbilityEnd = true;
+    }
+    
+    function SwitchDirection()
+    {
+            this.Owner.RigidBody.DynamicState = this.Stop;
+            
+            var posistion = this.Owner.Transform.Translation;
+        
+            var seq = Action.Sequence(this.Owner.Actions);
+            
+            this.DoubleCollide = false;
+            
+            if(this.Owner.Sprite.FlipX == false)
+            {
+            this.Owner.Sprite.FlipX = true;
+            Action.Property
+            (seq, @this.Owner.Transform.Translation,
+            posistion + Real3(-1,0,0), 2, Ease.QuadIn);
+            }
+            else if(this.Owner.Sprite.FlipX == true)
+            {
+            this.Owner.Sprite.FlipX = false;
+            Action.Property
+            (seq, @this.Owner.Transform.Translation,
+            posistion + Real3(1,0,0), 2, Ease.QuadIn);
+            }
+        
+    }
+}
