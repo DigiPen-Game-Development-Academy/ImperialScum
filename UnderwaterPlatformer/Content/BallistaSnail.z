@@ -1,3 +1,7 @@
+//Jacob Burke
+
+//This is the script that controls the movement of the Ballista Snail
+
 class BallistaSnail : ZilchComponent
 {
     [Property]

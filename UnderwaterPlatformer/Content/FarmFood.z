@@ -1,3 +1,7 @@
+//Jacob Burke
+
+//This is the script that keeps track of the timer that spawns the fruit, it will keep on going even
+//if your in a different level
 class FarmFood : ZilchComponent
 {
     [Static]
@@ -22,6 +26,11 @@ class FarmFood : ZilchComponent
         }
     }
 }
+
+//Jacob Burke
+
+//This script will spawn fruit when you enter the base level based on what the number is ^^
+
 class SpawnFruit : ZilchComponent
 {
     function Initialize(init : CogInitializer)

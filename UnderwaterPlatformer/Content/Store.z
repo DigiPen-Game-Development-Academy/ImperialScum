@@ -1,3 +1,7 @@
+//Jacob Burke
+
+//Creates the store
+
 class Store : ZilchComponent
 {
     [Static]

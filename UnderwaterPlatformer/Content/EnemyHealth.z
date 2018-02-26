@@ -1,3 +1,6 @@
+//Jacob Burke
+
+//This is the script for the enemy's health
 class EnemyHealth : ZilchComponent
 {
     [Property] 

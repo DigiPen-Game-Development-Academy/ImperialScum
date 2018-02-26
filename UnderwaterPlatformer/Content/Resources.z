@@ -1,3 +1,7 @@
+//Jacob Burke
+
+//This gathers the resources when the player hits it
+
 class Resources : ZilchComponent
 {
     var Timer:Real = 1;

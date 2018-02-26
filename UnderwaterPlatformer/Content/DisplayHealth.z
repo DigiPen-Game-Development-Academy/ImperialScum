@@ -1,3 +1,7 @@
+//Jacob Burke
+
+//Displays the player's current health on the HUD
+
 class DisplayHealth : ZilchComponent
 {
     

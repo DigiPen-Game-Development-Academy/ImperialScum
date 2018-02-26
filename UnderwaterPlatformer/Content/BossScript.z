@@ -1,6 +1,6 @@
 //Jacob Burke
 
-//Controls the boss
+//Controls the boss in magical ways
 
 class BossScript : ZilchComponent
 {

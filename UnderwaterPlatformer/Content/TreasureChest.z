@@ -1,3 +1,7 @@
+//Jacob Burke
+
+//LOOTBOXES this is the script that makes the game, kids!
+
 class TreasureChest : ZilchComponent
 {
     var RandomDieRoll:Real;

@@ -1,3 +1,7 @@
+//Jacob Burke
+
+//Makes the owner go towards the player
+
 class Follow : ZilchComponent
 {
     [Property]
