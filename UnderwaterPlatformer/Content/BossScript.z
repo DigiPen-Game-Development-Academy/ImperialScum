@@ -4,10 +4,16 @@
 
 class BossScript : ZilchComponent
 {
-    var Timer:Real = 2;
+    var Timer:Real = 10;
     
     [Property]
     var Fish:Archetype;
+    
+    [Property]
+    var NormRotation:Quaternion;
+    
+    [Static]
+    var LaserActive:Boolean = false;
     
     [Property]
     var Stop:RigidBodyDynamicState;
@@ -41,7 +47,7 @@ class BossScript : ZilchComponent
     function OnCollisionStarted(event : CollisionEvent)
     {
         Console.WriteLine(this.DoubleCollide);
-        if(event.OtherObject.Name == ("DefaultTile") && this.DoubleCollide == false)
+        if(event.OtherObject.Name == ("DefaultTile") && this.DoubleCollide == false && BossScript.LaserActive == false)
         {
         this.SwitchDirection();
         this.DoubleCollide = true;
@@ -59,10 +65,26 @@ class BossScript : ZilchComponent
         if(this.Timer <= 0)
         {
             this.AbilityEnd = false;
-            this.Timer = 5;
+            this.Timer += 10;
             this.ChooseEvent();
         }
         
+        //Making the boss look at the player when his laser is active
+        if(BossScript.LaserActive == true)
+        {
+            Console.WriteLine(this.Timer);
+            var player = this.Space.FindObjectByName("Player");
+            
+            if(this.Timer > 5)
+            {
+            this.Owner.Orientation.LookAtPointWithUp(player.Transform.WorldTranslation, Real3(0,0,1));
+            }
+            else if(this.Timer <= 5)
+            {
+                this.Owner.Transform.WorldRotation = this.NormRotation;
+                BossScript.LaserActive = false;
+            }
+        }
     }
     
     function ChooseEvent()
@@ -71,7 +93,7 @@ class BossScript : ZilchComponent
         var randomDie = rand.DieRoll(3);
         
         if(randomDie == 1)
-        this.Lazer();
+        this.Laser();
         
         if(randomDie == 2)
         this.Charge();
@@ -81,9 +103,10 @@ class BossScript : ZilchComponent
         
     }
     
-    function Lazer()
+    function Laser()
     {
-        Console.WriteLine("Lazer");
+        Console.WriteLine("LASER");
+        BossScript.LaserActive = true;
         this.AbilityEnd = true;
     }
     
@@ -149,4 +172,27 @@ class BossScript : ZilchComponent
             }
         
     }
+}
+class Laser : ZilchComponent
+{
+  [Property]
+  var NormColor : Real4;
+  
+  [Property]
+  var Invisible : Real4;
+
+  function Initialize(init : CogInitializer)
+  {
+    Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+  }
+
+  function OnLogicUpdate(event : UpdateEvent)
+  {
+    if(BossScript.LaserActive == true)
+    {
+        this.Owner.Sprite.Color = this.NormColor;
+    }
+    else
+    this.Owner.Sprite.Color = this.Invisible;
+  }
 }
