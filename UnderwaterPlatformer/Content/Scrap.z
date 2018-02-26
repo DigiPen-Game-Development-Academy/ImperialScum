@@ -1,3 +1,7 @@
+//Jacob Burke
+
+//I don't think this does anything
+
 class Scrap : ZilchComponent
 {
     [Static]

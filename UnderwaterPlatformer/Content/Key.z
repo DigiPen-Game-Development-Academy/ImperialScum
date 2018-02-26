@@ -1,4 +1,6 @@
-//This is the code that destroys the key
+//Jacob Burke
+
+//This is the code that destroys the key and picks it up
 
 class Key : ZilchComponent
 {

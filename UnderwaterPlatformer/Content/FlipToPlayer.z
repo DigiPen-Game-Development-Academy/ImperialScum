@@ -1,3 +1,7 @@
+//Jacob Burke
+
+//This script makes the owner always be facing the player (flip no look)
+
 class FlipToPlayer : ZilchComponent
 {
     

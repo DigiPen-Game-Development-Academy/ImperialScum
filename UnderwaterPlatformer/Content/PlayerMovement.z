@@ -83,7 +83,6 @@ class PlayerMovement : ZilchComponent
 
             this.Owner.RigidBody.Velocity =
             Real3(this.Owner.RigidBody.Velocity.X, Math.Max(this.JumpSpeed, velocity.Y + this.JumpSpeed), 0);
-            Console.WriteLine(this.DoubleJump);
 
         }
         

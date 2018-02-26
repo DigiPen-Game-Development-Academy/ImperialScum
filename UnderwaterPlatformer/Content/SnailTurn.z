@@ -1,3 +1,7 @@
+//Jacob Burke
+
+//Changes the Ballista Snail's direction when he hits a wall
+
 class SnailTurn : ZilchComponent
 {
     [Property]

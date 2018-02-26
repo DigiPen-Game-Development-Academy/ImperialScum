@@ -1,6 +1,7 @@
 //Jacob Burke, 
 //Edited by Jessica (Added god mode and bullet damage... bullet damage is currently a WIP).
 
+//This script makes the enemy shoot...
 class EnemyShoot : ZilchComponent
 {
     [Property] var Bullet : Archetype = null;

@@ -1,3 +1,7 @@
+//Jacob Burke
+
+//Reads if the inventory exists, and creates it
+
 class Inventory : ZilchComponent
 {
     [Property]

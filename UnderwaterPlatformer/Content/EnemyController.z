@@ -1,6 +1,6 @@
 //Jacob Burke
 
-//Enemy Controller
+//Enemy Controller (for the enemy crab)
 
 class EnemyController : ZilchComponent
 {

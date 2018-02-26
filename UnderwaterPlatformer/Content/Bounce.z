@@ -1,3 +1,7 @@
+//Jacob Burke
+
+//Makes the player bounce of the object that this is on
+
 class Bounce : ZilchComponent
 {
     [Property]

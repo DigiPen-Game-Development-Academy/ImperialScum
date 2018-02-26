@@ -1,3 +1,7 @@
+//Jacob Burke
+
+//This is the script for the player's health
+
 class Health : ZilchComponent
 {
     

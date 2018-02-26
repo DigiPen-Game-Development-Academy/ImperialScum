@@ -1,3 +1,6 @@
+//Jacob Burke
+
+//Displays the Player's current hunger on the HUD
 class DisplayHunger : ZilchComponent
 {
     var InitSize:Real;
