@@ -4,6 +4,12 @@
 class PlayerMovement : ZilchComponent
 {
     [Property]
+    var Checkpoint1 : Boolean = false;
+    
+    [Property]
+    var CheckPoint : CogPath = null;
+    
+    [Property]
     var Speed:Real = 30;
     
     [Property]
@@ -34,33 +40,36 @@ class PlayerMovement : ZilchComponent
         Zero.Connect(this.Owner, Events.CollisionEnded, this.OnCollisionEnded);
         Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
         Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
-
-        Checkpoint.RespawnPosition = this.Owner.Transform.Translation;
+        
+        //Checkpoint.RespawnPosition = CheckPoint.Transform.Translation;
     }
 
     function OnCollisionStarted(event : CollisionEvent)
     {
-        
         if(/*event.OtherObject.Name == ("DefaultTile") && */this.Owner.GroundChecker.Grounded == true)
         {
-        this.DoubleJump = true;
+            this.DoubleJump = true;
         }
         
-         if(event.OtherObject.Checkpoint != null)
+        if(event.OtherObject.Checkpoint != null)
         {
-        var checkpointPosition = event.OtherObject.Transform.Translation;
+            var checkpointPosition = event.OtherObject.Transform.Translation;
 
-        checkpointPosition.Y = this.Owner.Transform.Translation.Y;
+            checkpointPosition.Y = this.Owner.Transform.Translation.Y;
 
-        Checkpoint.RespawnPosition = checkpointPosition;
-    }
+            //CheckPoint.RespawnPosition = checkpointPosition;
         }
+        
+        if(event.OtherObject.Name == "CheckPoint")
+        {
+            this.Checkpoint1 = true;
+        }
+    }
 
     function OnCollisionEnded(event : CollisionEvent)
     {
         if(event.OtherObject.Region != null)
         this.Swimming = false;
-        
     }
 
     function OnCollisionPersisted(event : CollisionEvent)
@@ -73,6 +82,9 @@ class PlayerMovement : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
+        
+        Console.WriteLine(this.Checkpoint1);
+        
         var direction = Real3.Zero;
         
         var velocity = direction * this.Speed;
