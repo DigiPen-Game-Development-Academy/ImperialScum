@@ -14,13 +14,15 @@ class EnemyController : ZilchComponent
     var Jump:Boolean = false;
     
     [Property]
-    var JumpTime:Real = 3;
+    var JumpTime:Real = 1;
     
     [Property]
     var Speed:Integer = 3;
     
     [Property]
-    var JumpSpeed:Integer = 3;
+    var JumpSpeed:Integer = 7;
+    
+    var Timer:Integer = 20;
     
     function Initialize(init : CogInitializer)
     {
@@ -42,8 +44,6 @@ class EnemyController : ZilchComponent
     function OnLogicUpdate(event : UpdateEvent)
     {
         
-        
-        
         if(this.Active == true) this.Following = 2;
         else this.Following -= event.Dt;
         
@@ -55,13 +55,19 @@ class EnemyController : ZilchComponent
         if(target.Transform.WorldTranslation.X < this.Owner.Transform.WorldTranslation.X)
         {
             var velocity = this.Owner.RigidBody.Velocity;
-            velocity.X = -this.Speed;
+            
+            //If the timer is 1, let the crab move
+            if (this.Timer == 1) {velocity.X = -this.Speed; }
+            
             this.Owner.RigidBody.Velocity= velocity;
         }
         else if(target.Transform.WorldTranslation.X > this.Owner.Transform.WorldTranslation.X)
         {
             var velocity = this.Owner.RigidBody.Velocity;
-            velocity.X = this.Speed;
+            
+            //If the timer is 1, let the crab move
+            if (this.Timer == 1) {velocity.X = this.Speed; }
+            
             this.Owner.RigidBody.Velocity= velocity;
         }
         
@@ -69,9 +75,10 @@ class EnemyController : ZilchComponent
         if(this.Jump == true && this.Active == true)
         {
             var velocity = this.Owner.RigidBody.Velocity;
-            velocity.Y = this.JumpSpeed;
-            this.Owner.RigidBody.Velocity= velocity;
-            this.JumpTime -= event.Dt;
+            
+                velocity.Y = this.JumpSpeed;
+                this.Owner.RigidBody.Velocity = velocity;
+                this.JumpTime -= event.Dt;
         }
         
         if(this.JumpTime <= 0)
@@ -79,8 +86,23 @@ class EnemyController : ZilchComponent
             this.Jump = false;
             this.JumpTime += 1;
         }
-    
-    
+        
+        //Cute crab hops
+        var velocity = this.Owner.RigidBody.Velocity;
+        if (velocity.Y == 0)
+            {
+                velocity.Y = this.JumpSpeed;
+                this.Owner.RigidBody.Velocity = velocity;
+                this.JumpTime -= event.Dt;
+            }
+        
+        //Sam's CRAYZY TIMER
+        this.Timer -= 1;
+        
+        if (this.Timer == 0)
+        {
+            this.Timer = 30;
+        }
     }
 
 }
