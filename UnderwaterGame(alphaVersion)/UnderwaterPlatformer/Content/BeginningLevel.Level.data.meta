@@ -2,7 +2,7 @@ DataContent =
 {
 	DataBuilder = 
 	{
-		string Name = "TutorialLevel",
+		string Name = "BeginningLevel",
 		uint64 ResourceId = 5aacabcb5a25325f,
 		string LoaderType = "Level",
 		uint Version = 0,
