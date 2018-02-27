@@ -1,0 +1,49 @@
+//Jacob Burke
+
+//Reads if the inventory exists, and creates it
+
+class Inventory : ZilchComponent
+{
+    [Property]
+    var InventoryKey:Keys;
+    
+    [Property]
+    var StoreKey:Keys = Keys.E;
+    
+    [Static]
+    var Exists : Boolean = false;
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        if (Zero.Keyboard.KeyIsPressed(this.InventoryKey))
+        {
+            if (Inventory.Exists)
+            {
+                Inventory.Exists = false;
+            }
+            else
+            {
+                Inventory.Exists = true;
+                var position = Real3(0,0,0);
+                this.Space.CreateAtPosition(Archetype.Inventory, position);
+            }
+        }
+        if (Zero.Keyboard.KeyIsPressed(this.StoreKey))
+        {
+            if (Inventory.Exists)
+            {
+                Inventory.Exists = false;
+            }
+            else
+            {
+                Inventory.Exists = true;
+                var position = Real3(0,0,0);
+                this.Space.CreateAtPosition(Archetype.Shop, position);
+            }
+        }
+    }
+}

@@ -1,0 +1,86 @@
+//Jacob Burke
+
+//Enemy Controller (for the enemy crab)
+
+class EnemyController : ZilchComponent
+{
+    
+    var Active:Boolean = false;
+    
+    var LosingPlayer:Boolean = false;
+    
+    var TimerTillNotFollow:Real = 3;
+    
+    var Jump:Boolean = false;
+    
+    [Property]
+    var JumpTime:Real = 3;
+    
+    [Property]
+    var Speed:Integer = 3;
+    
+    [Property]
+    var JumpSpeed:Integer = 3;
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
+       
+    }
+
+    function OnCollisionStarted(event : CollisionEvent)
+    {
+        if(event.OtherObject.SwordBoomerangMove != null)
+        {
+            this.Active = true;
+        }
+    }
+    
+    var Following : Real = 0;
+    
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        
+        
+        
+        if(this.Active == true) this.Following = 2;
+        else this.Following -= event.Dt;
+        
+        if (this.Following <= 0) return;
+        
+        var target = this.Space.FindObjectByName("Player");
+        if(target == null) return;
+        
+        if(target.Transform.WorldTranslation.X < this.Owner.Transform.WorldTranslation.X)
+        {
+            var velocity = this.Owner.RigidBody.Velocity;
+            velocity.X = -this.Speed;
+            this.Owner.RigidBody.Velocity= velocity;
+        }
+        else if(target.Transform.WorldTranslation.X > this.Owner.Transform.WorldTranslation.X)
+        {
+            var velocity = this.Owner.RigidBody.Velocity;
+            velocity.X = this.Speed;
+            this.Owner.RigidBody.Velocity= velocity;
+        }
+        
+        
+        if(this.Jump == true && this.Active == true)
+        {
+            var velocity = this.Owner.RigidBody.Velocity;
+            velocity.Y = this.JumpSpeed;
+            this.Owner.RigidBody.Velocity= velocity;
+            this.JumpTime -= event.Dt;
+        }
+        
+        if(this.JumpTime <= 0)
+        {
+            this.Jump = false;
+            this.JumpTime += 1;
+        }
+    
+    
+    }
+
+}

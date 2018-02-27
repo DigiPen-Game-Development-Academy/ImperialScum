@@ -1,0 +1,54 @@
+//Jacob Burke
+
+//This gathers the resources when the player hits it
+
+class Resources : ZilchComponent
+{
+    var Timer:Real = 1;
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        Zero.Connect(this.Owner, Events.CollisionPersisted, this.OnCollisionPersisted);
+    }
+    
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        if(this.Timer > 0)
+        {
+        this.Timer -= event.Dt;
+        }
+    }
+
+    function OnCollisionPersisted(event : CollisionEvent)
+    {
+        if(event.OtherObject.Name == ("DefaultTile"))
+        this.Owner.SphereCollider.Ghost = false;
+        
+        
+        if(event.OtherObject.Name == ("Player") && this.Timer <= 0.1)
+        {
+            this.Owner.SphereCollider.Ghost = true;
+        }
+        
+        if(event.OtherObject.PlayerController != null && this.Timer <= 0.1)
+        {
+            this.Owner.Destroy();
+            
+            if(this.Owner.Name == "Gear")
+            AdvInventory.PlayerInventory["Gears"] += 1;
+            
+            if(this.Owner.Name == "Food")
+            AdvInventory.PlayerInventory["Food"] += 1;
+            
+            if(this.Owner.Name == "HealthPotion")
+            AdvInventory.PlayerInventory["HealthPotion"] += 1;
+            
+            if(this.Owner.Name == "Fruit")
+            AdvInventory.PlayerInventory["Fruit"] += 1;
+        }
+        
+        
+        
+    }
+}

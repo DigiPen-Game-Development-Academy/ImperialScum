@@ -1,0 +1,112 @@
+//Jacob Burke
+
+//This just changes the spritesource, the player movement deals with the actual moving
+
+class PlayerController : ZilchComponent
+{
+    
+    [Property]
+    var Left:Keys = Keys.Left;
+
+    [Property]
+    var Right:Keys = Keys.Right;
+    
+    [Property]
+    var  IdleAnimation:SpriteSource;
+    
+    [Property]
+    
+    var WalkingAnimation:SpriteSource;
+    
+    [Property]
+    var JumpAnimation:SpriteSource;
+    
+    [Property]
+    var FallAnimation:SpriteSource;
+    
+    [Property]
+    var MidAnimation:SpriteSource;
+    
+    [Property]
+    var ThrowAnimation:SpriteSource;
+    var ThrowTime:Real = 0.2;
+    
+    
+    [Property]
+    var JumpSound:SoundCue;
+    
+    [Property]
+    var Lose:Integer = 1;
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        
+        Zero.Connect(this.Space, Events.LeftMouseDown, this.OnLeftMouseDown);
+        
+    }
+
+
+    function OnLeftMouseDown(event : ViewportMouseEvent)
+    {
+        if(Inventory.Exists == false)
+        this.Owner.Sprite.SpriteSource = this.ThrowAnimation;
+        
+    }
+
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+
+        
+        if(this.Owner.Sprite.SpriteSource == this.ThrowAnimation)
+        {
+            this.ThrowTime -= event.Dt;
+            
+            if(this.ThrowTime >= 0)
+            {
+                return;
+            }
+            else
+            this.ThrowTime += 0.2;
+        
+        }
+        
+        if(Zero.Keyboard.KeyIsUp(Keys.A) && Zero.Keyboard.KeyIsUp(Keys.D)
+        && this.Owner.GroundChecker.Grounded == true)
+        {
+            this.Owner.Sprite.SpriteSource = this.IdleAnimation;
+        }
+        else if(this.Owner.GroundChecker.Grounded == true && this.Owner.Sprite.SpriteSource != this.WalkingAnimation)
+        {
+            this.Owner.Sprite.SpriteSource = this.WalkingAnimation;
+        }
+        else if(this.Owner.GroundChecker.Grounded == false)
+        {
+            this.Owner.Sprite.SpriteSource = this.JumpAnimation;
+        }
+       
+        if(Zero.Keyboard.KeyIsDown(this.Right))
+        {
+            this.Owner.Sprite.FlipX = false;
+        }
+        
+        if(Zero.Keyboard.KeyIsDown(this.Left))
+        {
+            this.Owner.Sprite.FlipX = true;
+        }
+        
+        if(this.Owner.RigidBody.Velocity.Y >= 0 && Zero.Keyboard.KeyIsPressed(Keys.W))
+        {
+            this.Owner.Sprite.SpriteSource = this.JumpAnimation;
+        }
+        if(this.Owner.RigidBody.Velocity.Y <= -1)
+        this.Owner.Sprite.SpriteSource = this.FallAnimation;
+        
+        if(this.Owner.RigidBody.Velocity.Y < 1 && this.Owner.GroundChecker.Grounded == false
+        && this.Owner.RigidBody.Velocity.Y > -1 )
+        this.Owner.Sprite.SpriteSource = this.MidAnimation;
+        
+
+    }
+}

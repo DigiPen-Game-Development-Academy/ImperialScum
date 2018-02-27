@@ -1,0 +1,20 @@
+class GoToBase : ZilchComponent
+{
+    
+    [Property] var LevelToLoad : Level = Level.BaseLevel;
+    
+    function Initialize(init : CogInitializer)
+    {
+        //Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        Zero.Connect(this.Owner, Events.CollisionPersisted, this.OnCollisionPersisted);
+    }
+
+    function OnCollisionPersisted(event : CollisionEvent)
+    {
+        this.Space.LoadLevel(this.LevelToLoad);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+    }
+}

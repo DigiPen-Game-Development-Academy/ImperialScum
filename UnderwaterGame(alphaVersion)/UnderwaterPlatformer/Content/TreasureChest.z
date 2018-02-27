@@ -1,0 +1,74 @@
+//Jacob Burke
+
+//LOOTBOXES this is the script that makes the game, kids!
+
+class TreasureChest : ZilchComponent
+{
+    var RandomDieRoll:Real;
+    
+    var Active:Boolean = false;
+    
+    var Spawn:Archetype;
+    
+    function Initialize(init : CogInitializer)
+    {
+        var rand = new Random();
+        
+        this.RandomDieRoll = rand.DieRoll(10);
+        
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
+    }
+
+    function OnCollisionStarted(event : CollisionEvent)
+    {
+        if(event.OtherObject.PlayerController != null)
+        {
+           this.Active = true;
+        }
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        var random = new Random();
+        
+        if(this.Active == true)
+        {
+            while(this.RandomDieRoll >= 0)
+            {
+                var randomVelocityNegative = random.DieRoll(10) * -1;
+                var randomVelocityPositive = random.DieRoll(10);
+                var randomChoose = random.DieRoll(2);
+                var randomLoot = random.DieRoll(10);
+    
+                if(randomLoot <= 4)
+                this.Spawn = Archetype.Gear;
+                
+                if(randomLoot >= 5 && randomLoot <= 8)
+                this.Spawn = Archetype.Food;
+                
+                if(randomLoot > 8)
+                this.Spawn = Archetype.HealthPotion;
+                
+                var treasure = this.Space.CreateAtPosition(this.Spawn,
+                this.Owner.Transform.Translation);
+                
+                if(randomChoose == 1)
+                {
+                treasure.RigidBody.Velocity = Real3(randomVelocityNegative,randomVelocityPositive, 0);
+                }
+                
+                if(randomChoose == 2)
+                {
+                treasure.RigidBody.Velocity = Real3(randomVelocityPositive,randomVelocityPositive, 0);
+                }
+                
+                this.RandomDieRoll -= 1;
+            }
+            if(this.RandomDieRoll <= 0)
+            {
+                this.Owner.Destroy();
+            }
+        }
+    }
+}

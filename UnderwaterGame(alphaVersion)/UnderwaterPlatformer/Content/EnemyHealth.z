@@ -1,0 +1,48 @@
+//Jacob Burke
+
+//This is the script for the enemy's health
+class EnemyHealth : ZilchComponent
+{
+    [Property] 
+    var Health:Integer = 5;
+    [Static]
+    var Damage:Integer = 1;
+    [Property]
+    var DamageColor:Real4;
+    [Property]
+    var RegularColor:Real4;
+    
+    var Timer:Real = 0.2;
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
+    }
+
+    function OnCollisionStarted(event : CollisionEvent)
+    {
+        if(event.OtherObject.SwordBoomerangMove != null)
+        {
+            this.Health -= EnemyHealth.Damage;
+            this.Owner.Sprite.Color = this.DamageColor;
+        }
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        if(this.Health <= 0)
+        {
+            this.Owner.Destroy();
+        }
+        
+        if(this.Owner.Sprite.Color == this.DamageColor)
+        {
+            this.Timer -= event.Dt;
+        }
+        if(this.Timer <= 0)
+        {
+            this.Timer += 0.2;
+            this.Owner.Sprite.Color = this.RegularColor;
+        }
+    }
+}

@@ -1,0 +1,38 @@
+//Jacob Burke
+
+//This is not the Sword Boomerang Itself, but the creator of it and the creator of 
+//the target
+
+class SwordBoomerang : ZilchComponent
+{
+    [Static]
+    var MarkerPlaced:Boolean = false;
+    
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        Zero.Connect(this.Space, Events.LeftMouseDown, this.OnLeftMouseDown);
+    }
+
+    function OnLeftMouseDown(event : ViewportMouseEvent)
+    {
+        
+        if(SwordBoomerang.MarkerPlaced == false && Inventory.Exists == false)
+        {
+            
+        var position = this.LevelSettings.CameraViewport.ScreenToWorldZPlane(event.Position, 0);
+        this.Space.CreateAtPosition(Archetype.SwordTarget, position);
+        this.Space.CreateAtPosition(Archetype.SwordBoomerang, this.Owner.Transform.Translation);
+        this.Space.CreateAtPosition(Archetype.Blur, this.Owner.Transform.Translation);
+        
+        SwordBoomerang.MarkerPlaced = true;
+        
+        }
+        
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+    }
+}

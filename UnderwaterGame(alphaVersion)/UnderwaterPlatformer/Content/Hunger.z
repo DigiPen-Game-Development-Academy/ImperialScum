@@ -1,0 +1,66 @@
+//Jacob Burke
+
+//This is in charge of the hunger
+
+class Hunger : ZilchComponent
+{
+    [Static]
+    var Hunger:Real = 120;
+    
+    [Static]
+    var MaxHunger:Real;
+    
+    [Property]
+    var Timer:Real = 5;
+    
+    var GodMode : Boolean = false;
+
+    
+    function Initialize(init : CogInitializer)
+    {
+        Hunger.MaxHunger = Hunger.Hunger;
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        if(Hunger.Hunger > 0)
+        Hunger.Hunger -= event.Dt;
+        
+        //Health Regen by Jessica
+        if(this.Timer > 0)
+        {
+            
+        this.Timer -= event.Dt;
+        
+        }
+        
+        else if(this.Timer <= 0)
+        {
+            if (Hunger.Hunger >= 80 && Health.CurrentHealth <= 10)
+            {
+                Health.CurrentHealth += 1;
+            }
+            
+            this.Timer += 5;
+        }
+        
+        //God Mode by Jessica.
+        if(Zero.Keyboard.KeyIsPressed(Keys.G))
+        {
+            Hunger.MaxHunger += 1000;
+            Hunger.Hunger += 1000;
+            this.GodMode = true;
+        }
+        
+        if(Health.CurrentHealth <= 500 && this.GodMode == true)
+        {
+            Health.CurrentHealth += 1000;
+        }
+        
+        if(Hunger.Hunger <= 500 && this.GodMode == true)
+        {
+            Hunger.Hunger += 1000;
+        }
+    }
+}

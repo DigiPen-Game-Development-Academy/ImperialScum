@@ -1,0 +1,167 @@
+//Jacob Burke
+
+//This is the script for the player's health
+
+class Health : ZilchComponent
+{
+    
+    [Static]
+    var CurrentHealth:Real;
+    
+    [Static]
+    var MaxHealth:Real = 20;
+    
+    [Property]
+    var LevelToLoad:Level;
+    
+    [Property]
+    var Timer:Real = 5;
+    
+    [Property]
+    var DamageColor:Real4;
+    [Property]
+    var RegularColor:Real4;
+    
+    var Timer2:Real = 0.2;
+    
+    var Invincibility : Boolean = false;
+    var InvincibilityTimer : Real = 0.5;
+    
+    
+    var Gear : Archetype = Archetype.Gear;
+    var Food : Archetype = Archetype.Food;
+    var HealthPotion : Archetype = Archetype.HealthPotion;
+    var TimesRepeated : Integer = 1;
+        
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
+        Zero.Connect(this.Owner, Events.CollisionPersisted, this.OnCollisionPersisted);
+        
+        Health.CurrentHealth = Health.MaxHealth;
+    }
+
+    function OnCollisionPersisted(event : CollisionEvent)
+    {
+        if(event.OtherObject.EnemyHealth != null && Health.CurrentHealth > 0 && this.Invincibility != true)
+        {
+            
+            Health.CurrentHealth -= 1;
+            this.Owner.Sprite.Color = this.DamageColor;
+            this.Invincibility = true;
+        }
+        
+        
+        //so that the boss does more damage:
+        else if(event.OtherObject.BulletLogic != null && Health.CurrentHealth > 0 && this.Invincibility != true)
+        {
+            Health.CurrentHealth -= 2;
+            this.Invincibility = true;
+        }
+        
+        if(event.OtherObject.JaggedRock != null && Health.CurrentHealth > 0 && this.Invincibility != true)
+        {
+            
+            Health.CurrentHealth -= 2;
+            this.Invincibility = true;
+        }
+    }
+    
+
+    function OnCollisionStarted(event : CollisionEvent)
+    {
+        if(event.OtherObject.EnemyHealth != null && Health.CurrentHealth > 0 && this.Invincibility != true)
+        {
+            
+            Health.CurrentHealth -= 1;
+            this.Owner.Sprite.Color = this.DamageColor;
+            this.Invincibility = true;
+        }
+        
+        
+        //so that the boss does more damage:
+        else if(event.OtherObject.BulletLogic != null && Health.CurrentHealth > 0)
+        {
+            Health.CurrentHealth -= 2;
+        }
+        
+        if(event.OtherObject.JaggedRock != null && Health.CurrentHealth > 0)
+        {
+            
+            Health.CurrentHealth -= 2;
+        }
+        
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        if(this.Timer > 0 && Hunger.Hunger <= 1)
+        {
+        this.Timer -= event.Dt;
+        }
+        else if(this.Timer <= 0)
+        {
+            Health.CurrentHealth -= 1;
+            
+            this.Timer += 5;
+        }
+        
+        if(this.Invincibility == true && this.InvincibilityTimer > 0)
+        {
+            this.InvincibilityTimer -= event.Dt;
+            Console.WriteLine(this.InvincibilityTimer);
+        }
+        
+        else if(this.InvincibilityTimer <= 0)
+        {
+            this.Invincibility = false;
+            this.InvincibilityTimer = 0.5;
+        }
+        
+        
+        if(this.Owner.Sprite.Color == this.DamageColor)
+        {
+            this.Timer2 -= event.Dt;
+        }
+        if(this.Timer2 <= 0)
+        {
+            this.Timer2 += 0.2;
+            this.Owner.Sprite.Color = this.RegularColor;
+        }
+        //God Mode By Jessica. Because I am bored of getting killed by gear shark.
+        if(Zero.Keyboard.KeyIsPressed(Keys.G))
+        {
+            Health.CurrentHealth += 1000;
+        }
+        
+
+        var maxTimesRepeated = 6;
+        //DROP ITEMS ON DEATH - Jessica Alberg
+        if(Health.CurrentHealth <= 0)
+        {
+            //this.DidOnce = true;
+            var position = this.Owner.Transform.Translation;
+            position += Real3(1,1,0);
+
+            if(this.TimesRepeated == 1)
+            {
+            AdvInventory.PlayerInventory["Gears"] -= 3;
+            AdvInventory.PlayerInventory["Food"] -= 1;
+            AdvInventory.PlayerInventory["HealthPotion"] -= 1;
+            this.Space.CreateAtPosition(this.Gear, position);
+            }
+            
+            if(this.TimesRepeated == 2)
+            this.Space.CreateAtPosition(this.Gear, position);
+            if(this.TimesRepeated == 3)
+            this.Space.CreateAtPosition(this.Gear, position);
+            if(this.TimesRepeated == 4)
+            this.Space.CreateAtPosition(this.Food, position);
+            if(this.TimesRepeated == 5)
+            this.Space.CreateAtPosition(this.HealthPotion, position);
+            if(this.TimesRepeated >= maxTimesRepeated)return;
+            this.TimesRepeated += 1;
+        }
+    }
+}

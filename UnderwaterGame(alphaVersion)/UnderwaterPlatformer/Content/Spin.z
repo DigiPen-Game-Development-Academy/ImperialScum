@@ -1,0 +1,19 @@
+//http://zero.digipen.edu/Tutorials/Gameplay/VectorMath/2DRotation.html
+
+class Spin : ZilchComponent
+{
+  [Property]
+  var RotationSpeed : Real = 30.0;
+
+  function Initialize(init : CogInitializer)
+  {
+    Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+  }
+
+  function OnLogicUpdate(event : UpdateEvent)
+  {
+    var rotationSpeedRadians = Math.ToRadians(this.RotationSpeed);
+
+    this.Owner.Transform.RotateAnglesLocal(Real3(0,0,rotationSpeedRadians * event.Dt));
+  }
+}

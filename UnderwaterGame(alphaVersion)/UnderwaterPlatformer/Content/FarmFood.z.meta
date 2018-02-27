@@ -1,0 +1,8 @@
+TextContent = 
+{
+	ZilchScriptBuilder = 
+	{
+		string Name = "FarmFood",
+		uint64 ResourceId = 5a45a10ed7bc7e4e,
+	},
+},

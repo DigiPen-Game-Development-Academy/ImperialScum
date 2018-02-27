@@ -1,0 +1,23 @@
+//Jacob Burke
+
+//Will flip the child with the parent
+
+class FlipSpriteChild : ZilchComponent
+{
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        var flipx = Math.Abs(this.Owner.Transform.LocalTranslation.X);
+        
+        if(this.Owner.Parent.Sprite.FlipX)
+            flipx = -flipx;
+            
+        this.Owner.Transform.LocalTranslation = Real3( flipx,
+            this.Owner.Transform.LocalTranslation.Y,
+            this.Owner.Transform.LocalTranslation.Y);
+    }
+}

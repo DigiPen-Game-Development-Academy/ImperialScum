@@ -1,0 +1,96 @@
+//Jacob Burke
+
+//This will move the sword boomerang towards the target that is placed by 
+//clicking the left mouse
+
+class SwordBoomerangMove : ZilchComponent
+{
+    [Property]
+    var Speed:Integer = 20;
+    
+    [Property]
+    var ReturnSpeed:Integer = 20;
+    
+    [Property]
+    var StartHangTime:Integer = 20;
+    
+    var HangTime:Integer = 0;
+    
+    [Static]
+    var Moving:Boolean = true;
+    
+    function Initialize(init : CogInitializer)
+    {
+        this.HangTime = this.StartHangTime;
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
+        Zero.Connect(this.Owner, Events.CollisionPersisted, this.OnCollisionPersisted);
+    }
+
+    function OnCollisionPersisted(event : CollisionEvent)
+    {
+    }
+
+    function OnCollisionStarted(event : CollisionEvent)
+    {
+        if(event.OtherObject.TargetDestroyer != null)
+        {
+            SwordBoomerangMove.Moving = false;
+        }
+        
+        if(event.OtherObject.Name == ("Player") && SwordBoomerangMove.Moving == false)
+        {
+            this.Owner.Destroy();
+            SwordBoomerang.MarkerPlaced = false;
+            SwordBoomerangMove.Moving = true;
+        }
+        if(event.OtherObject.Name == ("DefaultTile"))
+        {
+            SwordBoomerangMove.Moving = false;
+        }
+        
+        
+        
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        //Hang Time Decreasing. Sam did this amazing thing.
+        
+        if (SwordBoomerangMove.Moving == false && this.HangTime != 0)
+        {
+        this.HangTime -= 1;
+        }
+        
+        //Jacob's uncommented mess
+        
+        var target = this.Space.FindObjectByName("SwordTarget");
+        var player = this.Space.FindObjectByName("Player");
+        
+        if(player == null)
+        return;
+        
+        
+        if(SwordBoomerangMove.Moving == false && this.HangTime == 0)
+        {
+             this.Owner.RigidBody.Velocity = Math.Normalize(player.Transform.Translation - this.Owner.Transform.Translation)
+            * this.Speed; 
+        }
+        
+        if(target == null)
+        return;
+        
+        if(SwordBoomerangMove.Moving == true && this.HangTime != 0)
+        {
+        this.Owner.RigidBody.Velocity = Math.Normalize(target.Transform.Translation -
+        this.Owner.Transform.Translation)
+        * this.Speed;
+        }
+        
+        if(this.HangTime > 0 && this.HangTime < this.StartHangTime)
+        {
+        this.Owner.RigidBody.Velocity = Real3(0,0,0);
+        }
+        
+    }
+}

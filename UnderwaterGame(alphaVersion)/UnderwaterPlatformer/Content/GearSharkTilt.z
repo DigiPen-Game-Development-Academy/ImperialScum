@@ -1,0 +1,25 @@
+//Jacob Burke
+
+//A whole bunch of nothing rn
+
+class GearSharkTilt : ZilchComponent
+{
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        var player = this.Space.FindObjectByName("Player");
+        
+        if(player.Transform.Translation.Y < this.Owner.Transform.Translation.Y &&
+        this.Owner.Sprite.FlipX == true)
+        {
+
+        }
+        
+        
+    }
+}

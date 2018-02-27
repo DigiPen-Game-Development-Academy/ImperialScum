@@ -1,0 +1,96 @@
+//Jacob Burke
+
+//Shows the food in the inventory
+
+class Food : ZilchComponent
+{
+    [Static]
+    var Food:Integer = 10;
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        if(AdvInventory.Get("Food") > 0)
+        {
+            this.Owner.SpriteText.Text = "`AdvInventory.Get("Food")`";
+        }
+    }
+}
+
+//Jacob Burke
+
+//Lets you eat the food from the inventory
+
+class Eat : ZilchComponent
+{
+    [Property]
+    var FullAmount:Integer = 10;
+    
+    function Initialize(init : CogInitializer)
+    {
+        //Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        Zero.Connect(this.Owner, Events.LeftMouseDown, this.OnLeftMouseDown);
+        
+    }
+
+    function OnLeftMouseDown(event : ViewportMouseEvent)
+    {
+       if(event.HitObject == this.Owner && Hunger.Hunger <= (120 - this.FullAmount)
+        && AdvInventory.PlayerInventory["Food"] >= 1 && this.Owner.Name == ("Food"))
+       {
+           
+           Hunger.Hunger += this.FullAmount;
+           AdvInventory.PlayerInventory["Food"] -= 1;
+       }
+       
+       if(event.HitObject == this.Owner && Hunger.Hunger <= (120 - this.FullAmount/2)
+        && AdvInventory.PlayerInventory["Fruit"] >= 1 && this.Owner.Name == ("Fruit"))
+       {
+           
+           Hunger.Hunger += this.FullAmount/2;
+           AdvInventory.PlayerInventory["Fruit"] -= 1;
+       }
+        
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+    }
+}
+
+//Jacob Burke
+
+//Lets you drink health potions from the inventory
+
+class HealthPotion : ZilchComponent
+{
+    [Property]
+    var FullAmount:Integer = 4;
+    
+    function Initialize(init : CogInitializer)
+    {
+        //Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        Zero.Connect(this.Owner, Events.LeftMouseDown, this.OnLeftMouseDown);
+        
+    }
+
+    function OnLeftMouseDown(event : ViewportMouseEvent)
+    {
+       if(event.HitObject == this.Owner && Health.CurrentHealth <= (Health.MaxHealth - this.FullAmount)
+        && AdvInventory.PlayerInventory["HealthPotion"] >= 1)
+       {
+           
+           Health.CurrentHealth += this.FullAmount;
+           AdvInventory.PlayerInventory["HealthPotion"] -= 1;
+       }
+        
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+    }
+}
