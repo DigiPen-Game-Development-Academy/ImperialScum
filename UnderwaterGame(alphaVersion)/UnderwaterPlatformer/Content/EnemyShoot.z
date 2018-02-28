@@ -9,7 +9,6 @@ class EnemyShoot : ZilchComponent
     [Property]
     var TimeBetweenShots : Real;
     
-    
     var TimeTillNextShot:Real = 0;
         
     function Initialize(init : CogInitializer)
@@ -58,6 +57,8 @@ class BulletLogic : ZilchComponent
     var Velocity : Real3;
     [Property] var Speed : Real = 1;
     
+    [Property]
+    var VelocityY:Real = 1;
     
     function Initialize(init : CogInitializer)
     {
@@ -73,10 +74,10 @@ class BulletLogic : ZilchComponent
         
         this.Owner.Orientation.LookAtPointWithUp(player.Transform.WorldTranslation, Real3(0,0,1));
         
-        
         var velocity = this.Owner.RigidBody.Velocity;
-            velocity.Y = 5;
+            velocity.Y = this.VelocityY;
             this.Owner.RigidBody.Velocity= velocity;
+        
         if(this.Owner.Transform.Translation.X <= player.Transform.Translation.X)
         {
             this.Owner.Transform.Rotation.Y == 180;

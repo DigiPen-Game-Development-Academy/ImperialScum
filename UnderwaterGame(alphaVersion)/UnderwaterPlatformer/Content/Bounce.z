@@ -23,13 +23,13 @@ class Bounce : ZilchComponent
         
             if (event.OtherObject.PlayerController != null)
             {
-                if(event.OtherObject.Transform.Translation.X < this.Owner.Transform.Translation.X)
+                if(event.OtherObject.Transform.Translation.X < this.Owner.Transform.WorldTranslation.X)
                 this.BounceLevel.X = -25;
                 
-                if(event.OtherObject.Transform.Translation.X > this.Owner.Transform.Translation.X)
+                if(event.OtherObject.Transform.Translation.X > this.Owner.Transform.WorldTranslation.X)
                 this.BounceLevel.X = 25;
                 
-                if(event.OtherObject.Transform.Translation.Y > this.Owner.Transform.Translation.Y)
+                if(event.OtherObject.Transform.Translation.Y > this.Owner.Transform.WorldTranslation.Y)
                 this.BounceLevel.Y = 10;
                 
                 
