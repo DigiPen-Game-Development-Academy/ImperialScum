@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-11.953661, 17.2082672, 0],
+		Vec3 Translation = [-8.97384834, 2.61350203, -0.000999450684],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -51,6 +51,7 @@ Cog =
 	BulletLogic = 
 	{
 		float Speed = 15,
+		float VelocityY = 3,
 	},
 	IgnoreSpaceEffects = 
 	{
