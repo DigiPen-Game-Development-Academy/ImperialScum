@@ -14,9 +14,9 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0.284007192, 3.53576207, 7.06034831e-09],
+		Vec3 Translation = [8.0096674, 2.49593019, 0],
 		Vec3 Scale = [1, 1, 1],
-		Quat Rotation = [0, 0.173648179, 0, 0.98480773],
+		Quat Rotation = [0, 0, 0, 1],
 	},
 	Sprite = 
 	{
@@ -28,7 +28,7 @@ Cog =
 		BlendMode BlendMode = Alpha,
 		SpriteGeometryMode GeometryMode = ZPlane,
 		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-		string SpriteSource = "5aa3e5e08498dd78:Enemy_GearShark()",
+		string SpriteSource = "5a3668a3e2c17727:Enemy_GearShark2()",
 		bool RenderMask = false,
 		bool FlipX = true,
 		bool FlipY = false,
@@ -80,12 +80,19 @@ Cog =
 		Vec4 DamageColor = [1, 0, 0, 1],
 		Vec4 RegularColor = [1, 1, 1, 1],
 	},
-	Follow = 
-	{
-		float Speed = 3,
-	},
 	GearSharkTilt = 
 	{
+	},
+	GearSharkFollow = 
+	{
+		float Speed = 4,
+		bool Active = true,
+		int TimerLength = 30,
+	},
+	GearSharkAttack = 
+	{
+		bool Active = true,
+		int ChargeSpeed = 10,
 	},
 	Hierarchy = 
 	{
@@ -101,7 +108,7 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [0.197036892, 0.104464114, -1.11022302e-16],
+				Vec3 Translation = [-0.0228556395, 0.525924742, -1.11022302e-16],
 				Vec3 Scale = [0.0360335112, 0.0360335112, 0.0360335112],
 				Quat Rotation = [0, 0, 0, 1],
 			},
@@ -180,7 +187,7 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [0.0926702321, 0.0768720433, -1.11022302e-16],
+				Vec3 Translation = [-0.0264384747, 0.379224241, -1.11022302e-16],
 				Vec3 Scale = [0.0360335112, 0.0360335112, 0.0360335112],
 				Quat Rotation = [0, 0, 0, 1],
 			},
