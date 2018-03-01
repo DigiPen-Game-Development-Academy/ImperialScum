@@ -162,7 +162,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-23.6118298, 0.733384311, 49.9990005],
+			Vec3 Translation = [-15.9881401, 3.31495881, 49.9990005],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -174,7 +174,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 4.91920471,
+			float Size = 5.43656635,
 		},
 		EditorCameraController = 
 		{
@@ -182,7 +182,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-23.6118298, 0.733384311, -0.0010000011],
+			Vec3 LookTarget = [-15.9881401, 3.31495881, -0.0010000011],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -1135,7 +1135,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-17.2677803, 0.410337448, 0],
+			Vec3 Translation = [-37.1753006, 0.329577088, 0],
 			Vec3 Scale = [1.76224411, 2.74128628, 40],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -1423,28 +1423,10 @@ Level =
 	},
 	ArchetypeInstance = 
 	{
-		string Name = "5aacbc6f6e4e1dd4:BackgroundMusicPlayer",
-		LinkId = 
-		{
-			uint Id = 29,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [23.9289017, 20.7303047, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Named = 
-		{
-			string Name = "MusicPlayer",
-		},
-	},
-	ArchetypeInstance = 
-	{
 		string Name = "5ab57c97f2406d40:Chest",
 		LinkId = 
 		{
-			uint Id = 30,
+			uint Id = 29,
 		},
 		Transform = 
 		{
@@ -1462,7 +1444,7 @@ Level =
 		string Name = "5ab57c97f2406d40:Chest",
 		LinkId = 
 		{
-			uint Id = 31,
+			uint Id = 30,
 		},
 		Transform = 
 		{
@@ -1480,7 +1462,7 @@ Level =
 		string Name = "5ab50f42fd8f5bb4:GearSpike",
 		LinkId = 
 		{
-			uint Id = 32,
+			uint Id = 31,
 		},
 		Transform = 
 		{
@@ -1497,7 +1479,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 33,
+			uint Id = 32,
 		},
 		Named = 
 		{
@@ -1550,7 +1532,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 34,
+					uint Id = 33,
 				},
 				Named = 
 				{
@@ -1587,7 +1569,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 35,
+			uint Id = 34,
 		},
 		Named = 
 		{
@@ -1640,7 +1622,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 36,
+					uint Id = 35,
 				},
 				Named = 
 				{
@@ -1677,7 +1659,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 37,
+			uint Id = 36,
 		},
 		Named = 
 		{
@@ -1730,7 +1712,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 38,
+					uint Id = 37,
 				},
 				Named = 
 				{
@@ -1768,7 +1750,7 @@ Level =
 		string Name = "5ab3fb4d720d2a14:Gear",
 		LinkId = 
 		{
-			uint Id = 39,
+			uint Id = 38,
 		},
 		Transform = 
 		{
@@ -1785,7 +1767,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 40,
+			uint Id = 39,
 		},
 		Named = 
 		{
@@ -1821,7 +1803,7 @@ Level =
 			bool SendsMessages = true,
 			bool Seamless = true,
 			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
-			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			string SerializedGroupName = "5a5911563de7a901:Enemy",
 			Vec3 Offset = [0, -0.5, 0],
 			Vec3 Size = [0.75, 0.5, 0.5],
 		},
@@ -1853,7 +1835,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 41,
+					uint Id = 40,
 				},
 				Named = 
 				{
@@ -1901,7 +1883,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 42,
+					uint Id = 41,
 				},
 				Named = 
 				{
@@ -1950,7 +1932,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 43,
+					uint Id = 42,
 				},
 				Named = 
 				{
@@ -1999,7 +1981,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 44,
+					uint Id = 43,
 				},
 				Named = 
 				{
@@ -2055,7 +2037,7 @@ Level =
 		string Name = "5addae58d1201ae5:EnemyCrab",
 		LinkId = 
 		{
-			uint Id = 45,
+			uint Id = 44,
 		},
 		Transform = 
 		{
@@ -2072,7 +2054,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 46,
+			uint Id = 45,
 		},
 		Named = 
 		{
@@ -2080,7 +2062,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-24.9027805, -0.0811240077, -0.0010000011],
+			Vec3 Translation = [-34.8767242, 0.120775938, -0.0010000011],
 			Vec3 Scale = [1.25995898, 1.25995898, 1.25995898],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -2123,6 +2105,127 @@ Level =
 			bool Inherit2DMode = true,
 			Vec3 Velocity = [0, 0, 0],
 			Vec3 AngularVelocity = [0, 0, 0],
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 46,
+		},
+		Named = 
+		{
+			string Name = "Mechamaid",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-17.5626507, 3.86326313, -0.0010000011],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5a51ae79d92e4081:Enemy_MechamaidAim()",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 0,
+			uint StartFrame = 1,
+		},
+		CapsuleCollider = 
+		{
+			bool Ghost = true,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "5a5911563de7a901:Enemy",
+			Vec3 Offset = [0, -0.150000006, 0],
+			float Radius = 0.400000006,
+			float Height = 0.699999988,
+			AxisDirection Direction = Y,
+			CapsuleScalingMode ScalingMode = PreserveScale,
+		},
+		RigidBody = 
+		{
+			bool Static = false,
+			bool Asleep = false,
+			bool Kinematic = false,
+			bool RotationLocked = true,
+			bool Mode2D = true,
+			bool AllowSleep = true,
+			bool Inherit2DMode = true,
+			Vec3 Velocity = [0, 0, 0],
+			Vec3 AngularVelocity = [0, 0, 0],
+		},
+		IgnoreSpaceEffects = 
+		{
+			bool Drag = true,
+			bool Flow = true,
+			bool Force = true,
+			bool Gravity = true,
+			bool Thrust = true,
+			bool Vortex = true,
+			bool Wind = true,
+			bool Invalid = false,
+			bool Torque = true,
+			bool PointGravity = true,
+			bool PointForce = true,
+			bool Buoyancy = true,
+			bool Custom = true,
+		},
+		Follow = 
+		{
+			float Speed = 5,
+		},
+		Hierarchy = 
+		{
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 47,
+				},
+				Named = 
+				{
+					string Name = "Enemy_MechamaidTail()",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-0.329234481, -0.752740324, 5.50411642e-07],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, -0.601194501, 0.799102843],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5a51af4304b3360a:Enemy_MechamaidTail()",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				FlipSpriteChild = 
+				{
+				},
+			},
 		},
 	},
 },
