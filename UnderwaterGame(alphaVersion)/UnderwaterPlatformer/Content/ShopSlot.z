@@ -1,0 +1,28 @@
+class ShopSlot : ZilchComponent
+{
+    [Property]
+    var Cost:Integer;
+    
+    [Property]
+    var Name:String;
+    
+    function Initialize(init : CogInitializer)
+    {
+        //Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        Zero.Connect(this.Owner, Events.LeftMouseDown, this.OnLeftMouseDown);
+    }
+
+    function OnLeftMouseDown(event : ViewportMouseEvent)
+    {
+       if(event.HitObject == this.Owner && AdvInventory.PlayerInventory["Gears"] >= this.Cost)
+       {
+           
+           AdvInventory.PlayerInventory["Gears"] -= this.Cost;
+           AdvInventory.PlayerInventory[this.Name] += 1;
+       }
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+    }
+}
