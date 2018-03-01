@@ -111,7 +111,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-41.6075554, -24.7163181, 42],
+			Vec3 Translation = [-30.2715302, 12.6516237, 42],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -123,7 +123,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 12.0992947,
+			float Size = 16.3323345,
 		},
 		EditorCameraController = 
 		{
@@ -131,7 +131,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-41.6075554, -24.7163181, -8.00000095],
+			Vec3 LookTarget = [-30.2715302, 12.6516237, -8.00000095],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -155,7 +155,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-38.6158447, 26.4986172, 0],
+			Vec3 Translation = [-38.4583206, 26.4986172, 0],
 			Vec3 Scale = [21, 25, 40],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -3880,7 +3880,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-29.117321, 15.4183798, 0],
+			Vec3 Translation = [-28.1969376, -0.972046852, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -3904,7 +3904,7 @@ Level =
 		},
 		BoxCollider = 
 		{
-			bool Ghost = false,
+			bool Ghost = true,
 			bool SendsMessages = true,
 			bool Seamless = true,
 			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
@@ -4297,7 +4297,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-38.2494659, -8.55910397, 0],
+			Vec3 Translation = [-42.328907, -8.08172131, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},

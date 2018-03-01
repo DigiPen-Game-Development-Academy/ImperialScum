@@ -7,8 +7,15 @@ class Checkpoint : ZilchComponent
 
     function Initialize(init : CogInitializer)
     {
-        this.RespawnPosition = this.Owner.Transform.Translation;
+        Zero.Connect(init,Events.AllObjectsInitialized, this.OnAllObjectsInitialized);
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnAllObjectsInitialized(event : CogInitializerEvent)
+    {
+        var player = this.Space.FindObjectByName("Player");
+        if( player == null) return;
+        this.RespawnPosition = player.Transform.Translation;
     }
     function OnLogicUpdate(event : UpdateEvent)
 
