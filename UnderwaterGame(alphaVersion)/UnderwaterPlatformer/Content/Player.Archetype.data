@@ -80,22 +80,6 @@ Cog =
 	},
 	PlayerMovement = 
 	{
-		bool Checkpoint1 = false,
-		CogPath CheckPoint = 
-		{
-			string Path = "",
-			bool ErrorOnResolveToNull = false,
-			bool ErrorOnPathCantCompute = false,
-			bool ErrorOnDirectLinkFail = false,
-			bool UpdateCogOnPathChange = true,
-			bool UpdatePathOnCogChange = true,
-			bool UpdateCogOnInitialize = true,
-			bool ResolvedNullErrorOccurred = false,
-			uint ResolvedCog = 4294967293,
-			CogPathPreference PathPreference0 = CogRelative,
-			CogPathPreference PathPreference1 = SpaceRelative,
-			CogPathPreference PathPreference2 = Absolute,
-		},
 		float Speed = 30,
 		float JumpSpeed = 15,
 		Enum KeyUp = W,
@@ -112,7 +96,6 @@ Cog =
 		string JumpAnimation = "5a4fd11907a697a9:PlayerJump1000",
 		string FallAnimation = "5a4fd11807fa3010:PlayerJump1002",
 		string MidAnimation = "5a4fd11807c8b0cf:PlayerJump1001",
-		string StabAnimation = "5a51993f910964dc:Player_StabStraight()",
 		string ThrowAnimation = "5a2d11c157e334b3:PlayerThrow2()",
 		string JumpSound = "",
 		int Lose = 1,
@@ -127,9 +110,6 @@ Cog =
 	Hunger = 
 	{
 		float Timer = 5,
-	},
-	PlayerStab = 
-	{
 	},
 	Hierarchy = 
 	{
