@@ -28,6 +28,9 @@ class PlayerController : ZilchComponent
     var MidAnimation:SpriteSource;
     
     [Property]
+    var StabAnimation:SpriteSource;
+    
+    [Property]
     var ThrowAnimation:SpriteSource;
     var ThrowTime:Real = 0.2;
     
@@ -57,9 +60,13 @@ class PlayerController : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-
+        if(Zero.Keyboard.KeyIsPressed(Keys.Space))
+        {
+            this.Owner.Sprite.SpriteSource = this.StabAnimation;
+        }
         
-        if(this.Owner.Sprite.SpriteSource == this.ThrowAnimation)
+        if(this.Owner.Sprite.SpriteSource == this.ThrowAnimation || 
+        this.Owner.Sprite.SpriteSource == this.StabAnimation)
         {
             this.ThrowTime -= event.Dt;
             
