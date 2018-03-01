@@ -110,7 +110,6 @@ class Health : ZilchComponent
         if(this.Invincibility == true && this.InvincibilityTimer > 0)
         {
             this.InvincibilityTimer -= event.Dt;
-            Console.WriteLine(this.InvincibilityTimer);
         }
         
         else if(this.InvincibilityTimer <= 0)

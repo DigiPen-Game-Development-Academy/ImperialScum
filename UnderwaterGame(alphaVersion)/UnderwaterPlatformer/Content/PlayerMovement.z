@@ -83,8 +83,6 @@ class PlayerMovement : ZilchComponent
     function OnLogicUpdate(event : UpdateEvent)
     {
         
-        Console.WriteLine(this.Checkpoint1);
-        
         var direction = Real3.Zero;
         
         var velocity = direction * this.Speed;
