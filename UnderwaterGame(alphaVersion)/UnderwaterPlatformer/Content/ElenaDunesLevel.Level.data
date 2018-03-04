@@ -104,7 +104,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [23.127182, 11.4845934, 50],
+			Vec3 Translation = [-2.83052874, -31.0985184, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -116,7 +116,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 6.78809786,
+			float Size = 74.0818481,
 		},
 		EditorCameraController = 
 		{
@@ -124,7 +124,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [23.127182, 11.4845934, 3.61776785e-07],
+			Vec3 LookTarget = [-2.83052874, -31.0985184, 3.61776785e-07],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -206,7 +206,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0.864686012, -24.1909409, 0],
+			Vec3 Translation = [0.864686012, -23.962429, 0],
 			Vec3 Scale = [100, 26.5, 40],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -3202,7 +3202,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-43.7336464, -15.9037399, 0],
+			Vec3 Translation = [-45.4477119, -15.7966099, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -3212,11 +3212,11 @@ Level =
 			bool VisibilityCulling = true,
 			bool VisibilityEvents = true,
 			bool CastShadows = false,
-			Vec4 Color = [1, 0, 0, 1],
+			Vec4 Color = [0.51425004, 0.543702602, 0.935000062, 1],
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5275aa4d802dd6dc:Square",
+			string SpriteSource = "5a850fe27c5716d0:Enemy Spawner Prototype",
 			bool RenderMask = false,
 			bool FlipX = false,
 			bool FlipY = false,
@@ -3270,7 +3270,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [4.58789921, -18.4464111, 0],
+			Vec3 Translation = [4.48076534, -15.2325344, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -3280,11 +3280,11 @@ Level =
 			bool VisibilityCulling = true,
 			bool VisibilityEvents = true,
 			bool CastShadows = false,
-			Vec4 Color = [1, 0, 0, 1],
+			Vec4 Color = [0.523249984, 0.596732497, 0.909999967, 1],
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5275aa4d802dd6dc:Square",
+			string SpriteSource = "5a850fe27c5716d0:Enemy Spawner Prototype",
 			bool RenderMask = false,
 			bool FlipX = false,
 			bool FlipY = false,
@@ -3308,7 +3308,7 @@ Level =
 		},
 		EnemySpawner = 
 		{
-			float Waittime = 7,
+			float Waittime = 20,
 			string WhatToSpawn = "5addae58d1201ae5:EnemyCrab",
 		},
 	},
@@ -8996,6 +8996,54 @@ Level =
 			bool AnimationActive = true,
 			float AnimationSpeed = 1,
 			uint StartFrame = 0,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 268,
+		},
+		Named = 
+		{
+			string Name = "Checkpoint",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [32.369648, 43.8102608, 3.61776785e-07],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 0],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5275aa4d802dd6dc:Square",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		BoxCollider = 
+		{
+			bool Ghost = true,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [0.5, 0.5, 0.5],
+		},
+		Checkpoint = 
+		{
 		},
 	},
 },
