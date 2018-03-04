@@ -6,6 +6,8 @@ class RandomRoomGenerator : ZilchComponent
 {
     var Level : Level = null;
     
+    var BossLevel : Level = Level.BossLevel;
+    
     [Static]
     var FinishedLevel : Array[Level] = new Array[Level]();
 
@@ -60,6 +62,7 @@ class RandomRoomGenerator : ZilchComponent
                 var count = remainingLevels.Count;
                 if(count == 0)
                 {
+                    this.Space.LoadLevel(this.BossLevel);
                     return;
                 }
                 var rand = new Random();
@@ -70,6 +73,7 @@ class RandomRoomGenerator : ZilchComponent
             } while (RandomRoomGenerator.FinishedLevel.FindFirstIndex(this.Level) >= 0)
             
             this.Space.LoadLevel(this.Level);
+
         }
     }
 }
