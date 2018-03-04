@@ -38,6 +38,11 @@ class Health : ZilchComponent
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
         Zero.Connect(this.Owner, Events.CollisionPersisted, this.OnCollisionPersisted);
         
+        if(AdvInventory.PlayerInventory["ArmorCopper"] >= 1)
+        {
+            Health.MaxHealth = 40;
+        }
+        
         Health.CurrentHealth = Health.MaxHealth;
     }
 

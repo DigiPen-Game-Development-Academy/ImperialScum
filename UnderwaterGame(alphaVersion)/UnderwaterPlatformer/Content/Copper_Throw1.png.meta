@@ -2,15 +2,15 @@ ImageContent =
 {
 	SpriteSourceBuilder = 
 	{
-		string Name = "Copper_Walk()",
-		uint64 ResourceId = 5a36562611f97be7,
+		string Name = "Copper_Throw1",
+		uint64 ResourceId = 5a3655a665c56408,
 		uint64 AtlasId = 5274cf95e4a661fd,
-		uint FrameSizeX = 16,
+		uint FrameSizeX = 20,
 		uint FrameSizeY = 32,
-		uint FrameCount = 4,
-		float FrameDelay = 0.0833333358,
-		float OriginX = 8,
-		float OriginY = 16,
+		uint FrameCount = 7,
+		float FrameDelay = 0.0399999991,
+		float OriginX = 10,
+		float OriginY = 19,
 		float PixelsPerUnit = 16,
 		bool Smoothing = false,
 		bool Looping = true,
