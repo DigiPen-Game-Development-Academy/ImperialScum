@@ -22,6 +22,9 @@ class Health : ZilchComponent
     [Property]
     var RegularColor:Real4;
     
+    [Property]
+    var HitSoundThing : SoundCue;
+    
     var Timer2:Real = 0.2;
     
     var Invincibility : Boolean = false;
@@ -53,11 +56,13 @@ class Health : ZilchComponent
             Health.CurrentHealth -= 2;
             this.Owner.Sprite.Color = this.DamageColor;
             this.Invincibility = true;
+            this.Owner.SoundEmitter.PlayCue(this.HitSoundThing);
         }
         if(event.OtherObject.BulletLogic != null && Health.CurrentHealth > 0 && this.Invincibility != true)
         {
             Health.CurrentHealth -= 2;
             this.Invincibility = true;
+            this.Owner.SoundEmitter.PlayCue(this.HitSoundThing);
         }
         
         if(event.OtherObject.JaggedRock != null && Health.CurrentHealth > 0 && this.Invincibility != true)
@@ -65,6 +70,7 @@ class Health : ZilchComponent
             
             Health.CurrentHealth -= 1;
             this.Invincibility = true;
+            this.Owner.SoundEmitter.PlayCue(this.HitSoundThing);
         }
         
         if(event.OtherObject.BossScript != null && Health.CurrentHealth > 0 && this.Invincibility != true)
@@ -72,6 +78,7 @@ class Health : ZilchComponent
             
             Health.CurrentHealth -= 5;
             this.Invincibility = true;
+            this.Owner.SoundEmitter.PlayCue(this.HitSoundThing);
         }
     }
 

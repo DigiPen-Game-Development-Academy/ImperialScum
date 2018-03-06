@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-12.7101765, -5.99271917, -3.81469727e-06],
+		Vec3 Translation = [-0.530736387, -1.90821731, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -70,7 +70,7 @@ Cog =
 	},
 	HitSound = 
 	{
-		string HitSoundThing = "",
+		string HitSoundThing = "5aacbc9a12b8fb36:HitSound",
 	},
 	SoundEmitter = 
 	{
