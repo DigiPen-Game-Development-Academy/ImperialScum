@@ -85,7 +85,7 @@ class PlayerController : ZilchComponent
                 return;
             }
             else
-            this.ThrowTime += 0.2;
+            this.ThrowTime += 0.3;
         
         }
         

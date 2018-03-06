@@ -22,7 +22,7 @@ class EnemyHealth : ZilchComponent
     function OnCollisionStarted(event : CollisionEvent)
     {
         //Check if this is the sword's hitbox. Sam did this since it is commented.
-        if(event.OtherObject == this.Space.FindObjectByName("SwordHitbox"))
+        if(event.OtherObject == this.Space.FindObjectByName("SwordHitbox") || event.OtherObject == this.Space.FindObjectByName("Spear"))
         {
             this.Health -= EnemyHealth.Damage;
             this.Owner.Sprite.Color = this.DamageColor;
