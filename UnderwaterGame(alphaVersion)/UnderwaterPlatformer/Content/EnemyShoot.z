@@ -41,6 +41,7 @@ class EnemyShoot : ZilchComponent
     {
         
         if (this.Bullet == null) return;
+        if(this.Owner.Name == "Laser" && BossScript.LaserActive == false) return;
         
         var player = this.Space.FindObjectByName("Player");
         if (player == null) return;

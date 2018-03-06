@@ -14,13 +14,13 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0, 0, 0],
+		Vec3 Translation = [0, 0, 0.100000001],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, -0.707106829, 0.707106829],
 	},
 	Sprite = 
 	{
-		bool Visible = false,
+		bool Visible = true,
 		bool VisibilityCulling = true,
 		bool VisibilityEvents = true,
 		bool CastShadows = false,
@@ -28,7 +28,7 @@ Cog =
 		BlendMode BlendMode = Alpha,
 		SpriteGeometryMode GeometryMode = ZPlane,
 		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-		string SpriteSource = "5a51f2bfb779cbb7:PlayerSpear",
+		string SpriteSource = "5a30dc41e716c9a5:Weap_Spear",
 		bool RenderMask = false,
 		bool FlipX = false,
 		bool FlipY = false,
@@ -43,8 +43,8 @@ Cog =
 		bool Seamless = true,
 		string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
 		string SerializedGroupName = "4e740859314e5515:DefaultGroup",
-		Vec3 Offset = [-0.100000001, 0, 0],
-		Vec3 Size = [0.150000006, 0.5, 0.5],
+		Vec3 Offset = [0, 0.600000024, 0],
+		Vec3 Size = [0.25, 0.5, 0.5],
 	},
 	Spear = 
 	{
