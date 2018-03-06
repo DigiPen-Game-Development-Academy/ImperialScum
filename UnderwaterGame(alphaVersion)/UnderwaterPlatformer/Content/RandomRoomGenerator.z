@@ -5,6 +5,8 @@
 class RandomRoomGenerator : ZilchComponent
 {
     var Level : Level = null;
+    [Property] var LoadingLevel : Level;
+    var Timer : Real = 3.3;
     
     var BossLevel : Level = Level.BossLevel;
     
@@ -72,8 +74,8 @@ class RandomRoomGenerator : ZilchComponent
                 
             } while (RandomRoomGenerator.FinishedLevel.FindFirstIndex(this.Level) >= 0)
             
+            //start loading screen
             this.Space.LoadLevel(this.Level);
-
         }
     }
 }

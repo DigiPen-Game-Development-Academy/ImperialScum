@@ -1,0 +1,169 @@
+class VolumeControls : ZilchComponent
+{
+    [Property] var Color : Real4;
+    [Property] var Color2 : Real4;
+    [Static] var VolumeLevel : Integer;
+    function Initialize(init : CogInitializer)
+    {
+        //Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        Zero.Connect(this.Owner, Events.MouseDown, this.OnMouseDown);
+    }
+
+    function OnMouseDown(event : ViewportMouseEvent)
+    {
+        if(this.Owner == this.Space.FindObjectByName("Volume1") && this.Owner.Sprite.Color == this.Color2)
+        {
+            this.Owner.Sprite.Color = this.Color;
+            
+            VolumeControls.VolumeLevel += 1;
+        }
+        else if(this.Owner == this.Space.FindObjectByName("Volume1") && this.Owner.Sprite.Color == this.Color)
+        {
+            this.Owner.Sprite.Color = this.Color2;
+            
+            var otherObject1 = this.Space.FindObjectByName("Volume2");
+            otherObject1.Sprite.Color = this.Color2;
+            var otherObject2 = this.Space.FindObjectByName("Volume3");
+            otherObject2.Sprite.Color = this.Color2;
+            var otherObject3 = this.Space.FindObjectByName("Volume4");
+            otherObject3.Sprite.Color = this.Color2;
+            var otherObject4 = this.Space.FindObjectByName("Volume5");
+            otherObject4.Sprite.Color = this.Color2;
+            var otherObject5 = this.Space.FindObjectByName("Volume6");
+            otherObject5.Sprite.Color = this.Color2;
+            
+            VolumeControls.VolumeLevel -= 6;
+        }
+        
+        if(this.Owner == this.Space.FindObjectByName("Volume2") && this.Owner.Sprite.Color == this.Color2)
+        {
+            this.Owner.Sprite.Color = this.Color;
+            
+            var otherObject1 = this.Space.FindObjectByName("Volume1");
+            otherObject1.Sprite.Color = this.Color;
+            
+            VolumeControls.VolumeLevel += 2;
+        }
+        else if(this.Owner == this.Space.FindObjectByName("Volume2") && this.Owner.Sprite.Color == this.Color)
+        {
+            this.Owner.Sprite.Color = this.Color2;
+            
+            var otherObject1 = this.Space.FindObjectByName("Volume3");
+            otherObject1.Sprite.Color = this.Color2;
+            var otherObject2 = this.Space.FindObjectByName("Volume4");
+            otherObject2.Sprite.Color = this.Color2;
+            var otherObject3 = this.Space.FindObjectByName("Volume5");
+            otherObject3.Sprite.Color = this.Color2;
+            var otherObject4 = this.Space.FindObjectByName("Volume6");
+            otherObject4.Sprite.Color = this.Color2;
+            
+            VolumeControls.VolumeLevel -= 5;
+        }
+        
+        if(this.Owner == this.Space.FindObjectByName("Volume3") && this.Owner.Sprite.Color == this.Color2)
+        {
+            this.Owner.Sprite.Color = this.Color;
+            
+            var otherObject1 = this.Space.FindObjectByName("Volume1");
+            otherObject1.Sprite.Color = this.Color;
+            var otherObject2 = this.Space.FindObjectByName("Volume2");
+            otherObject2.Sprite.Color = this.Color;
+            
+            VolumeControls.VolumeLevel += 3;
+        }
+        else if(this.Owner == this.Space.FindObjectByName("Volume3") && this.Owner.Sprite.Color == this.Color)
+        {
+            this.Owner.Sprite.Color = this.Color2;
+            
+            var otherObject1 = this.Space.FindObjectByName("Volume4");
+            otherObject1.Sprite.Color = this.Color2;
+            var otherObject2 = this.Space.FindObjectByName("Volume5");
+            otherObject2.Sprite.Color = this.Color2;
+            var otherObject3 = this.Space.FindObjectByName("Volume6");
+            otherObject3.Sprite.Color = this.Color2;
+            
+            VolumeControls.VolumeLevel -= 4;
+        }
+        
+        if(this.Owner == this.Space.FindObjectByName("Volume4") && this.Owner.Sprite.Color == this.Color2)
+        {
+            this.Owner.Sprite.Color = this.Color;
+            
+            var otherObject1 = this.Space.FindObjectByName("Volume1");
+            otherObject1.Sprite.Color = this.Color;
+            var otherObject2 = this.Space.FindObjectByName("Volume2");
+            otherObject2.Sprite.Color = this.Color;
+            var otherObject3 = this.Space.FindObjectByName("Volume3");
+            otherObject3.Sprite.Color = this.Color;
+            
+            VolumeControls.VolumeLevel += 4;
+        }
+        else if(this.Owner == this.Space.FindObjectByName("Volume4") && this.Owner.Sprite.Color == this.Color)
+        {
+            this.Owner.Sprite.Color = this.Color2;
+            
+            var otherObject1 = this.Space.FindObjectByName("Volume5");
+            otherObject1.Sprite.Color = this.Color2;
+            var otherObject2 = this.Space.FindObjectByName("Volume6");
+            otherObject2.Sprite.Color = this.Color2;
+            
+            VolumeControls.VolumeLevel -= 3;
+        }
+        
+        if(this.Owner == this.Space.FindObjectByName("Volume5") && this.Owner.Sprite.Color == this.Color2)
+        {
+            this.Owner.Sprite.Color = this.Color;
+            
+            var otherObject1 = this.Space.FindObjectByName("Volume1");
+            otherObject1.Sprite.Color = this.Color;
+            var otherObject2 = this.Space.FindObjectByName("Volume2");
+            otherObject2.Sprite.Color = this.Color;
+            var otherObject3 = this.Space.FindObjectByName("Volume3");
+            otherObject3.Sprite.Color = this.Color;
+            var otherObject4 = this.Space.FindObjectByName("Volume4");
+            otherObject4.Sprite.Color = this.Color;
+            
+            VolumeControls.VolumeLevel += 5;
+        }
+        else if(this.Owner == this.Space.FindObjectByName("Volume5") && this.Owner.Sprite.Color == this.Color)
+        {
+            this.Owner.Sprite.Color = this.Color2;
+            
+            var otherObject1 = this.Space.FindObjectByName("Volume6");
+            otherObject1.Sprite.Color = this.Color2;
+            
+            VolumeControls.VolumeLevel -= 2;
+        }
+        
+        
+        if(this.Owner == this.Space.FindObjectByName("Volume6") && this.Owner.Sprite.Color == this.Color2)
+        {
+            this.Owner.Sprite.Color = this.Color;
+            
+            var otherObject1 = this.Space.FindObjectByName("Volume1");
+            otherObject1.Sprite.Color = this.Color;
+            var otherObject2 = this.Space.FindObjectByName("Volume2");
+            otherObject2.Sprite.Color = this.Color;
+            var otherObject3 = this.Space.FindObjectByName("Volume3");
+            otherObject3.Sprite.Color = this.Color;
+            var otherObject4 = this.Space.FindObjectByName("Volume4");
+            otherObject4.Sprite.Color = this.Color;
+            var otherObject5 = this.Space.FindObjectByName("Volume5");
+            otherObject5.Sprite.Color = this.Color;
+            
+            VolumeControls.VolumeLevel += 6;
+        }
+        else if(this.Owner == this.Space.FindObjectByName("Volume5") && this.Owner.Sprite.Color == this.Color)
+        {
+            this.Owner.Sprite.Color = this.Color2;
+            
+            VolumeControls.VolumeLevel -= 1;
+        }
+        
+    
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+    }
+}
