@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [8.0096674, 2.49593019, 0],
+		Vec3 Translation = [28.357235, 46.301899, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -93,6 +93,19 @@ Cog =
 	{
 		bool Active = true,
 		int ChargeSpeed = 10,
+	},
+	SoundEmitter = 
+	{
+		float Volume = 1,
+		float Pitch = 0,
+		float PitchSemitones = 0,
+		bool UsePitchSemitones = false,
+		bool Positional = true,
+		int Version = 1,
+	},
+	HitSound = 
+	{
+		string HitSoundThing = "",
 	},
 	Hierarchy = 
 	{
