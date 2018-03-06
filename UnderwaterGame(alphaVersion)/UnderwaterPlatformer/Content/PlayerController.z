@@ -57,6 +57,16 @@ class PlayerController : ZilchComponent
         
         Zero.Connect(this.Space, Events.LeftMouseDown, this.OnLeftMouseDown);
         
+        Zero.Connect(this.Space, Events.RightMouseDown, this.OnRightMouseDown);
+        
+    }
+
+    function OnRightMouseDown(event : ViewportMouseEvent)
+    {
+        if(Inventory.Exists == false)
+        {
+            this.Owner.Sprite.SpriteSource = this.StabAnimation;
+        }
     }
 
 
@@ -70,11 +80,6 @@ class PlayerController : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-        if(Zero.Keyboard.KeyIsPressed(Keys.Space))
-        {
-            this.Owner.Sprite.SpriteSource = this.StabAnimation;
-        }
-        
         if(this.Owner.Sprite.SpriteSource == this.ThrowAnimation || 
         this.Owner.Sprite.SpriteSource == this.StabAnimation)
         {
