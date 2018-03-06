@@ -1,5 +1,10 @@
 class PlayerStab : ZilchComponent
 {
+    [Property]
+    var SpearArchetype : Archetype;
+    
+    var Spear : Cog;
+    
 function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
@@ -7,10 +12,29 @@ function Initialize(init : CogInitializer)
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-        if(Zero.Keyboard.KeyIsPressed(Keys.Space))
+        if(Zero.Keyboard.KeyIsPressed(Keys.Space) && this.Spear == null)
         {
             var pos = this.Owner.Transform.Translation;
-            this.Space.CreateAtPosition(Archetype.Spear, pos);
+            this.Spear = this.Space.CreateAtPosition(Archetype.Spear, pos);
+            
+            this.Spear.AttachToRelative(this.Owner);
+            
+            
+            
+            //Mousey Stuff
+            var mouseScreen = Zero.Mouse.ScreenPosition;
+            var viewport = this.LevelSettings.CameraViewport;
+            var mouseWorld = viewport.ScreenToWorldZPlane(mouseScreen, 0);
+            
+            var toMouse = mouseWorld - this.Owner.Transform.WorldTranslation;
+            var angle = Math.Angle2D(toMouse);
+            this.Spear.Transform.SetEulerAnglesXYZ(0,0,angle + Math.Pi / -2.0);
+            
+            //Animatey Stuff
+            var sequence = Action.Sequence(this.Owner.Actions);
+            Action.Property(sequence, @this.Spear.Transform.Translation,
+                Math.Normalize(toMouse),0.08,Ease.SinOut);
+            
             
         }
         
@@ -18,47 +42,17 @@ function Initialize(init : CogInitializer)
 }
 class Spear : ZilchComponent
 {
-    //A cool variable for amazing stabbies
-    var Slide : Real = 0;
-    
     var Timer:Real = 0;
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
-        
-        //Flip the sprite if the player is facing left
-        var player = this.Space.FindObjectByName("Player");
-        if (player.Sprite.FlipX == true)
-        {
-            this.Owner.Sprite.FlipY = true;
-        }
     }
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-        var player = this.Space.FindObjectByName("Player");
-        
         this.Timer += event.Dt;
-        
-        //This makes the Spear stay on the player
-        if(this.Timer < 0.1)
-        {
-            //Slide, depending on which way the player faces
-            if (player.Sprite.FlipX == true){ this.Slide -= 0.25; }
-            else{ this.Slide += 0.25; }
-        }
-        this.Owner.Transform.Translation = player.Transform.Translation + Real3(this.Slide,-0.2,-0.1);
-        this.Owner.Sprite.Visible = true;
-        
-        /*
-        if(this.Timer <= 0.1)
-        this.Owner.Transform.Translation = player.Transform.Translation + Real3(0.7,-0.3,1);
-        else if(this.Timer > 0.15)
-        this.Owner.Transform.Translation = player.Transform.Translation + Real3(1,-0.3,1);
-        */
         
         if(this.Timer >= 0.3)
         this.Owner.Destroy();
-        
-    }
+    } 
 }
