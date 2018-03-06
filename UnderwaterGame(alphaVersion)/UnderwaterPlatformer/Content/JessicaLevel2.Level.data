@@ -104,7 +104,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-24.7793102, 0.301630646, 49],
+			Vec3 Translation = [-15.3786077, -43.5163116, 49],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -116,7 +116,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 81.8730927,
+			float Size = 18.268383,
 		},
 		EditorCameraController = 
 		{
@@ -124,7 +124,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-24.7793102, 0.301630646, -0.999999881],
+			Vec3 LookTarget = [-15.3786077, -43.5163116, -0.999999881],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -183,7 +183,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-43.9730835, 32.0806084, 40],
+			Vec3 Translation = [-20.0357265, -47.5614586, 40],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -244,7 +244,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-45.8260994, 33.6690865, 0],
+			Vec3 Translation = [-19.6372108, -47.3395576, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -314,7 +314,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-29.0622673, -45.8356934, 0],
+			Vec3 Translation = [-27.8907166, -46.4831963, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0.00113470259, 0.999999344],
 		},
@@ -388,6 +388,12 @@ Level =
 			Vec3 UpVector = [0, 0, 1],
 			Vec3 ForwardVector = [1, 0, 0],
 			OrientationBases DefaultBases = ForwardXUpZ,
+		},
+		EnemyHealth = 
+		{
+			int Health = 100,
+			Vec4 DamageColor = [1, 0, 0, 1],
+			Vec4 RegularColor = [1, 1, 1, 1],
 		},
 		Hierarchy = 
 		{
@@ -746,8 +752,8 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-32.5406342, -47.5074959, 0],
-			Vec3 Scale = [3, 3, 1],
+			Vec3 Translation = [-33.4927025, -47.6435051, 0],
+			Vec3 Scale = [0.762305975, 3, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Sprite = 
@@ -1788,6 +1794,24 @@ Level =
 		Named = 
 		{
 			string Name = "Snail",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5abffaed2bf2cc56:Bullet",
+		LinkId = 
+		{
+			uint Id = 62,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-19.5344067, -43.455101, -1],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Bullet",
 		},
 	},
 },

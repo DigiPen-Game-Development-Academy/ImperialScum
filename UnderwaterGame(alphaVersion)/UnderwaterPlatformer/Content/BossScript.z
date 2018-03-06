@@ -179,14 +179,14 @@ class BossScript : ZilchComponent
             this.Owner.Sprite.FlipX = true;
             Action.Property
             (seq, @this.Owner.Transform.Translation,
-            posistion + Real3(-1,0,0), 2, Ease.QuadIn);
+            posistion + Real3(-2,0,0), 1, Ease.QuadIn);
             }
             else if(this.Owner.Sprite.FlipX == true)
             {
             this.Owner.Sprite.FlipX = false;
             Action.Property
             (seq, @this.Owner.Transform.Translation,
-            posistion + Real3(1,0,0), 2, Ease.QuadIn);
+            posistion + Real3(2,0,0), 1, Ease.QuadIn);
             }
         
     }
@@ -252,7 +252,8 @@ class BombFish : ZilchComponent
 
   function OnCollisionStarted(event : CollisionEvent)
   {
-      if(event.OtherObject.PlayerController != null)
+      if(event.OtherObject.PlayerController != null || event.OtherObject.Spear != null ||
+      event.OtherObject.SwordBoomerangMove != null)
       {
           this.Exploding = true;
       }
