@@ -131,15 +131,12 @@ class BossScript : ZilchComponent
     
     function SendFish()
     {
-        Console.WriteLine("SendFish");
         var rand = new Random();
         var randomDie = rand.DieRoll(5) + 5;
-        var randomPos = rand.DieRoll(7) - 4;
         
         while(randomDie > 0)
         {
-        var pos = this.Owner.Transform.Translation.X + randomPos;
-        this.Space.CreateAtPosition(this.Fish, Real3(this.Owner.Transform.WorldTranslation.Y, pos, 0));
+        this.Space.CreateAtPosition(this.Fish, this.Owner.Transform.Translation);
         randomDie -= 1;
         }
         
@@ -195,4 +192,49 @@ class Laser : ZilchComponent
     else
     this.Owner.Sprite.Color = this.Invisible;
   }
+}
+
+class BombFish : ZilchComponent
+{
+    [Property]
+    var StaticState:RigidBodyDynamicState;
+    
+    [Property]
+    var Timer:Real = 2;
+    
+    var Exploding:Boolean = false;
+    
+    [Property]
+    var RedColor:Real4;
+    
+
+  function Initialize(init : CogInitializer)
+  {
+    Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
+    Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+  }
+
+  function OnLogicUpdate(event : UpdateEvent)
+  {
+      if(this.Exploding == true)
+      {
+          this.Timer -= event.Dt;
+          this.Owner.RigidBody.DynamicState = this.StaticState;
+          this.Owner.Sprite.Color = this.RedColor;
+      }
+      if(this.Timer <= 0)
+      {
+      this.Space.CreateAtPosition(Archetype.Explosion, this.Owner.Transform.Translation);
+      this.Owner.Destroy();
+    }
+  }
+
+  function OnCollisionStarted(event : CollisionEvent)
+  {
+      if(event.OtherObject.PlayerController != null)
+      {
+          this.Exploding = true;
+      }
+  }
+
 }
