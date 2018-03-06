@@ -20,18 +20,18 @@ class BossMusic : ZilchComponent
           Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
           Zero.Connect(this.Owner, Events.CollisionEnded, this.OnCollisionEnded);
     }
+    
+    function OnCollisionStarted(event : CollisionEvent)
+    {
+        BossMusic.BossMusicStart = true;
+    }
 
     function OnCollisionEnded(event : CollisionEvent)
     {
-           if(this.PlayOnce <= 1)
+        if(this.PlayOnce <= 1)
         {
         this.Owner.SoundEmitter.PlayCue(this.BossGameMusic);
         this.PlayOnce += 5;
         }
-    }
-
-    function OnCollisionStarted(event : CollisionEvent)
-    {
-        BossMusic.BossMusicStart = true;
     }
 }
