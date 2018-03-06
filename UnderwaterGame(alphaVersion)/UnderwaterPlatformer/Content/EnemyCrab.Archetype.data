@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-27.0986137, 16.821106, 0],
+		Vec3 Translation = [-9.55353642, 20.995203, 0],
 		Vec3 Scale = [0.998837471, 0.998837471, 0.998837471],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -192,7 +192,7 @@ Cog =
 			},
 			Named = 
 			{
-				string Name = "Sprite",
+				string Name = "CrabVision",
 			},
 			Transform = 
 			{

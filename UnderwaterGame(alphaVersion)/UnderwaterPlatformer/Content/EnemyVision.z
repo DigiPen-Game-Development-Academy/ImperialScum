@@ -11,15 +11,34 @@ class EnemyVision : ZilchComponent
     {
         if(event.OtherObject.PlayerController != null)
         {
-        this.Owner.Parent.EnemyController.Active = false;
+            //Crab
+            if (this.Owner == this.Space.FindObjectByName("CrabVision"))
+            this.Owner.Parent.EnemyController.Active = false;
+            
+            //Shark and Fish
+            if (this.Owner == this.Space.FindObjectByName("SharkVision"))
+            this.Owner.Parent.GearSharkFollow.Aggro = false;
         }
     }
 
     function OnCollisionStarted(event : CollisionEvent)
     {
-        if(event.OtherObject.PlayerController != null)
-        {
-        this.Owner.Parent.EnemyController.Active = true;
+                
+        //Crab
+        if (this.Owner.Name == "CrabVision")
+            {
+            if(event.OtherObject.PlayerController != null)
+            {
+            this.Owner.Parent.EnemyController.Active = true;
+            }
+        }
+        //Shark and Fish
+        if (this.Owner.Name == "SharkVision")
+            {
+            if(event.OtherObject.PlayerController != null)
+            {
+            this.Owner.Parent.GearSharkFollow.Aggro = true;
+            }
         }
         
     }

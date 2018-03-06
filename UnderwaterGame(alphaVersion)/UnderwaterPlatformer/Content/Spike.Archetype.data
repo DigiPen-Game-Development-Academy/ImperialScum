@@ -6,16 +6,12 @@ Cog =
 	},
 	Named = 
 	{
-		string Name = "Explode",
-	},
-	Archetyped = 
-	{
-		string Name = "5a5720164d7d2304:Explosion",
+		string Name = "GearSpike",
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-1.21253932, 6.64174604, 0],
-		Vec3 Scale = [0.584235251, 0.584235251, 0.584235251],
+		Vec3 Translation = [0, 0, 0],
+		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
 	Sprite = 
@@ -24,11 +20,11 @@ Cog =
 		bool VisibilityCulling = true,
 		bool VisibilityEvents = true,
 		bool CastShadows = false,
-		Vec4 Color = [1, 0.389999986, 0, 1],
+		Vec4 Color = [1, 1, 1, 1],
 		BlendMode BlendMode = Alpha,
 		SpriteGeometryMode GeometryMode = ZPlane,
 		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-		string SpriteSource = "5274db4c2e7c11f9:Circle",
+		string SpriteSource = "5a3138c577110626:Spikes",
 		bool RenderMask = false,
 		bool FlipX = false,
 		bool FlipY = false,
@@ -36,26 +32,20 @@ Cog =
 		float AnimationSpeed = 1,
 		uint StartFrame = 0,
 	},
-	SphereCollider = 
+	JaggedRock = 
 	{
-		bool Ghost = true,
+	},
+	BoxCollider = 
+	{
+		bool Ghost = false,
 		bool SendsMessages = true,
 		bool Seamless = true,
 		string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
 		string SerializedGroupName = "4e740859314e5515:DefaultGroup",
 		Vec3 Offset = [0, 0, 0],
-		float Radius = 0.5,
+		Vec3 Size = [0.5, 0.5, 0.5],
 	},
-	Area = 
-	{
-		Vec2 Size = [1, 1],
-		Location Origin = Center,
-	},
-	Bounce = 
-	{
-		Vec3 BounceLevel = [0, 0, 0],
-	},
-	Explosion = 
+	Hierarchy = 
 	{
 	},
 },

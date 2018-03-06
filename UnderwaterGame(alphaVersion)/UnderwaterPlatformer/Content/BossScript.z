@@ -28,6 +28,12 @@ class BossScript : ZilchComponent
     [Property]
     var Speed:Integer = 10;
     
+    var SpawnFishTimer:Real = 1;
+    
+    var StartSpawn:Boolean = false;
+    
+    var RandomDie:Integer;
+    
     function Initialize(init : CogInitializer)
     {
         this.ChooseEvent();
@@ -56,6 +62,28 @@ class BossScript : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
+        if(this.StartSpawn == true)
+        {
+        this.SpawnFishTimer -= event.Dt;
+        }
+        
+        if(this.SpawnFishTimer <= 0)
+        {
+            this.Space.CreateAtPosition(this.Fish, this.Owner.Transform.Translation);
+            this.RandomDie -= 1;
+            if(this.RandomDie > 0)
+            {
+            this.SpawnFishTimer += 1;
+            }
+            else
+            {
+            this.AbilityEnd = true;
+            this.StartSpawn = false;
+            this.SpawnFishTimer += 1;
+            }
+            
+        }
+            
         
         if(this.AbilityEnd == true)
         {
@@ -131,16 +159,9 @@ class BossScript : ZilchComponent
     
     function SendFish()
     {
+        this.StartSpawn = true;
         var rand = new Random();
-        var randomDie = rand.DieRoll(5) + 5;
-        
-        while(randomDie > 0)
-        {
-        this.Space.CreateAtPosition(this.Fish, this.Owner.Transform.Translation);
-        randomDie -= 1;
-        }
-        
-        this.AbilityEnd = true;
+        this.RandomDie = rand.DieRoll(5) + 5;
     }
     
     function SwitchDirection()
@@ -158,14 +179,14 @@ class BossScript : ZilchComponent
             this.Owner.Sprite.FlipX = true;
             Action.Property
             (seq, @this.Owner.Transform.Translation,
-            posistion + Real3(-1,0,0), 2, Ease.QuadIn);
+            posistion + Real3(-2,0,0), 1, Ease.QuadIn);
             }
             else if(this.Owner.Sprite.FlipX == true)
             {
             this.Owner.Sprite.FlipX = false;
             Action.Property
             (seq, @this.Owner.Transform.Translation,
-            posistion + Real3(1,0,0), 2, Ease.QuadIn);
+            posistion + Real3(2,0,0), 1, Ease.QuadIn);
             }
         
     }
@@ -231,10 +252,29 @@ class BombFish : ZilchComponent
 
   function OnCollisionStarted(event : CollisionEvent)
   {
-      if(event.OtherObject.PlayerController != null)
+      if(event.OtherObject.PlayerController != null || event.OtherObject.Spear != null ||
+      event.OtherObject.SwordBoomerangMove != null)
       {
           this.Exploding = true;
       }
   }
 
+}
+class Explosion : ZilchComponent
+{
+  var Timer:Real = 2;
+  function Initialize(init : CogInitializer)
+  {
+    Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+  }
+
+  function OnLogicUpdate(event : UpdateEvent)
+  {
+    this.Timer -= event.Dt;
+    
+    if(this.Timer <= 0)
+    this.Owner.Destroy();
+    else
+    this.Owner.Transform.Scale += Real3(event.Dt,event.Dt, 0) * 2;
+  }
 }

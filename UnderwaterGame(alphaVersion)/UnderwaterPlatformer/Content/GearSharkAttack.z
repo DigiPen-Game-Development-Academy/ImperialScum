@@ -22,7 +22,7 @@ class GearSharkAttack : ZilchComponent
         //Find the Player
         var target = this.Space.FindObjectByName("Player");
         
-        if (this.Active == true)
+        if (this.Active == true && this.Owner.GearSharkFollow.Aggro == true)
         {
             //Everything I make in Zilch has a timer.
             this.Timer -= 1;
