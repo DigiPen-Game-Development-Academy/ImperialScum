@@ -8,10 +8,14 @@ Cog =
 	{
 		string Name = "Gearhana",
 	},
+	Archetyped = 
+	{
+		string Name = "5a516aed3c8721be:Sawblades_Far",
+	},
 	Transform = 
 	{
-		Vec3 Translation = [-20.9064713, 11.5871773, 0],
-		Vec3 Scale = [4.24013519, 4.24013519, 4.24013519],
+		Vec3 Translation = [0, 0, 0],
+		Vec3 Scale = [5.08184099, 5.08184099, 5.08184099],
 		Quat Rotation = [0, 0, 0, 1],
 	},
 	Sprite = 
@@ -50,8 +54,8 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [-0.00448131561, -0.467552662, 0],
-				Vec3 Scale = [0.235841542, 0.235841542, 0.235841542],
+				Vec3 Translation = [-0.00373888016, -0.417809069, 0],
+				Vec3 Scale = [0.196779072, 0.196779072, 0.196779072],
 				Quat Rotation = [0, 0, 0, 1],
 			},
 			Sprite = 
@@ -64,7 +68,7 @@ Cog =
 				BlendMode BlendMode = Alpha,
 				SpriteGeometryMode GeometryMode = ZPlane,
 				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-				string SpriteSource = "5ab6138658976fe6:Gearahna()",
+				string SpriteSource = "5a313ba8373c4f6a:Trap_Sawblade()",
 				bool RenderMask = false,
 				bool FlipX = false,
 				bool FlipY = false,
@@ -102,8 +106,8 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [-0.410348177, 0.246713638, 0],
-				Vec3 Scale = [0.235841542, 0.235841542, 0.235841542],
+				Vec3 Translation = [-0.433933258, 0.33336854, 0],
+				Vec3 Scale = [0.196779072, 0.196779072, 0.196779072],
 				Quat Rotation = [0, 0, 0, 1],
 			},
 			Sprite = 
@@ -116,7 +120,7 @@ Cog =
 				BlendMode BlendMode = Alpha,
 				SpriteGeometryMode GeometryMode = ZPlane,
 				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-				string SpriteSource = "5ab6138658976fe6:Gearahna()",
+				string SpriteSource = "5a313ba8373c4f6a:Trap_Sawblade()",
 				bool RenderMask = false,
 				bool FlipX = false,
 				bool FlipY = false,
@@ -154,8 +158,8 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [0.3760221, 0.254574776, 0],
-				Vec3 Scale = [0.235841542, 0.235841542, 0.235841542],
+				Vec3 Translation = [0.411832333, 0.326848745, 0],
+				Vec3 Scale = [0.196779072, 0.196779072, 0.196779072],
 				Quat Rotation = [0, 0, 0, 1],
 			},
 			Sprite = 
@@ -168,7 +172,7 @@ Cog =
 				BlendMode BlendMode = Alpha,
 				SpriteGeometryMode GeometryMode = ZPlane,
 				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-				string SpriteSource = "5ab6138658976fe6:Gearahna()",
+				string SpriteSource = "5a313ba8373c4f6a:Trap_Sawblade()",
 				bool RenderMask = false,
 				bool FlipX = false,
 				bool FlipY = false,

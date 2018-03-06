@@ -2,7 +2,7 @@ DataContent =
 {
 	DataBuilder = 
 	{
-		string Name = "Gearhana",
+		string Name = "Sawblades_Close",
 		uint64 ResourceId = 5a458950b6a780c8,
 		string LoaderType = "Cog",
 		uint Version = 0,
