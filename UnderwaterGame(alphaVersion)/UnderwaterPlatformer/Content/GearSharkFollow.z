@@ -7,6 +7,9 @@ class GearSharkFollow : ZilchComponent
     var Speed:Real = 5;
     
     [Property]
+    var Aggro:Boolean = false;
+    
+    [Property]
     var Active:Boolean = true;
     
     [Property]
@@ -29,7 +32,12 @@ class GearSharkFollow : ZilchComponent
         
         //This following code makes the thing move the same speed always toward the target
         
-        if (this.Active == true)
+        if (this.Aggro == false)
+        {
+            this.Owner.RigidBody.Velocity = Real3.Zero;
+        }
+        
+        if (this.Active == true && this.Aggro == true)
         {
             
             if (this.Timer == 1)
