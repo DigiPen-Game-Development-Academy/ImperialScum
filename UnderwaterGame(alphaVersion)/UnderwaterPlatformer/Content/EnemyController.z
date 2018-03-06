@@ -44,7 +44,8 @@ class EnemyController : ZilchComponent
     function OnLogicUpdate(event : UpdateEvent)
     {
         
-        if(this.Active == true) this.Following = 2;
+        if(this.Active == true)
+        {this.Following = 2;}
         else this.Following -= event.Dt;
         
         if (this.Following <= 0) return;
@@ -74,7 +75,7 @@ class EnemyController : ZilchComponent
         
         if(this.Jump == true && this.Active == true)
         {
-            var velocity = this.Owner.RigidBody.Velocity;
+                var velocity = this.Owner.RigidBody.Velocity;
             
                 velocity.Y = this.JumpSpeed;
                 this.Owner.RigidBody.Velocity = velocity;

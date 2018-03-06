@@ -25,7 +25,7 @@ class EnemyVision : ZilchComponent
     {
                 
         //Crab
-        if (this.Owner == this.Space.FindObjectByName("CrabVision"))
+        if (this.Owner.Name == "CrabVision")
             {
             if(event.OtherObject.PlayerController != null)
             {
@@ -33,7 +33,7 @@ class EnemyVision : ZilchComponent
             }
         }
         //Shark and Fish
-        if (this.Owner == this.Space.FindObjectByName("SharkVision"))
+        if (this.Owner.Name == "SharkVision")
             {
             if(event.OtherObject.PlayerController != null)
             {
