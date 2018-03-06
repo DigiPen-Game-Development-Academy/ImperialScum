@@ -617,7 +617,7 @@ Level =
 		},
 		GoToLevel = 
 		{
-			string LevelToLoad = "5aacabcb5a25325f:TutorialLevel",
+			string LevelToLoad = "5a4b96cbd2c3c651:LoadingLevel",
 		},
 		TextScroll = 
 		{

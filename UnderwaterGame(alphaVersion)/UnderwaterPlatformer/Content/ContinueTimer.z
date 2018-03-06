@@ -1,0 +1,20 @@
+class ContinueTimer : ZilchComponent
+{
+    var Timer : Real = 3.5;
+    [Property] var LevelToLoad : Level;
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        this.Timer -= event.Dt;
+        //Console.WriteLine(this.Timer);
+        
+        if(this.Timer <= 0)
+        {
+           this.Space.LoadLevel(this.LevelToLoad);
+        }
+    }
+}
