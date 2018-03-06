@@ -14,8 +14,8 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-0.644411802, 4.68613863, 0],
-		Vec3 Scale = [2.38662577, 2.38662577, 2.38662577],
+		Vec3 Translation = [-1.21253932, 6.64174604, 0],
+		Vec3 Scale = [0.584235251, 0.584235251, 0.584235251],
 		Quat Rotation = [0, 0, 0, 1],
 	},
 	Sprite = 
@@ -54,5 +54,8 @@ Cog =
 	Bounce = 
 	{
 		Vec3 BounceLevel = [0, 0, 0],
+	},
+	Explosion = 
+	{
 	},
 },
