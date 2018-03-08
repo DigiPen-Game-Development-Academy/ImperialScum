@@ -3,6 +3,7 @@ class ContinueTimer : ZilchComponent
 {
     var Timer : Real = 3.3;
     [Property] var LevelToLoad : Level;
+    [Static] var LevelNumber : Integer = 1;
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
@@ -16,7 +17,14 @@ class ContinueTimer : ZilchComponent
         
         if(this.Timer <= 0)
         {
+            if(ContinueTimer.LevelNumber == 1) this.LevelToLoad = Level.Find("BeginningLevel"); //TUTORIAL LEVEL
+            else if(ContinueTimer.LevelNumber == 2) this.LevelToLoad = Level.Find("SuperEasyLevel"); //LEVEL 1
+            else if(ContinueTimer.LevelNumber == 3) this.LevelToLoad = Level.Find("SandLevel_Labyrinth"); // LEVEL 2
+            else if(ContinueTimer.LevelNumber == 4) this.LevelToLoad = Level.Find("ElenaLevelSpikes"); //LEVEL 3
+            else if(ContinueTimer.LevelNumber == 5) this.LevelToLoad = Level.Find("JacobsTerribleLevel"); //LEVEL 4
+            else return;
             BackgroundMusic.NoDelay = false;
+            ContinueTimer.LevelNumber += 1;
            this.Space.LoadLevel(this.LevelToLoad);
         }
     }

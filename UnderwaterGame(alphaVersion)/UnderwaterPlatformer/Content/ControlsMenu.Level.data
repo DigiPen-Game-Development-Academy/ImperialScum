@@ -569,7 +569,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-13.6075039, 28.7887459, 0],
+			Vec3 Translation = [-11.9067154, 29.8994637, 0],
 			Vec3 Scale = [1.52934122, 1.52934122, 1.52934122],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -637,8 +637,8 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-6.80643892, 28.3004951, 0],
-			Vec3 Scale = [0.43104887, 1, 1],
+			Vec3 Translation = [-9.409688, 27.883976, 0],
+			Vec3 Scale = [1.71631324, 1.62477779, 1.62477779],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Sprite = 
@@ -658,21 +658,6 @@ Level =
 			bool AnimationActive = true,
 			float AnimationSpeed = 1,
 			uint StartFrame = 0,
-		},
-		Area = 
-		{
-			Vec2 Size = [1, 1],
-			Location Origin = Center,
-		},
-		Reactive = 
-		{
-			bool Active = true,
-			bool CaptureMouse = false,
-		},
-		VolumeControls = 
-		{
-			Vec4 Color = [0.170000002, 0.170000002, 0.170000002, 1],
-			Vec4 Color2 = [0.319999993, 0.319999993, 0.319999993, 1],
 		},
 	},
 	Cog = 
@@ -683,46 +668,30 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "Volume3",
+			string Name = "VolumeNumber",
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-4.80643892, 28.3004951, 0],
-			Vec3 Scale = [0.43104887, 1, 1],
+			Vec3 Translation = [-10.1754532, 28.5641994, 0],
+			Vec3 Scale = [2.21484709, 2.21484709, 2.21484709],
 			Quat Rotation = [0, 0, 0, 1],
 		},
-		Sprite = 
+		SpriteText = 
 		{
 			bool Visible = true,
 			bool VisibilityCulling = true,
 			bool VisibilityEvents = true,
 			bool CastShadows = false,
-			Vec4 Color = [0.321568638, 0.321568638, 0.321568638, 1],
+			Vec4 Color = [1, 1, 1, 1],
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5275aa4d802dd6dc:Square",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
-		Area = 
-		{
-			Vec2 Size = [1, 1],
-			Location Origin = Center,
-		},
-		Reactive = 
-		{
-			bool Active = true,
-			bool CaptureMouse = false,
-		},
-		VolumeControls = 
-		{
-			Vec4 Color = [0.170000002, 0.170000002, 0.170000002, 1],
-			Vec4 Color2 = [0, 0, 0, 0],
+			string FontName = "4e7bac697bec55c5:Verdana",
+			uint FontSize = 30,
+			string Text = "5",
+			TextAlign Align = Left,
+			float PixelsPerUnit = 64,
+			bool Smoothing = true,
 		},
 	},
 	Cog = 
@@ -733,13 +702,13 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "Volume5",
+			string Name = "ArrowLeft",
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-2.80643892, 28.3004951, 0],
-			Vec3 Scale = [0.43104887, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
+			Vec3 Translation = [-11.3655787, 27.9047108, 0],
+			Vec3 Scale = [1.08606482, 1.84541106, 1],
+			Quat Rotation = [0, 0, 0.703954875, 0.710244715],
 		},
 		Sprite = 
 		{
@@ -747,11 +716,11 @@ Level =
 			bool VisibilityCulling = true,
 			bool VisibilityEvents = true,
 			bool CastShadows = false,
-			Vec4 Color = [0.321568638, 0.321568638, 0.321568638, 1],
+			Vec4 Color = [1, 1, 1, 1],
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5275aa4d802dd6dc:Square",
+			string SpriteSource = "5a30dc41e716c9a5:Weap_Spear",
 			bool RenderMask = false,
 			bool FlipX = false,
 			bool FlipY = false,
@@ -771,7 +740,7 @@ Level =
 		},
 		VolumeControls = 
 		{
-			Vec4 Color = [0.170000002, 0.170000002, 0.170000002, 1],
+			Vec4 Color = [0, 0, 0, 0],
 			Vec4 Color2 = [0, 0, 0, 0],
 		},
 	},
@@ -783,13 +752,13 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "Volume6",
+			string Name = "ArrowRight",
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-1.8064388, 28.3004951, 0],
-			Vec3 Scale = [0.43104887, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
+			Vec3 Translation = [-7.47806025, 27.9047108, 0],
+			Vec3 Scale = [1.08000004, 1.79999995, 1],
+			Quat Rotation = [0, 0, -0.711705923, 0.702477574],
 		},
 		Sprite = 
 		{
@@ -797,17 +766,22 @@ Level =
 			bool VisibilityCulling = true,
 			bool VisibilityEvents = true,
 			bool CastShadows = false,
-			Vec4 Color = [0.321568638, 0.321568638, 0.321568638, 1],
+			Vec4 Color = [1, 1, 1, 1],
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5275aa4d802dd6dc:Square",
+			string SpriteSource = "5a30dc41e716c9a5:Weap_Spear",
 			bool RenderMask = false,
 			bool FlipX = false,
 			bool FlipY = false,
 			bool AnimationActive = true,
 			float AnimationSpeed = 1,
 			uint StartFrame = 0,
+		},
+		VolumeControls = 
+		{
+			Vec4 Color = [0, 0, 0, 0],
+			Vec4 Color2 = [0, 0, 0, 0],
 		},
 		Area = 
 		{
@@ -818,111 +792,6 @@ Level =
 		{
 			bool Active = true,
 			bool CaptureMouse = false,
-		},
-		VolumeControls = 
-		{
-			Vec4 Color = [0.170000002, 0.170000002, 0.170000002, 1],
-			Vec4 Color2 = [0, 0, 0, 0],
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 21,
-		},
-		Named = 
-		{
-			string Name = "Volume4",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-3.88749743, 28.3004951, 0],
-			Vec3 Scale = [0.43104887, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [0.321568638, 0.321568638, 0.321568638, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5275aa4d802dd6dc:Square",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
-		Area = 
-		{
-			Vec2 Size = [1, 1],
-			Location Origin = Center,
-		},
-		Reactive = 
-		{
-			bool Active = true,
-			bool CaptureMouse = false,
-		},
-		VolumeControls = 
-		{
-			Vec4 Color = [0.170000002, 0.170000002, 0.170000002, 1],
-			Vec4 Color2 = [0, 0, 0, 0],
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 22,
-		},
-		Named = 
-		{
-			string Name = "Volume2",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-5.80643892, 28.3004951, 0],
-			Vec3 Scale = [0.43104887, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [0.321568638, 0.321568638, 0.321568638, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5275aa4d802dd6dc:Square",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
-		Area = 
-		{
-			Vec2 Size = [1, 1],
-			Location Origin = Center,
-		},
-		Reactive = 
-		{
-			bool Active = true,
-			bool CaptureMouse = false,
-		},
-		VolumeControls = 
-		{
-			Vec4 Color = [0.170000002, 0.170000002, 0.170000002, 1],
-			Vec4 Color2 = [0, 0, 0, 0],
 		},
 	},
 },

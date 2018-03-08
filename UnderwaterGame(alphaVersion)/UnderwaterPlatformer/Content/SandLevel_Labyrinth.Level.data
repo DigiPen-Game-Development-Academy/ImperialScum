@@ -116,7 +116,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 44.9329338,
+			float Size = 81.8730927,
 		},
 		EditorCameraController = 
 		{
@@ -511,9 +511,9 @@ Level =
 			Vec3 Offset = [0, 0, 0],
 			Vec3 Size = [0.5, 0.5, 0.5],
 		},
-		RandomRoomGenerator = 
+		GoToBase = 
 		{
-			string LoadingLevel = "",
+			string LevelToLoad = "5a4b96cbd2c3c651:LoadingLevel",
 		},
 	},
 	Cog = 
