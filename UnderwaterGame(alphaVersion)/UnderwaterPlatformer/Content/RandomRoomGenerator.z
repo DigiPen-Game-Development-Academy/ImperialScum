@@ -27,36 +27,9 @@ class RandomRoomGenerator : ZilchComponent
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
     }
 
-    function OnLogicUpdate(event : UpdateEvent)
-    {
-        if(Zero.Keyboard.KeyIsPressed(Keys.P))
-        {
-            RandomRoomGenerator.FinishedLevel.Add(this.Space.CurrentLevel);
-            
-            var remainingLevels = RandomRoomGenerator.AllLevels;
-            do
-            {
-                var count = remainingLevels.Count;
-                if(count == 0)
-                {
-                    return;
-                }
-                var rand = new Random();
-                var index = rand.DieRoll(count) - 1;
-                this.Level = remainingLevels[index];
-                remainingLevels.RemoveAt(index);
-                
-            } while (RandomRoomGenerator.FinishedLevel.FindFirstIndex(this.Level) >= 0)
-            
-            this.Space.LoadLevel(this.Level);
-            
-        }
-    }
     function OnCollisionStarted(event : CollisionEvent)
     {
-        if(event.OtherObject.PlayerController != null)
-        {
-            RandomRoomGenerator.FinishedLevel.Add(this.Space.CurrentLevel);
+                    RandomRoomGenerator.FinishedLevel.Add(this.Space.CurrentLevel);
             
             var remainingLevels = RandomRoomGenerator.AllLevels;
             do
@@ -76,6 +49,12 @@ class RandomRoomGenerator : ZilchComponent
             
             //start loading screen
             this.Space.LoadLevel(this.Level);
-        }
+    }
+
+
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+
     }
 }

@@ -1,0 +1,21 @@
+class BossDoorOpen : ZilchComponent
+{
+    var ODO : Boolean = false;
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        var posistion = this.Owner.Transform.Translation;
+        if(ContinueTimer.LevelNumber > 5 && this.ODO != true)
+        {
+            this.ODO = true;
+            var seq = Action.Sequence(this.Owner.Actions);
+                
+                Action.Property
+                (seq, @this.Owner.Transform.Translation, posistion + Real3(0,2,0), 1, Ease.QuadInOut);
+        }
+    }
+}

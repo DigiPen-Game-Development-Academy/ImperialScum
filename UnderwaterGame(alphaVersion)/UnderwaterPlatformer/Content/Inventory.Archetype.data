@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [19.2947216, 1.56158471, 0],
+		Vec3 Translation = [10.2173986, 0.609545469, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -382,7 +382,10 @@ Cog =
 			},
 			Eat = 
 			{
-				int FullAmount = 10,
+			},
+			ButtonLogic = 
+			{
+				Vec4 EnterColor = [0.829999983, 0.0913000107, 0.0913000107, 1],
 			},
 			Hierarchy = 
 			{
@@ -477,7 +480,10 @@ Cog =
 			},
 			Eat = 
 			{
-				int FullAmount = 10,
+			},
+			ButtonLogic = 
+			{
+				Vec4 EnterColor = [0.829999983, 0.0913000107, 0.0913000107, 1],
 			},
 			Hierarchy = 
 			{
@@ -572,7 +578,10 @@ Cog =
 			},
 			Eat = 
 			{
-				int FullAmount = 10,
+			},
+			ButtonLogic = 
+			{
+				Vec4 EnterColor = [0.829999983, 0.0913000107, 0.0913000107, 1],
 			},
 			Hierarchy = 
 			{
@@ -667,7 +676,10 @@ Cog =
 			},
 			Eat = 
 			{
-				int FullAmount = 10,
+			},
+			ButtonLogic = 
+			{
+				Vec4 EnterColor = [0.829999983, 0.0913000107, 0.0913000107, 1],
 			},
 			Hierarchy = 
 			{
@@ -762,7 +774,10 @@ Cog =
 			},
 			Eat = 
 			{
-				int FullAmount = 10,
+			},
+			ButtonLogic = 
+			{
+				Vec4 EnterColor = [0.829999983, 0.0913000107, 0.0913000107, 1],
 			},
 			Hierarchy = 
 			{
@@ -853,11 +868,14 @@ Cog =
 			},
 			Eat = 
 			{
-				int FullAmount = 10,
 			},
 			InventorySlot = 
 			{
 				int ItemIndex = 0,
+			},
+			ButtonLogic = 
+			{
+				Vec4 EnterColor = [0.829999983, 0.0913000107, 0.0913000107, 1],
 			},
 			Hierarchy = 
 			{
@@ -952,7 +970,10 @@ Cog =
 			},
 			Eat = 
 			{
-				int FullAmount = 10,
+			},
+			ButtonLogic = 
+			{
+				Vec4 EnterColor = [0.829999983, 0.0913000107, 0.0913000107, 1],
 			},
 			Hierarchy = 
 			{
@@ -1047,7 +1068,10 @@ Cog =
 			},
 			Eat = 
 			{
-				int FullAmount = 10,
+			},
+			ButtonLogic = 
+			{
+				Vec4 EnterColor = [0.829999983, 0.0913000107, 0.0913000107, 1],
 			},
 			Hierarchy = 
 			{

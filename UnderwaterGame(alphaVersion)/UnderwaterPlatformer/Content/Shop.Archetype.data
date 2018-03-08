@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-27.4341297, 13.8296928, -0.000999450684],
+		Vec3 Translation = [-27.4729424, 16.2328148, -0.000999450684],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -1248,6 +1248,9 @@ Cog =
 				float AnimationSpeed = 1,
 				uint StartFrame = 0,
 			},
+			ButtonLogic = 
+			{
+			},
 		},
 		Cog = 
 		{
@@ -1317,6 +1320,9 @@ Cog =
 				bool AnimationActive = true,
 				float AnimationSpeed = 1,
 				uint StartFrame = 0,
+			},
+			ButtonLogic = 
+			{
 			},
 		},
 		Cog = 
