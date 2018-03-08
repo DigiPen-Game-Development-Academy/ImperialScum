@@ -1,0 +1,40 @@
+//Jacob Burke
+
+//The script that controls the Mechamaid
+
+class Mechamaid : ZilchComponent
+{
+    [Property]
+    var CirclingDistance:Real;
+    
+    [Property]
+    var Speed:Real;
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        var pos = this.Owner.Transform.WorldTranslation;
+        
+        var target = this.Space.FindObjectByName("Player").Transform.WorldTranslation;
+        
+        if(Math.Length(target - pos) >= this.CirclingDistance)
+        {
+            this.Owner.RigidBody.Velocity = Math.Normalize(target - this.Owner.Transform.WorldTranslation)
+            * this.Speed; 
+        }
+        else
+        {
+            this.Owner.RigidBody.Velocity = Real3.Zero;
+            this.Owner.Transform.WorldTranslation = target - Math.RotateVector((target - pos), Real3.ZAxis,
+            -1 * event.Dt);
+        }
+        
+        
+        
+        
+    }
+}
