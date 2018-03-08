@@ -25,7 +25,7 @@ var OldJumpSpeed : Real;
     {
         if(event.OtherObject.PlayerMovement != null && this.Player == null)
         {
-            this.Timer = 5;
+            this.Timer = 1.5;
             
             this.Player = event.OtherObject;
             

@@ -104,7 +104,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [5.90839052, -14.454236, 50],
+			Vec3 Translation = [7.47150755, 9.34204483, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -116,7 +116,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 16.5299187,
+			float Size = 18.2684002,
 		},
 		EditorCameraController = 
 		{
@@ -124,7 +124,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [5.90839052, -14.454236, 0],
+			Vec3 LookTarget = [7.47150755, 9.34204483, 0],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -265,7 +265,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [11.3791676, 12.6507406, 2.38261744e-09],
+			Vec3 Translation = [14.4852047, 12.6507406, 2.38261744e-09],
 			Vec3 Scale = [2.74287844, 4.70800209, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -949,7 +949,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-23.3025074, -12.5530825, -1],
+			Vec3 Translation = [-24.7325878, -12.5530825, -1],
 			Vec3 Scale = [11.0581484, 6.10115099, 44.0142822],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -1007,7 +1007,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-11.9733829, -12.670764, -1],
+			Vec3 Translation = [-9.09778786, -12.670764, -1],
 			Vec3 Scale = [11.5830507, 6.58343601, 44.0142822],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -1109,7 +1109,7 @@ Level =
 	},
 	ArchetypeInstance = 
 	{
-		string Name = "5a458950b6a780c8:Gearhana",
+		string Name = "5a458950b6a780c8:Sawblades_Close",
 		LinkId = 
 		{
 			uint Id = 25,
