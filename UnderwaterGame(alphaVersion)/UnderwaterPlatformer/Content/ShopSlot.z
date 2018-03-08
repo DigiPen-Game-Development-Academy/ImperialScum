@@ -6,6 +6,8 @@ class ShopSlot : ZilchComponent
     [Property]
     var Name:String;
     
+    var SoundToPlay : SoundCue = SoundCue.GearPickup;
+    
     function Initialize(init : CogInitializer)
     {
         //Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
@@ -19,6 +21,7 @@ class ShopSlot : ZilchComponent
            
            AdvInventory.PlayerInventory["Gears"] -= this.Cost;
            AdvInventory.PlayerInventory[this.Name] += 1;
+           //this.Owner.SoundEmitter.PlayCue(SoundCue.GearPickup);
        }
     }
 

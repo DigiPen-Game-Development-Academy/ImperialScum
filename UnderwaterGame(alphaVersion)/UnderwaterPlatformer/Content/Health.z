@@ -47,6 +47,11 @@ class Health : ZilchComponent
             Health.MaxHealth = 40;
         }
         
+        if(AdvInventory.PlayerInventory["Ring_Health"] >= 1)
+        {
+            Health.MaxHealth = Health.MaxHealth + 10;
+        }
+        
         Health.CurrentHealth = Health.MaxHealth;
     }
 

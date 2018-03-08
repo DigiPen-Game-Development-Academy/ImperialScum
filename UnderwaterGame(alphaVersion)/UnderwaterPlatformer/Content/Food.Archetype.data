@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-6.71645784, -0.297776341, -0.000999450684],
+		Vec3 Translation = [-29.7252102, -28.556633, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -38,6 +38,7 @@ Cog =
 	},
 	Resources = 
 	{
+		string SoundToPlay = "5a4ba86ea5857126:GearPickup",
 	},
 	RigidBody = 
 	{

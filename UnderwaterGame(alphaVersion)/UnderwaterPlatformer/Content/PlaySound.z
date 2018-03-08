@@ -1,6 +1,6 @@
 class PlaySound : ZilchComponent
 {
-    [Property] var SoundToPlay : SoundCue;
+    
     
     function Initialize(init : CogInitializer)
     {
@@ -12,7 +12,7 @@ class PlaySound : ZilchComponent
     {
         if(event.OtherObject.PlayerMovement != null)
         {
-            this.Owner.SoundEmitter.PlayCue(this.SoundToPlay);
+            
         }
     }
     
