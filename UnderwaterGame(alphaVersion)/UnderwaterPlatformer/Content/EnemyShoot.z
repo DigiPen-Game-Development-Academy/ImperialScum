@@ -61,6 +61,11 @@ class BulletLogic : ZilchComponent
     [Property]
     var VelocityY:Real = 1;
     
+    [Property]
+    var DestroyOnTile:Boolean = false;
+    
+    var Timer:Real = 3;
+    
     function Initialize(init : CogInitializer)
     {
         
@@ -91,7 +96,8 @@ class BulletLogic : ZilchComponent
 
     function OnCollisionStarted(event : CollisionEvent)
     {
-        if(event.OtherObject.PlayerController != null || event.OtherObject.Name == ("DefaultTile") )
+        if(event.OtherObject.PlayerController != null || event.OtherObject.Name == ("DefaultTile")
+        && this.DestroyOnTile == false)
         this.Owner.Destroy();
     }
 
@@ -110,6 +116,12 @@ class BulletLogic : ZilchComponent
             this.Velocity = Math.Normalize(this.Velocity);
             this.Velocity *= this.Speed;
         }
+        
+        if(this.Timer > 0)
+        {
+        this.Timer -= event.Dt;
+        }
+        else this.Owner.Destroy();
         
     }
 }
