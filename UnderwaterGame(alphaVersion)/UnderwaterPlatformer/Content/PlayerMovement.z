@@ -40,6 +40,14 @@ class PlayerMovement : ZilchComponent
     
     function Initialize(init : CogInitializer)
     {
+        if(AdvInventory.PlayerInventory["Ring_Speed"] > 0)
+        this.Speed = this.Speed * 1.5;
+        
+        if(AdvInventory.PlayerInventory["Ring_Jump"] > 0)
+        {
+        this.JumpSpeed = this.JumpSpeed * 1.3;
+        }
+            
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
         Zero.Connect(this.Owner, Events.CollisionPersisted, this.OnCollisionPersisted);
         Zero.Connect(this.Owner, Events.CollisionEnded, this.OnCollisionEnded);
