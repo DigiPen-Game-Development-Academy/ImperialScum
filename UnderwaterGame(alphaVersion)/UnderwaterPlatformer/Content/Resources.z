@@ -5,6 +5,7 @@
 class Resources : ZilchComponent
 {
     var Timer:Real = 1;
+    var SoundToPlay : SoundCue = SoundCue.GearPickup;
     
     function Initialize(init : CogInitializer)
     {
@@ -37,7 +38,7 @@ class Resources : ZilchComponent
             
             if(this.Owner.Name == "Gear")
             AdvInventory.PlayerInventory["Gears"] += 1;
-            
+    
             if(this.Owner.Name == "Food")
             AdvInventory.PlayerInventory["Food"] += 1;
             
@@ -46,6 +47,8 @@ class Resources : ZilchComponent
             
             if(this.Owner.Name == "Fruit")
             AdvInventory.PlayerInventory["Fruit"] += 1;
+            
+            //this.Owner.SoundEmitter.PlayCue(this.SoundToPlay);
         }
         
         
