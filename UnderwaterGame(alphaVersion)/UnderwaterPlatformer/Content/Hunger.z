@@ -40,6 +40,8 @@ class Hunger : ZilchComponent
             if (Hunger.Hunger >= 80 && Health.CurrentHealth <= 10)
             {
                 Health.CurrentHealth += 1;
+                if(AdvInventory.PlayerInventory["Ring_Regen"] >= 1)
+                Health.CurrentHealth += 2;
             }
             
             this.Timer += 5;
