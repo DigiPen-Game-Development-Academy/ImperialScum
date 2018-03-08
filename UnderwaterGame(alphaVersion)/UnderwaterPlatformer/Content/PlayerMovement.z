@@ -27,9 +27,14 @@ class PlayerMovement : ZilchComponent
     [Property]
     var KeyDown:Keys;
     
+    [Property] var SingleJumpSound : SoundCue;
+    [Property] var DoubleJumpSound : SoundCue;
+    [Property] var WalkSound : SoundCue;
+    
     var Swimming:Boolean = false;
     
     var DoubleJump:Boolean = true;
+    
     
    
     
@@ -93,6 +98,7 @@ class PlayerMovement : ZilchComponent
 
             this.Owner.RigidBody.Velocity =
             Real3(this.Owner.RigidBody.Velocity.X, Math.Max(this.JumpSpeed, velocity.Y + this.JumpSpeed), 0);
+            this.Owner.SoundEmitter.PlayCue(this.SingleJumpSound);
 
         }
         
@@ -103,6 +109,7 @@ class PlayerMovement : ZilchComponent
             this.Owner.RigidBody.Velocity =
             Real3(this.Owner.RigidBody.Velocity.X, 
             Math.Max(this.JumpSpeed, velocity.Y + this.JumpSpeed/2), 0);
+            this.Owner.SoundEmitter.PlayCue(this.DoubleJumpSound);
             this.DoubleJump = false;
             
         }
@@ -110,6 +117,7 @@ class PlayerMovement : ZilchComponent
         if(Zero.Keyboard.KeyIsDown(this.KeyLeft))
         {
             direction -= Real3.XAxis;
+            
         }
         
         if(Zero.Keyboard.KeyIsDown(this.KeyRight))

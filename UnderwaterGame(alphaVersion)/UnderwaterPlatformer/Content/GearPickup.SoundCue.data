@@ -19,7 +19,7 @@ SoundCue =
 	[
 		{
 			string SoundName = "5a4ba863a76000d9:Decent_Coin",
-			string GeneratedSoundName = "",
+			string GeneratedSoundName = "55017c595ef88bf0:DefaultGeneratedSound",
 			WhichSoundType WhichToUse = FromFile,
 			float Weight = 1,
 			float LoopEndTime = 0,

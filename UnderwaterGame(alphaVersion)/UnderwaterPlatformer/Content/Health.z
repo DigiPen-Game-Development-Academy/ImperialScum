@@ -55,9 +55,9 @@ class Health : ZilchComponent
         if(event.OtherObject.Name == ("Bullet") && Health.CurrentHealth > 0 && this.Invincibility == false)
         {
             Health.CurrentHealth -= 2;
+            this.Owner.SoundEmitter.PlayCue(this.HitSoundThing);
             this.Owner.Sprite.Color = this.DamageColor;
             this.Invincibility = true;
-            this.Owner.SoundEmitter.PlayCue(this.HitSoundThing);
         }
     }
 
@@ -71,23 +71,23 @@ class Health : ZilchComponent
                 Health.CurrentHealth -= 3;
             }
             this.Owner.Sprite.Color = this.DamageColor;
-            this.Invincibility = true;
             this.Owner.SoundEmitter.PlayCue(this.HitSoundThing);
+            this.Invincibility = true;
         }
         
         if(event.OtherObject.JaggedRock != null && Health.CurrentHealth > 0 && this.Invincibility == false)
         {
             Health.CurrentHealth -= 1;
             this.Owner.Sprite.Color = this.DamageColor;
-            this.Invincibility = true;
             this.Owner.SoundEmitter.PlayCue(this.HitSoundThing);
+            this.Invincibility = true;
         }
         if(event.OtherObject.Explosion != null && Health.CurrentHealth > 0 && this.Invincibility == false)
         {
             Health.CurrentHealth -= 2;
             this.Owner.Sprite.Color = this.DamageColor;
-            this.Invincibility = true;
             this.Owner.SoundEmitter.PlayCue(this.HitSoundThing);
+            this.Invincibility = true;
         }
     }
 

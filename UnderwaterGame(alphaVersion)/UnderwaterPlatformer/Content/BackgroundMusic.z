@@ -23,24 +23,29 @@ class BackgroundMusic : ZilchComponent
 
     function OnLevelStarted(event : GameEvent)
     {
-        if(BackgroundMusic.NoDelay == true)
+        if(BackgroundMusic.NoDelay != true && this.OnlyDoOnce == false)
         {
+            Console.WriteLine("...");
             this.Owner.SoundEmitter.PlayCue(this.BackgroundGameMusic);
             this.OnlyDoOnce == true;
         }
     }
 
+
     function OnLogicUpdate(event : UpdateEvent)
     {
-        if(this.Timer2 > 0)
-        {
-            this.Timer2 -= event.Dt;
-        }
-        if(this.Timer2 <= 0 && this.OnlyDoOnce == false)
-        {
-            this.Owner.SoundEmitter.PlayCue(this.BackgroundGameMusic);
-            this.OnlyDoOnce = true;
-        }
+        Console.WriteLine(this.OnlyDoOnce);
+        
+        //if(this.Timer2 > 0)
+        //{
+        //    this.Timer2 -= event.Dt;
+        //}
+        //if(this.Timer2 <= 0 && this.OnlyDoOnce == false)
+        //{
+        //    this.Owner.SoundEmitter.PlayCue(this.BackgroundGameMusic);
+        //    this.OnlyDoOnce = true;
+        //}
+        
         //Makes so that you can start the boss music without the background music playing over it.
         if (BossMusic.BossMusicStart == true)
         {
