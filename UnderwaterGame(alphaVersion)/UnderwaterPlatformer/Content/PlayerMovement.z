@@ -27,8 +27,8 @@ class PlayerMovement : ZilchComponent
     [Property]
     var KeyDown:Keys;
     
-    [Property] var SingleJumpSound : SoundCue;
-    [Property] var DoubleJumpSound : SoundCue;
+    [Property] var SingleJumpSound : SoundCue = SoundCue.SingleJump;
+    [Property] var DoubleJumpSound : SoundCue = SoundCue.DoubleJump;
     [Property] var WalkSound : SoundCue;
     
     var Swimming:Boolean = false;
