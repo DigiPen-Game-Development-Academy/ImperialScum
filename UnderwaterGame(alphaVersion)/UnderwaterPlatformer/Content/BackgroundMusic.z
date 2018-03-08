@@ -10,6 +10,7 @@ class BackgroundMusic : ZilchComponent
     var KeyWasPressed : Boolean;
     var OnlyDoOnce : Boolean = false;
     [Static] var NoDelay : Boolean = false;
+    [Static] var StayMuted : Boolean = false;
     
     [Property]
      var BackgroundGameMusic : SoundCue;
@@ -57,6 +58,7 @@ class BackgroundMusic : ZilchComponent
         {
             Console.WriteLine("Sound Muted");
             this.KeyWasPressed = true;
+            BackgroundMusic.StayMuted = true;
             
            this.Owner.SoundEmitter.Volume = 0;
         }
@@ -70,13 +72,15 @@ class BackgroundMusic : ZilchComponent
         //Make it so if you press M again it unmutes it.
         if(Zero.Keyboard.KeyIsPressed(Keys.M) && this.Timer <= 0)
             {
+                BackgroundMusic.StayMuted = false;
                 this.KeyWasPressed = false;
                 Console.WriteLine("Sound Unmuted");
                 
                 this.Owner.SoundEmitter.Volume = 1;
                 this.Timer += 0.25;
-                
             }
+            
+            if(BackgroundMusic.StayMuted == true) this.Owner.SoundEmitter.Volume = 0;
     }
 }
 

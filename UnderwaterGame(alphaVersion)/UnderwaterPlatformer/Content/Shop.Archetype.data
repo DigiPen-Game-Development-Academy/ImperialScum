@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-27.4341297, 13.8296928, -0.000999450684],
+		Vec3 Translation = [3.32643223, 41.1292267, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -44,6 +44,15 @@ Cog =
 	},
 	StoreRemover = 
 	{
+	},
+	SoundEmitter = 
+	{
+		float Volume = 1,
+		float Pitch = 0,
+		float PitchSemitones = 0,
+		bool UsePitchSemitones = false,
+		bool Positional = true,
+		int Version = 1,
 	},
 	Hierarchy = 
 	{
