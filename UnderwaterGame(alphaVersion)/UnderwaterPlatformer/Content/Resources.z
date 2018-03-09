@@ -19,6 +19,9 @@ class Resources : ZilchComponent
         {
         this.Timer -= event.Dt;
         }
+        
+        if(Zero.Keyboard.KeyIsPressed(Keys.L))
+        AdvInventory.PlayerInventory["Gears"] += 10;
     }
 
     function OnCollisionPersisted(event : CollisionEvent)

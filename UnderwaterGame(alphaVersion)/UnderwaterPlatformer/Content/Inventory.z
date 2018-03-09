@@ -32,7 +32,7 @@ class Inventory : ZilchComponent
                 this.Space.CreateAtPosition(Archetype.Inventory, position);
             }
         }
-        if (Zero.Keyboard.KeyIsPressed(this.StoreKey))
+        if (Zero.Keyboard.KeyIsPressed(this.StoreKey) && StoreCollide.CollideWithShop == true)
         {
             if (Inventory.Exists)
             {
@@ -47,3 +47,37 @@ class Inventory : ZilchComponent
         }
     }
 }
+//Jacob Burke
+
+//Reads if the player is colliding with the store
+
+class StoreCollide : ZilchComponent
+{
+    [Static]
+    var CollideWithShop:Boolean = false;
+    
+    function Initialize(init : CogInitializer)
+    {
+        //Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
+        Zero.Connect(this.Owner, Events.CollisionEnded, this.OnCollisionEnded);
+    }
+
+    function OnCollisionEnded(event : CollisionEvent)
+    {
+        if(event.OtherObject.PlayerController != null)
+        StoreCollide.CollideWithShop = false;
+    }
+
+    function OnCollisionStarted(event : CollisionEvent)
+    {
+        if(event.OtherObject.PlayerController != null)
+        StoreCollide.CollideWithShop = true;
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+    }
+}
+
+
