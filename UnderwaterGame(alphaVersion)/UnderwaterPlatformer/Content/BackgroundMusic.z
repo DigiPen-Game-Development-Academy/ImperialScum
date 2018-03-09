@@ -7,7 +7,7 @@ class BackgroundMusic : ZilchComponent
     
     var Timer : Real = 0.25;
     var Timer2 : Real = 1;
-    [Static] var KeyWasPressed : Boolean;
+    var KeyWasPressed : Boolean;
     var OnlyDoOnce : Boolean = false;
     [Static] var NoDelay : Boolean = false;
     [Static] var StayMuted : Boolean = false;
@@ -54,17 +54,17 @@ class BackgroundMusic : ZilchComponent
         }
         
         //Mute Music by pressing M
-        if (Zero.Keyboard.KeyIsPressed(Keys.M) && BackgroundMusic.KeyWasPressed == false)
+        if (Zero.Keyboard.KeyIsPressed(Keys.M) && this.KeyWasPressed == false)
         {
             Console.WriteLine("Sound Muted");
-            BackgroundMusic.KeyWasPressed = true;
+            this.KeyWasPressed = true;
             BackgroundMusic.StayMuted = true;
             
            this.Owner.SoundEmitter.Volume = 0;
         }
         
         //Makes it so music doesn't mute and then Unmute again immedietly?
-        if(this.Timer >= 0 && BackgroundMusic.KeyWasPressed == true)
+        if(this.Timer >= 0 && this.KeyWasPressed == true)
             {
                 this.Timer -= event.Dt;
             }
@@ -73,7 +73,7 @@ class BackgroundMusic : ZilchComponent
         if(Zero.Keyboard.KeyIsPressed(Keys.M) && this.Timer <= 0)
             {
                 BackgroundMusic.StayMuted = false;
-                BackgroundMusic.KeyWasPressed = false;
+                this.KeyWasPressed = false;
                 Console.WriteLine("Sound Unmuted");
                 
                 this.Owner.SoundEmitter.Volume = 1;
