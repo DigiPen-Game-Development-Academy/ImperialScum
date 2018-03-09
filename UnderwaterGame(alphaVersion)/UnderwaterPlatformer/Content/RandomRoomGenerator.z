@@ -29,7 +29,9 @@ class RandomRoomGenerator : ZilchComponent
 
     function OnCollisionStarted(event : CollisionEvent)
     {
-                    RandomRoomGenerator.FinishedLevel.Add(this.Space.CurrentLevel);
+        if(event.OtherObject.PlayerController != null)
+        {
+            RandomRoomGenerator.FinishedLevel.Add(this.Space.CurrentLevel);
             
             var remainingLevels = RandomRoomGenerator.AllLevels;
             do
@@ -49,6 +51,7 @@ class RandomRoomGenerator : ZilchComponent
             
             //start loading screen
             this.Space.LoadLevel(this.Level);
+        }
     }
 
 

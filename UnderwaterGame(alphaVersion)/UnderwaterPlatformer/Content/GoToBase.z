@@ -11,7 +11,9 @@ class GoToBase : ZilchComponent
     function OnCollisionPersisted(event : CollisionEvent)
     {
         if(event.OtherObject.PlayerController != null)
+        {
         this.Space.LoadLevel(this.LevelToLoad);
+        }
     }
 
     function OnLogicUpdate(event : UpdateEvent)
