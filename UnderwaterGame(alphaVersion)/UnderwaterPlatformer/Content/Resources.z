@@ -48,6 +48,18 @@ class Resources : ZilchComponent
             if(this.Owner.Name == "Fruit")
             AdvInventory.PlayerInventory["Fruit"] += 1;
             
+            if(this.Owner.Name == "Ring_Speed")
+            AdvInventory.PlayerInventory["Ring_Speed"] += 1;
+            
+            if(this.Owner.Name == "Ring_Regen")
+            AdvInventory.PlayerInventory["Ring_Regen"] += 1;
+            
+            if(this.Owner.Name == "Ring_Health")
+            AdvInventory.PlayerInventory["Ring_Health"] += 1;
+            
+            if(this.Owner.Name == "Ring_Jump")
+            AdvInventory.PlayerInventory["Ring_Jump"] += 1;
+            
             //this.Owner.SoundEmitter.PlayCue(this.SoundToPlay);
         }
         

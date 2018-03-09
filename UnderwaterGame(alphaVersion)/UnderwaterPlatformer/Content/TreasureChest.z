@@ -39,16 +39,20 @@ class TreasureChest : ZilchComponent
                 var randomVelocityNegative = random.DieRoll(10) * -1;
                 var randomVelocityPositive = random.DieRoll(10);
                 var randomChoose = random.DieRoll(2);
-                var randomLoot = random.DieRoll(10);
+                var randomLoot = random.DieRoll(100);
     
-                if(randomLoot <= 4)
+                if(randomLoot <= 40)
                 this.Spawn = Archetype.Gear;
                 
-                if(randomLoot >= 5 && randomLoot <= 8)
+                if(randomLoot >= 41 && randomLoot <= 80)
                 this.Spawn = Archetype.Food;
                 
-                if(randomLoot > 8)
+                if(randomLoot > 80 && randomLoot <= 99)
                 this.Spawn = Archetype.HealthPotion;
+                
+                if(randomLoot > 99)
+                Console.WriteLine("WOOOOOHOOOOO");
+                
                 
                 var treasure = this.Space.CreateAtPosition(this.Spawn,
                 this.Owner.Transform.Translation);

@@ -6,11 +6,16 @@ class ShopSlot : ZilchComponent
     [Property]
     var Name:String;
     
+    [Property]
+    var OnlyBuyOnce:Boolean = false;
+    
+    var AlreadyBought:Boolean = false;
+    
     var SoundToPlay : SoundCue = SoundCue.GearPickup;
     
     function Initialize(init : CogInitializer)
     {
-        //Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
         Zero.Connect(this.Owner, Events.LeftMouseDown, this.OnLeftMouseDown);
     }
 
@@ -22,10 +27,15 @@ class ShopSlot : ZilchComponent
            AdvInventory.PlayerInventory["Gears"] -= this.Cost;
            AdvInventory.PlayerInventory[this.Name] += 1;
            //this.Owner.SoundEmitter.PlayCue(SoundCue.GearPickup);
+           if(this.OnlyBuyOnce == true)
+           this.AlreadyBought = true;
        }
     }
 
     function OnLogicUpdate(event : UpdateEvent)
     {
+        Console.WriteLine(this.AlreadyBought);
+        if(this.AlreadyBought == true)
+        this.Owner.Destroy();
     }
 }
