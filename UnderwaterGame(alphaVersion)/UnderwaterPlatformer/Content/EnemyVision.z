@@ -18,6 +18,10 @@ class EnemyVision : ZilchComponent
             //Shark and Fish
             if (this.Owner == this.Space.FindObjectByName("SharkVision"))
             this.Owner.Parent.GearSharkFollow.Aggro = false;
+            
+            //Mechamaid
+            if (this.Owner == this.Space.FindObjectByName("MaidVision"))
+            this.Owner.Parent.Mechamaid.Active = false;
         }
     }
 
@@ -39,6 +43,14 @@ class EnemyVision : ZilchComponent
             {
             this.Owner.Parent.GearSharkFollow.Aggro = true;
             }
+        //Mechamaid
+        if (this.Owner.Name == "MaidVision")
+        {
+            if(event.OtherObject.PlayerController != null)
+            {
+                this.Owner.Parent.Mechamaid.Active = true;
+            }
+        }
         }
         
     }
