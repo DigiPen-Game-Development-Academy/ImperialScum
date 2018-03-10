@@ -9,6 +9,9 @@ class EnemyShoot : ZilchComponent
     [Property]
     var TimeBetweenShots : Real;
     
+    [Property]
+    var Range : Real;
+    
     var TimeTillNextShot:Real = 0;
         
     function Initialize(init : CogInitializer)
@@ -25,8 +28,11 @@ class EnemyShoot : ZilchComponent
             this.Shoot();
             
         }
-        
-        if(this.TimeTillNextShot < 0.3)
+        var pos = this.Owner.Transform.WorldTranslation;
+            
+        var target = this.Space.FindObjectByName("Player").Transform.WorldTranslation;
+
+        if(this.TimeTillNextShot < 0.3 && Math.Length(target - pos) <= this.Range)
         {
         this.Owner.Sprite.AnimationSpeed = 1;
         }
@@ -45,6 +51,15 @@ class EnemyShoot : ZilchComponent
         
         var player = this.Space.FindObjectByName("Player");
         if (player == null) return;
+        
+        var pos = this.Owner.Transform.WorldTranslation;
+            
+        var target = this.Space.FindObjectByName("Player").Transform.WorldTranslation;
+            
+        if(Math.Length(target - pos) >= this.Range)
+        {
+            return;
+        }
         var bullet = this.Space.CreateAtPosition(this.Bullet, this.Owner.Transform.WorldTranslation);
         if(bullet.BulletLogic == null) return;
         bullet.BulletLogic.Target = player;

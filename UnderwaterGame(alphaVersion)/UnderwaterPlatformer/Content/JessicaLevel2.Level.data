@@ -104,7 +104,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-15.3786077, -43.5163116, 49],
+			Vec3 Translation = [-26.8164272, -46.658699, 49],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -116,7 +116,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 18.268383,
+			float Size = 9.07181454,
 		},
 		EditorCameraController = 
 		{
@@ -124,7 +124,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-15.3786077, -43.5163116, -0.999999881],
+			Vec3 LookTarget = [-26.8164272, -46.658699, -0.999999881],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -459,7 +459,7 @@ Level =
 					bool VisibilityCulling = true,
 					bool VisibilityEvents = true,
 					bool CastShadows = false,
-					Vec4 Color = [1, 1, 1, 1],
+					Vec4 Color = [1, 1, 1, 0],
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
@@ -477,6 +477,7 @@ Level =
 				},
 				FlipSpriteChild = 
 				{
+					bool Sprite = false,
 				},
 				CapsuleCollider = 
 				{
@@ -495,6 +496,7 @@ Level =
 				{
 					string Bullet = "5a5eecab5b63f8a4:Laser",
 					float TimeBetweenShots = 0.300000012,
+					float Range = 50,
 				},
 			},
 		},
@@ -1762,7 +1764,7 @@ Level =
 	},
 	ArchetypeInstance = 
 	{
-		string Name = "5a458950b6a780c8:Gearhana",
+		string Name = "5a458950b6a780c8:Sawblades_Close",
 		LinkId = 
 		{
 			uint Id = 60,

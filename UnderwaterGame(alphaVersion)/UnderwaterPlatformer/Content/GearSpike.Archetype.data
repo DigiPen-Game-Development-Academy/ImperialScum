@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0, 0, 0],
+		Vec3 Translation = [-8.52771759, 5.41189623, 0],
 		Vec3 Scale = [0.466570437, 0.466570437, 0.466570437],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -48,6 +48,10 @@ Cog =
 		string SerializedGroupName = "4e740859314e5515:DefaultGroup",
 		Vec3 Offset = [0, 0, 0],
 		Vec3 Size = [1, 1, 0.5],
+	},
+	Bounce = 
+	{
+		Vec3 BounceLevel = [0, 0, 0],
 	},
 	Hierarchy = 
 	{

@@ -1,0 +1,140 @@
+Cog = 
+{
+	LinkId = 
+	{
+		uint Id = 1,
+	},
+	Named = 
+	{
+		string Name = "Mechamaid",
+	},
+	Archetyped = 
+	{
+		string Name = "5a6dd21876b9f23f:Mechamaid",
+	},
+	Transform = 
+	{
+		Vec3 Translation = [16.4438038, 31.6046562, 0],
+		Vec3 Scale = [1, 1, 1],
+		Quat Rotation = [0, 0, 0, 1],
+	},
+	Sprite = 
+	{
+		bool Visible = true,
+		bool VisibilityCulling = true,
+		bool VisibilityEvents = true,
+		bool CastShadows = false,
+		Vec4 Color = [1, 1, 1, 1],
+		BlendMode BlendMode = Alpha,
+		SpriteGeometryMode GeometryMode = ZPlane,
+		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+		string SpriteSource = "5a51ae79d92e4081:Enemy_MechamaidAim()",
+		bool RenderMask = false,
+		bool FlipX = false,
+		bool FlipY = false,
+		bool AnimationActive = true,
+		float AnimationSpeed = 0,
+		uint StartFrame = 1,
+	},
+	CapsuleCollider = 
+	{
+		bool Ghost = true,
+		bool SendsMessages = true,
+		bool Seamless = true,
+		string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+		string SerializedGroupName = "5a5911563de7a901:Enemy",
+		Vec3 Offset = [0, -0.150000006, 0],
+		float Radius = 0.400000006,
+		float Height = 0.699999988,
+		AxisDirection Direction = Y,
+		CapsuleScalingMode ScalingMode = PreserveScale,
+	},
+	RigidBody = 
+	{
+		bool Static = false,
+		bool Asleep = false,
+		bool Kinematic = false,
+		bool RotationLocked = true,
+		bool Mode2D = true,
+		bool AllowSleep = true,
+		bool Inherit2DMode = true,
+		Vec3 Velocity = [0, 0, 0],
+		Vec3 AngularVelocity = [0, 0, 0],
+	},
+	IgnoreSpaceEffects = 
+	{
+		bool Drag = true,
+		bool Flow = true,
+		bool Force = true,
+		bool Gravity = true,
+		bool Thrust = true,
+		bool Vortex = true,
+		bool Wind = true,
+		bool Invalid = false,
+		bool Torque = true,
+		bool PointGravity = true,
+		bool PointForce = true,
+		bool Buoyancy = true,
+		bool Custom = true,
+	},
+	Mechamaid = 
+	{
+		float CirclingDistance = 5,
+		float StopFollowing = 15,
+		float Speed = 5,
+		bool Active = true,
+	},
+	EnemyHealth = 
+	{
+		int Health = 10,
+		Vec4 DamageColor = [1, 0, 0, 1],
+		Vec4 RegularColor = [1, 1, 1, 1],
+	},
+	EnemyShoot = 
+	{
+		string Bullet = "5a68735abfd50348:Bullet(mechamaid)",
+		float TimeBetweenShots = 2,
+		float Range = 15,
+	},
+	FlipXToPlayer = 
+	{
+	},
+	Hierarchy = 
+	{
+		Cog = 
+		{
+			LinkId = 
+			{
+				uint Id = 2,
+			},
+			Named = 
+			{
+				string Name = "Enemy_MechamaidTail()",
+			},
+			Transform = 
+			{
+				Vec3 Translation = [-0.26470983, -0.905594766, 5.50411642e-07],
+				Vec3 Scale = [1, 1, 1],
+				Quat Rotation = [-0.41265133, -0.910889089, 3.9816225e-08, 1.80375626e-08],
+			},
+			Sprite = 
+			{
+				bool Visible = true,
+				bool VisibilityCulling = true,
+				bool VisibilityEvents = true,
+				bool CastShadows = false,
+				Vec4 Color = [1, 1, 1, 1],
+				BlendMode BlendMode = Alpha,
+				SpriteGeometryMode GeometryMode = ZPlane,
+				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+				string SpriteSource = "5a51af4304b3360a:Enemy_MechamaidTail()",
+				bool RenderMask = false,
+				bool FlipX = false,
+				bool FlipY = false,
+				bool AnimationActive = true,
+				float AnimationSpeed = 1,
+				uint StartFrame = 0,
+			},
+		},
+	},
+},
