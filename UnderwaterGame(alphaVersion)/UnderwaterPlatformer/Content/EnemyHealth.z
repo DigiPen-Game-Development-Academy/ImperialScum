@@ -11,6 +11,8 @@ class EnemyHealth : ZilchComponent
     var DamageColor:Real4;
     [Property]
     var RegularColor:Real4;
+
+    var Spawn:Archetype;
     
     var Timer:Real = 0.2;
     function Initialize(init : CogInitializer)
@@ -33,6 +35,24 @@ class EnemyHealth : ZilchComponent
     {
         if(this.Health <= 0)
         {
+            var random = new Random();
+            var randomAmount = random.DieRoll(3);
+            
+            while(randomAmount >= 0)
+            {
+                var randomChoose = random.DieRoll(3);
+                
+                if(randomChoose == 1)
+                this.Spawn = Archetype.Gear;
+                if(randomChoose > 1)
+                this.Spawn = Archetype.Food;
+                
+                var treasure = this.Space.CreateAtPosition(this.Spawn,
+                this.Owner.Transform.Translation);
+                
+                randomAmount -= 1;
+
+            }
             this.Owner.Destroy();
         }
         
