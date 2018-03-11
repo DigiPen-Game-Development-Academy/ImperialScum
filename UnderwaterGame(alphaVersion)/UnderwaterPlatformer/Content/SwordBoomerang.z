@@ -9,7 +9,7 @@ class SwordBoomerang : ZilchComponent
     var MarkerPlaced:Boolean = false;
     
     
-    [Property] var ThrowSound : SoundCue;
+    [Property] var ThrowSound : SoundCue = SoundCue.BoomerangThrow;
     
     
     function Initialize(init : CogInitializer)

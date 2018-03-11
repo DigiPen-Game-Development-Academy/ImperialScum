@@ -30,8 +30,8 @@ class PlayerMovement : ZilchComponent
     [Property] var SingleJumpSound : SoundCue = SoundCue.SingleJump;
     [Property] var DoubleJumpSound : SoundCue = SoundCue.DoubleJump;
     [Property] var WalkSound : SoundCue;
-    [Property] var SoundToPlay : SoundCue;
-    [Property] var SoundToPlay2 : SoundCue;
+    [Property] var SoundToPlay : SoundCue = SoundCue.GearPickup;
+    [Property] var SoundToPlay2 : SoundCue = SoundCue.SpearStab;
     
     var Swimming:Boolean = false;
     

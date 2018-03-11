@@ -23,7 +23,7 @@ class Health : ZilchComponent
     var RegularColor:Real4;
     
     [Property]
-    var HitSoundThing : SoundCue;
+    var HitSoundThing : SoundCue = SoundCue.PlayerHit;
     
     var Timer2:Real = 0.2;
     
