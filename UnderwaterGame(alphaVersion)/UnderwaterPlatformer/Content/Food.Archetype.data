@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-29.7252102, -28.556633, 0],
+		Vec3 Translation = [-31.1175728, -28.5009403, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -61,5 +61,14 @@ Cog =
 		string SerializedGroupName = "5a5911dc2040a4ae:Resources",
 		Vec3 Offset = [0, 0, 0],
 		float Radius = 0.300000012,
+	},
+	SoundEmitter = 
+	{
+		float Volume = 1,
+		float Pitch = 0,
+		float PitchSemitones = 0,
+		bool UsePitchSemitones = false,
+		bool Positional = true,
+		int Version = 1,
 	},
 },

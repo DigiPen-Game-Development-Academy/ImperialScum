@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-45.8332138, 30.8493118, 0],
+		Vec3 Translation = [-0.216768563, -28.2012157, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -50,6 +50,7 @@ Cog =
 	},
 	SwordBoomerang = 
 	{
+		string ThrowSound = "",
 	},
 	CapsuleCollider = 
 	{
@@ -102,6 +103,10 @@ Cog =
 		Enum KeyLeft = A,
 		Enum KeyRight = D,
 		Enum KeyDown = S,
+		string SingleJumpSound = "5a74d757288e9ffa:SingleJump",
+		string DoubleJumpSound = "5a74d672c9337568:DoubleJump",
+		string WalkSound = "",
+		string SoundToPlay = "5a4ba86ea5857126:GearPickup",
 	},
 	PlayerController = 
 	{
@@ -131,6 +136,7 @@ Cog =
 	},
 	PlayerStab = 
 	{
+		string SpearArchetype = "",
 	},
 	SoundEmitter = 
 	{
@@ -220,6 +226,7 @@ Cog =
 			},
 			FlipSpriteChild = 
 			{
+				bool Sprite = false,
 			},
 			NoParticlesInBaseLevel = 
 			{

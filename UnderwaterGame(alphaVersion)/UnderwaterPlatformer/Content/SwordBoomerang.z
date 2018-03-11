@@ -8,6 +8,7 @@ class SwordBoomerang : ZilchComponent
     [Static]
     var MarkerPlaced:Boolean = false;
     
+    
     [Property] var ThrowSound : SoundCue;
     
     

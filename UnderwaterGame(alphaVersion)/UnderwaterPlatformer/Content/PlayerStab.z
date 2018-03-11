@@ -5,6 +5,8 @@ class PlayerStab : ZilchComponent
     
     var Spear : Cog;
     
+    [Static] var PlaySound2 : Boolean = false;
+    
 function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Space, Events.RightMouseDown, this.OnRightMouseDown);
@@ -19,6 +21,8 @@ function OnRightMouseDown(event : ViewportMouseEvent)
             
             this.Spear.AttachToRelative(this.Owner);
             
+            
+            PlayerStab.PlaySound2 = true;
             
             
             //Mousey Stuff

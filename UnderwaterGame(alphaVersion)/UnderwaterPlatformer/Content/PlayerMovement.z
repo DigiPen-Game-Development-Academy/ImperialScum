@@ -30,6 +30,8 @@ class PlayerMovement : ZilchComponent
     [Property] var SingleJumpSound : SoundCue = SoundCue.SingleJump;
     [Property] var DoubleJumpSound : SoundCue = SoundCue.DoubleJump;
     [Property] var WalkSound : SoundCue;
+    [Property] var SoundToPlay : SoundCue;
+    [Property] var SoundToPlay2 : SoundCue;
     
     var Swimming:Boolean = false;
     
@@ -100,6 +102,18 @@ class PlayerMovement : ZilchComponent
         
         var velocity = direction * this.Speed;
         
+    if(Resources.PlaySound == true) 
+        {
+            Resources.PlaySound = false;
+            this.Owner.SoundEmitter.PlayCue(this.SoundToPlay);
+        }
+        
+        if(PlayerStab.PlaySound2 == true)
+        {
+            PlayerStab.PlaySound2 = false;
+            this.Owner.SoundEmitter.PlayCue(this.SoundToPlay2);
+        }
+    
         if(Zero.Keyboard.KeyIsPressed(this.KeyUp) && this.Owner.GroundChecker.Grounded == true
         && this.Swimming == false)
         {
@@ -146,6 +160,8 @@ class PlayerMovement : ZilchComponent
         this.Owner.RigidBody.Velocity = 
         Math.Lerp(this.Owner.RigidBody.Velocity, direction * this.Speed , event.Dt); 
     }
+    
+
 }
 //THIS IS JEFFERY'S SCRIPT////////////////////////////////////////////////////////////
 class GroundChecker : ZilchComponent
