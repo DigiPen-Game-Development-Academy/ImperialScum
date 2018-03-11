@@ -2,7 +2,7 @@
 class ContinueTimer : ZilchComponent
 {
     var Timer : Real = 3.3;
-    [Property] var LevelToLoad : Level;
+    [Static] var LevelToLoadProgression : Level;
     [Static] var LevelNumber : Integer = 1;
     function Initialize(init : CogInitializer)
     {
@@ -12,20 +12,31 @@ class ContinueTimer : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
+        if(this.Timer > 0)
         this.Timer -= event.Dt;
         //Console.WriteLine(this.Timer);
         
         if(this.Timer <= 0)
         {
-            if(ContinueTimer.LevelNumber == 1) this.LevelToLoad = Level.Find("BeginningLevel"); //TUTORIAL LEVEL
-            else if(ContinueTimer.LevelNumber == 2) this.LevelToLoad = Level.Find("SuperEasyLevel"); //LEVEL 1
-            else if(ContinueTimer.LevelNumber == 3) this.LevelToLoad = Level.Find("SandLevel_Labyrinth"); // LEVEL 2
-            else if(ContinueTimer.LevelNumber == 4) this.LevelToLoad = Level.Find("ElenasOldLevel"); //LEVEL 3
-            else if(ContinueTimer.LevelNumber == 5) this.LevelToLoad = Level.Find("JacobsTerribleLevel"); //LEVEL 4
+            var object1 = this.Space.FindObjectByName("Continue");
+            var object2 = this.Space.FindObjectByName("BackToBase");
+            var text1 = this.Space.FindObjectByName("BTB Text");
+            var text2 = this.Space.FindObjectByName("C Text");
+            var loadingText = this.Space.FindObjectByName("LoadingText");
+            if(ContinueTimer.LevelNumber == 1) ContinueTimer.LevelToLoadProgression = Level.Find("BeginningLevel"); //TUTORIAL LEVEL
+            else if(ContinueTimer.LevelNumber == 2) ContinueTimer.LevelToLoadProgression = Level.Find("SuperEasyLevel"); //LEVEL 1
+            else if(ContinueTimer.LevelNumber == 3) ContinueTimer.LevelToLoadProgression = Level.Find("SandLevel_Labyrinth"); // LEVEL 2
+            else if(ContinueTimer.LevelNumber == 4) ContinueTimer.LevelToLoadProgression = Level.Find("ElenasOldLevel"); //LEVEL 3
+            else if(ContinueTimer.LevelNumber == 5) ContinueTimer.LevelToLoadProgression = Level.Find("JacobsTerribleLevel"); //LEVEL 4
             else return;
             BackgroundMusic.NoDelay = false;
             ContinueTimer.LevelNumber += 1;
-           this.Space.LoadLevel(this.LevelToLoad);
+           object1.Sprite.Visible = true;
+           object2.Sprite.Visible = true;
+           text1.SpriteText.Visible = true;
+           text2.SpriteText.Visible = true;
+           //loadingText.SpriteText.Visible = false;
+           this.Timer += 1000;
         }
     }
 }

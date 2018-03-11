@@ -176,17 +176,17 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "PlayGame",
+			string Name = "BackToBase",
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-13.4454155, 9.00555134, 0],
+			Vec3 Translation = [-13.4454155, 0, 0],
 			Vec3 Scale = [8.99665928, 2, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Sprite = 
 		{
-			bool Visible = true,
+			bool Visible = false,
 			bool VisibilityCulling = true,
 			bool VisibilityEvents = true,
 			bool CastShadows = false,
@@ -226,7 +226,7 @@ Level =
 				},
 				Named = 
 				{
-					string Name = "SpriteText",
+					string Name = "BTB Text",
 				},
 				Transform = 
 				{
@@ -236,7 +236,7 @@ Level =
 				},
 				SpriteText = 
 				{
-					bool Visible = true,
+					bool Visible = false,
 					bool VisibilityCulling = true,
 					bool VisibilityEvents = true,
 					bool CastShadows = false,
@@ -259,6 +259,92 @@ Level =
 		LinkId = 
 		{
 			uint Id = 6,
+		},
+		Named = 
+		{
+			string Name = "Continue",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [13.3999996, 0, 0],
+			Vec3 Scale = [8.99665928, 2, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = false,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [0.228799999, 0.715000033, 0.408693969, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5275aa4d802dd6dc:Square",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		Reactive = 
+		{
+			bool Active = true,
+			bool CaptureMouse = false,
+		},
+		Area = 
+		{
+			Vec2 Size = [1, 1],
+			Location Origin = Center,
+		},
+		GoToLevel = 
+		{
+			string LevelToLoad = "5aacabcb5a25325f:BeginningLevel",
+		},
+		Hierarchy = 
+		{
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 7,
+				},
+				Named = 
+				{
+					string Name = "C Text",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-0.161442637, 0.166894197, 0],
+					Vec3 Scale = [0.111152373, 0.5, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				SpriteText = 
+				{
+					bool Visible = false,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string FontName = "4e7bac697bec55c5:Verdana",
+					uint FontSize = 30,
+					string Text = "Continue",
+					TextAlign Align = Left,
+					float PixelsPerUnit = 64,
+					bool Smoothing = true,
+				},
+			},
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 8,
 		},
 		Named = 
 		{
@@ -303,22 +389,21 @@ Level =
 		},
 		ContinueTimer = 
 		{
-			string LevelToLoad = "5aacabcb5a25325f:BeginningLevel",
 		},
 	},
 	Cog = 
 	{
 		LinkId = 
 		{
-			uint Id = 7,
+			uint Id = 9,
 		},
 		Named = 
 		{
-			string Name = "SpriteText",
+			string Name = "LoadingText",
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-12.2404709, 2.96738625, 0],
+			Vec3 Translation = [-4.9065237, 8.68215179, 0],
 			Vec3 Scale = [4.87295341, 4.87295341, 4.87295341],
 			Quat Rotation = [0, 0, 0, 1],
 		},
