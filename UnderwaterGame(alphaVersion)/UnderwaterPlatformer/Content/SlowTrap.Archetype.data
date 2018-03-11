@@ -8,9 +8,13 @@ Cog =
 	{
 		string Name = "SlowTrap",
 	},
+	Archetyped = 
+	{
+		string Name = "5a517a538447f010:SlowTrap",
+	},
 	Transform = 
 	{
-		Vec3 Translation = [-4.05655336, 12.3389759, 0],
+		Vec3 Translation = [-1.96826363, -10.4770794, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -20,11 +24,11 @@ Cog =
 		bool VisibilityCulling = true,
 		bool VisibilityEvents = true,
 		bool CastShadows = false,
-		Vec4 Color = [1, 0.630000114, 0, 1],
+		Vec4 Color = [1, 1, 1, 1],
 		BlendMode BlendMode = Alpha,
 		SpriteGeometryMode GeometryMode = ZPlane,
 		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-		string SpriteSource = "5275aa4d802dd6dc:Square",
+		string SpriteSource = "5a0fb966c2cf3593:Trap_SlimePod",
 		bool RenderMask = false,
 		bool FlipX = false,
 		bool FlipY = false,
