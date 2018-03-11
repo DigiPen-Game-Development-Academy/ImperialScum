@@ -69,7 +69,7 @@ Level =
 		},
 		ForwardRenderer = 
 		{
-			Vec4 ClearColor = [0, 0.910000086, 1, 1],
+			Vec4 ClearColor = [0, 0, 0, 1],
 			bool DrawNonVisible = false,
 			bool DrawDebugObjects = true,
 			bool DrawEditorIcons = true,
@@ -104,7 +104,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0.957424819, -22.1448402, 50],
+			Vec3 Translation = [-14.8593626, -4.6936965, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -116,7 +116,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 90.483757,
+			float Size = 49.0650978,
 		},
 		EditorCameraController = 
 		{
@@ -124,7 +124,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [0.957424819, -22.1448402, 0],
+			Vec3 LookTarget = [-14.8593626, -4.6936965, -6.91373373e-07],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -180,8 +180,8 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-13.4454155, 0, 0],
-			Vec3 Scale = [8.99665928, 2, 1],
+			Vec3 Translation = [-15.0030632, 0, 0],
+			Vec3 Scale = [1.5, 1.5, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Sprite = 
@@ -190,11 +190,11 @@ Level =
 			bool VisibilityCulling = true,
 			bool VisibilityEvents = true,
 			bool CastShadows = false,
-			Vec4 Color = [0.228799999, 0.715000033, 0.408693969, 1],
+			Vec4 Color = [1, 1, 1, 1],
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5275aa4d802dd6dc:Square",
+			string SpriteSource = "5a0fa708daf2c4dc:ArrowButtonLeft",
 			bool RenderMask = false,
 			bool FlipX = false,
 			bool FlipY = false,
@@ -209,7 +209,7 @@ Level =
 		},
 		Area = 
 		{
-			Vec2 Size = [1, 1],
+			Vec2 Size = [1.96135855, 1.98598945],
 			Location Origin = Center,
 		},
 		GoToLevel = 
@@ -230,8 +230,8 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [-0.161442637, 0.166894197, 0],
-					Vec3 Scale = [0.111152373, 0.5, 1],
+					Vec3 Translation = [1.05213797, 0.722263455, 0],
+					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
 				SpriteText = 
@@ -244,12 +244,12 @@ Level =
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string FontName = "4e7bac697bec55c5:Verdana",
-					uint FontSize = 30,
+					string FontName = "5a0f895ab1e49e19:DraftGameFont",
+					uint FontSize = 16,
 					string Text = "Go To Base",
 					TextAlign Align = Left,
-					float PixelsPerUnit = 64,
-					bool Smoothing = true,
+					float PixelsPerUnit = 16,
+					bool Smoothing = false,
 				},
 			},
 		},
@@ -266,8 +266,8 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [13.3999996, 0, 0],
-			Vec3 Scale = [8.99665928, 2, 1],
+			Vec3 Translation = [14.680975, 0, 0],
+			Vec3 Scale = [3, 3, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Sprite = 
@@ -276,11 +276,11 @@ Level =
 			bool VisibilityCulling = true,
 			bool VisibilityEvents = true,
 			bool CastShadows = false,
-			Vec4 Color = [0.228799999, 0.715000033, 0.408693969, 1],
+			Vec4 Color = [1, 1, 1, 1],
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5275aa4d802dd6dc:Square",
+			string SpriteSource = "5a0fa66ae8d30cee:ArrowButton",
 			bool RenderMask = false,
 			bool FlipX = false,
 			bool FlipY = false,
@@ -316,8 +316,8 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [-0.161442637, 0.166894197, 0],
-					Vec3 Scale = [0.111152373, 0.5, 1],
+					Vec3 Translation = [-2.64915514, 0.347170711, 0],
+					Vec3 Scale = [0.5, 0.5, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
 				SpriteText = 
@@ -330,12 +330,12 @@ Level =
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string FontName = "4e7bac697bec55c5:Verdana",
-					uint FontSize = 30,
+					string FontName = "5a0f895ab1e49e19:DraftGameFont",
+					uint FontSize = 16,
 					string Text = "Continue",
 					TextAlign Align = Left,
-					float PixelsPerUnit = 64,
-					bool Smoothing = true,
+					float PixelsPerUnit = 16,
+					bool Smoothing = false,
 				},
 			},
 		},
@@ -352,8 +352,8 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-31.4608803, -9.58218861, 0],
-			Vec3 Scale = [51.1406403, 1, 1],
+			Vec3 Translation = [-31.4608803, -17.1469917, 0],
+			Vec3 Scale = [1.5, 1.5, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Sprite = 
@@ -362,11 +362,11 @@ Level =
 			bool VisibilityCulling = true,
 			bool VisibilityEvents = true,
 			bool CastShadows = false,
-			Vec4 Color = [0.227451026, 0.713725507, 0.407843232, 1],
+			Vec4 Color = [1, 1, 1, 1],
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5275aa4d802dd6dc:Square",
+			string SpriteSource = "5a0fa3d3ead7efde:LoadingShark",
 			bool RenderMask = false,
 			bool FlipX = false,
 			bool FlipY = false,
@@ -403,8 +403,8 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-4.9065237, 8.68215179, 0],
-			Vec3 Scale = [4.87295341, 4.87295341, 4.87295341],
+			Vec3 Translation = [0, 8.68215179, 0],
+			Vec3 Scale = [2, 2, 2],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		SpriteText = 
@@ -417,12 +417,12 @@ Level =
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string FontName = "4e7bac697bec55c5:Verdana",
-			uint FontSize = 30,
+			string FontName = "5a0f895ab1e49e19:DraftGameFont",
+			uint FontSize = 16,
 			string Text = "Loading...",
-			TextAlign Align = Left,
-			float PixelsPerUnit = 64,
-			bool Smoothing = true,
+			TextAlign Align = Center,
+			float PixelsPerUnit = 16,
+			bool Smoothing = false,
 		},
 	},
 },
