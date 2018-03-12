@@ -26,6 +26,7 @@ class ShopSlot : ZilchComponent
            
            AdvInventory.PlayerInventory["Gears"] -= this.Cost;
            AdvInventory.PlayerInventory[this.Name] += 1;
+          Resources.PlaySound = true;
            //this.Owner.SoundEmitter.PlayCue(SoundCue.GearPickup);
            if(this.OnlyBuyOnce == true)
            this.AlreadyBought = true;

@@ -33,6 +33,8 @@ class Eat : ZilchComponent
     
     var FruitFullAmount:Integer = 15;
     
+    [Static] var PlaySound3 : Boolean = false;
+    
     function Initialize(init : CogInitializer)
     {
         //Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
@@ -49,12 +51,14 @@ class Eat : ZilchComponent
            {
            Hunger.Hunger += this.FoodFullAmount;
            AdvInventory.PlayerInventory["Food"] -= 1;
+           Eat.PlaySound3 = true;
            }
            else if(this.Owner.Sprite.SpriteSource.Name == "Inv_Fruit" && Hunger.Hunger <=
            (120 - this.FruitFullAmount) && AdvInventory.PlayerInventory["Fruit"] >= 1)
            {
            Hunger.Hunger += this.FruitFullAmount;
            AdvInventory.PlayerInventory["Fruit"] -= 1;
+           Eat.PlaySound3 = true;
            }
             else if(this.Owner.Sprite.SpriteSource.Name == "Inv_HealthPotion" &&
             Health.CurrentHealth <= (Health.MaxHealth - this.PotionFullAmount)
@@ -62,6 +66,7 @@ class Eat : ZilchComponent
            {
            Health.CurrentHealth += this.PotionFullAmount;
            AdvInventory.PlayerInventory["HealthPotion"] -= 1;
+           Eat.PlaySound3 = true;
            }
        }
 
