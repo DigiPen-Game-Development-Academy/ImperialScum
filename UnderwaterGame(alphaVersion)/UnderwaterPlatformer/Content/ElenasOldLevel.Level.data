@@ -104,7 +104,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [9.42584991, 1.18531203, 50],
+			Vec3 Translation = [5.43414783, 19.5656719, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -124,7 +124,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [9.42584991, 1.18531203, 0],
+			Vec3 LookTarget = [5.43414783, 19.5656719, -1.74482992e-07],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -1824,7 +1824,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-27.3558693, -6.7904377, 0],
+			Vec3 Translation = [-18.3049221, 25.0039101, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -3424,11 +3424,11 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "Checkpoint1",
+			string Name = "C",
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-0.371625066, 43.4845009, 0],
+			Vec3 Translation = [3.10950851, 44.4128036, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -4625,7 +4625,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-0.51413238, 43.4961433, 0],
+			Vec3 Translation = [-0.374890208, 43.4961433, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -11148,6 +11148,162 @@ Level =
 		Named = 
 		{
 			string Name = "StopTrap",
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 320,
+		},
+		Named = 
+		{
+			string Name = "CheckPoint",
+		},
+		Archetyped = 
+		{
+			string Name = "5a7d43b4947c030d:Checkpoint",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-0.321332932, 43.5622978, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = false,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 0],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5275aa4d802dd6dc:Square",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		Checkpoint = 
+		{
+		},
+		BoxCollider = 
+		{
+			bool Ghost = true,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [0.5, 0.5, 0.5],
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 321,
+		},
+		Named = 
+		{
+			string Name = "CheckPoint",
+		},
+		Archetyped = 
+		{
+			string Name = "5a7d43b4947c030d:Checkpoint",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0.978290081, 25.4139957, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = false,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 0],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5275aa4d802dd6dc:Square",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		Checkpoint = 
+		{
+		},
+		BoxCollider = 
+		{
+			bool Ghost = true,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [0.5, 0.5, 0.5],
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 322,
+		},
+		Named = 
+		{
+			string Name = "CheckPoint",
+		},
+		Archetyped = 
+		{
+			string Name = "5a7d43b4947c030d:Checkpoint",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-15.1277523, 8.5188942, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = false,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [0.31764707, 0.31764707, 0.31764707, 0],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5275aa4d802dd6dc:Square",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		Checkpoint = 
+		{
+		},
+		BoxCollider = 
+		{
+			bool Ghost = true,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [0.5, 0.5, 0.5],
 		},
 	},
 },
