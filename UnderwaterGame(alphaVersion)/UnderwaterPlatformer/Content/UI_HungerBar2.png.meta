@@ -2,15 +2,15 @@ ImageContent =
 {
 	SpriteSourceBuilder = 
 	{
-		string Name = "Inv_Ring_Regen",
-		uint64 ResourceId = 5a686bc5ca4e10fb,
+		string Name = "UI_HungerBar2",
+		uint64 ResourceId = 5a0d67572d8c6656,
 		uint64 AtlasId = 5274cf95e4a661fd,
-		uint FrameSizeX = 16,
-		uint FrameSizeY = 16,
+		uint FrameSizeX = 129,
+		uint FrameSizeY = 9,
 		uint FrameCount = 1,
 		float FrameDelay = 0.0833333358,
-		float OriginX = 8,
-		float OriginY = 8,
+		float OriginX = 64.5,
+		float OriginY = 4.5,
 		float PixelsPerUnit = 16,
 		bool Smoothing = false,
 		bool Looping = true,

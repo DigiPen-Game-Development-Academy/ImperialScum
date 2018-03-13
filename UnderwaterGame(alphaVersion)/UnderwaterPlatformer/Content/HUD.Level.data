@@ -107,7 +107,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [1.04463327, 2.20187664, 50],
+			Vec3 Translation = [-3.33858895, 4.07721424, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -119,7 +119,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 24.4281845,
+			float Size = 44.3959084,
 		},
 		EditorCameraController = 
 		{
@@ -127,7 +127,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [1.04463327, 2.20187664, 0],
+			Vec3 LookTarget = [-3.33858895, 4.07721424, -1.9159701e-07],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -183,8 +183,8 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-9.10432339, 8.80574131, 0],
-			Vec3 Scale = [13.6729746, 1, 1],
+			Vec3 Translation = [-8.813097, 8.80574131, 0],
+			Vec3 Scale = [14.1659155, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Sprite = 
@@ -222,8 +222,8 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-0.0120577812, 7.88372993, 0],
-			Vec3 Scale = [2.09833097, 2.09833097, 2.09833097],
+			Vec3 Translation = [0.352840424, 7.8499999, 0],
+			Vec3 Scale = [2, 2, 2],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Sprite = 
@@ -236,7 +236,7 @@ Level =
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5ad2e427af8e03d1:Inventory_Icon",
+			string SpriteSource = "5a0d613acaa00b4d:UI_TabButton",
 			bool RenderMask = false,
 			bool FlipX = false,
 			bool FlipY = false,
@@ -265,7 +265,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-0.884455681, 8.45447159, 0],
+			Vec3 Translation = [-0.573273182, 8.5804224, 0],
 			Vec3 Scale = [1.92972171, 1.92972171, 1.92972171],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -275,16 +275,16 @@ Level =
 			bool VisibilityCulling = true,
 			bool VisibilityEvents = true,
 			bool CastShadows = false,
-			Vec4 Color = [0.50999999, 0.970600009, 1, 1],
+			Vec4 Color = [1, 1, 1, 1],
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string FontName = "4e7bac697bec55c5:Verdana",
-			uint FontSize = 30,
+			string FontName = "5a0f895ab1e49e19:DraftGameFont",
+			uint FontSize = 16,
 			string Text = "Tab",
 			TextAlign Align = Left,
-			float PixelsPerUnit = 64,
-			bool Smoothing = true,
+			float PixelsPerUnit = 32,
+			bool Smoothing = false,
 		},
 	},
 	Cog = 
@@ -299,7 +299,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-9.09964848, 7.14275789, 0],
+			Vec3 Translation = [-8.76830101, 6.94640112, 0],
 			Vec3 Scale = [14.1291857, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -337,7 +337,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-9.90805149, 8.87216473, 20],
+			Vec3 Translation = [-9.63510132, 8.78999996, 20],
 			Vec3 Scale = [2, 2, 2],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -351,7 +351,7 @@ Level =
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5ab54e029e5a713e:UI_HealthBar",
+			string SpriteSource = "5a0d677656271411:UI_HealthBar2",
 			bool RenderMask = false,
 			bool FlipX = false,
 			bool FlipY = false,
@@ -372,7 +372,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-9.96836472, 7.20154047, 20],
+			Vec3 Translation = [-9.63510132, 6.94999981, 20],
 			Vec3 Scale = [2, 2, 2],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -386,7 +386,7 @@ Level =
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5ab54f55d02cfb37:UI_HungerBar",
+			string SpriteSource = "5a0d67572d8c6656:UI_HungerBar2",
 			bool RenderMask = false,
 			bool FlipX = false,
 			bool FlipY = false,
@@ -407,8 +407,46 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-16.1652775, 5.29498339, 0],
-			Vec3 Scale = [2.2731452, 2.2731452, 2.2731452],
+			Vec3 Translation = [-16.8850136, 5.16876125, -1],
+			Vec3 Scale = [2, 2, 2],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = false,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [0, 0, 0, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5ab914a92019defc:Pickup_Key",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		Invisible = 
+		{
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 11,
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-17.0087128, 5.30000019, 0],
+			Vec3 Scale = [2, 2, 2],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Sprite = 
@@ -437,7 +475,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 11,
+			uint Id = 12,
 		},
 		Named = 
 		{
@@ -445,7 +483,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-17.6613312, 0.930272818, 0],
+			Vec3 Translation = [-17.113987, 0.930272818, 0],
 			Vec3 Scale = [1.46848583, 1.46848583, 1.46848583],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -459,12 +497,12 @@ Level =
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string FontName = "4e7bac697bec55c5:Verdana",
-			uint FontSize = 30,
+			string FontName = "5a0f895ab1e49e19:DraftGameFont",
+			uint FontSize = 16,
 			string Text = "You Are Starving!",
 			TextAlign Align = Left,
-			float PixelsPerUnit = 64,
-			bool Smoothing = true,
+			float PixelsPerUnit = 16,
+			bool Smoothing = false,
 		},
 		Starving = 
 		{
