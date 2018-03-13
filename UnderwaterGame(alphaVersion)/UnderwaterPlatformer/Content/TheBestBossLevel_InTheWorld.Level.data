@@ -109,7 +109,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-17.9272594, -37.2110481, 50],
+			Vec3 Translation = [43.2570381, -32.833477, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -121,7 +121,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 13.533555,
+			float Size = 16.5299339,
 		},
 		EditorCameraController = 
 		{
@@ -129,7 +129,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-17.9272594, -37.2110481, -7.83624785e-07],
+			Vec3 LookTarget = [43.2570381, -32.833477, -7.83624785e-07],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -319,7 +319,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [37.5, -34.5, 5.99999619],
+			Vec3 Translation = [37.5, -34.5, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -328,19 +328,12 @@ Level =
 			string Name = "Chest",
 		},
 	},
-	Cog = 
+	ArchetypeInstance = 
 	{
+		string Name = "5a0d95550a3e4a45:BOSS",
 		LinkId = 
 		{
 			uint Id = 8,
-		},
-		Named = 
-		{
-			string Name = "BOSS",
-		},
-		Archetyped = 
-		{
-			string Name = "5a0d95550a3e4a45:BOSS",
 		},
 		Transform = 
 		{
@@ -348,151 +341,27 @@ Level =
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0.00113470259, 0.999999344],
 		},
-		Sprite = 
+		Named = 
 		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a46e0535f0747b7:Enemy_SandBoss()",
-			bool RenderMask = false,
-			bool FlipX = true,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
+			string Name = "BOSS",
 		},
-		BossScript = 
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5ab57c97f2406d40:Chest",
+		LinkId = 
 		{
-			string Fish = "5a5d92a26fb18bc3:BombGearahna",
-			Quat NormRotation = [0, 0, 0, 0],
-			Enum Stop = Static,
-			Enum Start = Dynamic,
-			int Speed = 15,
+			uint Id = 9,
 		},
-		BoxCollider = 
+		Transform = 
 		{
-			bool Ghost = false,
-			bool SendsMessages = true,
-			bool Seamless = true,
-			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
-			string SerializedGroupName = "5a5d96483f925cc6:Boss",
-			Vec3 Offset = [0, 0, 0],
-			Vec3 Size = [2.75, 1.25, 0.5],
+			Vec3 Translation = [39.5, -34.5, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
 		},
-		RigidBody = 
+		Named = 
 		{
-			bool Static = false,
-			bool Asleep = false,
-			bool Kinematic = false,
-			bool RotationLocked = true,
-			bool Mode2D = true,
-			bool AllowSleep = true,
-			bool Inherit2DMode = true,
-			Vec3 Velocity = [0, 0, 0],
-			Vec3 AngularVelocity = [0, 0, 0],
-		},
-		IgnoreSpaceEffects = 
-		{
-			bool Drag = true,
-			bool Flow = true,
-			bool Force = true,
-			bool Gravity = true,
-			bool Thrust = true,
-			bool Vortex = true,
-			bool Wind = true,
-			bool Invalid = false,
-			bool Torque = true,
-			bool PointGravity = true,
-			bool PointForce = true,
-			bool Buoyancy = true,
-			bool Custom = true,
-		},
-		Orientation = 
-		{
-			Vec3 GlobalUp = [0, 1, 0],
-			Vec3 UpVector = [0, 0, 1],
-			Vec3 ForwardVector = [1, 0, 0],
-			OrientationBases DefaultBases = ForwardXUpZ,
-		},
-		EnemyHealth = 
-		{
-			int Health = 100,
-			Vec4 DamageColor = [1, 0, 0, 1],
-			Vec4 RegularColor = [1, 1, 1, 1],
-		},
-		BossKeyDropping = 
-		{
-			string Key = "5add71002d270676:Key",
-		},
-		Hierarchy = 
-		{
-			Cog = 
-			{
-				LinkId = 
-				{
-					uint Id = 9,
-				},
-				Named = 
-				{
-					string Name = "Laser",
-				},
-				Transform = 
-				{
-					Vec3 Translation = [-0.0430669785, -0.188402265, 0],
-					Vec3 Scale = [0.843304157, 0.552954853, 0.301204622],
-					Quat Rotation = [0, 0, -0.00113470259, 0.999999404],
-				},
-				Sprite = 
-				{
-					bool Visible = true,
-					bool VisibilityCulling = true,
-					bool VisibilityEvents = true,
-					bool CastShadows = false,
-					Vec4 Color = [1, 1, 1, 0],
-					BlendMode BlendMode = Alpha,
-					SpriteGeometryMode GeometryMode = ZPlane,
-					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string SpriteSource = "5275aa4d802dd6dc:Square",
-					bool RenderMask = false,
-					bool FlipX = false,
-					bool FlipY = false,
-					bool AnimationActive = true,
-					float AnimationSpeed = 1,
-					uint StartFrame = 0,
-				},
-				Bounce = 
-				{
-					Vec3 BounceLevel = [0, 0, 0],
-				},
-				FlipSpriteChild = 
-				{
-					bool Sprite = false,
-				},
-				CapsuleCollider = 
-				{
-					bool Ghost = false,
-					bool SendsMessages = true,
-					bool Seamless = true,
-					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
-					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
-					Vec3 Offset = [0, 0, 0],
-					float Radius = 2,
-					float Height = 2,
-					AxisDirection Direction = X,
-					CapsuleScalingMode ScalingMode = PreserveScale,
-				},
-				EnemyShoot = 
-				{
-					string Bullet = "5a5eecab5b63f8a4:Laser",
-					float TimeBetweenShots = 0.300000012,
-					float Range = 50,
-				},
-			},
+			string Name = "Chest",
 		},
 	},
 	ArchetypeInstance = 
@@ -504,25 +373,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [39.5, -34.5, 5.99999619],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Named = 
-		{
-			string Name = "Chest",
-		},
-	},
-	ArchetypeInstance = 
-	{
-		string Name = "5ab57c97f2406d40:Chest",
-		LinkId = 
-		{
-			uint Id = 11,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [45.5, -34.5, 5.99999619],
+			Vec3 Translation = [45.5, -34.5, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -535,7 +386,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 12,
+			uint Id = 11,
 		},
 		Named = 
 		{
@@ -585,11 +436,11 @@ Level =
 		string Name = "5ab57c97f2406d40:Chest",
 		LinkId = 
 		{
-			uint Id = 13,
+			uint Id = 12,
 		},
 		Transform = 
 		{
-			Vec3 Translation = [47.5, -34.5, 5.99999619],
+			Vec3 Translation = [47.5, -34.5, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -603,7 +454,7 @@ Level =
 		string Name = "5af8a804be686e11:Door",
 		LinkId = 
 		{
-			uint Id = 14,
+			uint Id = 13,
 		},
 		Transform = 
 		{
@@ -621,7 +472,7 @@ Level =
 		string Name = "5adef0b2576f5b3a:Player",
 		LinkId = 
 		{
-			uint Id = 15,
+			uint Id = 14,
 		},
 		Transform = 
 		{
@@ -638,7 +489,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 16,
+			uint Id = 15,
 		},
 		Named = 
 		{
@@ -696,7 +547,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 17,
+			uint Id = 16,
 		},
 		Named = 
 		{
@@ -772,7 +623,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 18,
+			uint Id = 17,
 		},
 		Named = 
 		{
@@ -848,7 +699,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 19,
+			uint Id = 18,
 		},
 		Named = 
 		{
@@ -924,7 +775,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 20,
+			uint Id = 19,
 		},
 		Named = 
 		{
@@ -1000,7 +851,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 21,
+			uint Id = 20,
 		},
 		Named = 
 		{
@@ -1076,7 +927,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 22,
+			uint Id = 21,
 		},
 		Named = 
 		{
@@ -1153,7 +1004,7 @@ Level =
 		string Name = "5a7d43b4947c030d:Checkpoint",
 		LinkId = 
 		{
-			uint Id = 23,
+			uint Id = 22,
 		},
 		Transform = 
 		{
@@ -1170,7 +1021,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 24,
+			uint Id = 23,
 		},
 		Named = 
 		{
@@ -1224,7 +1075,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 25,
+			uint Id = 24,
 		},
 		Named = 
 		{
@@ -1272,6 +1123,58 @@ Level =
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
 			},
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 25,
+		},
+		Named = 
+		{
+			string Name = "MusicPlayer",
+		},
+		Archetyped = 
+		{
+			string Name = "5aacbc6f6e4e1dd4:BackgroundMusicPlayer",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-17.8650723, -25.9916611, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = false,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5275aa4d802dd6dc:Square",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		SoundEmitter = 
+		{
+			float Volume = 1,
+			float Pitch = 0,
+			float PitchSemitones = 0,
+			bool UsePitchSemitones = false,
+			bool Positional = false,
+			int Version = 1,
+		},
+		BackgroundMusic = 
+		{
+			string BackgroundGameMusic = "5aa98623a2292a89:BossMusic",
 		},
 	},
 },

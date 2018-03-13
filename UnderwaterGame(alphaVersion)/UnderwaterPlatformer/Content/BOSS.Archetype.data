@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-27.8907166, -46.4831963, 0],
+		Vec3 Translation = [8.81347561, -36.7959518, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0.00113470259, 0.999999344],
 	},
@@ -30,7 +30,7 @@ Cog =
 		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
 		string SpriteSource = "5a46e0535f0747b7:Enemy_SandBoss()",
 		bool RenderMask = false,
-		bool FlipX = false,
+		bool FlipX = true,
 		bool FlipY = false,
 		bool AnimationActive = true,
 		float AnimationSpeed = 1,
@@ -91,7 +91,7 @@ Cog =
 	},
 	EnemyHealth = 
 	{
-		int Health = 100,
+		int Health = 50,
 		Vec4 DamageColor = [1, 0, 0, 1],
 		Vec4 RegularColor = [1, 1, 1, 1],
 	},
@@ -106,46 +106,6 @@ Cog =
 			LinkId = 
 			{
 				uint Id = 2,
-			},
-			Named = 
-			{
-				string Name = "Sprite",
-			},
-			Transform = 
-			{
-				Vec3 Translation = [9.94824409, 0.307403088, 0],
-				Vec3 Scale = [17.0382156, 0.449862331, 1],
-				Quat Rotation = [0, 0, -0.0013649849, 0.999999106],
-			},
-			Sprite = 
-			{
-				bool Visible = false,
-				bool VisibilityCulling = true,
-				bool VisibilityEvents = true,
-				bool CastShadows = false,
-				Vec4 Color = [1, 0, 0, 0.5],
-				BlendMode BlendMode = Alpha,
-				SpriteGeometryMode GeometryMode = ZPlane,
-				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-				string SpriteSource = "5275aa4d802dd6dc:Square",
-				bool RenderMask = false,
-				bool FlipX = false,
-				bool FlipY = false,
-				bool AnimationActive = true,
-				float AnimationSpeed = 1,
-				uint StartFrame = 0,
-			},
-			Laser = 
-			{
-				Vec4 NormColor = [1, 0, 0, 0.5],
-				Vec4 Invisible = [0, 0, 0, 0],
-			},
-		},
-		Cog = 
-		{
-			LinkId = 
-			{
-				uint Id = 3,
 			},
 			Named = 
 			{
