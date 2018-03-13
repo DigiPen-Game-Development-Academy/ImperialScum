@@ -85,13 +85,37 @@ class TreasureChest : ZilchComponent
     
     function RareItem()
     {
+        if(AdvInventory.PlayerInventory["Ring_Regen"] >= 1
+        && AdvInventory.PlayerInventory["Ring_Jump"] >= 1)
+        {
+            for( var i = 5; i > 0; --i)
+            {
+                this.Space.CreateAtPosition(Archetype.Gear,
+                this.Owner.Transform.Translation);
+                
+            }
+            return;
+            
+        }
+        
         var random = new Random();
         var randomLoot = random.DieRoll(2);
         
-        if(randomLoot == 2)
+        if(randomLoot == 1)
         {
-            AdvInventory.PlayerInventory["Ring_Regen"] >= 1;
+            if(AdvInventory.PlayerInventory["Ring_Regen"] >= 1)
+            this.RareItem();
+            
             this.Space.CreateAtPosition(Archetype.Ring_Regen,
+                this.Owner.Transform.Translation);
+            
+        }
+        else if(randomLoot == 2)
+        {
+            if(AdvInventory.PlayerInventory["Ring_Jump"] >= 1)
+            this.RareItem();
+            
+            this.Space.CreateAtPosition(Archetype.Ring_Jump,
                 this.Owner.Transform.Translation);
             
         }
