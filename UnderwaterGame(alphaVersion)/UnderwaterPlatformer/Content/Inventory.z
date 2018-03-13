@@ -80,4 +80,27 @@ class StoreCollide : ZilchComponent
     }
 }
 
+class PressE: ZilchComponent
+{
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+    
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+    if (StoreCollide.CollideWithShop == true)
+    {
+        this.Owner.SpriteText.Text = ("Press E for Shop");
+    }
+    else
+    {
+        this.Owner.SpriteText.Text = (" ");
+        
+    }
+}
+}
+    
+
 
