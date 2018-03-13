@@ -156,7 +156,7 @@ CollisionTable =
 		{
 			string TypeA = "5a5d96483f925cc6:Boss",
 			string TypeB = "4e740859314e5515:DefaultGroup",
-			bool SkipResolution = false,
+			bool SkipResolution = true,
 			bool SkipDetectingCollision = false,
 			bool StartEvent = false,
 			bool EndEvent = false,
