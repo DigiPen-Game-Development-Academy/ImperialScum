@@ -1,0 +1,25 @@
+class TutorialDoor : ZilchComponent
+{
+    [Static] var DoorOpen : Boolean = true;
+     var Position : Real3;
+     
+    function Initialize(init : CogInitializer)
+    {
+        this.Position = this.Owner.Transform.Translation;
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        //position += Real3(0,3,0);
+        
+        if (TutorialDoor.DoorOpen == true && Zero.Keyboard.KeyIsPressed(Keys.E))
+        {
+            var seq = Action.Sequence(this.Owner.Actions);
+                
+                Action.Property
+                (seq, @this.Owner.Transform.Translation, this.Position + Real3(0,3,0), 4, Ease.QuadInOut);
+        }
+        
+    }
+}
