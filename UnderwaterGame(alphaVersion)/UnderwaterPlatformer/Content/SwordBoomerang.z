@@ -14,6 +14,7 @@ class SwordBoomerang : ZilchComponent
     
     function Initialize(init : CogInitializer)
     {
+        SwordBoomerang.MarkerPlaced = false;
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
         Zero.Connect(this.Space, Events.LeftMouseDown, this.OnLeftMouseDown);
     }
