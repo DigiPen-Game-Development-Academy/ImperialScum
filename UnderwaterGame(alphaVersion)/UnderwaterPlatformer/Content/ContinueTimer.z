@@ -30,7 +30,6 @@ class ContinueTimer : ZilchComponent
             else if(ContinueTimer.LevelNumber == 5) ContinueTimer.LevelToLoadProgression = Level.Find("JacobsTerribleLevel"); //LEVEL 4
             else return;
             BackgroundMusic.NoDelay = false;
-            ContinueTimer.LevelNumber += 1;
            object1.Sprite.Visible = true;
            object2.Sprite.Visible = true;
            text1.SpriteText.Visible = true;
