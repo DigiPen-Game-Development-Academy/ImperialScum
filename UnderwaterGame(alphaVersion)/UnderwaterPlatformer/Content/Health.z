@@ -139,33 +139,37 @@ class Health : ZilchComponent
             Health.CurrentHealth += 1000;
         }
         
-
-        var maxTimesRepeated = 6;
-        //DROP ITEMS ON DEATH - Jessica Alberg
+        
         if(Health.CurrentHealth <= 0)
         {
-            //this.DidOnce = true;
+            
             var position = this.Owner.Transform.Translation;
-            position += Real3(1,1,0);
-
-            if(this.TimesRepeated == 1)
+            
+            if(AdvInventory.PlayerInventory["Gears"] > 0
+            && AdvInventory.PlayerInventory["Gears"] < 4)
             {
-            AdvInventory.PlayerInventory["Gears"] -= 3;
-            AdvInventory.PlayerInventory["Food"] -= 1;
-            AdvInventory.PlayerInventory["HealthPotion"] -= 1;
-            this.Space.CreateAtPosition(this.Gear, position);
+                while(AdvInventory.PlayerInventory["Gears"] > 0)
+                {
+                this.Space.CreateAtPosition(Archetype.Gear, position);
+                AdvInventory.PlayerInventory["Gears"] -= 1;
+                }
+            }
+            else
+            {
+                for(var i = 3; i > 0; --i)
+                {
+                    this.Space.CreateAtPosition(Archetype.Gear, position);
+                    AdvInventory.PlayerInventory["Gears"] -= 1;
+                }
             }
             
-            if(this.TimesRepeated == 2)
-            this.Space.CreateAtPosition(this.Gear, position);
-            if(this.TimesRepeated == 3)
-            this.Space.CreateAtPosition(this.Gear, position);
-            if(this.TimesRepeated == 4)
-            this.Space.CreateAtPosition(this.Food, position);
-            if(this.TimesRepeated == 5)
-            this.Space.CreateAtPosition(this.HealthPotion, position);
-            if(this.TimesRepeated >= maxTimesRepeated)return;
-            this.TimesRepeated += 1;
+            if(AdvInventory.PlayerInventory["HealthPotion"] > 0)
+            {
+                this.Space.CreateAtPosition(Archetype.HealthPotion, position);
+                    AdvInventory.PlayerInventory["HealthPotion"] -= 1;
+            }
+                
+                
             
             this.Owner.Transform.Translation = Checkpoint.RespawnPosition;
             Health.CurrentHealth = Health.MaxHealth;
