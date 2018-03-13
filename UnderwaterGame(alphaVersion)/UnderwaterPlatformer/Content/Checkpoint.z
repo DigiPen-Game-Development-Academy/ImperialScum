@@ -2,37 +2,19 @@ class Checkpoint : ZilchComponent
 //Elena Schefer
 {
   [Static]
-var RespawnPosition : Real3 = Real3();
+   var RespawnPosition : Real3 = Real3();
 
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(init,Events.AllObjectsInitialized, this.OnAllObjectsInitialized);
-        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
     }
 
     function OnAllObjectsInitialized(event : CogInitializerEvent)
     {
-        var player = this.Space.FindObjectByName("Player");
-        if( player == null) return;
+        var player = this.Space.FindObjectByName("Player").Transform.Translation;
+        
+        Checkpoint.RespawnPosition = player;
         
     }
-    function OnLogicUpdate(event : UpdateEvent)
 
-    {
-       var player = this.Space.FindObjectByName("Player");
-       if( player == null) return;
-            
-        if(Health.CurrentHealth <= 0)
-        {
-            player.Transform.Translation = Checkpoint.RespawnPosition;
-            Health.CurrentHealth = Health.MaxHealth;
-        }
-        
-        if(PlayerMovement.Checkpoint1 == true &&  Zero.Keyboard.KeyIsPressed(Keys.R))
-        {
-            player.Transform.Translation = Checkpoint.RespawnPosition;
-        
-            
-        }
-    }
 }

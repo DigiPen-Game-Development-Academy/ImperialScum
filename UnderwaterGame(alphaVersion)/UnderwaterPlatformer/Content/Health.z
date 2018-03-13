@@ -68,6 +68,9 @@ class Health : ZilchComponent
 
     function OnCollisionPersisted(event : CollisionEvent)
     {
+        if(event.OtherObject.Checkpoint != null)
+        Checkpoint.RespawnPosition = this.Owner.Transform.Translation;
+        
         if(event.OtherObject.EnemyHealth != null && Health.CurrentHealth > 0 && this.Invincibility == false)
         {
             Health.CurrentHealth -= 2;
@@ -163,6 +166,10 @@ class Health : ZilchComponent
             this.Space.CreateAtPosition(this.HealthPotion, position);
             if(this.TimesRepeated >= maxTimesRepeated)return;
             this.TimesRepeated += 1;
+            
+            this.Owner.Transform.Translation = Checkpoint.RespawnPosition;
+            Health.CurrentHealth = Health.MaxHealth;
+            Hunger.Hunger = Hunger.MaxHunger;
         }
     }
 }
