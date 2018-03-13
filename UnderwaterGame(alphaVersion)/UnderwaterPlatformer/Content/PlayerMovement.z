@@ -3,11 +3,8 @@
 //Moves the player
 class PlayerMovement : ZilchComponent
 {
-    [Property]
+   [Static]
     var Checkpoint1 : Boolean = false;
-    
-    [Property]
-    var CheckPoint : CogPath = null;
     
     [Property]
     var Speed:Real = 30;
@@ -32,6 +29,7 @@ class PlayerMovement : ZilchComponent
     [Property] var WalkSound : SoundCue;
     [Property] var SoundToPlay : SoundCue = SoundCue.GearPickup;
     [Property] var SoundToPlay2 : SoundCue = SoundCue.SpearStab;
+    var SoundToPlay3 : SoundCue = SoundCue.SelectItem;
     
     var Swimming:Boolean = false;
     
@@ -56,7 +54,7 @@ class PlayerMovement : ZilchComponent
         Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
         Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
         
-        //Checkpoint.RespawnPosition = CheckPoint.Transform.Translation;
+      
     }
 
     function OnCollisionStarted(event : CollisionEvent)
@@ -72,12 +70,12 @@ class PlayerMovement : ZilchComponent
 
             checkpointPosition.Y = this.Owner.Transform.Translation.Y;
 
-            //CheckPoint.RespawnPosition = checkpointPosition;
+            Checkpoint.RespawnPosition = checkpointPosition;
         }
         
         if(event.OtherObject.Name == "CheckPoint")
         {
-            this.Checkpoint1 = true;
+            PlayerMovement.Checkpoint1 = true;
         }
     }
 
@@ -112,6 +110,12 @@ class PlayerMovement : ZilchComponent
         {
             PlayerStab.PlaySound2 = false;
             this.Owner.SoundEmitter.PlayCue(this.SoundToPlay2);
+        }
+        
+        if(Eat.PlaySound3 == true)
+        {
+            Eat.PlaySound3 = false;
+            this.Owner.SoundEmitter.PlayCue(this.SoundToPlay3);
         }
     
         if(Zero.Keyboard.KeyIsPressed(this.KeyUp) && this.Owner.GroundChecker.Grounded == true

@@ -1,25 +1,25 @@
 SoundCue = 
 {
-	SoundPlayMode PlayMode = Looping,
-	float Volume = 1,
+	SoundPlayMode PlayMode = Single,
+	float Volume = 0.800000012,
 	float VolumeVariation = 0,
-	float VolumeDB = 0,
+	float VolumeDB = -6,
 	bool UseVolumeDB = false,
 	float VolumeDBVariation = 0,
-	float Pitch = 0,
-	float PitchSemitones = 0,
+	float Pitch = -1.10000002,
+	float PitchSemitones = -13.1899996,
 	bool UsePitchSemitones = false,
 	float PitchVariation = 0,
 	float PitchSTVariation = 0,
 	float MinDistance = 1,
-	float MaxDistance = 70,
+	float MaxDistance = 40,
 	float MinAttenuatedVolume = 0,
 	uint MaxPlaybacks = 10,
 	Array Sounds = 
 	[
 		{
-			string SoundName = "5a59198eb2cf67c0:Main Theme V4",
-			string GeneratedSoundName = "55017c595ef88bf0:DefaultGeneratedSound",
+			string SoundName = "5a73fcf27e5d1038:Saw Blade",
+			string GeneratedSoundName = "",
 			WhichSoundType WhichToUse = FromFile,
 			float Weight = 1,
 			float LoopEndTime = 0,

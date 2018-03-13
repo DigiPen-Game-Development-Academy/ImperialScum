@@ -1,15 +1,15 @@
 SoundCue = 
 {
-	SoundPlayMode PlayMode = Looping,
-	float Volume = 1,
+	SoundPlayMode PlayMode = Single,
+	float Volume = 0.800000012,
 	float VolumeVariation = 0,
-	float VolumeDB = 0,
+	float VolumeDB = -6,
 	bool UseVolumeDB = false,
 	float VolumeDBVariation = 0,
-	float Pitch = 0,
-	float PitchSemitones = 0,
+	float Pitch = 0.800000012,
+	float PitchSemitones = 9.59000015,
 	bool UsePitchSemitones = false,
-	float PitchVariation = 0,
+	float PitchVariation = 0.5,
 	float PitchSTVariation = 0,
 	float MinDistance = 1,
 	float MaxDistance = 70,
@@ -18,8 +18,8 @@ SoundCue =
 	Array Sounds = 
 	[
 		{
-			string SoundName = "5a59198eb2cf67c0:Main Theme V4",
-			string GeneratedSoundName = "55017c595ef88bf0:DefaultGeneratedSound",
+			string SoundName = "5a73fec7b5c4f54e:Select Item",
+			string GeneratedSoundName = "",
 			WhichSoundType WhichToUse = FromFile,
 			float Weight = 1,
 			float LoopEndTime = 0,
@@ -34,5 +34,5 @@ SoundCue =
 	],
 	string RolloffCurveName = "",
 	int Version = 1,
-	RolloffCurveType RolloffCurveType = Linear,
+	RolloffCurveType RolloffCurveType = Error,
 },

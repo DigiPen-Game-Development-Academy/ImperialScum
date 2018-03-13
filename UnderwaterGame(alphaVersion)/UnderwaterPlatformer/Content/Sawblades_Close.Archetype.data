@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0, 0, 0],
+		Vec3 Translation = [-33.7955322, -0.790961266, 0],
 		Vec3 Scale = [4.24013519, 4.24013519, 4.24013519],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -39,6 +39,15 @@ Cog =
 	Spin = 
 	{
 		float RotationSpeed = -50,
+	},
+	SoundEmitter = 
+	{
+		float Volume = 1,
+		float Pitch = 0,
+		float PitchSemitones = 0,
+		bool UsePitchSemitones = false,
+		bool Positional = true,
+		int Version = 1,
 	},
 	Hierarchy = 
 	{

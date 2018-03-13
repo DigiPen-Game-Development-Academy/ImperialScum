@@ -57,7 +57,7 @@ class Health : ZilchComponent
 
     function OnCollisionStarted(event : CollisionEvent)
     {
-        if(event.OtherObject.Name == ("Bullet") && Health.CurrentHealth > 0 && this.Invincibility == false)
+        if(event.OtherObject.BulletLogic != null && Health.CurrentHealth > 0 && this.Invincibility == false)
         {
             Health.CurrentHealth -= 2;
             this.Owner.SoundEmitter.PlayCue(this.HitSoundThing);
