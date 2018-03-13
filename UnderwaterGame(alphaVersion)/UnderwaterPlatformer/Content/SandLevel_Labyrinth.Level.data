@@ -104,7 +104,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-28.3201141, -0.693192244, 50],
+			Vec3 Translation = [2.00393057, 5.41413021, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -116,7 +116,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 11.0803394,
+			float Size = 22.3130703,
 		},
 		EditorCameraController = 
 		{
@@ -124,7 +124,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-28.3201141, -0.693192244, -1.02383285e-06],
+			Vec3 LookTarget = [2.00393057, 5.41413021, 2.50844295e-07],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -4697,6 +4697,24 @@ Level =
 					Vec4 Color4 = [1, 0.960000157, 0, 0],
 				},
 			},
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a7d43b4947c030d:Checkpoint",
+		LinkId = 
+		{
+			uint Id = 82,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-20.5827217, 1.24432707, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "CheckPoint",
 		},
 	},
 },
