@@ -1,9 +1,8 @@
 class Checkpoint : ZilchComponent
 //Elena Schefer
 {
-    
-    
-    var RespawnPosition : Real3 = Real3();
+  [Static]
+var RespawnPosition : Real3 = Real3();
 
     function Initialize(init : CogInitializer)
     {
@@ -15,7 +14,7 @@ class Checkpoint : ZilchComponent
     {
         var player = this.Space.FindObjectByName("Player");
         if( player == null) return;
-        this.RespawnPosition = player.Transform.Translation;
+        
     }
     function OnLogicUpdate(event : UpdateEvent)
 
@@ -25,14 +24,15 @@ class Checkpoint : ZilchComponent
             
         if(Health.CurrentHealth <= 0)
         {
-            player.Transform.Translation = this.RespawnPosition;
+            player.Transform.Translation = Checkpoint.RespawnPosition;
             Health.CurrentHealth = Health.MaxHealth;
         }
         
-        if(/* this.Space.PlayerMovement.Checkpoint1 == true && */ Zero.Keyboard.KeyIsPressed(Keys.R))
+        if(PlayerMovement.Checkpoint1 == true &&  Zero.Keyboard.KeyIsPressed(Keys.R))
         {
-            player.Transform.Translation = this.RespawnPosition;
+            player.Transform.Translation = Checkpoint.RespawnPosition;
             Health.CurrentHealth = Health.MaxHealth;
+            
         }
     }
 }

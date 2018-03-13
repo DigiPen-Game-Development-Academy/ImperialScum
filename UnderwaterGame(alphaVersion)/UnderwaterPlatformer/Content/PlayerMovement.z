@@ -3,11 +3,8 @@
 //Moves the player
 class PlayerMovement : ZilchComponent
 {
-    [Property]
+   [Static]
     var Checkpoint1 : Boolean = false;
-    
-    [Property]
-    var CheckPoint : CogPath = null;
     
     [Property]
     var Speed:Real = 30;
@@ -57,7 +54,7 @@ class PlayerMovement : ZilchComponent
         Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
         Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
         
-        //Checkpoint.RespawnPosition = CheckPoint.Transform.Translation;
+      
     }
 
     function OnCollisionStarted(event : CollisionEvent)
@@ -73,12 +70,12 @@ class PlayerMovement : ZilchComponent
 
             checkpointPosition.Y = this.Owner.Transform.Translation.Y;
 
-            //CheckPoint.RespawnPosition = checkpointPosition;
+            Checkpoint.RespawnPosition = checkpointPosition;
         }
         
         if(event.OtherObject.Name == "CheckPoint")
         {
-            this.Checkpoint1 = true;
+            PlayerMovement.Checkpoint1 = true;
         }
     }
 
