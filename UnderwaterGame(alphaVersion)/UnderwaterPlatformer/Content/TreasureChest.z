@@ -1,6 +1,6 @@
 //Jacob Burke
 
-//LOOTBOXES this is the script that makes the game, kids!
+//LOOTBOXES! this is the script that makes the game, kids!
 
 class TreasureChest : ZilchComponent
 {
@@ -51,19 +51,26 @@ class TreasureChest : ZilchComponent
                 this.Spawn = Archetype.HealthPotion;
                 
                 if(randomLoot > 99)
-                Console.WriteLine("WOOOOOHOOOOO");
+                this.RareItem();
                 
                 
                 var treasure = this.Space.CreateAtPosition(this.Spawn,
                 this.Owner.Transform.Translation);
                 
+                if(this.Spawn == null)
+                continue;
+                
                 if(randomChoose == 1)
                 {
+                if(this.Spawn == null)
+                continue;
                 treasure.RigidBody.Velocity = Real3(randomVelocityNegative,randomVelocityPositive, 0);
                 }
                 
                 if(randomChoose == 2)
                 {
+                if(this.Spawn == null)
+                continue;
                 treasure.RigidBody.Velocity = Real3(randomVelocityPositive,randomVelocityPositive, 0);
                 }
                 
@@ -73,6 +80,20 @@ class TreasureChest : ZilchComponent
             {
                 this.Owner.Destroy();
             }
+        }
+    }
+    
+    function RareItem()
+    {
+        var random = new Random();
+        var randomLoot = random.DieRoll(2);
+        
+        if(randomLoot == 2)
+        {
+            AdvInventory.PlayerInventory["Ring_Regen"] >= 1;
+            this.Space.CreateAtPosition(Archetype.Ring_Regen,
+                this.Owner.Transform.Translation);
+            
         }
     }
 }
