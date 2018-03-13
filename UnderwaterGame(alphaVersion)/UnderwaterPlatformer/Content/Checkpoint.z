@@ -31,7 +31,7 @@ var RespawnPosition : Real3 = Real3();
         if(PlayerMovement.Checkpoint1 == true &&  Zero.Keyboard.KeyIsPressed(Keys.R))
         {
             player.Transform.Translation = Checkpoint.RespawnPosition;
-            Health.CurrentHealth = Health.MaxHealth;
+        
             
         }
     }
