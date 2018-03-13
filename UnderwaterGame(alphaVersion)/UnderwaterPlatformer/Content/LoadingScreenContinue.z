@@ -8,5 +8,6 @@ class LoadingScreenContinue : ZilchComponent
     function OnMouseDown(event : ViewportMouseEvent)
     {
         this.Space.LoadLevel(ContinueTimer.LevelToLoadProgression);
+        ContinueTimer.LevelNumber += 1;
     }
 }
