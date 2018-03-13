@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0, 0, 0],
+		Vec3 Translation = [4.39668465, 4.17722464, 0],
 		Vec3 Scale = [5.08184099, 5.08184099, 5.08184099],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -39,6 +39,7 @@ Cog =
 	Spin = 
 	{
 		float RotationSpeed = -50,
+		string SoundToPlay = "5a73fcfb7f3fbd5e:SawBlade",
 	},
 	Hierarchy = 
 	{
@@ -79,6 +80,7 @@ Cog =
 			Spin = 
 			{
 				float RotationSpeed = 50,
+				string SoundToPlay = "5a73fcfb7f3fbd5e:SawBlade",
 			},
 			JaggedRock = 
 			{
@@ -131,6 +133,7 @@ Cog =
 			Spin = 
 			{
 				float RotationSpeed = 50,
+				string SoundToPlay = "5a73fcfb7f3fbd5e:SawBlade",
 			},
 			JaggedRock = 
 			{
@@ -141,7 +144,7 @@ Cog =
 				bool SendsMessages = true,
 				bool Seamless = true,
 				string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
-				string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+				string SerializedGroupName = "5a6ec1d0d5cb051d:Trap",
 				Vec3 Offset = [0, 0, 0],
 				Vec3 Size = [0.5, 0.5, 0.5],
 			},
@@ -183,6 +186,7 @@ Cog =
 			Spin = 
 			{
 				float RotationSpeed = 50,
+				string SoundToPlay = "5a73fcfb7f3fbd5e:SawBlade",
 			},
 			JaggedRock = 
 			{
