@@ -22,7 +22,7 @@ class DisplayHealth : ZilchComponent
     {
         this.RegularColor = this.Owner.Sprite.Color;
         
-        this.InitSize = this.Owner.Transform.Scale.X;
+        this.InitSize = this.Owner.Area.Size.X;
         
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
 
@@ -31,7 +31,7 @@ class DisplayHealth : ZilchComponent
     function OnLogicUpdate(event : UpdateEvent)
     {
         var newSize = this.InitSize * (Health.CurrentHealth/20.0);
-        this.Owner.Transform.Scale = Real3(newSize, 1, 1);
+        this.Owner.Area.Size = Real2(newSize, 1);
         
         if(Health.CurrentHealth <= 5)
         {
