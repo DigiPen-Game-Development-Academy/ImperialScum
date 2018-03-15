@@ -1229,7 +1229,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-12.1046095, 5.16074228, 50],
+			Vec3 Translation = [-2.65735888, -10.1197491, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -1249,7 +1249,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-12.1046095, 5.16074228, 4.54126408e-08],
+			Vec3 LookTarget = [-2.65735888, -10.1197491, 4.54126408e-08],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -1343,7 +1343,7 @@ Level =
 		},
 		TextScroll = 
 		{
-			int Blocks = 20,
+			int Blocks = 25,
 			int Speed = 70,
 		},
 		Hierarchy = 

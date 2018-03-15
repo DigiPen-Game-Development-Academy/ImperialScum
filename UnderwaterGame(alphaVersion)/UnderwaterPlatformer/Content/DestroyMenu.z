@@ -1,0 +1,26 @@
+class DestroyMenu : ZilchComponent
+{
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        Zero.Connect(this.Owner, Events.MouseDown, this.OnMouseDown);
+    }
+
+    function OnMouseDown(event : ViewportMouseEvent)
+    {
+        var spaces = this.GameSession.AllSpaces;
+        this.Owner.Destroy;
+        foreach(var space in spaces)
+            {
+                space.TimeSpace.TogglePause();
+            }
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        if(PauseMenu.DestroyNextTime == 2)
+        {
+            this.Owner.Destroy();  
+        }
+    }
+}
