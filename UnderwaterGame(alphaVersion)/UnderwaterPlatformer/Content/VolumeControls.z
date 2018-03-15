@@ -1,32 +1,44 @@
 // Made by jessica for the volume option in settings - CURRENTLY NON FUNCTIONAL!
 class VolumeControls : ZilchComponent
 {
-    var Number : Integer = 5;
+    [Static] var Number1 : Integer = 5;
     [Property] var Color : Real4;
     [Property] var Color2 : Real4;
     [Static] var VolumeLevel : Integer;
+    var Timer : Real = 0.1;
+    
     function Initialize(init : CogInitializer)
     {
-        //Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        var vol = this.Space.FindObjectByName("VolumeNumber");
+        vol.SpriteText.Text = "`VolumeControls.Number1`";
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
         Zero.Connect(this.Owner, Events.MouseDown, this.OnMouseDown);
+    }
+    
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        if(this.Timer > 0) this.Timer -= event.Dt;
     }
 
     function OnMouseDown(event : ViewportMouseEvent)
     {
-        Console.WriteLine(this.Number);
+        Console.WriteLine(VolumeControls.Number1);
         var volume = this.Space.FindObjectByName("VolumeNumber");
-        if(this.Owner == this.Space.FindObjectByName("ArrowLeft") && this.Number >= 0)
+        if(this.Timer <= 0)
         {
-            this.Number -= 1;
-            volume.SpriteText.Text = "`this.Number - 1`";
-                
-        }
+            if(this.Owner == this.Space.FindObjectByName("ArrowLeft") && VolumeControls.Number1 > 0)
+            {
+                VolumeControls.Number1 -= 1;
+                volume.SpriteText.Text = "`VolumeControls.Number1`";
+                this.Timer += 0.1;
+            }
         
-        if(this.Owner == this.Space.FindObjectByName("ArrowRight") && this.Number <= 10)
-        {
-            this.Number += 1;
-            volume.SpriteText.Text = "`this.Number + 1`";
-                
+            if(this.Owner == this.Space.FindObjectByName("ArrowRight") && VolumeControls.Number1 < 10)
+            {
+                VolumeControls.Number1 += 1;
+                volume.SpriteText.Text = "`VolumeControls.Number1`";
+                this.Timer += 0.1;
+            }
         }
         //if(this.Owner == this.Space.FindObjectByName("Volume1") && this.Owner.Sprite.Color == this.Color2)
         //{
@@ -180,7 +192,4 @@ class VolumeControls : ZilchComponent
     
     }
 
-    function OnLogicUpdate(event : UpdateEvent)
-    {
-    }
 }

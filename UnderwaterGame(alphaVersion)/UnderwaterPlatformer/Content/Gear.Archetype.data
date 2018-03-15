@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-8.98119068, 7.59164429, 0],
+		Vec3 Translation = [-29.2936192, 12.312295, 0],
 		Vec3 Scale = [1, 1, 5],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -38,10 +38,11 @@ Cog =
 	},
 	Resources = 
 	{
+		string SoundToPlay = "5a4ba86ea5857126:GearPickup",
 	},
 	RigidBody = 
 	{
-		bool Static = false,
+		bool Static = true,
 		bool Asleep = false,
 		bool Kinematic = false,
 		bool RotationLocked = false,
@@ -69,6 +70,12 @@ Cog =
 		bool UsePitchSemitones = false,
 		bool Positional = true,
 		int Version = 1,
+	},
+	PlaySound = 
+	{
+	},
+	VolumeLevev = 
+	{
 	},
 	Hierarchy = 
 	{
