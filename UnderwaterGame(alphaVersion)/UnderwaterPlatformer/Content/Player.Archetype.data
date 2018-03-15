@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [2.01977062, -2.03171086, 0],
+		Vec3 Translation = [-31.7899189, -2.66834736, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -103,9 +103,12 @@ Cog =
 		string FallAnimation = "5a4fd11807fa3010:PlayerJump1002",
 		string MidAnimation = "5a4fd11807c8b0cf:PlayerJump1001",
 		string StabAnimation = "5a51993f910964dc:Player_StabStraight()",
+		string StabUpAnimation = "5a04e41a1c493bd3:Player_StabUp()",
+		string StabDownAnimation = "5a04f9d330c431da:Player_StabDown()",
 		string ThrowAnimation = "5a2d11c157e334b3:PlayerThrow2()",
 		string JumpSound = "",
 		int Lose = 1,
+		float HorizontalDrag = 10,
 	},
 	Health = 
 	{
@@ -122,6 +125,7 @@ Cog =
 	PlayerStab = 
 	{
 		string SpearArchetype = "",
+		float Angle = 0,
 	},
 	SoundEmitter = 
 	{

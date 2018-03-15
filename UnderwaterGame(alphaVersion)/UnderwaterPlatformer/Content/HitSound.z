@@ -29,13 +29,11 @@ class HitSound : ZilchComponent
         if(Zero.Keyboard.KeyIsPressed(Keys.S))
         {
             this.Owner.SoundEmitter.PlayCue(this.HitSoundThing);
-            Console.WriteLine("Works");
         }
         
         //Mute Music by pressing M
         if (Zero.Keyboard.KeyIsPressed(Keys.M) && this.KeyWasPressed == false)
         {
-            Console.WriteLine("Sound Muted 2");
             this.KeyWasPressed = true;
             
            this.Owner.SoundEmitter.Volume = 0;
@@ -51,7 +49,6 @@ class HitSound : ZilchComponent
         if(Zero.Keyboard.KeyIsPressed(Keys.M) && this.Timer <= 0)
             {
                 this.KeyWasPressed = false;
-                Console.WriteLine("Sound Unmuted 2");
                 
                 this.Owner.SoundEmitter.Volume = 1;
                 this.Timer += 0.25;

@@ -3,6 +3,9 @@ class PlayerStab : ZilchComponent
     [Property]
     var SpearArchetype : Archetype;
     
+    [Property]
+    var Angle : Real = 0;
+    
     var Spear : Cog;
     
     [Static] var PlaySound2 : Boolean = false;

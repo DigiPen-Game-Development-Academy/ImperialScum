@@ -121,7 +121,6 @@ class PlayerMovement : ZilchComponent
         if(Zero.Keyboard.KeyIsPressed(this.KeyUp) && this.Owner.GroundChecker.Grounded == true
         && this.Swimming == false)
         {
-
             this.Owner.RigidBody.Velocity =
             Real3(this.Owner.RigidBody.Velocity.X, Math.Max(this.JumpSpeed, velocity.Y + this.JumpSpeed), 0);
             this.Owner.SoundEmitter.PlayCue(this.SingleJumpSound);
@@ -131,7 +130,6 @@ class PlayerMovement : ZilchComponent
         else if(Zero.Keyboard.KeyIsPressed(this.KeyUp) && this.DoubleJump == true
          && this.Swimming == false)
         {
-            
             this.Owner.RigidBody.Velocity =
             Real3(this.Owner.RigidBody.Velocity.X, 
             Math.Max(this.JumpSpeed, velocity.Y + this.JumpSpeed/2), 0);

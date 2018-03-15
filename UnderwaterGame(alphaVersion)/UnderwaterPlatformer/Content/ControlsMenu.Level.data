@@ -116,7 +116,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 14.8164396,
+			float Size = 26.9973049,
 		},
 		EditorCameraController = 
 		{
@@ -282,41 +282,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-16, 0.502922297, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		SpriteText = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [0.86500001, 0.596850038, 0.765784562, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string FontName = "5a0f895ab1e49e19:DraftGameFont",
-			uint FontSize = 16,
-			string Text = "God Mode = G",
-			TextAlign Align = Left,
-			float PixelsPerUnit = 16,
-			bool Smoothing = false,
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 8,
-		},
-		Named = 
-		{
-			string Name = "SpriteText",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-16, -0.525630236, 0],
+			Vec3 Translation = [-16, 0.582679749, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -342,7 +308,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 9,
+			uint Id = 8,
 		},
 		Named = 
 		{
@@ -376,7 +342,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 10,
+			uint Id = 9,
 		},
 		Named = 
 		{
@@ -410,7 +376,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 11,
+			uint Id = 10,
 		},
 		Named = 
 		{
@@ -444,7 +410,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 12,
+			uint Id = 11,
 		},
 		Named = 
 		{
@@ -478,7 +444,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 13,
+			uint Id = 12,
 		},
 		Named = 
 		{
@@ -512,7 +478,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 14,
+			uint Id = 13,
 		},
 		Named = 
 		{
@@ -546,7 +512,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 15,
+			uint Id = 14,
 		},
 		Named = 
 		{
@@ -580,7 +546,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 16,
+			uint Id = 15,
 		},
 		Named = 
 		{
@@ -614,7 +580,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 17,
+			uint Id = 16,
 		},
 		Named = 
 		{
@@ -664,7 +630,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 18,
+			uint Id = 17,
 		},
 		Named = 
 		{
@@ -714,7 +680,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 19,
+			uint Id = 18,
 		},
 		Named = 
 		{
@@ -768,7 +734,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 20,
+			uint Id = 19,
 		},
 		Named = 
 		{
@@ -822,7 +788,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 21,
+			uint Id = 20,
 		},
 		Named = 
 		{
@@ -876,7 +842,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 22,
+			uint Id = 21,
 		},
 		Named = 
 		{
@@ -930,41 +896,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 23,
-		},
-		Named = 
-		{
-			string Name = "SpriteText",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-15.885704, 0.391452909, -1],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		SpriteText = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [0, 0, 0, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string FontName = "5a0f895ab1e49e19:DraftGameFont",
-			uint FontSize = 16,
-			string Text = "God Mode = G",
-			TextAlign Align = Left,
-			float PixelsPerUnit = 16,
-			bool Smoothing = false,
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 24,
+			uint Id = 22,
 		},
 		Named = 
 		{
@@ -998,7 +930,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 25,
+			uint Id = 23,
 		},
 		Named = 
 		{
@@ -1032,7 +964,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 26,
+			uint Id = 24,
 		},
 		Named = 
 		{
@@ -1066,7 +998,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 27,
+			uint Id = 25,
 		},
 		Named = 
 		{
@@ -1100,7 +1032,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 28,
+			uint Id = 26,
 		},
 		Named = 
 		{
@@ -1108,7 +1040,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-15.885704, -0.637100101, -1],
+			Vec3 Translation = [-15.885704, 0.584882736, -1],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -1134,7 +1066,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 29,
+			uint Id = 27,
 		},
 		Named = 
 		{
@@ -1168,7 +1100,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 30,
+			uint Id = 28,
 		},
 		Named = 
 		{
@@ -1202,7 +1134,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 31,
+			uint Id = 29,
 		},
 		Named = 
 		{
@@ -1210,7 +1142,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, -2.5, 0],
+			Vec3 Translation = [13.9817657, -6.25120497, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -1252,7 +1184,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 32,
+					uint Id = 30,
 				},
 				Named = 
 				{
@@ -1288,7 +1220,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 33,
+			uint Id = 31,
 		},
 		Named = 
 		{
@@ -1342,7 +1274,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 34,
+			uint Id = 32,
 		},
 		Named = 
 		{

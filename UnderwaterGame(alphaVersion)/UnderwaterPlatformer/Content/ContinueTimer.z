@@ -14,7 +14,6 @@ class ContinueTimer : ZilchComponent
     {
         if(this.Timer > 0)
         this.Timer -= event.Dt;
-        //Console.WriteLine(this.Timer);
         
         if(this.Timer <= 0)
         {

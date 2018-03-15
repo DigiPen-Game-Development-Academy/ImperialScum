@@ -52,7 +52,6 @@ class BossScript : ZilchComponent
 
     function OnCollisionStarted(event : CollisionEvent)
     {
-        Console.WriteLine(this.DoubleCollide);
         if(event.OtherObject.Name == ("DefaultTile") && this.DoubleCollide == false && BossScript.LaserActive == false)
         {
         this.SwitchDirection();
@@ -100,7 +99,6 @@ class BossScript : ZilchComponent
         //Making the boss look at the player when his laser is active
         if(BossScript.LaserActive == true)
         {
-            Console.WriteLine(this.Timer);
             var player = this.Space.FindObjectByName("Player");
             
             if(this.Timer > 5)
@@ -133,7 +131,6 @@ class BossScript : ZilchComponent
     
     function Laser()
     {
-        Console.WriteLine("LASER");
         BossScript.LaserActive = true;
         this.AbilityEnd = true;
     }

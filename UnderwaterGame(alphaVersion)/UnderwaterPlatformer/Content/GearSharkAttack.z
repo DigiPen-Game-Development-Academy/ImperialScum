@@ -49,7 +49,6 @@ class GearSharkAttack : ZilchComponent
                         this.Owner.Sprite.FlipX = true;
                     }
                     
-                    Console.WriteLine("Stop");
                 }
                 
                 //Make Gear Shark CHAAAARGE
@@ -71,7 +70,6 @@ class GearSharkAttack : ZilchComponent
                         this.Owner.Sprite.FlipX = true;
                     }
                     
-                    Console.WriteLine("CHAAAARGE");
                 }
                 
                 //Make Gear Shark a normal litle boy
@@ -95,7 +93,6 @@ class GearSharkAttack : ZilchComponent
                         this.Owner.Sprite.FlipX = true;
                     }
                     
-                    Console.WriteLine("Normal little boy shark");
                 }
             }
         }

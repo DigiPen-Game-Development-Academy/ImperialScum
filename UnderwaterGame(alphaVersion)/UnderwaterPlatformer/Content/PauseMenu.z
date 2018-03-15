@@ -1,0 +1,41 @@
+class PauseMenu : ZilchComponent
+{
+    [Property] var ApplyQuit : Boolean = false;
+    //var Exists : Boolean = false
+    [Static] var DestroyNextTime : Integer = 0;
+    
+    function Initialize(init : CogInitializer)
+    {
+        //Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        Zero.Connect(this.GameSession, Events.GameRequestQuit, this.OnGameRequestQuit);
+    }
+
+    function OnGameRequestQuit(event : GameEvent)
+    {
+        event.Handled = true;
+        
+        if(this.ApplyQuit)
+        {
+            event.Game.Quit();
+        }
+        
+        else
+        {
+            PauseMenu.DestroyNextTime += 1;
+            var spaces = this.GameSession.AllSpaces;
+            
+                var position = Real3(0,0,0);
+                this.Space.CreateAtPosition(Archetype.PauseMenu, position);
+                
+            
+                foreach(var space in spaces)
+                {
+                    space.TimeSpace.TogglePause();
+                }
+        }
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+    }
+}
