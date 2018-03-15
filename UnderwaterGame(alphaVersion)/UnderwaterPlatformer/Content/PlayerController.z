@@ -31,6 +31,12 @@ class PlayerController : ZilchComponent
     var StabAnimation:SpriteSource;
     
     [Property]
+    var StabUpAnimation:SpriteSource;
+    
+    [Property]
+    var StabDownAnimation:SpriteSource;
+    
+    [Property]
     var ThrowAnimation:SpriteSource;
     var ThrowTime:Real = 0.2;
     
@@ -43,13 +49,15 @@ class PlayerController : ZilchComponent
     
     [Property]
     var HorizontalDrag:Real = 10;
-    
+        
     function Initialize(init : CogInitializer)
     {
         if(AdvInventory.PlayerInventory["ArmorCopper"] >= 1)
         {
             this.IdleAnimation = SpriteSource.Copper_Stand;
             this.StabAnimation = SpriteSource.Copper_StabStraight;
+            this.StabUpAnimation = SpriteSource.Copper_StabUp;
+            this.StabDownAnimation = SpriteSource.Copper_StabDown;
             this.JumpAnimation = SpriteSource.Copper_Jump000;
             this.MidAnimation = SpriteSource.Copper_Jump001;
             this.FallAnimation = SpriteSource.Copper_Jump002;
@@ -68,7 +76,31 @@ class PlayerController : ZilchComponent
     {
         if(Inventory.Exists == false)
         {
-            this.Owner.Sprite.SpriteSource = this.StabAnimation;
+            //Mousey Stuff
+            var mouseScreen = Zero.Mouse.ScreenPosition;
+            var viewport = this.LevelSettings.CameraViewport;
+            var mouseWorld = viewport.ScreenToWorldZPlane(mouseScreen, 0);
+            
+            var toMouse = mouseWorld - this.Owner.Transform.WorldTranslation;
+            var angle = Math.Angle2D(toMouse);
+            
+            Console.WriteLine(angle);
+            
+            //Stabby Sprites
+            if (angle > 0.5 && angle < 2.5)
+            {
+                this.Owner.Sprite.SpriteSource = this.StabUpAnimation;
+                Console.WriteLine("Stab the Sun Mon");
+            }
+            else if (angle > -2.5 && angle < -0.5)
+            {
+                this.Owner.Sprite.SpriteSource = this.StabDownAnimation;
+                Console.WriteLine("Don't Stab the Sun Mon");
+            }
+            else
+            {
+                this.Owner.Sprite.SpriteSource = this.StabAnimation;
+            }
         }
     }
 
