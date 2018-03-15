@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-9.55353642, 20.995203, 0],
+		Vec3 Translation = [-7.84256268, 39.0233231, 0],
 		Vec3 Scale = [0.998837471, 0.998837471, 0.998837471],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -82,6 +82,9 @@ Cog =
 		bool UsePitchSemitones = false,
 		bool Positional = true,
 		int Version = 1,
+	},
+	VolumeLevev = 
+	{
 	},
 	Hierarchy = 
 	{
@@ -196,7 +199,7 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [0.00443840027, -0.160067827, 0],
+				Vec3 Translation = [0.00443792343, -0.160067827, 0],
 				Vec3 Scale = [6.74318027, 6.74318027, 6.74318027],
 				Quat Rotation = [0, 0, 0, 1],
 			},
@@ -312,6 +315,7 @@ Cog =
 			},
 			FlipSpriteChild = 
 			{
+				bool Sprite = false,
 			},
 		},
 	},

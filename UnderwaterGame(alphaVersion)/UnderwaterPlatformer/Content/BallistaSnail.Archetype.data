@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-18.3230362, 6.09249496, 0],
+		Vec3 Translation = [2.46187592, 21.273983, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -80,6 +80,9 @@ Cog =
 		bool UsePitchSemitones = false,
 		bool Positional = true,
 		int Version = 1,
+	},
+	VolumeLevev = 
+	{
 	},
 	Hierarchy = 
 	{
