@@ -77,7 +77,7 @@ class BackgroundMusic : ZilchComponent
                 this.KeyWasPressed = false;
                 Console.WriteLine("Sound Unmuted");
                 
-                this.Owner.SoundEmitter.Volume = 1;
+                this.Owner.SoundEmitter.Volume = VolumeControls.Number1;
                 this.Timer += 0.25;
             }
             
