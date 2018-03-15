@@ -22,7 +22,6 @@ class VolumeControls : ZilchComponent
 
     function OnMouseDown(event : ViewportMouseEvent)
     {
-        Console.WriteLine(VolumeControls.Number1);
         var volume = this.Space.FindObjectByName("VolumeNumber");
         if(this.Timer <= 0)
         {

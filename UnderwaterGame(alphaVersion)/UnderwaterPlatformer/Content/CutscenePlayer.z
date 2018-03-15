@@ -36,7 +36,6 @@ class CutscenePlayer : ZilchComponent
             this.CurrentFrame = 0;
             this.Timer = 0;
             this.TimesPlayed += 1;
-            Console.WriteLine(this.TimesPlayed);
         }
         
         var number = "`this.CurrentFrame`";

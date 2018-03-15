@@ -14,7 +14,6 @@ class EnemyJump : ZilchComponent
         if(event.OtherObject.Name == ("DefaultTile"))
         {
         this.Owner.Parent.EnemyController.Jump = true;
-        Console.WriteLine("HIT");
         }
     }
 

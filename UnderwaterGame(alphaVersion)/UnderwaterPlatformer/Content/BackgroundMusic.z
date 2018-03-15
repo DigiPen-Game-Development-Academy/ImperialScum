@@ -26,7 +26,6 @@ class BackgroundMusic : ZilchComponent
     {
         if(BackgroundMusic.NoDelay != true && this.OnlyDoOnce == false)
         {
-            Console.WriteLine("...");
             this.Owner.SoundEmitter.PlayCue(this.BackgroundGameMusic);
             this.OnlyDoOnce == true;
         }
@@ -38,7 +37,6 @@ class BackgroundMusic : ZilchComponent
         
         
         
-        Console.WriteLine(this.OnlyDoOnce);
         
         //if(this.Timer2 > 0)
         //{

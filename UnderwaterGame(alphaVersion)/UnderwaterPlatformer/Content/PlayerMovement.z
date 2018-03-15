@@ -121,17 +121,23 @@ class PlayerMovement : ZilchComponent
         if(Zero.Keyboard.KeyIsPressed(this.KeyUp) && this.Owner.GroundChecker.Grounded == true
         && this.Swimming == false)
         {
-
             this.Owner.RigidBody.Velocity =
             Real3(this.Owner.RigidBody.Velocity.X, Math.Max(this.JumpSpeed, velocity.Y + this.JumpSpeed), 0);
             this.Owner.SoundEmitter.PlayCue(this.SingleJumpSound);
 
         }
         
+        else if(Zero.Keyboard.KeyIsDown(Keys.Up) && this.Owner.GroundChecker.Grounded == true
+        && this.Swimming == false)
+        {
+            this.Owner.RigidBody.Velocity =
+            Real3(this.Owner.RigidBody.Velocity.X, Math.Max(this.JumpSpeed, velocity.Y + this.JumpSpeed), 0);
+            this.Owner.SoundEmitter.PlayCue(this.SingleJumpSound);
+        }
+        
         else if(Zero.Keyboard.KeyIsPressed(this.KeyUp) && this.DoubleJump == true
          && this.Swimming == false)
         {
-            
             this.Owner.RigidBody.Velocity =
             Real3(this.Owner.RigidBody.Velocity.X, 
             Math.Max(this.JumpSpeed, velocity.Y + this.JumpSpeed/2), 0);
@@ -139,6 +145,16 @@ class PlayerMovement : ZilchComponent
             this.DoubleJump = false;
             
         }
+        
+        else if(Zero.Keyboard.KeyIsDown(Keys.Up) && this.DoubleJump == true
+         && this.Swimming == false)
+         {
+             this.Owner.RigidBody.Velocity =
+            Real3(this.Owner.RigidBody.Velocity.X, 
+            Math.Max(this.JumpSpeed, velocity.Y + this.JumpSpeed/2), 0);
+            this.Owner.SoundEmitter.PlayCue(this.DoubleJumpSound);
+            this.DoubleJump = false;
+         }
                 
         if(Zero.Keyboard.KeyIsDown(this.KeyLeft))
         {
@@ -151,12 +167,12 @@ class PlayerMovement : ZilchComponent
             direction += Real3.XAxis;
         }
         
-        if(Zero.Keyboard.KeyIsDown(this.KeyUp) && this.Swimming == true)
+        if(Zero.Keyboard.KeyIsDown(this.KeyUp) || Zero.Keyboard.KeyIsDown(Keys.Up) && this.Swimming == true)
         {
             direction += Real3.YAxis;
         }
         
-        if(Zero.Keyboard.KeyIsDown(this.KeyDown) && this.Swimming == true)
+        if(Zero.Keyboard.KeyIsDown(this.KeyDown) || Zero.Keyboard.KeyIsDown(Keys.Down) && this.Swimming == true)
         {
             direction -= Real3.YAxis;
         }

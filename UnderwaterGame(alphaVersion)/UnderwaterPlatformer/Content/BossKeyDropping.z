@@ -15,7 +15,7 @@ class BossKeyDropping : ZilchComponent
     {
         var spawnPosition : Real3 = this.Owner.Transform.Translation;
         spawnPosition -= Real3(0, 7, 0);
-        //Console.WriteLine(spawnPosition);
+        
         
         if(this.Owner.EnemyHealth.Health <= 0)
         {

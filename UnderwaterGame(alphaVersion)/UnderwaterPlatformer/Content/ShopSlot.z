@@ -35,7 +35,6 @@ class ShopSlot : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-        Console.WriteLine(this.AlreadyBought);
         if(this.AlreadyBought == true)
         this.Owner.Destroy();
     }

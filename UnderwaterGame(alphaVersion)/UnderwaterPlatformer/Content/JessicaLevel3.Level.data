@@ -1432,11 +1432,6 @@ Level =
 		{
 			string LevelToLoad = "5a4b96cbd2c3c651:LoadingLevel",
 		},
-		TextScroll = 
-		{
-			int Blocks = 20,
-			int Speed = 70,
-		},
 		Hierarchy = 
 		{
 			Cog = 

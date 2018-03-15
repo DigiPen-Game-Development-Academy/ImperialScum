@@ -50,7 +50,6 @@ var OldJumpSpeed : Real;
         }
         if(this.Timer <= 0 && this.Player != null)
         {
-            Console.WriteLine(this.OldSpeed);
             this.Player.PlayerMovement.Speed = this.OldSpeed;
             this.Player.PlayerMovement.JumpSpeed = this.OldJumpSpeed;
             this.Player = null;
