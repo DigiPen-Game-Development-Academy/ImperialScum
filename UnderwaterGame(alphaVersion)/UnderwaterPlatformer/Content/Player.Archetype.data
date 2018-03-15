@@ -106,6 +106,7 @@ Cog =
 		string ThrowAnimation = "5a2d11c157e334b3:PlayerThrow2()",
 		string JumpSound = "",
 		int Lose = 1,
+		float HorizontalDrag = 10,
 	},
 	Health = 
 	{
