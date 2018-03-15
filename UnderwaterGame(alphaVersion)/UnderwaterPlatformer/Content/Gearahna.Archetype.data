@@ -8,9 +8,13 @@ Cog =
 	{
 		string Name = "Gearahna",
 	},
+	Archetyped = 
+	{
+		string Name = "5a0f9c55727e806f:Gearahna",
+	},
 	Transform = 
 	{
-		Vec3 Translation = [22.7379913, 4.01540136, 0],
+		Vec3 Translation = [15.1038475, 16.7481689, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -98,6 +102,9 @@ Cog =
 	HitSound = 
 	{
 		string HitSoundThing = "",
+	},
+	VolumeLevev = 
+	{
 	},
 	Hierarchy = 
 	{

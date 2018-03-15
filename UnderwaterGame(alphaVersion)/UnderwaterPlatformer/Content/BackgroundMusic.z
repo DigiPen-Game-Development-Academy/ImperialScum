@@ -35,6 +35,9 @@ class BackgroundMusic : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
+        
+        
+        
         Console.WriteLine(this.OnlyDoOnce);
         
         //if(this.Timer2 > 0)

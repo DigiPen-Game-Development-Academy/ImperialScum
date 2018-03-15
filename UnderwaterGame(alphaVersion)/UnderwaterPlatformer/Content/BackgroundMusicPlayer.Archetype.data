@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0.0632069409, 10.5642939, 0],
+		Vec3 Translation = [0, 0, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -48,5 +48,8 @@ Cog =
 	BackgroundMusic = 
 	{
 		string BackgroundGameMusic = "5a534e9a1823ff09:CutsceneSong",
+	},
+	VolumeLevev = 
+	{
 	},
 },

@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-0.216768563, -28.2012157, 0],
+		Vec3 Translation = [2.01977062, -2.03171086, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -50,7 +50,7 @@ Cog =
 	},
 	SwordBoomerang = 
 	{
-		string ThrowSound = "",
+		string ThrowSound = "5a74d35b4f6e5cb6:BoomerangThrow",
 	},
 	CapsuleCollider = 
 	{
@@ -81,22 +81,6 @@ Cog =
 	},
 	PlayerMovement = 
 	{
-		bool Checkpoint1 = false,
-		CogPath CheckPoint = 
-		{
-			string Path = "",
-			bool ErrorOnResolveToNull = false,
-			bool ErrorOnPathCantCompute = false,
-			bool ErrorOnDirectLinkFail = false,
-			bool UpdateCogOnPathChange = true,
-			bool UpdatePathOnCogChange = true,
-			bool UpdateCogOnInitialize = true,
-			bool ResolvedNullErrorOccurred = false,
-			uint ResolvedCog = 4294967293,
-			CogPathPreference PathPreference0 = CogRelative,
-			CogPathPreference PathPreference1 = SpaceRelative,
-			CogPathPreference PathPreference2 = Absolute,
-		},
 		float Speed = 30,
 		float JumpSpeed = 15,
 		Enum KeyUp = W,
@@ -107,6 +91,7 @@ Cog =
 		string DoubleJumpSound = "5a74d672c9337568:DoubleJump",
 		string WalkSound = "",
 		string SoundToPlay = "5a4ba86ea5857126:GearPickup",
+		string SoundToPlay2 = "5a702e1e4589a834:SpearStab",
 	},
 	PlayerController = 
 	{
@@ -146,6 +131,9 @@ Cog =
 		bool UsePitchSemitones = true,
 		bool Positional = true,
 		int Version = 1,
+	},
+	VolumeLevev = 
+	{
 	},
 	Hierarchy = 
 	{

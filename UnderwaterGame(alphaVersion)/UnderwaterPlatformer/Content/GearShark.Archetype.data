@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-12.4531794, 2.34594798, 0],
+		Vec3 Translation = [-13.2612295, 0.798938453, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -108,6 +108,9 @@ Cog =
 		bool Active = true,
 		int ChargeSpeed = 10,
 	},
+	VolumeLevev = 
+	{
+	},
 	Hierarchy = 
 	{
 		Cog = 
@@ -187,6 +190,7 @@ Cog =
 			},
 			FlipSpriteChild = 
 			{
+				bool Sprite = false,
 			},
 		},
 		Cog = 
@@ -266,6 +270,7 @@ Cog =
 			},
 			FlipSpriteChild = 
 			{
+				bool Sprite = false,
 			},
 		},
 		Cog = 

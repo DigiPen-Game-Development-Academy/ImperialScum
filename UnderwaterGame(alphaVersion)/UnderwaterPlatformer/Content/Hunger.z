@@ -25,7 +25,10 @@ class Hunger : ZilchComponent
     function OnLogicUpdate(event : UpdateEvent)
     {
         if(Hunger.Hunger > 0)
-        Hunger.Hunger -= event.Dt;
+        {
+            if(this.Space.CurrentLevel != Level.BaseLevel)
+            Hunger.Hunger -= event.Dt;
+        }
         
         //Health Regen by Jessica
         if(this.Timer > 0)
