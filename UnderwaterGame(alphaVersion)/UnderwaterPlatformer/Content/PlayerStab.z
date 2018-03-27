@@ -72,5 +72,13 @@ class Spear : ZilchComponent
         
         if(this.Timer >= 0.3)
         this.Owner.Destroy();
+        
+        
+        if(Upgrades.SpearUpgrade == 0)
+        this.Owner.Sprite.SpriteSource = SpriteSource.Weap_Spear;
+        if(Upgrades.SpearUpgrade == 1)
+        this.Owner.Sprite.SpriteSource = SpriteSource.Weap_CopperSpear;
+        if(Upgrades.SpearUpgrade == 2)
+        this.Owner.Sprite.SpriteSource = SpriteSource.Weap_VolcanoSpear;
     } 
 }

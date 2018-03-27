@@ -7,7 +7,7 @@ class Upgrades : ZilchComponent
     var BoomerangUpgrade:Integer = 0;
     
     [Property]
-    var Price:Integer;
+    var Price:Integer = 35;
     
     
     function Initialize(init : CogInitializer)
@@ -19,7 +19,6 @@ class Upgrades : ZilchComponent
 
     function OnLeftMouseDown(event : ViewportMouseEvent)
     {   
-        Console.WriteLine("OKOKOOKOK");
         if(AdvInventory.PlayerInventory["Gears"] >= this.Price)
         {
             Upgrades.SpearUpgrade += 1;
@@ -32,16 +31,19 @@ class Upgrades : ZilchComponent
         if(Upgrades.SpearUpgrade == 0)
         {
         this.Owner.Sprite.SpriteSource = SpriteSource.PlayerSpear;
+        this.Price = 35;
         }
         
         if(Upgrades.SpearUpgrade == 1)
         {
         this.Owner.Sprite.SpriteSource = SpriteSource.Weap_CopperSpear;
+        this.Price = 55;
         }
         
         if(Upgrades.SpearUpgrade >= 2)
         {
         this.Owner.Sprite.SpriteSource = SpriteSource.Weap_VolcanoSpear;
+        this.Price = 75;
         }
     }
 }
