@@ -30,6 +30,8 @@ class Health : ZilchComponent
     var Invincibility : Boolean = false;
     var InvincibilityTimer : Real = 0.5;
     
+    [Property] var BaseLevelLoad : Level = Level.BaseLevel;
+    
     
     var Gear : Archetype = Archetype.Gear;
     var Food : Archetype = Archetype.Food;
@@ -101,8 +103,14 @@ class Health : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
+        if(this.Space.CurrentLevel == Level.TheBestBossLevel_InTheWorld && Health.CurrentHealth <=0)
+        {
+              this.Space.LoadLevel(this.BaseLevelLoad);
+        }
+        
         if(this.Timer > 0 && Hunger.Hunger <= 1)
         {
+             
         this.Timer -= event.Dt;
         }
         else if(this.Timer <= 0)
@@ -174,6 +182,7 @@ class Health : ZilchComponent
             this.Owner.Transform.Translation = Checkpoint.RespawnPosition;
             Health.CurrentHealth = Health.MaxHealth;
             Hunger.Hunger = Hunger.MaxHunger;
+            NumOfDeaths.NumberOfDeaths += 1;
         }
     }
 }

@@ -104,7 +104,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [1.25393546, -1.21108687, 50],
+			Vec3 Translation = [1.12913489, -4.44638872, 49],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -116,7 +116,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 13.533555,
+			float Size = 11.0803423,
 		},
 		EditorCameraController = 
 		{
@@ -124,7 +124,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [1.25393546, -1.21108687, 5.48113697e-08],
+			Vec3 LookTarget = [1.12913489, -4.44638872, -1],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -469,220 +469,40 @@ Level =
 			string Name = "Chest",
 		},
 	},
-	Cog = 
+	ArchetypeInstance = 
 	{
+		string Name = "5adef0b2576f5b3a:Player",
 		LinkId = 
 		{
 			uint Id = 10,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0.0771055296, -2.93955684, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
 		},
 		Named = 
 		{
 			string Name = "Player",
 		},
-		Archetyped = 
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a6b16d85c5f7f29:Ring_Jump",
+		LinkId = 
 		{
-			string Name = "5adef0b2576f5b3a:Player",
+			uint Id = 11,
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-0.221735016, -2.91982317, 0],
-			Vec3 Scale = [1, 1, 1],
+			Vec3 Translation = [2.16571069, -2.97695756, 0],
+			Vec3 Scale = [1, 1, 3],
 			Quat Rotation = [0, 0, 0, 1],
 		},
-		Sprite = 
+		Named = 
 		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5aae8200c73cd894:Player_Stand",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
-		RigidBody = 
-		{
-			bool Static = false,
-			bool Asleep = false,
-			bool Kinematic = false,
-			bool RotationLocked = true,
-			bool Mode2D = true,
-			bool AllowSleep = true,
-			bool Inherit2DMode = true,
-			Vec3 Velocity = [0, 0, 0],
-			Vec3 AngularVelocity = [0, 0, 0],
-		},
-		SwordBoomerang = 
-		{
-			string ThrowSound = "5a74d35b4f6e5cb6:BoomerangThrow",
-		},
-		CapsuleCollider = 
-		{
-			bool Ghost = false,
-			bool SendsMessages = true,
-			bool Seamless = true,
-			string MaterialName = "5a2d0ebaa085f792:NoBounce",
-			string SerializedGroupName = "5a5911403324850f:Player",
-			Vec3 Offset = [0, 0, 0],
-			float Radius = 0.300000012,
-			float Height = 1,
-			AxisDirection Direction = Y,
-			CapsuleScalingMode ScalingMode = PreserveScale,
-		},
-		HUDmaker = 
-		{
-			string HUDlevel = "5aa392b7bedc697f:HUD",
-		},
-		KeyPickUp = 
-		{
-		},
-		Contact = 
-		{
-		},
-		GroundChecker = 
-		{
-			float GroundAngle = 61,
-		},
-		PlayerMovement = 
-		{
-			float Speed = 30,
-			float JumpSpeed = 15,
-			Enum KeyUp = W,
-			Enum KeyLeft = A,
-			Enum KeyRight = D,
-			Enum KeyDown = S,
-			string SingleJumpSound = "5a74d757288e9ffa:SingleJump",
-			string DoubleJumpSound = "5a74d672c9337568:DoubleJump",
-			string WalkSound = "",
-			string SoundToPlay = "5a4ba86ea5857126:GearPickup",
-			string SoundToPlay2 = "5a702e1e4589a834:SpearStab",
-		},
-		PlayerController = 
-		{
-			Enum Left = A,
-			Enum Right = D,
-			string IdleAnimation = "5a36ab915603019e:Volcano_Stand",
-			string WalkingAnimation = "5a36ab4353576763:Volcano_Walk()",
-			string JumpAnimation = "5a36ab6b5110e3f5:Volcano_Jump000",
-			string FallAnimation = "5a36ab6c5130c4c9:Volcano_Jump002",
-			string MidAnimation = "5a36ab6c51015f9b:Volcano_Jump001",
-			string StabAnimation = "5a36aa96bffdefff:Volcano_StabStright",
-			string StabUpAnimation = "",
-			string StabDownAnimation = "",
-			string ThrowAnimation = "5a36aad4a5d8739f:Volcano_Throw()",
-			string JumpSound = "",
-			int Lose = 1,
-			float HorizontalDrag = 10,
-		},
-		Health = 
-		{
-			string LevelToLoad = "5ad7c17057b6e586:BaseLevel",
-			float Timer = 0,
-			Vec4 DamageColor = [0.829999983, 0.149399996, 0.149399996, 1],
-			Vec4 RegularColor = [1, 1, 1, 1],
-			string HitSoundThing = "5a4ba9b4847d0305:PlayerHit",
-		},
-		Hunger = 
-		{
-			float Timer = 5,
-		},
-		PlayerStab = 
-		{
-			string SpearArchetype = "",
-			float Angle = 0,
-		},
-		Hierarchy = 
-		{
-			Cog = 
-			{
-				LinkId = 
-				{
-					uint Id = 11,
-				},
-				Named = 
-				{
-					string Name = "BasicParticleEffect",
-				},
-				Transform = 
-				{
-					Vec3 Translation = [0.119902611, 0.26029247, 1.46902734e-09],
-					Vec3 Scale = [0.0359874927, 0.0359874927, 0.0359874927],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				SpriteParticleSystem = 
-				{
-					bool Visible = true,
-					bool VisibilityCulling = true,
-					bool VisibilityEvents = true,
-					bool CastShadows = false,
-					SystemChildMode ChildMode = Independent,
-					SystemSpace SystemSpace = WorldSpace,
-					uint DrawOrder = 0,
-					Vec4 Tint = [1, 1, 1, 1],
-					float WarmUpTime = 0,
-					ParticleGeometry GeometryMode = Billboarded,
-					ParticleRenderMode RenderMode = Blended,
-					ParticleSortMode SortMode = Youngest,
-					ParticleAnimation ParticleAnimation = Single,
-					string Texture = "5aa3e60ab7db8531:Particle_Bubble",
-					float VelocityScale = 1,
-					float LengthScale = 1,
-					float MaxParticleSize = 100,
-					Vec3 SystemSize = [4, 4, 4],
-				},
-				SphericalParticleEmitter = 
-				{
-					bool Active = true,
-					uint EmitCount = 0,
-					float EmitRate = 3,
-					float EmitVariance = 1,
-					float Size = 0.100000001,
-					float SizeVariance = 0.200000003,
-					float Lifetime = 5,
-					float LifetimeVariance = 0.200000003,
-					float Spin = 0,
-					float SpinVariance = 10,
-					bool RandomSpin = true,
-					float Fill = 1,
-					float EmitterVelocityPercent = 0,
-					Vec3 StartVelocity = [0, 20, 0],
-					Vec3 RandomVelocity = [3, 3, 3],
-					Vec3 TangentVelocity = [0, 0, 0],
-					Vec3 EmitterSize = [0, 0, 0],
-					bool FastMovingEmitter = false,
-				},
-				LinearParticleAnimator = 
-				{
-					Vec3 Force = [0, 0, 0],
-					Vec3 RandomForce = [0, 0, 0],
-					float Torque = 0,
-					float Growth = 0,
-					float Dampening = 0,
-					Vec3 Twist = [0, 0, 0],
-				},
-				ParticleColorAnimator = 
-				{
-					Vec4 Color0 = [1, 1, 1, 1],
-					Vec4 Color1 = [1, 1, 1, 1],
-					Vec4 Color2 = [1, 1, 1, 1],
-					Vec4 Color3 = [1, 1, 1, 0.5],
-					Vec4 Color4 = [1, 1, 1, 0],
-				},
-				FlipSpriteChild = 
-				{
-					bool Sprite = false,
-				},
-				NoParticlesInBaseLevel = 
-				{
-				},
-			},
+			string Name = "Ring_Jump",
 		},
 	},
 },
