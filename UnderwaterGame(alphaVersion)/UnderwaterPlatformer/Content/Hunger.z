@@ -15,6 +15,7 @@ class Hunger : ZilchComponent
     
     var GodMode : Boolean = false;
 
+   
     
     function Initialize(init : CogInitializer)
     {
@@ -28,6 +29,7 @@ class Hunger : ZilchComponent
         {
             if(this.Space.CurrentLevel != Level.BaseLevel)
             Hunger.Hunger -= event.Dt;
+           
         }
         
         //Health Regen by Jessica
