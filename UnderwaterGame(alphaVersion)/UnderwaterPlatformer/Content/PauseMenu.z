@@ -26,21 +26,15 @@ class PauseMenu : ZilchComponent
             PauseMenu.DestroyNextTime += 1;
             var spaces = this.GameSession.AllSpaces;
             
-                var position = Real3(0,0,0);
+                var position = Real3(0,1.5,0);
                 
-                if(this.Space.FindObjectByName("BlueBox") == null && this.Timer <= 0)
+                if(this.Space.FindObjectByName("BlueBox") == null && MenuExists.Exists == false)
                 {
                     this.Space.CreateAtPosition(Archetype.PauseMenu, position);
-                    Console.WriteLine("created");
-                    this.Timer += 0.2;
                 }
+                else
+                return;
                 
-                //if(this.Space.FindObjectByName("BlueBox") != null)
-                //{
-                //    this.Space.FindObjectByName("BlueBox").Destroy();
-                //    Console.WriteLine("Destroyed");
-                //}
-            
                 foreach(var space in spaces)
                 {
                     space.TimeSpace.TogglePause();
@@ -52,4 +46,15 @@ class PauseMenu : ZilchComponent
     {
         if(this.Timer > 0) this.Timer -= event.Dt;
     }
+}
+class MenuExists : ZilchComponent
+{
+    [Static]
+    var Exists:Boolean = false;
+    
+    function Initialize(init : CogInitializer)
+    {
+        MenuExists.Exists = true;
+    }
+
 }

@@ -2,8 +2,8 @@ DataContent =
 {
 	DataBuilder = 
 	{
-		string Name = "PauseMenu",
-		uint64 ResourceId = 5a6ff71805616b1d,
+		string Name = "WhatText",
+		uint64 ResourceId = 5ac12e772163a358,
 		string LoaderType = "Cog",
 		uint Version = 0,
 		bool ShowInEditor = true,
