@@ -182,6 +182,7 @@ class Health : ZilchComponent
             this.Owner.Transform.Translation = Checkpoint.RespawnPosition;
             Health.CurrentHealth = Health.MaxHealth;
             Hunger.Hunger = Hunger.MaxHunger;
+            NumOfDeaths.NumberOfDeaths += 1;
         }
     }
 }
