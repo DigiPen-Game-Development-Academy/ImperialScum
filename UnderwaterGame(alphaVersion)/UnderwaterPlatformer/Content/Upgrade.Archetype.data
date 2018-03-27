@@ -143,7 +143,7 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [-0.795759678, -0.389728546, 10],
+				Vec3 Translation = [-0.795759678, -0.25, 10],
 				Vec3 Scale = [1, 1, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
@@ -300,7 +300,7 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [0.986881256, -0.0839920044, 2.40419729e-09],
+				Vec3 Translation = [0.847632408, 0, 2.40419729e-09],
 				Vec3 Scale = [1, 1, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
@@ -314,12 +314,12 @@ Cog =
 				BlendMode BlendMode = Alpha,
 				SpriteGeometryMode GeometryMode = ZPlane,
 				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-				string FontName = "4e7bac697bec55c5:Verdana",
-				uint FontSize = 30,
+				string FontName = "5a0f895ab1e49e19:DraftGameFont",
+				uint FontSize = 16,
 				string Text = "Upgrade for 35",
 				TextAlign Align = Left,
-				float PixelsPerUnit = 64,
-				bool Smoothing = true,
+				float PixelsPerUnit = 32,
+				bool Smoothing = false,
 			},
 		},
 		Cog = 
@@ -334,7 +334,7 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [-5.0831337, -0.124372482, 2.40419729e-09],
+				Vec3 Translation = [-5.16270447, 0, 2.40419729e-09],
 				Vec3 Scale = [1, 1, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
@@ -348,12 +348,12 @@ Cog =
 				BlendMode BlendMode = Alpha,
 				SpriteGeometryMode GeometryMode = ZPlane,
 				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-				string FontName = "4e7bac697bec55c5:Verdana",
-				uint FontSize = 30,
+				string FontName = "5a0f895ab1e49e19:DraftGameFont",
+				uint FontSize = 16,
 				string Text = "Upgrade for 25",
 				TextAlign Align = Left,
-				float PixelsPerUnit = 64,
-				bool Smoothing = true,
+				float PixelsPerUnit = 32,
+				bool Smoothing = false,
 			},
 		},
 		Cog = 
@@ -368,7 +368,7 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [5.20478058, -0.427696228, 10],
+				Vec3 Translation = [5.20478058, -0.25, 10],
 				Vec3 Scale = [1, 1, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
