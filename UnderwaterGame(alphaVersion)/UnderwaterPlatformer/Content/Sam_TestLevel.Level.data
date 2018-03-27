@@ -104,9 +104,9 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [5.81622171, 0.803377628, 50.4161263],
+			Vec3 Translation = [1.12913489, -4.44638872, 49],
 			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [-0.0871557444, -1.09695897e-08, -1.90484939e-09, 0.996194661],
+			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
 		Camera = 
 		{
@@ -116,15 +116,15 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 18.268383,
+			float Size = 11.0803423,
 		},
 		EditorCameraController = 
 		{
-			ControlMode ControlMode = Orbit,
+			ControlMode ControlMode = ZPlane,
 			float LookDistance = 50,
-			float VerticalAngle = 0.17453292,
+			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [5.81622171, -7.87903166, 1.17573833],
+			Vec3 LookTarget = [1.12913489, -4.44638872, -1],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -485,6 +485,24 @@ Level =
 		Named = 
 		{
 			string Name = "Player",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a6b16d85c5f7f29:Ring_Jump",
+		LinkId = 
+		{
+			uint Id = 11,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [2.16571069, -2.97695756, 0],
+			Vec3 Scale = [1, 1, 3],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Ring_Jump",
 		},
 	},
 },

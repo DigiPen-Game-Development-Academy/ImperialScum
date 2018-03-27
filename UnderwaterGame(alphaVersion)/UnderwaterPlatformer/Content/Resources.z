@@ -7,12 +7,21 @@ class Resources : ZilchComponent
     var Timer:Real = 1;
     [Property] var SoundToPlay : SoundCue = SoundCue.GearPickup;
     
+    [Property] var Legendary : Boolean = false;
+    
     [Static] var PlaySound : Boolean = false;
     
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
         Zero.Connect(this.Owner, Events.CollisionPersisted, this.OnCollisionPersisted);
+        
+        //Legendary Effect
+        if (this.Legendary == true)
+        {
+            this.Space.CreateAtPosition(Archetype.LegendaryExplode, this.Owner.Transform.Translation);
+            this.Space.CreateAtPosition(Archetype.SparkleExplode, this.Owner.Transform.Translation);
+        }
     }
     
     function OnLogicUpdate(event : UpdateEvent)
@@ -40,6 +49,15 @@ class Resources : ZilchComponent
         if(event.OtherObject.PlayerController != null && this.Timer <= 0.1)
         {
             Resources.PlaySound = true;
+            
+            //Legendary Effect
+            if (this.Legendary == true)
+            {
+                this.Space.CreateAtPosition(Archetype.LegendaryExplode, this.Owner.Transform.Translation);
+                this.Space.CreateAtPosition(Archetype.SparkleExplode, this.Owner.Transform.Translation);
+                this.Space.CreateAtPosition(Archetype.LegendaryText, this.Owner.Transform.Translation);
+            }
+            
             this.Owner.Destroy();
             
             if(this.Owner.Name == "Gear")

@@ -8,10 +8,14 @@ Cog =
 	{
 		string Name = "Ring_Regen",
 	},
+	Archetyped = 
+	{
+		string Name = "5a6b6e560328e836:Ring_Regen",
+	},
 	Transform = 
 	{
-		Vec3 Translation = [-3.27312469, 8.309659, 0],
-		Vec3 Scale = [0.5, 0.5, 3],
+		Vec3 Translation = [2.22936034, -2.2568922, -1],
+		Vec3 Scale = [1, 1, 2],
 		Quat Rotation = [0, 0, 0, 1],
 	},
 	Sprite = 
@@ -34,6 +38,8 @@ Cog =
 	},
 	Resources = 
 	{
+		string SoundToPlay = "5a4ba86ea5857126:GearPickup",
+		bool Legendary = true,
 	},
 	RigidBody = 
 	{
