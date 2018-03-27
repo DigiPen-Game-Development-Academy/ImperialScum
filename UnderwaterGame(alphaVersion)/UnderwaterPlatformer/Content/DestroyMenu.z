@@ -8,19 +8,16 @@ class DestroyMenu : ZilchComponent
 
     function OnMouseDown(event : ViewportMouseEvent)
     {
-        var spaces = this.GameSession.AllSpaces;
-        this.Owner.Destroy;
-        foreach(var space in spaces)
-            {
-                space.TimeSpace.TogglePause();
-            }
+
     }
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-        if(PauseMenu.DestroyNextTime == 2)
+        if(PauseMenu.DestroyNextTime >= 2)
         {
+            PauseMenu.DestroyNextTime = 0;
             this.Owner.Destroy();  
+            Console.WriteLine("DoesSomething");
         }
     }
 }
