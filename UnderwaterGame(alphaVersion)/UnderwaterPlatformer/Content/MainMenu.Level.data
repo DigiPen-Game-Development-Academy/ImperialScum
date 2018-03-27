@@ -116,7 +116,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 24.6597252,
+			float Size = 90.483757,
 		},
 		EditorCameraController = 
 		{
@@ -433,11 +433,11 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "BK_Dunes",
+			string Name = "MoveBackground",
 		},
 		Transform = 
 		{
-			Vec3 Translation = [7.32642794, -2.95443511, 0],
+			Vec3 Translation = [-23.1653576, -2.95443511, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -478,166 +478,182 @@ Level =
 				CogPathPreference PathPreference2 = Absolute,
 			},
 		},
-	},
-	Cog = 
-	{
-		LinkId = 
+		AnimationGraph = 
 		{
-			uint Id = 11,
+			bool Active = true,
+			AnimPlayMode PlayMode = PlayOnce,
+			float TimeScale = 1,
+			string AnimationName = "4f8ebbde619389d0:DefaultAnimation",
+			uint64 DebugPreviewId = 20656d6147206e69,
 		},
-		Named = 
+		SimpleAnimation = 
 		{
-			string Name = "BK_DistantSpikes",
+			string AnimationName = "5a6fe28b967a3e65:Movebackground",
+			AnimPlayMode PlayMode = PlayOnce,
 		},
-		Transform = 
+		Hierarchy = 
 		{
-			Vec3 Translation = [7.32642794, -2.43101764, -3],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		MultiSprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-		},
-		TileMap = 
-		{
-			string SourceName = "5a562174f6492c42:MainMenu_TileMap01",
-			string PaletteName = "5adec5206634cee9:Backgrounds",
-			float UnitsPerTile = 1,
-			float MeshThickness = 1.20000005,
-		},
-		ParallaxBK = 
-		{
-			float RealitiveSpeed = -0.899999976,
-			CogPath PlayerObject = 
+			Cog = 
 			{
-				string Path = ":/Camera",
-				bool ErrorOnResolveToNull = false,
-				bool ErrorOnPathCantCompute = false,
-				bool ErrorOnDirectLinkFail = false,
-				bool UpdateCogOnPathChange = true,
-				bool UpdatePathOnCogChange = true,
-				bool UpdateCogOnInitialize = true,
-				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 2,
-				CogPathPreference PathPreference0 = CogRelative,
-				CogPathPreference PathPreference1 = SpaceRelative,
-				CogPathPreference PathPreference2 = Absolute,
+				LinkId = 
+				{
+					uint Id = 11,
+				},
+				Named = 
+				{
+					string Name = "BK_DistantSpikes",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0, 0.523417473, -3],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				MultiSprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+				},
+				TileMap = 
+				{
+					string SourceName = "5a562174f6492c42:MainMenu_TileMap01",
+					string PaletteName = "5adec5206634cee9:Backgrounds",
+					float UnitsPerTile = 1,
+					float MeshThickness = 1.20000005,
+				},
+				ParallaxBK = 
+				{
+					float RealitiveSpeed = -0.899999976,
+					CogPath PlayerObject = 
+					{
+						string Path = ":/Camera",
+						bool ErrorOnResolveToNull = false,
+						bool ErrorOnPathCantCompute = false,
+						bool ErrorOnDirectLinkFail = false,
+						bool UpdateCogOnPathChange = true,
+						bool UpdatePathOnCogChange = true,
+						bool UpdateCogOnInitialize = true,
+						bool ResolvedNullErrorOccurred = false,
+						uint ResolvedCog = 2,
+						CogPathPreference PathPreference0 = CogRelative,
+						CogPathPreference PathPreference1 = SpaceRelative,
+						CogPathPreference PathPreference2 = Absolute,
+					},
+				},
 			},
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 12,
-		},
-		Named = 
-		{
-			string Name = "BK_DistanceDune",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [7.32642794, -2.95443511, -1],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		MultiSprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-		},
-		TileMap = 
-		{
-			string SourceName = "5a562174f636b8c8:MainMenu_TileMap02",
-			string PaletteName = "5adec5206634cee9:Backgrounds",
-			float UnitsPerTile = 1,
-			float MeshThickness = 1.20000005,
-		},
-		ParallaxBK = 
-		{
-			float RealitiveSpeed = -0.300000012,
-			CogPath PlayerObject = 
+			Cog = 
 			{
-				string Path = ":/Camera",
-				bool ErrorOnResolveToNull = false,
-				bool ErrorOnPathCantCompute = false,
-				bool ErrorOnDirectLinkFail = false,
-				bool UpdateCogOnPathChange = true,
-				bool UpdatePathOnCogChange = true,
-				bool UpdateCogOnInitialize = true,
-				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 2,
-				CogPathPreference PathPreference0 = CogRelative,
-				CogPathPreference PathPreference1 = SpaceRelative,
-				CogPathPreference PathPreference2 = Absolute,
+				LinkId = 
+				{
+					uint Id = 12,
+				},
+				Named = 
+				{
+					string Name = "BK_DistanceDune",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0, 0, -1],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				MultiSprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+				},
+				TileMap = 
+				{
+					string SourceName = "5a562174f636b8c8:MainMenu_TileMap02",
+					string PaletteName = "5adec5206634cee9:Backgrounds",
+					float UnitsPerTile = 1,
+					float MeshThickness = 1.20000005,
+				},
+				ParallaxBK = 
+				{
+					float RealitiveSpeed = -0.300000012,
+					CogPath PlayerObject = 
+					{
+						string Path = ":/Camera",
+						bool ErrorOnResolveToNull = false,
+						bool ErrorOnPathCantCompute = false,
+						bool ErrorOnDirectLinkFail = false,
+						bool UpdateCogOnPathChange = true,
+						bool UpdatePathOnCogChange = true,
+						bool UpdateCogOnInitialize = true,
+						bool ResolvedNullErrorOccurred = false,
+						uint ResolvedCog = 2,
+						CogPathPreference PathPreference0 = CogRelative,
+						CogPathPreference PathPreference1 = SpaceRelative,
+						CogPathPreference PathPreference2 = Absolute,
+					},
+				},
 			},
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 13,
-		},
-		Named = 
-		{
-			string Name = "BK_Spikes",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [7.32642794, -2.95443511, -2],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		MultiSprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-		},
-		TileMap = 
-		{
-			string SourceName = "5a562174f637a5e5:MainMenu_TileMap03",
-			string PaletteName = "5adec5206634cee9:Backgrounds",
-			float UnitsPerTile = 1,
-			float MeshThickness = 1.20000005,
-		},
-		ParallaxBK = 
-		{
-			float RealitiveSpeed = -0.5,
-			CogPath PlayerObject = 
+			Cog = 
 			{
-				string Path = ":/Camera",
-				bool ErrorOnResolveToNull = false,
-				bool ErrorOnPathCantCompute = false,
-				bool ErrorOnDirectLinkFail = false,
-				bool UpdateCogOnPathChange = true,
-				bool UpdatePathOnCogChange = true,
-				bool UpdateCogOnInitialize = true,
-				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 2,
-				CogPathPreference PathPreference0 = CogRelative,
-				CogPathPreference PathPreference1 = SpaceRelative,
-				CogPathPreference PathPreference2 = Absolute,
+				LinkId = 
+				{
+					uint Id = 13,
+				},
+				Named = 
+				{
+					string Name = "BK_Spikes",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0, 0, -2],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				MultiSprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+				},
+				TileMap = 
+				{
+					string SourceName = "5a562174f637a5e5:MainMenu_TileMap03",
+					string PaletteName = "5adec5206634cee9:Backgrounds",
+					float UnitsPerTile = 1,
+					float MeshThickness = 1.20000005,
+				},
+				ParallaxBK = 
+				{
+					float RealitiveSpeed = -0.5,
+					CogPath PlayerObject = 
+					{
+						string Path = ":/Camera",
+						bool ErrorOnResolveToNull = false,
+						bool ErrorOnPathCantCompute = false,
+						bool ErrorOnDirectLinkFail = false,
+						bool UpdateCogOnPathChange = true,
+						bool UpdatePathOnCogChange = true,
+						bool UpdateCogOnInitialize = true,
+						bool ResolvedNullErrorOccurred = false,
+						uint ResolvedCog = 2,
+						CogPathPreference PathPreference0 = CogRelative,
+						CogPathPreference PathPreference1 = SpaceRelative,
+						CogPathPreference PathPreference2 = Absolute,
+					},
+				},
 			},
 		},
 	},
