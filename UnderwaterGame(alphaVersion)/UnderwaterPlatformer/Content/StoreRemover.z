@@ -7,7 +7,10 @@ class StoreRemover : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-        if(StoreCollide.CollideWithShop == false)
+        if(StoreCollide.CollideWithShop == false && this.Owner.Name == "Shop")
+        this.Owner.Destroy();
+        
+        if(StoreCollide.CollideWithUpgrade == false && this.Owner.Name == "Upgrade")
         this.Owner.Destroy();
     }
 }

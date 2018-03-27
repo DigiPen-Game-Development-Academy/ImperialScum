@@ -12,17 +12,18 @@ class Upgrades : ZilchComponent
     
     function Initialize(init : CogInitializer)
     {
+        Console.WriteLine("SpearUpgrade `Upgrades.SpearUpgrade`");
         //Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
         Zero.Connect(this.Owner, Events.LeftMouseDown, this.OnLeftMouseDown);
     }
 
     function OnLeftMouseDown(event : ViewportMouseEvent)
-    {
-        if(this.Owner.Name == "SpearUpgrade `Upgrades.SpearUpgrade`"
-        && AdvInventory.PlayerInventory["Gears"] >= this.Price)
+    {   
+        Console.WriteLine("OKOKOOKOK");
+        if(AdvInventory.PlayerInventory["Gears"] >= this.Price)
         {
             Upgrades.SpearUpgrade += 1;
-            this.Owner.Destroy();
+            AdvInventory.PlayerInventory["Gears"] -= this.Price;
         }
     }
 

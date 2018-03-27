@@ -21,8 +21,6 @@ class GlobalTimekeeper : ZilchComponent
     {
         var target = this.Space.FindObjectByName("Sun/Moon").Transform.EulerAngles;
         
-        Console.WriteLine(target);
-        
         
         GlobalTimekeeper.GlobalTime += event.Dt;
         
