@@ -12,10 +12,10 @@ class PlayerStab : ZilchComponent
     
 function Initialize(init : CogInitializer)
     {
-        Zero.Connect(this.Space, Events.RightMouseDown, this.OnRightMouseDown);
+        Zero.Connect(this.Space, Events.LeftMouseDown, this.OnLeftMouseDown);
     }
 
-function OnRightMouseDown(event : ViewportMouseEvent)
+function OnLeftMouseDown(event : ViewportMouseEvent)
 {
         if(this.Spear == null && Inventory.Exists == false)
         {
@@ -26,7 +26,6 @@ function OnRightMouseDown(event : ViewportMouseEvent)
             
             
             PlayerStab.PlaySound2 = true;
-            
             
             //Mousey Stuff
             var mouseScreen = Zero.Mouse.ScreenPosition;
@@ -41,6 +40,17 @@ function OnRightMouseDown(event : ViewportMouseEvent)
             var sequence = Action.Sequence(this.Owner.Actions);
             Action.Property(sequence, @this.Spear.Transform.Translation,
             Math.Normalize(toMouse),0.08,Ease.SinOut);
+            
+            
+            //Player Facey Stuff
+            if (mouseWorld.X > this.Owner.Transform.WorldTranslation.X)
+            {
+                this.Owner.Sprite.FlipX = false;
+            }
+            else
+            {
+                this.Owner.Sprite.FlipX = true;
+            }
             
             
         }

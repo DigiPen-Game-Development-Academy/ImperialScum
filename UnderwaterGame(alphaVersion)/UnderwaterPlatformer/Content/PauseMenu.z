@@ -1,12 +1,14 @@
 class PauseMenu : ZilchComponent
 {
+    var FirstTime : Boolean = true;
     [Property] var ApplyQuit : Boolean = false;
     //var Exists : Boolean = false
     [Static] var DestroyNextTime : Integer = 0;
+    var Timer : Real = 0;
     
     function Initialize(init : CogInitializer)
     {
-        //Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
         Zero.Connect(this.GameSession, Events.GameRequestQuit, this.OnGameRequestQuit);
     }
 
@@ -25,8 +27,19 @@ class PauseMenu : ZilchComponent
             var spaces = this.GameSession.AllSpaces;
             
                 var position = Real3(0,0,0);
-                this.Space.CreateAtPosition(Archetype.PauseMenu, position);
                 
+                if(this.Space.FindObjectByName("BlueBox") == null && this.Timer <= 0)
+                {
+                    this.Space.CreateAtPosition(Archetype.PauseMenu, position);
+                    Console.WriteLine("created");
+                    this.Timer += 0.2;
+                }
+                
+                //if(this.Space.FindObjectByName("BlueBox") != null)
+                //{
+                //    this.Space.FindObjectByName("BlueBox").Destroy();
+                //    Console.WriteLine("Destroyed");
+                //}
             
                 foreach(var space in spaces)
                 {
@@ -37,5 +50,6 @@ class PauseMenu : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
+        if(this.Timer > 0) this.Timer -= event.Dt;
     }
 }

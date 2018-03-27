@@ -7,6 +7,6 @@ BinaryContent =
 		string LoaderType = "TileMapSource",
 		uint Version = 0,
 		string FilterTag = "",
-		string ResourceOwner = "5a59c4b926062179:ControlsMenu",
+		string ResourceOwner = "5a6fc6aa1bacc70f:OptionsMenu",
 	},
 },
