@@ -6,19 +6,19 @@ Cog =
 	},
 	Named = 
 	{
-		string Name = "LegendaryExplode",
+		string Name = "SpriteText",
 	},
 	Archetyped = 
 	{
-		string Name = "5a14a1d0f177d1d8:LegendaryExplode",
+		string Name = "5ac12e772163a358:WhatText",
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0, 0, 0],
-		Vec3 Scale = [1, 1, 1],
+		Vec3 Translation = [-18.159586, 1.82064629, -4.49469496e-07],
+		Vec3 Scale = [1.11316299, 1.11316299, 1.11316299],
 		Quat Rotation = [0, 0, 0, 1],
 	},
-	Sprite = 
+	SpriteText = 
 	{
 		bool Visible = true,
 		bool VisibilityCulling = true,
@@ -28,16 +28,14 @@ Cog =
 		BlendMode BlendMode = Alpha,
 		SpriteGeometryMode GeometryMode = ZPlane,
 		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-		string SpriteSource = "5a0d918776323b48:Explosion()",
-		bool RenderMask = false,
-		bool FlipX = false,
-		bool FlipY = false,
-		bool AnimationActive = true,
-		float AnimationSpeed = 1,
-		uint StartFrame = 0,
+		string FontName = "4e7bac697bec55c5:Verdana",
+		uint FontSize = 30,
+		string Text = "Sprite Text...",
+		TextAlign Align = Left,
+		float PixelsPerUnit = 64,
+		bool Smoothing = true,
 	},
-	DestroyTimer = 
+	WhatText = 
 	{
-		int Time = 14,
 	},
 },

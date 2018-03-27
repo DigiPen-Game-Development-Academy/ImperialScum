@@ -6,16 +6,16 @@ Cog =
 	},
 	Named = 
 	{
-		string Name = "LegendaryExplode",
+		string Name = "HitExplode",
 	},
 	Archetyped = 
 	{
-		string Name = "5a14a1d0f177d1d8:LegendaryExplode",
+		string Name = "5a1486761f427cee:HitExplode",
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0, 0, 0],
-		Vec3 Scale = [1, 1, 1],
+		Vec3 Translation = [-8.11953068, 2.21807218, -1],
+		Vec3 Scale = [0.400000006, 0.400000006, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
 	Sprite = 
@@ -24,7 +24,7 @@ Cog =
 		bool VisibilityCulling = true,
 		bool VisibilityEvents = true,
 		bool CastShadows = false,
-		Vec4 Color = [1, 1, 1, 1],
+		Vec4 Color = [1, 1, 1, 0.999899983],
 		BlendMode BlendMode = Alpha,
 		SpriteGeometryMode GeometryMode = ZPlane,
 		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
@@ -33,11 +33,11 @@ Cog =
 		bool FlipX = false,
 		bool FlipY = false,
 		bool AnimationActive = true,
-		float AnimationSpeed = 1,
+		float AnimationSpeed = 1.39999998,
 		uint StartFrame = 0,
 	},
 	DestroyTimer = 
 	{
-		int Time = 14,
+		int Time = 10,
 	},
 },

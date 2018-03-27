@@ -28,6 +28,14 @@ class EnemyHealth : ZilchComponent
         {
             this.Health -= EnemyHealth.Damage;
             this.Owner.Sprite.Color = this.DamageColor;
+            
+            //Particles
+            for (var i = 0; i != 4; i += 1)
+            {
+                this.Space.CreateAtPosition(Archetype.EnemyGib, this.Owner.Transform.Translation); 
+            }
+            this.Space.CreateAtPosition(Archetype.ExplodeBubbles, this.Owner.Transform.Translation); 
+            this.Space.CreateAtPosition(Archetype.HitExplode, this.Owner.Transform.Translation); 
         }
     }
 
@@ -58,6 +66,16 @@ class EnemyHealth : ZilchComponent
 
             }
             this.Owner.Destroy();
+            
+            //Death Particle
+            this.Space.CreateAtPosition(Archetype.LegendaryExplode, this.Owner.Transform.Translation);
+            this.Space.CreateAtPosition(Archetype.EnemyExplode, this.Owner.Transform.Translation); 
+            
+            //Particles
+            for (var i = 0; i != 8; i += 1)
+            {
+                this.Space.CreateAtPosition(Archetype.EnemyGib, this.Owner.Transform.Translation); 
+            }
         }
         
         if(this.Owner.Sprite.Color == this.DamageColor)
