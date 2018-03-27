@@ -1,0 +1,32 @@
+class Upgrades : ZilchComponent
+{
+    [Static]
+    var SpearUpgrade:Integer = 0;
+    
+    [Static]
+    var BoomerangUpgrade:Integer = 0;
+    
+    [Property]
+    var Price:Integer;
+    
+    
+    function Initialize(init : CogInitializer)
+    {
+        //Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        Zero.Connect(this.Owner, Events.LeftMouseDown, this.OnLeftMouseDown);
+    }
+
+    function OnLeftMouseDown(event : ViewportMouseEvent)
+    {
+        if(this.Owner.Name == "SpearUpgrade `Upgrades.SpearUpgrade`"
+        && AdvInventory.PlayerInventory["Gears"] >= this.Price)
+        {
+            Upgrades.SpearUpgrade += 1;
+            this.Owner.Destroy();
+        }
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+    }
+}
