@@ -68,13 +68,11 @@ class PlayerController : ZilchComponent
         
         Zero.Connect(this.Space, Events.LeftMouseDown, this.OnLeftMouseDown);
         
-        Zero.Connect(this.Space, Events.RightMouseDown, this.OnRightMouseDown);
-        
     }
 
-    function OnRightMouseDown(event : ViewportMouseEvent)
+    function OnLeftMouseDown(event : ViewportMouseEvent)
     {
-        if(Inventory.Exists == false)
+        if(Inventory.Exists == false && this.Owner.PlayerStab.Spear == null)
         {
             //Mousey Stuff
             var mouseScreen = Zero.Mouse.ScreenPosition;
@@ -90,12 +88,10 @@ class PlayerController : ZilchComponent
             if (angle > 0.5 && angle < 2.5)
             {
                 this.Owner.Sprite.SpriteSource = this.StabUpAnimation;
-                Console.WriteLine("Stab the Sun Mon");
             }
             else if (angle > -2.5 && angle < -0.5)
             {
                 this.Owner.Sprite.SpriteSource = this.StabDownAnimation;
-                Console.WriteLine("Don't Stab the Sun Mon");
             }
             else
             {
@@ -103,15 +99,6 @@ class PlayerController : ZilchComponent
             }
         }
     }
-
-
-    function OnLeftMouseDown(event : ViewportMouseEvent)
-    {
-        if(Inventory.Exists == false)
-        this.Owner.Sprite.SpriteSource = this.ThrowAnimation;
-        
-    }
-
 
     function OnLogicUpdate(event : UpdateEvent)
     {
@@ -132,7 +119,9 @@ class PlayerController : ZilchComponent
         //I have no idea
         
         if(this.Owner.Sprite.SpriteSource == this.ThrowAnimation || 
-        this.Owner.Sprite.SpriteSource == this.StabAnimation)
+        this.Owner.Sprite.SpriteSource == this.StabAnimation ||
+        this.Owner.Sprite.SpriteSource == this.StabUpAnimation ||
+        this.Owner.Sprite.SpriteSource == this.StabDownAnimation)
         {
             this.ThrowTime -= event.Dt;
             
