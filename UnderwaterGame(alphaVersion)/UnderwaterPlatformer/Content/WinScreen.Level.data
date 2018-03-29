@@ -248,7 +248,7 @@ Level =
 		},
 		GoToLevel = 
 		{
-			string LevelToLoad = "5a50a41928123ab7:JessicaLevel3",
+			string LevelToLoad = "5a6869521c6e424e:GameCredits",
 		},
 		Hierarchy = 
 		{
