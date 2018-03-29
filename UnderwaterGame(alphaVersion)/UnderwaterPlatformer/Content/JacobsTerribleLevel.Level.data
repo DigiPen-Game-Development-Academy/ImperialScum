@@ -323,7 +323,7 @@ Level =
 		},
 		EnemyHealth = 
 		{
-			int Health = 10,
+			float Health = 10,
 			Vec4 DamageColor = [1, 0, 0, 1],
 			Vec4 RegularColor = [1, 1, 1, 1],
 		},
@@ -651,6 +651,7 @@ Level =
 			Vec4 DamageColor = [0.829999983, 0.149399996, 0.149399996, 1],
 			Vec4 RegularColor = [1, 1, 1, 1],
 			string HitSoundThing = "5a4ba9b4847d0305:PlayerHit",
+			string BaseLevelLoad = "5ad7c17057b6e586:BaseLevel",
 		},
 		Hunger = 
 		{
@@ -3542,6 +3543,9 @@ Level =
 		BackgroundMusic = 
 		{
 			string BackgroundGameMusic = "5aaca808357b7107:Music1",
+		},
+		VolumeLevev = 
+		{
 		},
 	},
 },

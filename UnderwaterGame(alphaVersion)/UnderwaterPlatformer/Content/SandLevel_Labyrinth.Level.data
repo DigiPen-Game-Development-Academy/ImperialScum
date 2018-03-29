@@ -116,7 +116,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 54.8813019,
+			float Size = 90.483757,
 		},
 		EditorCameraController = 
 		{
@@ -1749,6 +1749,7 @@ Level =
 		Resources = 
 		{
 			string SoundToPlay = "5a4ba86ea5857126:GearPickup",
+			bool Legendary = false,
 		},
 		RigidBody = 
 		{
@@ -1905,6 +1906,7 @@ Level =
 		Resources = 
 		{
 			string SoundToPlay = "5a4ba86ea5857126:GearPickup",
+			bool Legendary = false,
 		},
 		RigidBody = 
 		{
@@ -2061,6 +2063,7 @@ Level =
 		Resources = 
 		{
 			string SoundToPlay = "5a4ba86ea5857126:GearPickup",
+			bool Legendary = false,
 		},
 		RigidBody = 
 		{
@@ -2217,6 +2220,7 @@ Level =
 		Resources = 
 		{
 			string SoundToPlay = "5a4ba86ea5857126:GearPickup",
+			bool Legendary = false,
 		},
 		RigidBody = 
 		{
@@ -2373,6 +2377,7 @@ Level =
 		Resources = 
 		{
 			string SoundToPlay = "5a4ba86ea5857126:GearPickup",
+			bool Legendary = false,
 		},
 		RigidBody = 
 		{
@@ -2547,6 +2552,7 @@ Level =
 		Resources = 
 		{
 			string SoundToPlay = "5a4ba86ea5857126:GearPickup",
+			bool Legendary = false,
 		},
 		RigidBody = 
 		{
@@ -2703,6 +2709,7 @@ Level =
 		Resources = 
 		{
 			string SoundToPlay = "5a4ba86ea5857126:GearPickup",
+			bool Legendary = false,
 		},
 		RigidBody = 
 		{
@@ -2859,6 +2866,7 @@ Level =
 		Resources = 
 		{
 			string SoundToPlay = "5a4ba86ea5857126:GearPickup",
+			bool Legendary = false,
 		},
 		RigidBody = 
 		{
@@ -3015,6 +3023,7 @@ Level =
 		Resources = 
 		{
 			string SoundToPlay = "5a4ba86ea5857126:GearPickup",
+			bool Legendary = false,
 		},
 		RigidBody = 
 		{
@@ -3171,6 +3180,7 @@ Level =
 		Resources = 
 		{
 			string SoundToPlay = "5a4ba86ea5857126:GearPickup",
+			bool Legendary = false,
 		},
 		RigidBody = 
 		{
@@ -3327,6 +3337,7 @@ Level =
 		Resources = 
 		{
 			string SoundToPlay = "5a4ba86ea5857126:GearPickup",
+			bool Legendary = false,
 		},
 		RigidBody = 
 		{
@@ -3483,6 +3494,7 @@ Level =
 		Resources = 
 		{
 			string SoundToPlay = "5a4ba86ea5857126:GearPickup",
+			bool Legendary = false,
 		},
 		RigidBody = 
 		{
@@ -3639,6 +3651,7 @@ Level =
 		Resources = 
 		{
 			string SoundToPlay = "5a4ba86ea5857126:GearPickup",
+			bool Legendary = false,
 		},
 		RigidBody = 
 		{
@@ -3795,6 +3808,7 @@ Level =
 		Resources = 
 		{
 			string SoundToPlay = "5a4ba86ea5857126:GearPickup",
+			bool Legendary = false,
 		},
 		RigidBody = 
 		{
@@ -3951,6 +3965,7 @@ Level =
 		Resources = 
 		{
 			string SoundToPlay = "5a4ba86ea5857126:GearPickup",
+			bool Legendary = false,
 		},
 		RigidBody = 
 		{
@@ -4107,6 +4122,7 @@ Level =
 		Resources = 
 		{
 			string SoundToPlay = "5a4ba86ea5857126:GearPickup",
+			bool Legendary = false,
 		},
 		RigidBody = 
 		{
@@ -4263,6 +4279,7 @@ Level =
 		Resources = 
 		{
 			string SoundToPlay = "5a4ba86ea5857126:GearPickup",
+			bool Legendary = false,
 		},
 		RigidBody = 
 		{
@@ -4419,6 +4436,7 @@ Level =
 		Resources = 
 		{
 			string SoundToPlay = "5a4ba86ea5857126:GearPickup",
+			bool Legendary = false,
 		},
 		RigidBody = 
 		{
@@ -4575,6 +4593,7 @@ Level =
 		Resources = 
 		{
 			string SoundToPlay = "5a4ba86ea5857126:GearPickup",
+			bool Legendary = false,
 		},
 		RigidBody = 
 		{
@@ -4731,6 +4750,7 @@ Level =
 		Resources = 
 		{
 			string SoundToPlay = "5a4ba86ea5857126:GearPickup",
+			bool Legendary = false,
 		},
 		RigidBody = 
 		{
@@ -4887,6 +4907,7 @@ Level =
 		Resources = 
 		{
 			string SoundToPlay = "5a4ba86ea5857126:GearPickup",
+			bool Legendary = false,
 		},
 		RigidBody = 
 		{
@@ -5160,6 +5181,9 @@ Level =
 		BackgroundMusic = 
 		{
 			string BackgroundGameMusic = "5aaca808357b7107:Music1",
+		},
+		VolumeLevev = 
+		{
 		},
 	},
 },
