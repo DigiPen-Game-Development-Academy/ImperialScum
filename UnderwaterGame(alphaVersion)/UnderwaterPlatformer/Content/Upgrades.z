@@ -19,7 +19,7 @@ class Upgrades : ZilchComponent
 
     function OnLeftMouseDown(event : ViewportMouseEvent)
     {   
-        if(AdvInventory.PlayerInventory["Gears"] >= this.Price)
+        if(AdvInventory.PlayerInventory["Gears"] >= this.Price && Upgrades.SpearUpgrade <= 1)
         {
             Upgrades.SpearUpgrade += 1;
             AdvInventory.PlayerInventory["Gears"] -= this.Price;
@@ -32,18 +32,21 @@ class Upgrades : ZilchComponent
         {
         this.Owner.Sprite.SpriteSource = SpriteSource.PlayerSpear;
         this.Price = 35;
+        EnemyHealth.SpearDamage = 1;
         }
         
         if(Upgrades.SpearUpgrade == 1)
         {
         this.Owner.Sprite.SpriteSource = SpriteSource.Weap_CopperSpear;
         this.Price = 55;
+        EnemyHealth.SpearDamage = 1.5;
         }
         
         if(Upgrades.SpearUpgrade >= 2)
         {
         this.Owner.Sprite.SpriteSource = SpriteSource.Weap_VolcanoSpear;
         this.Price = 75;
+        EnemyHealth.SpearDamage = 2;
         }
     }
 }

@@ -4,9 +4,13 @@
 class EnemyHealth : ZilchComponent
 {
     [Property] 
-    var Health:Integer = 5;
+    var Health:Real = 5;
     [Static]
-    var Damage:Integer = 1;
+    var SwordDamage:Real = 1;
+    
+    [Static]
+    var SpearDamage:Real = 1;
+    
     [Property]
     var DamageColor:Real4;
     [Property]
@@ -24,9 +28,9 @@ class EnemyHealth : ZilchComponent
     function OnCollisionStarted(event : CollisionEvent)
     {
         //Check if this is the sword's hitbox. Sam did this since it is commented.
-        if(event.OtherObject == this.Space.FindObjectByName("SwordHitbox") || event.OtherObject == this.Space.FindObjectByName("Spear"))
+        if(event.OtherObject == this.Space.FindObjectByName("SwordHitbox"))
         {
-            this.Health -= EnemyHealth.Damage;
+            this.Health -= EnemyHealth.SwordDamage;
             this.Owner.Sprite.Color = this.DamageColor;
             
             //Particles
@@ -36,6 +40,20 @@ class EnemyHealth : ZilchComponent
             }
             this.Space.CreateAtPosition(Archetype.ExplodeBubbles, this.Owner.Transform.Translation); 
             this.Space.CreateAtPosition(Archetype.HitExplode, this.Owner.Transform.Translation); 
+        }
+        
+        if(event.OtherObject == this.Space.FindObjectByName("Spear"))
+        {
+            this.Health -= EnemyHealth.SpearDamage;
+            this.Owner.Sprite.Color = this.DamageColor;
+            
+            //Particles
+            for (var i = 0; i != 4; i += 1)
+            {
+                this.Space.CreateAtPosition(Archetype.EnemyGib, this.Owner.Transform.Translation); 
+            }
+            this.Space.CreateAtPosition(Archetype.ExplodeBubbles, this.Owner.Transform.Translation); 
+            this.Space.CreateAtPosition(Archetype.HitExplode, this.Owner.Transform.Translation);
         }
     }
 

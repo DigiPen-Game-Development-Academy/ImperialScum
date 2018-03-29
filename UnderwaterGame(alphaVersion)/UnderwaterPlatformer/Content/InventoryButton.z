@@ -90,6 +90,9 @@ class WhatText : ZilchComponent
         
         if(InventoryButton.DeleteString == true)
         this.Owner.Destroy();
+        
+        if(Inventory.Exists == false)
+        this.Owner.Destroy();
     }
     
 }

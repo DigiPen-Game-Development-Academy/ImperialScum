@@ -68,6 +68,7 @@ class Spear : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
+        this.Owner.Transform.Translation.Z = -0.3;
         this.Timer += event.Dt;
         
         if(this.Timer >= 0.3)
@@ -78,7 +79,7 @@ class Spear : ZilchComponent
         this.Owner.Sprite.SpriteSource = SpriteSource.Weap_Spear;
         if(Upgrades.SpearUpgrade == 1)
         this.Owner.Sprite.SpriteSource = SpriteSource.Weap_CopperSpear;
-        if(Upgrades.SpearUpgrade == 2)
+        if(Upgrades.SpearUpgrade >= 2)
         this.Owner.Sprite.SpriteSource = SpriteSource.Weap_VolcanoSpear;
     } 
 }
