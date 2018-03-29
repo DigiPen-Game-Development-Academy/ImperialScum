@@ -27,6 +27,7 @@ class ContinueTimer : ZilchComponent
             else if(ContinueTimer.LevelNumber == 3) ContinueTimer.LevelToLoadProgression = Level.Find("SandLevel_Labyrinth"); // LEVEL 2
             else if(ContinueTimer.LevelNumber == 4) ContinueTimer.LevelToLoadProgression = Level.Find("ElenasOldLevel"); //LEVEL 3
             else if(ContinueTimer.LevelNumber == 5) ContinueTimer.LevelToLoadProgression = Level.Find("JacobsTerribleLevel"); //LEVEL 4
+            else if(ContinueTimer.LevelNumber >= 6) ContinueTimer.LevelToLoadProgression = Level.Find("BaseLevel"); //After you beat Boss;
             else return;
             BackgroundMusic.NoDelay = false;
            object1.Sprite.Visible = true;

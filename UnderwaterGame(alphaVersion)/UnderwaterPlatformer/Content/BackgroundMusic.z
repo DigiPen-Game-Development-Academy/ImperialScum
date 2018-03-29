@@ -11,6 +11,8 @@ class BackgroundMusic : ZilchComponent
     var OnlyDoOnce : Boolean = false;
     [Static] var NoDelay : Boolean = false;
     [Static] var StayMuted : Boolean = false;
+    [Static] var MuteText : Boolean = false;
+    [Static] var UnmuteText : Boolean = false;
     
     [Property]
      var BackgroundGameMusic : SoundCue;
@@ -60,8 +62,10 @@ class BackgroundMusic : ZilchComponent
             Console.WriteLine("Sound Muted");
             this.KeyWasPressed = true;
             BackgroundMusic.StayMuted = true;
+            BackgroundMusic.MuteText = true;
             
            this.Owner.SoundEmitter.Volume = 0;
+           
         }
         
         //Makes it so music doesn't mute and then Unmute again immedietly?
@@ -81,6 +85,12 @@ class BackgroundMusic : ZilchComponent
                 this.Timer += 0.25;
             }
             
+            if (BackgroundMusic.MuteText == true)this.Timer2 -= event.Dt;
+            if (this.Timer2 <= 0)
+            {
+                this.Timer2 += 2;
+                BackgroundMusic.MuteText = false;
+            }
             if(BackgroundMusic.StayMuted == true) this.Owner.SoundEmitter.Volume = 0;
     }
 }
