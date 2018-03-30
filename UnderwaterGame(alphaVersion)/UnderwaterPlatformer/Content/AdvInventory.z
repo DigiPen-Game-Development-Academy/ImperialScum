@@ -24,7 +24,7 @@ class AdvInventory : ZilchComponent
   [Static] var PlayerInventory : HashMap[String, Integer] = new HashMap[String, Integer]()
   {
     { "Food", 10 },
-    { "Gears", 20},
+    { "Gears", 5},
     { "HealthPotion",1},
     { "Fruit",5},
     {"Ring_Speed", 0},
