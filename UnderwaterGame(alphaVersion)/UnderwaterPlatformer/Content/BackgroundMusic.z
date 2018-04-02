@@ -17,11 +17,25 @@ class BackgroundMusic : ZilchComponent
     [Property]
      var BackgroundGameMusic : SoundCue;
      var BackgroundMenuMusicSpace : Space;
+     
+     [Property]
+     var SparceTheme : SoundCue;
   
     function Initialize(init : CogInitializer)
     {
           Zero.Connect(this.Space, Events.LevelStarted, this.OnLevelStarted);
           Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+          Zero.Connect(this.Owner, Events.LeftMouseDown, this.OnLeftMouseDown);
+    }
+
+    function OnLeftMouseDown(event : ViewportMouseEvent)
+    {
+        //Little Easter Egg
+        if ( this.Owner.Name == "SparceMarineDoll")
+        {
+            this.Owner.SoundEmitter.Stop();
+            this.Owner.SoundEmitter.PlayCue(this.SparceTheme);
+        }
     }
 
     function OnLevelStarted(event : GameEvent)
