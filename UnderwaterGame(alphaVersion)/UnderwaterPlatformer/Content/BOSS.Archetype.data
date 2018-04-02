@@ -58,7 +58,7 @@ Cog =
 	{
 		bool Static = false,
 		bool Asleep = false,
-		bool Kinematic = false,
+		bool Kinematic = true,
 		bool RotationLocked = true,
 		bool Mode2D = true,
 		bool AllowSleep = true,
@@ -91,7 +91,7 @@ Cog =
 	},
 	EnemyHealth = 
 	{
-		int Health = 50,
+		float Health = 50,
 		Vec4 DamageColor = [1, 0, 0, 1],
 		Vec4 RegularColor = [1, 1, 1, 1],
 	},
