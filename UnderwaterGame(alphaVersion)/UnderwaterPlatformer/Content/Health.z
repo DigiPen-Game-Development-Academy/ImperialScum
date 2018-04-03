@@ -4,7 +4,7 @@
 
 class Health : ZilchComponent
 {
-    
+    var PreviousVelocity:Real3;
     [Static]
     var CurrentHealth:Real;
     
@@ -67,6 +67,12 @@ class Health : ZilchComponent
             this.Owner.Sprite.Color = this.DamageColor;
             this.Invincibility = true;
         }
+        
+        
+        if(event.OtherObject.Name == ("DefaultTile") && this.PreviousVelocity.Y <= -7)
+        {
+            this.GameSession.DispatchEvent(Events.Shake, ShakeEvent(0.2,0.4,0.0001, Ease.Linear, 4));
+        }
     }
 
     function OnCollisionPersisted(event : CollisionEvent)
@@ -76,6 +82,7 @@ class Health : ZilchComponent
         
         if(event.OtherObject.EnemyHealth != null && Health.CurrentHealth > 0 && this.Invincibility == false)
         {
+            this.GameSession.DispatchEvent(Events.Shake, ShakeEvent(0.8,1.4,0.001, Ease.Linear, 7));
             Health.CurrentHealth -= 2;
             if(event.OtherObject.Name == ("BOSS"))
             {
@@ -88,6 +95,7 @@ class Health : ZilchComponent
         
         if(event.OtherObject.JaggedRock != null && Health.CurrentHealth > 0 && this.Invincibility == false)
         {
+            this.GameSession.DispatchEvent(Events.Shake, ShakeEvent(0.5,1,0.001, Ease.Linear, 5));
             Health.CurrentHealth -= 1;
             this.Owner.Sprite.Color = this.DamageColor;
             this.Owner.SoundEmitter.PlayCue(this.HitSoundThing);
@@ -104,6 +112,8 @@ class Health : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
+        this.PreviousVelocity = this.Owner.RigidBody.Velocity;
+        
         if(this.Space.CurrentLevel == Level.TheBestBossLevel_InTheWorld && Health.CurrentHealth <=0)
         {
               this.Space.LoadLevel(this.BaseLevelLoad);
@@ -148,17 +158,16 @@ class Health : ZilchComponent
             this.Timer2 += 0.2;
             this.Owner.Sprite.Color = this.RegularColor;
         }
-        //God Mode By Jessica. Because I am bored of getting killed by gear shark. - Commented out for Beta,
-        //if(Zero.Keyboard.KeyIsPressed(Keys.G))
-        //{
-        //    Health.CurrentHealth += 1000;
-        //}
-        
+        //God Mode By Jessica. Because I am bored of getting killed by gear shark.
+        if(Zero.Keyboard.KeyIsPressed(Keys.G))
+        {
+            Health.CurrentHealth += 1000;
+        }
         
         
         if(Health.CurrentHealth <= 0)
         {
-            NumOfDeaths.NumberOfDeaths += 1;
+             NumOfDeaths.NumberOfDeaths += 1;
             
             var position = this.Owner.Transform.Translation;
             
@@ -191,6 +200,7 @@ class Health : ZilchComponent
             this.Owner.Transform.Translation = Checkpoint.RespawnPosition;
             Health.CurrentHealth = Health.MaxHealth;
             Hunger.Hunger = Hunger.MaxHunger;
+            
         }
     }
 }
