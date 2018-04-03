@@ -109,7 +109,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [9.02357197, -36.7554245, 49.9999962],
+			Vec3 Translation = [4.43518209, -33.6892471, 49.9999962],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -121,7 +121,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 5.4365654,
+			float Size = 24.3650112,
 		},
 		EditorCameraController = 
 		{
@@ -129,7 +129,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [9.02357197, -36.7554245, -2.72521447e-06],
+			Vec3 LookTarget = [4.43518209, -33.6892471, -2.72521447e-06],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -200,7 +200,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 200,
-			float Size = 12,
+			float Size = 50,
 		},
 		SoundListener = 
 		{
@@ -1157,6 +1157,10 @@ Level =
 		BackgroundMusic = 
 		{
 			string BackgroundGameMusic = "5aa98623a2292a89:BossMusic",
+			string SparceTheme = "",
+		},
+		VolumeLevev = 
+		{
 		},
 	},
 },

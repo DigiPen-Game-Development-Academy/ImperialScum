@@ -1,6 +1,7 @@
 class Muted : ZilchComponent
 {
     
+    
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
@@ -8,13 +9,25 @@ class Muted : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-        if(BackgroundMusic.MuteText == false)
-        {
-            this.Owner.SpriteText.Visible = false;
-        }
+        
         if(BackgroundMusic.MuteText == true)
         {
-            this.Owner.SpriteText.Visible = true;
+            this.Owner.SpriteText.Text = "Volume Muted";
+    
+                this.Owner.SpriteText.Visible = true;
+        }
+        
+        if(BackgroundMusic.UnmuteText == true)
+        {
+            this.Owner.SpriteText.Text = "Volume Unmuted";
+            
+                this.Owner.SpriteText.Visible = true;
+            
+        }
+        
+        if(BackgroundMusic.MuteText == false && BackgroundMusic.UnmuteText == false)
+        {
+            this.Owner.SpriteText.Visible = false;
         }
     }
 }
