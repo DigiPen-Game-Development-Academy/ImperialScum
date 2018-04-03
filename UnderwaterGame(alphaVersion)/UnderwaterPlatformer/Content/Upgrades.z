@@ -31,22 +31,22 @@ class Upgrades : ZilchComponent
         if(Upgrades.SpearUpgrade == 0)
         {
         this.Owner.Sprite.SpriteSource = SpriteSource.PlayerSpear;
-        this.Price = 35;
+        this.Price = 20;
         EnemyHealth.SpearDamage = 1;
         }
         
         if(Upgrades.SpearUpgrade == 1)
         {
         this.Owner.Sprite.SpriteSource = SpriteSource.Weap_CopperSpear;
-        this.Price = 55;
-        EnemyHealth.SpearDamage = 1.5;
+        this.Price = 35;
+        EnemyHealth.SpearDamage = 1.25;
         }
         
         if(Upgrades.SpearUpgrade >= 2)
         {
         this.Owner.Sprite.SpriteSource = SpriteSource.Weap_VolcanoSpear;
-        this.Price = 75;
-        EnemyHealth.SpearDamage = 2;
+        this.Price = 60;
+        EnemyHealth.SpearDamage = 1.5;
         }
     }
 }
