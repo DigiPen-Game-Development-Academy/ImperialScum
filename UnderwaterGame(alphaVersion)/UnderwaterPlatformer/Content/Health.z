@@ -26,6 +26,7 @@ class Health : ZilchComponent
     var HitSoundThing : SoundCue = SoundCue.PlayerHit;
     
     var Timer2:Real = 0.2;
+    var Timer3:Real = 0;
     
     var Invincibility : Boolean = false;
     var InvincibilityTimer : Real = 0.5;
@@ -131,6 +132,12 @@ class Health : ZilchComponent
             this.InvincibilityTimer = 0.5;
         }
         
+        if(this.Timer3 > 0) this.Timer3 -= event.Dt;
+        if(Health.CurrentHealth <= 5 && this.Timer3 <= 0)
+        {
+            this.Owner.Sprite.Color = this.DamageColor;
+            this.Timer3 += 1;
+        }
         
         if(this.Owner.Sprite.Color == this.DamageColor)
         {
@@ -141,15 +148,17 @@ class Health : ZilchComponent
             this.Timer2 += 0.2;
             this.Owner.Sprite.Color = this.RegularColor;
         }
-        //God Mode By Jessica. Because I am bored of getting killed by gear shark.
-        if(Zero.Keyboard.KeyIsPressed(Keys.G))
-        {
-            Health.CurrentHealth += 1000;
-        }
+        //God Mode By Jessica. Because I am bored of getting killed by gear shark. - Commented out for Beta,
+        //if(Zero.Keyboard.KeyIsPressed(Keys.G))
+        //{
+        //    Health.CurrentHealth += 1000;
+        //}
+        
         
         
         if(Health.CurrentHealth <= 0)
         {
+            NumOfDeaths.NumberOfDeaths += 1;
             
             var position = this.Owner.Transform.Translation;
             
@@ -182,7 +191,6 @@ class Health : ZilchComponent
             this.Owner.Transform.Translation = Checkpoint.RespawnPosition;
             Health.CurrentHealth = Health.MaxHealth;
             Hunger.Hunger = Hunger.MaxHunger;
-            NumOfDeaths.NumberOfDeaths += 1;
         }
     }
 }

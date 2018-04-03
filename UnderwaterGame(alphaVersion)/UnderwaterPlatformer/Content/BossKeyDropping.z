@@ -4,6 +4,7 @@
 
 class BossKeyDropping : ZilchComponent
 {
+    [Static] var BossDead : Boolean = false;
     [Property]
     var Key : Archetype;
     function Initialize(init : CogInitializer)
@@ -21,6 +22,7 @@ class BossKeyDropping : ZilchComponent
         {
             this.Space.CreateAtPosition(this.Key, spawnPosition);
             Console.WriteLine(spawnPosition);
+            BossKeyDropping.BossDead = true;
         }
     }
 }

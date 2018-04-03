@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-7.68554688, -3.35485625, 0],
+		Vec3 Translation = [-22.6270847, 32.8628883, 0],
 		Vec3 Scale = [0.998837471, 0.998837471, 0.998837471],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -66,7 +66,7 @@ Cog =
 	},
 	EnemyHealth = 
 	{
-		int Health = 4,
+		float Health = 8,
 		Vec4 DamageColor = [1, 0, 0, 1],
 		Vec4 RegularColor = [1, 1, 1, 1],
 	},
@@ -82,9 +82,6 @@ Cog =
 		bool UsePitchSemitones = false,
 		bool Positional = true,
 		int Version = 1,
-	},
-	VolumeLevev = 
-	{
 	},
 	Hierarchy = 
 	{
@@ -199,7 +196,7 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [0.00443792343, -0.160067827, 0],
+				Vec3 Translation = [0.00443840027, -0.108467467, 0],
 				Vec3 Scale = [6.74318027, 6.74318027, 6.74318027],
 				Quat Rotation = [0, 0, 0, 1],
 			},
@@ -250,7 +247,7 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [0.537490964, 0.386762798, 1.00116384],
+				Vec3 Translation = [-0.000596284866, -0.0426604748, 1.00116384],
 				Vec3 Scale = [0.0360754468, 0.0360754468, 0.0360754468],
 				Quat Rotation = [0, 0, 0, 1],
 			},
@@ -279,7 +276,7 @@ Cog =
 			{
 				bool Active = true,
 				uint EmitCount = 0,
-				float EmitRate = 2,
+				float EmitRate = 10,
 				float EmitVariance = 5,
 				float Size = 0.100000001,
 				float SizeVariance = 0.200000003,
@@ -290,87 +287,7 @@ Cog =
 				bool RandomSpin = true,
 				float Fill = 1,
 				float EmitterVelocityPercent = 0,
-				Vec3 StartVelocity = [0, 16, 0],
-				Vec3 RandomVelocity = [3, 3, 3],
-				Vec3 TangentVelocity = [0, 0, 0],
-				Vec3 EmitterSize = [0, 0, 0],
-				bool FastMovingEmitter = false,
-			},
-			LinearParticleAnimator = 
-			{
-				Vec3 Force = [0, 0, 0],
-				Vec3 RandomForce = [0, 0, 0],
-				float Torque = 0,
-				float Growth = 0,
-				float Dampening = 0,
-				Vec3 Twist = [0, 0, 0],
-			},
-			ParticleColorAnimator = 
-			{
-				Vec4 Color0 = [1, 1, 1, 1],
-				Vec4 Color1 = [1, 1, 1, 1],
-				Vec4 Color2 = [1, 1, 1, 1],
-				Vec4 Color3 = [1, 1, 1, 0.5],
-				Vec4 Color4 = [1, 1, 1, 0],
-			},
-			FlipSpriteChild = 
-			{
-				bool Sprite = false,
-			},
-		},
-		Cog = 
-		{
-			LinkId = 
-			{
-				uint Id = 6,
-			},
-			Named = 
-			{
-				string Name = "BasicParticleEffect",
-			},
-			Transform = 
-			{
-				Vec3 Translation = [-0.489931345, 0.386762798, 1.00116384],
-				Vec3 Scale = [0.0360754468, 0.0360754468, 0.0360754468],
-				Quat Rotation = [0, 0, 0, 1],
-			},
-			SpriteParticleSystem = 
-			{
-				bool Visible = true,
-				bool VisibilityCulling = true,
-				bool VisibilityEvents = true,
-				bool CastShadows = false,
-				SystemChildMode ChildMode = Independent,
-				SystemSpace SystemSpace = WorldSpace,
-				uint DrawOrder = 0,
-				Vec4 Tint = [1, 1, 1, 1],
-				float WarmUpTime = 0,
-				ParticleGeometry GeometryMode = Billboarded,
-				ParticleRenderMode RenderMode = Blended,
-				ParticleSortMode SortMode = Youngest,
-				ParticleAnimation ParticleAnimation = Single,
-				string Texture = "5aa3e60ab7db8531:Particle_Bubble",
-				float VelocityScale = 1,
-				float LengthScale = 1,
-				float MaxParticleSize = 100,
-				Vec3 SystemSize = [4, 4, 4],
-			},
-			SphericalParticleEmitter = 
-			{
-				bool Active = true,
-				uint EmitCount = 0,
-				float EmitRate = 2,
-				float EmitVariance = 5,
-				float Size = 0.100000001,
-				float SizeVariance = 0.200000003,
-				float Lifetime = 5,
-				float LifetimeVariance = 0.200000003,
-				float Spin = 0,
-				float SpinVariance = 10,
-				bool RandomSpin = true,
-				float Fill = 1,
-				float EmitterVelocityPercent = 0,
-				Vec3 StartVelocity = [0, 16, 0],
+				Vec3 StartVelocity = [0, 0, 0],
 				Vec3 RandomVelocity = [3, 3, 3],
 				Vec3 TangentVelocity = [0, 0, 0],
 				Vec3 EmitterSize = [0, 0, 0],

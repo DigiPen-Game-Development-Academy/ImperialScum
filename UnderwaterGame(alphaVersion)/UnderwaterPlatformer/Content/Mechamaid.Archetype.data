@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [16.4438038, 31.6046562, 0],
+		Vec3 Translation = [1.05086601, 11.3620186, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -79,14 +79,14 @@ Cog =
 	},
 	Mechamaid = 
 	{
-		float CirclingDistance = 5,
+		float CirclingDistance = 4,
 		float StopFollowing = 15,
-		float Speed = 5,
+		float Speed = 3,
 		bool Active = true,
 	},
 	EnemyHealth = 
 	{
-		int Health = 10,
+		float Health = 5,
 		Vec4 DamageColor = [1, 0, 0, 1],
 		Vec4 RegularColor = [1, 1, 1, 1],
 	},

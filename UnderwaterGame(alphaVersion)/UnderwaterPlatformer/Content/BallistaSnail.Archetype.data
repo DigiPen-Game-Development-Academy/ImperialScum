@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [2.46187592, 21.273983, 0],
+		Vec3 Translation = [21.6455193, -4.03917646, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -64,7 +64,7 @@ Cog =
 	},
 	EnemyHealth = 
 	{
-		int Health = 10,
+		float Health = 7,
 		Vec4 DamageColor = [1, 0, 0, 1],
 		Vec4 RegularColor = [1, 1, 1, 1],
 	},
