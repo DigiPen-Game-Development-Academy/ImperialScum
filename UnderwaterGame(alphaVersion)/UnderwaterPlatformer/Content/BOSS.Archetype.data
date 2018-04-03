@@ -58,7 +58,7 @@ Cog =
 	{
 		bool Static = false,
 		bool Asleep = false,
-		bool Kinematic = true,
+		bool Kinematic = false,
 		bool RotationLocked = true,
 		bool Mode2D = true,
 		bool AllowSleep = true,

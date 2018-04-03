@@ -3,7 +3,7 @@ class NumOfDeaths : ZilchComponent
     [Static] var NumberOfDeaths : Integer = 0;
     function Initialize(init : CogInitializer)
     {
-        //Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
     }
 
     function OnLogicUpdate(event : UpdateEvent)

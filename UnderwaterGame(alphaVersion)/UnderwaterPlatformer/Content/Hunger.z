@@ -42,7 +42,7 @@ class Hunger : ZilchComponent
         
         else if(this.Timer <= 0)
         {
-            if (Hunger.Hunger >= 80 && Health.CurrentHealth <= 10)
+            if (Hunger.Hunger >= 70 && Health.CurrentHealth <= 15)
             {
                 Health.CurrentHealth += 1;
                 if(AdvInventory.PlayerInventory["Ring_Regen"] >= 1)
@@ -52,22 +52,22 @@ class Hunger : ZilchComponent
             this.Timer += 5;
         }
         
-        //God Mode by Jessica.
-        if(Zero.Keyboard.KeyIsPressed(Keys.G))
-        {
-            Hunger.MaxHunger += 1000;
-            Hunger.Hunger += 1000;
-            this.GodMode = true;
-        }
+        //God Mode by Jessica. - REMOVED FOR BETA
+        //if(Zero.Keyboard.KeyIsPressed(Keys.G))
+        //{
+        //    Hunger.MaxHunger += 1000;
+        //    Hunger.Hunger += 1000;
+        //    this.GodMode = true;
+        //}
         
-        if(Health.CurrentHealth <= 500 && this.GodMode == true)
-        {
-            Health.CurrentHealth += 1000;
-        }
+        //if(Health.CurrentHealth <= 500 && this.GodMode == true)
+        //{
+        //    Health.CurrentHealth += 1000;
+        //}
         
-        if(Hunger.Hunger <= 500 && this.GodMode == true)
-        {
-            Hunger.Hunger += 1000;
-        }
+        //if(Hunger.Hunger <= 500 && this.GodMode == true)
+        //{
+        //    Hunger.Hunger += 1000;
+        //}
     }
 }
