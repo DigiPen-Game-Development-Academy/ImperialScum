@@ -6,7 +6,8 @@ class BackgroundMusic : ZilchComponent
     var Destroy : Real = 2;
     
     var Timer : Real = 0.25;
-    var Timer2 : Real = 1;
+    var Timer2 : Real = 0.25;
+    var Timer3 : Real = 0.25;
     var KeyWasPressed : Boolean;
     var OnlyDoOnce : Boolean = false;
     [Static] var NoDelay : Boolean = false;
@@ -93,6 +94,7 @@ class BackgroundMusic : ZilchComponent
             {
                 BackgroundMusic.StayMuted = false;
                 this.KeyWasPressed = false;
+                BackgroundMusic.UnmuteText = true;
                 Console.WriteLine("Sound Unmuted");
                 
                 this.Owner.SoundEmitter.Volume = VolumeControls.Number1;
@@ -102,9 +104,17 @@ class BackgroundMusic : ZilchComponent
             if (BackgroundMusic.MuteText == true)this.Timer2 -= event.Dt;
             if (this.Timer2 <= 0)
             {
-                this.Timer2 += 2;
+                this.Timer2 += 0.25;
                 BackgroundMusic.MuteText = false;
             }
+            
+            if(BackgroundMusic.UnmuteText == true)this.Timer3 -= event.Dt;
+            if(this.Timer3 <= 0)
+            {
+                this.Timer3 += 0.25;
+                BackgroundMusic.UnmuteText = false;
+            }
+            
             if(BackgroundMusic.StayMuted == true) this.Owner.SoundEmitter.Volume = 0;
     }
 }
