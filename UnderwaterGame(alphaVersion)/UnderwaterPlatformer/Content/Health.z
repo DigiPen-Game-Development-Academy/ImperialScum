@@ -69,7 +69,7 @@ class Health : ZilchComponent
         }
         
         
-        if(event.OtherObject.Name == ("DefaultTile") && this.PreviousVelocity.Y <= -7)
+        if(event.OtherObject.Name == ("DefaultTile") && this.PreviousVelocity.Y <= -20)
         {
             this.GameSession.DispatchEvent(Events.Shake, ShakeEvent(0.2,0.4,0.0001, Ease.Linear, 4));
         }
@@ -82,7 +82,7 @@ class Health : ZilchComponent
         
         if(event.OtherObject.EnemyHealth != null && Health.CurrentHealth > 0 && this.Invincibility == false)
         {
-            this.GameSession.DispatchEvent(Events.Shake, ShakeEvent(0.8,1.4,0.001, Ease.Linear, 7));
+            this.GameSession.DispatchEvent(Events.Shake, ShakeEvent(0.4,0.8,0.001, Ease.Linear, 7));
             Health.CurrentHealth -= 2;
             if(event.OtherObject.Name == ("BOSS"))
             {
@@ -95,7 +95,7 @@ class Health : ZilchComponent
         
         if(event.OtherObject.JaggedRock != null && Health.CurrentHealth > 0 && this.Invincibility == false)
         {
-            this.GameSession.DispatchEvent(Events.Shake, ShakeEvent(0.5,1,0.001, Ease.Linear, 5));
+            this.GameSession.DispatchEvent(Events.Shake, ShakeEvent(0.2,0.5,0.001, Ease.Linear, 5));
             Health.CurrentHealth -= 1;
             this.Owner.Sprite.Color = this.DamageColor;
             this.Owner.SoundEmitter.PlayCue(this.HitSoundThing);

@@ -104,7 +104,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0.0760542452, -1.58091867, 90],
+			Vec3 Translation = [-1.43975163, -1.58091867, 90],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -124,7 +124,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [0.0760542452, -1.58091867, 40],
+			Vec3 LookTarget = [-1.43975163, -1.58091867, 40],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -437,7 +437,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-23.1653576, -2.95443511, 0],
+			Vec3 Translation = [24.422884, -2.95443559, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -707,6 +707,7 @@ Level =
 		BackgroundMusic = 
 		{
 			string BackgroundGameMusic = "5a508573dedc3fa5:MainTheme",
+			string SparceTheme = "",
 		},
 		VolumeLevev = 
 		{
