@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0, 0, 0],
+		Vec3 Translation = [-28.1562786, 23.3704166, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -37,9 +37,6 @@ Cog =
 		uint StartFrame = 0,
 	},
 	InventoryDestroy = 
-	{
-	},
-	InventoryExists = 
 	{
 	},
 	StoreRemover = 
@@ -664,7 +661,7 @@ Cog =
 						string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
 						string FontName = "5a0f895ab1e49e19:DraftGameFont",
 						uint FontSize = 16,
-						string Text = "Nothing",
+						string Text = " ",
 						TextAlign Align = Left,
 						float PixelsPerUnit = 32,
 						bool Smoothing = false,

@@ -85,9 +85,15 @@ class StoreCollide : ZilchComponent
         if(event.OtherObject.PlayerController != null)
         {
             if(this.Owner.Name == "Shop")
+            {
             StoreCollide.CollideWithShop = false;
+            Inventory.Exists = false;
+            }
             else if(this.Owner.Name == "Upgrade")
+            {
             StoreCollide.CollideWithUpgrade = false;
+            Inventory.Exists = false;
+            }
     
         }
     }
