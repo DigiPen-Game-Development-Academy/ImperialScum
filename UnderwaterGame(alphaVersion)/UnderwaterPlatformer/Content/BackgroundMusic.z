@@ -66,10 +66,10 @@ class BackgroundMusic : ZilchComponent
         //}
         
         //Makes so that you can start the boss music without the background music playing over it.
-        if (BossMusic.BossMusicStart == true)
-        {
-            this.Owner.SoundEmitter.Stop();
-        }
+        //if (BossMusic.BossMusicStart == true)
+        //{
+        //    this.Owner.SoundEmitter.Stop();
+        //}
         
         //Mute Music by pressing M
         if (Zero.Keyboard.KeyIsPressed(Keys.M) && this.KeyWasPressed == false)
