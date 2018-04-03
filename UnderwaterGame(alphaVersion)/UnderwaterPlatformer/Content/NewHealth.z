@@ -26,6 +26,7 @@ class NewHealth : ZilchComponent
     var HitSoundThing : SoundCue = SoundCue.PlayerHit;
     
     var Timer2:Real = 0.2;
+    var Timer3:Real = 0;
     
     var Invincibility : Boolean = false;
     var InvincibilityTimer : Real = 0.5;
@@ -141,6 +142,12 @@ class NewHealth : ZilchComponent
             this.InvincibilityTimer = 0.5;
         }
         
+        if(this.Timer3 > 0) this.Timer3 -= event.Dt;
+        if(Health.CurrentHealth <= 5 && this.Timer3 <= 0)
+        {
+            this.Owner.Sprite.Color = this.DamageColor;
+            this.Timer3 += 1;
+        }
         
         if(this.Owner.Sprite.Color == this.DamageColor)
         {
@@ -160,6 +167,7 @@ class NewHealth : ZilchComponent
         
         if(Health.CurrentHealth <= 0)
         {
+             NumOfDeaths.NumberOfDeaths += 1;
             
             var position = this.Owner.Transform.Translation;
             
@@ -192,7 +200,7 @@ class NewHealth : ZilchComponent
             this.Owner.Transform.Translation = Checkpoint.RespawnPosition;
             Health.CurrentHealth = Health.MaxHealth;
             Hunger.Hunger = Hunger.MaxHunger;
-            NumOfDeaths.NumberOfDeaths += 1;
+            
         }
     }
 }
