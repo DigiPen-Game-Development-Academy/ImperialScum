@@ -14,7 +14,11 @@ Cog =
 	},
 	Transform = 
 	{
+<<<<<<< HEAD
 		Vec3 Translation = [-25.5355225, 21.1529198, 0],
+=======
+		Vec3 Translation = [-3.50277233, 4.67912579, 0],
+>>>>>>> e88c0c99abf43ca891a89880009384a0ef97aa65
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -318,7 +322,7 @@ Cog =
 				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
 				string FontName = "5a0f895ab1e49e19:DraftGameFont",
 				uint FontSize = 16,
-				string Text = "Upgrade for 35",
+				string Text = "Upgrade for 30",
 				TextAlign Align = Left,
 				float PixelsPerUnit = 32,
 				bool Smoothing = false,
@@ -352,7 +356,7 @@ Cog =
 				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
 				string FontName = "5a0f895ab1e49e19:DraftGameFont",
 				uint FontSize = 16,
-				string Text = "Upgrade for 25",
+				string Text = "Upgrade for 20",
 				TextAlign Align = Left,
 				float PixelsPerUnit = 32,
 				bool Smoothing = false,
