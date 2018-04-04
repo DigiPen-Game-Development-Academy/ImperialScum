@@ -4,10 +4,14 @@ class Upgrades : ZilchComponent
     var SpearUpgrade:Integer = 0;
     
     [Static]
-    var BoomerangUpgrade:Integer = 0;
+    var SwordUpgrade:Integer = 0;
     
     [Property]
-    var Price:Integer = 35;
+    var SwordPrice:Integer = 35;
+    
+    [Property]
+    var SpearPrice:Integer = 25;
+    
     
     
     function Initialize(init : CogInitializer)
@@ -19,10 +23,18 @@ class Upgrades : ZilchComponent
 
     function OnLeftMouseDown(event : ViewportMouseEvent)
     {   
-        if(AdvInventory.PlayerInventory["Gears"] >= this.Price && Upgrades.SpearUpgrade <= 1)
+        if(AdvInventory.PlayerInventory["Gears"] >= this.SpearPrice && Upgrades.SpearUpgrade <= 1
+        && this.Owner.Name == "Spear 0")
         {
             Upgrades.SpearUpgrade += 1;
-            AdvInventory.PlayerInventory["Gears"] -= this.Price;
+            AdvInventory.PlayerInventory["Gears"] -= this.SpearPrice;
+        }
+        
+        if(AdvInventory.PlayerInventory["Gears"] >= this.SwordPrice && Upgrades.SwordUpgrade <= 1
+        && this.Owner.Name == "Sword 0")
+        {
+            Upgrades.SwordUpgrade += 1;
+            AdvInventory.PlayerInventory["Gears"] -= this.SwordPrice;
         }
     }
 
@@ -30,23 +42,56 @@ class Upgrades : ZilchComponent
     {
         if(Upgrades.SpearUpgrade == 0)
         {
+        if(this.Owner.Name == "Spear 0")
         this.Owner.Sprite.SpriteSource = SpriteSource.PlayerSpear;
-        this.Price = 20;
+        
+        this.SpearPrice = 20;
         EnemyHealth.SpearDamage = 1;
         }
         
         if(Upgrades.SpearUpgrade == 1)
         {
+        if(this.Owner.Name == "Spear 0")
         this.Owner.Sprite.SpriteSource = SpriteSource.Weap_CopperSpear;
-        this.Price = 35;
+        
+        this.SpearPrice = 35;
         EnemyHealth.SpearDamage = 1.25;
         }
         
         if(Upgrades.SpearUpgrade >= 2)
         {
+        if(this.Owner.Name == "Spear 0")
         this.Owner.Sprite.SpriteSource = SpriteSource.Weap_VolcanoSpear;
-        this.Price = 60;
+        
+        this.SpearPrice = 60;
         EnemyHealth.SpearDamage = 1.5;
+        }
+        
+        if(Upgrades.SwordUpgrade == 0)
+        {
+        if(this.Owner.Name == "Sword 0")
+        this.Owner.Sprite.SpriteSource = SpriteSource.Weap_SwordBoomerang_Wimpy;
+        
+        this.SwordPrice = 25;
+        EnemyHealth.SpearDamage = 1;
+        }
+        
+        if(Upgrades.SwordUpgrade == 1)
+        {
+        if(this.Owner.Name == "Sword 0")
+        this.Owner.Sprite.SpriteSource = SpriteSource.Weap_SwordBoomerang_Copper;
+        
+        this.SwordPrice = 40;
+        EnemyHealth.SwordDamage = 1.25;
+        }
+        
+        if(Upgrades.SwordUpgrade >= 2)
+        {
+        if(this.Owner.Name == "Sword 0")
+        this.Owner.Sprite.SpriteSource = SpriteSource.Weap_SwordBoomerang_Volcano;
+        
+        this.SpearPrice = 60;
+        EnemyHealth.SwordDamage = 1.5;
         }
     }
 }

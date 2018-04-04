@@ -33,7 +33,7 @@ class EnemyController : ZilchComponent
 
     function OnCollisionStarted(event : CollisionEvent)
     {
-        if(event.OtherObject.SwordBoomerangMove != null)
+        if(event.OtherObject == this.Space.FindObjectByName("SwordHitbox"))
         {
             this.Active = true;
         }

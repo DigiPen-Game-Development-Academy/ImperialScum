@@ -11,6 +11,15 @@ class FollowSwordShadow : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
+        if(Upgrades.SwordUpgrade == 0)
+        this.Owner.Sprite.SpriteSource = SpriteSource.Weap_SwordBoomerang_Wimpy;
+        
+        if(Upgrades.SwordUpgrade == 1)
+        this.Owner.Sprite.SpriteSource = SpriteSource.Weap_SwordBoomerang_Copper;
+        
+        if(Upgrades.SwordUpgrade >= 2)
+        this.Owner.Sprite.SpriteSource = SpriteSource.Weap_SwordBoomerang_Volcano;
+        
         var target = this.Space.FindObjectByName("SwordBoomerang");
         
         if(target == null)

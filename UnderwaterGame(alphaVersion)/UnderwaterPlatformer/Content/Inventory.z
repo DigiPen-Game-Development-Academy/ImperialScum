@@ -126,6 +126,10 @@ class PressE: ZilchComponent
     {
         this.Owner.SpriteText.Text = ("Press E for Shop");
     }
+    else if(StoreCollide.CollideWithUpgrade == true)
+    {
+        this.Owner.SpriteText.Text = ("Press E for Upgrades");
+    }
     else
     {
         this.Owner.SpriteText.Text = (" ");

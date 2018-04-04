@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-37.2544556, 38.3326607, 0],
+		Vec3 Translation = [-9.07543182, 28.3749752, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -120,6 +120,176 @@ Cog =
 			},
 			Named = 
 			{
+				string Name = "Sprite",
+			},
+			Transform = 
+			{
+				Vec3 Translation = [5.69792223, 2.78423929, 10],
+				Vec3 Scale = [1, 1, 1],
+				Quat Rotation = [0, 0, 0, 1],
+			},
+			Sprite = 
+			{
+				bool Visible = true,
+				bool VisibilityCulling = true,
+				bool VisibilityEvents = true,
+				bool CastShadows = false,
+				Vec4 Color = [1, 1, 1, 1],
+				BlendMode BlendMode = Alpha,
+				SpriteGeometryMode GeometryMode = ZPlane,
+				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+				string SpriteSource = "5ab54c094784f645:Inv_Gears",
+				bool RenderMask = false,
+				bool FlipX = false,
+				bool FlipY = false,
+				bool AnimationActive = true,
+				float AnimationSpeed = 1,
+				uint StartFrame = 0,
+			},
+			Hierarchy = 
+			{
+			},
+		},
+		Cog = 
+		{
+			LinkId = 
+			{
+				uint Id = 4,
+			},
+			Named = 
+			{
+				string Name = "Volcano",
+			},
+			Transform = 
+			{
+				Vec3 Translation = [2.63900995, -1.67249918, 10],
+				Vec3 Scale = [1, 1, 1],
+				Quat Rotation = [0, 0, 0, 1],
+			},
+			Sprite = 
+			{
+				bool Visible = true,
+				bool VisibilityCulling = true,
+				bool VisibilityEvents = true,
+				bool CastShadows = false,
+				Vec4 Color = [1, 1, 1, 1],
+				BlendMode BlendMode = Alpha,
+				SpriteGeometryMode GeometryMode = ZPlane,
+				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+				string SpriteSource = "5a0ddb18154ca2e3:Inv_ArmorVolcano",
+				bool RenderMask = false,
+				bool FlipX = false,
+				bool FlipY = false,
+				bool AnimationActive = true,
+				float AnimationSpeed = 1,
+				uint StartFrame = 0,
+			},
+			Reactive = 
+			{
+				bool Active = true,
+				bool CaptureMouse = false,
+			},
+			BoxCollider = 
+			{
+				bool Ghost = false,
+				bool SendsMessages = true,
+				bool Seamless = true,
+				string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+				string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+				Vec3 Offset = [0, 0, 0],
+				Vec3 Size = [0.5, 0.5, 0.5],
+			},
+			ShopSlot = 
+			{
+				int Cost = 100,
+				string Name = "ArmorVolcano",
+				bool OnlyBuyOnce = true,
+			},
+			ButtonLogic = 
+			{
+			},
+		},
+		Cog = 
+		{
+			LinkId = 
+			{
+				uint Id = 5,
+			},
+			Named = 
+			{
+				string Name = "SpriteText",
+			},
+			Transform = 
+			{
+				Vec3 Translation = [-2.97372532, 1.34319878, 0],
+				Vec3 Scale = [2, 2, 2],
+				Quat Rotation = [0, 0, 0, 1],
+			},
+			SpriteText = 
+			{
+				bool Visible = true,
+				bool VisibilityCulling = true,
+				bool VisibilityEvents = true,
+				bool CastShadows = false,
+				Vec4 Color = [1, 1, 1, 1],
+				BlendMode BlendMode = Alpha,
+				SpriteGeometryMode GeometryMode = ZPlane,
+				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+				string FontName = "5a0f895ab1e49e19:DraftGameFont",
+				uint FontSize = 16,
+				string Text = "5
+",
+				TextAlign Align = Left,
+				float PixelsPerUnit = 32,
+				bool Smoothing = false,
+			},
+		},
+		Cog = 
+		{
+			LinkId = 
+			{
+				uint Id = 6,
+			},
+			Named = 
+			{
+				string Name = "Sprite",
+			},
+			Transform = 
+			{
+				Vec3 Translation = [-1.11309338, 0.679798126, 9],
+				Vec3 Scale = [1, 1, 1],
+				Quat Rotation = [0, 0, 0, 1],
+			},
+			Sprite = 
+			{
+				bool Visible = true,
+				bool VisibilityCulling = true,
+				bool VisibilityEvents = true,
+				bool CastShadows = false,
+				Vec4 Color = [0, 0, 0, 1],
+				BlendMode BlendMode = Alpha,
+				SpriteGeometryMode GeometryMode = ZPlane,
+				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+				string SpriteSource = "5ab54c094784f645:Inv_Gears",
+				bool RenderMask = false,
+				bool FlipX = false,
+				bool FlipY = false,
+				bool AnimationActive = true,
+				float AnimationSpeed = 1,
+				uint StartFrame = 0,
+			},
+			Hierarchy = 
+			{
+			},
+		},
+		Cog = 
+		{
+			LinkId = 
+			{
+				uint Id = 7,
+			},
+			Named = 
+			{
 				string Name = "HealthPotion",
 			},
 			Transform = 
@@ -170,12 +340,53 @@ Cog =
 			ButtonLogic = 
 			{
 			},
+			Hierarchy = 
+			{
+			},
 		},
 		Cog = 
 		{
 			LinkId = 
 			{
-				uint Id = 4,
+				uint Id = 8,
+			},
+			Named = 
+			{
+				string Name = "Sprite",
+			},
+			Transform = 
+			{
+				Vec3 Translation = [-1.24248409, -1.6678524, 10],
+				Vec3 Scale = [1, 1, 1],
+				Quat Rotation = [0, 0, 0, 1],
+			},
+			Sprite = 
+			{
+				bool Visible = true,
+				bool VisibilityCulling = true,
+				bool VisibilityEvents = true,
+				bool CastShadows = false,
+				Vec4 Color = [1, 1, 1, 1],
+				BlendMode BlendMode = Alpha,
+				SpriteGeometryMode GeometryMode = ZPlane,
+				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+				string SpriteSource = "5ab54c094784f645:Inv_Gears",
+				bool RenderMask = false,
+				bool FlipX = false,
+				bool FlipY = false,
+				bool AnimationActive = true,
+				float AnimationSpeed = 1,
+				uint StartFrame = 0,
+			},
+			Hierarchy = 
+			{
+			},
+		},
+		Cog = 
+		{
+			LinkId = 
+			{
+				uint Id = 9,
 			},
 			Named = 
 			{
@@ -229,16 +440,19 @@ Cog =
 			ButtonLogic = 
 			{
 			},
+			Hierarchy = 
+			{
+			},
 		},
 		Cog = 
 		{
 			LinkId = 
 			{
-				uint Id = 5,
+				uint Id = 10,
 			},
 			Named = 
 			{
-				string Name = "Ring_Speed",
+				string Name = "Ring_Health",
 			},
 			Transform = 
 			{
@@ -293,11 +507,11 @@ Cog =
 		{
 			LinkId = 
 			{
-				uint Id = 6,
+				uint Id = 11,
 			},
 			Named = 
 			{
-				string Name = "Ring_Speed",
+				string Name = "Copper",
 			},
 			Transform = 
 			{
@@ -352,7 +566,7 @@ Cog =
 		{
 			LinkId = 
 			{
-				uint Id = 7,
+				uint Id = 12,
 			},
 			Named = 
 			{
@@ -390,7 +604,7 @@ Cog =
 		{
 			LinkId = 
 			{
-				uint Id = 8,
+				uint Id = 13,
 			},
 			Named = 
 			{
@@ -449,7 +663,7 @@ Cog =
 		{
 			LinkId = 
 			{
-				uint Id = 9,
+				uint Id = 14,
 			},
 			Named = 
 			{
@@ -487,7 +701,7 @@ Cog =
 		{
 			LinkId = 
 			{
-				uint Id = 10,
+				uint Id = 15,
 			},
 			Named = 
 			{
@@ -525,7 +739,7 @@ Cog =
 		{
 			LinkId = 
 			{
-				uint Id = 11,
+				uint Id = 16,
 			},
 			Named = 
 			{
@@ -563,7 +777,7 @@ Cog =
 		{
 			LinkId = 
 			{
-				uint Id = 12,
+				uint Id = 17,
 			},
 			Named = 
 			{
@@ -601,7 +815,7 @@ Cog =
 		{
 			LinkId = 
 			{
-				uint Id = 13,
+				uint Id = 18,
 			},
 			Named = 
 			{
@@ -637,7 +851,7 @@ Cog =
 				{
 					LinkId = 
 					{
-						uint Id = 14,
+						uint Id = 19,
 					},
 					Named = 
 					{
@@ -676,7 +890,7 @@ Cog =
 		{
 			LinkId = 
 			{
-				uint Id = 15,
+				uint Id = 20,
 			},
 			Named = 
 			{
@@ -714,7 +928,7 @@ Cog =
 		{
 			LinkId = 
 			{
-				uint Id = 16,
+				uint Id = 21,
 			},
 			Named = 
 			{
@@ -752,7 +966,7 @@ Cog =
 		{
 			LinkId = 
 			{
-				uint Id = 17,
+				uint Id = 22,
 			},
 			Named = 
 			{
@@ -790,7 +1004,7 @@ Cog =
 		{
 			LinkId = 
 			{
-				uint Id = 18,
+				uint Id = 23,
 			},
 			Named = 
 			{
@@ -825,7 +1039,7 @@ Cog =
 		{
 			LinkId = 
 			{
-				uint Id = 19,
+				uint Id = 24,
 			},
 			Named = 
 			{
@@ -863,118 +1077,7 @@ Cog =
 		{
 			LinkId = 
 			{
-				uint Id = 20,
-			},
-			Named = 
-			{
-				string Name = "Sprite",
-			},
-			Transform = 
-			{
-				Vec3 Translation = [-1.11309326, 0.679798126, 9],
-				Vec3 Scale = [1, 1, 1],
-				Quat Rotation = [0, 0, 0, 1],
-			},
-			Sprite = 
-			{
-				bool Visible = true,
-				bool VisibilityCulling = true,
-				bool VisibilityEvents = true,
-				bool CastShadows = false,
-				Vec4 Color = [0, 0, 0, 1],
-				BlendMode BlendMode = Alpha,
-				SpriteGeometryMode GeometryMode = ZPlane,
-				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-				string SpriteSource = "5ab54c094784f645:Inv_Gears",
-				bool RenderMask = false,
-				bool FlipX = false,
-				bool FlipY = false,
-				bool AnimationActive = true,
-				float AnimationSpeed = 1,
-				uint StartFrame = 0,
-			},
-			Hierarchy = 
-			{
-			},
-		},
-		Cog = 
-		{
-			LinkId = 
-			{
-				uint Id = 21,
-			},
-			Named = 
-			{
-				string Name = "SpriteText",
-			},
-			Transform = 
-			{
-				Vec3 Translation = [-2.97372532, 1.34319973, 0],
-				Vec3 Scale = [2, 2, 2],
-				Quat Rotation = [0, 0, 0, 1],
-			},
-			SpriteText = 
-			{
-				bool Visible = true,
-				bool VisibilityCulling = true,
-				bool VisibilityEvents = true,
-				bool CastShadows = false,
-				Vec4 Color = [1, 1, 1, 1],
-				BlendMode BlendMode = Alpha,
-				SpriteGeometryMode GeometryMode = ZPlane,
-				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-				string FontName = "5a0f895ab1e49e19:DraftGameFont",
-				uint FontSize = 16,
-				string Text = "5
-",
-				TextAlign Align = Left,
-				float PixelsPerUnit = 32,
-				bool Smoothing = false,
-			},
-		},
-		Cog = 
-		{
-			LinkId = 
-			{
-				uint Id = 22,
-			},
-			Named = 
-			{
-				string Name = "Sprite",
-			},
-			Transform = 
-			{
-				Vec3 Translation = [-1.24248374, -1.66785204, 10],
-				Vec3 Scale = [1, 1, 1],
-				Quat Rotation = [0, 0, 0, 1],
-			},
-			Sprite = 
-			{
-				bool Visible = true,
-				bool VisibilityCulling = true,
-				bool VisibilityEvents = true,
-				bool CastShadows = false,
-				Vec4 Color = [1, 1, 1, 1],
-				BlendMode BlendMode = Alpha,
-				SpriteGeometryMode GeometryMode = ZPlane,
-				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-				string SpriteSource = "5ab54c094784f645:Inv_Gears",
-				bool RenderMask = false,
-				bool FlipX = false,
-				bool FlipY = false,
-				bool AnimationActive = true,
-				float AnimationSpeed = 1,
-				uint StartFrame = 0,
-			},
-			Hierarchy = 
-			{
-			},
-		},
-		Cog = 
-		{
-			LinkId = 
-			{
-				uint Id = 23,
+				uint Id = 25,
 			},
 			Named = 
 			{
@@ -1012,7 +1115,7 @@ Cog =
 		{
 			LinkId = 
 			{
-				uint Id = 24,
+				uint Id = 26,
 			},
 			Named = 
 			{
@@ -1047,7 +1150,7 @@ Cog =
 		{
 			LinkId = 
 			{
-				uint Id = 25,
+				uint Id = 27,
 			},
 			Named = 
 			{
@@ -1082,45 +1185,7 @@ Cog =
 		{
 			LinkId = 
 			{
-				uint Id = 26,
-			},
-			Named = 
-			{
-				string Name = "Sprite",
-			},
-			Transform = 
-			{
-				Vec3 Translation = [5.69792223, 2.78423929, 10],
-				Vec3 Scale = [1, 1, 1],
-				Quat Rotation = [0, 0, 0, 1],
-			},
-			Sprite = 
-			{
-				bool Visible = true,
-				bool VisibilityCulling = true,
-				bool VisibilityEvents = true,
-				bool CastShadows = false,
-				Vec4 Color = [1, 1, 1, 1],
-				BlendMode BlendMode = Alpha,
-				SpriteGeometryMode GeometryMode = ZPlane,
-				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-				string SpriteSource = "5ab54c094784f645:Inv_Gears",
-				bool RenderMask = false,
-				bool FlipX = false,
-				bool FlipY = false,
-				bool AnimationActive = true,
-				float AnimationSpeed = 1,
-				uint StartFrame = 0,
-			},
-			Hierarchy = 
-			{
-			},
-		},
-		Cog = 
-		{
-			LinkId = 
-			{
-				uint Id = 27,
+				uint Id = 28,
 			},
 			Named = 
 			{
@@ -1158,7 +1223,7 @@ Cog =
 		{
 			LinkId = 
 			{
-				uint Id = 28,
+				uint Id = 29,
 			},
 			Named = 
 			{
@@ -1196,7 +1261,7 @@ Cog =
 		{
 			LinkId = 
 			{
-				uint Id = 29,
+				uint Id = 30,
 			},
 			Named = 
 			{
@@ -1234,7 +1299,7 @@ Cog =
 		{
 			LinkId = 
 			{
-				uint Id = 30,
+				uint Id = 31,
 			},
 			Named = 
 			{
@@ -1259,6 +1324,78 @@ Cog =
 				string FontName = "5a0f895ab1e49e19:DraftGameFont",
 				uint FontSize = 16,
 				string Text = "65",
+				TextAlign Align = Left,
+				float PixelsPerUnit = 32,
+				bool Smoothing = false,
+			},
+		},
+		Cog = 
+		{
+			LinkId = 
+			{
+				uint Id = 32,
+			},
+			Named = 
+			{
+				string Name = "Sprite",
+			},
+			Transform = 
+			{
+				Vec3 Translation = [5.96753359, -1.80074763, 10],
+				Vec3 Scale = [1, 1, 1],
+				Quat Rotation = [0, 0, 0, 1],
+			},
+			Sprite = 
+			{
+				bool Visible = true,
+				bool VisibilityCulling = true,
+				bool VisibilityEvents = true,
+				bool CastShadows = false,
+				Vec4 Color = [1, 1, 1, 1],
+				BlendMode BlendMode = Alpha,
+				SpriteGeometryMode GeometryMode = ZPlane,
+				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+				string SpriteSource = "5ab54c094784f645:Inv_Gears",
+				bool RenderMask = false,
+				bool FlipX = false,
+				bool FlipY = false,
+				bool AnimationActive = true,
+				float AnimationSpeed = 1,
+				uint StartFrame = 0,
+			},
+			Hierarchy = 
+			{
+			},
+		},
+		Cog = 
+		{
+			LinkId = 
+			{
+				uint Id = 33,
+			},
+			Named = 
+			{
+				string Name = "SpriteText",
+			},
+			Transform = 
+			{
+				Vec3 Translation = [3.71025538, -1.15585399, 0],
+				Vec3 Scale = [2, 2, 2],
+				Quat Rotation = [0, 0, 0, 1],
+			},
+			SpriteText = 
+			{
+				bool Visible = true,
+				bool VisibilityCulling = true,
+				bool VisibilityEvents = true,
+				bool CastShadows = false,
+				Vec4 Color = [1, 1, 1, 1],
+				BlendMode BlendMode = Alpha,
+				SpriteGeometryMode GeometryMode = ZPlane,
+				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+				string FontName = "5a0f895ab1e49e19:DraftGameFont",
+				uint FontSize = 16,
+				string Text = "100",
 				TextAlign Align = Left,
 				float PixelsPerUnit = 32,
 				bool Smoothing = false,

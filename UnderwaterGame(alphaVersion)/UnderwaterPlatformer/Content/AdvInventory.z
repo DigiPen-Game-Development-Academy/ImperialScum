@@ -31,7 +31,8 @@ class AdvInventory : ZilchComponent
     {"Ring_Health", 0},
     {"Ring_Regen", 0},
     {"Ring_Jump", 0},
-    {"ArmorCopper", 0}
+    {"ArmorCopper", 0},
+    {"ArmorVolcano", 0}
   };
   
   [Static] function Get(name : String) : Integer

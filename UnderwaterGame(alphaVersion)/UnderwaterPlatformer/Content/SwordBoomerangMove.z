@@ -62,7 +62,15 @@ class SwordBoomerangMove : ZilchComponent
         this.HangTime -= 1;
         }
         
-        //Jacob's uncommented mess
+        //Making the spritesource change based on upgrade level
+        if(Upgrades.SwordUpgrade == 0)
+        this.Owner.Sprite.SpriteSource = SpriteSource.Weap_SwordBoomerang_Wimpy;
+        
+        if(Upgrades.SwordUpgrade == 1)
+        this.Owner.Sprite.SpriteSource = SpriteSource.Weap_SwordBoomerang_Copper;
+        
+        if(Upgrades.SwordUpgrade >= 2)
+        this.Owner.Sprite.SpriteSource = SpriteSource.Weap_SwordBoomerang_Volcano;
         
         var target = this.Space.FindObjectByName("SwordTarget");
         var player = this.Space.FindObjectByName("Player");

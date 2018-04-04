@@ -20,7 +20,7 @@ class InventorySlot : ZilchComponent
          if (item.Value <= 0) continue;
          if(index == this.ItemIndex)
          {
-             this.Owner.Sprite.Visible = true;
+            this.Owner.Sprite.Visible = true;
             var source = SpriteSource.Find("Inv_`item.Key`");
             
             if (this.Owner.Sprite.SpriteSource != source)

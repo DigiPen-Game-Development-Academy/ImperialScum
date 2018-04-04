@@ -64,6 +64,18 @@ class PlayerController : ZilchComponent
             this.ThrowAnimation = SpriteSource.Copper_Throw1;
             this.WalkingAnimation = SpriteSource.Copper_Walk1;
         }
+        if(AdvInventory.PlayerInventory["ArmorVolcano"] >= 1)
+        {
+            this.IdleAnimation = SpriteSource.Volcano_Stand;
+            this.StabAnimation = SpriteSource.Volcano_StabStright;
+            this.StabUpAnimation = SpriteSource.Volcano_StabUp;
+            this.StabDownAnimation = SpriteSource.Volcano_StabDown;
+            this.JumpAnimation = SpriteSource.Volcano_Jump000;
+            this.MidAnimation = SpriteSource.Volcano_Jump001;
+            this.FallAnimation = SpriteSource.Volcano_Jump002;
+            this.ThrowAnimation = SpriteSource.Volcano_Throw;
+            this.WalkingAnimation = SpriteSource.Volcano_Walk;
+        }
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
         
         Zero.Connect(this.Space, Events.LeftMouseDown, this.OnLeftMouseDown);

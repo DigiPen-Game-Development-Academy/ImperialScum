@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-11.4459581, 8.69633961, 0],
+		Vec3 Translation = [-25.5355225, 21.1529198, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -177,7 +177,7 @@ Cog =
 			},
 			Named = 
 			{
-				string Name = "Sprite",
+				string Name = "Sword 0",
 			},
 			Transform = 
 			{
@@ -228,7 +228,8 @@ Cog =
 			},
 			Upgrades = 
 			{
-				int Price = 0,
+				int SwordPrice = 35,
+				int SpearPrice = 25,
 			},
 		},
 		Cog = 
@@ -285,7 +286,8 @@ Cog =
 			},
 			Upgrades = 
 			{
-				int Price = 10,
+				int SwordPrice = 35,
+				int SpearPrice = 25,
 			},
 		},
 		Cog = 
