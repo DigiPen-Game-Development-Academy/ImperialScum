@@ -62,7 +62,7 @@ class Upgrades : ZilchComponent
         {
         if(this.Owner.Name == "Spear 0")
         this.Owner.Sprite.SpriteSource = SpriteSource.Weap_VolcanoSpear;
-        
+        Upgrades.SpearPrice = 0;
         EnemyHealth.SpearDamage = 1.5;
         }
         
@@ -88,7 +88,7 @@ class Upgrades : ZilchComponent
         {
         if(this.Owner.Name == "Sword 0")
         this.Owner.Sprite.SpriteSource = SpriteSource.Weap_SwordBoomerang_Volcano;
-        
+        Upgrades.SwordPrice = 0;
         EnemyHealth.SwordDamage = 1.5;
         }
     }
