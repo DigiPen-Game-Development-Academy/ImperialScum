@@ -32,7 +32,6 @@ class ButtonLogic : ZilchComponent
 
     function OnMouseEnter(event : ViewportMouseEvent)
     {
-        Console.WriteLine("OK");
         this.Owner.Transform.Scale = Real3(1.5,1.5,1.5);
     }
 

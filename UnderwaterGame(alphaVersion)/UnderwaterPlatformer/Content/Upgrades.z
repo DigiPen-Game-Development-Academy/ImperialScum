@@ -6,35 +6,35 @@ class Upgrades : ZilchComponent
     [Static]
     var SwordUpgrade:Integer = 0;
     
-    [Property]
+    [Static]
     var SwordPrice:Integer = 35;
     
-    [Property]
+    [Static]
     var SpearPrice:Integer = 25;
     
     
     
     function Initialize(init : CogInitializer)
     {
-        Console.WriteLine("SpearUpgrade `Upgrades.SpearUpgrade`");
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
         Zero.Connect(this.Owner, Events.LeftMouseDown, this.OnLeftMouseDown);
     }
 
     function OnLeftMouseDown(event : ViewportMouseEvent)
-    {   
-        if(AdvInventory.PlayerInventory["Gears"] >= this.SpearPrice && Upgrades.SpearUpgrade <= 1
+    {
+
+        if(AdvInventory.PlayerInventory["Gears"] >= Upgrades.SpearPrice && Upgrades.SpearUpgrade <= 1
         && this.Owner.Name == "Spear 0")
         {
             Upgrades.SpearUpgrade += 1;
-            AdvInventory.PlayerInventory["Gears"] -= this.SpearPrice;
+            AdvInventory.PlayerInventory["Gears"] -= Upgrades.SpearPrice;
         }
         
-        if(AdvInventory.PlayerInventory["Gears"] >= this.SwordPrice && Upgrades.SwordUpgrade <= 1
+        if(AdvInventory.PlayerInventory["Gears"] >= Upgrades.SwordPrice && Upgrades.SwordUpgrade <= 1
         && this.Owner.Name == "Sword 0")
         {
             Upgrades.SwordUpgrade += 1;
-            AdvInventory.PlayerInventory["Gears"] -= this.SwordPrice;
+            AdvInventory.PlayerInventory["Gears"] -= Upgrades.SwordPrice;
         }
     }
 
@@ -45,7 +45,7 @@ class Upgrades : ZilchComponent
         if(this.Owner.Name == "Spear 0")
         this.Owner.Sprite.SpriteSource = SpriteSource.PlayerSpear;
         
-        this.SpearPrice = 20;
+        Upgrades.SpearPrice = 20;
         EnemyHealth.SpearDamage = 1;
         }
         
@@ -54,7 +54,7 @@ class Upgrades : ZilchComponent
         if(this.Owner.Name == "Spear 0")
         this.Owner.Sprite.SpriteSource = SpriteSource.Weap_CopperSpear;
         
-        this.SpearPrice = 35;
+        Upgrades.SpearPrice = 35;
         EnemyHealth.SpearDamage = 1.25;
         }
         
@@ -63,7 +63,6 @@ class Upgrades : ZilchComponent
         if(this.Owner.Name == "Spear 0")
         this.Owner.Sprite.SpriteSource = SpriteSource.Weap_VolcanoSpear;
         
-        this.SpearPrice = 60;
         EnemyHealth.SpearDamage = 1.5;
         }
         
@@ -72,7 +71,7 @@ class Upgrades : ZilchComponent
         if(this.Owner.Name == "Sword 0")
         this.Owner.Sprite.SpriteSource = SpriteSource.Weap_SwordBoomerang_Wimpy;
         
-        this.SwordPrice = 25;
+        Upgrades.SwordPrice = 25;
         EnemyHealth.SpearDamage = 1;
         }
         
@@ -81,7 +80,7 @@ class Upgrades : ZilchComponent
         if(this.Owner.Name == "Sword 0")
         this.Owner.Sprite.SpriteSource = SpriteSource.Weap_SwordBoomerang_Copper;
         
-        this.SwordPrice = 40;
+        Upgrades.SwordPrice = 40;
         EnemyHealth.SwordDamage = 1.25;
         }
         
@@ -90,8 +89,24 @@ class Upgrades : ZilchComponent
         if(this.Owner.Name == "Sword 0")
         this.Owner.Sprite.SpriteSource = SpriteSource.Weap_SwordBoomerang_Volcano;
         
-        this.SpearPrice = 60;
         EnemyHealth.SwordDamage = 1.5;
         }
+    }
+}
+class UpgradeText : ZilchComponent
+{
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        if(this.Owner.Name == "SpearText")
+        this.Owner.SpriteText.Text = "`Upgrades.SpearPrice`";
+        
+        if(this.Owner.Name == "SwordText")
+        this.Owner.SpriteText.Text = "`Upgrades.SwordPrice`";
     }
 }
