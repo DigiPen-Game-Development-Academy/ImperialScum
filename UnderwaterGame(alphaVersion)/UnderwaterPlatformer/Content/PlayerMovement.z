@@ -30,6 +30,7 @@ class PlayerMovement : ZilchComponent
     [Property] var SoundToPlay : SoundCue = SoundCue.GearPickup;
     [Property] var SoundToPlay2 : SoundCue = SoundCue.SpearStab;
     var SoundToPlay3 : SoundCue = SoundCue.SelectItem;
+    var SoundToPlay4 : SoundCue = SoundCue.LegendarySound;
     
     var Swimming:Boolean = false;
     
@@ -116,6 +117,12 @@ class PlayerMovement : ZilchComponent
         {
             Eat.PlaySound3 = false;
             this.Owner.SoundEmitter.PlayCue(this.SoundToPlay3);
+        }
+        
+        if(Resources.PlayLegendarySound == true)
+        {
+            Resources.PlayLegendarySound = false;
+            this.Owner.SoundEmitter.PlayCue(this.SoundToPlay4);
         }
     
         if(Zero.Keyboard.KeyIsPressed(this.KeyUp) && this.Owner.GroundChecker.Grounded == true
