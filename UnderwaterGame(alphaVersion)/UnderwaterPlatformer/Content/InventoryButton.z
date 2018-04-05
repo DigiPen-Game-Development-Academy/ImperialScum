@@ -62,10 +62,15 @@ var DeleteString:Boolean = false;
         {
              InventoryButton.WhatItem = "    Ring of Health";
         }
-        if(this.Owner.Sprite.SpriteSource.Name == ("Inv_CopperArmor"))
+        if(this.Owner.Sprite.SpriteSource.Name == ("Inv_ArmorCopper"))
         {
              InventoryButton.WhatItem = "    Copper Armor";
         }
+         if(this.Owner.Sprite.SpriteSource.Name == ("Inv_ArmorVolvano"))
+        {
+             InventoryButton.WhatItem = "    Amethyst armor";
+        }
+        
 
         this.Space.CreateAtPosition(Archetype.WhatText, this.Owner.Transform.WorldTranslation);
     }

@@ -6,11 +6,15 @@ Cog =
 	},
 	Named = 
 	{
-		string Name = "PurpleArmor",
+		string Name = "VolcanoArmor",
+	},
+	Archetyped = 
+	{
+		string Name = "5abdee66d947a9ad:VolcanoArmor",
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-27.0629845, 7.10914612, -9.19673766e-07],
+		Vec3 Translation = [-13.5980864, 19.7983189, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -40,7 +44,7 @@ Cog =
 		string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
 		string SerializedGroupName = "4e740859314e5515:DefaultGroup",
 		Vec3 Offset = [0, 0, 0],
-		float Radius = 1,
+		float Radius = 0.300000012,
 	},
 	RigidBody = 
 	{
