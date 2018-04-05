@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0, 0, 0],
+		Vec3 Translation = [-0.301147342, -11.7667389, -10],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -78,11 +78,12 @@ Cog =
 		string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
 		string SerializedGroupName = "4e740859314e5515:DefaultGroup",
 		Vec3 Offset = [0, 0, 0],
-		float Radius = 0.200000003,
+		float Radius = 0.699999988,
 	},
 	Spin = 
 	{
 		float RotationSpeed = 3000,
+		string SoundToPlay = "5a73fcfb7f3fbd5e:SawBlade",
 	},
 	DestroySword = 
 	{
