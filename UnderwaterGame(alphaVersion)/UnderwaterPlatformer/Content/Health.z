@@ -45,14 +45,16 @@ class Health : ZilchComponent
         Zero.Connect(this.Owner, Events.CollisionPersisted, this.OnCollisionPersisted);
         Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
         
-        if(AdvInventory.PlayerInventory["ArmorCopper"] >= 1)
-        {
-            Health.MaxHealth = Health.MaxHealth + 10;
-        }
+        //if(AdvInventory.PlayerInventory["ArmorCopper"] >= 1)
+        //{
+            //Health.MaxHealth = Health.MaxHealth + 10;
+        //}
         if(AdvInventory.PlayerInventory["Ring_Health"] >= 1)
         {
            Health.MaxHealth = Health.MaxHealth + 5;
         }
+        
+        Health.CurrentHealth = Health.MaxHealth;
     }
 
     function OnCollisionStarted(event : CollisionEvent)
