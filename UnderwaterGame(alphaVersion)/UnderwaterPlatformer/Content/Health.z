@@ -59,16 +59,10 @@ class Health : ZilchComponent
     {
         if(event.OtherObject.BulletLogic != null && Health.CurrentHealth > 0 && this.Invincibility == false)
         {
-            //This is Elena's script for purple armor working/////////////////////////
-            if(AdvInventory.PlayerInventory["Inv_ArmorVolvano"] >= 1)
-            {
-               Health.CurrentHealth -= 1.5; 
-            }
-            //This is the end of my script//////////////////
-            Health.CurrentHealth -= 2;
             this.Owner.SoundEmitter.PlayCue(this.HitSoundThing);
             this.Owner.Sprite.Color = this.DamageColor;
             this.Invincibility = true;
+           
         }
         
         
@@ -99,10 +93,19 @@ class Health : ZilchComponent
         if(event.OtherObject.JaggedRock != null && Health.CurrentHealth > 0 && this.Invincibility == false)
         {
             this.GameSession.DispatchEvent(Events.Shake, ShakeEvent(0.2,0.5,0.001, Ease.Linear, 5));
-            Health.CurrentHealth -= 1;
             this.Owner.Sprite.Color = this.DamageColor;
             this.Owner.SoundEmitter.PlayCue(this.HitSoundThing);
             this.Invincibility = true;
+            //This is Elena's script for purple armor working/////////////////////////
+            if(AdvInventory.PlayerInventory["ArmorVolcano"] >= 1)
+            {
+               Health.CurrentHealth -= 0.5;
+            }
+            else
+            {
+                Health.CurrentHealth -= 1;
+            }
+            //This is the end of my script//////////////////
         }
         if(event.OtherObject.Explosion != null && Health.CurrentHealth > 0 && this.Invincibility == false)
         {

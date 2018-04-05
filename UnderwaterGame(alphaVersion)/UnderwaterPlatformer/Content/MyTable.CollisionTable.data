@@ -46,8 +46,8 @@ CollisionTable =
 		{
 			string TypeA = "5a5911563de7a901:Enemy",
 			string TypeB = "5a5911563de7a901:Enemy",
-			bool SkipResolution = true,
-			bool SkipDetectingCollision = false,
+			bool SkipResolution = false,
+			bool SkipDetectingCollision = true,
 			bool StartEvent = false,
 			bool EndEvent = false,
 			bool PersistedEvent = false,
