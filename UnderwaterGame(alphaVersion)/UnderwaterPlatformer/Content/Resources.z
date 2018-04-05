@@ -10,6 +10,7 @@ class Resources : ZilchComponent
     [Property] var Legendary : Boolean = false;
     
     [Static] var PlaySound : Boolean = false;
+    [Static] var PlayLegendarySound : Boolean = false;
     
     function Initialize(init : CogInitializer)
     {
@@ -56,6 +57,7 @@ class Resources : ZilchComponent
                 this.Space.CreateAtPosition(Archetype.LegendaryExplode, this.Owner.Transform.Translation);
                 this.Space.CreateAtPosition(Archetype.SparkleExplode, this.Owner.Transform.Translation);
                 this.Space.CreateAtPosition(Archetype.LegendaryText, this.Owner.Transform.Translation);
+                Resources.PlayLegendarySound = true;
             }
             
             this.Owner.Destroy();
