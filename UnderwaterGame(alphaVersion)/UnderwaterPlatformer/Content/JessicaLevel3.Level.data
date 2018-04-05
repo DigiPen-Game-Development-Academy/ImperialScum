@@ -1241,7 +1241,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 40.6570129,
+			float Size = 33.2871552,
 		},
 		EditorCameraController = 
 		{
@@ -1677,7 +1677,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-9.02895451, -13.2276258, 0],
+			Vec3 Translation = [-12.36063, -13.2276258, 0],
 			Vec3 Scale = [1.48860204, 1.48860204, 1.48860204],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -1693,7 +1693,7 @@ Level =
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
 			string FontName = "5a0f895ab1e49e19:DraftGameFont",
 			uint FontSize = 30,
-			string Text = "Some of the humans to survive, retreated to the waters",
+			string Text = "Some of the humans, in an attempt to survive retreated to the waters",
 			TextAlign Align = Left,
 			float PixelsPerUnit = 64,
 			bool Smoothing = true,
@@ -1794,7 +1794,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-9.05163956, -18.2747574, 0],
+			Vec3 Translation = [-10.15201, -18.2747574, 0],
 			Vec3 Scale = [1.48860204, 1.48860204, 1.48860204],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -1810,7 +1810,7 @@ Level =
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
 			string FontName = "5a0f895ab1e49e19:DraftGameFont",
 			uint FontSize = 30,
-			string Text = "they started killing the world the humans had built.",
+			string Text = "they started destroying the world the humans had built.",
 			TextAlign Align = Left,
 			float PixelsPerUnit = 64,
 			bool Smoothing = true,
@@ -1833,7 +1833,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-13.012598, -20.9059944, 0],
+			Vec3 Translation = [-13.6509819, -20.9059944, 0],
 			Vec3 Scale = [1.48860204, 1.48860204, 1.48860204],
 			Quat Rotation = [0, 0, 0, 1],
 		},

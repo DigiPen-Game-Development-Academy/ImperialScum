@@ -1,0 +1,18 @@
+class Shockwave : ZilchComponent
+{
+    function Initialize(init : CogInitializer)
+    {
+        //Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
+    }
+
+    function OnCollisionStarted(event : CollisionEvent)
+    {
+        var position = this.Owner.Transform.Translation;
+        this.Space.CreateAtPosition(Archetype.Shockwave, position);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+    }
+}
