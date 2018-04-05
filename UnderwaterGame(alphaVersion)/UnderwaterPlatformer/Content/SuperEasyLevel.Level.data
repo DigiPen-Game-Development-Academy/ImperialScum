@@ -104,7 +104,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0.677509665, 36.8875656, 50],
+			Vec3 Translation = [9.13795471, -4.40373898, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -116,7 +116,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 16.5299301,
+			float Size = 33.2873688,
 		},
 		EditorCameraController = 
 		{
@@ -124,7 +124,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [0.677509665, 36.8875656, 1.27173507e-08],
+			Vec3 LookTarget = [9.13795471, -4.40373898, 3.82534694e-07],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -148,13 +148,13 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [18.0303764, 9.02556419, 0],
+			Vec3 Translation = [18.8073254, 9.02556419, 0],
 			Vec3 Scale = [11.4354448, 13.6299133, 45.9906387],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Sprite = 
 		{
-			bool Visible = true,
+			bool Visible = false,
 			bool VisibilityCulling = true,
 			bool VisibilityEvents = true,
 			bool CastShadows = false,
@@ -198,41 +198,6 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 5,
-		},
-		Named = 
-		{
-			string Name = "TileMap",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [0, 0, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		MultiSprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-		},
-		TileMap = 
-		{
-			string SourceName = "5aa6c5ee28f6a3ff:JessicaLevel_TileMap01",
-			string PaletteName = "5adef23c7b8ac912:GroundTiles",
-			float UnitsPerTile = 1,
-			float MeshThickness = 1.20000005,
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
 			uint Id = 2,
 		},
 		Named = 
@@ -262,7 +227,6 @@ Level =
 		},
 		FollowCamera = 
 		{
-			float Speed = 200,
 		},
 		RigidBody = 
 		{
@@ -297,169 +261,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 6,
-		},
-		Named = 
-		{
-			string Name = "BK_Spikes",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [9.14977074, -6.96433067, -10],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		MultiSprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-		},
-		TileMap = 
-		{
-			string SourceName = "5aa6c1765767cf85:JessicaLevel_TileMap02",
-			string PaletteName = "5adec5206634cee9:Backgrounds",
-			float UnitsPerTile = 1,
-			float MeshThickness = 1.20000005,
-		},
-		ParallaxBK = 
-		{
-			float RealitiveSpeed = -0.5,
-			CogPath PlayerObject = 
-			{
-				string Path = ":/Camera",
-				bool ErrorOnResolveToNull = false,
-				bool ErrorOnPathCantCompute = false,
-				bool ErrorOnDirectLinkFail = false,
-				bool UpdateCogOnPathChange = true,
-				bool UpdatePathOnCogChange = true,
-				bool UpdateCogOnInitialize = true,
-				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 2,
-				CogPathPreference PathPreference0 = CogRelative,
-				CogPathPreference PathPreference1 = SpaceRelative,
-				CogPathPreference PathPreference2 = Absolute,
-			},
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 7,
-		},
-		Named = 
-		{
-			string Name = "BK_DistanceDune",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [9.14977074, -6.96433067, -8],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		MultiSprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-		},
-		TileMap = 
-		{
-			string SourceName = "5aa6c1765764b7b4:JessicaLevel_TileMap03",
-			string PaletteName = "5adec5206634cee9:Backgrounds",
-			float UnitsPerTile = 1,
-			float MeshThickness = 1.20000005,
-		},
-		ParallaxBK = 
-		{
-			float RealitiveSpeed = -0.300000012,
-			CogPath PlayerObject = 
-			{
-				string Path = ":/Camera",
-				bool ErrorOnResolveToNull = false,
-				bool ErrorOnPathCantCompute = false,
-				bool ErrorOnDirectLinkFail = false,
-				bool UpdateCogOnPathChange = true,
-				bool UpdatePathOnCogChange = true,
-				bool UpdateCogOnInitialize = true,
-				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 2,
-				CogPathPreference PathPreference0 = CogRelative,
-				CogPathPreference PathPreference1 = SpaceRelative,
-				CogPathPreference PathPreference2 = Absolute,
-			},
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 8,
-		},
-		Named = 
-		{
-			string Name = "BK_Dunes",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [9.14977074, -6.96433067, -7],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		MultiSprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-		},
-		TileMap = 
-		{
-			string SourceName = "5aa6c17657658df4:JessicaLevel_TileMap04",
-			string PaletteName = "5adec5206634cee9:Backgrounds",
-			float UnitsPerTile = 1,
-			float MeshThickness = 1.20000005,
-		},
-		ParallaxBK = 
-		{
-			float RealitiveSpeed = -0.100000001,
-			CogPath PlayerObject = 
-			{
-				string Path = ":/Camera",
-				bool ErrorOnResolveToNull = false,
-				bool ErrorOnPathCantCompute = false,
-				bool ErrorOnDirectLinkFail = false,
-				bool UpdateCogOnPathChange = true,
-				bool UpdatePathOnCogChange = true,
-				bool UpdateCogOnInitialize = true,
-				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 2,
-				CogPathPreference PathPreference0 = CogRelative,
-				CogPathPreference PathPreference1 = SpaceRelative,
-				CogPathPreference PathPreference2 = Absolute,
-			},
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 9,
+			uint Id = 5,
 		},
 		Named = 
 		{
@@ -504,66 +306,12 @@ Level =
 			string LevelToLoad = "5a4b96cbd2c3c651:LoadingLevel",
 		},
 	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 10,
-		},
-		Named = 
-		{
-			string Name = "BK_DistantSpikes",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [9.14977074, -6.4409132, -10],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		MultiSprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-		},
-		TileMap = 
-		{
-			string SourceName = "5aa6c17657626158:JessicaLevel_TileMap05",
-			string PaletteName = "5adec5206634cee9:Backgrounds",
-			float UnitsPerTile = 1,
-			float MeshThickness = 1.20000005,
-		},
-		ParallaxBK = 
-		{
-			float RealitiveSpeed = -0.899999976,
-			CogPath PlayerObject = 
-			{
-				string Path = ":/Camera",
-				bool ErrorOnResolveToNull = false,
-				bool ErrorOnPathCantCompute = false,
-				bool ErrorOnDirectLinkFail = false,
-				bool UpdateCogOnPathChange = true,
-				bool UpdatePathOnCogChange = true,
-				bool UpdateCogOnInitialize = true,
-				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 2,
-				CogPathPreference PathPreference0 = CogRelative,
-				CogPathPreference PathPreference1 = SpaceRelative,
-				CogPathPreference PathPreference2 = Absolute,
-			},
-		},
-	},
 	ArchetypeInstance = 
 	{
 		string Name = "5adef0b2576f5b3a:Player",
 		LinkId = 
 		{
-			uint Id = 11,
+			uint Id = 6,
 		},
 		Transform = 
 		{
@@ -581,7 +329,7 @@ Level =
 		string Name = "5add71002d270676:Key",
 		LinkId = 
 		{
-			uint Id = 12,
+			uint Id = 7,
 		},
 		Transform = 
 		{
@@ -599,7 +347,7 @@ Level =
 		string Name = "5addae58d1201ae5:EnemyCrab",
 		LinkId = 
 		{
-			uint Id = 13,
+			uint Id = 8,
 		},
 		Transform = 
 		{
@@ -617,7 +365,7 @@ Level =
 		string Name = "5addae58d1201ae5:EnemyCrab",
 		LinkId = 
 		{
-			uint Id = 14,
+			uint Id = 9,
 		},
 		Transform = 
 		{
@@ -635,7 +383,7 @@ Level =
 		string Name = "5addae58d1201ae5:EnemyCrab",
 		LinkId = 
 		{
-			uint Id = 15,
+			uint Id = 10,
 		},
 		Transform = 
 		{
@@ -653,7 +401,7 @@ Level =
 		string Name = "5addae58d1201ae5:EnemyCrab",
 		LinkId = 
 		{
-			uint Id = 16,
+			uint Id = 11,
 		},
 		Transform = 
 		{
@@ -671,7 +419,7 @@ Level =
 		string Name = "5ab3fb4d720d2a14:Gear",
 		LinkId = 
 		{
-			uint Id = 17,
+			uint Id = 12,
 		},
 		Transform = 
 		{
@@ -689,7 +437,7 @@ Level =
 		string Name = "5ab3fb4d720d2a14:Gear",
 		LinkId = 
 		{
-			uint Id = 18,
+			uint Id = 13,
 		},
 		Transform = 
 		{
@@ -706,7 +454,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 19,
+			uint Id = 14,
 		},
 		Named = 
 		{
@@ -767,7 +515,7 @@ Level =
 		string Name = "5ab3fb4d720d2a14:Gear",
 		LinkId = 
 		{
-			uint Id = 20,
+			uint Id = 15,
 		},
 		Transform = 
 		{
@@ -784,11 +532,11 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 21,
+			uint Id = 16,
 		},
 		Named = 
 		{
-			string Name = "TileMap",
+			string Name = "BackTiles",
 		},
 		Transform = 
 		{
@@ -814,18 +562,126 @@ Level =
 			float UnitsPerTile = 1,
 			float MeshThickness = 1.20000005,
 		},
+		Hierarchy = 
+		{
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 17,
+		},
+		Named = 
+		{
+			string Name = "TileMap",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0, 0, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		MultiSprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+		},
+		TileMap = 
+		{
+			string SourceName = "5aa6c5ee28f6a3ff:JessicaLevel_TileMap01",
+			string PaletteName = "5adef23c7b8ac912:GroundTiles",
+			float UnitsPerTile = 1,
+			float MeshThickness = 1.20000005,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 18,
+		},
+		Named = 
+		{
+			string Name = "DecorBack",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0, 0, -3],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		MultiSprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+		},
+		TileMap = 
+		{
+			string SourceName = "5a6f51f3a2af5c9a:SuperEasyLevel_TileMap08",
+			string PaletteName = "5a2bdd61970e8705:Decor",
+			float UnitsPerTile = 1,
+			float MeshThickness = 1.20000005,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 19,
+		},
+		Named = 
+		{
+			string Name = "DecorFront",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0, 0, 1],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		MultiSprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+		},
+		TileMap = 
+		{
+			string SourceName = "5a6f52307a6a840b:SuperEasyLevel_TileMap09",
+			string PaletteName = "5a2bdd61970e8705:Decor",
+			float UnitsPerTile = 1,
+			float MeshThickness = 1.20000005,
+		},
 	},
 	ArchetypeInstance = 
 	{
 		string Name = "5ab57c97f2406d40:Chest",
 		LinkId = 
 		{
-			uint Id = 22,
+			uint Id = 20,
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-18.4157104, -13.3994465, 0],
-			Vec3 Scale = [1.27878726, 1.27878726, 1.27878726],
+			Vec3 Translation = [-18.5, -13.5, 0],
+			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Named = 
@@ -838,12 +694,12 @@ Level =
 		string Name = "5ab57c97f2406d40:Chest",
 		LinkId = 
 		{
-			uint Id = 23,
+			uint Id = 21,
 		},
 		Transform = 
 		{
-			Vec3 Translation = [2.448071, 11.5513849, 0],
-			Vec3 Scale = [1.27878726, 1.27878726, 1.27878726],
+			Vec3 Translation = [2.5, 11.5, 0],
+			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Named = 
@@ -856,7 +712,7 @@ Level =
 		string Name = "5ab5483e9cb7465f:Food",
 		LinkId = 
 		{
-			uint Id = 24,
+			uint Id = 22,
 		},
 		Transform = 
 		{
@@ -874,7 +730,7 @@ Level =
 		string Name = "5ab5483e9cb7465f:Food",
 		LinkId = 
 		{
-			uint Id = 25,
+			uint Id = 23,
 		},
 		Transform = 
 		{
@@ -892,7 +748,7 @@ Level =
 		string Name = "5ab5483e9cb7465f:Food",
 		LinkId = 
 		{
-			uint Id = 26,
+			uint Id = 24,
 		},
 		Transform = 
 		{
@@ -910,7 +766,7 @@ Level =
 		string Name = "5ab5483e9cb7465f:Food",
 		LinkId = 
 		{
-			uint Id = 27,
+			uint Id = 25,
 		},
 		Transform = 
 		{
@@ -928,7 +784,7 @@ Level =
 		string Name = "5af8a804be686e11:Door",
 		LinkId = 
 		{
-			uint Id = 28,
+			uint Id = 26,
 		},
 		Transform = 
 		{
@@ -945,7 +801,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 29,
+			uint Id = 27,
 		},
 		Named = 
 		{
@@ -993,7 +849,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 30,
+			uint Id = 28,
 		},
 		Named = 
 		{
@@ -1001,7 +857,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [18.1511593, 3.44424248, 2],
+			Vec3 Translation = [18.5618286, 3.1498723, 2],
 			Vec3 Scale = [0.603788376, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -1034,7 +890,7 @@ Level =
 			float EmitVariance = 10,
 			float Size = 0.100000001,
 			float SizeVariance = 0.200000003,
-			float Lifetime = 1,
+			float Lifetime = 1.39999998,
 			float LifetimeVariance = 0.200000003,
 			float Spin = 0,
 			float SpinVariance = 50,
@@ -1069,15 +925,15 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 31,
+			uint Id = 29,
 		},
 		Named = 
 		{
-			string Name = "TileMap",
+			string Name = "BK_Spikes",
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, 0, 5],
+			Vec3 Translation = [0, -8.14987564, -10],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -1094,10 +950,137 @@ Level =
 		},
 		TileMap = 
 		{
-			string SourceName = "5a7f94a1fb664815:SuperEasyLevel_TileMap01",
-			string PaletteName = "5a2bdd61970e8705:Decor",
+			string SourceName = "5a6f50c7f530efa0:SuperEasyLevel_TileMap05",
+			string PaletteName = "5adec5206634cee9:Backgrounds",
 			float UnitsPerTile = 1,
 			float MeshThickness = 1.20000005,
+		},
+		ParallaxBK = 
+		{
+			float RealitiveSpeed = -0.5,
+			CogPath PlayerObject = 
+			{
+				string Path = ":/Camera",
+				bool ErrorOnResolveToNull = false,
+				bool ErrorOnPathCantCompute = false,
+				bool ErrorOnDirectLinkFail = false,
+				bool UpdateCogOnPathChange = true,
+				bool UpdatePathOnCogChange = true,
+				bool UpdateCogOnInitialize = true,
+				bool ResolvedNullErrorOccurred = false,
+				uint ResolvedCog = 2,
+				CogPathPreference PathPreference0 = CogRelative,
+				CogPathPreference PathPreference1 = SpaceRelative,
+				CogPathPreference PathPreference2 = Absolute,
+			},
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 30,
+		},
+		Named = 
+		{
+			string Name = "BK_Dunes",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0, -7.65745831, -8],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		MultiSprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+		},
+		TileMap = 
+		{
+			string SourceName = "5a6f50c7f532bf8e:SuperEasyLevel_TileMap06",
+			string PaletteName = "5adec5206634cee9:Backgrounds",
+			float UnitsPerTile = 1,
+			float MeshThickness = 1.20000005,
+		},
+		ParallaxBK = 
+		{
+			float RealitiveSpeed = -0.100000001,
+			CogPath PlayerObject = 
+			{
+				string Path = ":/Camera",
+				bool ErrorOnResolveToNull = false,
+				bool ErrorOnPathCantCompute = false,
+				bool ErrorOnDirectLinkFail = false,
+				bool UpdateCogOnPathChange = true,
+				bool UpdatePathOnCogChange = true,
+				bool UpdateCogOnInitialize = true,
+				bool ResolvedNullErrorOccurred = false,
+				uint ResolvedCog = 2,
+				CogPathPreference PathPreference0 = CogRelative,
+				CogPathPreference PathPreference1 = SpaceRelative,
+				CogPathPreference PathPreference2 = Absolute,
+			},
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 31,
+		},
+		Named = 
+		{
+			string Name = "BK_DistantSpikes",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0, -7.62645769, -11],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		MultiSprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+		},
+		TileMap = 
+		{
+			string SourceName = "5a6f50c7f5342b29:SuperEasyLevel_TileMap07",
+			string PaletteName = "5adec5206634cee9:Backgrounds",
+			float UnitsPerTile = 1,
+			float MeshThickness = 1.20000005,
+		},
+		ParallaxBK = 
+		{
+			float RealitiveSpeed = -0.899999976,
+			CogPath PlayerObject = 
+			{
+				string Path = ":/Camera",
+				bool ErrorOnResolveToNull = false,
+				bool ErrorOnPathCantCompute = false,
+				bool ErrorOnDirectLinkFail = false,
+				bool UpdateCogOnPathChange = true,
+				bool UpdatePathOnCogChange = true,
+				bool UpdateCogOnInitialize = true,
+				bool ResolvedNullErrorOccurred = false,
+				uint ResolvedCog = 2,
+				CogPathPreference PathPreference0 = CogRelative,
+				CogPathPreference PathPreference1 = SpaceRelative,
+				CogPathPreference PathPreference2 = Absolute,
+			},
 		},
 	},
 },
