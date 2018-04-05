@@ -104,7 +104,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-2.00232506, -2.86481619, 49],
+			Vec3 Translation = [-0.433044791, -0.544437468, 50.0009995],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -116,7 +116,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 24.6596889,
+			float Size = 8.20850468,
 		},
 		EditorCameraController = 
 		{
@@ -124,7 +124,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-2.00232506, -2.86481619, -0.999999464],
+			Vec3 LookTarget = [-0.433044791, -0.544437468, 0.00100055081],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -169,7 +169,6 @@ Level =
 		},
 		FollowCamera = 
 		{
-			float Speed = 200,
 		},
 		RigidBody = 
 		{
@@ -461,7 +460,7 @@ Level =
 		Transform = 
 		{
 			Vec3 Translation = [4, -3.5, 0],
-			Vec3 Scale = [1.27878726, 1.27878726, 1.27878726],
+			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Named = 
@@ -478,7 +477,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0.0771055296, -2.93955684, 0],
+			Vec3 Translation = [-6.11032867, 1.52739727, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -489,38 +488,38 @@ Level =
 	},
 	ArchetypeInstance = 
 	{
-		string Name = "5a6b16d85c5f7f29:Ring_Jump",
+		string Name = "5a6dd21876b9f23f:Mechamaid",
 		LinkId = 
 		{
 			uint Id = 11,
 		},
 		Transform = 
 		{
-			Vec3 Translation = [2.16571069, -2.97695756, 0],
-			Vec3 Scale = [1, 1, 3],
+			Vec3 Translation = [-0.168334961, 0.361157298, 0],
+			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Named = 
 		{
-			string Name = "Ring_Jump",
+			string Name = "Mechamaid",
 		},
 	},
 	ArchetypeInstance = 
 	{
-		string Name = "5addae58d1201ae5:EnemyCrab",
+		string Name = "5a4ab8280d2d96bb:BallistaSnail",
 		LinkId = 
 		{
 			uint Id = 12,
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-7.67796659, -3.10945654, 0],
-			Vec3 Scale = [0.998837471, 0.998837471, 0.998837471],
+			Vec3 Translation = [-8.27384758, -3.05081987, 0],
+			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Named = 
 		{
-			string Name = "EnemyCrab",
+			string Name = "Snail",
 		},
 	},
 },

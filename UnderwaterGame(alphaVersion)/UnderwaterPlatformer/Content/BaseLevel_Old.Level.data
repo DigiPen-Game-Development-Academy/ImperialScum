@@ -119,7 +119,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-30.7835159, -6.00558996, 49.9999962],
+			Vec3 Translation = [-12.6645088, -0.507634759, 49.9999962],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -131,7 +131,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 36.3483047,
+			float Size = 49.0650749,
 		},
 		EditorCameraController = 
 		{
@@ -139,7 +139,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-30.7835159, -6.00558996, -2.39811152e-06],
+			Vec3 LookTarget = [-12.6645088, -0.507634759, -2.39811152e-06],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -184,7 +184,6 @@ Level =
 		},
 		FollowCamera = 
 		{
-			float Speed = 200,
 		},
 		RigidBody = 
 		{
@@ -1462,9 +1461,9 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, -5, 2.17496421e-09],
+			Vec3 Translation = [-4.0884161, -0.0508670807, 2.17496421e-09],
 			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [-0, 0, 1, -4.37113883e-08],
+			Quat Rotation = [0, 0, 0.174410865, 0.984672964],
 		},
 		Spin = 
 		{
@@ -1550,7 +1549,7 @@ Level =
 	},
 	ArchetypeInstance = 
 	{
-		string Name = "5a73521cb51bc2cb:Upgrade",
+		string Name = "5a0dcb6aed987e01:Upgrade",
 		LinkId = 
 		{
 			uint Id = 36,

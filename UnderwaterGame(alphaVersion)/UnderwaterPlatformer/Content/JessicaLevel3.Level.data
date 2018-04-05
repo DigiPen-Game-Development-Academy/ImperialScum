@@ -1346,6 +1346,9 @@ Level =
 			int Blocks = 25,
 			int Speed = 70,
 		},
+		ButtonLogicMM = 
+		{
+		},
 		Hierarchy = 
 		{
 			Cog = 
@@ -1431,6 +1434,9 @@ Level =
 		GoToLevel = 
 		{
 			string LevelToLoad = "5a4b96cbd2c3c651:LoadingLevel",
+		},
+		ButtonLogicMM = 
+		{
 		},
 		Hierarchy = 
 		{

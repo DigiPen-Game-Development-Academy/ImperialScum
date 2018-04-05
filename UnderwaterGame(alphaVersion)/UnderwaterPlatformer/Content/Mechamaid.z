@@ -16,6 +16,14 @@ class Mechamaid : ZilchComponent
     [Property]
     var Active:Boolean = true;
     
+    //Sprites
+    [Property]
+    var AimUp:SpriteSource;
+    [Property]
+    var AimMid:SpriteSource;
+    [Property]
+    var AimDown:SpriteSource;
+    
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
@@ -23,21 +31,42 @@ class Mechamaid : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-        
-            
+
             var pos = this.Owner.Transform.WorldTranslation;
             
             var target = this.Space.FindObjectByName("Player").Transform.WorldTranslation;
             
+            //Mousey Stuff
+            var toPlayer = target - pos;
+            var angle = Math.Angle2D(toPlayer);
+            
+            Console.WriteLine(angle);
+            
+            //Aimy Sprites
+            if (angle > 0.5 && angle < 2.5)
+            {
+                this.Owner.Sprite.SpriteSource = this.AimUp;
+            }
+            else if (angle > -2.5 && angle < -0.5)
+            {
+                this.Owner.Sprite.SpriteSource = this.AimDown;
+            }
+            else
+            {
+                this.Owner.Sprite.SpriteSource = this.AimMid;
+            }
+            
             if(Math.Length(target - pos) >= this.CirclingDistance)
             {
-                this.Owner.RigidBody.Velocity = Math.Normalize(target - this.Owner.Transform.WorldTranslation)
+                this.Owner.RigidBody.Velocity
+                    = Math.Normalize(target - this.Owner.Transform.WorldTranslation)
                 * this.Speed; 
             }
             else
             {
                 this.Owner.RigidBody.Velocity = Real3.Zero;
-                this.Owner.Transform.WorldTranslation = target - Math.RotateVector((target - pos), Real3.ZAxis,
+                this.Owner.Transform.WorldTranslation
+                    = target - Math.RotateVector((target - pos), Real3.ZAxis,
                 -1 * event.Dt);
             }
             
@@ -46,8 +75,5 @@ class Mechamaid : ZilchComponent
         {
             this.Owner.RigidBody.Velocity = Real3.Zero;
         }
-        
-        
-        
     }
 }

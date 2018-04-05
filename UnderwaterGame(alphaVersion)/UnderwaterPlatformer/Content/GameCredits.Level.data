@@ -69,7 +69,7 @@ Level =
 		},
 		ForwardRenderer = 
 		{
-			Vec4 ClearColor = [0.155000001, 0.155000001, 0.155000001, 1],
+			Vec4 ClearColor = [0.21960786, 0.21960786, 0.21960786, 1],
 			bool DrawNonVisible = false,
 			bool DrawDebugObjects = true,
 			bool DrawEditorIcons = true,
@@ -104,7 +104,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-38.2142754, 1.27621174, 50],
+			Vec3 Translation = [2.91510439, 0.251574129, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -116,7 +116,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 22.3130436,
+			float Size = 40.6570625,
 		},
 		EditorCameraController = 
 		{
@@ -124,7 +124,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-38.2142754, 1.27621174, -1.44944454e-06],
+			Vec3 LookTarget = [2.91510439, 0.251574129, 3.48377569e-07],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -350,7 +350,7 @@ Level =
 							string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
 							string FontName = "5a0f895ab1e49e19:DraftGameFont",
 							uint FontSize = 30,
-							string Text = "Jacob Burke",
+							string Text = "Jessica Alberg",
 							TextAlign Align = Left,
 							float PixelsPerUnit = 64,
 							bool Smoothing = true,
@@ -1463,13 +1463,13 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [13.7947407, 2, 0],
+			Vec3 Translation = [10.4281254, 13.6880484, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Sprite = 
 		{
-			bool Visible = true,
+			bool Visible = false,
 			bool VisibilityCulling = true,
 			bool VisibilityEvents = true,
 			bool CastShadows = false,
@@ -1477,27 +1477,13 @@ Level =
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a0f88e21749b85e:CoolButton",
+			string SpriteSource = "5aa3e60ab7db8531:Particle_Bubble",
 			bool RenderMask = false,
 			bool FlipX = false,
 			bool FlipY = false,
 			bool AnimationActive = true,
 			float AnimationSpeed = 1,
 			uint StartFrame = 0,
-		},
-		Reactive = 
-		{
-			bool Active = true,
-			bool CaptureMouse = false,
-		},
-		Area = 
-		{
-			Vec2 Size = [6.95064497, 2.97646546],
-			Location Origin = Center,
-		},
-		GoToLevel = 
-		{
-			string LevelToLoad = "5a4b96cbd2c3c651:LoadingLevel",
 		},
 		AnimationGraph = 
 		{
@@ -1522,15 +1508,15 @@ Level =
 				},
 				Named = 
 				{
-					string Name = "SpriteText",
+					string Name = "PlayGame",
 				},
 				Transform = 
 				{
-					Vec3 Translation = [-4.04426146, 0.64697063, 0],
+					Vec3 Translation = [0, -11.8179836, 0],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
-				SpriteText = 
+				Sprite = 
 				{
 					bool Visible = true,
 					bool VisibilityCulling = true,
@@ -1540,19 +1526,74 @@ Level =
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string FontName = "5a0f895ab1e49e19:DraftGameFont",
-					uint FontSize = 16,
-					string Text = "Continue Playing",
-					TextAlign Align = Left,
-					float PixelsPerUnit = 16,
-					bool Smoothing = false,
+					string SpriteSource = "5a0f88e21749b85e:CoolButton",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				Reactive = 
+				{
+					bool Active = true,
+					bool CaptureMouse = false,
+				},
+				Area = 
+				{
+					Vec2 Size = [6.95064497, 2.97646546],
+					Location Origin = Center,
+				},
+				GoToLevel = 
+				{
+					string LevelToLoad = "5a4b96cbd2c3c651:LoadingLevel",
+				},
+				ButtonLogicMM = 
+				{
+				},
+				Hierarchy = 
+				{
+					Cog = 
+					{
+						LinkId = 
+						{
+							uint Id = 40,
+						},
+						Named = 
+						{
+							string Name = "SpriteText",
+						},
+						Transform = 
+						{
+							Vec3 Translation = [-4.04426146, 0.64697063, 0],
+							Vec3 Scale = [1, 1, 1],
+							Quat Rotation = [0, 0, 0, 1],
+						},
+						SpriteText = 
+						{
+							bool Visible = true,
+							bool VisibilityCulling = true,
+							bool VisibilityEvents = true,
+							bool CastShadows = false,
+							Vec4 Color = [1, 1, 1, 1],
+							BlendMode BlendMode = Alpha,
+							SpriteGeometryMode GeometryMode = ZPlane,
+							string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+							string FontName = "5a0f895ab1e49e19:DraftGameFont",
+							uint FontSize = 16,
+							string Text = "Continue Playing",
+							TextAlign Align = Left,
+							float PixelsPerUnit = 16,
+							bool Smoothing = false,
+						},
+					},
 				},
 			},
 			Cog = 
 			{
 				LinkId = 
 				{
-					uint Id = 40,
+					uint Id = 41,
 				},
 				Named = 
 				{
@@ -1560,7 +1601,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [0, -4, 0],
+					Vec3 Translation = [0, -15.4486694, 0],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -1595,13 +1636,16 @@ Level =
 				ExitGame = 
 				{
 				},
+				ButtonLogicMM = 
+				{
+				},
 				Hierarchy = 
 				{
 					Cog = 
 					{
 						LinkId = 
 						{
-							uint Id = 41,
+							uint Id = 42,
 						},
 						Named = 
 						{
@@ -1639,7 +1683,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 42,
+			uint Id = 43,
 		},
 		Named = 
 		{

@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-19.5344067, -43.455101, -1],
+		Vec3 Translation = [0.0218140483, 0, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -51,14 +51,16 @@ Cog =
 	BulletLogic = 
 	{
 		float Speed = 15,
-		float VelocityY = 3,
+		float Gravity = 13.8278952,
+		float DegreesOffset = 0,
+		bool DestroyOnTile = false,
 	},
 	IgnoreSpaceEffects = 
 	{
 		bool Drag = true,
 		bool Flow = true,
 		bool Force = true,
-		bool Gravity = false,
+		bool Gravity = true,
 		bool Thrust = true,
 		bool Vortex = true,
 		bool Wind = true,
