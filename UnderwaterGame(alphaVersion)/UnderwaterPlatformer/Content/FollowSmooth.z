@@ -1,0 +1,43 @@
+//Jeff
+//Makes an Object smoothly follow behind its parent
+
+class FollowSmooth : ZilchComponent
+{
+    [Property] var FollowSpeed : Real = 5;
+    
+    // We will get these from our parent when we initialize
+    var Target : Cog;
+    var LocalOffset : Real3;
+    
+    function Initialize(init : CogInitializer)
+    {
+        if (this.Owner.Parent != null)
+        {
+            this.Target = this.Owner.Parent;
+            this.LocalOffset = this.Owner.Transform.Translation;
+            this.Owner.DetachRelative();
+            var tail = this.Owner.FindChildByName("Enemy_MechamaidTail()");
+            if (tail != null && tail.MechaTailPoint != null)
+            {
+                tail.MechaTailPoint.Target = this.Owner;
+            }
+        }
+        
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        if (this.Target == null) return;
+        
+        // Actual follow code
+        this.Owner.Transform.WorldTranslation = Math.Lerp(
+            this.Owner.Transform.WorldTranslation,
+            this.Target.Transform.TransformPoint(this.LocalOffset),
+            this.FollowSpeed * event.Dt);
+        
+        // Optional extra rotation stuff
+        this.Owner.Sprite.FlipX = this.Target.Sprite.FlipX;
+        this.Owner.Transform.WorldRotation = this.Target.Transform.WorldRotation;
+    }
+}

@@ -8,9 +8,13 @@ class EnemyShoot : ZilchComponent
     
     [Property]
     var TimeBetweenShots : Real;
+    [Property]
+    var Shooting : Boolean = false;
     
     [Property]
     var Range : Real;
+    
+    [Property] var ShootAnimationSpeed : Real = 20;
     
     var TimeTillNextShot:Real = 0;
         
@@ -34,12 +38,14 @@ class EnemyShoot : ZilchComponent
 
         if(this.TimeTillNextShot < 0.3 && Math.Length(target - pos) <= this.Range)
         {
-        this.Owner.Sprite.AnimationSpeed = 1;
+            this.Owner.Sprite.AnimationSpeed = this.ShootAnimationSpeed;
+            this.Shooting = true;
         }
         else
         {
             this.Owner.Sprite.AnimationSpeed = 0;
-            this.Owner.Sprite.CurrentFrame = 6;
+            this.Owner.Sprite.CurrentFrame = 0;
+            this.Shooting = false;
         }
     }
     

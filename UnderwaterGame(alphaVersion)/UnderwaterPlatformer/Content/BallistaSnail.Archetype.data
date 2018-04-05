@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [21.6455193, -4.03917646, 0],
+		Vec3 Translation = [-2.30865645, -2.93776846, 0.000598907471],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -281,7 +281,9 @@ Cog =
 			{
 				string Bullet = "5abffaed2bf2cc56:Bullet",
 				float TimeBetweenShots = 3,
+				bool Shooting = false,
 				float Range = 30,
+				float ShootAnimationSpeed = 1,
 			},
 			Hierarchy = 
 			{
