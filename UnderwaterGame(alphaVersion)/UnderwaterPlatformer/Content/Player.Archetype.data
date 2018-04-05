@@ -251,7 +251,7 @@ Cog =
 				SystemSpace SystemSpace = WorldSpace,
 				uint DrawOrder = 0,
 				Vec4 Tint = [1, 1, 1, 1],
-				float WarmUpTime = 0,
+				float WarmUpTime = 1,
 				ParticleGeometry GeometryMode = Billboarded,
 				ParticleRenderMode RenderMode = Additive,
 				ParticleSortMode SortMode = Youngest,
@@ -299,6 +299,9 @@ Cog =
 				Vec4 Color2 = [0.111375034, 0.201555073, 0.675000012, 1],
 				Vec4 Color3 = [0, 0.369999886, 1, 0.5],
 				Vec4 Color4 = [0.0643999577, 0.0940241069, 0.805000007, 1],
+			},
+			NoParticlesInBaseLevel = 
+			{
 			},
 			Hierarchy = 
 			{
