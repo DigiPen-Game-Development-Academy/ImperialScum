@@ -53,9 +53,9 @@ class EnemyShoot : ZilchComponent
         if (player == null) return;
         
         var pos = this.Owner.Transform.WorldTranslation;
-            
+        
         var target = this.Space.FindObjectByName("Player").Transform.WorldTranslation;
-            
+        
         if(Math.Length(target - pos) >= this.Range)
         {
             return;
@@ -63,18 +63,20 @@ class EnemyShoot : ZilchComponent
         var bullet = this.Space.CreateAtPosition(this.Bullet, this.Owner.Transform.WorldTranslation);
         if(bullet.BulletLogic == null) return;
         bullet.BulletLogic.Target = player;
+        bullet.RigidBody.Velocity = target - pos;
     }
     
 }
 class BulletLogic : ZilchComponent
 {
     var Target : Cog = null;
-    var VelocitySet : Boolean = false;
-    var Velocity : Real3;
     [Property] var Speed : Real = 1;
     
     [Property]
-    var VelocityY:Real = 1;
+    var Gravity : Real = 0;
+    
+    [Property]
+    var DegreesOffset : Real = 0;
     
     [Property]
     var DestroyOnTile:Boolean = false;
@@ -83,63 +85,32 @@ class BulletLogic : ZilchComponent
     
     function Initialize(init : CogInitializer)
     {
-        
-        
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
         Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
-        var player = this.Space.FindObjectByName("Player");
-
-        if(player == null)
-        return;
-        
-        
-        this.Owner.Orientation.LookAtPointWithUp(player.Transform.WorldTranslation, Real3(0,0,1));
-        
-        var velocity = this.Owner.RigidBody.Velocity;
-            velocity.Y = this.VelocityY;
-            this.Owner.RigidBody.Velocity= velocity;
-        
-        if(this.Owner.Transform.Translation.X <= player.Transform.Translation.X)
-        {
-            this.Owner.Transform.Rotation.Y == 180;
-        }
-        else if(this.Owner.Transform.Translation.X >= player.Transform.Translation.X)
-        {
-           this.Owner.Transform.Rotation.Y == -180;
-        }
     }
 
     function OnCollisionStarted(event : CollisionEvent)
     {
-        if(event.OtherObject.PlayerController != null || event.OtherObject.Name == ("DefaultTile")
-        && this.DestroyOnTile == false)
-        this.Owner.Destroy();
+        if(event.OtherObject.PlayerController != null || event.OtherObject.Name == ("DefaultTile") && this.DestroyOnTile == false)
+            this.Owner.Destroy();
     }
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-        if(this.VelocitySet)
-        {
-            this.Owner.Transform.Translation +=
-                this.Velocity * event.Dt;
-        }
-        else if (this.Target != null)
-        {
-            this.VelocitySet = true;
-            this.Velocity = this.Target.Transform.Translation -
-                this.Owner.Transform.Translation;
-            this.Velocity = Math.Normalize(this.Velocity);
-            this.Velocity *= this.Speed;
-        }
+        var velocity = this.Owner.RigidBody.Velocity;
+        velocity = this.Speed * Math.Normalize(velocity);
+        velocity.Y -= this.Gravity * event.Dt;
+        this.Owner.RigidBody.Velocity = velocity;
         
         if(this.Timer > 0)
         {
-        this.Timer -= event.Dt;
+            this.Timer -= event.Dt;
         }
         else this.Owner.Destroy();
         
+        //Visual Angle
+        var angle = Math.Angle2D(this.Owner.RigidBody.Velocity);
+        angle += Math.ToRadians(this.DegreesOffset);
+        this.Owner.Transform.SetEulerAnglesXYZ(0,0,angle);
     }
 }
-
-    
-    

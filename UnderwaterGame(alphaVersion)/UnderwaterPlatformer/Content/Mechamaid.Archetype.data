@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [1.05086601, 11.3620186, 0],
+		Vec3 Translation = [-8.43343925, -2.32777071, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -83,6 +83,9 @@ Cog =
 		float StopFollowing = 15,
 		float Speed = 3,
 		bool Active = true,
+		string AimUp = "5a687f2426614aa8:Enemy_MechamaidAimUp",
+		string AimMid = "5a687f232640cc14:Enemy_MechamaidAimMid",
+		string AimDown = "5a687f2126b29eec:Enemy_MechamaidAimDown",
 	},
 	EnemyHealth = 
 	{
