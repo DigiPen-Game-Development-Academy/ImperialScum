@@ -64,7 +64,7 @@ class PlayerController : ZilchComponent
             this.ThrowAnimation = SpriteSource.Copper_Throw1;
             this.WalkingAnimation = SpriteSource.Copper_Walk1;
         }
-        if(AdvInventory.PlayerInventory["ArmorVolcano"] >= 1)
+        else if(AdvInventory.PlayerInventory["ArmorVolcano"] >= 1)
         {
             this.IdleAnimation = SpriteSource.Volcano_Stand;
             this.StabAnimation = SpriteSource.Volcano_StabStright;
