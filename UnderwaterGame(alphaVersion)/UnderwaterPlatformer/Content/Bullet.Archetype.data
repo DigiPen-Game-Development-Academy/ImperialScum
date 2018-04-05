@@ -42,7 +42,7 @@ Cog =
 		bool Asleep = false,
 		bool Kinematic = false,
 		bool RotationLocked = false,
-		bool Mode2D = true,
+		bool Mode2D = false,
 		bool AllowSleep = true,
 		bool Inherit2DMode = true,
 		Vec3 Velocity = [0, 0, 0],
@@ -87,6 +87,9 @@ Cog =
 		Vec3 UpVector = [0, 0, 1],
 		Vec3 ForwardVector = [1, 0, 0],
 		OrientationBases DefaultBases = ForwardXUpZ,
+	},
+	Shockwave = 
+	{
 	},
 	Hierarchy = 
 	{

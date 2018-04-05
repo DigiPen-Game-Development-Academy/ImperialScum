@@ -8,9 +8,13 @@ Cog =
 	{
 		string Name = "BasicParticleEffect",
 	},
+	Archetyped = 
+	{
+		string Name = "5a13d482d9254829:Shockwave",
+	},
 	Transform = 
 	{
-		Vec3 Translation = [1.17877197, -0.023267746, 0],
+		Vec3 Translation = [-18.9232883, 6.92005253, -0.000999450684],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -38,8 +42,8 @@ Cog =
 	SphericalParticleEmitter = 
 	{
 		bool Active = true,
-		uint EmitCount = 100,
-		float EmitRate = 5,
+		uint EmitCount = 5,
+		float EmitRate = 50,
 		float EmitVariance = 0,
 		float Size = 0.5,
 		float SizeVariance = 0.100000001,
@@ -50,8 +54,8 @@ Cog =
 		bool RandomSpin = true,
 		float Fill = 1,
 		float EmitterVelocityPercent = 0,
-		Vec3 StartVelocity = [-1, 2, 0],
-		Vec3 RandomVelocity = [0, 0, 0],
+		Vec3 StartVelocity = [-0.5, 2, 0],
+		Vec3 RandomVelocity = [0.5, 0.5, 0],
 		Vec3 TangentVelocity = [0, 0, 0],
 		Vec3 EmitterSize = [0, 0, 0],
 		bool FastMovingEmitter = false,
@@ -72,6 +76,10 @@ Cog =
 		Vec4 Color2 = [1, 1, 1, 1],
 		Vec4 Color3 = [1, 1, 1, 1],
 		Vec4 Color4 = [1, 1, 1, 0],
+	},
+	ParticleDespawner = 
+	{
+		float Lifetime = 1.29999995,
 	},
 	Hierarchy = 
 	{
@@ -115,8 +123,8 @@ Cog =
 			SphericalParticleEmitter = 
 			{
 				bool Active = true,
-				uint EmitCount = 0,
-				float EmitRate = 5,
+				uint EmitCount = 5,
+				float EmitRate = 50,
 				float EmitVariance = 0,
 				float Size = 0.5,
 				float SizeVariance = 0.100000001,
@@ -127,8 +135,8 @@ Cog =
 				bool RandomSpin = true,
 				float Fill = 1,
 				float EmitterVelocityPercent = 0,
-				Vec3 StartVelocity = [-1, -2, 0],
-				Vec3 RandomVelocity = [0, 0, 0],
+				Vec3 StartVelocity = [-0.5, -2, 0],
+				Vec3 RandomVelocity = [0.5, 0.5, 0],
 				Vec3 TangentVelocity = [0, 0, 0],
 				Vec3 EmitterSize = [0, 0, 0],
 				bool FastMovingEmitter = false,
