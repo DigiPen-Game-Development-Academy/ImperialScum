@@ -47,21 +47,24 @@ class Health : ZilchComponent
         
         if(AdvInventory.PlayerInventory["ArmorCopper"] >= 1)
         {
-            Health.MaxHealth = Health.MaxHealth + 20;
+            Health.MaxHealth = Health.MaxHealth + 10;
         }
-        
         if(AdvInventory.PlayerInventory["Ring_Health"] >= 1)
         {
-           Health.MaxHealth = Health.MaxHealth + 10;
+           Health.MaxHealth = Health.MaxHealth + 5;
         }
-        
-        Health.CurrentHealth = Health.MaxHealth;
     }
 
     function OnCollisionStarted(event : CollisionEvent)
     {
         if(event.OtherObject.BulletLogic != null && Health.CurrentHealth > 0 && this.Invincibility == false)
         {
+            //This is Elena's script for purple armor working/////////////////////////
+            if(AdvInventory.PlayerInventory["Inv_ArmorVolvano"] >= 1)
+            {
+               Health.CurrentHealth -= 1.5; 
+            }
+            //This is the end of my script//////////////////
             Health.CurrentHealth -= 2;
             this.Owner.SoundEmitter.PlayCue(this.HitSoundThing);
             this.Owner.Sprite.Color = this.DamageColor;

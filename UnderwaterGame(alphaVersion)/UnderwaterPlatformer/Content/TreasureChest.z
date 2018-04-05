@@ -99,7 +99,7 @@ class TreasureChest : ZilchComponent
         }
         
         var random = new Random();
-        var randomLoot = random.DieRoll(2);
+        var randomLoot = random.DieRoll(3);
         
         if(randomLoot == 1)
         {
@@ -116,6 +116,15 @@ class TreasureChest : ZilchComponent
             this.RareItem();
             
             this.Space.CreateAtPosition(Archetype.Ring_Jump,
+                this.Owner.Transform.Translation);
+            
+        }
+        else if(randomLoot == 3)
+        {
+            if(AdvInventory.PlayerInventory["ArmorVolcano"] >= 1)
+             this.RareItem();
+            
+            this.Space.CreateAtPosition(Archetype.VolcanoArmor,
                 this.Owner.Transform.Translation);
             
         }
