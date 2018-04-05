@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-9.07543182, 28.3749752, 0],
+		Vec3 Translation = [-2.08752918, 1.40835011, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -104,7 +104,7 @@ Cog =
 			},
 			ShopSlot = 
 			{
-				int Cost = 2,
+				int Cost = 1,
 				string Name = "Food",
 				bool OnlyBuyOnce = false,
 			},
@@ -201,7 +201,7 @@ Cog =
 			},
 			ShopSlot = 
 			{
-				int Cost = 100,
+				int Cost = 65,
 				string Name = "ArmorVolcano",
 				bool OnlyBuyOnce = true,
 			},
@@ -1028,8 +1028,7 @@ Cog =
 				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
 				string FontName = "5a0f895ab1e49e19:DraftGameFont",
 				uint FontSize = 16,
-				string Text = "2
-",
+				string Text = "1",
 				TextAlign Align = Left,
 				float PixelsPerUnit = 32,
 				bool Smoothing = false,
@@ -1395,7 +1394,7 @@ Cog =
 				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
 				string FontName = "5a0f895ab1e49e19:DraftGameFont",
 				uint FontSize = 16,
-				string Text = "100",
+				string Text = "65",
 				TextAlign Align = Left,
 				float PixelsPerUnit = 32,
 				bool Smoothing = false,
