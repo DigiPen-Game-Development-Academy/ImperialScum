@@ -1,0 +1,18 @@
+//Sam
+//Make the Mechamaid's tail point towards Jeff's following object
+
+class MechaTailPoint : ZilchComponent
+{
+    var Target : Cog;
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        if (this.Target == null) return;
+        
+        //similar to mouse; Use target instead of player or mouse
+    }
+}

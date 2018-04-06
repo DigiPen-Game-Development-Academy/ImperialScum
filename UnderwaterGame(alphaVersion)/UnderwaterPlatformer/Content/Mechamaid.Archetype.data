@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-8.43343925, -2.32777071, 0],
+		Vec3 Translation = [0.933992386, -0.186922669, 0.000598907471],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -28,13 +28,13 @@ Cog =
 		BlendMode BlendMode = Alpha,
 		SpriteGeometryMode GeometryMode = ZPlane,
 		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-		string SpriteSource = "5a51ae79d92e4081:Enemy_MechamaidAim()",
+		string SpriteSource = "5a687f2126b29eec:Enemy_MechamaidAimDown",
 		bool RenderMask = false,
 		bool FlipX = false,
 		bool FlipY = false,
 		bool AnimationActive = true,
-		float AnimationSpeed = 0,
-		uint StartFrame = 1,
+		float AnimationSpeed = 1,
+		uint StartFrame = 0,
 	},
 	CapsuleCollider = 
 	{
@@ -86,6 +86,12 @@ Cog =
 		string AimUp = "5a687f2426614aa8:Enemy_MechamaidAimUp",
 		string AimMid = "5a687f232640cc14:Enemy_MechamaidAimMid",
 		string AimDown = "5a687f2126b29eec:Enemy_MechamaidAimDown",
+		string FireUp = "5a68a49d57e8eeb8:Enemy_Mechamaid_ShootUp()",
+		string FireMid = "5a68a4bc52cc75d3:Enemy_Mechamaid_ShootStraight()",
+		string FireDown = "5a68bb50b9b4d61b:Enemy_Mechamaid_ShootDown()",
+		string UseUp = "",
+		string UseMid = "",
+		string UseDown = "",
 	},
 	EnemyHealth = 
 	{
@@ -97,7 +103,9 @@ Cog =
 	{
 		string Bullet = "5a68735abfd50348:Bullet(mechamaid)",
 		float TimeBetweenShots = 2,
+		bool Shooting = false,
 		float Range = 15,
+		float ShootAnimationSpeed = 20,
 	},
 	FlipXToPlayer = 
 	{
@@ -112,13 +120,70 @@ Cog =
 			},
 			Named = 
 			{
+				string Name = "TailPoint",
+			},
+			EditorFlags = 
+			{
+				bool Locked = false,
+				bool Hidden = true,
+			},
+			Transform = 
+			{
+				Vec3 Translation = [0.0209625065, -0.949836314, 0.00100056117],
+				Vec3 Scale = [0.400000006, 0.400000006, 0.400000006],
+				Quat Rotation = [0, 0, 0, 1],
+			},
+			Sprite = 
+			{
+				bool Visible = true,
+				bool VisibilityCulling = true,
+				bool VisibilityEvents = true,
+				bool CastShadows = false,
+				Vec4 Color = [1, 1, 1, 1],
+				BlendMode BlendMode = Alpha,
+				SpriteGeometryMode GeometryMode = ZPlane,
+				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+				string SpriteSource = "5275aa4d802dd6dc:Square",
+				bool RenderMask = false,
+				bool FlipX = false,
+				bool FlipY = false,
+				bool AnimationActive = true,
+				float AnimationSpeed = 1,
+				uint StartFrame = 0,
+			},
+			MechaTailPoint = 
+			{
+			},
+			Orientation = 
+			{
+				Vec3 GlobalUp = [0, 1, 0],
+				Vec3 UpVector = [0, 0, 1],
+				Vec3 ForwardVector = [1, 0, 0],
+				OrientationBases DefaultBases = ForwardXUpZ,
+			},
+			FollowSmooth = 
+			{
+				float FollowSpeed = 5,
+			},
+			Hierarchy = 
+			{
+			},
+		},
+		Cog = 
+		{
+			LinkId = 
+			{
+				uint Id = 3,
+			},
+			Named = 
+			{
 				string Name = "Enemy_MechamaidTail()",
 			},
 			Transform = 
 			{
-				Vec3 Translation = [-0.26470983, -0.905594766, 5.50411642e-07],
+				Vec3 Translation = [0.00441372395, -0.688285351, 5.50411642e-07],
 				Vec3 Scale = [1, 1, 1],
-				Quat Rotation = [-0.41265133, -0.910889089, 3.9816225e-08, 1.80375626e-08],
+				Quat Rotation = [0, 0, 0, 1],
 			},
 			Sprite = 
 			{
@@ -137,6 +202,9 @@ Cog =
 				bool AnimationActive = true,
 				float AnimationSpeed = 1,
 				uint StartFrame = 0,
+			},
+			Hierarchy = 
+			{
 			},
 		},
 	},

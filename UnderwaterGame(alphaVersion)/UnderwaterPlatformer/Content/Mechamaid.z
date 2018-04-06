@@ -23,6 +23,19 @@ class Mechamaid : ZilchComponent
     var AimMid:SpriteSource;
     [Property]
     var AimDown:SpriteSource;
+    [Property]
+    var FireUp:SpriteSource;
+    [Property]
+    var FireMid:SpriteSource;
+    [Property]
+    var FireDown:SpriteSource;
+    //Sprites to Use
+    [Property]
+    var UseUp:SpriteSource;
+    [Property]
+    var UseMid:SpriteSource;
+    [Property]
+    var UseDown:SpriteSource;
     
     function Initialize(init : CogInitializer)
     {
@@ -32,28 +45,39 @@ class Mechamaid : ZilchComponent
     function OnLogicUpdate(event : UpdateEvent)
     {
 
-            var pos = this.Owner.Transform.WorldTranslation;
-            
-            var target = this.Space.FindObjectByName("Player").Transform.WorldTranslation;
-            
-            //Mousey Stuff
-            var toPlayer = target - pos;
-            var angle = Math.Angle2D(toPlayer);
-            
-            Console.WriteLine(angle);
-            
-            //Aimy Sprites
-            if (angle > 0.5 && angle < 2.5)
+            //Set Sprites Accordingly
+            if(this.Owner.EnemyShoot.Shooting == true)
             {
-                this.Owner.Sprite.SpriteSource = this.AimUp;
-            }
-            else if (angle > -2.5 && angle < -0.5)
-            {
-                this.Owner.Sprite.SpriteSource = this.AimDown;
+                this.UseUp = this.FireUp;
+                this.UseMid = this.FireMid;
+                this.UseDown = this.FireDown;
             }
             else
             {
-                this.Owner.Sprite.SpriteSource = this.AimMid;
+                this.UseUp = this.AimUp;
+                this.UseMid = this.AimMid;
+                this.UseDown = this.AimDown;
+            }
+        
+            //Aimy Sprites
+            var pos = this.Owner.Transform.WorldTranslation;
+            
+            var target = this.Space.FindObjectByName("Player").Transform.WorldTranslation;
+        
+            var toPlayer = target - pos;
+            var angle = Math.Angle2D(toPlayer);
+
+            if (angle > 0.5 && angle < 2.5)
+            {
+                this.Owner.Sprite.SpriteSource = this.UseUp;
+            }
+            else if (angle > -2.5 && angle < -0.5)
+            {
+                this.Owner.Sprite.SpriteSource = this.UseDown;
+            }
+            else
+            {
+                this.Owner.Sprite.SpriteSource = this.UseMid;
             }
             
             if(Math.Length(target - pos) >= this.CirclingDistance)
