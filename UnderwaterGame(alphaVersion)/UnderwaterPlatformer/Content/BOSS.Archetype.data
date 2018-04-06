@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [8.81347561, -36.7959518, 0],
+		Vec3 Translation = [8.51115036, -36.7959518, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0.00113470259, 0.999999344],
 	},
@@ -46,7 +46,7 @@ Cog =
 	},
 	BoxCollider = 
 	{
-		bool Ghost = false,
+		bool Ghost = true,
 		bool SendsMessages = true,
 		bool Seamless = true,
 		string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
@@ -58,7 +58,7 @@ Cog =
 	{
 		bool Static = false,
 		bool Asleep = false,
-		bool Kinematic = false,
+		bool Kinematic = true,
 		bool RotationLocked = true,
 		bool Mode2D = true,
 		bool AllowSleep = true,
@@ -160,7 +160,9 @@ Cog =
 			{
 				string Bullet = "5a5eecab5b63f8a4:Laser",
 				float TimeBetweenShots = 0.300000012,
+				bool Shooting = false,
 				float Range = 50,
+				float ShootAnimationSpeed = 20,
 			},
 		},
 	},

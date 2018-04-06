@@ -61,6 +61,7 @@ class Health : ZilchComponent
     {
         if(event.OtherObject.BulletLogic != null && Health.CurrentHealth > 0 && this.Invincibility == false)
         {
+            Health.CurrentHealth -= 2;
             this.Owner.SoundEmitter.PlayCue(this.HitSoundThing);
             this.Owner.Sprite.Color = this.DamageColor;
             this.Invincibility = true;
@@ -153,8 +154,8 @@ class Health : ZilchComponent
         if(this.Timer3 > 0) this.Timer3 -= event.Dt;
         if(Health.CurrentHealth <= 5 && this.Timer3 <= 0)
         {
-            this.Owner.Sprite.Color = this.DamageColor;
-            this.Timer3 += 1;
+            //this.Owner.Sprite.Color = this.DamageColor;
+            //this.Timer3 += 1;
         }
         
         if(this.Owner.Sprite.Color == this.DamageColor)

@@ -8,8 +8,12 @@ class Shockwave : ZilchComponent
 
     function OnCollisionStarted(event : CollisionEvent)
     {
+        if(event.OtherObject.Name == ("DefaultTile"))
+        {
         var position = this.Owner.Transform.Translation;
         this.Space.CreateAtPosition(Archetype.Shockwave, position);
+        
+        }
     }
 
     function OnLogicUpdate(event : UpdateEvent)

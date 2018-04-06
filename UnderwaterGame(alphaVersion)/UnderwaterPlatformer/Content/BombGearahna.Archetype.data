@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-3.94561267, 4.76790762, 0],
+		Vec3 Translation = [0, 0, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -36,17 +36,13 @@ Cog =
 		float AnimationSpeed = 1,
 		uint StartFrame = 0,
 	},
-	FollowCamera = 
-	{
-		float Speed = 5,
-	},
 	RigidBody = 
 	{
 		bool Static = false,
 		bool Asleep = false,
 		bool Kinematic = false,
 		bool RotationLocked = true,
-		bool Mode2D = true,
+		bool Mode2D = false,
 		bool AllowSleep = true,
 		bool Inherit2DMode = true,
 		Vec3 Velocity = [0, 0, 0],
@@ -67,5 +63,9 @@ Cog =
 		Enum StaticState = Static,
 		float Timer = 1,
 		Vec4 RedColor = [1, 0, 0, 1],
+	},
+	Follow = 
+	{
+		float Speed = 5,
 	},
 },
