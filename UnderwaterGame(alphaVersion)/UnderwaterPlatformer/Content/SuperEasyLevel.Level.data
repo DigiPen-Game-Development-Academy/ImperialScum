@@ -104,7 +104,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [5.84121609, -8.37135506, 50],
+			Vec3 Translation = [8.0510006, -8.37135506, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -124,7 +124,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [5.84121609, -8.37135506, 3.82534694e-07],
+			Vec3 LookTarget = [8.0510006, -8.37135506, 3.82534694e-07],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -1165,6 +1165,24 @@ Level =
 		Transform = 
 		{
 			Vec3 Translation = [2.60984945, -13.0355005, 0],
+			Vec3 Scale = [1, 1, 5],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Gear",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5ab3fb4d720d2a14:Gear",
+		LinkId = 
+		{
+			uint Id = 37,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [21.57547, -13.254056, 0],
 			Vec3 Scale = [1, 1, 5],
 			Quat Rotation = [0, 0, 0, 1],
 		},
