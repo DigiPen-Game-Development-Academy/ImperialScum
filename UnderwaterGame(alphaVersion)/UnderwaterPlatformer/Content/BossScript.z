@@ -4,7 +4,7 @@
 
 class BossScript : ZilchComponent
 {
-    var Timer:Real = 10;
+    var Timer:Real = 5;
     
     [Property]
     var Fish:Archetype;

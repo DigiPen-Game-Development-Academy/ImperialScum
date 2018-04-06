@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [8.51115036, -36.7959518, 0],
+		Vec3 Translation = [8.5, -37, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0.00113470259, 0.999999344],
 	},
@@ -63,7 +63,7 @@ Cog =
 		bool Mode2D = true,
 		bool AllowSleep = true,
 		bool Inherit2DMode = true,
-		Vec3 Velocity = [0, 0, 0],
+		Vec3 Velocity = [531.249939, -2312.49976, 0],
 		Vec3 AngularVelocity = [0, 0, 0],
 	},
 	IgnoreSpaceEffects = 
@@ -91,7 +91,7 @@ Cog =
 	},
 	EnemyHealth = 
 	{
-		float Health = 50,
+		float Health = 75,
 		Vec4 DamageColor = [1, 0, 0, 1],
 		Vec4 RegularColor = [1, 1, 1, 1],
 	},
@@ -149,7 +149,7 @@ Cog =
 				bool SendsMessages = true,
 				bool Seamless = true,
 				string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
-				string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+				string SerializedGroupName = "5a5d96483f925cc6:Boss",
 				Vec3 Offset = [0, 0, 0],
 				float Radius = 2,
 				float Height = 2,

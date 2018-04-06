@@ -19,7 +19,10 @@ class EnemySpawner : ZilchComponent
   
     function OnLogicUpdate(event : UpdateEvent)
     {
-    
+        var boss = this.Space.FindObjectByName("BOSS");
+        
+        if(boss != null)
+        {
         this.Timer -= event.Dt; 
        
         if (this.Timer <= 0)
@@ -31,5 +34,8 @@ class EnemySpawner : ZilchComponent
             this.Timer += this.Waittime;
 
         }
+        
+        }
+        else this.Owner.Destroy;
     }
 }
