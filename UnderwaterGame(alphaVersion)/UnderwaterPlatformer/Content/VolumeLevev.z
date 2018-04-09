@@ -1,5 +1,7 @@
 class VolumeLevev : ZilchComponent
 {
+    
+   [Static] var SaveVolume : Integer;
     var Timer : Real = 0.3;
     function Initialize(init : CogInitializer)
     {
