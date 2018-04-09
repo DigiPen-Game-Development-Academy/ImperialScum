@@ -22,6 +22,7 @@ class BossKeyDropping : ZilchComponent
         {
             this.Space.CreateAtPosition(this.Key, spawnPosition);
             Console.WriteLine(spawnPosition);
+            VolumeLevev.SaveVolume = VolumeControls.Number1;
             BossKeyDropping.BossDead = true;
         }
     }

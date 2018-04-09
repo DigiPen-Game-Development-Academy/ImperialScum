@@ -15,12 +15,13 @@ class FollowSmooth : ZilchComponent
         {
             this.Target = this.Owner.Parent;
             this.LocalOffset = this.Owner.Transform.Translation;
-            this.Owner.DetachRelative();
             var tail = this.Owner.FindChildByName("Enemy_MechamaidTail()");
             if (tail != null && tail.MechaTailPoint != null)
             {
                 tail.MechaTailPoint.Target = this.Owner;
             }
+            
+            this.Owner.DetachRelative();
         }
         
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
