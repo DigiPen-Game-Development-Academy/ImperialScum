@@ -34,6 +34,9 @@ class PlayerMovement : ZilchComponent
     var SoundToPlay5 : SoundCue = SoundCue.ErrorSound;
     [Static] var PlayErrorSound : Boolean = false;
     
+    var CheckOnce : Boolean = false;
+    var CheckTwice : Boolean = false;
+    
     var Swimming:Boolean = false;
     
     var DoubleJump:Boolean = true;
@@ -42,13 +45,7 @@ class PlayerMovement : ZilchComponent
     
     function Initialize(init : CogInitializer)
     {
-        if(AdvInventory.PlayerInventory["Ring_Speed"] > 0)
-        this.Speed = this.Speed * 1.2;
         
-        if(AdvInventory.PlayerInventory["Ring_Jump"] > 0)
-        {
-        this.JumpSpeed = this.JumpSpeed * 1.2;
-        }
             
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
         Zero.Connect(this.Owner, Events.CollisionPersisted, this.OnCollisionPersisted);
@@ -137,6 +134,19 @@ class PlayerMovement : ZilchComponent
             this.Owner.SoundEmitter.PlayCue(this.SoundToPlay5);
         }
         
+        //Initializes ring effects.
+        if(AdvInventory.PlayerInventory["Ring_Speed"] > 0 && this.CheckOnce == false)
+        {
+            Console.WriteLine("Speed Activated");
+            this.CheckOnce = true;
+            this.Speed = this.Speed * 1.2;
+        }
+        if(AdvInventory.PlayerInventory["Ring_Jump"] > 0 && this.CheckTwice == false)
+        {
+            Console.WriteLine("Jump Activated");
+            this.CheckTwice = true;
+            this.JumpSpeed = this.JumpSpeed * 1.2;
+        }
         
     
         if(Zero.Keyboard.KeyIsPressed(this.KeyUp) && this.Owner.GroundChecker.Grounded == true
