@@ -9,6 +9,7 @@ class ShopSlot : ZilchComponent
     [Property]
     var OnlyBuyOnce:Boolean = true;
     
+    
     var SoundToPlay : SoundCue = SoundCue.GearPickup;
     
     function Initialize(init : CogInitializer)
@@ -25,6 +26,10 @@ class ShopSlot : ZilchComponent
            AdvInventory.PlayerInventory["Gears"] -= this.Cost;
            AdvInventory.PlayerInventory[this.Name] += 1;
           Resources.PlaySound = true;
+       }
+       else if(event.HitObject == this.Owner && AdvInventory.PlayerInventory["Gears"] < this.Cost)
+       {
+           PlayerMovement.PlayErrorSound = true;
        }
     }
 
