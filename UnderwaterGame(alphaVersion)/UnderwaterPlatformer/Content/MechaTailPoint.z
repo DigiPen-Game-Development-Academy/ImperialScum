@@ -20,6 +20,6 @@ class MechaTailPoint : ZilchComponent
         var target = this.Target.Transform.WorldTranslation;
         var toPlayer = target - pos;
         var angle = Math.Angle2D(toPlayer);
-        this.Owner.Transform.SetEulerAnglesXYZ(0,0,angle + Math.Pi / -2.0);
+        this.Owner.Transform.SetEulerAnglesXYZ(0,0,angle + Math.Pi / 2.0);
     }
 }

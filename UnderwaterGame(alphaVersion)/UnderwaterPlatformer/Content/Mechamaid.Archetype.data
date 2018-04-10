@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0.933992386, -0.186922669, 0.000598907471],
+		Vec3 Translation = [0.322442591, -0.186922669, 0.000598907471],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -120,63 +120,6 @@ Cog =
 			},
 			Named = 
 			{
-				string Name = "TailPoint",
-			},
-			EditorFlags = 
-			{
-				bool Locked = false,
-				bool Hidden = true,
-			},
-			Transform = 
-			{
-				Vec3 Translation = [0.0209625065, -0.949836314, 0.00100056117],
-				Vec3 Scale = [0.400000006, 0.400000006, 0.400000006],
-				Quat Rotation = [0, 0, 0, 1],
-			},
-			Sprite = 
-			{
-				bool Visible = true,
-				bool VisibilityCulling = true,
-				bool VisibilityEvents = true,
-				bool CastShadows = false,
-				Vec4 Color = [1, 1, 1, 1],
-				BlendMode BlendMode = Alpha,
-				SpriteGeometryMode GeometryMode = ZPlane,
-				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-				string SpriteSource = "5275aa4d802dd6dc:Square",
-				bool RenderMask = false,
-				bool FlipX = false,
-				bool FlipY = false,
-				bool AnimationActive = true,
-				float AnimationSpeed = 1,
-				uint StartFrame = 0,
-			},
-			MechaTailPoint = 
-			{
-			},
-			Orientation = 
-			{
-				Vec3 GlobalUp = [0, 1, 0],
-				Vec3 UpVector = [0, 0, 1],
-				Vec3 ForwardVector = [1, 0, 0],
-				OrientationBases DefaultBases = ForwardXUpZ,
-			},
-			FollowSmooth = 
-			{
-				float FollowSpeed = 5,
-			},
-			Hierarchy = 
-			{
-			},
-		},
-		Cog = 
-		{
-			LinkId = 
-			{
-				uint Id = 3,
-			},
-			Named = 
-			{
 				string Name = "Enemy_MechamaidTail()",
 			},
 			Transform = 
@@ -202,6 +145,56 @@ Cog =
 				bool AnimationActive = true,
 				float AnimationSpeed = 1,
 				uint StartFrame = 0,
+			},
+			MechaTailPoint = 
+			{
+			},
+			Hierarchy = 
+			{
+			},
+		},
+		Cog = 
+		{
+			LinkId = 
+			{
+				uint Id = 3,
+			},
+			Named = 
+			{
+				string Name = "TailPoint",
+			},
+			EditorFlags = 
+			{
+				bool Locked = false,
+				bool Hidden = true,
+			},
+			Transform = 
+			{
+				Vec3 Translation = [0.0209625065, -0.949836314, 0.00100056117],
+				Vec3 Scale = [0.400000006, 0.400000006, 0.400000006],
+				Quat Rotation = [0, 0, 0, 1],
+			},
+			Sprite = 
+			{
+				bool Visible = false,
+				bool VisibilityCulling = true,
+				bool VisibilityEvents = true,
+				bool CastShadows = false,
+				Vec4 Color = [1, 1, 1, 1],
+				BlendMode BlendMode = Alpha,
+				SpriteGeometryMode GeometryMode = ZPlane,
+				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+				string SpriteSource = "5275aa4d802dd6dc:Square",
+				bool RenderMask = false,
+				bool FlipX = false,
+				bool FlipY = true,
+				bool AnimationActive = true,
+				float AnimationSpeed = 1,
+				uint StartFrame = 0,
+			},
+			FollowSmooth = 
+			{
+				float FollowSpeed = 5,
 			},
 			Hierarchy = 
 			{
