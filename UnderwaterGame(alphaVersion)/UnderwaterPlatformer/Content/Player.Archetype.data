@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0, -28.2012157, 0],
+		Vec3 Translation = [-6.11032867, -1.98724067, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -335,7 +335,7 @@ Cog =
 				ParticleRenderMode RenderMode = Blended,
 				ParticleSortMode SortMode = Youngest,
 				ParticleAnimation ParticleAnimation = Single,
-				string Texture = "5274db4c2e7c11f9:Circle",
+				string Texture = "5a0f809016faceca:VolcanoSmoke",
 				float VelocityScale = 1,
 				float LengthScale = 1,
 				float MaxParticleSize = 100,
@@ -345,7 +345,7 @@ Cog =
 			{
 				bool Active = true,
 				uint EmitCount = 0,
-				float EmitRate = 40,
+				float EmitRate = 5,
 				float EmitVariance = 15,
 				float Size = 0.5,
 				float SizeVariance = 0.200000003,
@@ -381,12 +381,12 @@ Cog =
 			},
 			WalkingParticleController = 
 			{
-				Vec4 Level1Color = [0, 0.970000029, 1, 1],
-				Vec4 Level2Color = [0, 0.710000038, 0.00709982449, 1],
-				Vec4 Level3Color = [1, 0.839999914, 0, 1],
-				Vec4 Level4Color = [0.779999971, 0.15990001, 0.717989743, 1],
-				Vec4 Level5Color = [1, 0.300000072, 0, 1],
-				Vec4 Level6Color = [1, 0.0599999428, 0, 1],
+				Vec4 Level1Color = [0.156862736, 0.61176455, 0.709803939, 1],
+				Vec4 Level2Color = [0.235294044, 0.592156887, 0.396078467, 1],
+				Vec4 Level3Color = [0.952941179, 0.658823609, 0.254902005, 1],
+				Vec4 Level4Color = [0.788235247, 0.211764693, 0.80392158, 1],
+				Vec4 Level5Color = [0.75686276, 0.247058854, 0.0901960731, 1],
+				Vec4 Level6Color = [0.811764717, 0.0941176862, 0.0941176414, 1],
 			},
 		},
 	},
