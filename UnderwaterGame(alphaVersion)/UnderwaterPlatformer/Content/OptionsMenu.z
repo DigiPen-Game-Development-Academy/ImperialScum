@@ -1,5 +1,6 @@
 class OptionsMenu : ZilchComponent
 {
+    //Author - Jessica
     [Property] var ArcheTypeToLoad : Archetype;
     var Bla : Boolean = false;
     function Initialize(init : CogInitializer)
@@ -15,7 +16,6 @@ class OptionsMenu : ZilchComponent
             var position = Real3(0,0,0.1);
             
         this.Space.CreateAtPosition(this.ArcheTypeToLoad, position);
-        Console.WriteLine("grr");
         this.Bla = false;
         }
     }

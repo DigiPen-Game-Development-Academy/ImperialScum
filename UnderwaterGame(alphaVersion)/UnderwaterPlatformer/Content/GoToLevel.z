@@ -1,5 +1,7 @@
 class GoToLevel : ZilchComponent
 {
+    //Author - Jessica
+    
     [Property] var LevelToLoad : Level;
     function Initialize(init : CogInitializer)
     {

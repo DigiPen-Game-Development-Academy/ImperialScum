@@ -1,5 +1,6 @@
 class TutorialDoor : ZilchComponent
 {
+    //Author - Jessica
     [Static] var DoorOpen : Boolean = true;
      var Position : Real3;
      var DontDoRightNowGodDamnIt : Boolean = false;

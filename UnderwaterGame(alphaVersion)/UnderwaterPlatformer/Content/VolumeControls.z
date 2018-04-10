@@ -1,4 +1,4 @@
-// Made by jessica for the volume option in settings - CURRENTLY NON FUNCTIONAL!
+// Made by Jessica for the volume option in settings
 class VolumeControls : ZilchComponent
 {
     [Static] var Number1 : Integer = 5;
