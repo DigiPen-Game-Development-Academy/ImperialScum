@@ -2,7 +2,7 @@ class LagControl : ZilchComponent
 {
     var Active:Boolean = false;
 
-    var ActiveRange:Real = 10;
+    var ActiveRange:Real = 20;
     
     function Initialize(init : CogInitializer)
     {
