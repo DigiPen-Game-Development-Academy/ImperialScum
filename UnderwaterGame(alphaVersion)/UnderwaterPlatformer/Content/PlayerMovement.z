@@ -31,6 +31,8 @@ class PlayerMovement : ZilchComponent
     [Property] var SoundToPlay2 : SoundCue = SoundCue.SpearStab;
     var SoundToPlay3 : SoundCue = SoundCue.SelectItem;
     var SoundToPlay4 : SoundCue = SoundCue.LegendarySound;
+    var SoundToPlay5 : SoundCue = SoundCue.ErrorSound;
+    [Static] var PlayErrorSound : Boolean = false;
     
     var Swimming:Boolean = false;
     
@@ -104,6 +106,7 @@ class PlayerMovement : ZilchComponent
         
         var velocity = direction * this.Speed;
         
+        //Play 90% of sounds - Jessica
         if(Resources.PlaySound == true) 
         {
             Resources.PlaySound = false;
@@ -127,6 +130,14 @@ class PlayerMovement : ZilchComponent
             Resources.PlayLegendarySound = false;
             this.Owner.SoundEmitter.PlayCue(this.SoundToPlay4);
         }
+        
+        if(PlayerMovement.PlayErrorSound == true) 
+        {
+            PlayerMovement.PlayErrorSound = false;
+            this.Owner.SoundEmitter.PlayCue(this.SoundToPlay5);
+        }
+        
+        
     
         if(Zero.Keyboard.KeyIsPressed(this.KeyUp) && this.Owner.GroundChecker.Grounded == true
         && this.Swimming == false && this.TouchingGround == true)
