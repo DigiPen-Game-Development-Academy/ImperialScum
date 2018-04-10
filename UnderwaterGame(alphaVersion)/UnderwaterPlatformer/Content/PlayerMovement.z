@@ -150,6 +150,7 @@ class PlayerMovement : ZilchComponent
         
     
         if(Zero.Keyboard.KeyIsPressed(this.KeyUp) && this.Owner.GroundChecker.Grounded == true
+        && this.Swimming == false && this.TouchingGround == true || Zero.Keyboard.KeyIsPressed(Keys.Space) && this.Owner.GroundChecker.Grounded == true
         && this.Swimming == false && this.TouchingGround == true)
         {
             this.Owner.RigidBody.Velocity =
@@ -159,6 +160,7 @@ class PlayerMovement : ZilchComponent
         }
         
         else if(Zero.Keyboard.KeyIsPressed(this.KeyUp) && this.DoubleJump == true
+         && this.Swimming == false || Zero.Keyboard.KeyIsPressed(Keys.Space) && this.DoubleJump == true
          && this.Swimming == false)
         {
             this.Owner.RigidBody.Velocity =
@@ -180,7 +182,7 @@ class PlayerMovement : ZilchComponent
             direction += Real3.XAxis;
         }
         
-        if(Zero.Keyboard.KeyIsDown(this.KeyUp) && this.Swimming == true)
+        if(Zero.Keyboard.KeyIsDown(this.KeyUp) && this.Swimming == true || Zero.Keyboard.KeyIsDown(Keys.Space) && this.Swimming == true)
         {
             direction += Real3.YAxis;
         }

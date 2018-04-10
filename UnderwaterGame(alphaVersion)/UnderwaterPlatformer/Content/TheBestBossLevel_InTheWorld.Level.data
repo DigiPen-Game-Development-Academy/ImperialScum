@@ -1393,7 +1393,7 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "Sprite",
+			string Name = "EnemySpawner",
 		},
 		Transform = 
 		{
@@ -1421,7 +1421,7 @@ Level =
 		},
 		EnemySpawner = 
 		{
-			float Waittime = 15,
+			float Waittime = 30,
 			string WhatToSpawn = "5addae58d1201ae5:EnemyCrab",
 		},
 	},
@@ -1433,7 +1433,7 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "Sprite",
+			string Name = "EnemySpawner",
 		},
 		Transform = 
 		{
@@ -1461,7 +1461,7 @@ Level =
 		},
 		EnemySpawner = 
 		{
-			float Waittime = 30,
+			float Waittime = 40,
 			string WhatToSpawn = "5add57b20981d06d:GearShark",
 		},
 	},
@@ -1473,7 +1473,7 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "Sprite",
+			string Name = "EnemySpawner",
 		},
 		Transform = 
 		{
@@ -1501,7 +1501,7 @@ Level =
 		},
 		EnemySpawner = 
 		{
-			float Waittime = 50,
+			float Waittime = 60,
 			string WhatToSpawn = "5a6dd21876b9f23f:Mechamaid",
 		},
 	},
@@ -1513,7 +1513,7 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "Sprite",
+			string Name = "EnemySpawner",
 		},
 		Transform = 
 		{
@@ -1541,7 +1541,7 @@ Level =
 		},
 		EnemySpawner = 
 		{
-			float Waittime = 35,
+			float Waittime = 40,
 			string WhatToSpawn = "5a4ab8280d2d96bb:BallistaSnail",
 		},
 	},
