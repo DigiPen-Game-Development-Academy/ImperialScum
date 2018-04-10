@@ -56,7 +56,8 @@ var DeleteString:Boolean = false;
         }
          if(this.Owner.Sprite.SpriteSource.Name == ("Inv_Ring_Speed"))
         {
-             InventoryButton.WhatItem = "    Ring of Speed";
+             InventoryButton.WhatItem = "    Speed Ring";
+             
         }
          if(this.Owner.Sprite.SpriteSource.Name == ("Inv_Ring_Health"))
         {
