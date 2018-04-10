@@ -1241,7 +1241,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 33.2871552,
+			float Size = 54.8812256,
 		},
 		EditorCameraController = 
 		{
@@ -1339,7 +1339,7 @@ Level =
 		},
 		GoToLevel = 
 		{
-			string LevelToLoad = "5a4b96cbd2c3c651:LoadingLevel",
+			string LevelToLoad = "5aacabcb5a25325f:BeginningLevel",
 		},
 		TextScroll = 
 		{
@@ -1433,7 +1433,7 @@ Level =
 		},
 		GoToLevel = 
 		{
-			string LevelToLoad = "5a4b96cbd2c3c651:LoadingLevel",
+			string LevelToLoad = "5aacabcb5a25325f:BeginningLevel",
 		},
 		ButtonLogicMM = 
 		{
