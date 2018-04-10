@@ -4,7 +4,6 @@
 
 class EnemyController : ZilchComponent
 {
-    
     var Active:Boolean = false;
     
     var LosingPlayer:Boolean = false;
@@ -13,14 +12,13 @@ class EnemyController : ZilchComponent
     
     var Jump:Boolean = false;
     
-    [Property]
-    var JumpTime:Real = 1;
+    
+    var JumpTime:Real = 0;
     
     [Property]
     var Speed:Integer = 3;
     
-    [Property]
-    var JumpSpeed:Integer = 7;
+    var JumpSpeed:Integer = 10;
     
     var Timer:Integer = 20;
     
@@ -73,30 +71,24 @@ class EnemyController : ZilchComponent
         }
         
         
-        if(this.Jump == true && this.Active == true)
+        if(this.Jump == true && this.Active == true && this.JumpTime <= 0)
         {
+                this.Jump = false;
                 var velocity = this.Owner.RigidBody.Velocity;
-            
-                velocity.Y = this.JumpSpeed;
+                
+                Console.WriteLine("WHEN IT HAPPEN");
+                
+                velocity.Y += this.JumpSpeed;
                 this.Owner.RigidBody.Velocity = velocity;
-                this.JumpTime -= event.Dt;
+                
+                this.JumpTime += 1;
         }
         
-        if(this.JumpTime <= 0)
+        if(this.JumpTime > 0)
         {
-            this.Jump = false;
-            this.JumpTime += 1;
+            this.JumpTime -= event.Dt;
         }
-        
-        //Cute crab hops
-        var velocity = this.Owner.RigidBody.Velocity;
-        if (velocity.Y == 0)
-            {
-                velocity.Y = this.JumpSpeed;
-                this.Owner.RigidBody.Velocity = velocity;
-                this.JumpTime -= event.Dt;
-            }
-        
+
         //Sam's CRAYZY TIMER
         this.Timer -= 1;
         
