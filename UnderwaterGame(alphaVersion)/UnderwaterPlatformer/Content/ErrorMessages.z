@@ -1,5 +1,7 @@
 class ErrorMessages : ZilchComponent
 {
+    //Author - Jessica - SCRIPT NOT IN USE!
+    
     /* This is the code you would put in the shop script... if I could find it and AdvInventory doesn't work for it before y'all start saying I should put it in there
     else if(-presumably something goes here-)
         {

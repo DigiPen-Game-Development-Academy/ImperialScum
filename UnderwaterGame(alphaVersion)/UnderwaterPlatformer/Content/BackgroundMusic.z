@@ -60,7 +60,6 @@ class BackgroundMusic : ZilchComponent
         //Mute Music by pressing M
         if (Zero.Keyboard.KeyIsPressed(Keys.M) && this.KeyWasPressed == false)
         {
-            Console.WriteLine("Sound Muted");
             this.KeyWasPressed = true;
             BackgroundMusic.StayMuted = true;
             BackgroundMusic.MuteText = true;
@@ -81,7 +80,6 @@ class BackgroundMusic : ZilchComponent
                 BackgroundMusic.StayMuted = false;
                 this.KeyWasPressed = false;
                 BackgroundMusic.UnmuteText = true;
-                Console.WriteLine("Sound Unmuted");
                 
                 this.Owner.SoundEmitter.Volume = VolumeControls.Number1;
                 this.Timer += 0.25;

@@ -1,0 +1,19 @@
+class SwordBoomerangParticleEffect : ZilchComponent
+{
+    [Property]
+    var Speed : Real = 5;
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+         var target = this.Space.FindObjectByName("SwordBoomerang");
+      this.Owner.Transform.Translation = Math.Normalize(target.Transform.Translation - this.Owner.Transform.Translation)
+       * this.Speed; 
+
+    
+        }
+
+}

@@ -1,6 +1,6 @@
 class Muted : ZilchComponent
 {
-    
+    //Author - Jessica
     
     function Initialize(init : CogInitializer)
     {
