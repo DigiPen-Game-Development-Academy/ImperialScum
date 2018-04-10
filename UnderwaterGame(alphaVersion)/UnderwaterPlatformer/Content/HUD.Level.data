@@ -119,7 +119,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 26.9274616,
+			float Size = 73.1963959,
 		},
 		EditorCameraController = 
 		{
@@ -821,30 +821,34 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "Error Message",
+			string Name = "Sprite",
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-7.27673244, 1.33126736, -7.65162667e-07],
-			Vec3 Scale = [3.90596294, 3.90596294, 3.90596294],
+			Vec3 Translation = [18.5449982, 24.0699692, -7.65162667e-07],
+			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
-		SpriteText = 
+		Sprite = 
 		{
 			bool Visible = false,
 			bool VisibilityCulling = true,
 			bool VisibilityEvents = true,
 			bool CastShadows = false,
-			Vec4 Color = [1, 0, 0, 1],
+			Vec4 Color = [1, 1, 1, 1],
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string FontName = "4e7bac697bec55c5:Verdana",
-			uint FontSize = 30,
-			string Text = "-Error Message-",
-			TextAlign Align = Left,
-			float PixelsPerUnit = 64,
-			bool Smoothing = true,
+			string SpriteSource = "5275aa4d802dd6dc:Square",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		GameTimer = 
+		{
 		},
 	},
 },
