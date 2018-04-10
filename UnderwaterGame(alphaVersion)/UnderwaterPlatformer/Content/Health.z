@@ -210,6 +210,9 @@ class Health : ZilchComponent
             Console.WriteLine("Health Activated");
             this.CheckTwice = true;
            Health.MaxHealth = Health.MaxHealth + 10;
+           
+           //This makes sure you don't start a level without max health
+           Health.CurrentHealth += 10;
         }
         
         if(this.Invincibility == true && this.InvincibilityTimer > 0)
