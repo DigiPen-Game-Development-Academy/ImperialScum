@@ -141,7 +141,7 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [0, -8.75554657, 0],
+				Vec3 Translation = [0, -5.4981699, 0],
 				Vec3 Scale = [1.00000012, 1.00000012, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
@@ -210,96 +210,6 @@ Cog =
 						TextAlign Align = Left,
 						float PixelsPerUnit = 16,
 						bool Smoothing = false,
-					},
-				},
-			},
-		},
-		Cog = 
-		{
-			LinkId = 
-			{
-				uint Id = 6,
-			},
-			Named = 
-			{
-				string Name = "Menu",
-			},
-			Transform = 
-			{
-				Vec3 Translation = [0, -4.23789215, 0],
-				Vec3 Scale = [0.99999994, 0.99999994, 1],
-				Quat Rotation = [0, 0, 0, 1],
-			},
-			Sprite = 
-			{
-				bool Visible = true,
-				bool VisibilityCulling = true,
-				bool VisibilityEvents = true,
-				bool CastShadows = false,
-				Vec4 Color = [1, 1, 1, 1],
-				BlendMode BlendMode = Alpha,
-				SpriteGeometryMode GeometryMode = ZPlane,
-				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-				string SpriteSource = "5a0f88e21749b85e:CoolButton",
-				bool RenderMask = false,
-				bool FlipX = false,
-				bool FlipY = false,
-				bool AnimationActive = true,
-				float AnimationSpeed = 1,
-				uint StartFrame = 0,
-			},
-			Reactive = 
-			{
-				bool Active = true,
-				bool CaptureMouse = false,
-			},
-			Area = 
-			{
-				Vec2 Size = [6.95064497, 2.97646546],
-				Location Origin = Center,
-			},
-			GoToLevel = 
-			{
-				string LevelToLoad = "5a5618f4f348dab3:MainMenu",
-			},
-			Hierarchy = 
-			{
-				Cog = 
-				{
-					LinkId = 
-					{
-						uint Id = 7,
-					},
-					Named = 
-					{
-						string Name = "SpriteText",
-					},
-					Transform = 
-					{
-						Vec3 Translation = [-1.57011032, 0.657339752, 0],
-						Vec3 Scale = [1, 1, 1],
-						Quat Rotation = [0, 0, 0, 1],
-					},
-					SpriteText = 
-					{
-						bool Visible = true,
-						bool VisibilityCulling = true,
-						bool VisibilityEvents = true,
-						bool CastShadows = false,
-						Vec4 Color = [1, 1, 1, 1],
-						BlendMode BlendMode = Alpha,
-						SpriteGeometryMode GeometryMode = ZPlane,
-						string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-						string FontName = "5a0f895ab1e49e19:DraftGameFont",
-						uint FontSize = 16,
-						string Text = "Menu",
-						TextAlign Align = Left,
-						float PixelsPerUnit = 16,
-						bool Smoothing = false,
-					},
-					GoToLevel = 
-					{
-						string LevelToLoad = "5a5618f4f348dab3:MainMenu",
 					},
 				},
 			},

@@ -124,8 +124,13 @@ class PlayerMovement : ZilchComponent
         if(event.OtherObject.Region != null)
         this.Swimming = true;
         
-        if(event.OtherObject.Name == ("DefaultTile") && this.Owner.GroundChecker.Grounded == true)
-        this.TouchingGround = true;
+        if(event.OtherObject.Name == ("DefaultTile")
+        || event.OtherObject.Name == ("CannonBarrel")
+        || event.OtherObject.JaggedRock != null)
+        {
+            if(this.Owner.GroundChecker.Grounded == true)
+            this.TouchingGround = true;
+        }
         
         if(this.Owner.GroundChecker.Grounded == false)
         this.TouchingGround = false;

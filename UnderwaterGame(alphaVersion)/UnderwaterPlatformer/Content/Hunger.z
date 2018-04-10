@@ -53,21 +53,21 @@ class Hunger : ZilchComponent
         }
         
         //God Mode by Jessica. - REMOVED FOR BETA
-        //if(Zero.Keyboard.KeyIsPressed(Keys.G))
-        //{
-        //    Hunger.MaxHunger += 1000;
-        //    Hunger.Hunger += 1000;
-        //    this.GodMode = true;
-        //}
+        if(Zero.Keyboard.KeyIsDown(Keys.G) && Zero.Keyboard.KeyIsDown(Keys.Alt))
+        {
+            Hunger.MaxHunger += 1000;
+            Hunger.Hunger += 1000;
+            this.GodMode = true;
+        }
         
-        //if(Health.CurrentHealth <= 500 && this.GodMode == true)
-        //{
-        //    Health.CurrentHealth += 1000;
-        //}
+        if(Health.CurrentHealth <= 500 && this.GodMode == true)
+        {
+            Health.CurrentHealth += 1000;
+        }
         
-        //if(Hunger.Hunger <= 500 && this.GodMode == true)
-        //{
-        //    Hunger.Hunger += 1000;
-        //}
+        if(Hunger.Hunger <= 500 && this.GodMode == true)
+        {
+            Hunger.Hunger += 1000;
+        }
     }
 }
