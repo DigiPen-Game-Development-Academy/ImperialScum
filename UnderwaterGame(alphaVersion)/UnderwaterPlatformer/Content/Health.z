@@ -27,6 +27,7 @@ class Health : ZilchComponent
     
     var Timer2:Real = 0.2;
     var Timer3:Real = 0;
+    var Timer4:Real;
     
     var Invincibility : Boolean = false;
     var InvincibilityTimer : Real = 0.5;
@@ -250,6 +251,7 @@ class Health : ZilchComponent
              NumOfDeaths.NumberOfDeaths += 1;
             
             var position = this.Owner.Transform.Translation;
+            this.Invincibility = true;
             
             if(AdvInventory.PlayerInventory["Gears"] > 0
             && AdvInventory.PlayerInventory["Gears"] < 4)
@@ -283,4 +285,5 @@ class Health : ZilchComponent
             
         }
     }
+    
 }

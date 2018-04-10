@@ -30,11 +30,21 @@ class Upgrades : ZilchComponent
             AdvInventory.PlayerInventory["Gears"] -= Upgrades.SpearPrice;
         }
         
+        else if(AdvInventory.PlayerInventory["Gears"] < Upgrades.SpearPrice && this.Owner.Name == "Spear 0")
+        {
+            PlayerMovement.PlayErrorSound = true;
+        }
+        
         if(AdvInventory.PlayerInventory["Gears"] >= Upgrades.SwordPrice && Upgrades.SwordUpgrade <= 1
         && this.Owner.Name == "Sword 0")
         {
             Upgrades.SwordUpgrade += 1;
             AdvInventory.PlayerInventory["Gears"] -= Upgrades.SwordPrice;
+        }
+        
+        else if(AdvInventory.PlayerInventory["Gears"] < Upgrades.SwordPrice && this.Owner.Name == "Sword 0")
+        {
+            PlayerMovement.PlayErrorSound = true;
         }
     }
 
