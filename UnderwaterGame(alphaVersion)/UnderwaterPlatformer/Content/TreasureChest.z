@@ -85,14 +85,15 @@ class TreasureChest : ZilchComponent
     
     function RareItem()
     {
-        if(AdvInventory.PlayerInventory["Ring_Regen"] >= 1
-        && AdvInventory.PlayerInventory["Ring_Jump"] >= 1)
+        if(AdvInventory.PlayerInventory["Ring_Regen"] > 0
+        && AdvInventory.PlayerInventory["Ring_Jump"] > 0
+        && AdvInventory.PlayerInventory["ArmorVolcano"] > 0)
         {
             for( var i = 5; i > 0; --i)
             {
                 this.Space.CreateAtPosition(Archetype.Gear,
                 this.Owner.Transform.Translation);
-                
+                Console.WriteLine("SPAWN");
             }
             return;
             
@@ -105,7 +106,7 @@ class TreasureChest : ZilchComponent
         {
             if(AdvInventory.PlayerInventory["Ring_Regen"] >= 1)
             this.RareItem();
-            
+            else
             this.Space.CreateAtPosition(Archetype.Ring_Regen,
                 this.Owner.Transform.Translation);
             
@@ -114,7 +115,7 @@ class TreasureChest : ZilchComponent
         {
             if(AdvInventory.PlayerInventory["Ring_Jump"] >= 1)
             this.RareItem();
-            
+            else
             this.Space.CreateAtPosition(Archetype.Ring_Jump,
                 this.Owner.Transform.Translation);
             
@@ -123,7 +124,7 @@ class TreasureChest : ZilchComponent
         {
             if(AdvInventory.PlayerInventory["ArmorVolcano"] >= 1)
              this.RareItem();
-            
+            else
             this.Space.CreateAtPosition(Archetype.VolcanoArmor,
                 this.Owner.Transform.Translation);
             
