@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0, 0, 0],
+		Vec3 Translation = [19.4812927, -2.12269473, 0],
 		Vec3 Scale = [1, 1, 40],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -46,18 +46,6 @@ Cog =
 		Vec3 Offset = [0, 0, 0],
 		Vec3 Size = [0.5, 0.75, 0.5],
 	},
-	Region = 
-	{
-		bool WakeUpOnEffectChange = false,
-	},
-	ThrustEffect = 
-	{
-		bool Active = true,
-		bool WakeUpOnChange = true,
-		bool LocalSpaceDirection = false,
-		float ForceStrength = 120,
-		Vec3 ForceDirection = [0, 1, 0],
-	},
 	Hierarchy = 
 	{
 		Cog = 
@@ -72,7 +60,7 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [-0.00922775269, -0.347584307, 1.49927057e-10],
+				Vec3 Translation = [-0.00922775269, -0.347584307, 0],
 				Vec3 Scale = [0.277472943, 0.178374305, 0.0122243771],
 				Quat Rotation = [0, 0, 0, 1],
 			},
@@ -142,11 +130,23 @@ Cog =
 				bool Seamless = true,
 				string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
 				string SerializedGroupName = "4e740859314e5515:DefaultGroup",
-				Vec3 Offset = [0, 2, 0],
-				Vec3 Size = [2.5, 3.5, 0.5],
+				Vec3 Offset = [0, -3.5, 0],
+				Vec3 Size = [2, 0.5, 0.5],
 			},
 			Volcano = 
 			{
+			},
+			Region = 
+			{
+				bool WakeUpOnEffectChange = false,
+			},
+			GravityEffect = 
+			{
+				bool Active = true,
+				bool WakeUpOnChange = true,
+				bool LocalSpaceDirection = false,
+				float Strength = 1000,
+				Vec3 Direction = [0, 1, 0],
 			},
 		},
 	},

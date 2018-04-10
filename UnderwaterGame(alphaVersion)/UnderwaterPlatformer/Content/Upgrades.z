@@ -56,7 +56,7 @@ class Upgrades : ZilchComponent
         this.Owner.Sprite.SpriteSource = SpriteSource.PlayerSpear;
         
         Upgrades.SpearPrice = 20;
-        EnemyHealth.SpearDamage = 1;
+        EnemyHealth.SpearDamage = 1.2;
         }
         
         if(Upgrades.SpearUpgrade == 1)
@@ -65,7 +65,7 @@ class Upgrades : ZilchComponent
         this.Owner.Sprite.SpriteSource = SpriteSource.Weap_CopperSpear;
         
         Upgrades.SpearPrice = 40;
-        EnemyHealth.SpearDamage = 1.25;
+        EnemyHealth.SpearDamage = 1.45;
         }
         
         if(Upgrades.SpearUpgrade >= 2)
@@ -73,7 +73,7 @@ class Upgrades : ZilchComponent
         if(this.Owner.Name == "Spear 0")
         this.Owner.Sprite.SpriteSource = SpriteSource.Weap_VolcanoSpear;
         Upgrades.SpearPrice = 0;
-        EnemyHealth.SpearDamage = 1.75;
+        EnemyHealth.SpearDamage = 2;
         }
         
         if(Upgrades.SwordUpgrade == 0)
@@ -82,7 +82,7 @@ class Upgrades : ZilchComponent
         this.Owner.Sprite.SpriteSource = SpriteSource.Weap_SwordBoomerang_Wimpy;
         
         Upgrades.SwordPrice = 25;
-        EnemyHealth.SpearDamage = 1;
+        EnemyHealth.SwordDamage = 1;
         }
         
         if(Upgrades.SwordUpgrade == 1)
