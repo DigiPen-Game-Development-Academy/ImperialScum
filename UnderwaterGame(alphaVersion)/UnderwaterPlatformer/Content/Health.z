@@ -79,46 +79,39 @@ class Health : ZilchComponent
         if(event.OtherObject.EnemyHealth != null && Health.CurrentHealth > 0 && this.Invincibility == false)
         {
             this.GameSession.DispatchEvent(Events.Shake, ShakeEvent(0.4,0.8,0.001, Ease.Linear, 7));
-             //This is Elena's script for purple armor working/////////////////////////
+             //This is Elena's script for armor working/////////////////////////
             if(AdvInventory.PlayerInventory["ArmorVolcano"] >= 1)
-            {
-               Health.CurrentHealth -= 1;
-            }
-            else
-            {
-                Health.CurrentHealth -= 2;
-            }
-            //This is the end of my script//////////////////
-            //This is Elena's script for copper armor working/////////////////////////
-            if(AdvInventory.PlayerInventory["ArmorCopper"] >= 1)
             {
                Health.CurrentHealth -= 1.5;
             }
-            else
+            else if(AdvInventory.PlayerInventory["ArmorCopper"] >= 1)
             {
-                Health.CurrentHealth -= 2;
+               Health.CurrentHealth -= 1.75;
             }
+           /* else if(AdvInventory.PlayerInventory["ArmorCopper"] >=1 && ["ArmorVolcano"] >=1)
+            {
+                Health.CurrentHealth -= 1;
+            }*/
+            else{Health.CurrentHealth -= 2;}
+
             //This is the end of my script//////////////////
             if(event.OtherObject.Name == ("BOSS"))
             {
+           //This is Elena's script for armor working/////////////////////////
             if(AdvInventory.PlayerInventory["ArmorVolcano"] >= 1)
             {
-               Health.CurrentHealth -= 1.8;
+               Health.CurrentHealth -= 2.25;
             }
-            else
+            else if(AdvInventory.PlayerInventory["ArmorCopper"] >= 1)
             {
-                Health.CurrentHealth -= 3;
+               Health.CurrentHealth -= 2.5;
             }
-           
-            if(AdvInventory.PlayerInventory["ArmorCopper"] >= 1)
+           /* else if(AdvInventory.PlayerInventory["ArmorCopper" >=1 &&"ArmorVolcano"] >=1)
             {
-               Health.CurrentHealth -= 2.2;
-            }
-            else
-            {
-                Health.CurrentHealth -= 3;
-            }
-    
+                Health.CurrentHealth -= 1.5;
+            }*/
+            else{Health.CurrentHealth -= 3;}
+            //This is the end of my script//////////////////
             }
             this.Owner.Sprite.Color = this.DamageColor;
             this.Owner.SoundEmitter.PlayCue(this.HitSoundThing);
@@ -131,25 +124,20 @@ class Health : ZilchComponent
             this.Owner.Sprite.Color = this.DamageColor;
             this.Owner.SoundEmitter.PlayCue(this.HitSoundThing);
             this.Invincibility = true;
-            //This is Elena's script for purple armor working/////////////////////////
+          //This is Elena's script for armor working/////////////////////////
             if(AdvInventory.PlayerInventory["ArmorVolcano"] >= 1)
             {
-               Health.CurrentHealth -= 0.5;
+               Health.CurrentHealth -= 1.30;
             }
-            else
+            else if(AdvInventory.PlayerInventory["ArmorCopper"] >= 1)
+            {
+               Health.CurrentHealth -= 1.70;
+            }
+           /* else if(AdvInventory.PlayerInventory["ArmorCopper" >=1 && "ArmorVolcano"] >=1)
             {
                 Health.CurrentHealth -= 1;
-            }
-            //This is the end of my script//////////////////
-            //This is Elena's script for copper armor working/////////////////////////
-            if(AdvInventory.PlayerInventory["ArmorCopper"] >= 1)
-            {
-               Health.CurrentHealth -= 0.75;
-            }
-            else
-            {
-                Health.CurrentHealth -= 1;
-            }
+            }*/
+            else{Health.CurrentHealth -= 2;}
             //This is the end of my script//////////////////
         }
         if(event.OtherObject.Explosion != null && Health.CurrentHealth > 0 && this.Invincibility == false)
@@ -157,25 +145,20 @@ class Health : ZilchComponent
             this.Owner.Sprite.Color = this.DamageColor;
             this.Owner.SoundEmitter.PlayCue(this.HitSoundThing);
             this.Invincibility = true;
-             //This is Elena's script for purple armor working/////////////////////////
+            //This is Elena's script for armor working/////////////////////////
             if(AdvInventory.PlayerInventory["ArmorVolcano"] >= 1)
             {
-               Health.CurrentHealth -= 1;
+               Health.CurrentHealth -= 1.30;
             }
-            else
+            else if(AdvInventory.PlayerInventory["ArmorCopper"] >= 1)
             {
-                Health.CurrentHealth -= 2;
+               Health.CurrentHealth -= 1.70;
             }
-            //This is the end of my script//////////////////
-            //This is Elena's script for copper armor working/////////////////////////
-            if(AdvInventory.PlayerInventory["ArmorCopper"] >= 1)
+           /* else if(AdvInventory.PlayerInventory["ArmorCopper" >=1 && "ArmorVolcano"] >=1)
             {
-               Health.CurrentHealth -= 1.5;
-            }
-            else
-            {
-                Health.CurrentHealth -= 2;
-            }
+                Health.CurrentHealth -= 1;
+            }*/
+            else{Health.CurrentHealth -= 2;}
             //This is the end of my script//////////////////
         }
     }
