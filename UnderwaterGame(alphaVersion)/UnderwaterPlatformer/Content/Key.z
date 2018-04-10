@@ -18,6 +18,10 @@ class Key : ZilchComponent
             KeyPickUp.IsPickedUp = true;
             this.Owner.Destroy();
             
+            this.Space.CreateAtPosition(Archetype.HitExplode, this.Owner.Transform.Translation);
+            this.Space.CreateAtPosition(Archetype.SparkleExplode, this.Owner.Transform.Translation);
+            this.Space.CreateAtPosition(Archetype.KeyText, this.Owner.Transform.Translation);
+            
         }
     }
 
