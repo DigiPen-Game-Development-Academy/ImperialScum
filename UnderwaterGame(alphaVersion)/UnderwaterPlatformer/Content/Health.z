@@ -40,8 +40,8 @@ class Health : ZilchComponent
     var HealthPotion : Archetype = Archetype.HealthPotion;
     var TimesRepeated : Integer = 1;
     
-    var CheckOnce : Boolean = false;
-    var CheckTwice : Boolean = false;
+    [Static] var CheckOnce : Boolean = false;
+    [Static] var CheckTwice : Boolean = false;
         
     function Initialize(init : CogInitializer)
     {
@@ -205,10 +205,10 @@ class Health : ZilchComponent
         
         //Initializes Rings
         
-        if(AdvInventory.PlayerInventory["Ring_Health"] >= 1 && this.CheckTwice == false)
+        if(AdvInventory.PlayerInventory["Ring_Health"] >= 1 && Health.CheckTwice == false)
         {
             Console.WriteLine("Health Activated");
-            this.CheckTwice = true;
+            Health.CheckTwice = true;
            Health.MaxHealth = Health.MaxHealth + 10;
            
            //This makes sure you don't start a level without max health
