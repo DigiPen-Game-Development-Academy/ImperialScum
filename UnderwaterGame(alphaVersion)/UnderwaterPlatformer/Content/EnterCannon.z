@@ -1,6 +1,8 @@
-class GoToBase : ZilchComponent
+//Sam
+//You can go into the cannons to enter the levels
+
+class EnterCannon : ZilchComponent
 {
-    //Author - Jessica
     [Property] var LevelToLoad : Level = Level.BaseLevel;
     
     function Initialize(init : CogInitializer)
@@ -11,9 +13,10 @@ class GoToBase : ZilchComponent
 
     function OnCollisionPersisted(event : CollisionEvent)
     {
-        if(event.OtherObject.PlayerController != null)
+        if(event.OtherObject.PlayerMovement != null)
         {
-        this.Space.LoadLevel(this.LevelToLoad);
+            if(Zero.Keyboard.KeyIsDown(event.OtherObject.PlayerMovement.KeyDown))
+            this.Space.LoadLevel(this.LevelToLoad);
         }
     }
 

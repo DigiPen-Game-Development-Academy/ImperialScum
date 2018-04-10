@@ -1,5 +1,6 @@
 class VolumeLevev : ZilchComponent
 {
+    //Author - Jessica
     
    [Static] var SaveVolume : Integer;
     var Timer : Real = 0.3;
@@ -20,7 +21,6 @@ class VolumeLevev : ZilchComponent
             {
                 this.Owner.SoundEmitter.Volume -= 0.1;
                 this.Timer += 0.3;
-                Console.WriteLine(this.Owner.SoundEmitter.Volume);
             }
             if(this.Owner.SoundEmitter.Volume <= 0)
             {

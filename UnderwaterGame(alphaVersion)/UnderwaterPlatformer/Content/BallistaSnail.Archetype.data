@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0, 0, 0],
+		Vec3 Translation = [-18.3230362, 6.09249496, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -52,7 +52,7 @@ Cog =
 		bool Asleep = false,
 		bool Kinematic = false,
 		bool RotationLocked = true,
-		bool Mode2D = false,
+		bool Mode2D = true,
 		bool AllowSleep = true,
 		bool Inherit2DMode = true,
 		Vec3 Velocity = [0, 0, 0],
@@ -64,7 +64,7 @@ Cog =
 	},
 	EnemyHealth = 
 	{
-		float Health = 6,
+		float Health = 7,
 		Vec4 DamageColor = [1, 0, 0, 1],
 		Vec4 RegularColor = [1, 1, 1, 1],
 	},
@@ -82,6 +82,9 @@ Cog =
 		int Version = 1,
 	},
 	VolumeLevev = 
+	{
+	},
+	LagControl = 
 	{
 	},
 	Hierarchy = 

@@ -27,6 +27,7 @@ class Health : ZilchComponent
     
     var Timer2:Real = 0.2;
     var Timer3:Real = 0;
+    var Timer4:Real;
     
     var Invincibility : Boolean = false;
     var InvincibilityTimer : Real = 0.5;
@@ -39,8 +40,8 @@ class Health : ZilchComponent
     var HealthPotion : Archetype = Archetype.HealthPotion;
     var TimesRepeated : Integer = 1;
     
-    var CheckOnce : Boolean = false;
-    var CheckTwice : Boolean = false;
+    [Static] var CheckOnce : Boolean = false;
+    [Static] var CheckTwice : Boolean = false;
         
     function Initialize(init : CogInitializer)
     {
@@ -204,11 +205,14 @@ class Health : ZilchComponent
         
         //Initializes Rings
         
-        if(AdvInventory.PlayerInventory["Ring_Health"] >= 1 && this.CheckTwice == false)
+        if(AdvInventory.PlayerInventory["Ring_Health"] >= 1 && Health.CheckTwice == false)
         {
             Console.WriteLine("Health Activated");
-            this.CheckTwice = true;
+            Health.CheckTwice = true;
            Health.MaxHealth = Health.MaxHealth + 10;
+           
+           //This makes sure you don't start a level without max health
+           Health.CurrentHealth += 10;
         }
         
         if(this.Invincibility == true && this.InvincibilityTimer > 0)
@@ -239,7 +243,7 @@ class Health : ZilchComponent
             this.Owner.Sprite.Color = this.RegularColor;
         }
         //God Mode By Jessica. Because I am bored of getting killed by gear shark.
-        if(Zero.Keyboard.KeyIsPressed(Keys.G))
+        if(Zero.Keyboard.KeyIsDown(Keys.G) && Zero.Keyboard.KeyIsDown(Keys.Alt))
         {
             Health.CurrentHealth += 1000;
         }
@@ -250,6 +254,7 @@ class Health : ZilchComponent
              NumOfDeaths.NumberOfDeaths += 1;
             
             var position = this.Owner.Transform.Translation;
+            this.Invincibility = true;
             
             if(AdvInventory.PlayerInventory["Gears"] > 0
             && AdvInventory.PlayerInventory["Gears"] < 4)
@@ -283,4 +288,5 @@ class Health : ZilchComponent
             
         }
     }
+    
 }
