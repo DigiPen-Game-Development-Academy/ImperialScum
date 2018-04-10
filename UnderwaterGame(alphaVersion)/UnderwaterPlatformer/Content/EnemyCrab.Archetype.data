@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0, 0, 0],
+		Vec3 Translation = [-2.02137876, -0.266820878, 0],
 		Vec3 Scale = [0.998837471, 0.998837471, 0.998837471],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -42,7 +42,7 @@ Cog =
 		bool Asleep = false,
 		bool Kinematic = false,
 		bool RotationLocked = true,
-		bool Mode2D = false,
+		bool Mode2D = true,
 		bool AllowSleep = true,
 		bool Inherit2DMode = true,
 		Vec3 Velocity = [0, 0, 0],
@@ -60,9 +60,7 @@ Cog =
 	},
 	EnemyController = 
 	{
-		float JumpTime = 3,
 		int Speed = 5,
-		int JumpSpeed = 3,
 	},
 	EnemyHealth = 
 	{
@@ -82,6 +80,9 @@ Cog =
 		bool UsePitchSemitones = false,
 		bool Positional = true,
 		int Version = 1,
+	},
+	LagControl = 
+	{
 	},
 	Hierarchy = 
 	{

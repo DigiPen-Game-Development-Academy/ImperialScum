@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-2.30865645, -2.93776846, 0.000598907471],
+		Vec3 Translation = [-18.3230362, 6.09249496, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -82,6 +82,9 @@ Cog =
 		int Version = 1,
 	},
 	VolumeLevev = 
+	{
+	},
+	LagControl = 
 	{
 	},
 	Hierarchy = 

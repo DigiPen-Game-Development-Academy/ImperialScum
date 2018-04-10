@@ -14,9 +14,7 @@ class BallistaSnail : ZilchComponent
     var Direction:Boolean = false;
     
     function Initialize(init : CogInitializer)
-    {
-        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
-        Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
+    {        Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
     }
 
     function OnCollisionStarted(event : CollisionEvent)
