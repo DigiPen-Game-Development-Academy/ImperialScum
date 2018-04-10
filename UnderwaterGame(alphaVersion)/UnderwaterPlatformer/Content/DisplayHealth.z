@@ -30,7 +30,8 @@ class DisplayHealth : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-        var newSize = this.InitSize * (Health.CurrentHealth/20.0);
+        //var newSize = this.InitSize * (Health.CurrentHealth/19.0);
+        var newSize = this.InitSize * (Health.CurrentHealth/(Health.MaxHealth-1));
         this.Owner.Area.Size = Real2(newSize, 1);
         
         if(Health.CurrentHealth <= 5)

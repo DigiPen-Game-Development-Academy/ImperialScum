@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-6.11032867, -1.98724067, 0],
+		Vec3 Translation = [-17.1779747, 2.81421876, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -300,6 +300,9 @@ Cog =
 				Vec4 Color3 = [0, 0.369999886, 1, 0.5],
 				Vec4 Color4 = [0.0643999577, 0.0940241069, 0.805000007, 1],
 			},
+			NoParticlesInBaseLevel = 
+			{
+			},
 			Hierarchy = 
 			{
 			},
@@ -329,7 +332,7 @@ Cog =
 				SystemChildMode ChildMode = Independent,
 				SystemSpace SystemSpace = WorldSpace,
 				uint DrawOrder = 0,
-				Vec4 Tint = [0, 1, 0.910000086, 1],
+				Vec4 Tint = [0.745000005, 0.69434011, 0.618350029, 0.699999988],
 				float WarmUpTime = 0,
 				ParticleGeometry GeometryMode = Billboarded,
 				ParticleRenderMode RenderMode = Blended,
