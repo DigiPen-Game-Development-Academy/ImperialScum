@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-22.781065, 27.3254185, 0],
+		Vec3 Translation = [19.2724152, 41.304306, 40],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -237,69 +237,6 @@ Cog =
 			},
 			Named = 
 			{
-				string Name = "Volcano",
-			},
-			Transform = 
-			{
-				Vec3 Translation = [5.0608201, -1.84188128, 10],
-				Vec3 Scale = [1, 1, 1],
-				Quat Rotation = [0, 0, 0, 1],
-			},
-			Sprite = 
-			{
-				bool Visible = true,
-				bool VisibilityCulling = true,
-				bool VisibilityEvents = true,
-				bool CastShadows = false,
-				Vec4 Color = [1, 1, 1, 1],
-				BlendMode BlendMode = Alpha,
-				SpriteGeometryMode GeometryMode = ZPlane,
-				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-				string SpriteSource = "5a0ddb18154ca2e3:Inv_ArmorVolcano",
-				bool RenderMask = false,
-				bool FlipX = false,
-				bool FlipY = false,
-				bool AnimationActive = true,
-				float AnimationSpeed = 1,
-				uint StartFrame = 0,
-			},
-			Reactive = 
-			{
-				bool Active = true,
-				bool CaptureMouse = false,
-			},
-			BoxCollider = 
-			{
-				bool Ghost = false,
-				bool SendsMessages = true,
-				bool Seamless = true,
-				string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
-				string SerializedGroupName = "4e740859314e5515:DefaultGroup",
-				Vec3 Offset = [0, 0, 0],
-				Vec3 Size = [0.5, 0.375, 0.5],
-			},
-			ShopSlot = 
-			{
-				int Cost = 65,
-				string Name = "ArmorVolcano",
-				bool OnlyBuyOnce = true,
-			},
-			ButtonLogic = 
-			{
-			},
-			InventoryButton = 
-			{
-				string SelectedInvItem = "",
-			},
-		},
-		Cog = 
-		{
-			LinkId = 
-			{
-				uint Id = 7,
-			},
-			Named = 
-			{
 				string Name = "HealthPotion",
 			},
 			Transform = 
@@ -362,7 +299,7 @@ Cog =
 		{
 			LinkId = 
 			{
-				uint Id = 8,
+				uint Id = 7,
 			},
 			Named = 
 			{
@@ -370,7 +307,7 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [-2.54617262, -1.83733416, 10],
+				Vec3 Translation = [5.1783452, 3.04277372, 10],
 				Vec3 Scale = [1, 1, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
@@ -409,7 +346,7 @@ Cog =
 			},
 			ShopSlot = 
 			{
-				int Cost = 35,
+				int Cost = 40,
 				string Name = "Ring_Speed",
 				bool OnlyBuyOnce = true,
 			},
@@ -428,7 +365,7 @@ Cog =
 		{
 			LinkId = 
 			{
-				uint Id = 9,
+				uint Id = 8,
 			},
 			Named = 
 			{
@@ -436,7 +373,7 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [5.00256586, 3.00076246, 10],
+				Vec3 Translation = [-2.72195196, -1.85146189, 10],
 				Vec3 Scale = [1, 1, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
@@ -491,7 +428,7 @@ Cog =
 		{
 			LinkId = 
 			{
-				uint Id = 10,
+				uint Id = 9,
 			},
 			Named = 
 			{
@@ -538,7 +475,7 @@ Cog =
 			},
 			ShopSlot = 
 			{
-				int Cost = 45,
+				int Cost = 55,
 				string Name = "ArmorCopper",
 				bool OnlyBuyOnce = true,
 			},
@@ -554,7 +491,7 @@ Cog =
 		{
 			LinkId = 
 			{
-				uint Id = 11,
+				uint Id = 10,
 			},
 			Named = 
 			{
@@ -592,7 +529,7 @@ Cog =
 		{
 			LinkId = 
 			{
-				uint Id = 12,
+				uint Id = 11,
 			},
 			Named = 
 			{
@@ -651,7 +588,7 @@ Cog =
 		{
 			LinkId = 
 			{
-				uint Id = 13,
+				uint Id = 12,
 			},
 			Named = 
 			{
@@ -689,7 +626,7 @@ Cog =
 		{
 			LinkId = 
 			{
-				uint Id = 14,
+				uint Id = 13,
 			},
 			Named = 
 			{
@@ -727,7 +664,7 @@ Cog =
 		{
 			LinkId = 
 			{
-				uint Id = 15,
+				uint Id = 14,
 			},
 			Named = 
 			{
@@ -765,7 +702,7 @@ Cog =
 		{
 			LinkId = 
 			{
-				uint Id = 16,
+				uint Id = 15,
 			},
 			Named = 
 			{
@@ -803,7 +740,7 @@ Cog =
 		{
 			LinkId = 
 			{
-				uint Id = 17,
+				uint Id = 16,
 			},
 			Named = 
 			{
@@ -841,7 +778,7 @@ Cog =
 		{
 			LinkId = 
 			{
-				uint Id = 18,
+				uint Id = 17,
 			},
 			Named = 
 			{
@@ -879,7 +816,7 @@ Cog =
 		{
 			LinkId = 
 			{
-				uint Id = 19,
+				uint Id = 18,
 			},
 			Named = 
 			{
@@ -917,7 +854,7 @@ Cog =
 		{
 			LinkId = 
 			{
-				uint Id = 20,
+				uint Id = 19,
 			},
 			Named = 
 			{
@@ -955,7 +892,7 @@ Cog =
 		{
 			LinkId = 
 			{
-				uint Id = 21,
+				uint Id = 20,
 			},
 			Named = 
 			{
@@ -963,7 +900,7 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [-5.51699829, 3.66013122, 0],
+				Vec3 Translation = [-5.51699829, 3.57556319, 0],
 				Vec3 Scale = [2, 2, 2],
 				Quat Rotation = [0, 0, 0, 1],
 			},
@@ -989,7 +926,7 @@ Cog =
 		{
 			LinkId = 
 			{
-				uint Id = 22,
+				uint Id = 21,
 			},
 			Named = 
 			{
@@ -997,7 +934,7 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [-5.57398319, 1.15676689, 0],
+				Vec3 Translation = [-5.57398319, 1.41047859, 0],
 				Vec3 Scale = [2, 2, 2],
 				Quat Rotation = [0, 0, 0, 1],
 			},
@@ -1024,7 +961,7 @@ Cog =
 		{
 			LinkId = 
 			{
-				uint Id = 23,
+				uint Id = 22,
 			},
 			Named = 
 			{
@@ -1062,7 +999,7 @@ Cog =
 		{
 			LinkId = 
 			{
-				uint Id = 24,
+				uint Id = 23,
 			},
 			Named = 
 			{
@@ -1100,7 +1037,7 @@ Cog =
 		{
 			LinkId = 
 			{
-				uint Id = 25,
+				uint Id = 24,
 			},
 			Named = 
 			{
@@ -1108,42 +1045,7 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [-6.21350527, -1.3086375, 0],
-				Vec3 Scale = [2, 2, 2],
-				Quat Rotation = [0, 0, 0, 1],
-			},
-			SpriteText = 
-			{
-				bool Visible = true,
-				bool VisibilityCulling = true,
-				bool VisibilityEvents = true,
-				bool CastShadows = false,
-				Vec4 Color = [1, 1, 1, 1],
-				BlendMode BlendMode = Alpha,
-				SpriteGeometryMode GeometryMode = ZPlane,
-				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-				string FontName = "5a0f895ab1e49e19:DraftGameFont",
-				uint FontSize = 16,
-				string Text = "35
-",
-				TextAlign Align = Left,
-				float PixelsPerUnit = 32,
-				bool Smoothing = false,
-			},
-		},
-		Cog = 
-		{
-			LinkId = 
-			{
-				uint Id = 26,
-			},
-			Named = 
-			{
-				string Name = "SpriteText",
-			},
-			Transform = 
-			{
-				Vec3 Translation = [1.83656955, 3.69027901, 0],
+				Vec3 Translation = [-6.21350527, -1.19024074, 0],
 				Vec3 Scale = [2, 2, 2],
 				Quat Rotation = [0, 0, 0, 1],
 			},
@@ -1170,7 +1072,42 @@ Cog =
 		{
 			LinkId = 
 			{
-				uint Id = 27,
+				uint Id = 25,
+			},
+			Named = 
+			{
+				string Name = "SpriteText",
+			},
+			Transform = 
+			{
+				Vec3 Translation = [1.83656955, 3.69027901, 0],
+				Vec3 Scale = [2, 2, 2],
+				Quat Rotation = [0, 0, 0, 1],
+			},
+			SpriteText = 
+			{
+				bool Visible = true,
+				bool VisibilityCulling = true,
+				bool VisibilityEvents = true,
+				bool CastShadows = false,
+				Vec4 Color = [1, 1, 1, 1],
+				BlendMode BlendMode = Alpha,
+				SpriteGeometryMode GeometryMode = ZPlane,
+				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+				string FontName = "5a0f895ab1e49e19:DraftGameFont",
+				uint FontSize = 16,
+				string Text = "40
+",
+				TextAlign Align = Left,
+				float PixelsPerUnit = 32,
+				bool Smoothing = false,
+			},
+		},
+		Cog = 
+		{
+			LinkId = 
+			{
+				uint Id = 26,
 			},
 			Named = 
 			{
@@ -1208,7 +1145,7 @@ Cog =
 		{
 			LinkId = 
 			{
-				uint Id = 28,
+				uint Id = 27,
 			},
 			Named = 
 			{
@@ -1246,7 +1183,7 @@ Cog =
 		{
 			LinkId = 
 			{
-				uint Id = 29,
+				uint Id = 28,
 			},
 			Named = 
 			{
@@ -1284,7 +1221,7 @@ Cog =
 		{
 			LinkId = 
 			{
-				uint Id = 30,
+				uint Id = 29,
 			},
 			Named = 
 			{
@@ -1322,7 +1259,7 @@ Cog =
 		{
 			LinkId = 
 			{
-				uint Id = 31,
+				uint Id = 30,
 			},
 			Named = 
 			{
@@ -1346,79 +1283,7 @@ Cog =
 				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
 				string FontName = "5a0f895ab1e49e19:DraftGameFont",
 				uint FontSize = 16,
-				string Text = "45",
-				TextAlign Align = Left,
-				float PixelsPerUnit = 32,
-				bool Smoothing = false,
-			},
-		},
-		Cog = 
-		{
-			LinkId = 
-			{
-				uint Id = 32,
-			},
-			Named = 
-			{
-				string Name = "Sprite",
-			},
-			Transform = 
-			{
-				Vec3 Translation = [3.814816, -1.99017787, 10],
-				Vec3 Scale = [1, 1, 1],
-				Quat Rotation = [0, 0, 0, 1],
-			},
-			Sprite = 
-			{
-				bool Visible = true,
-				bool VisibilityCulling = true,
-				bool VisibilityEvents = true,
-				bool CastShadows = false,
-				Vec4 Color = [1, 1, 1, 1],
-				BlendMode BlendMode = Alpha,
-				SpriteGeometryMode GeometryMode = ZPlane,
-				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-				string SpriteSource = "5ab54c094784f645:Inv_Gears",
-				bool RenderMask = false,
-				bool FlipX = false,
-				bool FlipY = false,
-				bool AnimationActive = true,
-				float AnimationSpeed = 1,
-				uint StartFrame = 0,
-			},
-			Hierarchy = 
-			{
-			},
-		},
-		Cog = 
-		{
-			LinkId = 
-			{
-				uint Id = 33,
-			},
-			Named = 
-			{
-				string Name = "SpriteText",
-			},
-			Transform = 
-			{
-				Vec3 Translation = [1.83656955, -1.34528422, 0],
-				Vec3 Scale = [2, 2, 2],
-				Quat Rotation = [0, 0, 0, 1],
-			},
-			SpriteText = 
-			{
-				bool Visible = true,
-				bool VisibilityCulling = true,
-				bool VisibilityEvents = true,
-				bool CastShadows = false,
-				Vec4 Color = [1, 1, 1, 1],
-				BlendMode BlendMode = Alpha,
-				SpriteGeometryMode GeometryMode = ZPlane,
-				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-				string FontName = "5a0f895ab1e49e19:DraftGameFont",
-				uint FontSize = 16,
-				string Text = "65",
+				string Text = "55",
 				TextAlign Align = Left,
 				float PixelsPerUnit = 32,
 				bool Smoothing = false,
