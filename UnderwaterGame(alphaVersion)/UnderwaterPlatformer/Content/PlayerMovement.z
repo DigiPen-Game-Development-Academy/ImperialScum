@@ -46,6 +46,11 @@ class PlayerMovement : ZilchComponent
     [Property] var SoundToPlay2 : SoundCue = SoundCue.SpearStab;
     var SoundToPlay3 : SoundCue = SoundCue.SelectItem;
     var SoundToPlay4 : SoundCue = SoundCue.LegendarySound;
+    var SoundToPlay5 : SoundCue = SoundCue.ErrorSound;
+    [Static] var PlayErrorSound : Boolean = false;
+    
+    var CheckOnce : Boolean = false;
+    var CheckTwice : Boolean = false;
     
     var Swimming:Boolean = false;
     
@@ -54,6 +59,7 @@ class PlayerMovement : ZilchComponent
     var TouchingGround:Boolean;
     
     function Initialize(init : CogInitializer)
+<<<<<<< HEAD
     {   
         PlayerMovement.Component = this;
         
@@ -62,11 +68,10 @@ class PlayerMovement : ZilchComponent
         
         if(AdvInventory.PlayerInventory["Ring_Speed"] > 0)
         this.Speed = this.Speed * 1.2;
+=======
+    {
+>>>>>>> 27e222066b2dfec5c5d5547c927c6e0984d9e75b
         
-        if(AdvInventory.PlayerInventory["Ring_Jump"] > 0)
-        {
-        this.JumpSpeed = this.JumpSpeed * 1.2;
-        }
             
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
         Zero.Connect(this.Owner, Events.CollisionPersisted, this.OnCollisionPersisted);
@@ -137,6 +142,7 @@ class PlayerMovement : ZilchComponent
         
         var velocity = direction * this.Speed;
         
+        //Play 90% of sounds - Jessica
         if(Resources.PlaySound == true) 
         {
             Resources.PlaySound = false;
@@ -160,8 +166,30 @@ class PlayerMovement : ZilchComponent
             Resources.PlayLegendarySound = false;
             this.Owner.SoundEmitter.PlayCue(this.SoundToPlay4);
         }
+        
+        if(PlayerMovement.PlayErrorSound == true) 
+        {
+            PlayerMovement.PlayErrorSound = false;
+            this.Owner.SoundEmitter.PlayCue(this.SoundToPlay5);
+        }
+        
+        //Initializes ring effects.
+        if(AdvInventory.PlayerInventory["Ring_Speed"] > 0 && this.CheckOnce == false)
+        {
+            Console.WriteLine("Speed Activated");
+            this.CheckOnce = true;
+            this.Speed = this.Speed * 1.2;
+        }
+        if(AdvInventory.PlayerInventory["Ring_Jump"] > 0 && this.CheckTwice == false)
+        {
+            Console.WriteLine("Jump Activated");
+            this.CheckTwice = true;
+            this.JumpSpeed = this.JumpSpeed * 1.2;
+        }
+        
     
         if(Zero.Keyboard.KeyIsPressed(this.KeyUp) && this.Owner.GroundChecker.Grounded == true
+        && this.Swimming == false && this.TouchingGround == true || Zero.Keyboard.KeyIsPressed(Keys.Space) && this.Owner.GroundChecker.Grounded == true
         && this.Swimming == false && this.TouchingGround == true)
         {
             this.Owner.RigidBody.Velocity =
@@ -171,6 +199,7 @@ class PlayerMovement : ZilchComponent
         }
         
         else if(Zero.Keyboard.KeyIsPressed(this.KeyUp) && this.DoubleJump == true
+         && this.Swimming == false || Zero.Keyboard.KeyIsPressed(Keys.Space) && this.DoubleJump == true
          && this.Swimming == false)
         {
             this.Owner.RigidBody.Velocity =
@@ -192,7 +221,7 @@ class PlayerMovement : ZilchComponent
             direction += Real3.XAxis;
         }
         
-        if(Zero.Keyboard.KeyIsDown(this.KeyUp) && this.Swimming == true)
+        if(Zero.Keyboard.KeyIsDown(this.KeyUp) && this.Swimming == true || Zero.Keyboard.KeyIsDown(Keys.Space) && this.Swimming == true)
         {
             direction += Real3.YAxis;
         }

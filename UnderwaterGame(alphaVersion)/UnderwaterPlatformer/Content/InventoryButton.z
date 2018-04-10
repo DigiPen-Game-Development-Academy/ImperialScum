@@ -48,19 +48,20 @@ var DeleteString:Boolean = false;
         }
          if(this.Owner.Sprite.SpriteSource.Name == ("Inv_Ring_Jump"))
         {
-             InventoryButton.WhatItem = "    Ring of Jumping";
+             InventoryButton.WhatItem = "    Jump Boost Ring";
         }
          if(this.Owner.Sprite.SpriteSource.Name == ("Inv_Ring_Regen"))
         {
-             InventoryButton.WhatItem = "    Ring of Regen";
+             InventoryButton.WhatItem = "    Regen Ring";
         }
          if(this.Owner.Sprite.SpriteSource.Name == ("Inv_Ring_Speed"))
         {
-             InventoryButton.WhatItem = "    Ring of Speed";
+             InventoryButton.WhatItem = "    Speed Ring";
+             
         }
          if(this.Owner.Sprite.SpriteSource.Name == ("Inv_Ring_Health"))
         {
-             InventoryButton.WhatItem = "    Ring of Health";
+             InventoryButton.WhatItem = "    Health Ring";
         }
         if(this.Owner.Sprite.SpriteSource.Name == ("Inv_ArmorCopper"))
         {

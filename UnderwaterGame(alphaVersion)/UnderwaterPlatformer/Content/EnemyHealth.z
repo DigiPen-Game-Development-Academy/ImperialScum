@@ -72,6 +72,9 @@ class EnemyHealth : ZilchComponent
             {
                 var randomChoose = random.DieRoll(3);
                 
+                var randomVelocityNegative = random.DieRoll(5) * -1;
+                var randomVelocityPositive = random.DieRoll(5);
+                
                 if(randomChoose == 1)
                 this.Spawn = Archetype.Gear;
                 if(randomChoose > 1)
@@ -79,6 +82,8 @@ class EnemyHealth : ZilchComponent
                 
                 var treasure = this.Space.CreateAtPosition(this.Spawn,
                 this.Owner.Transform.Translation);
+                
+                treasure.RigidBody.Velocity = Real3(randomVelocityNegative,randomVelocityPositive, 0);
                 
                 randomAmount -= 1;
 

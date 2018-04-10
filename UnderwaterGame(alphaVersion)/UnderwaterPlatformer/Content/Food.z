@@ -68,6 +68,12 @@ class Eat : ZilchComponent
            AdvInventory.PlayerInventory["HealthPotion"] -= 1;
            Eat.PlaySound3 = true;
            }
+           
+           else
+            {
+                PlayerMovement.PlayErrorSound = true;
+            }
+            
        }
 
        

@@ -27,6 +27,7 @@ class Health : ZilchComponent
     
     var Timer2:Real = 0.2;
     var Timer3:Real = 0;
+    var Timer4:Real;
     
     var Invincibility : Boolean = false;
     var InvincibilityTimer : Real = 0.5;
@@ -38,6 +39,9 @@ class Health : ZilchComponent
     var Food : Archetype = Archetype.Food;
     var HealthPotion : Archetype = Archetype.HealthPotion;
     var TimesRepeated : Integer = 1;
+    
+    var CheckOnce : Boolean = false;
+    var CheckTwice : Boolean = false;
         
     function Initialize(init : CogInitializer)
     {
@@ -57,7 +61,22 @@ class Health : ZilchComponent
     {
         if(event.OtherObject.BulletLogic != null && Health.CurrentHealth > 0 && this.Invincibility == false)
         {
-            Health.CurrentHealth -= 2;
+             //This is Elena's script for armor working/////////////////////////
+            if(AdvInventory.PlayerInventory["ArmorVolcano"] >= 1)
+            {
+               Health.CurrentHealth -= 1.5;
+            }
+            else if(AdvInventory.PlayerInventory["ArmorCopper"] >= 1)
+            {
+               Health.CurrentHealth -= 1.75;
+            }
+             else if(AdvInventory.PlayerInventory["ArmorCopper"] >= 1 && AdvInventory.PlayerInventory["ArmorVolcano"] >=1)
+            {
+                Health.CurrentHealth -= 1;
+            }
+            else{Health.CurrentHealth -= 2;}
+
+            //This is the end of my script//////////////////
             this.Owner.SoundEmitter.PlayCue(this.HitSoundThing);
             this.Owner.Sprite.Color = this.DamageColor;
             this.Invincibility = true;
@@ -88,10 +107,10 @@ class Health : ZilchComponent
             {
                Health.CurrentHealth -= 1.75;
             }
-           /* else if(AdvInventory.PlayerInventory["ArmorCopper"] >=1 && ["ArmorVolcano"] >=1)
+             else if(AdvInventory.PlayerInventory["ArmorCopper"] >= 1 && AdvInventory.PlayerInventory["ArmorVolcano"] >=1)
             {
                 Health.CurrentHealth -= 1;
-            }*/
+            }
             else{Health.CurrentHealth -= 2;}
 
             //This is the end of my script//////////////////
@@ -106,10 +125,10 @@ class Health : ZilchComponent
             {
                Health.CurrentHealth -= 2.5;
             }
-           /* else if(AdvInventory.PlayerInventory["ArmorCopper" >=1 &&"ArmorVolcano"] >=1)
+            else if(AdvInventory.PlayerInventory["ArmorCopper"] >= 1 && AdvInventory.PlayerInventory["ArmorVolcano"] >=1)
             {
                 Health.CurrentHealth -= 1.5;
-            }*/
+            }
             else{Health.CurrentHealth -= 3;}
             //This is the end of my script//////////////////
             }
@@ -133,10 +152,10 @@ class Health : ZilchComponent
             {
                Health.CurrentHealth -= 1.70;
             }
-           /* else if(AdvInventory.PlayerInventory["ArmorCopper" >=1 && "ArmorVolcano"] >=1)
+            else if(AdvInventory.PlayerInventory["ArmorCopper"] >= 1 && AdvInventory.PlayerInventory["ArmorVolcano"] >=1)
             {
                 Health.CurrentHealth -= 1;
-            }*/
+            }
             else{Health.CurrentHealth -= 2;}
             //This is the end of my script//////////////////
         }
@@ -154,10 +173,10 @@ class Health : ZilchComponent
             {
                Health.CurrentHealth -= 1.70;
             }
-           /* else if(AdvInventory.PlayerInventory["ArmorCopper" >=1 && "ArmorVolcano"] >=1)
+            else if(AdvInventory.PlayerInventory["ArmorCopper"] >= 1 && AdvInventory.PlayerInventory["ArmorVolcano"] >=1)
             {
                 Health.CurrentHealth -= 1;
-            }*/
+            }
             else{Health.CurrentHealth -= 2;}
             //This is the end of my script//////////////////
         }
@@ -182,6 +201,18 @@ class Health : ZilchComponent
             Health.CurrentHealth -= 1;
             
             this.Timer += 5;
+        }
+        
+        //Initializes Rings
+        
+        if(AdvInventory.PlayerInventory["Ring_Health"] >= 1 && this.CheckTwice == false)
+        {
+            Console.WriteLine("Health Activated");
+            this.CheckTwice = true;
+           Health.MaxHealth = Health.MaxHealth + 10;
+           
+           //This makes sure you don't start a level without max health
+           Health.CurrentHealth += 10;
         }
         
         if(this.Invincibility == true && this.InvincibilityTimer > 0)
@@ -223,6 +254,7 @@ class Health : ZilchComponent
              NumOfDeaths.NumberOfDeaths += 1;
             
             var position = this.Owner.Transform.Translation;
+            this.Invincibility = true;
             
             if(AdvInventory.PlayerInventory["Gears"] > 0
             && AdvInventory.PlayerInventory["Gears"] < 4)
@@ -256,4 +288,5 @@ class Health : ZilchComponent
             
         }
     }
+    
 }
