@@ -15,7 +15,7 @@ class FollowSmooth : ZilchComponent
         {
             this.Target = this.Owner.Parent;
             this.LocalOffset = this.Owner.Transform.Translation;
-            var tail = this.Owner.FindChildByName("Enemy_MechamaidTail()");
+            var tail = this.Target.FindChildByName("Enemy_MechamaidTail()");
             if (tail != null && tail.MechaTailPoint != null)
             {
                 tail.MechaTailPoint.Target = this.Owner;
@@ -29,7 +29,7 @@ class FollowSmooth : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-        if (this.Target == null) return;
+        if (this.Target == null) {this.Owner.Destroy(); return;}
         
         // Actual follow code
         this.Owner.Transform.WorldTranslation = Math.Lerp(
