@@ -21,7 +21,6 @@ class BossKeyDropping : ZilchComponent
         if(this.Owner.EnemyHealth.Health <= 0)
         {
             this.Space.CreateAtPosition(this.Key, spawnPosition);
-            Console.WriteLine(spawnPosition);
             VolumeLevev.SaveVolume = VolumeControls.Number1;
             BossKeyDropping.BossDead = true;
         }

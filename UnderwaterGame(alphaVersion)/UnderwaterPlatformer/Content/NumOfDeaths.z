@@ -1,5 +1,6 @@
 class NumOfDeaths : ZilchComponent
 {
+    //Author - Jessica
     [Static] var NumberOfDeaths : Integer = 0;
     function Initialize(init : CogInitializer)
     {

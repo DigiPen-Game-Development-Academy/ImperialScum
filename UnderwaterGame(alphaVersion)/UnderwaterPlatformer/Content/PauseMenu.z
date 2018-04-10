@@ -1,5 +1,6 @@
 class PauseMenu : ZilchComponent
 {
+    //Author - Jessica
     var FirstTime : Boolean = true;
     [Property] var ApplyQuit : Boolean = false;
     //var Exists : Boolean = false
