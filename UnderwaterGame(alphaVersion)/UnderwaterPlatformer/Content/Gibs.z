@@ -12,6 +12,9 @@ class Gibs : ZilchComponent
         
         this.Owner.RigidBody.Velocity = Real3(randX,randY,0);
         
-        this.Owner.DestroyTimer.Time = 100 + this.RandomGen.DieRoll(100);
+        if (this.Owner.DestroyTimer != null)
+        {
+            this.Owner.DestroyTimer.Time = 100 + this.RandomGen.DieRoll(100);
+        }
     }
 }
