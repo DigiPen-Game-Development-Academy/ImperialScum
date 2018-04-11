@@ -1,11 +1,12 @@
 class GoToBase : ZilchComponent
 {
     //Author - Jessica
+    //Heavily edited by Jacob
     [Property] var LevelToLoad : Level = Level.BaseLevel;
     
     function Initialize(init : CogInitializer)
     {
-        //Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
         Zero.Connect(this.Owner, Events.CollisionPersisted, this.OnCollisionPersisted);
     }
 
@@ -13,11 +14,15 @@ class GoToBase : ZilchComponent
     {
         if(event.OtherObject.PlayerController != null)
         {
-        this.Space.LoadLevel(this.LevelToLoad);
+            Fade.Switch = true;
         }
     }
-
+    
     function OnLogicUpdate(event : UpdateEvent)
     {
+        if(Fade.Color > 0.95)
+        {
+        this.Space.LoadLevel(this.LevelToLoad);
+        }
     }
 }

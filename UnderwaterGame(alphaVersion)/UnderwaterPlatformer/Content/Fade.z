@@ -1,0 +1,33 @@
+class Fade : ZilchComponent
+{
+    [Static]
+    var Color:Real;
+    
+    [Static]
+    var Switch:Boolean = false;
+    
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        if(Fade.Color < 0.99 && Fade.Switch == true)
+        Fade.Color += event.Dt/2;
+        
+        if(Fade.Color > 0.01 && Fade.Switch == false)
+        Fade.Color -= event.Dt/2;
+        
+        this.Owner.Sprite.Color = Real4(0,0,0,Fade.Color);
+    }
+}
+class UnFade : ZilchComponent
+{
+    function Initialize(init : CogInitializer)
+    {
+        Fade.Switch = false;
+    }
+
+}
