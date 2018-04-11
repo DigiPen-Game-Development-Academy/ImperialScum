@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [3.32872677, -2.93691635, 7.06034831e-09],
+		Vec3 Translation = [-3.01467562, -2.66374588, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
