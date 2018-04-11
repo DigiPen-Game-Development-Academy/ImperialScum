@@ -14,15 +14,16 @@ class GoToBase : ZilchComponent
     {
         if(event.OtherObject.PlayerController != null)
         {
-            Fade.Switch = true;
+            this.Space.LoadLevel(this.LevelToLoad);
+            //Fade.Switch = true;
         }
     }
     
     function OnLogicUpdate(event : UpdateEvent)
     {
-        if(Fade.Color > 0.95)
-        {
-        this.Space.LoadLevel(this.LevelToLoad);
-        }
+        //if(Fade.Color > 0.95)
+        //{
+        //this.Space.LoadLevel(this.LevelToLoad);
+        //}
     }
 }
