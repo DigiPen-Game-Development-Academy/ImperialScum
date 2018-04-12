@@ -18,6 +18,12 @@ class EnemyHealth : ZilchComponent
 
     var Spawn:Archetype;
     
+    [Property]
+    var HitSFX:SoundCue = SoundCue.HitSound;
+    
+    [Property]
+    var KillSFX:SoundCue = SoundCue.Kill;
+    
     var Timer:Real = 0.2;
     function Initialize(init : CogInitializer)
     {
@@ -30,6 +36,8 @@ class EnemyHealth : ZilchComponent
         //Check if this is the sword's hitbox. Sam did this since it is commented.
         if(event.OtherObject == this.Space.FindObjectByName("SwordHitbox"))
         {
+            this.Space.SoundSpace.PlayCue(this.HitSFX);
+            
             this.Health -= EnemyHealth.SwordDamage;
             this.Owner.Sprite.Color = this.DamageColor;
             
@@ -38,12 +46,15 @@ class EnemyHealth : ZilchComponent
             {
                 this.Space.CreateAtPosition(Archetype.EnemyGib, this.Owner.Transform.Translation); 
             }
+            
             this.Space.CreateAtPosition(Archetype.ExplodeBubbles, this.Owner.Transform.Translation); 
             this.Space.CreateAtPosition(Archetype.HitExplode, this.Owner.Transform.Translation); 
         }
         
         if(event.OtherObject == this.Space.FindObjectByName("Spear"))
         {
+            this.Space.SoundSpace.PlayCue(this.HitSFX);
+            
             this.Health -= EnemyHealth.SpearDamage;
             this.Owner.Sprite.Color = this.DamageColor;
             
@@ -62,8 +73,10 @@ class EnemyHealth : ZilchComponent
         if(this.Health <= 0)
         {
             if(this.Owner.Name == ("BOSS"))
-            this.Space.CreateAtPosition(Archetype.Key, this.Owner.Transform.WorldTranslation);
-            
+            {
+                BossKeyDropping.BossDead = true;
+                this.Space.CreateAtPosition(Archetype.Key, this.Owner.Transform.WorldTranslation);
+            }
             
             var random = new Random();
             var randomAmount = random.DieRoll(3);
@@ -93,6 +106,7 @@ class EnemyHealth : ZilchComponent
             //Death Particle
             this.Space.CreateAtPosition(Archetype.LegendaryExplode, this.Owner.Transform.Translation);
             this.Space.CreateAtPosition(Archetype.EnemyExplode, this.Owner.Transform.Translation); 
+            this.Space.SoundSpace.PlayCue(this.KillSFX);
             
             //Particles
             for (var i = 0; i != 8; i += 1)

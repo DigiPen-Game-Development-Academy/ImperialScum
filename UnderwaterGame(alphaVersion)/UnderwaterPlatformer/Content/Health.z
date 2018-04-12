@@ -52,10 +52,6 @@ class Health : ZilchComponent
         Zero.Connect(this.Owner, Events.CollisionPersisted, this.OnCollisionPersisted);
         Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
        
-        if(AdvInventory.PlayerInventory["Ring_Health"] >= 1)
-        {
-           Health.MaxHealth = Health.MaxHealth + 5;
-        }
         
         Health.CurrentHealth = Health.MaxHealth;
     }
@@ -271,7 +267,7 @@ class Health : ZilchComponent
                 
                 this.Invincibility = true;
                 
-                    if(AdvInventory.PlayerInventory["Gears"] > 0
+                    if(AdvInventory.PlayerInventory["Gears"] >= 0
                     && AdvInventory.PlayerInventory["Gears"] < 11)
                     {
                         while(AdvInventory.PlayerInventory["Gears"] > 0)

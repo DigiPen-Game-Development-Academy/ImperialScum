@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-2.02137876, -0.266820878, 0],
+		Vec3 Translation = [1.35549045, -2.45406008, 0],
 		Vec3 Scale = [0.998837471, 0.998837471, 0.998837471],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -67,19 +67,8 @@ Cog =
 		float Health = 5,
 		Vec4 DamageColor = [1, 0, 0, 1],
 		Vec4 RegularColor = [1, 1, 1, 1],
-	},
-	HitSound = 
-	{
-		string HitSoundThing = "5aacbc9a12b8fb36:HitSound",
-	},
-	SoundEmitter = 
-	{
-		float Volume = 1,
-		float Pitch = 0,
-		float PitchSemitones = 0,
-		bool UsePitchSemitones = false,
-		bool Positional = true,
-		int Version = 1,
+		string HitSFX = "5aacbc9a12b8fb36:HitSound",
+		string KillSFX = "5a61916136d1c33d:Kill",
 	},
 	LagControl = 
 	{

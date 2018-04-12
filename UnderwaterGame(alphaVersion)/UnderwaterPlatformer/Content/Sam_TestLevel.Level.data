@@ -104,7 +104,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [4.7549181, -4.00682592, 50],
+			Vec3 Translation = [1.20565164, -3.37721443, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -116,7 +116,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 44.3957939,
+			float Size = 8.11038876,
 		},
 		EditorCameraController = 
 		{
@@ -124,7 +124,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [4.7549181, -4.00682592, 3.29987984e-08],
+			Vec3 LookTarget = [1.20565164, -3.37721443, -1.22144698e-07],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -868,20 +868,20 @@ Level =
 	},
 	ArchetypeInstance = 
 	{
-		string Name = "5add57b20981d06d:GearShark",
+		string Name = "5addae58d1201ae5:EnemyCrab",
 		LinkId = 
 		{
 			uint Id = 14,
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0.377235413, 0.286612272, 0],
-			Vec3 Scale = [1, 1, 1],
+			Vec3 Translation = [1.35549045, -2.45406008, 0],
+			Vec3 Scale = [0.998837471, 0.998837471, 0.998837471],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Named = 
 		{
-			string Name = "GearShark",
+			string Name = "EnemyCrab",
 		},
 	},
 },
