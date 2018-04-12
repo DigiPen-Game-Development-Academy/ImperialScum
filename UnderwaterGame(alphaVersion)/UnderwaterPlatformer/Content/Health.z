@@ -271,7 +271,7 @@ class Health : ZilchComponent
                 
                 this.Invincibility = true;
                 
-                    if(AdvInventory.PlayerInventory["Gears"] > 0
+                    if(AdvInventory.PlayerInventory["Gears"] >= 0
                     && AdvInventory.PlayerInventory["Gears"] < 11)
                     {
                         while(AdvInventory.PlayerInventory["Gears"] > 0)
