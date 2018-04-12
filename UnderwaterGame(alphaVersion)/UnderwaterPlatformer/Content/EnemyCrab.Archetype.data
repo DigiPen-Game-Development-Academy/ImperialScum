@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [1.35549045, -2.45406008, 0],
+		Vec3 Translation = [-21.5312958, -3.21310592, 0],
 		Vec3 Scale = [0.998837471, 0.998837471, 0.998837471],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -244,7 +244,7 @@ Cog =
 			SpriteParticleSystem = 
 			{
 				bool Visible = true,
-				bool VisibilityCulling = true,
+				bool VisibilityCulling = false,
 				bool VisibilityEvents = true,
 				bool CastShadows = false,
 				SystemChildMode ChildMode = Independent,

@@ -104,7 +104,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [32.7145195, -0.380838275, 50],
+			Vec3 Translation = [25.3679104, 0.964120805, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -116,7 +116,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 6.00833082,
+			float Size = 8.96338272,
 		},
 		EditorCameraController = 
 		{
@@ -124,7 +124,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [32.7145195, -0.380838275, 9.29651307e-08],
+			Vec3 LookTarget = [25.3679104, 0.964120805, 9.29651307e-08],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -1201,7 +1201,6 @@ Level =
 		},
 		EnterCannon = 
 		{
-			string LevelToLoad = "5a137b96289a4a64:BaseLevel",
 		},
 		Hierarchy = 
 		{
@@ -1370,6 +1369,9 @@ Level =
 			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
 			Vec3 Offset = [0, 1, 0],
 			Vec3 Size = [0.5, 1.14999998, 0.5],
+		},
+		EnterCannon = 
+		{
 		},
 		Hierarchy = 
 		{
@@ -3681,7 +3683,6 @@ Level =
 		},
 		EnterCannon = 
 		{
-			string LevelToLoad = "5a062577a90b5d3b:TheBestBossLevel_InTheWorld",
 		},
 		BossDestroyCannon = 
 		{

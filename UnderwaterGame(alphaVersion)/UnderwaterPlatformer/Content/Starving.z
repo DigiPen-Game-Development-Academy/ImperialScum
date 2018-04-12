@@ -20,7 +20,7 @@ class Starving : ZilchComponent
     {
         if(Hunger.Hunger <= 30 && this.Starve == false && Hunger.Hunger > 0)
         {
-            this.Owner.Transform.Translation = Real3(-17, 0.9, 0);
+            this.Owner.Transform.Translation = Real3(-15.14,6.01,0);
             this.Owner.SpriteText.Text = "Eat Food Soon";
             this.Owner.SpriteText.Visible = true;
         }
