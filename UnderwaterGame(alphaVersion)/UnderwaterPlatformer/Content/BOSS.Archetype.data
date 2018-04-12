@@ -91,13 +91,9 @@ Cog =
 	},
 	EnemyHealth = 
 	{
-		float Health = 75,
+		float Health = 55,
 		Vec4 DamageColor = [1, 0, 0, 1],
 		Vec4 RegularColor = [1, 1, 1, 1],
-	},
-	BossKeyDropping = 
-	{
-		string Key = "5add71002d270676:Key",
 	},
 	Hierarchy = 
 	{
