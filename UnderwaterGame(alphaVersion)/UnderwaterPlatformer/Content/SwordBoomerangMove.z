@@ -24,11 +24,6 @@ class SwordBoomerangMove : ZilchComponent
         this.HangTime = this.StartHangTime;
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
         Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
-        Zero.Connect(this.Owner, Events.CollisionPersisted, this.OnCollisionPersisted);
-    }
-
-    function OnCollisionPersisted(event : CollisionEvent)
-    {
     }
 
     function OnCollisionStarted(event : CollisionEvent)
