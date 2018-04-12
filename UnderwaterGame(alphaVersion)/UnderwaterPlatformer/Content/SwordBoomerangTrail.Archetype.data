@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [35.0969162, 18.143589, 40],
+		Vec3 Translation = [-34.1745071, -12.567522, -10],
 		Vec3 Scale = [0.0360335112, 0.0360335112, 0.0360335112],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -82,6 +82,6 @@ Cog =
 	},
 	SwordBoomerangParticleEffect = 
 	{
-		float Speed = 5,
+		float Speed = 3,
 	},
 },
