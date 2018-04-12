@@ -39,6 +39,9 @@ class PlayerMovement : ZilchComponent
     [Property]
     var KeyDown:Keys;
     
+    [Property]
+    var CheckpointText : Archetype = Archetype.CheckpointText;
+    
     [Property] var SingleJumpSound : SoundCue = SoundCue.SingleJump;
     [Property] var DoubleJumpSound : SoundCue = SoundCue.DoubleJump;
     [Property] var WalkSound : SoundCue;
@@ -102,11 +105,15 @@ class PlayerMovement : ZilchComponent
         
         if(event.OtherObject.Checkpoint != null)
         {
+            var textTarget = this.Space.FindObjectByName("CheckPoint");
+            this.Space.CreateAtPosition(this.CheckpointText,textTarget.Transform.Translation);
             var checkpointPosition = event.OtherObject.Transform.Translation;
 
             checkpointPosition.Y = this.Owner.Transform.Translation.Y;
 
             Checkpoint.RespawnPosition = checkpointPosition;
+            
+            
         }
         
         if(event.OtherObject.Name == "CheckPoint")
@@ -119,6 +126,8 @@ class PlayerMovement : ZilchComponent
     {
         if(event.OtherObject.Region != null)
         this.Swimming = false;
+        
+        //CheckpointText.Destroy;
     }
 
     function OnCollisionPersisted(event : CollisionEvent)
@@ -143,6 +152,7 @@ class PlayerMovement : ZilchComponent
         this.CannonReady = true;
         this.Owner.CapsuleCollider.Ghost = true;
         Inventory.Exists = true;
+        
         }
         
     }
@@ -151,6 +161,7 @@ class PlayerMovement : ZilchComponent
     {   
         if(this.CannonReady == true)
         {
+        Inventory.Exists = false;
         this.CannonReady = false;
         this.Owner.RigidBody.Velocity += Real3(80,40,0);
         this.Owner.RigidBody.DynamicState = RigidBodyDynamicState.Dynamic;
@@ -312,4 +323,4 @@ class GroundChecker : ZilchComponent
     }
   }
 }
-//THIS IS JEFFERY'S SCRIPT////////////////////////////////////////////////////////////d
+//THIS IS JEFFERY'S SCRIPT////////////////////////////////////////////////////////////
