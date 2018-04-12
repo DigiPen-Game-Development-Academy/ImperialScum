@@ -1,7 +1,7 @@
 class VolumeLevev : ZilchComponent
 {
     //Author - Jessica
-    
+    var OnFirstTime : Boolean = true;
    [Static] var SaveVolume : Integer;
     var Timer : Real = 0.3;
     function Initialize(init : CogInitializer)
@@ -13,6 +13,11 @@ class VolumeLevev : ZilchComponent
     {
         if(BossKeyDropping.BossDead == true)
         {
+            if(this.OnFirstTime)
+            {
+                VolumeLevev.SaveVolume = VolumeControls.Number1;
+                this.OnFirstTime = false;
+            }
             if(this.Timer > 0 && this.Owner.SoundEmitter.Volume > 0)
             {
                 this.Timer -= event.Dt;
@@ -24,7 +29,7 @@ class VolumeLevev : ZilchComponent
             }
             if(this.Owner.SoundEmitter.Volume <= 0)
             {
-                VolumeControls.Number1 = 0;
+                this.Owner.SoundEmitter.Volume = 0;
                 BossKeyDropping.BossDead = false;
             }
         }
