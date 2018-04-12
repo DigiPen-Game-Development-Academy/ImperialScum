@@ -104,7 +104,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-1.28286421, -3.57247734, 50],
+			Vec3 Translation = [4.7549181, -4.00682592, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -116,7 +116,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 12.0992832,
+			float Size = 44.3957939,
 		},
 		EditorCameraController = 
 		{
@@ -124,7 +124,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-1.28286421, -3.57247734, -2.30921373e-07],
+			Vec3 LookTarget = [4.7549181, -4.00682592, 3.29987984e-08],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -322,7 +322,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-6.11032867, -1.98724067, 0],
+			Vec3 Translation = [-6.11032867, -3.05590105, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -414,6 +414,7 @@ Level =
 			string StabAnimation = "5a51993f910964dc:Player_StabStraight()",
 			string StabUpAnimation = "5a04e41a1c493bd3:Player_StabUp()",
 			string StabDownAnimation = "5a04f9d330c431da:Player_StabDown()",
+			string DeathAnimation = "5a6186e1f8c0958d:Player_Death",
 			string ThrowAnimation = "5a2d11c157e334b3:PlayerThrow2()",
 			string JumpSound = "",
 			int Lose = 1,
@@ -609,6 +610,9 @@ Level =
 					Vec4 Color3 = [0, 0.369999886, 1, 0.5],
 					Vec4 Color4 = [0.0643999577, 0.0940241069, 0.805000007, 1],
 				},
+				NoParticlesInBaseLevel = 
+				{
+				},
 				Hierarchy = 
 				{
 				},
@@ -638,7 +642,7 @@ Level =
 					SystemChildMode ChildMode = Independent,
 					SystemSpace SystemSpace = WorldSpace,
 					uint DrawOrder = 0,
-					Vec4 Tint = [0, 1, 0.910000086, 1],
+					Vec4 Tint = [0.745000005, 0.69434011, 0.618350029, 0.699999988],
 					float WarmUpTime = 0,
 					ParticleGeometry GeometryMode = Billboarded,
 					ParticleRenderMode RenderMode = Blended,
@@ -860,6 +864,24 @@ Level =
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
 			},
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5add57b20981d06d:GearShark",
+		LinkId = 
+		{
+			uint Id = 14,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0.377235413, 0.286612272, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "GearShark",
 		},
 	},
 },
