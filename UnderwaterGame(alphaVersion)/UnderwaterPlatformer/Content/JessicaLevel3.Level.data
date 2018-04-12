@@ -1229,7 +1229,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-0.848736644, -17.9334888, 50],
+			Vec3 Translation = [4.05381823, -5.1571312, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -1241,7 +1241,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 13.3717842,
+			float Size = 54.2252235,
 		},
 		EditorCameraController = 
 		{
@@ -1249,7 +1249,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-0.848736644, -17.9334888, 4.54126408e-08],
+			Vec3 LookTarget = [4.05381823, -5.1571312, 2.59710106e-07],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -1349,6 +1349,18 @@ Level =
 		ButtonLogicMM = 
 		{
 		},
+		VolumeLevev = 
+		{
+		},
+		SoundEmitter = 
+		{
+			float Volume = 1,
+			float Pitch = 0,
+			float PitchSemitones = 0,
+			bool UsePitchSemitones = false,
+			bool Positional = true,
+			int Version = 1,
+		},
 		Hierarchy = 
 		{
 			Cog = 
@@ -1436,6 +1448,18 @@ Level =
 			string LevelToLoad = "5aacabcb5a25325f:BeginningLevel",
 		},
 		ButtonLogicMM = 
+		{
+		},
+		SoundEmitter = 
+		{
+			float Volume = 1,
+			float Pitch = 0,
+			float PitchSemitones = 0,
+			bool UsePitchSemitones = false,
+			bool Positional = true,
+			int Version = 1,
+		},
+		VolumeLevev = 
 		{
 		},
 		Hierarchy = 

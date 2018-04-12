@@ -249,20 +249,27 @@ class Health : ZilchComponent
         }
         
         
+        //DEATH
         if(Health.CurrentHealth <= 0)
         {
-             NumOfDeaths.NumberOfDeaths += 1;
-            
             var position = this.Owner.Transform.Translation;
-            this.Invincibility = true;
             
-            if(AdvInventory.PlayerInventory["Gears"] > 0
-            && AdvInventory.PlayerInventory["Gears"] < 4)
+            if (this.Owner.PlayerController.Dead == false)
             {
-                while(AdvInventory.PlayerInventory["Gears"] > 0)
+                this.Owner.PlayerController.Dead = true;
+                
+                 NumOfDeaths.NumberOfDeaths += 1;
+                
+                this.Invincibility = true;
+                
+                if(AdvInventory.PlayerInventory["Gears"] > 0
+                && AdvInventory.PlayerInventory["Gears"] < 4)
                 {
-                this.Space.CreateAtPosition(Archetype.Gear, position);
-                AdvInventory.PlayerInventory["Gears"] -= 1;
+                    while(AdvInventory.PlayerInventory["Gears"] > 0)
+                    {
+                    this.Space.CreateAtPosition(Archetype.Gear, position);
+                    AdvInventory.PlayerInventory["Gears"] -= 1;
+                    }
                 }
             }
             else

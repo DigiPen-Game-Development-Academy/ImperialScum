@@ -16,11 +16,17 @@ class SwordBoomerangMove : ZilchComponent
     
     var HangTime:Integer = 0;
     
+    [Property]
+    var SwingSFX:SoundCue;
+    
+    var Timer:Integer = 10;
+    
     [Static]
     var Moving:Boolean = true;
     
     function Initialize(init : CogInitializer)
     {
+        this.Space.SoundSpace.PlayCue(this.SwingSFX);
         this.HangTime = this.StartHangTime;
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
         Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
@@ -50,6 +56,15 @@ class SwordBoomerangMove : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
+        //Timer for Repetitive Noises
+        this.Timer -= 1;
+        
+        if (this.Timer == 0)
+        {
+            this.Timer = 10;
+            this.Space.SoundSpace.PlayCue(this.SwingSFX);
+        }
+        
         //Hang Time Decreasing. Sam did this amazing thing.
         
         if (SwordBoomerangMove.Moving == false && this.HangTime != 0)

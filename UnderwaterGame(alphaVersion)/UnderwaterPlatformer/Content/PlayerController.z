@@ -47,6 +47,9 @@ class PlayerController : ZilchComponent
     [Property]
     var Lose:Integer = 1;
     
+    var LoseTimer:Integer = 60;
+    var Dead:Boolean = false;
+    
     [Property]
     var HorizontalDrag:Real = 10;
         
