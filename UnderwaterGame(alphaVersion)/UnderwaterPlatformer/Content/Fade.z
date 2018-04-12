@@ -1,10 +1,33 @@
 class Fade : ZilchComponent
 {
     [Static]
-    var Color:Real;
+    var WhatLevelToLoad:Level;
+    
+    [Static]
+    var Switch:Boolean = false;
+    
+    var Timer:Real = 1.2;
     
     function Initialize(init : CogInitializer)
     {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        
+        if(Fade.Switch == true)
+        {
+            this.Timer -= event.Dt;
+        }
+        
+        if(this.Timer <= 0)
+        {
+            this.LoadLevel();
+            this.Timer = 1.2;
+            Fade.Switch = false;
+        }
+        
     }
     
     [Static]
@@ -12,9 +35,17 @@ class Fade : ZilchComponent
     {
         var seq = Action.Sequence(object.Actions);
         
+        Fade.WhatLevelToLoad = levelToLoad;
+        Fade.Switch = true;
         Action.Property
            (seq, @object.Sprite.Color, Real4(0,0,0,1), 1, Ease.Linear);
-        whatSpace.LoadLevel(levelToLoad);
+        Action.Delay(seq, 0.2);
+        Action.Property
+           (seq, @object.Sprite.Color, Real4(0,0,0,0), 1, Ease.Linear);
     }
-
+    
+    function LoadLevel()
+    {
+        GoToBase.ThisSpace.LoadLevel(Fade.WhatLevelToLoad);
+    }
 }
