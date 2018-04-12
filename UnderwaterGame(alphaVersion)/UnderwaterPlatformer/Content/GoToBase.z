@@ -4,8 +4,12 @@ class GoToBase : ZilchComponent
     //Heavily edited by Jacob
     [Property] var LevelToLoad : Level = Level.BaseLevel;
     
+    [Static]
+    var ThisSpace:Space;
+    
     function Initialize(init : CogInitializer)
     {
+        GoToBase.ThisSpace = this.Space;
         Zero.Connect(this.Owner, Events.CollisionPersisted, this.OnCollisionPersisted);
     }
 
@@ -14,7 +18,7 @@ class GoToBase : ZilchComponent
         if(event.OtherObject.PlayerController != null)
         {
             Fade.StartFade(this.LevelToLoad, this.Space,
-            this.GameSession.FindSpaceByName("HUD").FindObjectByName("FadeThing"));
+            this.GameSession.FindSpaceByName("HUD").FindObjectByName("Fade"));
         }
     }
 }
