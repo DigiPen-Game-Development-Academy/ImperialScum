@@ -8,7 +8,7 @@ class Gibs : ZilchComponent
     function Initialize(init : CogInitializer)
     {
         var randX = this.RandomGen.DieRoll(20) -10;
-        var randY = this.RandomGen.DieRoll(20) -10;
+        var randY = this.RandomGen.DieRoll(10);
         
         this.Owner.RigidBody.Velocity = Real3(randX,randY,0);
         
