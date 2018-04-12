@@ -1,5 +1,6 @@
 class ButtonLogicMM : ZilchComponent
 {
+    var SoundToPlay : SoundCue = SoundCue.MenuSelect;
     //Author - Jessica
     function Initialize(init : CogInitializer)
     {
@@ -29,6 +30,7 @@ class ButtonLogicMM : ZilchComponent
     function OnMouseEnter(event : ViewportMouseEvent)
     {
         this.Owner.Transform.Scale = Real3(1.1,1.1,1.1);
+        this.Owner.SoundEmitter.PlayCue(this.SoundToPlay);
     }
 
     function OnLogicUpdate(event : UpdateEvent)
