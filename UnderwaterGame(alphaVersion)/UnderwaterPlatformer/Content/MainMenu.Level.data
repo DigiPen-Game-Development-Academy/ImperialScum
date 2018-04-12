@@ -104,7 +104,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [1.78520226, -3.44202614, 90],
+			Vec3 Translation = [32.1461754, 18.1784573, 90],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -116,7 +116,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 36.7880249,
+			float Size = 4.9192071,
 		},
 		EditorCameraController = 
 		{
@@ -124,7 +124,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [1.78520226, -3.44202614, 40],
+			Vec3 LookTarget = [32.1461754, 18.1784573, 40],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -219,18 +219,6 @@ Level =
 		ButtonLogicMM = 
 		{
 		},
-		SoundEmitter = 
-		{
-			float Volume = 1,
-			float Pitch = 0,
-			float PitchSemitones = 0,
-			bool UsePitchSemitones = true,
-			bool Positional = true,
-			int Version = 1,
-		},
-		VolumeLevev = 
-		{
-		},
 		Hierarchy = 
 		{
 			Cog = 
@@ -320,18 +308,6 @@ Level =
 		ButtonLogicMM = 
 		{
 		},
-		SoundEmitter = 
-		{
-			float Volume = 1,
-			float Pitch = 0,
-			float PitchSemitones = 0,
-			bool UsePitchSemitones = false,
-			bool Positional = true,
-			int Version = 1,
-		},
-		VolumeLevev = 
-		{
-		},
 		Hierarchy = 
 		{
 			Cog = 
@@ -418,18 +394,6 @@ Level =
 		{
 		},
 		ButtonLogicMM = 
-		{
-		},
-		SoundEmitter = 
-		{
-			float Volume = 1,
-			float Pitch = 0,
-			float PitchSemitones = 0,
-			bool UsePitchSemitones = false,
-			bool Positional = true,
-			int Version = 1,
-		},
-		VolumeLevev = 
 		{
 		},
 		Hierarchy = 
@@ -826,6 +790,114 @@ Level =
 		Named = 
 		{
 			string Name = "Bullet",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a2e3b8eb391bd28:SwordBoomerangTrail",
+		LinkId = 
+		{
+			uint Id = 18,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [35.0969162, 18.143589, 40],
+			Vec3 Scale = [0.0360335112, 0.0360335112, 0.0360335112],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "BasicParticleEffect",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a2e3b8eb391bd28:SwordBoomerangTrail",
+		LinkId = 
+		{
+			uint Id = 19,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [34.5740089, 17.9208679, 40],
+			Vec3 Scale = [0.0360335112, 0.0360335112, 0.0360335112],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "BasicParticleEffect",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a2e3b8eb391bd28:SwordBoomerangTrail",
+		LinkId = 
+		{
+			uint Id = 20,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [35.0969162, 18.143589, 40],
+			Vec3 Scale = [0.0360335112, 0.0360335112, 0.0360335112],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "BasicParticleEffect",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a2e3b8eb391bd28:SwordBoomerangTrail",
+		LinkId = 
+		{
+			uint Id = 21,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [34.5836945, 17.9789696, 40],
+			Vec3 Scale = [0.0360335112, 0.0360335112, 0.0360335112],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "BasicParticleEffect",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5aae4c3cb5c567f8:SwordBoomerang",
+		LinkId = 
+		{
+			uint Id = 22,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [30.1320267, 17.3940849, 40],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "SwordBoomerang",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a519d1b4787a0fe:Spear",
+		LinkId = 
+		{
+			uint Id = 23,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [33.037056, 19.7278137, 40],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Spear",
 		},
 	},
 },
