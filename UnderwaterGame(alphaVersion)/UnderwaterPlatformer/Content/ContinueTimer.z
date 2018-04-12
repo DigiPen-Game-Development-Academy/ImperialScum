@@ -8,6 +8,10 @@ class ContinueTimer : ZilchComponent
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
         BackgroundMusic.NoDelay = true;
+        if(ContinueTimer.LevelNumber <= 5)
+        this.Owner.SpriteText.Text = "`ContinueTimer.LevelNumber`/5";
+        if(ContinueTimer.LevelNumber > 5)
+        this.Owner.SpriteText.Text = "5/5";
     }
 
     function OnLogicUpdate(event : UpdateEvent)
