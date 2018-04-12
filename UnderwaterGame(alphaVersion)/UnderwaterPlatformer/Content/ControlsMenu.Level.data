@@ -1179,6 +1179,18 @@ Level =
 				{
 					string LevelToLoad = "5a5618f4f348dab3:MainMenu",
 				},
+				SoundEmitter = 
+				{
+					float Volume = 1,
+					float Pitch = 0,
+					float PitchSemitones = 0,
+					bool UsePitchSemitones = false,
+					bool Positional = true,
+					int Version = 1,
+				},
+				VolumeLevev = 
+				{
+				},
 				Hierarchy = 
 				{
 					Cog = 
