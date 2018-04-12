@@ -104,7 +104,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-1.95971549, 2.32816195, 50],
+			Vec3 Translation = [1.08042061, 0.131999552, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -116,7 +116,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 22.046381,
+			float Size = 26.9274921,
 		},
 		EditorCameraController = 
 		{
@@ -124,7 +124,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-1.95971549, 2.32816195, -6.91373373e-07],
+			Vec3 LookTarget = [1.08042061, 0.131999552, -6.91373373e-07],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -392,9 +392,6 @@ Level =
 			string AnimationName = "5a4b92cc49d93be2:LoadingAnime2",
 			AnimPlayMode PlayMode = PlayOnce,
 		},
-		ContinueTimer = 
-		{
-		},
 	},
 	Cog = 
 	{
@@ -431,6 +428,138 @@ Level =
 		},
 		UnFade = 
 		{
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 10,
+		},
+		Named = 
+		{
+			string Name = "LoadingText",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-4.98308611, -2.97525048, 0],
+			Vec3 Scale = [1.54415357, 1.54415357, 1.54415357],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		SpriteText = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [0.152649999, 0.710000038, 0.359408975, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string FontName = "5a0f895ab1e49e19:DraftGameFont",
+			uint FontSize = 16,
+			string Text = "You've finished:",
+			TextAlign Align = Center,
+			float PixelsPerUnit = 16,
+			bool Smoothing = false,
+		},
+		UnFade = 
+		{
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 11,
+		},
+		Named = 
+		{
+			string Name = "LoadingText",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [7.4595294, -2.97525048, 0],
+			Vec3 Scale = [1.54415357, 1.54415357, 1.54415357],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		SpriteText = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [0.152649999, 0.710000038, 0.359408975, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string FontName = "5a0f895ab1e49e19:DraftGameFont",
+			uint FontSize = 16,
+			string Text = "Levels",
+			TextAlign Align = Center,
+			float PixelsPerUnit = 16,
+			bool Smoothing = false,
+		},
+		UnFade = 
+		{
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 12,
+		},
+		Named = 
+		{
+			string Name = "LoadingText",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [2.86904955, -2.97525048, 0],
+			Vec3 Scale = [1.54415357, 1.54415357, 1.54415357],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		SpriteText = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string FontName = "5a0f895ab1e49e19:DraftGameFont",
+			uint FontSize = 16,
+			string Text = "0/5",
+			TextAlign Align = Center,
+			float PixelsPerUnit = 16,
+			bool Smoothing = false,
+		},
+		UnFade = 
+		{
+		},
+		ContinueTimer = 
+		{
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a1a8d25bc1699ce:TheMouseCursor",
+		LinkId = 
+		{
+			uint Id = 13,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-4.0396843, -0.683499813, 30],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "MouseCursor",
 		},
 	},
 },

@@ -265,6 +265,8 @@ class Health : ZilchComponent
                 
                  NumOfDeaths.NumberOfDeaths += 1;
                 
+                this.InvincibilityTimer = 3;
+                
                 this.Invincibility = true;
                 
                     if(AdvInventory.PlayerInventory["Gears"] >= 0
