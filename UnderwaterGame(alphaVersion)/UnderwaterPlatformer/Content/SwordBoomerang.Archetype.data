@@ -53,6 +53,7 @@ Cog =
 		int Speed = 30,
 		int ReturnSpeed = 30,
 		int StartHangTime = 30,
+		string SwingSFX = "5a61bfb7a4ce49e7:BoomerangSpin",
 	},
 	IgnoreSpaceEffects = 
 	{

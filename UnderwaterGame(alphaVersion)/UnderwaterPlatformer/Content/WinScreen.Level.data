@@ -253,6 +253,18 @@ Level =
 		ButtonLogicMM = 
 		{
 		},
+		VolumeLevev = 
+		{
+		},
+		SoundEmitter = 
+		{
+			float Volume = 1,
+			float Pitch = 0,
+			float PitchSemitones = 0,
+			bool UsePitchSemitones = false,
+			bool Positional = true,
+			int Version = 1,
+		},
 		Hierarchy = 
 		{
 			Cog = 

@@ -104,7 +104,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [23.8268452, 1.03796709, 50],
+			Vec3 Translation = [-1.34833229, -1.26590252, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -116,7 +116,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 6.6402359,
+			float Size = 54.8811722,
 		},
 		EditorCameraController = 
 		{
@@ -124,7 +124,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [23.8268452, 1.03796709, 1.3047877e-06],
+			Vec3 LookTarget = [-1.34833229, -1.26590252, 9.29651307e-08],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -1500,6 +1500,18 @@ Level =
 		{
 			string Slam = "5a6de2f77b0d1058:ShopSlam",
 			string Flex = "5a6de6c19e9512b5:ShopWeight",
+		},
+		SoundEmitter = 
+		{
+			float Volume = 1,
+			float Pitch = 0,
+			float PitchSemitones = 0,
+			bool UsePitchSemitones = false,
+			bool Positional = true,
+			int Version = 1,
+		},
+		VolumeLevev = 
+		{
 		},
 	},
 	Cog = 
@@ -3011,6 +3023,10 @@ Level =
 			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
 			Vec3 Offset = [0, 0, 0],
 			Vec3 Size = [0.5, 0.5, 0.5],
+		},
+		AmbiancePlayer = 
+		{
+			string BackgroundAmbiance = "5a1adbdd4c268f87:BaseAmbiance",
 		},
 	},
 	Cog = 
