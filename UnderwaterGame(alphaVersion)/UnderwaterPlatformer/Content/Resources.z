@@ -38,7 +38,7 @@ class Resources : ZilchComponent
 
     function OnCollisionPersisted(event : CollisionEvent)
     {
-        if(event.OtherObject.Name == ("DefaultTile"))
+        if(event.OtherObject.Name == ("DefaultTile") || event.OtherObject.JaggedRock != null)
         this.Owner.SphereCollider.Ghost = false;
         
         
