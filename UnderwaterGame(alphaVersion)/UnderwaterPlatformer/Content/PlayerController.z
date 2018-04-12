@@ -37,6 +37,9 @@ class PlayerController : ZilchComponent
     var StabDownAnimation:SpriteSource;
     
     [Property]
+    var DeathAnimation:SpriteSource;
+    
+    [Property]
     var ThrowAnimation:SpriteSource;
     var ThrowTime:Real = 0.2;
     
@@ -66,6 +69,7 @@ class PlayerController : ZilchComponent
             this.FallAnimation = SpriteSource.Copper_Jump002;
             this.ThrowAnimation = SpriteSource.Copper_Throw1;
             this.WalkingAnimation = SpriteSource.Copper_Walk1;
+            this.DeathAnimation = SpriteSource.Copper_Death;
         }
         else if(AdvInventory.PlayerInventory["ArmorVolcano"] >= 1)
         {
@@ -78,6 +82,7 @@ class PlayerController : ZilchComponent
             this.FallAnimation = SpriteSource.Volcano_Jump002;
             this.ThrowAnimation = SpriteSource.Volcano_Throw;
             this.WalkingAnimation = SpriteSource.Volcano_Walk;
+            this.DeathAnimation = SpriteSource.Volcano_Death;
         }
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
         
@@ -117,6 +122,13 @@ class PlayerController : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
+        //Death Timer
+        if (this.Dead == true)
+        {
+            this.LoseTimer -= 1;
+        }
+        
+        //idk what this is
         var x = this.Owner.RigidBody.Velocity.X;
         
         //Horizontal Drag

@@ -34,6 +34,9 @@ class Health : ZilchComponent
     
     [Property] var BaseLevelLoad : Level = Level.BaseLevel;
     
+    //This is for scattering dropped items
+    var RandomDieRoll:Real;
+    
     
     var Gear : Archetype = Archetype.Gear;
     var Food : Archetype = Archetype.Food;
@@ -59,7 +62,7 @@ class Health : ZilchComponent
 
     function OnCollisionStarted(event : CollisionEvent)
     {
-        if(event.OtherObject.BulletLogic != null && Health.CurrentHealth > 0 && this.Invincibility == false)
+        if(event.OtherObject.BulletLogic != null && Health.CurrentHealth > 0 && this.Invincibility == false && this.Owner.PlayerController.Dead == false)
         {
              //This is Elena's script for armor working/////////////////////////
             if(AdvInventory.PlayerInventory["ArmorVolcano"] >= 1)
@@ -257,41 +260,78 @@ class Health : ZilchComponent
             if (this.Owner.PlayerController.Dead == false)
             {
                 this.Owner.PlayerController.Dead = true;
+                this.Owner.RigidBody.Static = true;
+                this.Owner.Sprite.Visible = false;
+                
+                this.Space.CreateAtPosition(Archetype.ExplodeBubbles, this.Owner.Transform.Translation); 
+                this.Space.CreateAtPosition(Archetype.LegendaryExplode, this.Owner.Transform.Translation);
+                this.Space.CreateAtPosition(Archetype.PlayerDeath, this.Owner.Transform.Translation);
                 
                  NumOfDeaths.NumberOfDeaths += 1;
                 
                 this.Invincibility = true;
                 
-                if(AdvInventory.PlayerInventory["Gears"] > 0
-                && AdvInventory.PlayerInventory["Gears"] < 4)
-                {
-                    while(AdvInventory.PlayerInventory["Gears"] > 0)
+                    if(AdvInventory.PlayerInventory["Gears"] > 0
+                    && AdvInventory.PlayerInventory["Gears"] < 11)
                     {
-                    this.Space.CreateAtPosition(Archetype.Gear, position);
-                    AdvInventory.PlayerInventory["Gears"] -= 1;
+                        while(AdvInventory.PlayerInventory["Gears"] > 0)
+                        {
+                        var rand = new Random();
+                        this.RandomDieRoll = rand.DieRoll(10);
+                        var randomVelocityNegative = rand.DieRoll(10) - 5;
+                        var randomVelocityPositive = rand.DieRoll(10) - 5;
+                        
+                        var treasure = this.Space.CreateAtPosition(Archetype.Gear, position);
+                        AdvInventory.PlayerInventory["Gears"] -= 1;
+                        
+                        treasure.RigidBody.Velocity = Real3(randomVelocityNegative,randomVelocityPositive, 0);
+                        }
+                    }
+                
+                else
+                {
+                    for(var i = 10; i > 0; --i)
+                    {
+                        var rand = new Random();
+                        this.RandomDieRoll = rand.DieRoll(10);
+                        var randomVelocityNegative = rand.DieRoll(10) - 5;
+                        var randomVelocityPositive = rand.DieRoll(10) - 5;
+                        
+                        var treasure = this.Space.CreateAtPosition(Archetype.Gear, position);
+                        AdvInventory.PlayerInventory["Gears"] -= 1;
+                        
+                        treasure.RigidBody.Velocity = Real3(randomVelocityNegative,randomVelocityPositive, 0);
                     }
                 }
-            }
-            else
-            {
-                for(var i = 3; i > 0; --i)
+                
+                if(AdvInventory.PlayerInventory["HealthPotion"] > 0)
                 {
-                    this.Space.CreateAtPosition(Archetype.Gear, position);
-                    AdvInventory.PlayerInventory["Gears"] -= 1;
+                    var rand = new Random();
+                    this.RandomDieRoll = rand.DieRoll(10);
+                    var randomVelocityNegative = rand.DieRoll(10) - 5;
+                    var randomVelocityPositive = rand.DieRoll(10) - 5;
+                    
+                    var treasure = this.Space.CreateAtPosition(Archetype.HealthPotion, position);
+                        AdvInventory.PlayerInventory["HealthPotion"] -= 1;
+                    treasure.RigidBody.Velocity = Real3(randomVelocityNegative,randomVelocityPositive, 0);
                 }
             }
-            
-            if(AdvInventory.PlayerInventory["HealthPotion"] > 0)
+                
+            //Respawn
+            if (this.Owner.PlayerController.LoseTimer <= 0)
             {
-                this.Space.CreateAtPosition(Archetype.HealthPotion, position);
-                    AdvInventory.PlayerInventory["HealthPotion"] -= 1;
+                this.Owner.Transform.Translation = Checkpoint.RespawnPosition;
+                
+                Health.CurrentHealth = 20;
+                
+                
+                Hunger.Hunger = Hunger.MaxHunger;
+                
+                this.Owner.PlayerController.Dead = false;
+                this.Owner.PlayerController.LoseTimer = 60;
+                this.Owner.RigidBody.Static = false;
+                this.Owner.Sprite.Visible = true;
             }
-                
-                
-            
-            this.Owner.Transform.Translation = Checkpoint.RespawnPosition;
-            Health.CurrentHealth = Health.MaxHealth;
-            Hunger.Hunger = Hunger.MaxHunger;
             
         }
     }
