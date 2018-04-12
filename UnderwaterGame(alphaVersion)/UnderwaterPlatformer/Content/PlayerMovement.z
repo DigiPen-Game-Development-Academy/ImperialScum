@@ -58,6 +58,8 @@ class PlayerMovement : ZilchComponent
     
     var TouchingGround:Boolean;
     
+    var CannonReady:Boolean = false;
+    
     function Initialize(init : CogInitializer)
     {   
         PlayerMovement.Component = this;
@@ -135,10 +137,47 @@ class PlayerMovement : ZilchComponent
         if(this.Owner.GroundChecker.Grounded == false)
         this.TouchingGround = false;
         
+        if(event.OtherObject.Name == ("CannonBarrel") && Zero.Keyboard.KeyIsPressed(Keys.S))
+        {
+        this.Owner.RigidBody.DynamicState = RigidBodyDynamicState.Static;
+        this.CannonReady = true;
+        this.Owner.CapsuleCollider.Ghost = true;
+        Inventory.Exists = true;
+        }
+        
+    }
+    
+    function Launch()
+    {   
+        if(this.CannonReady == true)
+        {
+        this.CannonReady = false;
+        this.Owner.RigidBody.Velocity += Real3(80,40,0);
+        this.Owner.RigidBody.DynamicState = RigidBodyDynamicState.Dynamic;
+        }
     }
 
     function OnLogicUpdate(event : UpdateEvent)
     {
+        
+        if(this.CannonReady == true)
+        {
+            this.Owner.Sprite.FlipX = false;
+            this.Owner.Transform.Translation=
+            this.Space.FindObjectByName("OverHere").Transform.WorldTranslation + Real3(0,-0.3,-3);
+            
+             var seq = Action.Sequence(this.Owner.Actions);
+                
+            Action.Property
+                (seq, @this.Owner.Transform.EulerAngles, Real3(0,0,-1), 1.1, Ease.Linear);
+            Action.Delay
+                (seq, 1);
+            Action.Call
+                (seq, this.Launch);
+                
+            return;
+            
+        }
         
         var direction = Real3.Zero;
         
@@ -236,6 +275,7 @@ class PlayerMovement : ZilchComponent
         this.Owner.RigidBody.Velocity = 
         Math.Lerp(this.Owner.RigidBody.Velocity, direction * this.Speed , event.Dt); 
     }
+    
     
 
 }
