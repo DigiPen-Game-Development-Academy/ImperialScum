@@ -101,8 +101,10 @@ class StoreCollide : ZilchComponent
     function OnCollisionStarted(event : CollisionEvent)
     {
         if(event.OtherObject.PlayerController != null && this.Owner.Name == "Shop")
-        StoreCollide.CollideWithShop = true;
-        
+        {
+            StoreCollide.CollideWithShop = true;
+            this.Owner.SoundEmitter.PlayCue(SoundCue.HEY);
+        }
         if(event.OtherObject.PlayerController != null && this.Owner.Name == "Upgrade")
         StoreCollide.CollideWithUpgrade = true;
     }
