@@ -10,6 +10,9 @@ class TreasureChest : ZilchComponent
     
     var Spawn:Archetype;
     
+    [Property]
+    var BreakSFX:SoundCue = SoundCue.HitSound;
+    
     function Initialize(init : CogInitializer)
     {
         var rand = new Random();
@@ -53,7 +56,6 @@ class TreasureChest : ZilchComponent
                 if(randomLoot > 99)
                 this.RareItem();
                 
-                
                 var treasure = this.Space.CreateAtPosition(this.Spawn,
                 this.Owner.Transform.Translation);
                 
@@ -79,6 +81,11 @@ class TreasureChest : ZilchComponent
             if(this.RandomDieRoll <= 0)
             {
                 this.Owner.Destroy();
+                
+                this.Space.SoundSpace.PlayCue(this.BreakSFX);
+                
+                this.Space.CreateAtPosition(Archetype.ExplodeBubbles, this.Owner.Transform.Translation); 
+                this.Space.CreateAtPosition(Archetype.HitExplode, this.Owner.Transform.Translation);
             }
         }
     }
