@@ -30,6 +30,9 @@ class EnterCannon : ZilchComponent
     
     function LoadLevelNow()
     {
+        if(this.Owner.Name == ("BossCannonBarrel"))
+        this.Space.LoadLevel(Level.TheBestBossLevel_InTheWorld);
+        else
         this.Space.LoadLevel(Level.LoadingLevel);
     }
 
