@@ -1,9 +1,9 @@
 SoundCue = 
 {
 	SoundPlayMode PlayMode = Single,
-	float Volume = 0.5,
+	float Volume = 1.00999999,
 	float VolumeVariation = 0,
-	float VolumeDB = -6.02060032,
+	float VolumeDB = 0.086427398,
 	bool UseVolumeDB = false,
 	float VolumeDBVariation = 0,
 	float Pitch = 0,
@@ -18,7 +18,7 @@ SoundCue =
 	Array Sounds = 
 	[
 		{
-			string SoundName = "5a4ba9488635bbb3:PlayerHurt",
+			string SoundName = "5a6195685858ca4d:PlayerHurt_0",
 			string GeneratedSoundName = "55017c595ef88bf0:DefaultGeneratedSound",
 			WhichSoundType WhichToUse = FromFile,
 			float Weight = 1,

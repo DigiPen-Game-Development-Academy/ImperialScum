@@ -22,7 +22,7 @@ class EnemyHealth : ZilchComponent
     var HitSFX:SoundCue = SoundCue.HitSound;
     
     [Property]
-    var KillSFX:SoundCue = SoundCue.HitSound;
+    var KillSFX:SoundCue = SoundCue.Kill;
     
     var Timer:Real = 0.2;
     function Initialize(init : CogInitializer)
