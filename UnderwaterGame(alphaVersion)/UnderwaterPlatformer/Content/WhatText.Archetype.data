@@ -32,8 +32,8 @@ Cog =
 		uint FontSize = 30,
 		string Text = "Sprite Text...",
 		TextAlign Align = Left,
-		float PixelsPerUnit = 64,
-		bool Smoothing = true,
+		float PixelsPerUnit = 45,
+		bool Smoothing = false,
 	},
 	WhatText = 
 	{

@@ -6,7 +6,6 @@ class InventorySlot : ZilchComponent
 {
     [Property] var ItemIndex : Integer;
     
-    
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
@@ -33,8 +32,26 @@ class InventorySlot : ZilchComponent
          }
          ++index;
         }
+        
         this.Owner.Sprite.Visible = false;
         this.Owner.FindChildByName("ItemCount").SpriteText.Text = (" ");
+    }
+}
+class LegendarySparkle : ZilchComponent
+{
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        if(this.Owner.Parent.Sprite.SpriteSource.Name == ("Inv_Ring_Regen")
+        || this.Owner.Parent.Sprite.SpriteSource.Name == ("Inv_Ring_Jump")
+        || this.Owner.Parent.Sprite.SpriteSource.Name == ("Inv_VolcanoArmor"))
+        this.Owner.SphericalParticleEmitter.Active = true;
+        else
+        this.Owner.SphericalParticleEmitter.Active = false;
         
     }
 }

@@ -30,18 +30,24 @@ class LagControl : ZilchComponent
     {
         this.Active = true;
         
-        if(this.Owner.EnemyController == null)
+        if(this.Owner.BallistaSnail != null)
         Zero.Connect(this.Space, Events.LogicUpdate, this.Owner.BallistaSnail.OnLogicUpdate);
-        else
+        else if(this.Owner.EnemyController != null)
         Zero.Connect(this.Space, Events.LogicUpdate, this.Owner.EnemyController.OnLogicUpdate);
+        else if(this.Owner.GearSharkFollow != null)
+        Zero.Connect(this.Space, Events.LogicUpdate, this.Owner.GearSharkFollow.OnLogicUpdate);
+        
+        
     }
     function Deactivate()
     {
         this.Active = false;
-        if(this.Owner.EnemyController == null)
+        if(this.Owner.BallistaSnail != null)
         Zero.Disconnect(this.Space, Events.LogicUpdate, this.Owner.BallistaSnail);
-        else
+        else if(this.Owner.EnemyController != null)
         Zero.Disconnect(this.Space, Events.LogicUpdate, this.Owner.EnemyController);
+        else if(this.Owner.GearSharkFollow != null)
+        Zero.Disconnect(this.Space, Events.LogicUpdate, this.Owner.GearSharkFollow);
     }
 
     function OnLogicUpdate(event : UpdateEvent)
