@@ -14,6 +14,7 @@ class Shockwave : ZilchComponent
         {
         var position = this.Owner.Transform.Translation;
         this.Space.CreateAtPosition(Archetype.Shockwave, position);
+        this.Space.CreateAtPosition(Archetype.HitExplode, position);
         
         }
     }

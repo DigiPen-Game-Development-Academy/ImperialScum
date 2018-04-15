@@ -7,6 +7,11 @@ var Timer : Real = 0;
 
 var Player : Cog;
 
+var SlimyFeet : Cog;
+
+[Property]
+var SlimeSFX:SoundCue;
+
 [Property] 
 var DamagePerSecond : Real = 0.5;
 
@@ -32,6 +37,20 @@ var OldJumpSpeed : Real;
             this.OldSpeed = this.Player.PlayerMovement.Speed;
             
             this.OldJumpSpeed = this.Player.PlayerMovement.JumpSpeed;
+            
+            //Give the player Slimy Feet
+            this.SlimyFeet = this.Space.CreateAtPosition(Archetype.Slime_TrapFeet,this.Player.Transform.Translation);
+            this.SlimyFeet.JumpToPlayer.Player = this.Player;
+            
+            this.Space.SoundSpace.PlayCue(this.SlimeSFX);
+            
+            this.Space.CreateAtPosition(Archetype.HitExplode,this.Owner.Transform.Translation);
+            
+            //Particles
+            for (var i = 0; i != 4; i += 1)
+            {
+                this.Space.CreateAtPosition(Archetype.SlimeGib, this.Owner.Transform.Translation); 
+            }
         }
     }
 
@@ -50,6 +69,15 @@ var OldJumpSpeed : Real;
         }
         if(this.Timer <= 0 && this.Player != null)
         {
+            this.Space.CreateAtPosition(Archetype.HitExplode,this.Player.Transform.Translation);
+            
+            //Particles
+            for (var i = 0; i != 4; i += 1)
+            {
+                this.Space.CreateAtPosition(Archetype.SlimeGib, this.Player.Transform.Translation); 
+            }
+            
+            
             this.Player.PlayerMovement.Speed = this.OldSpeed;
             this.Player.PlayerMovement.JumpSpeed = this.OldJumpSpeed;
             this.Player = null;

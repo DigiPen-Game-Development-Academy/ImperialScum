@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-1.96826363, -10.4770794, 0],
+		Vec3 Translation = [-2.7744832, -3.55951691, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -28,7 +28,7 @@ Cog =
 		BlendMode BlendMode = Alpha,
 		SpriteGeometryMode GeometryMode = ZPlane,
 		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-		string SpriteSource = "5a0fb966c2cf3593:Trap_SlimePod",
+		string SpriteSource = "5a78a21756d939a5:SlimePod_Bounce",
 		bool RenderMask = false,
 		bool FlipX = false,
 		bool FlipY = false,
@@ -48,6 +48,7 @@ Cog =
 	},
 	SnatchTrap = 
 	{
+		string SlimeSFX = "5a74d439b2fb7510:Walk",
 		float DamagePerSecond = 0.5,
 	},
 },
