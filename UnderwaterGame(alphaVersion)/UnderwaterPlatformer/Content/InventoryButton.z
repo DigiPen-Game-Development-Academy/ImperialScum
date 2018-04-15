@@ -64,11 +64,14 @@ var DeleteString:Boolean = false;
         }
         if(this.Owner.Sprite.SpriteSource.Name == ("Inv_ArmorCopper"))
         {
-             InventoryButton.WhatItem = "    Copper Armor";
+             InventoryButton.WhatItem = "    Copper Armor." ;
+             "It decreases damage you take";
         }
          if(this.Owner.Sprite.SpriteSource.Name == ("Inv_ArmorVolcano"))
         {
-             InventoryButton.WhatItem = "    Amethyst armor";
+             InventoryButton.WhatItem = "    Amethyst armor."; 
+            "     Better version of copper armor." ;
+        
         }
         
 
