@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-4.15370846, -1.51542962, 0],
+		Vec3 Translation = [27.486227, 6.4764185, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -68,7 +68,7 @@ Cog =
 	},
 	Spin = 
 	{
-		float RotationSpeed = 500,
+		float RotationSpeed = 800,
 		string SoundToPlay = "5a73fcfb7f3fbd5e:SawBlade",
 	},
 	Hierarchy = 

@@ -165,6 +165,8 @@ class PlayerMovement : ZilchComponent
         this.CannonReady = false;
         this.Owner.RigidBody.Velocity += Real3(80,40,0);
         this.Owner.RigidBody.DynamicState = RigidBodyDynamicState.Dynamic;
+        
+        this.Space.CreateAtPosition(Archetype.PlayerCannon, this.Owner.Transform.Translation);
         }
     }
 

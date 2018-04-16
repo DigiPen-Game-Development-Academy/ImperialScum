@@ -7,7 +7,7 @@ class BossDestroyCannon : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-        if(ContinueTimer.LevelNumber <= 4)
+        if(ContinueTimer.LevelNumber <= 0)
         {
             this.Owner.Destroy();
         }
