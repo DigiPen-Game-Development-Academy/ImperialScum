@@ -32,7 +32,7 @@ class Resources : ZilchComponent
         this.Timer -= event.Dt;
         }
         
-        if(Zero.Keyboard.KeyIsPressed(Keys.L))
+        if(Zero.Keyboard.KeyIsDown(Keys.Alt) && Zero.Keyboard.KeyIsDown(Keys.L))
         AdvInventory.PlayerInventory["Gears"] += 10;
     }
 
