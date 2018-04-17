@@ -104,7 +104,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [2.91510439, 0.251574129, 50],
+			Vec3 Translation = [-40.8832436, 0.0775529891, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -116,7 +116,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 54.8812256,
+			float Size = 30.1194572,
 		},
 		EditorCameraController = 
 		{
@@ -124,7 +124,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [2.91510439, 0.251574129, 3.48377569e-07],
+			Vec3 LookTarget = [-40.8832436, 0.0775529891, 3.48377569e-07],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -199,7 +199,7 @@ Level =
 			string Text = "Thanks for playing",
 			TextAlign Align = Left,
 			float PixelsPerUnit = 64,
-			bool Smoothing = true,
+			bool Smoothing = false,
 		},
 		AnimationGraph = 
 		{
@@ -247,7 +247,7 @@ Level =
 					string Text = "Tech Director:",
 					TextAlign Align = Left,
 					float PixelsPerUnit = 64,
-					bool Smoothing = true,
+					bool Smoothing = false,
 				},
 				Hierarchy = 
 				{
@@ -282,7 +282,7 @@ Level =
 							string Text = "Jacob Burke",
 							TextAlign Align = Left,
 							float PixelsPerUnit = 64,
-							bool Smoothing = true,
+							bool Smoothing = false,
 						},
 					},
 				},
@@ -318,7 +318,7 @@ Level =
 					string Text = "Producer:",
 					TextAlign Align = Left,
 					float PixelsPerUnit = 64,
-					bool Smoothing = true,
+					bool Smoothing = false,
 				},
 				Hierarchy = 
 				{
@@ -353,7 +353,7 @@ Level =
 							string Text = "Jessica Alberg",
 							TextAlign Align = Left,
 							float PixelsPerUnit = 64,
-							bool Smoothing = true,
+							bool Smoothing = false,
 						},
 					},
 				},
@@ -389,7 +389,7 @@ Level =
 					string Text = "Game Designer:",
 					TextAlign Align = Left,
 					float PixelsPerUnit = 64,
-					bool Smoothing = true,
+					bool Smoothing = false,
 				},
 				Hierarchy = 
 				{
@@ -424,7 +424,7 @@ Level =
 							string Text = "Elena Schefer",
 							TextAlign Align = Left,
 							float PixelsPerUnit = 64,
-							bool Smoothing = true,
+							bool Smoothing = false,
 						},
 					},
 				},
@@ -460,7 +460,7 @@ Level =
 					string Text = "Game sponsored by: Disco.ac",
 					TextAlign Align = Left,
 					float PixelsPerUnit = 64,
-					bool Smoothing = true,
+					bool Smoothing = false,
 				},
 				Hierarchy = 
 				{
@@ -495,7 +495,7 @@ Level =
 							string Text = "Free lightweight music management",
 							TextAlign Align = Left,
 							float PixelsPerUnit = 64,
-							bool Smoothing = true,
+							bool Smoothing = false,
 						},
 					},
 					Cog = 
@@ -529,7 +529,7 @@ Level =
 							string Text = "Programs used:",
 							TextAlign Align = Left,
 							float PixelsPerUnit = 64,
-							bool Smoothing = true,
+							bool Smoothing = false,
 						},
 					},
 					Cog = 
@@ -563,7 +563,7 @@ Level =
 							string Text = "Art = Paint, Piskel",
 							TextAlign Align = Left,
 							float PixelsPerUnit = 64,
-							bool Smoothing = true,
+							bool Smoothing = false,
 						},
 					},
 					Cog = 
@@ -597,7 +597,7 @@ Level =
 							string Text = "Team Communication = Discord",
 							TextAlign Align = Left,
 							float PixelsPerUnit = 64,
-							bool Smoothing = true,
+							bool Smoothing = false,
 						},
 					},
 					Cog = 
@@ -631,7 +631,7 @@ Level =
 							string Text = "Document Sharing = Github",
 							TextAlign Align = Left,
 							float PixelsPerUnit = 64,
-							bool Smoothing = true,
+							bool Smoothing = false,
 						},
 					},
 					Cog = 
@@ -665,7 +665,7 @@ Level =
 							string Text = "Music = FL Studio 12,",
 							TextAlign Align = Left,
 							float PixelsPerUnit = 64,
-							bool Smoothing = true,
+							bool Smoothing = false,
 						},
 					},
 					Cog = 
@@ -699,7 +699,7 @@ Level =
 							string Text = "Main Platform = Zero Engine",
 							TextAlign Align = Left,
 							float PixelsPerUnit = 64,
-							bool Smoothing = true,
+							bool Smoothing = false,
 						},
 					},
 					Cog = 
@@ -733,7 +733,7 @@ Level =
 							string Text = "Sound = BFXR,",
 							TextAlign Align = Left,
 							float PixelsPerUnit = 64,
-							bool Smoothing = true,
+							bool Smoothing = false,
 						},
 					},
 				},
@@ -769,7 +769,7 @@ Level =
 					string Text = "And Digipen, Institute of Technology",
 					TextAlign Align = Left,
 					float PixelsPerUnit = 64,
-					bool Smoothing = true,
+					bool Smoothing = false,
 				},
 				Hierarchy = 
 				{
@@ -804,7 +804,7 @@ Level =
 							string Text = "Dedicated leaders in Game Design Education",
 							TextAlign Align = Left,
 							float PixelsPerUnit = 64,
-							bool Smoothing = true,
+							bool Smoothing = false,
 						},
 					},
 				},
@@ -840,7 +840,7 @@ Level =
 					string Text = "Art Director:",
 					TextAlign Align = Left,
 					float PixelsPerUnit = 64,
-					bool Smoothing = true,
+					bool Smoothing = false,
 				},
 				Hierarchy = 
 				{
@@ -875,7 +875,7 @@ Level =
 							string Text = "Sam Stearns",
 							TextAlign Align = Left,
 							float PixelsPerUnit = 64,
-							bool Smoothing = true,
+							bool Smoothing = false,
 						},
 					},
 				},
@@ -892,214 +892,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [13.8359671, 0.49428302, 0],
-					Vec3 Scale = [0.379145175, 0.379145175, 0.379145175],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				SpriteText = 
-				{
-					bool Visible = true,
-					bool VisibilityCulling = true,
-					bool VisibilityEvents = true,
-					bool CastShadows = false,
-					Vec4 Color = [0.894117713, 0.572548985, 0.0901960731, 1],
-					BlendMode BlendMode = Alpha,
-					SpriteGeometryMode GeometryMode = ZPlane,
-					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string FontName = "5a0f895ab1e49e19:DraftGameFont",
-					uint FontSize = 30,
-					string Text = "Tech Team:",
-					TextAlign Align = Left,
-					float PixelsPerUnit = 64,
-					bool Smoothing = true,
-				},
-				Hierarchy = 
-				{
-					Cog = 
-					{
-						LinkId = 
-						{
-							uint Id = 25,
-						},
-						Named = 
-						{
-							string Name = "SpriteText",
-						},
-						Transform = 
-						{
-							Vec3 Translation = [0.615337372, -1.51538122, -1.01993248e-06],
-							Vec3 Scale = [1.00000012, 1.00000012, 1.00000012],
-							Quat Rotation = [0, 0, 0, 1],
-						},
-						SpriteText = 
-						{
-							bool Visible = true,
-							bool VisibilityCulling = true,
-							bool VisibilityEvents = true,
-							bool CastShadows = false,
-							Vec4 Color = [1, 1, 1, 1],
-							BlendMode BlendMode = Alpha,
-							SpriteGeometryMode GeometryMode = ZPlane,
-							string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-							string FontName = "5a0f895ab1e49e19:DraftGameFont",
-							uint FontSize = 30,
-							string Text = "Elena Schefer, Sam Stearns",
-							TextAlign Align = Left,
-							float PixelsPerUnit = 64,
-							bool Smoothing = true,
-						},
-					},
-					Cog = 
-					{
-						LinkId = 
-						{
-							uint Id = 26,
-						},
-						Named = 
-						{
-							string Name = "SpriteText",
-						},
-						Transform = 
-						{
-							Vec3 Translation = [0.615337372, -0.712128401, -1.01993248e-06],
-							Vec3 Scale = [1.00000012, 1.00000012, 1.00000012],
-							Quat Rotation = [0, 0, 0, 1],
-						},
-						SpriteText = 
-						{
-							bool Visible = true,
-							bool VisibilityCulling = true,
-							bool VisibilityEvents = true,
-							bool CastShadows = false,
-							Vec4 Color = [1, 1, 1, 1],
-							BlendMode BlendMode = Alpha,
-							SpriteGeometryMode GeometryMode = ZPlane,
-							string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-							string FontName = "5a0f895ab1e49e19:DraftGameFont",
-							uint FontSize = 30,
-							string Text = "Jessica Alberg, Jacob Burke,",
-							TextAlign Align = Left,
-							float PixelsPerUnit = 64,
-							bool Smoothing = true,
-						},
-					},
-					Cog = 
-					{
-						LinkId = 
-						{
-							uint Id = 27,
-						},
-						Named = 
-						{
-							string Name = "SpriteText",
-						},
-						Transform = 
-						{
-							Vec3 Translation = [0.615337372, -5.81852055, -1.01993248e-06],
-							Vec3 Scale = [1.00000012, 1.00000012, 1.00000012],
-							Quat Rotation = [0, 0, 0, 1],
-						},
-						SpriteText = 
-						{
-							bool Visible = true,
-							bool VisibilityCulling = true,
-							bool VisibilityEvents = true,
-							bool CastShadows = false,
-							Vec4 Color = [1, 1, 1, 1],
-							BlendMode BlendMode = Alpha,
-							SpriteGeometryMode GeometryMode = ZPlane,
-							string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-							string FontName = "5a0f895ab1e49e19:DraftGameFont",
-							uint FontSize = 30,
-							string Text = "Jessica Alberg, Jacob Burke,",
-							TextAlign Align = Left,
-							float PixelsPerUnit = 64,
-							bool Smoothing = true,
-						},
-					},
-					Cog = 
-					{
-						LinkId = 
-						{
-							uint Id = 28,
-						},
-						Named = 
-						{
-							string Name = "SpriteText",
-						},
-						Transform = 
-						{
-							Vec3 Translation = [0.615337372, -6.62177372, -1.01993248e-06],
-							Vec3 Scale = [1.00000012, 1.00000012, 1.00000012],
-							Quat Rotation = [0, 0, 0, 1],
-						},
-						SpriteText = 
-						{
-							bool Visible = true,
-							bool VisibilityCulling = true,
-							bool VisibilityEvents = true,
-							bool CastShadows = false,
-							Vec4 Color = [1, 1, 1, 1],
-							BlendMode BlendMode = Alpha,
-							SpriteGeometryMode GeometryMode = ZPlane,
-							string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-							string FontName = "5a0f895ab1e49e19:DraftGameFont",
-							uint FontSize = 30,
-							string Text = "Elena Schefer, Sam Stearns",
-							TextAlign Align = Left,
-							float PixelsPerUnit = 64,
-							bool Smoothing = true,
-						},
-					},
-					Cog = 
-					{
-						LinkId = 
-						{
-							uint Id = 29,
-						},
-						Named = 
-						{
-							string Name = "SpriteText",
-						},
-						Transform = 
-						{
-							Vec3 Translation = [0.135127068, -4.9662199, 0],
-							Vec3 Scale = [1, 1, 1],
-							Quat Rotation = [0, 0, 0, 1],
-						},
-						SpriteText = 
-						{
-							bool Visible = true,
-							bool VisibilityCulling = true,
-							bool VisibilityEvents = true,
-							bool CastShadows = false,
-							Vec4 Color = [0.894117713, 0.572548985, 0.0901960731, 1],
-							BlendMode BlendMode = Alpha,
-							SpriteGeometryMode GeometryMode = ZPlane,
-							string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-							string FontName = "5a0f895ab1e49e19:DraftGameFont",
-							uint FontSize = 30,
-							string Text = "Art Helpers:",
-							TextAlign Align = Left,
-							float PixelsPerUnit = 64,
-							bool Smoothing = true,
-						},
-					},
-				},
-			},
-			Cog = 
-			{
-				LinkId = 
-				{
-					uint Id = 30,
-				},
-				Named = 
-				{
-					string Name = "SpriteText",
-				},
-				Transform = 
-				{
-					Vec3 Translation = [13.595437, 0.931916237, 0],
+					Vec3 Translation = [13.595437, -0.177513361, 0],
 					Vec3 Scale = [0.379145175, 0.379145175, 0.379145175],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -1118,7 +911,7 @@ Level =
 					string Text = "Sound Designer:",
 					TextAlign Align = Left,
 					float PixelsPerUnit = 64,
-					bool Smoothing = true,
+					bool Smoothing = false,
 				},
 				Hierarchy = 
 				{
@@ -1126,7 +919,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 31,
+							uint Id = 25,
 						},
 						Named = 
 						{
@@ -1153,7 +946,7 @@ Level =
 							string Text = "Jessica Alberg",
 							TextAlign Align = Left,
 							float PixelsPerUnit = 64,
-							bool Smoothing = true,
+							bool Smoothing = false,
 						},
 					},
 				},
@@ -1162,7 +955,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 32,
+					uint Id = 26,
 				},
 				Named = 
 				{
@@ -1199,7 +992,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 33,
+					uint Id = 27,
 				},
 				Named = 
 				{
@@ -1236,7 +1029,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 34,
+			uint Id = 28,
 		},
 		Named = 
 		{
@@ -1291,7 +1084,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 35,
+					uint Id = 29,
 				},
 				Named = 
 				{
@@ -1345,7 +1138,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 36,
+					uint Id = 30,
 				},
 				Named = 
 				{
@@ -1399,7 +1192,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 37,
+					uint Id = 31,
 				},
 				Named = 
 				{
@@ -1455,7 +1248,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 38,
+			uint Id = 32,
 		},
 		Named = 
 		{
@@ -1504,7 +1297,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 39,
+					uint Id = 33,
 				},
 				Named = 
 				{
@@ -1569,7 +1362,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 40,
+							uint Id = 34,
 						},
 						Named = 
 						{
@@ -1605,7 +1398,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 41,
+					uint Id = 35,
 				},
 				Named = 
 				{
@@ -1669,7 +1462,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 42,
+							uint Id = 36,
 						},
 						Named = 
 						{
@@ -1707,7 +1500,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 43,
+			uint Id = 37,
 		},
 		Named = 
 		{
@@ -1763,7 +1556,7 @@ Level =
 		string Name = "5a1a8d25bc1699ce:TheMouseCursor",
 		LinkId = 
 		{
-			uint Id = 44,
+			uint Id = 38,
 		},
 		Transform = 
 		{

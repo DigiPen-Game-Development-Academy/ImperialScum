@@ -332,6 +332,13 @@ class Health : ZilchComponent
             }
             
         }
+        
+        //Manuel Respawn
+            if(Zero.Keyboard.KeyIsPressed(Keys.Y))
+            {
+                Console.WriteLine("Works");
+                this.Owner.Transform.Translation = Checkpoint.RespawnPosition;
+            }
     }
     
 }
