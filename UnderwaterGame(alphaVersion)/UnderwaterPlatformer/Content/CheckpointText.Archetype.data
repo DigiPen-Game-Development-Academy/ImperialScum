@@ -8,10 +8,14 @@ Cog =
 	{
 		string Name = "Checkpoint text",
 	},
+	Archetyped = 
+	{
+		string Name = "5a2e619bd6b4ea75:CheckpointText",
+	},
 	Transform = 
 	{
-		Vec3 Translation = [-19.9488468, 22.4910374, 1.81175963e-07],
-		Vec3 Scale = [1, 1, 1],
+		Vec3 Translation = [0, 0, 0],
+		Vec3 Scale = [1.20000005, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
 	SpriteText = 
@@ -20,7 +24,7 @@ Cog =
 		bool VisibilityCulling = true,
 		bool VisibilityEvents = true,
 		bool CastShadows = false,
-		Vec4 Color = [1, 0.849599898, 0.0600000024, 1],
+		Vec4 Color = [1, 1, 1, 0.999899983],
 		BlendMode BlendMode = Alpha,
 		SpriteGeometryMode GeometryMode = ZPlane,
 		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
@@ -29,6 +33,13 @@ Cog =
 		string Text = "Checkpoint!",
 		TextAlign Align = Left,
 		float PixelsPerUnit = 64,
-		bool Smoothing = true,
+		bool Smoothing = false,
+	},
+	MoveUp = 
+	{
+	},
+	DestroyTimer = 
+	{
+		int Time = 80,
 	},
 },

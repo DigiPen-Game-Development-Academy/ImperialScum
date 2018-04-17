@@ -63,6 +63,8 @@ class PlayerMovement : ZilchComponent
     
     var CannonReady:Boolean = false;
     
+    var WalkTimer:Integer = 20;
+    
     function Initialize(init : CogInitializer)
     {   
         PlayerMovement.Component = this;
@@ -172,7 +174,19 @@ class PlayerMovement : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
+        //Walkie Soundies
+        if(this.Owner.Sprite.SpriteSource == this.Owner.PlayerController.WalkingAnimation)
+        {
+            this.WalkTimer -= 1;
+            
+            if (this.WalkTimer <=0)
+            {
+                this.WalkTimer = 20;
+                this.Owner.SoundEmitter.PlayCue(this.WalkSound);
+            }
+        }
         
+        //Cannon Stuff I think
         if(this.CannonReady == true)
         {
             this.Owner.Sprite.FlipX = false;
