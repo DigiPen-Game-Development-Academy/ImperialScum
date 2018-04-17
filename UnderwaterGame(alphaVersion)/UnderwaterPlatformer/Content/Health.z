@@ -87,9 +87,10 @@ class Health : ZilchComponent
         {
             this.GameSession.DispatchEvent(Events.Shake, ShakeEvent(0.2,0.4,0.0001, Ease.Linear, 4));
         }
-         if(event.OtherObject.Name == ("DefaultTile") && this.PreviousVelocity.Y <= -1)
+         if(event.OtherObject.Name == ("DefaultTile") && this.PreviousVelocity.Y <= -4)
         {
-            this.Space.CreateAtPosition(this.LandingPoof, this.Owner.Transform.Translation);
+            Console.WriteLine("Poof");
+            this.Space.CreateAtPosition(this.LandingPoof, this.Owner.Transform.WorldTranslation - Real3(0,1,1));
         }
     }
 
