@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-0.0289398097, -1.04293394, 0],
+		Vec3 Translation = [30.6362038, 7.75951338, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -42,20 +42,20 @@ Cog =
 	SphericalParticleEmitter = 
 	{
 		bool Active = true,
-		uint EmitCount = 0,
-		float EmitRate = 3,
-		float EmitVariance = 15,
+		uint EmitCount = 10,
+		float EmitRate = 40,
+		float EmitVariance = 0,
 		float Size = 0.5,
 		float SizeVariance = 0.200000003,
-		float Lifetime = 0.5,
+		float Lifetime = 0.300000012,
 		float LifetimeVariance = 0.100000001,
 		float Spin = 0,
-		float SpinVariance = 10,
+		float SpinVariance = 0,
 		bool RandomSpin = true,
 		float Fill = 1,
 		float EmitterVelocityPercent = 0,
 		Vec3 StartVelocity = [0, 0.5, 0],
-		Vec3 RandomVelocity = [0.5, 0, 0],
+		Vec3 RandomVelocity = [2, 0.100000001, 0],
 		Vec3 TangentVelocity = [0, 0, 0],
 		Vec3 EmitterSize = [0, 0, 0],
 		bool FastMovingEmitter = false,
@@ -63,7 +63,7 @@ Cog =
 	LinearParticleAnimator = 
 	{
 		Vec3 Force = [0, 0, 0],
-		Vec3 RandomForce = [50, 0, 0],
+		Vec3 RandomForce = [0, 0, 0],
 		float Torque = 2,
 		float Growth = 0,
 		float Dampening = 0,
@@ -77,10 +77,6 @@ Cog =
 		Vec4 Color3 = [1, 1, 1, 0.5],
 		Vec4 Color4 = [1, 1, 1, 0],
 	},
-	DestroyTimer = 
-	{
-		int Time = 5,
-	},
 	LandingPoofParticleController = 
 	{
 		Vec4 Level1Color = [0.156199992, 0.611764669, 0.709999979, 1],
@@ -89,5 +85,9 @@ Cog =
 		Vec4 Level4Color = [0.788235486, 0.211764693, 0.80392158, 1],
 		Vec4 Level5Color = [0.75686276, 0.247253343, 0.0911999941, 1],
 		Vec4 Level6Color = [0.810000002, 0.0941176414, 0.0941176414, 1],
+	},
+	DestroyTimer = 
+	{
+		float Time = 10,
 	},
 },
