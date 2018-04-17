@@ -1,0 +1,14 @@
+class Launch_ToPlayer : ZilchComponent
+{
+    function Initialize(init : CogInitializer)
+    {
+                var player = this.Space.FindObjectByName("Player");
+        if (player == null) return;
+        
+        var target = player.Transform.Translation;
+        var pos = this.Owner.Transform.WorldTranslation;
+        
+        this.Owner.BulletLogic.Target = player;
+        this.Owner.RigidBody.Velocity = target - pos;
+    }
+}
