@@ -1229,7 +1229,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [4.05381823, -5.1571312, 50],
+			Vec3 Translation = [3.54240179, -1.95906854, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -1241,7 +1241,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 54.2252235,
+			float Size = 12.0992947,
 		},
 		EditorCameraController = 
 		{
@@ -1249,7 +1249,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [4.05381823, -5.1571312, 2.59710106e-07],
+			Vec3 LookTarget = [3.54240179, -1.95906854, 2.59710106e-07],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -1689,11 +1689,29 @@ Level =
 			int Speed = 50,
 		},
 	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a1a8d25bc1699ce:TheMouseCursor",
+		LinkId = 
+		{
+			uint Id = 38,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-4.0396843, -0.683499813, 30],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "MouseCursor",
+		},
+	},
 	Cog = 
 	{
 		LinkId = 
 		{
-			uint Id = 38,
+			uint Id = 39,
 		},
 		Named = 
 		{
@@ -1732,7 +1750,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 39,
+			uint Id = 40,
 		},
 		Named = 
 		{
@@ -1771,7 +1789,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 40,
+			uint Id = 41,
 		},
 		Named = 
 		{
@@ -1810,7 +1828,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 41,
+			uint Id = 42,
 		},
 		Named = 
 		{
