@@ -1,0 +1,42 @@
+class Vignette : ZilchComponent
+{
+    [Property]
+    var HurtColor:Real4;
+    
+    [Property]
+    var SlimeColor:Real4;
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        if(Health.CurrentHealth < 4)
+        this.Owner.Sprite.Color = this.HurtColor;
+        else if(Slimed.Slimed == true)
+        this.Owner.Sprite.Color = this.SlimeColor;
+        else
+        this.Owner.Sprite.Color = Real4(0,0,0,0);
+    }
+}
+class Slimed : ZilchComponent
+{
+    [Static]
+    var Slimed:Boolean = false;
+    
+    var Timer:Real = 2;
+    
+    function Initialize(init : CogInitializer)
+    {
+        Slimed.Slimed = true;
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        this.Timer -= event.Dt;
+        if(this.Timer <= 0.3)
+        Slimed.Slimed = false;
+    }
+}
