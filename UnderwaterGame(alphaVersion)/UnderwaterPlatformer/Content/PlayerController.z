@@ -168,6 +168,8 @@ class PlayerController : ZilchComponent
         {
             this.Owner.Sprite.SpriteSource = this.IdleAnimation;
         }
+        else if (Zero.Keyboard.KeyIsDown(Keys.A) && Zero.Keyboard.KeyIsDown(Keys.D))
+        this.Owner.Sprite.SpriteSource = this.IdleAnimation;
         else if(this.Owner.GroundChecker.Grounded == true && this.Owner.Sprite.SpriteSource != this.WalkingAnimation)
         {
             this.Owner.Sprite.SpriteSource = this.WalkingAnimation;

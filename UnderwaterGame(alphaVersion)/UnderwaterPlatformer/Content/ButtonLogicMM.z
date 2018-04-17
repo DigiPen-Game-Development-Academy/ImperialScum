@@ -14,12 +14,12 @@ class ButtonLogicMM : ZilchComponent
 
     function OnLeftMouseUp(event : ViewportMouseEvent)
     {
-        this.Owner.Transform.Scale = Real3(1.2,1.2,1.2);
+        this.Owner.Transform.Scale = Real3(1.1,1.1,1.1);
     }
 
     function OnLeftMouseDown(event : ViewportMouseEvent)
     {
-        this.Owner.Transform.Scale = Real3(1,2,2);
+        this.Owner.Transform.Scale = Real3(1,1,1.1);
     }
 
     function OnMouseExit(event : ViewportMouseEvent)

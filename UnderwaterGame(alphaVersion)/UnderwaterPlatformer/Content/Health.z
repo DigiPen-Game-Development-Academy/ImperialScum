@@ -216,7 +216,7 @@ class Health : ZilchComponent
            Health.MaxHealth = Health.MaxHealth + 10;
            
            //This makes sure you don't start a level without max health
-           Health.CurrentHealth += 10;
+           Health.CurrentHealth = Health.MaxHealth;
         }
         
         if(this.Invincibility == true && this.InvincibilityTimer > 0)
@@ -249,6 +249,7 @@ class Health : ZilchComponent
         //God Mode By Jessica. Because I am bored of getting killed by gear shark.
         if(Zero.Keyboard.KeyIsDown(Keys.G) && Zero.Keyboard.KeyIsDown(Keys.Alt))
         {
+            Health.MaxHealth += 1000;
             Health.CurrentHealth += 1000;
         }
         
@@ -325,7 +326,7 @@ class Health : ZilchComponent
             {
                 this.Owner.Transform.Translation = Checkpoint.RespawnPosition;
                 
-                Health.CurrentHealth = 20;
+                Health.CurrentHealth = Health.MaxHealth;
                 
                 
                 Hunger.Hunger = Hunger.MaxHunger;
@@ -334,6 +335,7 @@ class Health : ZilchComponent
                 this.Owner.PlayerController.LoseTimer = 60;
                 this.Owner.RigidBody.Static = false;
                 this.Owner.Sprite.Visible = true;
+                Health.CurrentHealth -= 1;
             }
             
         }

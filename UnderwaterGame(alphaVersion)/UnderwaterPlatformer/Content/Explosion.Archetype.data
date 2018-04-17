@@ -14,8 +14,8 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0, 0, 0],
-		Vec3 Scale = [0.584235251, 0.584235251, 0.584235251],
+		Vec3 Translation = [-2.53046727, -31.7882824, 0],
+		Vec3 Scale = [3, 3, 3],
 		Quat Rotation = [0, 0, 0, 1],
 	},
 	Sprite = 
@@ -24,7 +24,7 @@ Cog =
 		bool VisibilityCulling = true,
 		bool VisibilityEvents = true,
 		bool CastShadows = false,
-		Vec4 Color = [1, 0.389999986, 0, 1],
+		Vec4 Color = [1, 0.720000029, 0, 1],
 		BlendMode BlendMode = Alpha,
 		SpriteGeometryMode GeometryMode = ZPlane,
 		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
@@ -57,5 +57,10 @@ Cog =
 	},
 	Explosion = 
 	{
+		string ExplodeSFX = "5a61916136d1c33d:Kill",
+	},
+	DestroyTimer = 
+	{
+		int Time = 13,
 	},
 },
