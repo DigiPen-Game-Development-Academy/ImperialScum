@@ -73,6 +73,7 @@ class Hunger : ZilchComponent
         
         if(Hunger.Hunger <= 500 && this.GodMode == true)
         {
+            Hunger.MaxHunger += 1000;
             Hunger.Hunger += 1000;
         }
     }
