@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-17.1779747, 2.81421876, 0],
+		Vec3 Translation = [-17.4314861, 2.7166431, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -87,11 +87,13 @@ Cog =
 		Enum KeyLeft = A,
 		Enum KeyRight = D,
 		Enum KeyDown = S,
+		string CheckpointText = "5a2e619bd6b4ea75:CheckpointText",
 		string SingleJumpSound = "5a74d757288e9ffa:SingleJump",
 		string DoubleJumpSound = "5a74d672c9337568:DoubleJump",
-		string WalkSound = "",
+		string WalkSound = "5a7f699975443552:WalkieSoundie",
 		string SoundToPlay = "5a4ba86ea5857126:GearPickup",
 		string SoundToPlay2 = "5a702e1e4589a834:SpearStab",
+		float EnemyActiveUpdateFrequency = 0.25,
 	},
 	PlayerController = 
 	{
@@ -105,6 +107,7 @@ Cog =
 		string StabAnimation = "5a51993f910964dc:Player_StabStraight()",
 		string StabUpAnimation = "5a04e41a1c493bd3:Player_StabUp()",
 		string StabDownAnimation = "5a04f9d330c431da:Player_StabDown()",
+		string DeathAnimation = "",
 		string ThrowAnimation = "5a2d11c157e334b3:PlayerThrow2()",
 		string JumpSound = "",
 		int Lose = 1,
