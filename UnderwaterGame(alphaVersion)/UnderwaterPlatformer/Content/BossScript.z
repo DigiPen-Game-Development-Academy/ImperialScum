@@ -37,7 +37,7 @@ class BossScript : ZilchComponent
     var Bite:Boolean = false;
     var TimerSprite:Integer = 0;
     var TimerBite:Integer = 0;
-    var TimerStart:Integer = 300;
+    var TimerStart:Integer = 200;
     
     var TimerShoot:Integer = 30;
     var TimerElapse:Integer = 200;
@@ -71,7 +71,7 @@ class BossScript : ZilchComponent
             
             if (this.TimerStart == 0)
             {
-                this.ChooseEvent();
+                this.Charge();
             }
         }
         
@@ -309,6 +309,7 @@ class BombFish : ZilchComponent
       if(this.Timer <= 0)
       {
       this.Space.CreateAtPosition(Archetype.Explosion, this.Owner.Transform.Translation);
+      this.Space.CreateAtPosition(Archetype.ExplodeBubbles, this.Owner.Transform.Translation);
       this.Owner.Destroy();
     }
   }
@@ -319,6 +320,7 @@ class BombFish : ZilchComponent
       event.OtherObject.SwordBoomerangMove != null)
       {
           this.Exploding = true;
+          this.Owner.Sprite.SpriteSource = SpriteSource.BombGearahna_Explode;
       }
   }
 
@@ -326,6 +328,9 @@ class BombFish : ZilchComponent
 //The code on the bombfish that makes them explode
 class Explosion : ZilchComponent
 {
+  [Property]
+  var ExplodeSFX:SoundCue;
+  
   var Timer:Real = 2;
   function Initialize(init : CogInitializer)
   {
@@ -335,9 +340,13 @@ class Explosion : ZilchComponent
   function OnLogicUpdate(event : UpdateEvent)
   {
     this.Timer -= event.Dt;
-    
+
     if(this.Timer <= 0)
-    this.Owner.Destroy();
+    {
+        this.Owner.Destroy();
+        this.Space.SoundSpace.PlayCue(this.ExplodeSFX);
+    }
+    
     else
     this.Owner.Transform.Scale += Real3(event.Dt,event.Dt, 0) * 2;
   }

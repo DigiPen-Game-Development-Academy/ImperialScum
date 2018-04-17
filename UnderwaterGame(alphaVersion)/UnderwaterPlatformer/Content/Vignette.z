@@ -5,6 +5,8 @@ class Vignette : ZilchComponent
     
     [Property]
     var SlimeColor:Real4;
+    
+    var Timer:Real = 2;
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
@@ -12,31 +14,42 @@ class Vignette : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-        if(Health.CurrentHealth < 4)
-        this.Owner.Sprite.Color = this.HurtColor;
-        else if(Slimed.Slimed == true)
-        this.Owner.Sprite.Color = this.SlimeColor;
+        if(Slimed.Slimed == true)
+        {
+        var seq = Action.Sequence(this.Owner.Actions);
+        Action.Property
+        (seq, @this.Owner.Sprite.Color, this.SlimeColor, 0.5, Ease.Linear);
+        this.Timer -= event.Dt;
+        }
+        else if(Health.CurrentHealth < 5)
+        {
+        Console.WriteLine(this.Owner.Area);
+        this.Owner.Area.Size = Real2((11 + Health.CurrentHealth), (11+Health.CurrentHealth));
+        var seq = Action.Sequence(this.Owner.Actions);
+        Action.Property
+        (seq, @this.Owner.Sprite.Color, this.HurtColor, 0.5, Ease.Linear);
+        }
         else
-        this.Owner.Sprite.Color = Real4(0,0,0,0);
+        {
+        var seq = Action.Sequence(this.Owner.Actions);
+        Action.Property
+        (seq, @this.Owner.Sprite.Color, Real4(0,0,0,0), 0.5, Ease.Linear);
+        }
+        
+        if(this.Timer <= 2)
+        {
+        Slimed.Slimed = false;
+        this.Timer += 2;
+        }
     }
 }
 class Slimed : ZilchComponent
 {
     [Static]
-    var Slimed:Boolean = false;
-    
-    var Timer:Real = 2;
+    var Slimed:Boolean;
     
     function Initialize(init : CogInitializer)
     {
         Slimed.Slimed = true;
-        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
-    }
-
-    function OnLogicUpdate(event : UpdateEvent)
-    {
-        this.Timer -= event.Dt;
-        if(this.Timer <= 0.3)
-        Slimed.Slimed = false;
     }
 }

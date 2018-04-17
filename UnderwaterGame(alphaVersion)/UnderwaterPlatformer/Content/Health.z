@@ -45,6 +45,7 @@ class Health : ZilchComponent
     
     [Static] var CheckOnce : Boolean = false;
     [Static] var CheckTwice : Boolean = false;
+    [Property] var LandingPoof : Archetype = Archetype.LandingPoof;
         
     function Initialize(init : CogInitializer)
     {
@@ -82,10 +83,14 @@ class Health : ZilchComponent
            
         }
         
-        
         if(event.OtherObject.Name == ("DefaultTile") && this.PreviousVelocity.Y <= -20)
         {
             this.GameSession.DispatchEvent(Events.Shake, ShakeEvent(0.2,0.4,0.0001, Ease.Linear, 4));
+        }
+         if(event.OtherObject.Name == ("DefaultTile") && this.PreviousVelocity.Y <= -4)
+        {
+            Console.WriteLine("Poof");
+            this.Space.CreateAtPosition(this.LandingPoof, this.Owner.Transform.WorldTranslation - Real3(0,1,1));
         }
     }
 

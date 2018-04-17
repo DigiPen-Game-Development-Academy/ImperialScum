@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [3.51987934, -33.3769608, -0.00025177002],
+		Vec3 Translation = [0, 0, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -28,7 +28,7 @@ Cog =
 		BlendMode BlendMode = Alpha,
 		SpriteGeometryMode GeometryMode = ZPlane,
 		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-		string SpriteSource = "5a46e8ebaadb4e6e:GearahnaBomb()",
+		string SpriteSource = "5a787bab822dac82:BombGearahna_New_strip4",
 		bool RenderMask = false,
 		bool FlipX = false,
 		bool FlipY = false,
@@ -42,7 +42,7 @@ Cog =
 		bool Asleep = false,
 		bool Kinematic = false,
 		bool RotationLocked = true,
-		bool Mode2D = true,
+		bool Mode2D = false,
 		bool AllowSleep = true,
 		bool Inherit2DMode = true,
 		Vec3 Velocity = [0, 0, 0],
@@ -62,7 +62,7 @@ Cog =
 	{
 		Enum StaticState = Static,
 		float Timer = 1,
-		Vec4 RedColor = [1, 0, 0, 1],
+		Vec4 RedColor = [1, 1, 1, 1],
 	},
 	Follow = 
 	{
