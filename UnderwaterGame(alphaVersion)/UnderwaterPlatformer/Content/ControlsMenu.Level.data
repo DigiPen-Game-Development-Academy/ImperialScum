@@ -104,7 +104,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-8.06834126, -0.358682334, 50],
+			Vec3 Translation = [-3.23724508, 1.9147743, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -116,7 +116,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 20.0000916,
+			float Size = 32.9745598,
 		},
 		EditorCameraController = 
 		{
@@ -124,7 +124,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-8.06834126, -0.358682334, 2.01278283e-07],
+			Vec3 LookTarget = [-3.23724508, 1.9147743, 4.12452152e-07],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -663,6 +663,22 @@ Level =
 				ButtonLogicLL2 = 
 				{
 				},
+				PlaySound = 
+				{
+					string SoundToPlay = "5a1ac8a541995249:MenuSelect",
+				},
+				SoundEmitter = 
+				{
+					float Volume = 1,
+					float Pitch = 0,
+					float PitchSemitones = 0,
+					bool UsePitchSemitones = true,
+					bool Positional = true,
+					int Version = 1,
+				},
+				VolumeLevev = 
+				{
+				},
 			},
 			Cog = 
 			{
@@ -714,6 +730,22 @@ Level =
 					bool CaptureMouse = false,
 				},
 				ButtonLogicLL2 = 
+				{
+				},
+				SoundEmitter = 
+				{
+					float Volume = 1,
+					float Pitch = 0,
+					float PitchSemitones = 0,
+					bool UsePitchSemitones = true,
+					bool Positional = true,
+					int Version = 1,
+				},
+				PlaySound = 
+				{
+					string SoundToPlay = "5a1ac8a541995249:MenuSelect",
+				},
+				VolumeLevev = 
 				{
 				},
 			},
