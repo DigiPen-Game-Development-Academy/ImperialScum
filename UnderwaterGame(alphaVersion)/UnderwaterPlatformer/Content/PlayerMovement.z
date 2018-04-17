@@ -190,8 +190,15 @@ class PlayerMovement : ZilchComponent
         if(this.CannonReady == true)
         {
             this.Owner.Sprite.FlipX = false;
+            
+            if(ContinueTimer.LevelNumber < 4)
+            {
             this.Owner.Transform.Translation=
             this.Space.FindObjectByName("OverHere").Transform.WorldTranslation + Real3(0,-0.3,-3);
+            }
+            else
+            this.Owner.Transform.Translation =
+            this.Space.FindObjectByName("BossOverHere").Transform.WorldTranslation + Real3(0,-0.3,-3);
             
              var seq = Action.Sequence(this.Owner.Actions);
                 
