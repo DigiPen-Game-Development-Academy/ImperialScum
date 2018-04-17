@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-8.11953068, 2.21807218, -1],
+		Vec3 Translation = [0, 0, 0],
 		Vec3 Scale = [0.400000006, 0.400000006, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -39,5 +39,8 @@ Cog =
 	DestroyTimer = 
 	{
 		int Time = 10,
+	},
+	InFront = 
+	{
 	},
 },

@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-13.7159491, 8.67134476, 0],
+		Vec3 Translation = [-18.5, -13.5, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -49,5 +49,17 @@ Cog =
 	TreasureChest = 
 	{
 		string BreakSFX = "5aacbc9a12b8fb36:HitSound",
+	},
+	SoundEmitter = 
+	{
+		float Volume = 1,
+		float Pitch = 0,
+		float PitchSemitones = 0,
+		bool UsePitchSemitones = false,
+		bool Positional = true,
+		int Version = 1,
+	},
+	VolumeLevev = 
+	{
 	},
 },

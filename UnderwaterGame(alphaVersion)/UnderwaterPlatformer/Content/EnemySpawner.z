@@ -6,6 +6,8 @@ class EnemySpawner : ZilchComponent
     
     var Timer : Real;
     
+    var CanSpawn:Boolean = true;
+    
     [Property]
      var WhatToSpawn : Archetype;
     
@@ -14,9 +16,22 @@ class EnemySpawner : ZilchComponent
         this.Timer = this.Waittime;
         
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
+        Zero.Connect(this.Owner, Events.CollisionEnded, this.OnCollisionEnded);
     }
 
+    //Collisions, to ensure no enemies spawn on the player
+    function OnCollisionStarted(event : CollisionEvent)
+    {
+        this.CanSpawn = false;
+    }
+    
+    function OnCollisionEnded(event : CollisionEvent)
+    {
+        this.CanSpawn = true;
+    }
   
+    //This Schtuff
     function OnLogicUpdate(event : UpdateEvent)
     {
         var boss = this.Space.FindObjectByName("BOSS");
@@ -27,11 +42,20 @@ class EnemySpawner : ZilchComponent
        
         if (this.Timer <= 0)
         {
-            var spawnPosition = this.Owner.Transform.Translation;
+            if (this.CanSpawn == true)
+            {
+                var spawnPosition = this.Owner.Transform.Translation;
 
-            this.Space.CreateAtPosition(this.WhatToSpawn, spawnPosition);
-            
-            this.Timer += this.Waittime;
+                this.Space.CreateAtPosition(this.WhatToSpawn, spawnPosition);
+                this.Space.CreateAtPosition(Archetype.LegendaryExplode, spawnPosition);
+                this.Space.CreateAtPosition(Archetype.ExplodeBubbles, spawnPosition);
+                
+                this.Timer += this.Waittime;
+            }
+            else
+            {
+                this.Timer = 1;
+            }
 
         }
         
