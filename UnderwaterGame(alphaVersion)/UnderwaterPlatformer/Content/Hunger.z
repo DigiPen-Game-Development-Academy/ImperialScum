@@ -52,6 +52,12 @@ class Hunger : ZilchComponent
             this.Timer += 5;
         }
         
+        //Starve Button
+        if(Zero.Keyboard.KeyIsDown(Keys.Alt) && Zero.Keyboard.KeyIsDown(Keys.B))
+        {
+            Hunger.Hunger -= 1;
+        }
+        
         //God Mode by Jessica. - REMOVED FOR BETA
         if(Zero.Keyboard.KeyIsDown(Keys.G) && Zero.Keyboard.KeyIsDown(Keys.Alt))
         {
