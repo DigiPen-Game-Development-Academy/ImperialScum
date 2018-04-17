@@ -8,7 +8,7 @@ class CustomMouse : ZilchComponent
 
     function OnMouseUpdate(event : ViewportMouseEvent)
     {
-        var position = this.LevelSettings.CameraViewport.ScreenToWorldZPlane(event.Position, 0);
+        var position = this.LevelSettings.CameraViewport.ScreenToWorldZPlane(event.Position, 30);
         this.Owner.Transform.Translation = position;
     }
     function OnLogicUpdate(event : UpdateEvent)
