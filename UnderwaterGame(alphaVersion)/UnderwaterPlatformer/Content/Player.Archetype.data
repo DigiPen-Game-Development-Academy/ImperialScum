@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-17.4314861, 2.7166431, 0],
+		Vec3 Translation = [0, 0, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -88,6 +88,7 @@ Cog =
 		Enum KeyRight = D,
 		Enum KeyDown = S,
 		string CheckpointText = "5a2e619bd6b4ea75:CheckpointText",
+		string LandingPoof = "5aadabfcbfa8de83:LandingPoof",
 		string SingleJumpSound = "5a74d757288e9ffa:SingleJump",
 		string DoubleJumpSound = "5a74d672c9337568:DoubleJump",
 		string WalkSound = "5a7f699975443552:WalkieSoundie",
@@ -121,6 +122,7 @@ Cog =
 		Vec4 RegularColor = [1, 1, 1, 1],
 		string HitSoundThing = "5a4ba9b4847d0305:PlayerHit",
 		string BaseLevelLoad = "5a137b96289a4a64:BaseLevel",
+		string LandingPoof = "5aadabfcbfa8de83:LandingPoof",
 	},
 	Hunger = 
 	{
@@ -310,11 +312,29 @@ Cog =
 			{
 			},
 		},
+		ArchetypeInstance = 
+		{
+			string Name = "5aadabfcbfa8de83:LandingPoof",
+			LinkId = 
+			{
+				uint Id = 4,
+			},
+			Transform = 
+			{
+				Vec3 Translation = [-0.0289398097, -1.04293394, 0],
+				Vec3 Scale = [1, 1, 1],
+				Quat Rotation = [0, 0, 0, 1],
+			},
+			Named = 
+			{
+				string Name = "LandingParticles",
+			},
+		},
 		Cog = 
 		{
 			LinkId = 
 			{
-				uint Id = 4,
+				uint Id = 5,
 			},
 			Named = 
 			{
@@ -322,7 +342,7 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [-0.0317486823, -0.919088364, -1],
+				Vec3 Translation = [-0.0317486823, -0.835919499, -1],
 				Vec3 Scale = [1, 1, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
@@ -387,7 +407,7 @@ Cog =
 			},
 			WalkingParticleController = 
 			{
-				Vec4 Level1Color = [0.156862736, 0.61176455, 0.709803939, 1],
+				Vec4 Level1Color = [0.156862736, 0.611764431, 0.709803939, 1],
 				Vec4 Level2Color = [0.235294044, 0.592156887, 0.396078467, 1],
 				Vec4 Level3Color = [0.952941179, 0.658823609, 0.254902005, 1],
 				Vec4 Level4Color = [0.788235247, 0.211764693, 0.80392158, 1],
