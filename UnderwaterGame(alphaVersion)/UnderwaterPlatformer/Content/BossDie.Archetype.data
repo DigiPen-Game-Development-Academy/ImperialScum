@@ -6,15 +6,11 @@ Cog =
 	},
 	Named = 
 	{
-		string Name = "Slime_TrapFeet",
-	},
-	Archetyped = 
-	{
-		string Name = "5a78aee478c30646:Slime_TrapFeet",
+		string Name = "BossDie",
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0, 0, 0],
+		Vec3 Translation = [-5.48019218, -34.8701401, -5.63997958e-07],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -28,19 +24,16 @@ Cog =
 		BlendMode BlendMode = Alpha,
 		SpriteGeometryMode GeometryMode = ZPlane,
 		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-		string SpriteSource = "5a78ad659c75693d:Slime_TrapFeet",
+		string SpriteSource = "5a46e0535f0747b7:Enemy_SandBoss()",
 		bool RenderMask = false,
 		bool FlipX = false,
 		bool FlipY = false,
 		bool AnimationActive = true,
-		float AnimationSpeed = 1,
+		float AnimationSpeed = 0,
 		uint StartFrame = 0,
-	},
-	JumpToPlayer = 
-	{
 	},
 	DestroyTimer = 
 	{
-		int Time = 85,
+		int Time = 100,
 	},
 },

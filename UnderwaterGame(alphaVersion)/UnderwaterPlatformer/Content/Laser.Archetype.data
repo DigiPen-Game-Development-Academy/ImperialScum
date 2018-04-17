@@ -14,8 +14,8 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [3.68033361, -34.98172, 0],
-		Vec3 Scale = [0.892120361, 0.897743344, 1.05162621],
+		Vec3 Translation = [4.81164598, -37.2462273, 0],
+		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
 	Sprite = 
@@ -28,7 +28,7 @@ Cog =
 		BlendMode BlendMode = Alpha,
 		SpriteGeometryMode GeometryMode = ZPlane,
 		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-		string SpriteSource = "5a0d90736cedc656:Enemy_SandBoss_Laser",
+		string SpriteSource = "5a787284afb334a0:EnergyBall",
 		bool RenderMask = false,
 		bool FlipX = false,
 		bool FlipY = false,
@@ -42,13 +42,6 @@ Cog =
 		float Gravity = 0,
 		float DegreesOffset = 0,
 		bool DestroyOnTile = false,
-	},
-	Orientation = 
-	{
-		Vec3 GlobalUp = [0, 1, 0],
-		Vec3 UpVector = [0, 0, 1],
-		Vec3 ForwardVector = [1, 0, 0],
-		OrientationBases DefaultBases = ForwardXUpZ,
 	},
 	BoxCollider = 
 	{
@@ -90,6 +83,15 @@ Cog =
 	},
 	Launch_ToPlayer = 
 	{
+		int PreLaunch = 15,
+	},
+	SizeFluctuate = 
+	{
+	},
+	Area = 
+	{
+		Vec2 Size = [1, 1],
+		Location Origin = Center,
 	},
 	Hierarchy = 
 	{
@@ -105,7 +107,7 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [-0.131962925, 0.00741910934, -0.5],
+				Vec3 Translation = [0.0258746147, 0.00741910934, -0.5],
 				Vec3 Scale = [0.0403908677, 0.0401378796, 0.0342645645],
 				Quat Rotation = [0, 0, 0, 1],
 			},
@@ -148,7 +150,7 @@ Cog =
 				Vec3 StartVelocity = [0, 0, 0],
 				Vec3 RandomVelocity = [4, 4, 0],
 				Vec3 TangentVelocity = [0, 0, 0],
-				Vec3 EmitterSize = [4, 4, 0],
+				Vec3 EmitterSize = [12, 12, 0],
 				bool FastMovingEmitter = false,
 			},
 			LinearParticleAnimator = 
