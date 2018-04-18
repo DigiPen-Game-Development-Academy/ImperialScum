@@ -1,7 +1,7 @@
 class DestroyTimer : ZilchComponent
 {
     [Property]
-    var Time : Real = 10;
+    var Time : Real = 5;
     
     function Initialize(init : CogInitializer)
     {
@@ -10,7 +10,10 @@ class DestroyTimer : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
+        if(this.Owner.Name == ("LandingParticles"))
         this.Time -= event.Dt;
+        else
+        this.Time -= 1;
         
         if (this.Time <= 0)
         {
@@ -18,3 +21,4 @@ class DestroyTimer : ZilchComponent
         }
     }
 }
+

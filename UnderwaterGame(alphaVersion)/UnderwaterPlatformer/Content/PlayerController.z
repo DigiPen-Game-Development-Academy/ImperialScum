@@ -4,7 +4,6 @@
 
 class PlayerController : ZilchComponent
 {
-    
     [Property]
     var Left:Keys = Keys.Left;
 
@@ -58,7 +57,11 @@ class PlayerController : ZilchComponent
         
     function Initialize(init : CogInitializer)
     {
-        
+        //Just unfades the screen
+        Fade.EndFade(this.Space,
+        this.GameSession.FindSpaceByName("HUD"));
+        //Back to player controller
+    
         if(AdvInventory.PlayerInventory["ArmorVolcano"] >= 1)
         {
             this.IdleAnimation = SpriteSource.Volcano_Stand;
