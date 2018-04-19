@@ -42,13 +42,22 @@ class EnemyHealth : ZilchComponent
             this.Owner.Sprite.Color = this.DamageColor;
             
             //Particles
+            this.Space.CreateAtPosition(Archetype.ExplodeBubbles, this.Owner.Transform.Translation); 
+            this.Space.CreateAtPosition(Archetype.HitExplode, this.Owner.Transform.Translation); 
+            
+            if(this.Owner == this.Space.FindObjectByName("Gearahna"))
+            {
+                for (var i = 0; i != 0; i += 1)
+                {
+                    this.Space.CreateAtPosition(Archetype.EnemyGib, this.Owner.Transform.Translation); 
+                }
+                return;
+            }
+            
             for (var i = 0; i != 4; i += 1)
             {
                 this.Space.CreateAtPosition(Archetype.EnemyGib, this.Owner.Transform.Translation); 
             }
-            
-            this.Space.CreateAtPosition(Archetype.ExplodeBubbles, this.Owner.Transform.Translation); 
-            this.Space.CreateAtPosition(Archetype.HitExplode, this.Owner.Transform.Translation); 
         }
         
         if(event.OtherObject == this.Space.FindObjectByName("Spear"))
@@ -59,12 +68,22 @@ class EnemyHealth : ZilchComponent
             this.Owner.Sprite.Color = this.DamageColor;
             
             //Particles
+            this.Space.CreateAtPosition(Archetype.ExplodeBubbles, this.Owner.Transform.Translation); 
+            this.Space.CreateAtPosition(Archetype.HitExplode, this.Owner.Transform.Translation);
+            
+            if(this.Owner == this.Space.FindObjectByName("Gearahna"))
+            {
+                for (var i = 0; i != 0; i += 1)
+                {
+                    this.Space.CreateAtPosition(Archetype.EnemyGib, this.Owner.Transform.Translation); 
+                }
+                return;
+            }
             for (var i = 0; i != 4; i += 1)
             {
                 this.Space.CreateAtPosition(Archetype.EnemyGib, this.Owner.Transform.Translation); 
             }
-            this.Space.CreateAtPosition(Archetype.ExplodeBubbles, this.Owner.Transform.Translation); 
-            this.Space.CreateAtPosition(Archetype.HitExplode, this.Owner.Transform.Translation);
+            
         }
     }
 
@@ -80,6 +99,11 @@ class EnemyHealth : ZilchComponent
             
             var random = new Random();
             var randomAmount = random.DieRoll(3);
+            
+            if(this.Owner == this.Space.FindObjectByName("Gearahna"))
+            {
+                randomAmount -= 2;
+            }
             
             while(randomAmount >= 0)
             {
@@ -109,6 +133,15 @@ class EnemyHealth : ZilchComponent
             this.Space.SoundSpace.PlayCue(this.KillSFX);
             
             //Particles
+            if(this.Owner == this.Space.FindObjectByName("Gearahna"))
+            {
+                for (var i = 0; i != 0; i += 1)
+                {
+                    this.Space.CreateAtPosition(Archetype.EnemyGib, this.Owner.Transform.Translation); 
+                }
+                return;
+            }
+        
             for (var i = 0; i != 8; i += 1)
             {
                 this.Space.CreateAtPosition(Archetype.EnemyGib, this.Owner.Transform.Translation); 
