@@ -4,6 +4,10 @@ class BossDoorOpen : ZilchComponent
     var Rise : Boolean = false;
     
     var ODO : Boolean = false;
+    
+    [Static]
+    var PlayerNear:Boolean = false;
+    
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
@@ -13,7 +17,7 @@ class BossDoorOpen : ZilchComponent
     {
         
         var posistion = this.Owner.Transform.Translation;
-        if(ContinueTimer.LevelNumber > 4 && this.ODO != true)
+        if(ContinueTimer.LevelNumber > 4 && this.ODO != true && BossDoorOpen.PlayerNear == true)
         {
             
             
@@ -21,7 +25,7 @@ class BossDoorOpen : ZilchComponent
             var seq = Action.Sequence(this.Owner.Actions);
                 
                 Action.Property
-                (seq, @this.Owner.Transform.Translation, posistion + Real3(0,5,0), 3, Ease.QuadInOut);
+                (seq, @this.Owner.Transform.Translation, posistion + Real3(0,5,0), 2, Ease.QuadInOut);
                 Action.Property
                 (seq, @this.Owner.Transform.Translation, posistion + Real3(0,5,6), 0.1, Ease.QuadInOut);
         }

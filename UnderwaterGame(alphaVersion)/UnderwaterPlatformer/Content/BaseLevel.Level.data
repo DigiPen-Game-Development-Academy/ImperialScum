@@ -104,7 +104,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [29.9999733, 1.30851686, 50],
+			Vec3 Translation = [22.7472801, 4.07176208, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -116,7 +116,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 11.0803375,
+			float Size = 44.9329224,
 		},
 		EditorCameraController = 
 		{
@@ -124,7 +124,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [29.9999733, 1.30851686, 6.8780605e-07],
+			Vec3 LookTarget = [22.7472801, 4.07176208, 6.8780605e-07],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -931,7 +931,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [23.4392929, -6.04947615, -6.5],
+			Vec3 Translation = [23.4392929, -7.18995047, -6.5],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -3890,7 +3890,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [17.4788322, 9.31352901, 6.8780605e-07],
+			Vec3 Translation = [16.8013268, 9.31352901, 6.8780605e-07],
 			Vec3 Scale = [1, 44.4654083, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -3921,6 +3921,9 @@ Level =
 			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
 			Vec3 Offset = [0, 0, 0],
 			Vec3 Size = [0.5, 0.5, 0.5],
+		},
+		NearBoss = 
+		{
 		},
 	},
 },
