@@ -23,10 +23,6 @@ class FadeToOtherLevel : ZilchComponent
     
     function Initialize(init : CogInitializer)
     {
-        this.GameSession.DispatchEvent
-        (Events.Fade, FadeEvent(null, 1, Real4(0,0,0,1), Real4(0,0,0,0)));
-        
-        
         Zero.Connect(this.GameSession, Events.Fade, this.OnFade);
         Zero.Connect(this.Space, Events.Fade, this.OnFade);
         Zero.Connect(this.Owner, Events.Fade, this.OnFade);
@@ -88,4 +84,25 @@ class MakeFadeSpace : ZilchComponent
             space.LoadLevel(Level.FadeLevel);
         }
     }
+}
+class Unfade : ZilchComponent
+{
+    var Once:Boolean = false;
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        if(this.Once == false)
+        {
+        this.GameSession.DispatchEvent
+        (Events.Fade, FadeEvent(null, 1, Real4(0,0,0,1), Real4(0,0,0,0)));
+        this.Once = true;
+        }
+        
+    }
+    
 }

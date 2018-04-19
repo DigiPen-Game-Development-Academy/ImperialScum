@@ -17,8 +17,9 @@ class GoToBase : ZilchComponent
     {
         if(event.OtherObject.PlayerController != null)
         {
-            this.GameSession.DispatchEvent
-            (Events.Fade, FadeEvent(this.LevelToLoad, 1, Real4.Zero, Real4(0,0,0,1)));
+            this.Space.LoadLevel(this.LevelToLoad);
+            //this.GameSession.DispatchEvent
+            //(Events.Fade, FadeEvent(this.LevelToLoad, 1, Real4.Zero, Real4(0,0,0,1)));
         }
     }
 }
