@@ -89,20 +89,15 @@ class Unfade : ZilchComponent
 {
     var Once:Boolean = false;
     
+    var Timer:Real = 0.3;
+    
     function Initialize(init : CogInitializer)
     {
-        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
-    }
-
-    function OnLogicUpdate(event : UpdateEvent)
-    {
-        if(this.Once == false)
-        {
         this.GameSession.DispatchEvent
         (Events.Fade, FadeEvent(null, 1, Real4(0,0,0,1), Real4(0,0,0,0)));
-        this.Once = true;
-        }
-        
     }
+
+
+
     
 }

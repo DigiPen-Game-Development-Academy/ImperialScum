@@ -7,7 +7,8 @@ class LoadingScreenContinue : ZilchComponent
 
     function OnMouseDown(event : ViewportMouseEvent)
     {
-        this.Space.LoadLevel(ContinueTimer.LevelToLoadProgression);
+        this.GameSession.DispatchEvent
+        (Events.Fade, FadeEvent(ContinueTimer.LevelToLoadProgression, 1, Real4.Zero, Real4(0,0,0,1)));
         ContinueTimer.LevelNumber += 1;
     }
 }

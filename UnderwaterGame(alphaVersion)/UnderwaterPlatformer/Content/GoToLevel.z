@@ -10,6 +10,7 @@ class GoToLevel : ZilchComponent
 
     function OnMouseDown(event : ViewportMouseEvent)
     {
-        this.Space.LoadLevel(this.LevelToLoad);
+        this.GameSession.DispatchEvent
+        (Events.Fade, FadeEvent(this.LevelToLoad, 1, Real4.Zero, Real4(0,0,0,1)));
     }
 }

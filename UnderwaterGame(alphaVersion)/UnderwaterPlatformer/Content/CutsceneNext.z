@@ -70,7 +70,8 @@ class CutsceneNext : ZilchComponent
         }
         if(this.StartTimer == true && this.Timer <= 0)
         {
-            this.Space.LoadLevel(this.LevelToLoad);
+            this.GameSession.DispatchEvent
+        (Events.Fade, FadeEvent(this.LevelToLoad, 1, Real4.Zero, Real4(0,0,0,1)));
         }
     }
 }

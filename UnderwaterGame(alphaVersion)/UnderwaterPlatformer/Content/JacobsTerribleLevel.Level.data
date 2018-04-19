@@ -139,7 +139,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [1.47370064, -1.88112748, 51.9999924],
+			Vec3 Translation = [13.7066889, 6.58770609, 51.9999924],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -151,7 +151,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 36.7879829,
+			float Size = 44.9329338,
 		},
 		EditorCameraController = 
 		{
@@ -159,7 +159,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [1.47370064, -1.88112748, 1.99999332],
+			Vec3 LookTarget = [13.7066889, 6.58770609, 1.99999332],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -397,6 +397,9 @@ Level =
 		GoToBase = 
 		{
 			string LevelToLoad = "5a137b96289a4a64:BaseLevel",
+		},
+		Unfade = 
+		{
 		},
 	},
 	ArchetypeInstance = 
