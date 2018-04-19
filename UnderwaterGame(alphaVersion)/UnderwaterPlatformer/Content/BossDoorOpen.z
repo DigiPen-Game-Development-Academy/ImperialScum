@@ -1,5 +1,8 @@
 class BossDoorOpen : ZilchComponent
 {
+    
+    var Rise : Boolean = false;
+    
     var ODO : Boolean = false;
     function Initialize(init : CogInitializer)
     {
@@ -12,6 +15,8 @@ class BossDoorOpen : ZilchComponent
         var posistion = this.Owner.Transform.Translation;
         if(ContinueTimer.LevelNumber > 4 && this.ODO != true)
         {
+            
+            
             this.ODO = true;
             var seq = Action.Sequence(this.Owner.Actions);
                 
