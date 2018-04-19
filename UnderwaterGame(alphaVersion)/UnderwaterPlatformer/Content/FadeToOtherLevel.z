@@ -1,0 +1,68 @@
+class FadeEvent : ZilchEvent
+{
+    sends Fade : FadeEvent;
+    
+    var LevelToLoad : Level;
+    var TimeToLoad : Real;
+    var StartColor : Real4;
+    var EndColor : Real4;
+    
+    constructor(levelToLoad : Level, timeToLoad : Real, startColor : Real4, endColor : Real4) : base()
+    {
+        this.LevelToLoad = levelToLoad;
+        this.TimeToLoad = timeToLoad;
+        this.StartColor = startColor;
+        this.EndColor = endColor;
+    }
+    
+}
+
+class FadeToOtherLevel : ZilchComponent
+{
+    [Property] var OnlyVisual : Boolean;
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.GameSession, Events.Fade, this.OnFade);
+        Zero.Connect(this.Space, Events.Fade, this.OnFade);
+        Zero.Connect(this.Owner, Events.Fade, this.OnFade);
+        
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+    
+    var LevelToLoad : Level;
+    
+    function OnFade(event : FadeEvent)
+    {
+        var sequence = Actions.Sequence(this.Owner.Actions);
+        
+        if(this.OnlyVisual)
+        {
+            var fadeSprite  = this.Space.CreateAtPosition(Archetype.Sprite, Real3.ZAxis * 20);
+            fadeSprite.Transform.Scale *= 1000;
+            fadeSprite.Sprite.Color = event.StartColor;
+            Action.Property(sequence, @fadeSprite.Sprite.Color, event.EndColor, event.TimeToLoad, Ease.Linear);
+        }
+        else
+        {
+            this.LevelToLoad = event.LevelToLoad;
+            Action.Delay(sequence, event.TimeToLoad);
+            Action.Call(sequence, this.Load);
+        }
+            
+    }
+    
+    function Load()
+    {
+        this.Space.LoadLevel(this.LevelToLoad);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        if (Zero.Keyboard.KeyIsDown(Keys.One) && Zero.Keyboard.KeyIsPressed(Keys.Zero))
+        {
+            this.GameSession.DispatchEvent
+            (Events.Fade, FadeEvent(Level.ThisIsTheCodeLevel, 2, Real4.Zero, Real4(0,0,0,1)));
+        }
+    }
+}
