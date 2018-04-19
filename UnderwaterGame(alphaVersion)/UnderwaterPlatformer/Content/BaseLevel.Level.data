@@ -104,7 +104,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [17.0441818, -3.13201785, 50],
+			Vec3 Translation = [23.4732323, -2.2947824, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -116,7 +116,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 100,
+			float Size = 20.1896839,
 		},
 		EditorCameraController = 
 		{
@@ -124,7 +124,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [17.0441818, -3.13201785, -1.85907396e-08],
+			Vec3 LookTarget = [23.4732323, -2.2947824, 2.62432337e-07],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -907,7 +907,7 @@ Level =
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a14ab428b9e24ac:CannonBase",
+			string SpriteSource = "5a76d880a6fd100d:BossCannon_Base",
 			bool RenderMask = false,
 			bool FlipX = false,
 			bool FlipY = false,
@@ -945,7 +945,7 @@ Level =
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a14d4366ca8b84c:CannonBarrel",
+			string SpriteSource = "5a76d89fa742adb6:BossCannon_Barrel",
 			bool RenderMask = false,
 			bool FlipX = false,
 			bool FlipY = false,
