@@ -69,7 +69,7 @@ Level =
 		},
 		ForwardRenderer = 
 		{
-			Vec4 ClearColor = [0.0136249661, 0.337763786, 0.544999957, 1],
+			Vec4 ClearColor = [0, 0, 0, 1],
 			bool DrawNonVisible = false,
 			bool DrawDebugObjects = true,
 			bool DrawEditorIcons = true,
@@ -104,7 +104,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, 0, 50],
+			Vec3 Translation = [-1.87686861, 0.759051204, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -116,7 +116,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 44.510788,
+			float Size = 29.8364983,
 		},
 		EditorCameraController = 
 		{
@@ -124,7 +124,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [0, 0, 0],
+			Vec3 LookTarget = [-1.87686861, 0.759051204, -8.20405432e-08],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -180,8 +180,8 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-11.3052626, 5.00702858, 0],
-			Vec3 Scale = [2.47368431, 2.47368431, 2.47368431],
+			Vec3 Translation = [-9.52928162, 4.94782972, 0],
+			Vec3 Scale = [1, 1, 2.47368431],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		SpriteText = 
@@ -195,11 +195,11 @@ Level =
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
 			string FontName = "5a0f895ab1e49e19:DraftGameFont",
-			uint FontSize = 30,
+			uint FontSize = 16,
 			string Text = "Congratulations! You won the game with",
 			TextAlign Align = Left,
-			float PixelsPerUnit = 64,
-			bool Smoothing = true,
+			float PixelsPerUnit = 16,
+			bool Smoothing = false,
 		},
 	},
 	Cog = 
@@ -315,8 +315,8 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-0.832782507, 2.42965698, 0],
-			Vec3 Scale = [6.6507473, 6.74973774, 6.6507473],
+			Vec3 Translation = [-1.06957912, 2.42965698, 0],
+			Vec3 Scale = [4, 4, 6.6507473],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		SpriteText = 
@@ -329,12 +329,12 @@ Level =
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string FontName = "57343753bb4eaaec:NotoSans-Regular",
-			uint FontSize = 30,
+			string FontName = "5a0f895ab1e49e19:DraftGameFont",
+			uint FontSize = 16,
 			string Text = "0",
 			TextAlign Align = Left,
-			float PixelsPerUnit = 64,
-			bool Smoothing = true,
+			float PixelsPerUnit = 16,
+			bool Smoothing = false,
 		},
 		NumOfDeaths = 
 		{
@@ -352,8 +352,8 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-2.96841931, -2.18499875, 0],
-			Vec3 Scale = [3.67368388, 3.67368388, 3.67368388],
+			Vec3 Translation = [-3.38281536, -2.18499875, 0],
+			Vec3 Scale = [2, 2, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		SpriteText = 
@@ -367,11 +367,11 @@ Level =
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
 			string FontName = "5a0f895ab1e49e19:DraftGameFont",
-			uint FontSize = 30,
+			uint FontSize = 16,
 			string Text = "Deaths",
 			TextAlign Align = Left,
-			float PixelsPerUnit = 64,
-			bool Smoothing = true,
+			float PixelsPerUnit = 16,
+			bool Smoothing = false,
 		},
 	},
 	Cog = 
