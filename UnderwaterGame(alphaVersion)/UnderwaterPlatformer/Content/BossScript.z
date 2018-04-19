@@ -214,7 +214,6 @@ class BossScript : ZilchComponent
     //Makes the boss charge with actions
     function Charge()
     {
-        Console.WriteLine("CHARGING");
         var position = this.Owner.Transform.Translation;
         var returning = this.Space.FindObjectByName("Returning").Transform.Translation;
         var destination = this.Space.FindObjectByName("Destination").Transform.Translation;

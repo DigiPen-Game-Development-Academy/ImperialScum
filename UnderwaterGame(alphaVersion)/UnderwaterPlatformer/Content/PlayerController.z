@@ -79,7 +79,6 @@ class PlayerController : ZilchComponent
             var toMouse = mouseWorld - this.Owner.Transform.WorldTranslation;
             var angle = Math.Angle2D(toMouse);
             
-            Console.WriteLine(angle);
             
             //Stabby Sprites
             if (angle > 0.5 && angle < 2.5)

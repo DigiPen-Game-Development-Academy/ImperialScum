@@ -100,7 +100,6 @@ class TreasureChest : ZilchComponent
             {
                 this.Space.CreateAtPosition(Archetype.Gear,
                 this.Owner.Transform.Translation);
-                Console.WriteLine("SPAWN");
             }
             return;
             

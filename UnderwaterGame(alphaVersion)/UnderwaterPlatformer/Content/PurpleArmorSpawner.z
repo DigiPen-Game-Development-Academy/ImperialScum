@@ -10,7 +10,6 @@ class PurpleArmorSpawner : ZilchComponent
         if(AdvInventory.PlayerInventory["ArmorVolcano"] <= 0)
         {
         this.Space.CreateAtPosition(Archetype.VolcanoArmor,this.Owner.Transform.WorldTranslation);
-        Console.WriteLine("Happening");
         }
         else
         this.Owner.Destroy();
