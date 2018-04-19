@@ -5,7 +5,7 @@
 class FarmFood : ZilchComponent
 {
     [Static]
-    var Timer:Real = 5;
+    var Timer:Real = 120;
     
     [Static]
     var SpawnFruit:Boolean = false;
@@ -22,7 +22,7 @@ class FarmFood : ZilchComponent
         if(FarmFood.Timer <= 0)
         {
             FarmFood.SpawnFruit = true;
-            FarmFood.Timer = 60;
+            FarmFood.Timer = 120;
         }
     }
 }
