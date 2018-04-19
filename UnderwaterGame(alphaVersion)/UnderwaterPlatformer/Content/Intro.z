@@ -1,0 +1,62 @@
+class Intro : ZilchComponent
+{
+    var Timer : Integer = 80;
+    
+    var Logo : Integer = 0;
+    
+    [Property]
+    var Black : Real4;
+    [Property]
+    var White : Real4;
+    
+    [Property]
+    var SecondLogo : SpriteSource;
+    [Property]
+    var LevelToLoad : Level;
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        this.Timer -= 1;
+        
+        //Disco Logo
+        if (this.Logo == 1)
+        {
+            var random = new Random();
+            var randColor = random.DieRoll(10);
+        }
+        
+        if (this.Timer == 0)
+        {
+            //Change to Imperial Scum Logo
+            if (this.Logo == 0)
+            {
+                var seq = Action.Sequence(this.Owner.Actions);
+        
+                Action.Property
+                (seq, @this.Owner.Sprite.Color, this.Black, 1, Ease.QuadInOut);
+                
+                this.Logo = 1;
+                this.Owner.Sprite.SpriteSource = this.SecondLogo;
+                this.Timer = 80;
+                
+                this.Space.CreateAtPosition(Archetype.Agamebydaimperialscum,
+                this.Owner.Transform.Translation + Real3(0,-5,0)); 
+                
+                return;
+            }
+            
+            //Go to the Main Menu
+            if (this.Logo == 1)
+            {
+                this.Space.LoadLevel(this.LevelToLoad);
+                
+                return;
+            }
+        }
+    }
+}

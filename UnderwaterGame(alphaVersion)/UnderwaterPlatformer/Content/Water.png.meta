@@ -2,16 +2,16 @@ ImageContent =
 {
 	SpriteSourceBuilder = 
 	{
-		string Name = "Tree_1",
-		uint64 ResourceId = 5a4ff722a7c4c1dc,
+		string Name = "Water",
+		uint64 ResourceId = 5a76ed92762f68cb,
 		uint64 AtlasId = 5274cf95e4a661fd,
-		uint FrameSizeX = 64,
-		uint FrameSizeY = 128,
+		uint FrameSizeX = 16,
+		uint FrameSizeY = 200,
 		uint FrameCount = 1,
 		float FrameDelay = 0.0833333358,
-		float OriginX = 32,
-		float OriginY = 64,
-		float PixelsPerUnit = 8,
+		float OriginX = 8,
+		float OriginY = 100,
+		float PixelsPerUnit = 16,
 		bool Smoothing = false,
 		bool Looping = true,
 		Vec4 Slices = [0, 0, 0, 0],
