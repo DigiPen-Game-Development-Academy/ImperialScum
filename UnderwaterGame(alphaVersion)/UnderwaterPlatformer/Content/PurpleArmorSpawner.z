@@ -1,0 +1,22 @@
+class PurpleArmorSpawner : ZilchComponent
+//Elena
+//Creates Purple Armor in Jacob's level.
+{
+  var PurpleArmor : Archetype = Archetype.VolcanoArmor; 
+    function Initialize(init : CogInitializer)
+    {
+        
+        //Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        if(AdvInventory.PlayerInventory["ArmorVolcano"] <= 0)
+        {
+        this.Space.CreateAtPosition(Archetype.VolcanoArmor,this.Owner.Transform.WorldTranslation);
+        Console.WriteLine("Happening");
+        }
+        else
+        this.Owner.Destroy();
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+    }
+}

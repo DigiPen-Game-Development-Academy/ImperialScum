@@ -104,7 +104,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-0.0675971955, -3.59276748, 50],
+			Vec3 Translation = [1.57866609, -1.56433618, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -116,7 +116,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 18.0967503,
+			float Size = 36.4423561,
 		},
 		EditorCameraController = 
 		{
@@ -124,7 +124,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-0.0675971955, -3.59276748, -5.81163647e-07],
+			Vec3 LookTarget = [1.57866609, -1.56433618, -5.09203232e-07],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -190,7 +190,7 @@ Level =
 			bool VisibilityCulling = true,
 			bool VisibilityEvents = false,
 			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
+			Vec4 Color = [0, 0, 0, 1],
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
@@ -204,7 +204,9 @@ Level =
 		},
 		Intro = 
 		{
-			string SecondLogo = "5a76e345a3abd251:imperialscum",
+			Vec4 White = [1, 1, 1, 1],
+			Vec4 Black = [0, 0, 0, 0],
+			string SecondLogo = "5a76c03df74f8849:imperialscum_HD",
 			string LevelToLoad = "5a5618f4f348dab3:MainMenu",
 		},
 	},

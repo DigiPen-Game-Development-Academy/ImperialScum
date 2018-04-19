@@ -426,9 +426,6 @@ Level =
 			float PixelsPerUnit = 16,
 			bool Smoothing = false,
 		},
-		UnFade = 
-		{
-		},
 		SkipLevel = 
 		{
 		},
@@ -466,9 +463,6 @@ Level =
 			float PixelsPerUnit = 16,
 			bool Smoothing = false,
 		},
-		UnFade = 
-		{
-		},
 	},
 	Cog = 
 	{
@@ -503,9 +497,6 @@ Level =
 			float PixelsPerUnit = 16,
 			bool Smoothing = false,
 		},
-		UnFade = 
-		{
-		},
 	},
 	Cog = 
 	{
@@ -539,9 +530,6 @@ Level =
 			TextAlign Align = Center,
 			float PixelsPerUnit = 16,
 			bool Smoothing = false,
-		},
-		UnFade = 
-		{
 		},
 		ContinueTimer = 
 		{
