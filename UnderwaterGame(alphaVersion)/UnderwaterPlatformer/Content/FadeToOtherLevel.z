@@ -23,6 +23,10 @@ class FadeToOtherLevel : ZilchComponent
     
     function Initialize(init : CogInitializer)
     {
+        this.GameSession.DispatchEvent
+        (Events.Fade, FadeEvent(null, 1, Real4(0,0,0,1), Real4(0,0,0,0)));
+        
+        
         Zero.Connect(this.GameSession, Events.Fade, this.OnFade);
         Zero.Connect(this.Space, Events.Fade, this.OnFade);
         Zero.Connect(this.Owner, Events.Fade, this.OnFade);
@@ -38,10 +42,8 @@ class FadeToOtherLevel : ZilchComponent
         
         if(this.OnlyVisual)
         {
-            var fadeSprite  = this.Space.CreateAtPosition(Archetype.Sprite, Real3.ZAxis * 20);
-            fadeSprite.Transform.Scale *= 1000;
-            fadeSprite.Sprite.Color = event.StartColor;
-            Action.Property(sequence, @fadeSprite.Sprite.Color, event.EndColor, event.TimeToLoad, Ease.Linear);
+            this.Owner.Sprite.Color = event.StartColor;
+            Action.Property(sequence, @this.Owner.Sprite.Color, event.EndColor, event.TimeToLoad, Ease.Linear);
         }
         else
         {
@@ -54,6 +56,9 @@ class FadeToOtherLevel : ZilchComponent
     
     function Load()
     {
+        if(this.LevelToLoad == null)
+        return;
+        
         this.Space.LoadLevel(this.LevelToLoad);
     }
 
@@ -63,6 +68,24 @@ class FadeToOtherLevel : ZilchComponent
         {
             this.GameSession.DispatchEvent
             (Events.Fade, FadeEvent(Level.ThisIsTheCodeLevel, 2, Real4.Zero, Real4(0,0,0,1)));
+        }
+    }
+}
+
+class MakeFadeSpace : ZilchComponent
+{
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.GameSession, Events.GameSetup, this.OnGameSetup);
+        
+    }
+
+    function OnGameSetup(event : GameEvent)
+    {
+        if (this.GameSession.FindSpaceByName("FadeSpace") == null)
+        {
+            var space = this.GameSession.CreateNamedSpace("FadeSpace", Archetype.Space);
+            space.LoadLevel(Level.FadeLevel);
         }
     }
 }
