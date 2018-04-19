@@ -28,6 +28,7 @@ class Health : ZilchComponent
     var Timer2:Real = 0.2;
     var Timer3:Real = 0;
     var Timer4:Real;
+    var Timer5:Real = 1;
     
     var Invincibility : Boolean = false;
     var InvincibilityTimer : Real = 0.5;
@@ -48,6 +49,8 @@ class Health : ZilchComponent
     [Property] var LandingPoof : Archetype = Archetype.LandingPoof;
     
     [Static] var RegenOff : Boolean = false;
+    var OnlyFirstTime : Boolean = true;
+    var BossLevel : Boolean = false;
         
     function Initialize(init : CogInitializer)
     {
@@ -55,6 +58,10 @@ class Health : ZilchComponent
         Zero.Connect(this.Owner, Events.CollisionPersisted, this.OnCollisionPersisted);
         Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
        
+       if(this.Space.FindObjectByName("BOSS") != null)
+       {
+           this.BossLevel = true;
+       }
         
         Health.CurrentHealth = Health.MaxHealth;
     }
@@ -194,7 +201,37 @@ class Health : ZilchComponent
         
         if(this.Space.CurrentLevel == Level.TheBestBossLevel_InTheWorld && Health.CurrentHealth <=0)
         {
-              this.Space.LoadLevel(this.BaseLevelLoad);
+            if(this.OnlyFirstTime == true)
+            {
+                this.Owner.RigidBody.Static = true;
+                this.Owner.Sprite.Visible = false;
+                
+                this.Space.CreateAtPosition(Archetype.ExplodeBubbles, this.Owner.Transform.Translation); 
+                this.Space.CreateAtPosition(Archetype.LegendaryExplode, this.Owner.Transform.Translation);
+                this.Space.CreateAtPosition(Archetype.PlayerDeath, this.Owner.Transform.Translation);
+                
+                 NumOfDeaths.NumberOfDeaths += 1;
+                 this.OnlyFirstTime = false;
+             }
+                 
+            if(this.Timer5 > 0) this.Timer5 -= event.Dt;
+            if(this.Timer5 <= 0)
+            {
+                Health.CurrentHealth = Health.MaxHealth;
+                
+                
+                Hunger.Hunger = Hunger.MaxHunger;
+                
+                this.Owner.RigidBody.Static = false;
+                this.Owner.Sprite.Visible = true;
+                this.OnlyFirstTime = true;
+                Health.RegenOff = false;
+                Inventory.Exists = false;
+                Health.CurrentHealth -= 1;
+                
+                this.Timer5 += 1;
+                this.Space.LoadLevel(this.BaseLevelLoad);
+            }
         }
         
         if(this.Timer > 0 && Hunger.Hunger <= 1)
@@ -256,7 +293,7 @@ class Health : ZilchComponent
         
         
         //DEATH
-        if(Health.CurrentHealth <= 0)
+        if(Health.CurrentHealth <= 0 && this.BossLevel == false)
         {
             var position = this.Owner.Transform.Translation;
             Health.RegenOff = true;
