@@ -4244,6 +4244,10 @@ Level =
 		VolumeLevev = 
 		{
 		},
+		AmbiancePlayer = 
+		{
+			string BackgroundAmbiance = "5a1af5361f045c77:UnderwaterAmbiance",
+		},
 	},
 	Cog = 
 	{
