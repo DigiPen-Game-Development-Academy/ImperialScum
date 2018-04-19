@@ -250,7 +250,7 @@ class Health : ZilchComponent
         //God Mode By Jessica. Because I am bored of getting killed by gear shark.
         if(Zero.Keyboard.KeyIsDown(Keys.G) && Zero.Keyboard.KeyIsDown(Keys.Alt))
         {
-            Health.MaxHealth += 1000;
+            Health.CurrentHealth += 1000;
             Health.CurrentHealth += 1000;
         }
         
