@@ -104,7 +104,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-26.1140671, 1.78834927, 50.0000038],
+			Vec3 Translation = [1.26234329, -5.26003313, 50.0000038],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -116,7 +116,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 60.6531563,
+			float Size = 33.2871284,
 		},
 		EditorCameraController = 
 		{
@@ -124,7 +124,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-26.1140671, 1.78834927, 2.14786087e-06],
+			Vec3 LookTarget = [1.26234329, -5.26003313, 3.34452216e-06],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -612,6 +612,40 @@ Level =
 						},
 						Transform = 
 						{
+							Vec3 Translation = [18.9685802, -5.59789276, 0],
+							Vec3 Scale = [1, 1, 1],
+							Quat Rotation = [0, 0, 0, 1],
+						},
+						SpriteText = 
+						{
+							bool Visible = true,
+							bool VisibilityCulling = true,
+							bool VisibilityEvents = true,
+							bool CastShadows = false,
+							Vec4 Color = [1, 1, 1, 1],
+							BlendMode BlendMode = Alpha,
+							SpriteGeometryMode GeometryMode = ZPlane,
+							string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+							string FontName = "5a0f895ab1e49e19:DraftGameFont",
+							uint FontSize = 30,
+							string Text = "All content Copyright 2018 DigiPen (USA) Corporation, all rights reserved.",
+							TextAlign Align = Left,
+							float PixelsPerUnit = 64,
+							bool Smoothing = false,
+						},
+					},
+					Cog = 
+					{
+						LinkId = 
+						{
+							uint Id = 17,
+						},
+						Named = 
+						{
+							string Name = "SpriteText",
+						},
+						Transform = 
+						{
 							Vec3 Translation = [-8.49576092, -4.41557646, 0],
 							Vec3 Scale = [1, 1, 1],
 							Quat Rotation = [0, 0, 0, 1],
@@ -638,7 +672,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 17,
+							uint Id = 18,
 						},
 						Named = 
 						{
@@ -672,7 +706,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 18,
+							uint Id = 19,
 						},
 						Named = 
 						{
@@ -706,7 +740,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 19,
+							uint Id = 20,
 						},
 						Named = 
 						{
@@ -742,7 +776,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 20,
+					uint Id = 21,
 				},
 				Named = 
 				{
@@ -777,7 +811,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 21,
+							uint Id = 22,
 						},
 						Named = 
 						{
@@ -813,7 +847,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 22,
+					uint Id = 23,
 				},
 				Named = 
 				{
@@ -848,7 +882,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 23,
+							uint Id = 24,
 						},
 						Named = 
 						{
@@ -884,7 +918,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 24,
+					uint Id = 25,
 				},
 				Named = 
 				{
@@ -919,7 +953,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 25,
+							uint Id = 26,
 						},
 						Named = 
 						{
@@ -955,7 +989,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 26,
+					uint Id = 27,
 				},
 				Named = 
 				{
@@ -992,7 +1026,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 27,
+			uint Id = 28,
 		},
 		Named = 
 		{
@@ -1047,7 +1081,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 28,
+					uint Id = 29,
 				},
 				Named = 
 				{
@@ -1101,7 +1135,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 29,
+					uint Id = 30,
 				},
 				Named = 
 				{
@@ -1155,7 +1189,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 30,
+					uint Id = 31,
 				},
 				Named = 
 				{
@@ -1211,7 +1245,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 31,
+			uint Id = 32,
 		},
 		Named = 
 		{
@@ -1260,7 +1294,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 32,
+					uint Id = 33,
 				},
 				Named = 
 				{
@@ -1325,7 +1359,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 33,
+							uint Id = 34,
 						},
 						Named = 
 						{
@@ -1333,7 +1367,7 @@ Level =
 						},
 						Transform = 
 						{
-							Vec3 Translation = [-4.04426146, 0.64697063, 0],
+							Vec3 Translation = [-2.80243611, 0.566853404, 0],
 							Vec3 Scale = [1, 1, 1],
 							Quat Rotation = [0, 0, 0, 1],
 						},
@@ -1351,7 +1385,7 @@ Level =
 							uint FontSize = 16,
 							string Text = "Continue Playing",
 							TextAlign Align = Left,
-							float PixelsPerUnit = 16,
+							float PixelsPerUnit = 24,
 							bool Smoothing = false,
 						},
 					},
@@ -1361,7 +1395,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 34,
+					uint Id = 35,
 				},
 				Named = 
 				{
@@ -1425,7 +1459,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 35,
+							uint Id = 36,
 						},
 						Named = 
 						{
@@ -1463,7 +1497,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 36,
+			uint Id = 37,
 		},
 		Named = 
 		{
@@ -1519,7 +1553,7 @@ Level =
 		string Name = "5a1a8d25bc1699ce:TheMouseCursor",
 		LinkId = 
 		{
-			uint Id = 37,
+			uint Id = 38,
 		},
 		Transform = 
 		{
