@@ -42,7 +42,7 @@ class Hunger : ZilchComponent
         
         else if(this.Timer <= 0)
         {
-            if (Hunger.Hunger >= 70 && Health.CurrentHealth <= 15)
+            if (Hunger.Hunger >= 70 && Health.CurrentHealth <= 15 && Health.RegenOff != true)
             {
                 Health.CurrentHealth += 1;
                 if(AdvInventory.PlayerInventory["Ring_Regen"] >= 1)

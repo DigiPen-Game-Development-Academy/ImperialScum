@@ -46,6 +46,8 @@ class Health : ZilchComponent
     [Static] var CheckOnce : Boolean = false;
     [Static] var CheckTwice : Boolean = false;
     [Property] var LandingPoof : Archetype = Archetype.LandingPoof;
+    
+    [Static] var RegenOff : Boolean = false;
         
     function Initialize(init : CogInitializer)
     {
@@ -259,6 +261,8 @@ class Health : ZilchComponent
         if(Health.CurrentHealth <= 0)
         {
             var position = this.Owner.Transform.Translation;
+            Health.RegenOff = true;
+            Inventory.Exists = true;
             
             if (this.Owner.PlayerController.Dead == false)
             {
@@ -336,6 +340,8 @@ class Health : ZilchComponent
                 this.Owner.PlayerController.LoseTimer = 60;
                 this.Owner.RigidBody.Static = false;
                 this.Owner.Sprite.Visible = true;
+                Health.RegenOff = false;
+                Inventory.Exists = false;
                 Health.CurrentHealth -= 1;
             }
             
