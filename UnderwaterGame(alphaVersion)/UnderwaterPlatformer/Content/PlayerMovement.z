@@ -148,6 +148,7 @@ class PlayerMovement : ZilchComponent
         if(this.Owner.GroundChecker.Grounded == false)
         this.TouchingGround = false;
         
+        //This is the script that gets the player ready for the launch
         if(event.OtherObject.Name == ("CannonBarrel") && Zero.Keyboard.KeyIsPressed(Keys.S))
         {
         this.Owner.RigidBody.DynamicState = RigidBodyDynamicState.Static;
@@ -163,12 +164,12 @@ class PlayerMovement : ZilchComponent
     {   
         if(this.CannonReady == true)
         {
-        Inventory.Exists = false;
         this.CannonReady = false;
         this.Owner.RigidBody.Velocity += Real3(80,40,0);
         this.Owner.RigidBody.DynamicState = RigidBodyDynamicState.Dynamic;
         
         this.Space.CreateAtPosition(Archetype.PlayerCannon, this.Owner.Transform.Translation);
+        Inventory.Exists = false;
         }
     }
 
@@ -208,7 +209,7 @@ class PlayerMovement : ZilchComponent
                 (seq, 1);
             Action.Call
                 (seq, this.Launch);
-                
+            
             return;
             
         }

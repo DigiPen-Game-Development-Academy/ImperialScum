@@ -405,6 +405,10 @@ Level =
 					float PixelsPerUnit = 16,
 					bool Smoothing = false,
 				},
+				FadeToOtherLevel = 
+				{
+					bool OnlyVisual = false,
+				},
 			},
 		},
 	},
