@@ -14,7 +14,6 @@ class SkipLevel : ZilchComponent
             if(this.Timer <= 0 && ContinueTimer.LevelNumber <= 4)
             {
                 ContinueTimer.LevelNumber += 1;
-                Console.WriteLine("Current Level Number:`ContinueTimer.LevelNumber`");
                 this.Timer += 0.25;
             }
             else return;

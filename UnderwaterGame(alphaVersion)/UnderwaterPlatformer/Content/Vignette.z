@@ -23,7 +23,6 @@ class Vignette : ZilchComponent
         }
         else if(Health.CurrentHealth < 5)
         {
-        Console.WriteLine(this.Owner.Area);
         this.Owner.Area.Size = Real2((11 + Health.CurrentHealth), (11+Health.CurrentHealth));
         var seq = Action.Sequence(this.Owner.Actions);
         Action.Property

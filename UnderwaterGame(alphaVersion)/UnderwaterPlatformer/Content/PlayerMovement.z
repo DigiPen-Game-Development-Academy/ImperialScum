@@ -251,13 +251,11 @@ class PlayerMovement : ZilchComponent
         //Initializes ring effects.
         if(AdvInventory.PlayerInventory["Ring_Speed"] > 0 && this.CheckOnce == false)
         {
-            Console.WriteLine("Speed Activated");
             this.CheckOnce = true;
             this.Speed = this.Speed * 1.2;
         }
         if(AdvInventory.PlayerInventory["Ring_Jump"] > 0 && this.CheckTwice == false)
         {
-            Console.WriteLine("Jump Activated");
             this.CheckTwice = true;
             this.JumpSpeed = this.JumpSpeed * 1.2;
         }
