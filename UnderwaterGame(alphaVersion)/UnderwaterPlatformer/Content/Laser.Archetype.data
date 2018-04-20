@@ -38,7 +38,8 @@ Cog =
 	},
 	BulletLogic = 
 	{
-		string ShootSFX = "",
+		string ShootSFX = "5a7351312c37dba6:BossLaser",
+		string HitSFX = "",
 		float Speed = 20,
 		float Gravity = 0,
 		float DegreesOffset = 0,
@@ -60,7 +61,7 @@ Cog =
 		bool Asleep = false,
 		bool Kinematic = false,
 		bool RotationLocked = true,
-		bool Mode2D = false,
+		bool Mode2D = true,
 		bool AllowSleep = true,
 		bool Inherit2DMode = true,
 		Vec3 Velocity = [0, 0, 0],
