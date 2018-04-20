@@ -11,6 +11,9 @@ class InventoryDestroy : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
+        if(Health.IsDead == true)
+        this.Owner.Destroy();
+        
         if(Inventory.Exists == false)
             this.Owner.Destroy();
     }

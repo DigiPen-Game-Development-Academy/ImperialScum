@@ -25,6 +25,9 @@ class Health : ZilchComponent
     [Property]
     var HitSoundThing : SoundCue = SoundCue.PlayerHit;
     
+    [Static]
+    var IsDead : Boolean = false;
+    
     var Timer2:Real = 0.2;
     var Timer3:Real = 0;
     var Timer4:Real;
@@ -298,6 +301,7 @@ class Health : ZilchComponent
         //DEATH
         if(Health.CurrentHealth <= 0 && this.BossLevel == false)
         {
+            Health.IsDead = true;
             var position = this.Owner.Transform.Translation;
             Health.RegenOff = true;
             Inventory.Exists = true;
@@ -367,6 +371,7 @@ class Health : ZilchComponent
             //Respawn
             if (this.Owner.PlayerController.LoseTimer <= 0)
             {
+                Health.IsDead = false;
                 this.Owner.Transform.Translation = Checkpoint.RespawnPosition;
                 
                 Health.CurrentHealth = Health.MaxHealth;
