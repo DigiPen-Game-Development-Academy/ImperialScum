@@ -284,6 +284,9 @@ class BossScript : ZilchComponent
 class BombFish : ZilchComponent
 {
     [Property]
+    var FuseSFX:SoundCue;
+  
+    [Property]
     var StaticState:RigidBodyDynamicState;
     
     [Property]
@@ -322,6 +325,7 @@ class BombFish : ZilchComponent
       if(event.OtherObject.PlayerController != null || event.OtherObject.Spear != null ||
       event.OtherObject.SwordBoomerangMove != null)
       {
+          this.Space.SoundSpace.PlayCue(this.FuseSFX);
           this.Exploding = true;
           this.Owner.Sprite.SpriteSource = SpriteSource.BombGearahna_Explode;
       }

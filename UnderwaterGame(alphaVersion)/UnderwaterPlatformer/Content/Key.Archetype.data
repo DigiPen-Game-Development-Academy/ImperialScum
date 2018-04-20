@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-3.01467562, -2.66374588, 0],
+		Vec3 Translation = [19.4127884, 5.67533493, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -48,6 +48,7 @@ Cog =
 	},
 	Key = 
 	{
+		string KeySFX = "5a73586b8de647c0:LegendarySound_Quiet",
 	},
 	Hierarchy = 
 	{

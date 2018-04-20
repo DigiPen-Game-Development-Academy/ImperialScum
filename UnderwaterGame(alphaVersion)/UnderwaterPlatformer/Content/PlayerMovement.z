@@ -17,6 +17,8 @@ class PlayerMovement : ZilchComponent
     var Position : Real3 { get { if (PlayerMovement.Valid)
     return PlayerMovement.Object.Transform.WorldTranslation; else return Real3.Zero; } }
     
+    [Property]
+    var LaunchSFX:SoundCue;
     
     [Static]
     var Checkpoint1 : Boolean = false;
@@ -184,11 +186,18 @@ class PlayerMovement : ZilchComponent
     
     function Launch()
     {   
+        
+        SpawnFruit.Spawn = false;
         if(this.CannonReady == true)
         {
         this.CannonReady = false;
         this.Owner.RigidBody.Velocity += Real3(80,40,0);
         this.Owner.RigidBody.DynamicState = RigidBodyDynamicState.Dynamic;
+        
+        this.Space.SoundSpace.PlayCue(this.LaunchSFX);
+        this.Owner.PlayerController.Launched = 2;
+        
+        this.GameSession.DispatchEvent(Events.Shake, ShakeEvent(0.2,0.4,0.0001, Ease.Linear, 4));
         
         this.Space.CreateAtPosition(Archetype.PlayerCannon, this.Owner.Transform.Translation);
         Inventory.Exists = false;
@@ -200,6 +209,11 @@ class PlayerMovement : ZilchComponent
         this.BossCannonReady = false;
         this.Owner.RigidBody.Velocity += Real3(80,40,0);
         this.Owner.RigidBody.DynamicState = RigidBodyDynamicState.Dynamic;
+        
+        this.Space.SoundSpace.PlayCue(this.LaunchSFX);
+        this.Owner.PlayerController.Launched = 2;
+        
+        this.GameSession.DispatchEvent(Events.Shake, ShakeEvent(0.2,0.4,0.0001, Ease.Linear, 4));
         
         this.Space.CreateAtPosition(Archetype.PlayerCannon, this.Owner.Transform.Translation);
         Inventory.Exists = false;
@@ -338,18 +352,26 @@ class PlayerMovement : ZilchComponent
             this.DoubleJump = false;
             
         }
+        
+        //Left and Right
+        if (this.Owner.PlayerController.Launched == 0 || this.Owner.PlayerController.Launched == 2)
+        {
+            if(Zero.Keyboard.KeyIsDown(this.KeyLeft))
+            {
+                if (this.Owner.PlayerController.Launched == 0)
+                {
+                    direction -= Real3.XAxis;
+                }
                 
-        if(Zero.Keyboard.KeyIsDown(this.KeyLeft))
-        {
-            direction -= Real3.XAxis;
+            }
             
+            if(Zero.Keyboard.KeyIsDown(this.KeyRight) || this.Owner.PlayerController.Launched == 2)
+            {
+                direction += Real3.XAxis;
+            }
         }
         
-        if(Zero.Keyboard.KeyIsDown(this.KeyRight))
-        {
-            direction += Real3.XAxis;
-        }
-        
+        //Up and Down
         if(Zero.Keyboard.KeyIsDown(this.KeyUp) && this.Swimming == true || Zero.Keyboard.KeyIsDown(Keys.Space) && this.Swimming == true)
         {
             direction += Real3.YAxis;

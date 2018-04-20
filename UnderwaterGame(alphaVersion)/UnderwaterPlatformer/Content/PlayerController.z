@@ -58,6 +58,10 @@ class PlayerController : ZilchComponent
     var EquipCopperArmor:Boolean = false;
     
     var EquipVolcanoArmor:Boolean = false;
+    
+    
+    var Launched:Integer = 0;
+    
         
     function Initialize(init : CogInitializer)
     {
@@ -190,22 +194,36 @@ class PlayerController : ZilchComponent
         this.Owner.Sprite.SpriteSource = this.IdleAnimation;
         else if(this.Owner.GroundChecker.Grounded == true && this.Owner.Sprite.SpriteSource != this.WalkingAnimation)
         {
-            this.Owner.Sprite.SpriteSource = this.WalkingAnimation;
+            if (this.Launched == 0)
+            {
+                this.Owner.Sprite.SpriteSource = this.WalkingAnimation;
+            }
         }
         else if(this.Owner.GroundChecker.Grounded == false)
         {
             this.Owner.Sprite.SpriteSource = this.JumpAnimation;
         }
        
-        if(Zero.Keyboard.KeyIsDown(this.Right))
+       //Horizontal Movement
+       
+       if (this.Launched == 0 || this.Launched == 2)
         {
-            this.Owner.Sprite.FlipX = false;
+            if(Zero.Keyboard.KeyIsDown(this.Right))
+            {
+                this.Owner.Sprite.FlipX = false;
+            }
+            
+            if(Zero.Keyboard.KeyIsDown(this.Left))
+            {
+                if (this.Launched == 0)
+                {
+                    this.Owner.Sprite.FlipX = true;
+                }
+            }
         }
         
-        if(Zero.Keyboard.KeyIsDown(this.Left))
-        {
-            this.Owner.Sprite.FlipX = true;
-        }
+        
+        
         
         if(this.Owner.RigidBody.Velocity.Y >= 0 && Zero.Keyboard.KeyIsPressed(Keys.W))
         {
