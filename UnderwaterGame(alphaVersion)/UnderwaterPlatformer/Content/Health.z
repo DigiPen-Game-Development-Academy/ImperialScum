@@ -201,6 +201,10 @@ class Health : ZilchComponent
         
         if(this.Space.CurrentLevel == Level.TheBestBossLevel_InTheWorld && Health.CurrentHealth <=0)
         {
+            this.GameSession.DispatchEvent
+            (Events.Fade, FadeEvent(this.BaseLevelLoad, 1, Real4.Zero, Real4(0,0,0,1)));
+            
+            
             if(this.OnlyFirstTime == true)
             {
                 this.Owner.RigidBody.Static = true;
@@ -230,7 +234,6 @@ class Health : ZilchComponent
                 Health.CurrentHealth -= 1;
                 
                 this.Timer5 += 1;
-                this.Space.LoadLevel(this.BaseLevelLoad);
             }
         }
         
@@ -288,7 +291,7 @@ class Health : ZilchComponent
         if(Zero.Keyboard.KeyIsDown(Keys.G) && Zero.Keyboard.KeyIsDown(Keys.Alt))
         {
             Health.CurrentHealth += 1000;
-            Health.CurrentHealth += 1000;
+            Health.MaxHealth += 1000;
         }
         
         
