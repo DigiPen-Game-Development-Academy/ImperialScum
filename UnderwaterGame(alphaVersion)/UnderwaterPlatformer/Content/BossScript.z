@@ -10,6 +10,9 @@ class BossScript : ZilchComponent
     var Fish:Archetype;
     
     [Property]
+    var BiteSFX:SoundCue;
+    
+    [Property]
     var NormRotation:Quaternion;
     
     [Static]
@@ -84,6 +87,7 @@ class BossScript : ZilchComponent
             if (this.TimerSprite == 0)
             {
                 this.Owner.Sprite.SpriteSource = this.NormalSprite;
+                this.Space.SoundSpace.PlayCue(this.BiteSFX);
             }
         }
         //Open Mouth
@@ -164,11 +168,11 @@ class BossScript : ZilchComponent
                 
                 if (this.TimerShoot == 0)
                 {
-                    this.TimerShoot = 30;
+                    this.TimerShoot = 35;
                     
                     //Open Mouth
                     this.Owner.Sprite.SpriteSource = this.BiteSprite;
-                    this.TimerSprite = 15;
+                    this.TimerSprite = 25;
                     
                     
                     if (this.Owner.Sprite.FlipX == true)
@@ -334,6 +338,7 @@ class Explosion : ZilchComponent
   function Initialize(init : CogInitializer)
   {
     Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    this.Space.SoundSpace.PlayCue(this.ExplodeSFX);
   }
 
   function OnLogicUpdate(event : UpdateEvent)
@@ -343,7 +348,6 @@ class Explosion : ZilchComponent
     if(this.Timer <= 0)
     {
         this.Owner.Destroy();
-        this.Space.SoundSpace.PlayCue(this.ExplodeSFX);
     }
     
     else

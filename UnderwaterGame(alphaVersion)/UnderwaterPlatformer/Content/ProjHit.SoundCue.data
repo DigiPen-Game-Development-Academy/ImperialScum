@@ -1,9 +1,9 @@
 SoundCue = 
 {
-	SoundPlayMode PlayMode = Looping,
-	float Volume = 0.529999971,
+	SoundPlayMode PlayMode = Single,
+	float Volume = 0.429999977,
 	float VolumeVariation = 0,
-	float VolumeDB = -5.51448298,
+	float VolumeDB = -7.33063173,
 	bool UseVolumeDB = false,
 	float VolumeDBVariation = 0,
 	float Pitch = 0,
@@ -18,8 +18,8 @@ SoundCue =
 	Array Sounds = 
 	[
 		{
-			string SoundName = "5a59198eb2cf67c0:Main Theme V4",
-			string GeneratedSoundName = "55017c595ef88bf0:DefaultGeneratedSound",
+			string SoundName = "5a7355320805bba0:ProjHit",
+			string GeneratedSoundName = "",
 			WhichSoundType WhichToUse = FromFile,
 			float Weight = 1,
 			float LoopEndTime = 0,

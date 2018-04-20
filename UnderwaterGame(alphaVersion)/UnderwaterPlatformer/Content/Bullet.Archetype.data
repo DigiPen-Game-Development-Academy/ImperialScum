@@ -14,13 +14,13 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0, 0, 0],
+		Vec3 Translation = [-1.43923223, -3.32059145, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
 	Sprite = 
 	{
-		bool Visible = true,
+		bool Visible = false,
 		bool VisibilityCulling = true,
 		bool VisibilityEvents = true,
 		bool CastShadows = false,
@@ -50,6 +50,8 @@ Cog =
 	},
 	BulletLogic = 
 	{
+		string ShootSFX = "5a732f39652dbca1:Shoot",
+		string HitSFX = "5a73553208080e94:ProjHit",
 		float Speed = 15,
 		float Gravity = 13.8278952,
 		float DegreesOffset = 0,
@@ -90,6 +92,11 @@ Cog =
 	},
 	Shockwave = 
 	{
+	},
+	SpawnParticle = 
+	{
+		string Spawn = "",
+		int AppearTimer = 2,
 	},
 	Hierarchy = 
 	{

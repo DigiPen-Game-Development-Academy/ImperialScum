@@ -75,6 +75,13 @@ class EnemyShoot : ZilchComponent
 }
 class BulletLogic : ZilchComponent
 {
+    [Property]
+    var ShootSFX:SoundCue;
+    
+    [Property]
+    var HitSFX:SoundCue;
+    
+    
     var Target : Cog = null;
     [Property] var Speed : Real = 1;
     
@@ -93,12 +100,17 @@ class BulletLogic : ZilchComponent
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
         Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
+        
+        this.Space.SoundSpace.PlayCue(this.ShootSFX);
     }
 
     function OnCollisionStarted(event : CollisionEvent)
     {
         if(event.OtherObject.PlayerController != null || event.OtherObject.Name == ("DefaultTile") && this.DestroyOnTile == false)
+        {
+            this.Space.SoundSpace.PlayCue(this.HitSFX);
             this.Owner.Destroy();
+        }
     }
 
     function OnLogicUpdate(event : UpdateEvent)
