@@ -53,7 +53,7 @@ class Upgrades : ZilchComponent
         if(Upgrades.SpearUpgrade == 0)
         {
         if(this.Owner.Name == "Spear 0")
-        this.Owner.Sprite.SpriteSource = SpriteSource.PlayerSpear;
+        this.Owner.Sprite.SpriteSource = SpriteSource.Weap_Spear;
         
         Upgrades.SpearPrice = 20;
         EnemyHealth.SpearDamage = 1.2;
