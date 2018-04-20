@@ -226,7 +226,7 @@ class PlayerMovement : ZilchComponent
             this.Owner.Sprite.FlipX = false;
             
             this.Owner.Transform.Translation=
-            this.Space.FindObjectByName("OverHere").Transform.WorldTranslation + Real3(0,-0.3,-3);
+            this.Space.FindObjectByName("OverHere").Transform.WorldTranslation + Real3(-0.1,-0.2,-3);
 
             var seq = Action.Sequence(this.Owner.Actions);
                 
@@ -249,7 +249,7 @@ class PlayerMovement : ZilchComponent
             this.Owner.Sprite.FlipX = false;
             
             this.Owner.Transform.Translation =
-            this.Space.FindObjectByName("BossOverHere").Transform.WorldTranslation + Real3(0,-0.3,-3);
+            this.Space.FindObjectByName("BossOverHere").Transform.WorldTranslation + Real3(-0.1,-0.2,-3);
             
              var seq = Action.Sequence(this.Owner.Actions);
                 
