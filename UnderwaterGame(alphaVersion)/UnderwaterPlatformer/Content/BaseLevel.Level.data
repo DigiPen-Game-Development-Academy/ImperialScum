@@ -104,7 +104,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [10.6697083, 4.58500862, 50],
+			Vec3 Translation = [24.2718067, -6.14118719, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -116,7 +116,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 18.2683697,
+			float Size = 3.01974535,
 		},
 		EditorCameraController = 
 		{
@@ -124,7 +124,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [10.6697083, 4.58500862, 6.8780605e-07],
+			Vec3 LookTarget = [24.2718067, -6.14118719, 6.8780605e-07],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -795,8 +795,8 @@ Level =
 			bool Seamless = true,
 			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
 			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
-			Vec3 Offset = [0, 1, 0],
-			Vec3 Size = [0.5, 1.14999998, 0.5],
+			Vec3 Offset = [-0.0500000007, 1, 0],
+			Vec3 Size = [0.550000012, 1.14999998, 0.5],
 		},
 		EnterCannon = 
 		{
@@ -927,11 +927,11 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "CannonBarrel",
+			string Name = "BossCannonBarrel",
 		},
 		Transform = 
 		{
-			Vec3 Translation = [23.4392929, -7.18995047, -6.5],
+			Vec3 Translation = [23.4800491, -7.18995047, -6.5],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -960,8 +960,8 @@ Level =
 			bool Seamless = true,
 			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
 			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
-			Vec3 Offset = [0, 1, 0],
-			Vec3 Size = [0.5, 1.14999998, 0.5],
+			Vec3 Offset = [-0.0500000007, 1, 0],
+			Vec3 Size = [0.550000012, 1.14999998, 0.5],
 		},
 		EnterCannon = 
 		{
@@ -3962,6 +3962,10 @@ Level =
 		},
 		Unfade = 
 		{
+		},
+		FadeToOtherLevel = 
+		{
+			bool OnlyVisual = false,
 		},
 	},
 },

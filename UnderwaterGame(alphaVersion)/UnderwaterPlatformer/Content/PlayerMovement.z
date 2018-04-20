@@ -63,6 +63,8 @@ class PlayerMovement : ZilchComponent
     
     var CannonReady:Boolean = false;
     
+    var BossCannonReady:Boolean = false;
+    
     var WalkTimer:Integer = 20;
     
     function Initialize(init : CogInitializer)
@@ -155,16 +157,47 @@ class PlayerMovement : ZilchComponent
         this.CannonReady = true;
         this.Owner.CapsuleCollider.Ghost = true;
         Inventory.Exists = true;
+        }
         
+        if(event.OtherObject.Name == ("BossCannonBarrel") && Zero.Keyboard.KeyIsPressed(Keys.S))
+        {
+        this.Owner.RigidBody.DynamicState = RigidBodyDynamicState.Static;
+        this.BossCannonReady = true;
+        this.Owner.CapsuleCollider.Ghost = true;
+        Inventory.Exists = true;
         }
         
     }
+    
+    function GoToBossLevel()
+    {
+        this.GameSession.DispatchEvent
+            (Events.Fade, FadeEvent(Level.TheBestBossLevel_InTheWorld, 1, Real4.Zero, Real4(0,0,0,1)));
+    }
+    
+    function GoToNextLevel()
+    {
+        this.GameSession.DispatchEvent
+            (Events.Fade, FadeEvent(Level.LoadingLevel, 1, Real4.Zero, Real4(0,0,0,1)));
+    }
+    
     
     function Launch()
     {   
         if(this.CannonReady == true)
         {
         this.CannonReady = false;
+        this.Owner.RigidBody.Velocity += Real3(80,40,0);
+        this.Owner.RigidBody.DynamicState = RigidBodyDynamicState.Dynamic;
+        
+        this.Space.CreateAtPosition(Archetype.PlayerCannon, this.Owner.Transform.Translation);
+        Inventory.Exists = false;
+        
+        }
+        
+        if(this.BossCannonReady == true)
+        {
+        this.BossCannonReady = false;
         this.Owner.RigidBody.Velocity += Real3(80,40,0);
         this.Owner.RigidBody.DynamicState = RigidBodyDynamicState.Dynamic;
         
@@ -192,12 +225,29 @@ class PlayerMovement : ZilchComponent
         {
             this.Owner.Sprite.FlipX = false;
             
-            if(ContinueTimer.LevelNumber < 4)
-            {
             this.Owner.Transform.Translation=
             this.Space.FindObjectByName("OverHere").Transform.WorldTranslation + Real3(0,-0.3,-3);
-            }
-            else
+
+            var seq = Action.Sequence(this.Owner.Actions);
+                
+            Action.Property
+                (seq, @this.Owner.Transform.EulerAngles, Real3(0,0,-1), 1.1, Ease.Linear);
+            Action.Delay
+                (seq, 1);
+            Action.Call
+                (seq, this.Launch);
+            Action.Delay
+                (seq, 1);
+            Action.Call
+                (seq, this.GoToNextLevel);                
+            
+            return;
+        }
+        
+        if(this.BossCannonReady == true)
+        {
+            this.Owner.Sprite.FlipX = false;
+            
             this.Owner.Transform.Translation =
             this.Space.FindObjectByName("BossOverHere").Transform.WorldTranslation + Real3(0,-0.3,-3);
             
@@ -209,10 +259,15 @@ class PlayerMovement : ZilchComponent
                 (seq, 1);
             Action.Call
                 (seq, this.Launch);
+            Action.Delay
+                (seq, 1);
+            Action.Call
+                (seq, this.GoToBossLevel);  
             
             return;
             
         }
+        
         
         var direction = Real3.Zero;
         

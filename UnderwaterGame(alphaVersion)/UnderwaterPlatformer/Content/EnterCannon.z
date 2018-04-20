@@ -20,20 +20,10 @@ class EnterCannon : ZilchComponent
                 
                 Action.Property
                     (seq, @this.Owner.Transform.EulerAngles, Real3(0,0,-1), 2, Ease.Linear);
-                Action.Delay(seq, 2);
-                Action.Call(seq, this.LoadLevelNow);
                 
                 
             }
         }
-    }
-    
-    function LoadLevelNow()
-    {
-        if(ContinueTimer.LevelNumber > 4)
-        this.Space.LoadLevel(Level.TheBestBossLevel_InTheWorld);
-        else
-        this.Space.LoadLevel(Level.LoadingLevel);
     }
 
 }
