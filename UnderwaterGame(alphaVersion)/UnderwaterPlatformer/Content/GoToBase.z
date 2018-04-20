@@ -9,6 +9,7 @@ class GoToBase : ZilchComponent
     
     function Initialize(init : CogInitializer)
     {
+        SpawnFruit.Spawn = true;
         GoToBase.ThisSpace = this.Space;
         Zero.Connect(this.Owner, Events.CollisionPersisted, this.OnCollisionPersisted);
     }

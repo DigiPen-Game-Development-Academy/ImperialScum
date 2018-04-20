@@ -184,6 +184,7 @@ class PlayerMovement : ZilchComponent
     
     function Launch()
     {   
+        SpawnFruit.Spawn = false;
         if(this.CannonReady == true)
         {
         this.CannonReady = false;
