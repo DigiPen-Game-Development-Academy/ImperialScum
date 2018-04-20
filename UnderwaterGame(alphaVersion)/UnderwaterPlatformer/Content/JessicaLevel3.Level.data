@@ -104,7 +104,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [3.17446136, 1.5722363, 50],
+			Vec3 Translation = [5.47825813, -1.40514135, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -116,7 +116,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 30.1194649,
+			float Size = 30.1195011,
 		},
 		EditorCameraController = 
 		{
@@ -124,7 +124,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [3.17446136, 1.5722363, 2.59722583e-07],
+			Vec3 LookTarget = [5.47825813, -1.40514135, 4.65377752e-07],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -563,15 +563,15 @@ Level =
 			bool VisibilityCulling = true,
 			bool VisibilityEvents = true,
 			bool CastShadows = false,
-			Vec4 Color = [0.524999976, 0.070874989, 0.0711474046, 1],
+			Vec4 Color = [0.889999986, 1, 0, 1],
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
 			string FontName = "5a0f895ab1e49e19:DraftGameFont",
-			uint FontSize = 30,
+			uint FontSize = 16,
 			string Text = "For several years, global war has been raging around the Earth.",
 			TextAlign Align = Left,
-			float PixelsPerUnit = 64,
+			float PixelsPerUnit = 32,
 			bool Smoothing = false,
 		},
 	},
@@ -587,7 +587,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-10.661191, 2.29671645, -1],
+			Vec3 Translation = [-10.6553993, 2.27354884, -1],
 			Vec3 Scale = [1.48860204, 1.48860204, 1.48860204],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -602,10 +602,10 @@ Level =
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
 			string FontName = "5a0f895ab1e49e19:DraftGameFont",
-			uint FontSize = 30,
+			uint FontSize = 16,
 			string Text = "For several years, global war has been raging around the Earth.",
 			TextAlign Align = Left,
-			float PixelsPerUnit = 64,
+			float PixelsPerUnit = 32,
 			bool Smoothing = false,
 		},
 	},
@@ -631,15 +631,15 @@ Level =
 			bool VisibilityCulling = true,
 			bool VisibilityEvents = true,
 			bool CastShadows = false,
-			Vec4 Color = [0.525490224, 0.0705882311, 0.0705882311, 1],
+			Vec4 Color = [0.890196085, 1, 0, 1],
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
 			string FontName = "5a0f895ab1e49e19:DraftGameFont",
-			uint FontSize = 30,
+			uint FontSize = 16,
 			string Text = "For several years, global war has been raging around the Earth.",
 			TextAlign Align = Left,
-			float PixelsPerUnit = 64,
+			float PixelsPerUnit = 32,
 			bool Smoothing = false,
 		},
 	},
@@ -655,7 +655,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-4.77228594, 0.951170325, -1],
+			Vec3 Translation = [-4.78720665, 0.963841796, -1],
 			Vec3 Scale = [1.48860204, 1.48860204, 1.48860204],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -670,11 +670,91 @@ Level =
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
 			string FontName = "5a0f895ab1e49e19:DraftGameFont",
-			uint FontSize = 30,
+			uint FontSize = 16,
 			string Text = "For several years, global war has been raging around the Earth.",
 			TextAlign Align = Left,
-			float PixelsPerUnit = 64,
+			float PixelsPerUnit = 32,
 			bool Smoothing = false,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 16,
+		},
+		Named = 
+		{
+			string Name = "BOSS",
+		},
+		Archetyped = 
+		{
+			string Name = "5a0d95550a3e4a45:BOSS",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0.237043381, 4.08425236, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = false,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5a46e0535f0747b7:Enemy_SandBoss()",
+			bool RenderMask = false,
+			bool FlipX = true,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 0,
+			uint StartFrame = 0,
+		},
+		BoxCollider = 
+		{
+			bool Ghost = true,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "5a5d96483f925cc6:Boss",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [2.75, 1.25, 0.5],
+		},
+		RigidBody = 
+		{
+			bool Static = false,
+			bool Asleep = false,
+			bool Kinematic = true,
+			bool RotationLocked = true,
+			bool Mode2D = true,
+			bool AllowSleep = true,
+			bool Inherit2DMode = true,
+			Vec3 Velocity = [14.8152103, 255.265762, 0],
+			Vec3 AngularVelocity = [0, 0, 0],
+		},
+		IgnoreSpaceEffects = 
+		{
+			bool Drag = true,
+			bool Flow = true,
+			bool Force = true,
+			bool Gravity = true,
+			bool Thrust = true,
+			bool Vortex = true,
+			bool Wind = true,
+			bool Invalid = false,
+			bool Torque = true,
+			bool PointGravity = true,
+			bool PointForce = true,
+			bool Buoyancy = true,
+			bool Custom = true,
+		},
+		Hierarchy = 
+		{
 		},
 	},
 },
