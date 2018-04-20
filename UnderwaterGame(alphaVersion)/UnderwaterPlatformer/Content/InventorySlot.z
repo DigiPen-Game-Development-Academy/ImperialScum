@@ -46,9 +46,10 @@ class LegendarySparkle : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
+        Console.WriteLine(this.Owner.Parent.Sprite.SpriteSource.Name);
         if(this.Owner.Parent.Sprite.SpriteSource.Name == ("Inv_Ring_Regen")
         || this.Owner.Parent.Sprite.SpriteSource.Name == ("Inv_Ring_Jump")
-        || this.Owner.Parent.Sprite.SpriteSource.Name == ("Inv_VolcanoArmor"))
+        || this.Owner.Parent.Sprite.SpriteSource.Name == ("Inv_ArmorVolcano"))
         this.Owner.SphericalParticleEmitter.Active = true;
         else
         this.Owner.SphericalParticleEmitter.Active = false;
