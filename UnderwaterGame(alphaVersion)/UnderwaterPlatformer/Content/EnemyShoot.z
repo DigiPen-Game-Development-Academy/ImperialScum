@@ -101,14 +101,16 @@ class BulletLogic : ZilchComponent
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
         Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
         
-        this.Space.SoundSpace.PlayCue(this.ShootSFX);
+        this.Owner.SoundEmitter.PlayCue(this.ShootSFX);
+        Console.WriteLine(this.ShootSFX);
     }
 
     function OnCollisionStarted(event : CollisionEvent)
     {
         if(event.OtherObject.PlayerController != null || event.OtherObject.Name == ("DefaultTile") && this.DestroyOnTile == false)
         {
-            this.Space.SoundSpace.PlayCue(this.HitSFX);
+            Console.WriteLine(this.HitSFX);
+            this.Owner.SoundEmitter.PlayCue(this.HitSFX);
             this.Owner.Destroy();
         }
     }
