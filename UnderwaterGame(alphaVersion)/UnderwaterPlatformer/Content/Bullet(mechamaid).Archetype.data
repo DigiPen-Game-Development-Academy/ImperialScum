@@ -42,7 +42,7 @@ Cog =
 		bool Asleep = false,
 		bool Kinematic = false,
 		bool RotationLocked = false,
-		bool Mode2D = true,
+		bool Mode2D = false,
 		bool AllowSleep = true,
 		bool Inherit2DMode = true,
 		Vec3 Velocity = [0, 0, 0],
@@ -50,6 +50,7 @@ Cog =
 	},
 	BulletLogic = 
 	{
+		string ShootSFX = "5a732f39652dbca1:Shoot",
 		float Speed = 15,
 		float Gravity = 0,
 		float DegreesOffset = 0,
