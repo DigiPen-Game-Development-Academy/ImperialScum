@@ -104,7 +104,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [16.1160622, 52.7521362, 50],
+			Vec3 Translation = [-42.9013519, -30.868351, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -116,7 +116,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 50.9156342,
+			float Size = 13.0898695,
 		},
 		EditorCameraController = 
 		{
@@ -124,7 +124,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [16.1160622, 52.7521362, 9.15258795e-07],
+			Vec3 LookTarget = [-42.9013519, -30.868351, 9.15258795e-07],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -273,7 +273,7 @@ Level =
 			bool VisibilityCulling = true,
 			bool VisibilityEvents = true,
 			bool CastShadows = false,
-			Vec4 Color = [0.247500002, 0.313500047, 0.659999967, 0.13499999],
+			Vec4 Color = [0.247500002, 0.313500047, 0.659999967, 0],
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
@@ -516,7 +516,6 @@ Level =
 		},
 		FollowCamera = 
 		{
-			float Speed = 200,
 		},
 		RigidBody = 
 		{
@@ -574,7 +573,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-47.4671478, -28.8094978, 0],
+			Vec3 Translation = [-40.8410835, -27.0725689, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -1246,9 +1245,11 @@ Level =
 		},
 		EnemyHealth = 
 		{
-			int Health = 3,
+			float Health = 3,
 			Vec4 DamageColor = [1, 0, 0, 1],
 			Vec4 RegularColor = [1, 1, 1, 1],
+			string HitSFX = "5aacbc9a12b8fb36:HitSound",
+			string KillSFX = "5a61916136d1c33d:Kill",
 		},
 		GearSharkTilt = 
 		{
@@ -1814,9 +1815,11 @@ Level =
 		},
 		EnemyHealth = 
 		{
-			int Health = 3,
+			float Health = 3,
 			Vec4 DamageColor = [1, 0, 0, 1],
 			Vec4 RegularColor = [1, 1, 1, 1],
+			string HitSFX = "5aacbc9a12b8fb36:HitSound",
+			string KillSFX = "5a61916136d1c33d:Kill",
 		},
 		GearSharkTilt = 
 		{
@@ -2133,7 +2136,7 @@ Level =
 		Transform = 
 		{
 			Vec3 Translation = [-32.6573715, -25.350832, 0],
-			Vec3 Scale = [0.466570437, 0.466570437, 0.466570437],
+			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, -0.707106829, 0.707106829],
 		},
 		Named = 
@@ -2204,8 +2207,8 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-30.7927284, -12.1839962, 0],
-			Vec3 Scale = [0.466570437, 0.466570437, 0.466570437],
+			Vec3 Translation = [-30.5102863, -12.2546062, 0],
+			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, 0, 1, -4.37113883e-08],
 		},
 		Named = 
@@ -2223,7 +2226,7 @@ Level =
 		Transform = 
 		{
 			Vec3 Translation = [-29.6926994, -11.3061485, 0],
-			Vec3 Scale = [0.466570437, 0.466570437, 0.466570437],
+			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, -0.707106829, 0.707106829],
 		},
 		Named = 
@@ -2800,8 +2803,8 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-42.3113708, -5.36900806, 0],
-			Vec3 Scale = [0.466570437, 0.466570437, 0.466570437],
+			Vec3 Translation = [-42.4076462, -5.29839611, 0],
+			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0.707106829, 0.707106829],
 		},
 		Named = 
@@ -2818,8 +2821,8 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-46.4216652, 3.87830639, 0],
-			Vec3 Scale = [0.466570437, 0.466570437, 0.466570437],
+			Vec3 Translation = [-46.4216652, 3.81088352, 0],
+			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, 0, 1, -4.37113883e-08],
 		},
 		Named = 
@@ -2836,8 +2839,8 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-40.4972076, 14.613636, 0],
-			Vec3 Scale = [0.466570437, 0.466570437, 0.466570437],
+			Vec3 Translation = [-40.4972076, 14.5637112, 0],
+			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Named = 
@@ -3533,8 +3536,8 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [44.5207481, 24.7125225, 0],
-			Vec3 Scale = [0.466570437, 0.466570437, 0.466570437],
+			Vec3 Translation = [44.5457115, 24.7125225, 0],
+			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0.707106829, 0.707106829],
 		},
 		Named = 
@@ -3551,8 +3554,8 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [41.1855049, 14.6872692, 0],
-			Vec3 Scale = [0.466570437, 0.466570437, 0.466570437],
+			Vec3 Translation = [41.2986488, 14.6872692, 0],
+			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, -0.707106829, 0.707106829],
 		},
 		Named = 
@@ -3838,8 +3841,8 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-24.5186329, 36.5698967, 0],
-			Vec3 Scale = [0.466570437, 0.466570437, 0.466570437],
+			Vec3 Translation = [-23.0711079, 35.4754295, 0],
+			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Named = 
@@ -3856,8 +3859,8 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-15.5129814, 38.8067818, 0],
-			Vec3 Scale = [0.466570437, 0.466570437, 0.466570437],
+			Vec3 Translation = [-15.4070644, 38.7361717, 0],
+			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, 0, 1, -4.37113883e-08],
 		},
 		Named = 
@@ -3874,8 +3877,8 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-29.5443649, 38.8067818, 0],
-			Vec3 Scale = [0.466570437, 0.466570437, 0.466570437],
+			Vec3 Translation = [-29.4737549, 38.7008667, 0],
+			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, 0, 1, -4.37113883e-08],
 		},
 		Named = 
@@ -4072,8 +4075,8 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [2.47520924, 41.6956596, 0],
-			Vec3 Scale = [0.466570437, 0.466570437, 0.466570437],
+			Vec3 Translation = [2.57505941, 41.6956596, 0],
+			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0.707106829, 0.707106829],
 		},
 		Named = 
@@ -4090,8 +4093,8 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [23.0760803, 40.6819687, 0],
-			Vec3 Scale = [0.466570437, 0.466570437, 0.466570437],
+			Vec3 Translation = [23.4005909, 40.6819687, 0],
+			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, -0.707106829, 0.707106829],
 		},
 		Named = 
@@ -4177,9 +4180,11 @@ Level =
 		},
 		EnemyHealth = 
 		{
-			int Health = 10,
+			float Health = 10,
 			Vec4 DamageColor = [1, 0, 0, 1],
 			Vec4 RegularColor = [1, 1, 1, 1],
+			string HitSFX = "5aacbc9a12b8fb36:HitSound",
+			string KillSFX = "5a61916136d1c33d:Kill",
 		},
 		GearSharkTilt = 
 		{
@@ -4526,8 +4531,8 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [9.4630394, 8.85697365, 0],
-			Vec3 Scale = [0.466570437, 0.466570437, 0.466570437],
+			Vec3 Translation = [9.4630394, 8.77211571, 0],
+			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, 0, 1, -4.37113883e-08],
 		},
 		Named = 
@@ -4703,9 +4708,11 @@ Level =
 		},
 		EnemyHealth = 
 		{
-			int Health = 3,
+			float Health = 3,
 			Vec4 DamageColor = [1, 0, 0, 1],
 			Vec4 RegularColor = [1, 1, 1, 1],
+			string HitSFX = "5aacbc9a12b8fb36:HitSound",
+			string KillSFX = "5a61916136d1c33d:Kill",
 		},
 		GearSharkTilt = 
 		{
@@ -6755,7 +6762,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-42.5322189, 30.4571877, 0],
+			Vec3 Translation = [-42.5605049, 30.4571877, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -6790,7 +6797,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-42.5334969, 29.6436825, 0],
+			Vec3 Translation = [-42.5542068, 29.6436825, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -6986,6 +6993,45 @@ Level =
 			string PaletteName = "5a2bdd61970e8705:Decor",
 			float UnitsPerTile = 1,
 			float MeshThickness = 1.20000005,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 231,
+		},
+		Named = 
+		{
+			string Name = "Bonus Level Text Spawner",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-38.6968536, -27.8030014, 9.15258795e-07],
+			Vec3 Scale = [3, 3, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 0],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5275aa4d802dd6dc:Square",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		BonusLevelText = 
+		{
+			string BonusLevelText = "5ac4a05db163c723:BonusLevelText",
 		},
 	},
 },
